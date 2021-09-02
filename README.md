@@ -1,7 +1,6 @@
-# Understanding Freeplane 1.9
+# Using Freeplane 1.9
 (draft Table of Contents)
 
-# Using Freeplane 1.9
 ## Introduction
 ### Super quick start
 ### Why Freeplane?
