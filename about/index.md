@@ -1,3 +1,3 @@
 # About This Site
 
-This site content was generated using Docify and went to demo in Opensource.com
+This site content was generated using Docsify and coped example from https://github.com/bryantson/OpensourceDotComDemos
