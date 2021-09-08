@@ -1,7 +1,8 @@
 # Using Freeplane 1.9
-(draft Table of Contents)
 
-Please contribute! Find out how [here](contribute.md).
+We suggest viewing this wiki at https://freeplane.github.io/wiki/#/
+
+This is a work in progress. Please contribute! Find out how [here](contribute.md).
 
 ## Introduction
 
