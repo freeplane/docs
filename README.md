@@ -1,6 +1,8 @@
 # Using Freeplane 1.9
 (draft Table of Contents)
 
+Please contribute! Find out how [here](contribute.md).
+
 ## Introduction
 
 ### Super quick start
