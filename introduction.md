@@ -8,8 +8,8 @@
 
 ### The very basics of using Freeplane
 
-* to add text to a node, just start typing and press `enter` when you are done
 * to create a new node, press `insert` (on windows) or `tab` (on macos) or `enter` (on linux)
+* to add text to a node, just start typing and press `enter` when you are done
 * to navigate between nodes, use the arrow keys
 * to fold/unfold a selected node, press `space`
 * For more details, see the rest of this documentation and ask questions in the Freeplane forum.
