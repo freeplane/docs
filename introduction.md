@@ -2,16 +2,17 @@
 
 -----
 
-## Super quick start
+## Super quick start 2
 
 -----
 
 ### The very basics of using Freeplane
 
-* to create a new node, press `insert` (on windows) or `tab` (on macos) or `enter` (on linux)
-* to add text to a node, just start typing and press `enter` when you are done
+* to create a new node, press `enter`
+* to add text to the new node, start typing and press `enter` when you are done
 * to navigate between nodes, use the arrow keys
 * to fold/unfold a selected node, press `space`
+* to move nodes, drag and drop them with the mouse
 * For more details, see the rest of this documentation and ask questions in the Freeplane forum.
 
 ### Getting started
@@ -77,9 +78,7 @@ Materials previously hosted on www.freeplane.org
 
 Documentation and tutorial mind maps distributed with Freeplane and accessible (currently or previously) through Freeplane's `Help` menu
 
-This documentation was written in Freeplane 1.9 with add-on
-
-[MarkdownHelper](https://github.com/EdoFro/Freeplane_MarkdownHelper)
+This documentation was written in Freeplane 1.9 with add-on [MarkdownHelper](https://github.com/EdoFro/Freeplane_MarkdownHelper)
 
 ## Understanding Freeplane concepts
 
