@@ -4,45 +4,7 @@ We suggest viewing this wiki at https://freeplane.github.io/wiki/#/
 
 This is a work in progress. Please contribute! Find out how [here](contribute.md).
 
-## Introduction
-
-### Super quick start
-
-#### The very basics of using Freeplane
-
-#### Getting started
-
-### Why Freeplane?
-
-#### What are mind maps?
-
-#### Why use mindmapping software?
-
-#### Why use Freeplane rather than other mindmapping software?
-
-### Understanding Freeplane concepts
-
-#### Mind map elements
-
-#### Mind map structure
-
-#### Content types (data parsing and formats)
-
-#### How node formatting works in Freeplane
-
-### About this documentation
-
-#### How we think about documentation
-
-#### User levels
-
-#### Credits and contributors
-
-### Freeplane community
-
-### Installing Freeplane
-
-### Your first Freeplane map (tutorial)
+## [Introduction](introduction.md)
 
 ## Understand the Freeplane interface
 
@@ -146,27 +108,7 @@ This is a work in progress. Please contribute! Find out how [here](contribute.md
 
 #### Videos
 
-## Create, open, and close mindmaps
-
-### Create a new map
-
-### Open and close maps
-
-#### Open an existing map
-
-#### Save a map
-
-#### Restore map from local history
-
-### Import maps
-
-#### Import mind maps from other mapping programs
-
-#### Import other types of content into a mind map
-
-### Export maps to other file formats
-
-### Other resources
+## [Working with mindmap files](working-w-mindmap-files.md)
 
 ## Understanding nodes
 
