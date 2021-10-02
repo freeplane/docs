@@ -11,11 +11,12 @@ On the left is the Icon Panel, used to easily add icons to nodes, and on the rig
 When made visible, the Notes Panel is below the map window, and at the bottom of the Freeplane interface is the status bar, which shows information about the selected node.
 
 ## The Freeplane interface
+
 Here we describe the default Freeplane interface in more detail. Almost all of these elements can be customized or hidden.
 
 ### Map window
 ### Menu bar  
-###  Tool bar
+### Tool bar
 ### Filter bar
 ### F-bar
 ### Icon panel
