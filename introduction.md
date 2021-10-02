@@ -1,10 +1,6 @@
 # Introduction
 
------
-
-## Super quick start 2
-
------
+## Super quick start
 
 ### The very basics of using Freeplane
 
@@ -19,10 +15,11 @@
 
 Freeplane is very powerful and customizable, so we recommend you learn the basics before reading straight through all of the documentation, and be aware that you don't need to know about all of the advanced features and concepts to benefit from Freeplane. Have fun!
 
+
+
 ## Why Freeplane?
-
------
-
+### What are mind maps?
+### Why use mindmapping software?
 ### Why use Freeplane rather than other mindmapping software?
 
 Freeplane is a mind mapping program with many overwhelming advantages and a small number of significant disadvantages when compared to similar programs.
@@ -50,7 +47,7 @@ Freeplane is a mind mapping program with many overwhelming advantages and a smal
 * UI is very dated (if you can help us improve this, please contact us!)
 * No mobile client (Freeplane API now supports mind maps as an event stream; if you want to help us develop a mobile client, please contact us!)
 * Does not currently support real-time online collaborative editing (if you want to help us develop this capability, please contact us!)
-* Does not support as wide a variety of layouts as some other programs, such as flowcharts, org-charts, and Gantt chart. Current users have not seemed to need these, but we are open to developing them if the community supports it.
+* Does not support as wide a variety of layouts as some other programs, such as flowcharts, org-charts, and Gantt chart. We are open to developing these features if users identify them as needed.
 
 Until recently, Freeplane has had one other significant disadvantage: documentation that was completely inadequate for conveying its immense functionality. Freeplane can do so much, and gives the user so many options, that it can be overwhelming. This documentation site is our ongoing attempt to address this concern!
 
@@ -62,11 +59,11 @@ It is useful to know, however, that Freeplane is fundamentally a program designe
 
 ## About this documentation
 
------
+### How we think about documentation
+
+### User levels
 
 ### Credits and contributors
-
-This documentation has borrowed heavily from previously created instructional documents. Where the text was copied and pasted directly, quotes and attribution are given, if transformed, this page serves to give credit. No endorsement by the below parties is suggested or implied.
 
 #### Previous documents used to create this site include:
 
@@ -78,11 +75,7 @@ Materials previously hosted on www.freeplane.org
 
 Documentation and tutorial mind maps distributed with Freeplane and accessible (currently or previously) through Freeplane's `Help` menu
 
-This documentation was written in Freeplane 1.9 with add-on [MarkdownHelper](https://github.com/EdoFro/Freeplane_MarkdownHelper)
-
 ## Understanding Freeplane concepts
-
------
 
 ### Mind map elements
 
@@ -106,19 +99,19 @@ Summary: the four basic Freeplane mind map elements are nodes, edges, connectors
 
 ### Mind map structure
 
-Nodes can be thought of as having levels, with first-level nodes being those nodes directly connected to the central node of the map (also known as the root node). Nodes connected to first-level nodes are second-level nodes, being two "steps" away from the central node, and so on. Higher-level nodes are thus farthest from the central node, and lower-level nodes are closer. The concept of node levels can help you understand other ways to think about Freeplane maps.
+Nodes can be thought of as having levels, with first-level nodes being those nodes directly connected to the central node of the map (also known as the root node). Nodes connected to first-level nodes are second-level nodes, being two "steps" away from the central node, and so on.
 
-Freeplane mind maps are described with two main metaphors: a tree and family relations (these are sometimes combined in the notion of a "family tree").
+Discussion about node levels can be confusing because when users refer to higher-level nodes, they are usually talking about nodes closer to the root node, which have a lower level "number". For example, a first-level node (level 1) is often thought of as higher level than a fourth-level node (level 4), even though four is more than one. Possibly for this reason, node relations are  most commonly talked about using metaphors rather than numerical levels. This documentation uses two main metaphors to discuss how nodes relate to each other: 1) a tree, and 2) family relations. (These are sometimes combined in the notion of a "family tree").
 
 #### Tree metaphor
 
 The central node is called the root, like the root of a tree. The first node connected to the root is the beginning of a branch. The branch includes all nodes connected to that first branch node. Branches can divide into smaller branches. At the end of a branch are leaf nodes, which are the nodes farthest from the root node, and which have no higher-level nodes connected to them by edges.
 
-The leaf nodes in a map are not all necessarily at the same level. Any node that is at the highest level on its branch is a leaf node, but different branches might extend to a different number of levels. [example figure]
+The leaf nodes in a map are not all necessarily at the same level. Any node that is at the highest level on its branch is a leaf node, but different branches might extend to a different number of levels.
+
+(e.g. to be added)
 
 #### Family relations
-
-sibling nodes: those nodes that share the parent node. figure [2.5.1]
 
 Higher-level and lower-level nodes are usually described in terms of family relationships. A level one node is the parent of a level two node that is directly connected to it, and the level two node is the child of the level one node.
 
@@ -134,9 +127,9 @@ Exception: free nodes (sometimes called "free positioned nodes") can be added to
 
 Unlike some other programs, Freeplane focuses on mind maps that have a hierarchy of nodes connected in family relationships. This one logical layout can be viewed in two ways in Freeplane:
 
-* Freeplane defaults to a map where branches radiate outward from the root node in many directions, similar to spokes on a bicycle wheel. This is the "normal view" (sometimes called a radial view).
-   * Note: the user can keep all branches on one side of the root; see [link] for more information.
-* The "outline view" lets you see the information in your map in a vertical list more like a traditional outline, with the root node at the top and branches below.
+- Freeplane defaults to a map where branches radiate outward from the root node in many directions, similar to spokes on a bicycle wheel. This is the "normal view" (sometimes called a radial view).
+	- Note: the user can keep all branches on one side of the root; see [link] for more information.
+- The "outline view" lets you see the information in your map in a vertical list more like a traditional outline, with the root node at the top and branches below.
 
 ### How node formatting works in Freeplane
 
@@ -158,6 +151,8 @@ Regardless of how format is set, Freeplane looks in several places, in a certain
 * Freeplane sets all of the formatting options to match the node's style (either Default or another style). (For more detail on how this works, see (Styles and Templates)[link].)
 * Freeplane then checks if the user has set any specific formatting values for this individual node (e.g., "font size=12"). If they have, Freeplane changes the formatting value for this node to the user setting.
 
+(e.g. to be added)
+
 For the advanced user, Freeplane's formatting logic is better described in this way: for each formatting element, Freeplane checks the values set at each location in following list. It uses the value at the highest (topmost) level in this list where the element's value is set.
 
 * formatting tags inside node core text (hidden from most users)
@@ -168,13 +163,19 @@ For the advanced user, Freeplane's formatting logic is better described in this 
 * Default style values
 * internal program values (invisible to end user)
 
+(e.g. to be added)
+
 It is important to understand that not all formatting elements are given values at each of these levels. For example, a user might set an individual node to "bold = on" but change no other values. In that case, when finding a value for a different element (like "font size") Freeplane simply checks the next lower level down and uses the first value for the element that it finds.
 
 ## Getting help
 
------
-
 This documentation is a work in progress with a long way to go. If your question is not answered here, see the resources listed in Freeplane under `Help->Web resources` for additional help.
 
 Asking questions in the Freeplane forum will help us figure out the documentation areas we need to improve.
+
+## Freeplane community
+
+## Installing Freeplane
+
+## Your first Freeplane map (tutorial)
 
