@@ -17,27 +17,24 @@ The text in the node core can be interpreted or parsed by Freeplane in different
 
 ### Node Details
 
-(to be added)
-
 ### Node Notes
-
-(to be added)
 
 ### Node Attributes
 
-(to be added)
-
 ## Types of nodes
+
 In addition to standard nodes, there are some special types of nodes:
+
 ### The root node
 Every mind map begins with a central node call the root node. Node levels are defined based on their distance from the root node.
+
 ### Free nodes
 
 Free nodes are nodes that appear separate from the map hierarchy. They are "free" because they can be freely positioned around the map. They are not automatically positioned like other nodes and they generally do not affect other nodes when they are changed or moved.
 
 Note: although free nodes are positioned independently, technically, they are first-level nodes that are invisibly connected to the root node. You can add children, parents, or siblings to free nodes, but you may get unexpected behaviors.
 
-#### Technically, a free node is simply a node with three features:
+Technically, a free node is simply a node with three features:
 
 * they are given the style `Floating node`, which connects to other nodes with invisible edges
 * they have the toggle at menu item `Edit->Position node independently` set to "on"
@@ -46,9 +43,7 @@ Note: although free nodes are positioned independently, technically, they are fi
 Other nodes can also be given the style `Floating node` and can be set to be positioned independently.
 
 ### Clone nodes
-(to be added)
 ### Node groups
-(to be added)
 #### Summary nodes
 
 Summary nodes have brackets that suggest that their content summarizes a group of sibling nodes. Technically, summary nodes are specially marked sibling nodes of the summarized  
@@ -58,25 +53,23 @@ Summary node brackets are unusual in that, unlike most Freeplane elements, their
 
 #### Node clouds
 
-
-
 ## Node position
-(to be added)
+
 ## Node view options
+
 Freeplane offers many ways to show or hide nodes or node elements.
 
 #### Hide nodes (per-node setting)
-The setting 
 
 #### Show hidden nodes
 
-Minimize nodes
+#### Minimize nodes
 
-Hide node details
+#### Hide node details
 
-Hide/show node attributes
+#### Hide/show node attributes
 
-Tool tips
+#### Tool tips
 
-Other resources
+## Other resources
 
