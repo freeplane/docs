@@ -21,6 +21,10 @@ The text in the node core can be interpreted or parsed by Freeplane in different
 
 ### Node Attributes
 
+### Edges
+
+### Connectors
+
 ## Types of nodes
 
 In addition to standard nodes, there are some special types of nodes:
@@ -56,8 +60,6 @@ Summary node brackets are unusual in that, unlike most Freeplane elements, their
 ## Node position
 
 ## Node view options
-
-Freeplane offers many ways to show or hide nodes or node elements.
 
 #### Hide nodes (per-node setting)
 
