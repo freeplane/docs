@@ -32,6 +32,8 @@ This is a work in progress. Please contribute! Find out how [here](contribute.md
 
 [Styles](styles.md)
 
+[CSS for HTML/Markdown](css-for-html-or-markdown.md)
+
 [Templates](templates.md)
 
 [Navigating the map](navigating-map.md)
