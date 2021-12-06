@@ -38,19 +38,19 @@ blockquote {
 
 Requires Freeplane 1.9.12 or higher
 
-<a href="/Node_CSS_Functionality.mm" download>Node_CSS_Functionality.mm</a>
+<a href="/wiki/Node_CSS_Functionality.mm" download>Node_CSS_Functionality.mm</a>
 
 ## CSS For Core Text
 
-Markdown is converted to HTML and the resulting HTML code is interpreted to produce the result being displayed. Therefore both HTML and Markdown content can be styled with CSS.
+Markdown is converted to HTML and the resulting HTML code is interpreted and displayed. Therefore both HTML and Markdown content can be styled with CSS.
 
 > More about CSS
 > * https://www.w3schools.com/css/
 > * https://peterxjang.com/blog/modern-css-explained-for-dinosaurs.html
 
-CSS can be added to a node (**View->Controls->Tool panel->Format->Node Font->CSS->Edit CSS...**) or to a Style (**Format->Manage styles->Edit styles** | `a Style` | **Node Font->CSS->Edit CSS...**).
+A node is formatted using CSS when CSS is added to a node (**View->Controls->Tool panel->Format->Node Font->CSS->Edit CSS...**) or to a Style (**Format->Manage styles->Edit styles** | `a Style` | **Node Font->CSS->Edit CSS...**).
 
-When CSS is added to a node, CSS added to a Style is ignored.
+When CSS is added to a node, CSS added to a Style (applied to the node) is ignored.
 
 The following formatting properties can coexist with CSS-defined formatting:
 
