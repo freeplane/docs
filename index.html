@@ -1,13 +1,11 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
-  <title>Docsify Demo</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <title>Using Freeplane</title>
 </head>
 <body>
   <div id="app"></div>
@@ -15,7 +13,9 @@
     window.$docsify = {
       el: "#app",
       repo: 'https://github.com/freeplane/wiki/tree/main',
-      loadSidebar: true
+      loadSidebar: true,
+      auto2top: true,
+      executeScript: true
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>

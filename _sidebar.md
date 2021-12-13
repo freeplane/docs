@@ -1,14 +1,30 @@
-<!-- docs/_sidebar.md -->
-
-
 * [HOME](./)
-
-* [Tutorials](./tutorials/index)
-  * [Tomcat](./tutorials/tomcat/index)
-  * [Cloud](./tutorials/cloud/index)
-  * [Java](./tutorials/java/index)
-
-* [About](./about/index)
-
-* [Contact](./contact/index)
-
+* [Introduction](introduction.md)
+* [Understand the Freeplane interface](understanding-interface.md)
+* [Working with mindmap files](working-w-mindmap-files.md)
+* [Understanding nodes](understanding-nodes.md)
+* [CSS for HTML/Markdown](css-for-html-or-markdown.md)
+* [Contribute](contribute.md)
+<!--
+* [Adding and removing nodes](add-remove-nodes.md)
+* [Editing nodes](editing-nodes.md)
+* [Selecting nodes](selecting-nodes.md)
+* [Moving and organizing nodes](moving-nodes.md)
+* [Node links](node-links.md)
+* [Filtering nodes](filtering-nodes.md)
+* [Searching nodes](searching-nodes.md)
+* [Formatting maps and nodes](formatting-maps-nodes.md)
+* [Styles](styles.md)
+* [Templates](templates.md)
+* [Navigating the map](navigating-map.md)
+* [Using icons](using-icons.md)
+* [Using images](using-images.md)
+* [Customizing Freeplane](customizing-freeplane.md)
+* [Task and project management](task-project-management.md)
+* [Presentations](presentations.md)
+* [Sharing and printing mind maps](sharing-printing-mindmaps.md)
+* [Using Freeplane with other applications](using-freeplane-other-apps.md)
+* [Programming scripts and plugins](scripts-addons-plugins.md)
+* [Other topics](other-topics.md)
+* [Reference information](reference-info.md)
+-->
