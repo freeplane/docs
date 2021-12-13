@@ -2,7 +2,7 @@
 
 _Since 1.9.12 (Dec 2021)_
 
-HTML or Markdown content can be styles using CSS.
+HTML or Markdown content can be formatted using CSS.
 
 ## Quick Start by Example
 
@@ -18,8 +18,8 @@ Some text in my paragraph
 > A sample quote
 ```
 
-2. Set the node's format to Markdown (**View->Controls->Tool panel->Format->Core Text->Format = Markdown**)
-3. Add the following CSS (**View->Controls->Tool panel->Format->Node Font->CSS->Edit CSS...**)
+2. Set the node's format to Markdown &ndash; `View->Controls->Tool panel->Format->Core Text->Format = Markdown`
+3. Add the following CSS &ndash; `View->Controls->Tool panel->Format->Node Font->CSS->Edit CSS...`
 
 ```css
 h1 {
@@ -38,36 +38,45 @@ blockquote {
 
 Requires Freeplane 1.9.12 or higher
 
-<a href="/wiki/Node_CSS_Functionality.mm" download>Node_CSS_Functionality.mm</a>
+<a id="mmdownload" href="/Node_CSS_Functionality.mm" download>Node_CSS_Functionality.mm</a>
+<script>
+    // The above link is correct when the Markdown page is viewed directly
+    // When viewed on freeplane.github.io/wiki/ (docsify), the link needs to be changed
+    if (location.pathname.startsWith('/wiki/')) {
+        const mmd = document.querySelector('#mmdownload');
+        mmd.href = `${location.origin}/wiki/Node_CSS_Functionality.mm`;
+    }
+</script>
 
 ## CSS For Core Text
 
-Markdown is converted to HTML and the resulting HTML code is interpreted and displayed. Therefore both HTML and Markdown content can be styled with CSS.
+A node is formatted by CSS instructions in 2 cases:
 
-> More about CSS
-> * https://www.w3schools.com/css/
-> * https://peterxjang.com/blog/modern-css-explained-for-dinosaurs.html
-
-A node is formatted using CSS when CSS is added to a node (**View->Controls->Tool panel->Format->Node Font->CSS->Edit CSS...**) or to a Style (**Format->Manage styles->Edit styles** | `a Style` | **Node Font->CSS->Edit CSS...**).
+1. When CSS is added to the node &ndash; `View->Controls->Tool panel->Format->Node Font->CSS->Edit CSS...`
+2. When CSS is added to the Style applied to the node &ndash; `Format->Manage styles->Edit styles` | **a Style** | `Node Font->CSS->Edit CSS...`
 
 When CSS is added to a node, CSS added to a Style (applied to the node) is ignored.
 
 The following formatting properties can coexist with CSS-defined formatting:
 
-* Node Color->Text
-* Node Color->Background
-* Node Font->Font family
-* Node Font->Font size
-* Node Font->Bold
-* Node Font->Strike through
-* Node Font->Italic
-* Node Font->Text Alignment
+* Node Color -> Text
+* Node Color -> Background
+* Node Font -> Font family
+* Node Font -> Font size
+* Node Font -> Bold
+* Node Font -> Strike through
+* Node Font -> Italic
+* Node Font -> Text Alignment
 
 Under the hood, these formatting properties are converted to CSS for `body` and applied alongside the CSS added to a Style or to a node.
 
+> More about CSS
+> * https://www.w3schools.com/css/
+> * https://peterxjang.com/blog/modern-css-explained-for-dinosaurs.html
+
 ### Order Of CSS Application
 
-Just like any web browser (Chrome, Firefox, Sfari, etc), the Java library used by Freeplane has its own default CSS: https://github.com/openjdk/jdk/blob/master/src/java.desktop/share/classes/javax/swing/text/html/default.css
+Just like any web browser (Chrome, Firefox, Safari, etc), the Java library used by Freeplane has its own default CSS: https://github.com/openjdk/jdk/blob/master/src/java.desktop/share/classes/javax/swing/text/html/default.css
 
 In addition to that, Freeplane adds its own CSS, overriding the formatting instructions from the Java default CSS:
 ```css
@@ -78,27 +87,24 @@ th, td { border: 1px solid; }
 
 Next, the CSS created based on formatting properties is used, overriding any previous instructions for `body`, and finally the CSS added to the Style or to the node is applied, overriding any other CSS instructions.
 
-When CSS is added to `Default`, it affects <u>node-core</u> HTML/Markdown of all nodes where `Default` is applied.
+When CSS is added to **Default**, it affects <u>node-core</u> HTML/Markdown of all nodes where **Default** is applied.
 
-When CSS is added to a `Style`, CSS added to `Default` is ignored for that `Style`.
+When CSS is added to a **Style**, CSS added to **Default** is ignored for that **Style**.
 
-When CSS is added to a node, CSS added to a Style (applied to the node) is ignored.
+When CSS is added to a node, CSS added to a **Style** (applied to the node) is ignored.
 
-## CSS For Details and Note
+## CSS For Details And Note
 
-CSS can be added to `Details` and to `Note`, making it possible to style any HTML/Markdown content added to `Details` or `Note`.
+CSS can be added to **Details** and to **Note**, making it possible to specify detailed formatting for their HTML/Markdown content.
 
-+ **Format->Manage Styles->Edit styles** | `Details` | **Node Font->CSS->Edit CSS...**
-+ **Format->Manage Styles->Edit styles** | `Note` | **Node Font->CSS->Edit CSS...**
++ `Format->Manage Styles->Edit styles` | **Details** | `Node Font->CSS->Edit CSS...`
++ `Format->Manage Styles->Edit styles` | **Note** | `Node Font->CSS->Edit CSS...`
 
-CSS added to `Details` will affect <u>node-details</u> HTML/Markdown of all nodes in the map.<br>
-Similarly, CSS added to `Note` will affect <u>note</u> HTML/Markdown of all nodes in the map.
+CSS added to **Details** will affect <u>node-details</u> HTML/Markdown of all nodes in the map.<br>
+Similarly, CSS added to **Note** will affect <u>note</u> HTML/Markdown of all nodes in the map.
 
-Note that when CSS is added to `Default`, it is also applied to `Details` and `Note`. To make `Details` or `Note` use only its formatting properties (not CSS), add the following CSS to `Details` or `Note` respectively:
-```css
-none {}
-```
-This is because when CSS is added to a Style (here to `Details` or to `Note`), CSS added to `Default` is ignored for that Style (here for `Details` or for `Note`).
+Note that when CSS is added to **Default**, it is also applied to **Details** and **Note**. To make **Details** or **Note** ignore CSS added to **Default** and use only its formatting properties, add "empty" CSS (e.g. a space) to **Details** or **Note** respectively.
+This is because when CSS is added to a Style (here to **Details** or to **Note**), CSS added to **Default** is ignored for that Style.
 
 ## Example Of Markdown With CSS
 
