@@ -25,6 +25,17 @@ The text in the node core can be interpreted or parsed by Freeplane in different
 
 ### Connectors
 
+Unlike edges, connectors must be added manually one-by-one. To add a connector, select two nodes, right-click for a context menu and select `Connect (Ctrl+L)`. Another way is to `Ctrl+Shift+drag` one node onto another. On some systems it's also possible to `right-click+drag` one node onto another.
+
+Connectors' properties can be edited. When you `right-click` a connector (it's best to click near a node), a **Connector** dialog appears. Here you can set formatting properties individually or select a Style (or both), set labels' text and remove the connector.
+
+By default, a connector's shape is `Curve`. The other options are `Line`, `Linear path` and `Simulate edge`. The last one does exactly that: simulates an edge between the nodes. 
+The other 3 types' shape can be changed using curve-shaping of either end. 
+To change the shape of a connector click on the line near a node. You will see handles appear. By dragging your mouse up to ~50% of the connector's length, the near handle is adjusted. Going beyond ~50% or clicking near the middle adjusts both handles at once.
+You'll often need to repeat your click-drag-release several times before you get the expected result, without affecting the far end.
+
+`Line` is a special connector type that can exist for a single node. It is often used to draw an arrow going out of a node into empty space (as seen in `Help->Tutorial`. To create a `Line` connector, `right-click` a single node and select `Connect (Ctrl+L)` or use any of the other methods described above. Then `right-click` the connector (looping back to the node) and change its shape to `Line`.
+
 ## Types of nodes
 
 In addition to standard nodes, there are some special types of nodes:
