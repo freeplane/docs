@@ -25,7 +25,7 @@ The text in the node core can be interpreted or parsed by Freeplane in different
 
 ### Connectors
 
-Unlike edges, connectors must be added manually, one by one. To add a connector, select two nodes, `right-click` for a context menu and select `Connect (Ctrl+L)`. Another way is to `Ctrl+Shift+drag` one node onto another. On some systems it's also possible to `right-click+drag` one node onto another.
+Unlike edges, connectors must be added manually, one by one. To add a connector, select two nodes, `right-click` for a context menu and select `Connect (Ctrl+L)`. Another way is to `Ctrl+Shift + drag` one node onto another. On some systems it's also possible to `right-click + drag` one node onto another.
 
 Connectors' properties can be edited. When you `right-click` a connector (it's best to select one of the connected nodes first), a **Connector** dialog appears. Here you can set formatting properties individually or select a Style (or both), set labels' text and remove the connector.
 
@@ -33,7 +33,19 @@ By default, a connector's shape is `Curve`. The other options are `Line`, `Linea
 To change the shape of a connector, click on the line near a node (it's best to select the node first). You will see handles appear. By dragging your mouse up to ~50% of the distance between the nodes, the near handle is adjusted. Going beyond ~50% or clicking near the middle adjusts both handles at once.
 You'll often need to repeat your click-drag-release several times before you get the expected result, i.e. without affecting the far end.
 
-`Line` is a special connector type that can be one-ended. It is often used to draw an arrow going out of a node into empty space (as seen in Freeplane `Help->Tutorial`). To create a `Line` connector, `right-click` a single node and select `Connect (Ctrl+L)` or use any of the other methods described above. Then `right-click` the connector (looping back to the node) and change its shape to `Line`.
+#### Same-node connectors
+
+Both ends of a connector can be attached to the same node, looping back to itself.
+To create such a connector, `right-click` a single node and select `Connect (Ctrl+L)` or use any of the other methods described above.
+
+When using `Line` as the type, the connector appears one-ended. `Line` is often used to draw an arrow going out of a node into empty space (as seen in Freeplane `Help->Tutorial`).
+
+#### Connector styles 
+
+Connectors, just like nodes, use styles. See [Styles](styles.md) for more information.
+
+When a connector is added, a style is applied to it, which determines how the connector looks like. By default, it's the **Default** style. There's an option to apply a style based on the connector style defined on the source or the target node. To use it, turn it on in `Preferences (Ctrl+COMMA)->Defaults->Connectors->Assigns node dependant styles to new connectors`.
+If the source node has a style applied which has a connector style defined, the style is applied to the connector. Otherwise, the target node is checked for the same.
 
 ## Types of nodes
 
