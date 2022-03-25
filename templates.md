@@ -8,11 +8,11 @@
 
 ### Linux
 
-System-wide templates from installed Freeplane are in:
+**System-wide** templates from installed Freeplane are in:
 
 `/usr/share/freeplane/resources/templates`
 
-User-defined templates can also be in:
+**User-defined** templates can also be in:
 
 `~/.config/share/freeplane/VERSION/templates`
 
