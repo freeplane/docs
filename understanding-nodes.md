@@ -5,7 +5,7 @@
 
 Nodes are the fundamental element of mindmaps. Although nodes appear simple at first, they have many optional elements that can increase their functionality.
 
-What appears to be the whole node at first is actually just the [node core](glossary.md#node%20core). If you create a new node and begin typing, the text is entered in the node core by default. Beginning users generally limit their use of nodes to the node core.
+What appears to be the whole node at first is actually just the [node core](glossary.md#node-core). If you create a new node and begin typing, the text is entered in the node core by default. Beginning users generally limit their use of nodes to the node core.
 
 Additional information can be stored in nodes outside the core as node details, node notes, and node attributes.
 
