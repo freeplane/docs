@@ -23,6 +23,23 @@
 The default template file will be used for every newly generated Mindmap.
 You can set a default template file in the preferences:
 
-`Tools > Preferences > Environment`, `Files > Standard template file`
+`Tools > Preferences > Environment`, `Files > 'Standard template file'`
 
 The template files shown here as an option are those located in the [**system-wide** path for template files](#file-paths-for-templates).
+
+## Create a new map from template
+
+You can create a new mindmap from a template file under `File > New map from template…`.
+In the dialogue you have different options, depending on which `Files of type` you choose from the drop-down-menu at the bottom of the dialogue:
+
+![Menu `New map from template…`](/images/fp_1914_new_map_from_template.png)
+
+| **Option** | **Desription** |
+| :--- | :--- |
+| `All files (*.mm)` | all filetypes _(also non-minmap files which might give you an error)_ |
+| `Maps (*.mm)` | existent Freeplane-Mindmaps you or others might have created and you want to use as a startingpoint |
+| `Standard Templates (*.mm)` | the templates Freeplane comes with, located at the [**system-wide** path for template files](#file-paths-for-templates) |
+| `User templates (*.mm)` | template-mindmaps you or others created and which are located under the [**user-defined** path for template files](#file-paths-for-templates) |
+
+**Attenton**
+Dependng on you current choice in the drop-down-menu at the bottom of this dialogue, the path in the upper part changes accordingly. If you click on `Standard template (*.mm)` it will show you the **system-wide** path for templates, if you click on `User templates (*.mm)` it will change to the **user-defined** path.
