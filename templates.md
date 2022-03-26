@@ -8,7 +8,7 @@ Depending on your OS, you can find template-folders in different directories.
 However, on every OS, there is a subfolder in the Freeplane installation-folder, where you can store user-definded template-files.
 
 **Attention:**\
-You can also change the default directory containing the user configuration. This means, the file-path for templates might differ therefore (see [Customizing Freeplane](customizing-freeplane.md)).
+You can also change the default directory containing the user configuration. This means, the file-path for templates might differ therefore (see [Customizing Freeplane](customizing-freeplane.md#the-user-directory)).
 
 ### Windows
 
