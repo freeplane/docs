@@ -4,13 +4,23 @@
 
 ## The user directory
 
-Dependings on your OS and personal preferences, you can find the user directory in different places.
+### Contents of the user directory
 
-### Windows
+<!-- FIXME: describe an add infos about the contents here -->
 
-<!-- FIXME: where is this? -->
+### Location of the user directory
 
-### Linux
+Depending on your OS and personal preferences, you can find the user directory in different places.
+
+**Windows**
+
+---
+
+<!-- FIXME: where is the user directory on Windows? -->
+
+**Linux**
+
+---
 
 System-wide configuration directory for Freeplane (installed via the package-management of your distribution):
 
@@ -20,32 +30,36 @@ User directory (in `.config`-folder inside the home directory of the currenct us
 
 `~/.config/share/freeplane/`
 
-### MacOS
+**MacOS**
 
-<!-- FIXME: where is this? -->
+---
+
+<!-- FIXME: where is the user directory on MacOS? -->
 
 ### Opening the user directory from the menu
 
 You can open the current user directory of Freeplane in your default filebrowser via the menu: `Tools > Open user directory…`.
 
-## Contents of the user directory
-
-<!-- FIXME: describe an add infos about the contents here -->
-
-## Change the location of the user directory
+### Change the location of the user directory
 
 You can change where the user directory should be.
 
-### Linux
+**Linux**
+
+---
 
 In the linux terminal you can change the path to the user directory when invoking Freeplane with the following command:
 
 `freeplane -U<userdir>`
 
-### Windows
+**Windows**
+
+---
 
 <!-- FIXME: how does this work on Windows? -->
 
-### MacOS
+**MacOS**
+
+---
 
 <!-- FIXME: how does this work on MacOS? -->
