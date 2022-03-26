@@ -10,9 +10,15 @@ However, on every OS, there is a subfolder in the Freeplane installation-folder,
 **Attention:**\
 You can also change the default directory containing the user configuration. This means, the file-path for templates might differ therefore (see [Customizing Freeplane](customizing-freeplane.md#the-user-directory)).
 
-### Windows
+**Windows**
 
-### Linux
+--
+
+<!-- FIXME: where are the locations on Windows? -->
+
+**Linux**
+
+---
 
 **System-wide** templates from installed Freeplane are in:
 
@@ -22,7 +28,11 @@ You can also change the default directory containing the user configuration. Thi
 
 `~/.config/share/freeplane/VERSION/templates`
 
-### MacOS
+**MacOS**
+
+---
+
+<!-- FIXME: where are the locations on MacOS? -->
 
 ## Set a default template file
 
