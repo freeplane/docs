@@ -12,7 +12,7 @@ You can also change the default directory containing the user configuration. Thi
 
 **Windows**
 
---
+---
 
 <!-- FIXME: where are the locations on Windows? -->
 
