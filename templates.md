@@ -23,6 +23,6 @@
 The default template file will be used for every newly generated Mindmap.
 You can set a default template file in the preferences:
 
-`Tools > Preferences > Environment`, Heading _Files_, Option _Standard template file_
+`Tools > Preferences > Environment`, `Files > Standard template file`
 
 The template files shown here as an option are those located in the [**system-wide** path for template files](#file-paths-for-templates).
