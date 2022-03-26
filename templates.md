@@ -50,7 +50,7 @@ In the dialogue you have different options, depending on which `Files of Type` y
 
 ![Menu `New map from template…`](/images/fp_1914_new_map_from_template.png)
 
-| **Option** | **Desription** |
+| **Option** | **Description** |
 | :--- | :--- |
 | `All files` | all filetypes _(also non-minmap files which might give you an error)_ |
 | `Maps (*.mm)` | existent Freeplane-Mindmaps you or others might have created and whose styling you want to use (see [Styles](styles.md)) |
