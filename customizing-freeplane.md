@@ -38,7 +38,7 @@ User directory (in `.config`-folder inside the home directory of the currenct us
 
 ### Opening the user directory from the menu
 
-You can open the current user directory of Freeplane in your default filebrowser via the menu: `Tools > Open user directory…`.
+You can open the current user directory of Freeplane in your default filebrowser via the menu: `Tools > Open user directory`.
 
 ### Change the location of the user directory
 
