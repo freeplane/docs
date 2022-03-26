@@ -26,7 +26,7 @@ You can also change the default directory containing the user configuration. Thi
 
 ## Set a default template file
 
-The default template file will be used for every newly generated Mindmap.
+The default template file will be used for every newly generated mindmap.
 You can set a default template file in the preferences:
 
 `Tools > Preferences > Environment`, `Files > 'Standard template file'`
