@@ -5,7 +5,7 @@
 
 Nodes are the fundamental element of mindmaps. Although nodes appear simple at first, they have many optional elements that can increase their functionality.
 
-What appears to be the whole node at first is actually just the [node core](glossary.md#node%20core). If you create a new node and begin typing, the text is entered in the node core by default. Beginning users generally limit their use of nodes to the node core.
+What appears to be the whole node at first is actually just the [node core](glossary.md#node-core). If you create a new node and begin typing, the text is entered in the node core by default. Beginning users generally limit their use of nodes to the node core.
 
 Additional information can be stored in nodes outside the core as node details, node notes, and node attributes.
 
@@ -26,6 +26,8 @@ The text in the node core can be interpreted or parsed by Freeplane in different
 ### Connectors
 
 Unlike edges, connectors must be added manually, one by one. To add a connector, select two nodes, `right-click` for a context menu and select `Connect (Ctrl+L)`. Another way is to `Ctrl+Shift + drag` one node onto another. On some systems it's also possible to `right-click + drag` one node onto another.
+
+![connectors](images/connectors.webp)
 
 Connectors' properties can be edited. When you `right-click` a connector (it's best to select one of the connected nodes first), a **Connector** dialog appears. Here you can set formatting properties individually or select a Style (or both), set labels' text and remove the connector.
 

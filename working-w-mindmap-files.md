@@ -10,7 +10,7 @@ Create a new password-protected map with `File->New protected (encrypted) map…
 
 ## Open maps
 
-Open an existing map with `File->Open mind map… (Ctrl+O)`. This opens a file picker to let you chose a Freeplane  `.mm` map file to open.
+Open an existing map with `File->Open mind map… (Ctrl+O)`. This opens a file picker to let you chose a Freeplane  `.mm` map file to open. In this dialogue you can also choose standard or user-defined template-mindmaps from the dropdown-menu at the bottom (see [Templates](templates.md)).
 
 Open an existing map from a list of recently opened maps with `File->Open recent map...`.  Hovering over this Menu action shows a list of recently opened maps. Click on any map on this list to open it.
 
@@ -33,6 +33,8 @@ Save an active map with `File->Save map (Ctrl+S)`.
 Save all open maps with `File->Save all maps`.
 
 Save an active map under a new filename with `File->Save map as… (Ctrl+Shift+S)`.
+
+In the saving-dialogue you can choose standard or user-defined template-mindmaps from the dropdown-menu at the bottom (see [Templates](templates.md)).
 
 ## Autosave
 
