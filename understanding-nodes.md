@@ -27,7 +27,7 @@ The text in the node core can be interpreted or parsed by Freeplane in different
 
 Unlike edges, connectors must be added manually, one by one. To add a connector, select two nodes, `right-click` for a context menu and select `Connect (Ctrl+L)`. Another way is to `Ctrl+Shift + drag` one node onto another. On some systems it's also possible to `right-click + drag` one node onto another.
 
-![connectors](images/connectors.webp)
+![connectors](images/connectors.gif)
 
 Connectors' properties can be edited. When you `right-click` a connector (it's best to select one of the connected nodes first), a **Connector** dialog appears. Here you can set formatting properties individually or select a Style (or both), set labels' text and remove the connector.
 
