@@ -2,19 +2,28 @@
 
 ## Create a new map
 
-Create a new map with `File->New map (Ctrl+N)`. This creates a new map using the default template.
+Create a new map with `File->New map (Ctrl+N)`.
+This creates a new map using the default template.
 
-Create a new map from a different template with `File->New map from template…`. This opens a file picker that lets you choose a template to use to create a new map.
+Create a new map from a different template with `File->New map from template…`.
+This opens a file picker that lets you choose a template to use to create a new map.
 
-Create a new password-protected map with `File->New protected (encrypted) map…`. This opens a password dialog used to encrypt a new map created using the default template. Encrypted maps cannot be opened or read without the password.
+Create a new password-protected map with `File->New protected (encrypted) map…`.
+This opens a password dialog used to encrypt a new map created using the default template.
+Encrypted maps cannot be opened or read without the password.
 
 ## Open maps
 
-Open an existing map with `File->Open mind map… (Ctrl+O)`. This opens a file picker to let you chose a Freeplane  `.mm` map file to open. In this dialogue you can also choose standard or user-defined template-mindmaps from the dropdown-menu at the bottom (see [Templates](templates.md)).
+Open an existing map with `File->Open mind map… (Ctrl+O)`.
+This opens a file picker to let you chose a Freeplane  `.mm` map file to open.
+In this dialogue you can also choose standard or user-defined template-mindmaps from the dropdown-menu at the bottom (see [Templates](templates.md)).
 
-Open an existing map from a list of recently opened maps with `File->Open recent map...`.  Hovering over this Menu action shows a list of recently opened maps. Click on any map on this list to open it.
+Open an existing map from a list of recently opened maps with `File->Open recent map...`.
+Hovering over this Menu action shows a list of recently opened maps.
+Click on any map on this list to open it.
 
-If you have Autosave enabled, you can open an autosaved version of an existing map with `File->Open older version`. See [Autosave](#Autosave) for more information.
+If you have Autosave enabled, you can open an autosaved version of an existing map with `File->Open older version`.
+See [Autosave](#Autosave) for more information.
 
 ## Close maps
 
@@ -53,7 +62,9 @@ The preferences you can set are:
 
 ## Import
 
-The `File->Import` menu has two types of functions. One is importing map branches from other Freeplane maps into an active map. The other is importing content from non-Freeplane maps into an active map.
+The `File->Import` menu has two types of functions.
+One is importing map branches from other Freeplane maps into an active map.
+The other is importing content from non-Freeplane maps into an active map.
 
 ### Importing Freeplane map branches into an active map
 
