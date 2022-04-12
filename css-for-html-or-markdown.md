@@ -103,7 +103,8 @@ CSS can be added to **Details** and to **Note**, making it possible to specify d
 CSS added to **Details** will affect <u>node-details</u> HTML/Markdown of all nodes in the map.<br>
 Similarly, CSS added to **Note** will affect <u>note</u> HTML/Markdown of all nodes in the map.
 
-Note that when CSS is added to **Default**, it is also applied to **Details** and **Note**. To make **Details** or **Note** ignore CSS added to **Default** and use only its formatting properties, add "empty" CSS (e.g. a space) to **Details** or **Note** respectively.
+Note that when CSS is added to **Default**, it is also applied to **Details** and **Note**.
+To make **Details** or **Note** ignore CSS added to **Default** and use only its formatting properties, add "empty" CSS (e.g. a space) to **Details** or **Note** respectively.
 This is because when CSS is added to a Style (here to **Details** or to **Note**), CSS added to **Default** is ignored for that Style.
 
 ## Example Of Markdown With CSS
@@ -112,7 +113,8 @@ Given the following Markdown document:
 
 ~~~markdown
 # Heading 1
-Regular text. **Bold text.** *Italic text.* ***Both: bold and italic.***
+Regular text.
+**Bold text.** *Italic text.* ***Both: bold and italic.***
 
 A line (horizontal ruler) using underscores:
 ___
