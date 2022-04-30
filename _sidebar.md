@@ -3,7 +3,10 @@
 * [Understand the Freeplane interface](understanding-interface.md)
 * [Working with mindmap files](working-w-mindmap-files.md)
 * [Understanding nodes](understanding-nodes.md)
+* [Styles](styles.md)
+* [Templates](templates.md)
 * [CSS for HTML/Markdown](css-for-html-or-markdown.md)
+* [Customizing Freeplane](customizing-freeplane.md)
 * [Contribute](contribute.md)
 <!--
 * [Adding and removing nodes](add-remove-nodes.md)
@@ -14,7 +17,6 @@
 * [Filtering nodes](filtering-nodes.md)
 * [Searching nodes](searching-nodes.md)
 * [Formatting maps and nodes](formatting-maps-nodes.md)
-* [Styles](styles.md)
 * [Templates](templates.md)
 * [Navigating the map](navigating-map.md)
 * [Using icons](using-icons.md)
