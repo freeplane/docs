@@ -1,4 +1,4 @@
-# Using Freeplane 1.9
+# Using Freeplane 1.10
 
 We suggest viewing this wiki at https://freeplane.github.io/wiki/#/
 
