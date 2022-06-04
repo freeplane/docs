@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-  <title>Using Freeplane</title>
+  <title>Freeplane</title>
   <style>
     /* override vue.css */
     section.content {
@@ -13,7 +13,6 @@
     }
     article.markdown-section {
         padding-top: 10px;
-        padding-bottom: 0px;
     }
   </style>
 </head>
@@ -22,28 +21,28 @@
   <script>
     window.$docsify = {
       el: "#app",
-      //repo: 'https://github.com/freeplane/wiki/tree/main',
       loadSidebar: true,
       auto2top: true,
       executeScript: true,
+      homepage: 'Home.md',
       // The date template pattern
       formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
       plugins: [
         function(hook, vm) {
           hook.beforeEach(function(html) {
             var header = `
-[Home](/) | [Old wiki](/wiki/migrated-from-mediawiki/ ':ignore :target=_self')
+[Home](/) | [New wiki](../ ':ignore :target=_self') &nbsp; &nbsp; &nbsp; 
+<span style="font-style: italic; opacity: 0.5;">
+  This is a read-only copy of the old MediaWiki site migrated to Markdown for GitHub.
+  Some content might be outdated, some unconverted, some media files missing.
+<span>
 
 <div id="toc"></div>
-<script>populateToc();</` + 'script>\n\n';
-            var url = 'https://github.com/freeplane/wiki/blob/main/' + vm.route.file;
-            var edit = '[📝](' + url + ')\n';
-            var footer = '\n----\n<span style="opacity: 0.5;">' + edit + ' Last modified {docsify-updated}</span>';
+<script>populateToc();</` + 'script>\n\n';                    
 
             return (
               header +
-              html +
-              footer
+              html
             );
           });
         }
