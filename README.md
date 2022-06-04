@@ -8,6 +8,7 @@ This is a work in progress. Please contribute! Find out how [here](contribute.md
 
 [Introduction](introduction.md)
 
+<!--
 [Understand the Freeplane interface](understanding-interface.md)
 
 [Working with mindmap files](working-w-mindmap-files.md)
@@ -57,7 +58,7 @@ This is a work in progress. Please contribute! Find out how [here](contribute.md
 [Other topics](other-topics.md)
 
 [Reference information](reference-info.md)
-
+-->
 ---
 
 This site was created using [**Docsify**](https://docsify.js.org), which is an open source documentation site generator, and imported in GitHub page. 
