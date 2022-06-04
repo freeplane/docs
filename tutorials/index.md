@@ -1,4 +1,4 @@
 
 # Tutorials
 
-[Freeplane API (Groovy)](./freeplane-api-groovy/index.md)
+[Freeplane API (Groovy)](/tutorials/freeplane-api-groovy/index.md)
