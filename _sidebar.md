@@ -1,4 +1,4 @@
-* [HOME](./)
+* [HOME](/)
 * [Introduction](introduction.md)
 * [Understand the Freeplane interface](understanding-interface.md)
 * [Working with mindmap files](working-w-mindmap-files.md)
@@ -8,6 +8,7 @@
 * [CSS for HTML/Markdown](css-for-html-or-markdown.md)
 * [Customizing Freeplane](customizing-freeplane.md)
 * [Contribute](contribute.md)
+* [Tutorials](/tutorials/index.md)
 <!--
 * [Adding and removing nodes](add-remove-nodes.md)
 * [Editing nodes](editing-nodes.md)
