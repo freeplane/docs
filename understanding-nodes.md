@@ -3,7 +3,7 @@
 ## Node elements
 ### Overview
 
-Nodes are the fundamental element of mindmaps.
+Nodes are the fundamental element of mind maps.
 Although nodes appear simple at first, they have many optional elements that can increase their functionality.
 
 What appears to be the whole node at first is actually just the [node core](glossary.md#node-core).
@@ -17,7 +17,7 @@ Additional information can be stored in nodes outside the core as node details, 
 The node core is the only part of the node that is always visible whenever the node itself is visible.
 The node core can itself contain several types of information: text (including numbers), icons,  images, and links.
 
-![Several Node cores in a mindmap](images/node_core.png)
+![Several Node cores in a mind map](images/node_core.png)
 
 The text in the node core can be interpreted or parsed by Freeplane in different ways, which can be set in the Format Panel drop-down menu `Core text->Format`.
 To understand the implications of this setting, see (to be added).

@@ -59,7 +59,7 @@ This documentation site is our ongoing attempt to address this concern!
 ### A note about types of mind mapping software
 
 There are many applications with overlapping functions but different primary purposes.
-You can make mindmaps with Microsoft PowerPoint, but it is fundamentally a presentation program.
+You can make mind maps with Microsoft PowerPoint, but it is fundamentally a presentation program.
 Freeplane is not fundamentally a diagramming program, or a team project management program, or a calendar program, but it can serve all of those needs to different degrees.
 
 It is useful to know, however, that Freeplane is fundamentally a program designed to capture, organize, and manipulate information in mind maps, and to be highly customizable down to its basic functions, including scripting and add-on support.

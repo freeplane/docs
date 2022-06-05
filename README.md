@@ -11,7 +11,7 @@ This is a work in progress. Please contribute! Find out how [here](contribute.md
 <!--
 [Understand the Freeplane interface](understanding-interface.md)
 
-[Working with mindmap files](working-w-mindmap-files.md)
+[Working with mind-map files](working-w-mind-map-files.md)
 
 [Understanding nodes](understanding-nodes.md)
 
@@ -49,7 +49,7 @@ This is a work in progress. Please contribute! Find out how [here](contribute.md
 
 [Presentations](presentations.md)
 
-[Sharing and printing mind maps](sharing-printing-mindmaps.md)
+[Sharing and printing mind maps](sharing-printing-mind-maps.md)
 
 [Using Freeplane with other applications](using-freeplane-other-apps.md)
 
