@@ -39,14 +39,7 @@ On some systems it's also possible to `right-click + drag` one node onto another
 
 ![connectors](images/connectors.gif)
 
-Connectors' properties can be edited.
-When you `right-click` a connector (it's best to select one of the connected nodes first), a **Connector** dialog appears.
-Here you can set formatting properties individually or select a Style (or both), set labels' text and remove the connector.
-
-By default, a connector's shape is `Curve`.
-The other options are `Line`, `Linear path` and `Simulate edge`.
-The last one does exactly that: simulates an edge between the nodes.
-The other 3 types' shape can be changed using curve-shaping of either end.\
+Connectors' properties can be edited (see [Connector styles](#connector-styles)).
 To change the shape of a connector, click on the line near a node (it's best to select the node first).
 You will see handles appear.
 By dragging your mouse up to ~50% of the distance between the nodes, the near handle is adjusted.
@@ -63,13 +56,27 @@ When using `Line` as the type, the connector appears one-ended.
 
 #### Connector styles 
 
-Connectors, just like nodes, use styles.
-See [Styles](styles.md) for more information.
+Connectors use styles (see [Styles](styles.md)) just like nodes.
 
+When you `right-click` on a connector, the **Connector** dialog appears.
+Here you can set individual formatting properties or select a style (or both), set labels' text and remove the connector.
+
+**Connector Shapes:**
+
+1. `Curve` (default, 1)
+2. `Line` (2)
+3. `Linear path` (3)
+4. `Simulate edge` (4)
+
+`Simulate edge` simulates an normal edge between the nodes.
+
+![](images/connector_styles.png ':size=600')
+
+The other 3 types' shape can be changed using curve-shaping of either end.\
 When a connector is added, a style is applied to it, which determines how the connector looks like.
 By default, it's the **Default** style.
 There's an option to apply a style based on the connector style defined on the source or the target node.
-To use it, turn it on in `Preferences (Ctrl+COMMA)->Defaults->Connectors->Assigns node dependant styles to new connectors`.
+To use it, turn it on in `Preferences (Ctrl+COMMA) -> Defaults -> Connectors -> Assigns node dependant styles to new connectors`.
 If the source node has a style applied which has a connector style defined, the style is applied to the connector.
 Otherwise, the target node is checked for the same.
 
@@ -77,8 +84,11 @@ Otherwise, the target node is checked for the same.
 
 In addition to standard nodes, there are some special types of nodes:
 
+1. the root node
+2. free nodes
+
 ### The root node
-Every mind map begins with a central node call the root node.
+Every mind map begins with a central node called the root node.
 Node levels are defined based on their distance from the root node.
 
 ### Free nodes
