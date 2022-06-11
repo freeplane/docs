@@ -87,6 +87,8 @@ In addition to standard nodes, there are some special types of nodes:
 1. the root node
 2. free nodes
 
+![](images/nodes_root_node_free_nodes.png ':size=600')
+
 ### The root node
 Every mind map begins with a central node called the root node.
 Node levels are defined based on their distance from the root node.
@@ -111,6 +113,8 @@ Other nodes can also be given the style `Floating node` and can be set to be pos
 ### Clone nodes
 ### Node groups
 #### Summary nodes
+
+![](images/nodes_summary_nodes.png ':size=600')
 
 Summary nodes have brackets that suggest that their content summarizes a group of sibling nodes.
 Technically, summary nodes are specially marked sibling nodes of the summarized  
