@@ -20,6 +20,12 @@ Have fun!
 
 ### What are mind maps?
 
+Mind maps are diagrams and a visual way of associating topics, terms and smaller graphical elements.
+This allows to get an overview about a topic as well as showing a certain degree of strucutre.
+Spreading from the center outwards, they have a hierarchy (tree-style) and connect different aspects and elements.
+Mind maps can therefore be used to structure topics, make outlines for texts, document brainstormings or serve as a knowledge-base.
+The method of "mindmapping" and mind maps are coined by the british author and psychologist Tony Buzan († 2019).
+
 ### Why use mindmapping software?
 
 ### Why use Freeplane rather than other mindmapping software?
