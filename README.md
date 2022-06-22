@@ -1,6 +1,6 @@
 # Using Freeplane 1.10
 
-We suggest viewing this wiki at https://freeplane.github.io/wiki/#/
+We suggest viewing this wiki at https://freeplane.github.io/docs/#/
 
 This is a work in progress. Please contribute! Find out how [here](contribute.md).
 
