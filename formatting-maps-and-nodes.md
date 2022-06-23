@@ -25,4 +25,16 @@ It can be done by using the dialog editor `Edit->Node code->Edit node core in di
 
 ?> Note: It's also possible to use the hot keys (e.g. `Ctrl+L` for blue) in the in-line editor.
 
+### Using Format
+
+Formats allows to apply a special data format, e.g. a special or number date format.
+If for instance a date has the standard format 28/12/2012 it can be reformatted as 12/28/2012 by applying the format mm/dd/yyyy to the node.
+See [Data recognition and data formats](Data_recognition_and_data_formats.md) for details.
+
+Another application of the format is to define text templates, such as a prefix like "Beware: ". In text templates "%s" represent the original node text like in "Beware: %s".
+
+By setting format to "Text" you switch all formatting off.
+
+## Styles
+
 Finally, a node can be formatted by applying a style to the node → [styles](styles.md)

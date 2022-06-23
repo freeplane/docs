@@ -1,26 +1,17 @@
-# How you can contribute
+# How to Start Contributing
 
------
+We're currently looking for contributors for developing the documentation.
+If you can write simple step-by-step guides, translate existing text into English, transfer text from our old documentation into the new one, then we could use your help.
+You can [start a discussion post (in the docs project)](https://github.com/freeplane/docs/discussions/new) saying you want to contribute to the documentation and the Freeplane team will respond and assist you.
 
-We are hosting the wiki files at a GitHub repo, but their site does not allow easy styling of the format, full text search of the wiki, or a sidebar to navigate.
-Thus, we are using Docsify to provide these features.
+If you have other ways of contributing: developing an addon, sharing your pre-configured mindmap, or suggestions about future development, please feel free to join us in the [Discussions](https://github.com/freeplane/freeplane/discussions)
 
-We need someone to help style this wiki using Docsify.
-Quickfold does not have the technical skills and Dimitry is too busy programming Freeplane.
-If you can help, please contact us.
+Every contributor or team member freely decides what task they are going to work on.
+However, for making the best decision regarding development, it's advised that we first propose and suggest the idea to the community through a discussion post as to enable early discussion and community feedback.
 
-Documentation will be uploaded as it is completed which means that there will be lots of gaps.
-Any section headings without documentation are placeholders.
-Some sections will have incomplete text, these may contain the phrase "(to be added)" to make clear that we need more content in this section.
+[Join](Contributing_to_Freeplane's_Development.md) the Freeplane team not only as user but maybe as a
 
-I've listed some ways to contribute below, from lowest to greatest effort.
-Any help or other suggestions are appreciated!
-
-* Add a question to the FAQ
-* Paste a link to a relevant resource (e.g., a discussion on the Freeplane forum, an online video, a web page) under the correct topic heading in this wiki
-* Take screenshots of Freeplane to illustrate relevant topics, put the image files in the `/images` folder in this repo (and even better if you can put links to the images in the correct section of this wiki)
-* Write any amount of text documenting one of the topics—a how-to, an explanation, a tutorial, or providing reference/technical information about Freeplane.
-  Note: do not worry about grammar.
-  Quickfold will fix writing problems.
-  Feel free to write in your native language and paste the English results from Google Translate or DeepL.com
-* Contact Quickfold or Dimitry to help with the planning, writing, or presentation of the documentation
+* developer (coder and designer)
+* tester (writer of tutorials, screencasts and help texts)
+* translator (various languages)
+* forum moderator (care for a specific subject)

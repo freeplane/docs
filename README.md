@@ -1,64 +1,35 @@
-# Using Freeplane 1.10
+## Freeplane
 
-We suggest viewing this wiki at https://freeplane.github.io/docs/#/
+[Freeplane](http://freeplane.sourceforge.net) is a free and open source software application that supports thinking, sharing information, getting things done at work, in school and at home.
+It provides you a set of tools for mind mapping (also known as concept mapping or information mapping) and navigating the mapped information.
+Freeplane is also a more robust and superuser alternative to Xmind, Mindmeister, and similar mind mapping software.
 
-This is a work in progress. Please contribute! Find out how [here](contribute.md).
+Freeplane is written in Java using OSGi and Java Swing.
+It runs on any operating system that has a current version of Java installed.
+It can be run locally or portably from removable storage like a USB drive.
 
----
+Download and install the latest version over at [Sourceforge](https://sourceforge.net/projects/freeplane/files/).
+If you would like to report a bug, you can go report it over at [Issues](https://github.com/freeplane/freeplane/issues)
 
-[Introduction](introduction.md)
+Hop on to our [Discussions](https://github.com/freeplane/freeplane/discussions) if you have any questions, ideas, or thoughts you'd like to share.
+Contributors are very much welcome, of course!
 
-<!--
-[Understand the Freeplane interface](understanding-interface.md)
+## Features rundown
 
-[Working with mind-map files](working-w-mind-map-files.md)
+![student](images/a-students-second-brain.png ':size=600')
 
-[Understanding nodes](understanding-nodes.md)
+![slides](images/no-more-slides.png ':size=600')
 
-[Adding and removing nodes](add-remove-nodes.md)
+![formatting](images/extensive-formatting-options.png ':size=600')
 
-[Editing nodes](editing-nodes.md)
+![UI](images/ui.png ':size=600')
 
-[Selecting nodes](selecting-nodes.md)
+![addons](images/add-ons-and-scripting-aka-macros.png ':size=600')
 
-[Moving and organizing nodes](moving-nodes.md)
+![command search](images/command-search.png ':size=600')
 
-[Node links](node-links.md)
+![styling](images/conditional-styling.png ':size=600')
 
-[Filtering nodes](filtering-nodes.md)
+![formulas](images/formulas.png ':size=600')
 
-[Searching nodes](searching-nodes.md)
-
-[Formatting maps and nodes](formatting-maps-nodes.md)
-
-[Styles](styles.md)
-
-[CSS for HTML/Markdown](css-for-html-or-markdown.md)
-
-[Templates](templates.md)
-
-[Navigating the map](navigating-map.md)
-
-[Using icons](using-icons.md)
-
-[Using images](using-images.md)
-
-[Customizing Freeplane](customizing-freeplane.md)
-
-[Task and project management](task-project-management.md)
-
-[Presentations](presentations.md)
-
-[Sharing and printing mind maps](sharing-printing-mind-maps.md)
-
-[Using Freeplane with other applications](using-freeplane-other-apps.md)
-
-[Programming scripts and plugins](scripts-addons-plugins.md)
-
-[Other topics](other-topics.md)
-
-[Reference information](reference-info.md)
--->
----
-
-This site was created using [**Docsify**](https://docsify.js.org), which is an open source documentation site generator, and imported in GitHub page. 
+![discussions](images/discussions.png ':size=600')

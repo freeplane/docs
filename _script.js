@@ -1,3 +1,4 @@
+const questionMarkAll = /\?.*/
 function populateToc() {
     const toc = document.querySelector('div#toc');
     if (toc) {
@@ -15,7 +16,7 @@ function populateToc() {
             li.style.marginLeft = `${h.tagName[1]-topH[1]}em`;
             const a = document.createElement('a');
             li.insertAdjacentElement('beforeEnd', a);
-            a.href = `${location.hash}?id=${h.id}`;
+            a.href = `${location.hash.replace(questionMarkAll, '')}?id=${h.id}`;
             a.textContent = h.textContent;
         }
         toc.insertAdjacentHTML('afterEnd', '<hr>');
