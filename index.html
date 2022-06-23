@@ -22,7 +22,7 @@
   <script>
     window.$docsify = {
       el: "#app",
-      //repo: 'https://github.com/freeplane/wiki/tree/main',
+      //repo: 'https://github.com/freeplane/docs/tree/main',
       loadSidebar: true,
       auto2top: true,
       executeScript: true,
@@ -35,11 +35,9 @@
         function(hook, vm) {
           hook.beforeEach(function(html) {
             var header = `
-[Home](/) | [Old wiki](/wiki/migrated-from-mediawiki/ ':ignore :target=_self')
-
 <div id="toc"></div>
 <script>populateToc();</` + 'script>\n\n';
-            var url = 'https://github.com/freeplane/wiki/blob/main/' + vm.route.file;
+            var url = 'https://github.com/freeplane/docs/blob/main/' + vm.route.file;
             var edit = '[📝](' + url + ')\n';
             var footer = '\n----\n<span style="opacity: 0.5;">' + edit + ' Last modified {docsify-updated}</span>';
 
