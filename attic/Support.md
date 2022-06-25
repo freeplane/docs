@@ -11,7 +11,7 @@ The installation of the stable version for Windows is automatic. In other cases 
 ## Operating systems
 Freeplane runs on any operationg system which has a recent version of Java insatalled.
 
-* [Systems: Windows, Linux, Ubuntu, PortableApps, ..](:Category:System.md)
+* [Systems: Windows, Linux, Ubuntu, PortableApps, ..](Category:System.md)
 * [Macintosh](Macintosh.md), also for mouse(button) handling.
 
 ## Install language
@@ -35,12 +35,12 @@ The standard functionality of Freeplane can be extended in different ways:
 Freeplane is being developed fast. If you want to use the newest functionality consider using a beta version. Besides you are invited to take part in testing the preview versions.
 
 ## Install beta version
-A beta version is a complete version of Freeplane with all new functionality of the coming new stable version and which is being installed in the same way as the stable version, with a set-up file which will automatically install Java too. Go to [beta version](http://sourceforge.net/projects/freeplane/files/freeplane%20beta/), download the Freeplane-SetupXXX.exe and execute this file. For non-windows operating systems, see [:Category:System](:Category:System.md). Read [here](:Category:Change_log.md) about changes between program versions.
+A beta version is a complete version of Freeplane with all new functionality of the coming new stable version and which is being installed in the same way as the stable version, with a set-up file which will automatically install Java too. Go to [beta version](http://sourceforge.net/projects/freeplane/files/freeplane%20beta/), download the Freeplane-SetupXXX.exe and execute this file. For non-windows operating systems, see [Category:System](Category:System.md). Read [here](Category:Change_log.md) about changes between program versions.
 
 ## Install last preview version
 A preview version contains new functionality the programmers are still working on. Installing a preview version  supposes that you have Java installed on your computer. 
 
-Go to [preview](http://sourceforge.net/projects/freeplane/files/freeplane%20preview/) and download Freeplane_bin-XXXX.zip, in which XXXX is a shown version number. Unpack the zip file, at any place you want. If your intention is to only test the new version: In Windows click freeplane.exe; you could also connect freeplane.exe to the task bar. If you want the new version to automatically start if you click on any mind map, just overwrite the directories of the older version with those of the newer version. For other operating systems, see [:Category:System](:Category:System.md). Read [here](:Category:Change_log.md) about changes between program versions.
+Go to [preview](http://sourceforge.net/projects/freeplane/files/freeplane%20preview/) and download Freeplane_bin-XXXX.zip, in which XXXX is a shown version number. Unpack the zip file, at any place you want. If your intention is to only test the new version: In Windows click freeplane.exe; you could also connect freeplane.exe to the task bar. If you want the new version to automatically start if you click on any mind map, just overwrite the directories of the older version with those of the newer version. For other operating systems, see [Category:System](Category:System.md). Read [here](Category:Change_log.md) about changes between program versions.
 
 
 
@@ -81,7 +81,7 @@ Open forums give fast and easy access to the active user community of Freeplane.
 
 # Developers
 
-* [Information for developers](:Category:Developer.md)
+* [Information for developers](Category:Developer.md)
 
 # Previous versions
 

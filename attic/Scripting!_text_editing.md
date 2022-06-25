@@ -53,7 +53,7 @@ Once this script is downloaded and placed in the script directory, it should be 
   }
 ```
 
-Author: [user:seatrout](user:seatrout.md) with polish and editing by [user:boercher](user:boercher.md)
+Author: `seatrout` with polish and editing by `boercher`
 
 ## Change case of words, and sort bAD CApitalisation
 
@@ -163,7 +163,7 @@ If used from here, it should be bound to a key
     }
     </syntaxhighlight>
 
-Author: [user:seatrout](user:seatrout.md) with polish and editing by [user:boercher](user:boercher.md)
+Author: `seatrout` with polish and editing by `boercher`
 
 ## Clean screen editor
 
@@ -225,7 +225,7 @@ A toggle script for when you want to concentrate: will either centre the selecte
 
 ```
 
-Author: [user:seatrout](user:seatrout.md) with the hard bits by [user:boercher](user:boercher.md)
+Author: `seatrout` with the hard bits by `boercher`
 
 ## Inserts an inline image into node text or details
 

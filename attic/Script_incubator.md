@@ -82,7 +82,7 @@ Author: `zipizap`
 
 Trying to help out with this request, to save different folding states [- see the thread for more info
 
-[1](1]) https://sourceforge.net/p/freeplane/discussion/758437/thread/10318019/?limit=25#879e
+\[1\] https://sourceforge.net/p/freeplane/discussion/758437/thread/10318019/?limit=25#879e
 
 
 Use the save script to save the current folding of the map, and then later use the restore script to restore the saved-folding.

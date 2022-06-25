@@ -30,24 +30,29 @@ Install git as [described here](http://git-scm.com/book/en/Getting-Started-Insta
 You probably want to use the latest Eclipse (make sure to get *Eclipse for RCP and RAP Developers*) with the EGit (Eclipse-git) plugin that is part of recent Eclipse builds. Although EGit comes with its own pure java git implementation *JGit*, we rely on a native git for some commands, so please install git as described above, too.
 
 After Git installation, you need to start Git Bash and run the following command line which first set the author details globally (which will be recorded for each changeset):
-    $ git config --global user.name "<Firstname> <Lastname>"
-    $ git config --global user.email "<email address>"
-
+```shell
+$ git config --global user.name "<Firstname> <Lastname>"
+$ git config --global user.email "<email address>"
+```
 ## Initial checkout ("clone")
 ### Solution 1: with Git Bash
 Create a new directory named 'git' for git repositories:
-    $ cd $HOME
-    $ mkdir git
-    $ cd git
-
+```shell
+$ cd $HOME
+$ mkdir git
+$ cd git
+```
 Create a local copy of the (whole!) git repository for Freeplane by *cloning* (git-speak for "checking out"):
-    $ git clone https://github.com/freeplane/freeplane.git
+```shell
+$ git clone https://github.com/freeplane/freeplane.git
+```
 
 This will take 3-20 minutes depending on your network connection. 
 
 Now you can quit Git console:
-    $ exit
-
+```shell
+$ exit
+```
 A local copy of the complete history and all branches has been created. Therefore
 it is possible to develop and make commits offline and only connect
 for the purpose of getting changes from other devs (*pull*) or sending
@@ -68,7 +73,9 @@ you can  clone the repository as follows
 * **Enable following renames in history views.** By default history view does not follow changes resulting from renaming of classes or packages and moving of java classes to other packages. These features should be activated as follows:
     * In Eclipse main menu: Window -> Preferences -> Team -> Git -> History, here you should enable option "Follow Renames" 
     * Using the command line set git option diff.renameLimit to some big number so that commits with big number of changes are properly processed either for the cloned repository or as a global setting:
-    $ git config diff.renameLimit 100000
+```shell
+$ git config diff.renameLimit 100000
+```
 You can change the both settings also from git configuration dialog under eclipse preferences.
 
 **Enable Git keyboard shortcuts.** Funnily enough you have to give Git shortcuts some blessing before they work, see [this Stackoverflow](http://stackoverflow.com/a/12918446/1112408) answer.
@@ -103,7 +110,7 @@ Here are the basic commands for working with branches. The diagram is given
 just as an overview,
 *read the step descriptions in the following sections before trying any git commands*.
 
-![](images/Git-steps.png ':size=200')
+![](images/Git-steps.png ':size=x200')
 
 1. The remote repository is cloned from origin (sourceforge). You now have a complete local copy of the repository including all branches and the complete history.
 2. The user creates (and checks out) a new *local* branch *user/newdev1*.
@@ -125,11 +132,12 @@ your work on, **usually master**) to the local work space.
 If your parent branch is not the master you should select it first
 
 * Using command line git:
-    # fetches the remote (tracking) branch (not necessary if you just cloned the repo)
-    $ git pull 
-    # switch to ''branchname''
-    $ git checkout <branchname>
-
+```shell
+# fetches the remote (tracking) branch (not necessary if you just cloned the repo)
+$ git pull 
+# switch to **branchname**
+$ git checkout <branchname>
+```
 * Using Eclipse/EGit, 
     * *Team->fetch from upstream* fetches all remote branches (may not be necessary)
     * *Team->Switch To->New branch...*, select *Source ref = refs/remotes/origin/<branchname>*,  *merge* and *checkout new branch*
@@ -139,7 +147,9 @@ Create + check out your own *local* branch based on the original branch:
 Since branches are really really cheap in git, it makes sense to create a branch
 for most development tasks (especially if you want a review before you integrate into master!).
 The following command creates a new local branch <devbranch> and switches to it:
-    $ git checkout -b <devbranch>
+```shell
+$ git checkout -b <devbranch>
+```
 
 ### Step 3: Work locally on your branch
 Please read [chapter 2.2 of the official git book](http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository)
@@ -148,15 +158,21 @@ Here are some basic steps:
 
 * modify/add files...
 * add the modifications to the *index*:
-    $ git add foo.java # (''Team->Add to index'' in eclipse)
+```shell
+$ git add foo.java # (**Team->Add to index** in eclipse)
+```
 
 * create a *commit* from the changes in the index:
-    $ git commit [-m message] # (''Team->Commit'' in eclipse)
+```shell
+$ git commit [-m message] # (**Team->Commit** in eclipse)
+```
 (if you omit -m then you will be prompted for a commit message)
 
 * create more commits, this is all done locally!
 * look at the commit graph:
-    $ git log # might want to use ''gitk'' as a graphical tool
+```shell
+$ git log # might want to use **gitk** as a graphical tool
+```
 
 Eclipse git is also able to do the local commits from the team menu
 
@@ -164,6 +180,7 @@ Eclipse git is also able to do the local commits from the team menu
 Setup git so that only the current "upstream" branch gets pulled/pushed
 (instead of pushing *all* branches that have an upstream tracking branch
 which can be confusing!):
+
     $ git config push.default tracking
 **Note**: this option is ignored by current EGit. On EGit you get the
 same behavior by selecting *Team->Push To Upstream*.
@@ -175,22 +192,26 @@ others can see (and review!) it.
 
 **Currently it's best to do this on the command line, because *push -u* sets up the tracking branch properly.**
 *Make sure you use the same name!* *Use --dry-run first*.
+
     $ <go to the local copy of the repo ("$ cd $HOME/git/freeplane")>
     $ git push -u origin <devbranch> [--dry-run]
 You should see a message like:
+
     Branch user/dev1 set up to track remote branch user/dev1 from origin.
 
-(When pushing from eclipse you ''have to configure the remote tracking
-branch'' manually!). In any case (tracking branch configured
+(When pushing from eclipse you **have to configure the remote tracking
+branch** manually!). In any case (tracking branch configured
 automatically or manually), *Team->Push to Upstream* will push the current
 branch to its (configured) remote branch on origin.
 
 ### Step 5: Development cycles
 Follow the cycle:
 Switch to the right branch (may not be necessary)
-    $ git checkout <devbranch> # ''Team->Switch To->user/dev1'' from EGit 
+
+    $ git checkout <devbranch> # **Team->Switch To->user/dev1** from EGit 
 pull other people's changes on your devbranch (as a beginner you might want to do this on a copy of your repository first, it's all local!)
-    $ git pull # ''Team->Pull'' from EGit
+
+    $ git pull # **Team->Pull** from EGit
 (People recommend to use git fetch and git merge instead of git pull)
 
 you might have to resolve conflicts: (might want to use 'git mergetool'
@@ -203,32 +224,37 @@ for each conflict x:
 * git add x # mark *x* as resolved
 
 to undo the merge you can use
-    $ git reset --hard # ''Team->Reset...'' in EGit
+
+     $ git reset --hard # **Team->Reset...** in EGit
 **but this will throw away all uncommitted changes(!)**
 
 * commit the conflict resolution(s):
-    $ git commit [-m message] # ''Team->Commit'' in EGit
+
+     $ git commit [-m message] # **Team->Commit** in EGit
 
 * create local commits (see "Step 3")
 * merge changes from master (to integrate the latest code into your feature and to make Step 6 easier)
-    $ git pull origin master
+
+     $ git pull origin master
 
 * merge changes from master with EGit: 
     * *Team->Fetch from Upstream*
     * *Team->Merge...*, select *origin/master*
 * push the result of the merge with master to your remote dev branch (always run git push with --dry-run first!)
-    $ git push [--dry-run] # EGit: ''Team->Push to Upstream''
-    # (same as ''git push origin <devbranch>'' because tracking is set up)
+
+     $ git push [--dry-run] # EGit: **Team->Push to Upstream**
+     # (same as **git push origin <devbranch>** because tracking is set up)
 
 ### Step 6: Merge your development into master
 When you are done with your branch, and you have completed a code review of your dev branch, it should be merged into master (!) As a new developer, you **must let a more experienced developer do this**!
+
     $ git checkout <devbranch> # Switch to <devbranch> in EGit
-    $ git pull # ''Team->Pull'' in EGit
-    $ git checkout master # Switch to ''master'' in EGit
-    $ git pull # ''Team->Pull'' in EGit
-    $ git merge <devbranch> # EGit: ''Team->Merge...'', select ''local'' <devbranch>
-    $ git push [--dry-run] # EGit: ''Team->Push to Upstream''
-    # (same as ''git push origin master'' because tracking is set up)
+    $ git pull # **Team->Pull** in EGit
+    $ git checkout master # Switch to **master** in EGit
+    $ git pull # **Team->Pull** in EGit
+    $ git merge <devbranch> # EGit: **Team->Merge...**, select **local** <devbranch>
+    $ git push [--dry-run] # EGit: **Team->Push to Upstream**
+    # (same as **git push origin master** because tracking is set up)
 
 # How to's
 This section contains useful information for working with git, including stuff
@@ -268,25 +294,32 @@ This page also describes how to import a repository into eclipse.
 
 ## Using Tags
 Show all tags:
+
     $ git tag
 
 Search for a tag:
+
     $ git tag -l "release-1.1*"
 
 Show information about a tag:
+
     $ git show release-1.1.2
 
 Define a tag locally:
+
     $ git tag -a <tagname>
     # (an editor opens for you to add a description)
 
 Tags are not automatically transferred when doing a <code>git push</code>,
 you have to push individually:
+
     $ git push origin <tagname>
 or push *all* tags:
+
     $ git push --tags origin
 
 You *might* need a
+
     $ git pull --tags
 to get all tags. See git-fetch(1) for situations when you will need this (rarely).
 
@@ -298,8 +331,8 @@ Branches are very central to git. Do not hesitate to create feature, team
 and (of course) maintenance branches.
 
 You probably want set push.default to *tracking* or *upstream* which
-makes sure that *only the current branch* is pushed to its ''upstream
-branch'' (and NOT all configured branches):
+makes sure that *only the current branch* is pushed to its **upstream
+branch** (and NOT all configured branches):
 **Note**: this option is ignored by current EGit. On EGit you get the
 same behavior by selecting *Team->Push To Upstream*.
 
@@ -308,6 +341,7 @@ same behavior by selecting *Team->Push To Upstream*.
 (you can equivalently set this to *upstream* in recent git versions).
 
 ### Switch to another branch
+
     $ git checkout <branchname>
 
 (Team->Switch To->... in Eclipse)
@@ -338,18 +372,20 @@ or (if several devs work on a feature): <code><feature></code>.
     # create branch remotely, use -u to automatically configure upstream location
     $ git push -u origin <newbranch>
     # this should output something like this:
-    ''Branch <newbranch> set up to track remote branch <newbranch> from origin.''
-    # ('''Note''': -u is important if you want to use git pull/push without
+    **Branch <newbranch> set up to track remote branch <newbranch> from origin.**
+    # (**'Note**': -u is important if you want to use git pull/push without
     specifying a remote/refspec)
 
     # remote branch of <newbranch> must be visible:
     $ git branch -a
 
 So the short story is:
+
     $ git checkout -b <newbranch>
     $ git push -u origin <newbranch>
 
 ### Rename a *local* branch
+
     $ git branch -m <old-branch-name> <new-branch-name>
 
 TODO: how to rename the remote tracking branch => difficult!!
@@ -414,10 +450,12 @@ the integration of a new feature. On the other hand, many merge nodes
 make the commit graph less readable.
 
 #### Merge master->dev-branch *locally*
+
     $ git checkout <devbranch>
     $ git merge master
 
 #### Merge dev-branch->master *locally*
+
     $ git checkout master
     $ git merge <devbranch>
 
@@ -443,9 +481,11 @@ echoed (or by searching for the last commit on that branch in <code>git reflog</
 commits will be deleted after some time!
 
 Delete a remote branch(!):
+
     $ git push origin --delete <branchname>
 
 Now the local and the remote tracking branch should be gone:
+
     $ git branch -a
     docear/trunk
     * master
@@ -479,6 +519,7 @@ Make sure your branches are set up correctly for push/pull:
 
 ### Importing a remote branch
 Using command line git:
+
     $ git pull # fetches the remote (tracking) branch
     $ git checkout <branchname>
 
@@ -492,6 +533,7 @@ Using Eclipse/EGit:
 Create a dev branch (see section on creating branches above).
 
 ### Work on your feature branch
+
     # switch to feature branch
     $ git checkout <feature>
 
@@ -525,11 +567,13 @@ master (see section on merging above).
 ## Miscellaneous
 
 ### Revert (reset) files
+
     git checkout <filename>
 
 In EGit do this: Right-click on file -> Replace With -> HEAD Revision
 
 Revert all files in working copy (!):
+
     git reset --hard
 
 ### Undoing/editing commits
@@ -537,9 +581,11 @@ TODO: how to remove/edit a commit locally using rebase.
 
 ### Undoing a commit that is already pushed
 Use <code>git revert <commit-hash></code>, like this:
+
     $ git revert b1e9b4c9755b091f95aaa3035aca04dcb02ec1fd
 
 This will generate an inverse commit, it will *not* remove the original commit:
+
     * 171881e (HEAD, master) Revert "a simple commit"
     * b1e9b4c a simple commit
 

@@ -88,7 +88,7 @@ Online translation has basically 3 steps:
 
 The following 4 scenarios can help you to get from no translation to a complete and improved translation. You could use a combination of scenario 1 and 2 to go through all menu's and screens systematically followed by scenario 3. Scenario 1 is the only scenario that can be replaced with offline translation. Scenario 4 can take place at any time. In case of a largely completed translation that needs maintenance, the scenarios can be used in any order. New tool tips and other new English source strings and translation keys that are added during development are probably easiest found through scenario 3, though it might be difficult to find the location of these strings in the user interface.
 
-**Scenario 1: In the Freeplane user interface you see a string you would like to translate or improve and you can use the Freeplane translation editor.** You can recognise untranslated strings as the English source string with the token [me](Translate) attached to it. Otherwise you could see a string that needs better formulation or  correction of a language error. Hold your mouse above the intended string and press Ctrl+Shift+F10 to invoke the Freeplane translation editor. It will show the string and, if applicable, its tool tip. Press the Weblate button of the string you would like to translate or improve. That will directly open your web browser with the Weblate page for your translation item. In a few cases this scenario does not work or stops here:
+**Scenario 1: In the Freeplane user interface you see a string you would like to translate or improve and you can use the Freeplane translation editor.** You can recognise untranslated strings as the English source string with the token `[Translate me]` attached to it. Otherwise you could see a string that needs better formulation or  correction of a language error. Hold your mouse above the intended string and press Ctrl+Shift+F10 to invoke the Freeplane translation editor. It will show the string and, if applicable, its tool tip. Press the Weblate button of the string you would like to translate or improve. That will directly open your web browser with the Weblate page for your translation item. In a few cases this scenario does not work or stops here:
 
 * When you press Ctrl+Shift+F10 the translation editor does not appear and the message "No translatable string found" appears in the bottom-left corner of the Freeplane Window. The translation editor cannot handle this type of string and you should use scenario 2 to find and translate this string.
 * After you press the Weblate button, the translation item cannot be found in Weblate. This concerns a new tool tip, see [[#New tool tips|New tool tips]]
@@ -166,7 +166,7 @@ If you understand Freeplane's translation file hierarchy, you can figure out how
 4. in <fpuserdir>UserResources_xx.properties (where translation editor stores translations)
 5. in <fpuserdir>resources/translations/Resources_xx.properties (that you can use to save the most recent translation from Weblate)
 6. in the file Resources_xx.properties that came with the release (in the installation directory)
-7. in the file with the English resource strings, displaying it as "<English text> [translate me]"
+7. in the file with the English resource strings, displaying it as `<English text> [translate me]`
 
 With this file hierarchy in mind you can easily grasp the following situations:
 
@@ -294,10 +294,10 @@ You can have a look at:
 ## Frequently Asked Questions / Tips for translators
 
 <dl>
-  <dt>While running Freeplane, why are some strings ending with "[translate me]"?&nbsp;</dt>
-    <dd>As long as a key is missing in a translation, Freeplane automatically uses "&lt;English text&gt; [translate me]" as translation. Translators should translate these strings in priority and then remove "[translate me]".</dd>
-  <dt>Why are strings ending with "[auto]"?&nbsp;</dt>
-    <dd>Translation files can be submitted to an automatic translation tool, then strings of type "&lt;English text&gt; [translate me]" becomes strings of type "&lt;local language text&gt; [auto]". Translators should search and review these strings and then remove "[auto]".</dd>
+  <dt>While running Freeplane, why are some strings ending with `[translate me]`?&nbsp;</dt>
+    <dd>As long as a key is missing in a translation, Freeplane automatically uses `<English text> [translate me]` as translation. Translators should translate these strings in priority and then remove `[translate me]`.</dd>
+  <dt>Why are strings ending with `[auto]`?&nbsp;</dt>
+    <dd>Translation files can be submitted to an automatic translation tool, then strings of type `<English text> [translate me]` becomes strings of type `&lt;local language text&gt; [auto]`. Translators should search and review these strings and then remove `[auto]`.</dd>
   <dt>Why is there sometimes space before values?&nbsp;</dt>
     <dd>spaces before values are ignored, don't care.</dd>
   <dt>Why is there &amp; character before some values (sometimes "in" the words)?&nbsp;</dt>
@@ -307,7 +307,7 @@ You can have a look at:
   <dt>Some keys are not used / displayed in the software&nbsp;</dt>
     <dd>you should stay aligned with the English version to be on the safe side, but if keys are not used, it's a bug you can report it <a rel="nofollow" class="external text" href="https://sourceforge.net/p/freeplane/bugs/">here</a>.</dd>
   <dt>When testing Freeplane with my translation file, some menus are missing or some buttons have no label, why?&nbsp;</dt>
-    <dd>If you leave any empty keys in the file, Freeplane assumes they are valid translations and displays nothing. There are differences between "empty key in the translation file" which displays nothing and "missing key in the translation file" which displays "&lt;English text&gt; [translate me]" (see above).</dd>
+    <dd>If you leave any empty keys in the file, Freeplane assumes they are valid translations and displays nothing. There are differences between "empty key in the translation file" which displays nothing and "missing key in the translation file" which displays `<English text> [translate me]` (see above).</dd>
   <dt>Your translation is truncated&nbsp;</dt>
     <dd>If your translation is truncated when displayed, it may contains a ' (apostrophe) character (e.g. Freeplane displays "Copier l" instead of "Copier l'identifiant"), you may simply enter the ' character twice (ie "Copier l"identifiant") as translation, where " is twice the character '. Most of the time, ' apostrophe characters should be handled as in the English version (for some strings which are used in format statements put them twice, for other strings put them once).</dd>
 </dl>

@@ -54,13 +54,13 @@ For ambitious scripting projects or if you have Java/Eclipse know-how you should
 "Hello World" is the traditional first program when taking up a programming language. Let's create a Groovy Freeplane version of it:
 
 * Create an empty Groovy script file named <tt>HelloWorld.groovy</tt> in your scripts directory (remember that you can get there via *Tools > Open user directory*). The suffix <tt>.groovy</tt> is mandatory.
-* Open <tt>HelloWorld.groovy</tt> in an appropriate editor as detailed [[#Create_a_script_and_integrate_it_into_Freeplane|above]].  
+* Open <tt>HelloWorld.groovy</tt> in an appropriate editor as detailed [above](#create-a-script-and-integrate-it-into-freeplane).  
 * Copy the following script into the file and save it.
 ```groovy
 node.text = "Hello World!"
 ```
 
-* Now save your script in the editor and restart Freeplane since Freeplane will only find new scripts after a restart. Then you will find your new script in the Freeplane menu location *Tools-&gt;Scripts-&gt;Hello World*. You see three sub menus *Execute on one selected node*, *Execute on all selected nodes* and *Execute on all selected nodes, recursively*. [starting with FP version 1.5 there is no sub menu anymore. The execution mode is shown on mouse hover over the menu entry](Note:)
+* Now save your script in the editor and restart Freeplane since Freeplane will only find new scripts after a restart. Then you will find your new script in the Freeplane menu location *Tools-&gt;Scripts-&gt;Hello World*. You see three sub menus *Execute on one selected node*, *Execute on all selected nodes* and *Execute on all selected nodes, recursively*. Note: starting with FP version 1.5 there is no sub menu anymore. The execution mode is shown on mouse hover over the menu entry.
 * At *Tools->Preferences->Plugins->Scripting*<!--
     --><ul><!--
     -->  <li> set ''Script execution enabled'' to ''Yes''</li><!--

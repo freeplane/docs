@@ -1,6 +1,6 @@
 Freeplane's release cycle is time boxed at 6-9 months, and meant to allow for 1-2 stable releases per year (but much more unstable releases ;-) ).
 
-[Freeplane Release model|800px](File:Freeplane_Release_model.png.md)
+![](Freeplane_Release_model.png ':size=800')
 
 As shown above, the release cycle of Freeplane consists of 3 phases:
 
@@ -44,7 +44,7 @@ Another way to show the approach is the following 3 pictures. The blue line turn
 This means that everything is allowed during Alpha phase, that in Beta we should avoid major rewrite unless it's needed to fix a critical bug, and, as we come to RC, almost nothing is allowed but to fix critical bugs.
 ; Side note: the line progresses continuously, it's not a sudden jump, e.g. during beta, we implement always less new things, even if they're easy to do, and fix always more bug, thus regularly stabilizing the code basis.
 
-[Alpha phase|350px](File:Freeplane_Release_Cycle_Alpha.png.md)[Beta phase|350px](File:Freeplane_Release_Cycle_Beta.png.md)[Release Candidate phase|350px](File:Freeplane_Release_Cycle_RC.png.md)
+![Alpha phase](Freeplane_Release_Cycle_Alpha.png ':size=350')![Beta phase](Freeplane_Release_Cycle_Beta.png ':size=350')![Release Candidate phase](Freeplane_Release_Cycle_RC.png ':size=350')
 
 ## Bug handling
 

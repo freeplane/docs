@@ -35,7 +35,7 @@ Author: `Boercher`
 
 ## Add up attribute values of subnodes.
 
-This script adds up the "AMOUNT" attributes of all child nodes of a node and sets the "SUM" attribute of the selected node to the sum. The start value ensures that the argument is created always, even if the node has no children. Note that *node[returns a [http://www.freeplane.org/doc/api/org/freeplane/plugin/script/Convertible.html Convertible](]*).
+This script adds up the "AMOUNT" attributes of all child nodes of a node and sets the "SUM" attribute of the selected node to the sum. The start value ensures that the argument is created always, even if the node has no children. Note that `node[]` returns a [Convertible](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/Convertible.html).
 
 <!-- name=sumAttributeValues -->
 ```groovy
