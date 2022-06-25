@@ -2209,7 +2209,8 @@ This example illustrates:
 3. instantiating the class and passing "ui" as a class parameter:   w=new FreeplaneWindow(ui)
 4. setting & getting the position and size of the Freeplane main window without having to know the underlying specifics. 
  
-<syntaxhighlight lang="Groovy" name="FreeplaneWindow" >
+<!-- name=FreeplaneWindow -->
+```groovy
 // class FreeplaneWindow
 import java.awt.Frame;
 import java.awt.Point; 
@@ -2248,7 +2249,7 @@ class FreeplaneWindow {
     println w.getLeft()
     println w.getWidth()
     println w.getHeight()
-</syntaxhighlight>.
+```
 
 Author: [[User:jokro]]
 

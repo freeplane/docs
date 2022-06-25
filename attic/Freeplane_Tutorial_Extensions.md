@@ -1,4 +1,4 @@
-If you are not English: see [Translated wiki pages](:Category:Translation.md) if this tutorial has been translated into your language.
+If you are not English: see [Translated wiki pages](Category:Translation.md) if this tutorial has been translated into your language.
 
 
 <big>**This tutorial refers to Freeplane 1.2, which was released on October 20, 2012.**</big>
@@ -121,7 +121,7 @@ Floating nodes come in sorts. The most easy to use is the free (posional) floati
 **General examples**<br>
 ![](Freeplane_map_with_multiple_sorts_of_floating_central_nodes.jpg)
 
-[Multiple sorts of floating central nodes](/wiki/migrated-from-mediawiki/Freeplane_map_with_multiple_sorts_of_floating_central_nodes.mm ':ignore')
+[Multiple sorts of floating central nodes](/docs/attic/Freeplane_map_with_multiple_sorts_of_floating_central_nodes.mm ':ignore')
 
 ![Floating Nodes in DigitalLogic](An_example_of_the_Use_of_Freeplane_Floating_Nodes_in_Digital_Logic.jpg)
 
@@ -134,7 +134,7 @@ Floating nodes come in sorts. The most easy to use is the free (posional) floati
 <br>
 
 **Free positioned versus floating nodes**<br>
-[Behaviour of free or floating nodes](/wiki/migrated-from-mediawiki/TypesOfFreeOrFloatingNodes.mm ':ignore') 
+[Behaviour of free or floating nodes](/docs/attic/TypesOfFreeOrFloatingNodes.mm ':ignore') 
 ![](TypesOfFreeOrFloatingNodes.jpg)
 There are several ways to make independent or semi-independent groups. The group free 1 consists of a free positionable node with free posistionable children and regular grand childern.
 To make the group called free 1:
@@ -151,14 +151,14 @@ Open the mind map on the right and read the text hidden in the root node for pec
 ## Calculations with formula plug in
 
 ![Iron Sulfate Production Calculations](Iron_Sulfate_Production_-_Calculations_with_Formula_plugin_(AAGG_-_andressf).jpg)
-[Iron_Sulfate_Production_-_Calculations_with_Formula_plugin_(AAGG_-_andressf).mm](/wiki/migrated-from-mediawiki/Iron_Sulfate_Production_-_Calculations_with_Formula_plugin_(AAGG_-_andressf).mm ':ignore')
+[Iron_Sulfate_Production_-_Calculations_with_Formula_plugin_(AAGG_-_andressf).mm](/docs/attic/Iron_Sulfate_Production_-_Calculations_with_Formula_plugin_(AAGG_-_andressf).mm ':ignore')
 
-[Iron Sulfate Production-AAGG](/wiki/migrated-from-mediawiki/Iron_Sulfate_Production-AAGG_-_andressf-.mm ':ignore')
+[Iron Sulfate Production-AAGG](/docs/attic/Iron_Sulfate_Production-AAGG_-_andressf-.mm ':ignore')
 ![](Iron_Sulfate_Production-AAGG_-_andressf-.jpg)
 <br><br><br><br><br>
 
 ## Conditional styles
-[Example concept map](/wiki/migrated-from-mediawiki/Example_-_ConceptMap.mm ':ignore')
+[Example concept map](/docs/attic/Example_-_ConceptMap.mm ':ignore')
 ![](Example_-_ConceptMap.jpg)
 <br><br><br><br><br><br>
 
@@ -171,7 +171,7 @@ Open the mind map on the right and read the text hidden in the root node for pec
 
 ![Writing_an_essay_with_Freeplane](Wilson_(version_adapted_by_AAGG_-_andressf)_-_Writing_an_essay_with_Freeplane.jpg)
 
-[Novel Writer's Notebook: A sample map for writers](/wiki/migrated-from-mediawiki/NovelWritersNotebook.mm ':ignore')
+[Novel Writer's Notebook: A sample map for writers](/docs/attic/NovelWritersNotebook.mm ':ignore')
 ![](NovelWritersNotebook.jpg)
 
 See node *The making of this documentation* in Freeplane's *Help > Documentation* for an example how to create a documentation mind map. See also *Floating nodes* above.
@@ -193,9 +193,9 @@ Freeplane lets you export a map for publishing it on Internet or Intranet. If yo
 
 ## Other
 
-* [Fishbone_&_Tree_Diagrams_in_Freeplane](/wiki/migrated-from-mediawiki/Fishbone_&_Tree_Diagrams_in_Freeplane.mm ':ignore')
+* [Fishbone_&_Tree_Diagrams_in_Freeplane](/docs/attic/Fishbone_&_Tree_Diagrams_in_Freeplane.mm ':ignore')
 
-* [Comparison between Freeplane 1.1.2 and Freeplane 1.2.1 alpha](/wiki/migrated-from-mediawiki/Comparison_FP2_1vsFP1_2.mm ':ignore') (Must be updated)
+* [Comparison between Freeplane 1.1.2 and Freeplane 1.2.1 alpha](/docs/attic/Comparison_FP2_1vsFP1_2.mm ':ignore') (Must be updated)
 
 
 # Animations

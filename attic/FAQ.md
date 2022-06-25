@@ -27,7 +27,7 @@ The Freeplane user directory can be found by invoking the menu item Tools->Open 
 Almost all preferences are stored in [<userdirectory>](FAQ.md)/auto.properties. It contains all settings, keyboard bindings and more. If you want to install a second copy of Freeplane, e. g. to another computer you can copy auto.properties to copy all settings.
 
 ## Where's the log file?
-Sometimes you need to know where the log file is located, e.g. if you write [[Scripting][or [http://sourceforge.net/apps/mantisbt/freeplane/ reporting bugs](scripts]]). Find it in subdirectory <tt>logs</tt> of the Freeplane "user directory" (see above). It's named <tt>log.0</tt> in most cases. If you have more than one Freeplane instance opened then it might have the name <tt>log.1</tt> or even <tt>log.0.1</tt>. The most recently changed file matching the pattern <tt>log.*</tt> will be the one you are looking for.
+Sometimes you need to know where the log file is located, e.g. if you write [scripts](Scripting.md) or [reporting bugs](https://github.com/freeplane/freeplane/issues) . Find it in subdirectory <tt>logs</tt> of the Freeplane "user directory" (see above). It's named <tt>log.0</tt> in most cases. If you have more than one Freeplane instance opened then it might have the name <tt>log.1</tt> or even <tt>log.0.1</tt>. The most recently changed file matching the pattern <tt>log.*</tt> will be the one you are looking for.
 
 ## How to replace the splash screen
 Find directory resources in the freeplane installation directory,

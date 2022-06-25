@@ -32,4 +32,3 @@
 * Use signed jar so that local jar files work with the latest java versions
 
 <!-- ({Category:Documentation})({Category:Change_log}) -->
-</noinclude>
