@@ -52,7 +52,7 @@ The template files shown here as an option are those located in the [**system-wi
 You can create a new mind map from a template file at `File > New map from template…`.
 In the dialogue you have different options, depending on which `Files of Type` you choose from the drop-down menu at the bottom of the dialogue:
 
-![Menu `New map from template…`](/images/fp_1914_new_map_from_template.png)
+![Menu `New map from template…`](../images/fp_1914_new_map_from_template.png ':size=x200')
 
 | **Option** | **Description**                                                                                           |
 | :--- |:----------------------------------------------------------------------------------------------------------|

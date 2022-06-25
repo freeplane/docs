@@ -11,10 +11,10 @@ UI designers need to be able to improve the UI by improving the existing English
 This How-To uses the following conventions and terms:
 
 * **Language code:** 'xx' in any file name or URL means the two letter language code of the language you are translating to. So you have to replace it by that language code to make it work.
-* **Your language page:** `https://hosted.weblate.org/projects/freeplane/translation/xx/`, Weblate page that gives an overview of the translation of Freeplane to your language. For details see [[#Weblate|Weblate]]
+* **Your language page:** `https://hosted.weblate.org/projects/freeplane/translation/xx/`, Weblate page that gives an overview of the translation of Freeplane to your language. For details see [Weblate](#Weblate)
 
 * **Your translation item:** An untranslated English source string that you would like to translate or an existing translation that you would like to improve.
-* **Translate page:** Weblate page where you can edit your translation item, see [[#How to translate|How to translate]]
+* **Translate page:** Weblate page where you can edit your translation item, see [How to translate](#How-to-translate)
 * **Translation key:** This is a unique text string that links a certain English source string to all its translations and defines the location where the source string or its translation is displayed in the user interface.
 * **File separator:** '/' (forward slash) is used as file separator in the display of paths in order to be compatible with all relevant operating systems. '\' (backward slash) is the default in Windows, but '/' will work as well.
 * **Freeplane user directory:** <fpuserdir> preceding any file name is the path to the Freeplane user directory. This path ends in /Freeplane/1.5.x/ where the last subdirectory varies between major releases. You can open this directory in your file manager via the Freeplane menu Tools > Open user directory.
@@ -51,7 +51,7 @@ The translation editor appears when you press Crtr+Shift+F10 while your mouse is
 
 The translation editor does not work for all GUI text strings. In that case the message "No translatable string found" appears in the bottom-left corner of the Freeplane Window.
 
-For some tool tip items you might notice that offline editing is disabled and that the translate page cannot be found. In that case it is a [[#New tool tips|new tool tip]].
+For some tool tip items you might notice that offline editing is disabled and that the translate page cannot be found. In that case it is a [new tool tips](#New-tool-tips).
 
 If you would like to change the standard hot key for the translation editor, you can do so by selecting **Tools > Set text change hot key from** the menu.
 
@@ -91,7 +91,7 @@ The following 4 scenarios can help you to get from no translation to a complete 
 **Scenario 1: In the Freeplane user interface you see a string you would like to translate or improve and you can use the Freeplane translation editor.** You can recognise untranslated strings as the English source string with the token `[Translate me]` attached to it. Otherwise you could see a string that needs better formulation or  correction of a language error. Hold your mouse above the intended string and press Ctrl+Shift+F10 to invoke the Freeplane translation editor. It will show the string and, if applicable, its tool tip. Press the Weblate button of the string you would like to translate or improve. That will directly open your web browser with the Weblate page for your translation item. In a few cases this scenario does not work or stops here:
 
 * When you press Ctrl+Shift+F10 the translation editor does not appear and the message "No translatable string found" appears in the bottom-left corner of the Freeplane Window. The translation editor cannot handle this type of string and you should use scenario 2 to find and translate this string.
-* After you press the Weblate button, the translation item cannot be found in Weblate. This concerns a new tool tip, see [[#New tool tips|New tool tips]]
+* After you press the Weblate button, the translation item cannot be found in Weblate. This concerns a new tool tip, see [new tool tips](#New-tool-tips)
 * You may find that the string is already translated or improved. This is because Weblate can be ahead of the translation that came with the Freeplane release you are using.
 
 **Scenario 2: As scenario 1 but without the Freeplane translation editor.** Once you have identified your translation item you go to your language page (`https://hosted.weblate.org/projects/freeplane/translation/xx/`) and press Search. In case of translation you enter the English source string in Query and enable option "Search in source strings" In case of an improvement you enter the current translation in Query and enable option "Search in target strings". After pressing the Search button you might directly find the page for your translation item. If you find more than one item, you can browse through them to find your translation item. If you find nothing or the wrong item the English source text or the translated text has been changed in Weblate since the moment of the Freeplane release you are using. You can try to find them by reducing the number of keywords in the search.
@@ -113,7 +113,7 @@ If the English source string has changed, the change is shown as well. If you ha
 
 If you do not know the location of your translation item in the Freeplane user interface (scenario 3 and 4), the context string (which is in fact the translation key) and the Nearby messages might give a clue.
 
-You can check what Machine translation suggests and how translators have changed the translation in History. Comments and Glossary are discussed in [[#How to collaborate to translate Freeplane to your language|How to collaborate to translate Freeplane to your language]]
+You can check what Machine translation suggests and how translators have changed the translation in History. Comments and Glossary are discussed in [How to collaborate to translate Freeplane to your language](#How-to-collaborate-to-translate-Freeplane-to-your-language)
 
 ### How to test your Weblate translations:
 
@@ -128,18 +128,18 @@ You can check what Machine translation suggests and how translators have changed
 
 ## Offline translation
 
-The basic steps of offline translation are simple: you translate your translation items with the translation editor and then you upload your translation to Weblate. The use of the translation editor [[#Freeplane translation editor|has already been explained]]. The [[#How to upload your translation|first paragraph]] explains how to upload your translation.
+The basic steps of offline translation are simple: you translate your translation items with the translation editor and then you upload your translation to Weblate. The use of the translation editor [has already been explained](#Freeplane-translation-editor). The [first paragraph](#How-to-upload-your-translation) explains how to upload your translation.
 
 When you plan to translate offline you need to realise that there are 3 risks that could upset you and your peer translators compared to the situation where you and the other translators use online translation exclusively:
 
 1. Your local Freeplane translation files are not automatically up to date with the most current translation to your language. There is a risk that you translate items that already have been translated.
 2. You and other translators for your language are not automatically aware of reach others work. There is a risk that you and your co-translators work on the same translation items. 
 3. You do not automatically compare your translation with an existing translation that is added after the local outdated translation (risk 1) or while you were working on your offline translation (risk 2). There is a risk that you accidentally overwrite a preferable translation.
-In the best case scenario there is no translation to your language yet and you are able to ensure that you are the only translator. In other scenarios these unwanted results could occur and might upset you and/or your co-translators. So it is better to prevent these risks from happening by the measures explained in the [[#How to prevent offline translation risks|third paragraph]]. Part of these measures concern updating the local language files and it helps to understand their hierarchy as explained in the [[#Understanding translation file hierarchy|second paragraph]].
+In the best case scenario there is no translation to your language yet and you are able to ensure that you are the only translator. In other scenarios these unwanted results could occur and might upset you and/or your co-translators. So it is better to prevent these risks from happening by the measures explained in the [third paragraph](#How-to-prevent-offline-translation-risks). Part of these measures concern updating the local language files and it helps to understand their hierarchy as explained in the [second paragraph](#Understanding-translation-file-hierarchy).
 
 ### How to upload your translation
 
-When you have finished your offline translation and would like to upload your translation to Weblate, you can take steps 5 to 10 in the procedure described  in [[#How to prevent offline translation risks|How to prevent offline translation risks]]. In step 9 you can choose from the following settings:
+When you have finished your offline translation and would like to upload your translation to Weblate, you can take steps 5 to 10 in the procedure described  in [How to prevent offline translation risks](#How-to-prevent-offline-translation-risks). In step 9 you can choose from the following settings:
 
 The standard recommended settings are:
 : **Merge method:** Add as a translation
@@ -152,7 +152,7 @@ You apply these settings if you are sure there are no existing translations, if 
 If there is a chance that you are going to overwrite other translations unintentionally, the following alternative settings allows you or you co-translator to review whether you have accidentally overwritten a preferable translation.
 : **Merge method:** Add as a translation needing review
 : **Processing of strings needing review:** Import as string needing review
-See also the procedure in [[#How to prevent offline translation risks|How to prevent offline translation risks]] for a smarter way to review for preferable translations that are accidentally overwritten.
+See also the procedure in [How to prevent offline translation risks](#How-to-prevent-offline-translation-risks) for a smarter way to review for preferable translations that are accidentally overwritten.
 
 If you want to prevent that your import overwrites existing translations, you can change the last setting as follows
 : **Overwrite existing translations:** Disabled
@@ -180,7 +180,7 @@ When you start offline translation you need to assess to what extent the risks o
 
 **Measures**
 
-* Announce on the Freeplane forum that you are going to do an offline translation. You can do this in an existing or new thread as explained in [[#Discussion in a topic on the Freeplane forum|Discussion in a topic on the Freeplane forum]]
+* Announce on the Freeplane forum that you are going to do an offline translation. You can do this in an existing or new thread as explained in [Discussion in a topic on the Freeplane forum](#Discussion-in-a-topic-on-the-Freeplane-forum)
 * Keep the moment between starting the offline translation and uploading it to Weblate as short as possible. For example, if you can work on the translation fulltime for 2 days, upload it immediately after you have finished. If you can work on it one hour now and then, upload it after each hour.
 
 **Procedure**
@@ -196,7 +196,7 @@ This is an example procedure that updates your local translation before you star
 
 1. Click Files > Upload translation
 2. Choose the file <fpuserdir>UserResources_xx.properties
-3. Choose the options as recommended in [[#How to upload your translation|these instructions]]. You can use the standard settings or, if you do not want to spent time on reviewing in the next step, you can choose not to overwrite existing translations.
+3. Choose the options as recommended in [these instructions](#How-to-upload-your-translation). You can use the standard settings or, if you do not want to spent time on reviewing in the next step, you can choose not to overwrite existing translations.
 4. Click the upload button
 5. From your language page, click history and check that your translations have been imported. Click on every item with action'Translation changed' and check in the history tab of the displayed translate page whether you unintentionally have overwritten something. If you find the previous translation better than yours, you can restore the previous one.
 6. Remove <fpuserdir>UserResources_xx.properties to prevent that you upload the same translations again and to enable you to see updates through the other language files, see the previous paragraph.
@@ -207,7 +207,7 @@ The translator editor has also functionality for UI Designers to add new tool ti
 
 ### UI designer process
 
-This process is for new tool tips only. If you want to improve the source string of existing tool tips follow the [[#Change English source strings|regular process]] to change source strings.
+This process is for new tool tips only. If you want to improve the source string of existing tool tips follow the [regular process](#Change-English-source-strings) to change source strings.
 
 7. Check if there is any open "New tool tips" bug report. If so, wait till they are all closed and Weblate is up to date. If not, you might repeat your own work or overwrite your co-designers work.
 8. If the Freeplane language is other than English, change it to English in Preferences
@@ -239,9 +239,9 @@ This is the same as the normal offline translation process, except that you need
 
 ## Change English source strings
 
-It is possible to change the English source strings with the same tools as used for translation. You should do this with the utmost care. If you see a spelling error in the source text you can correct it just like that. Other improvements you should discuss in the [Improvement of Freeplane usability](https://sourceforge.net/p/freeplane/discussion/758437/thread/e234f3f6/) thread. In addition can go to the English translate page of the item you would like to improve, check 'Needs review' and leave your suggestions as a [[#Communication by comments and review flags in Weblate|comment at the translation level]].
+It is possible to change the English source strings with the same tools as used for translation. You should do this with the utmost care. If you see a spelling error in the source text you can correct it just like that. Other improvements you should discuss in the [Improvement of Freeplane usability](https://sourceforge.net/p/freeplane/discussion/758437/thread/e234f3f6/) thread. In addition can go to the English translate page of the item you would like to improve, check 'Needs review' and leave your suggestions as a [comment at the translation level](#Communication-by-comments-and-review-flags-in-Weblate).
 
-I recommend you to change English source strings only online because you will make a few changes at a time and you will prevent a mix up with [[#New tool tips|new tool tips]]. 
+I recommend you to change English source strings only online because you will make a few changes at a time and you will prevent a mix up with [new tool tips](#New-tool-tips). 
 
 You can follow the instructions for online and offline translation with a few adjustments:
 
@@ -261,7 +261,7 @@ If you are not sure about your or somebody else's translation you can check 'Nee
 
 If you have a remark that can help translators of all languages, e.g. "*Clone* and *copy* should be translated to different words, because they are functionally different.", you can choose 'Source string comment' as a scope. Of course you should write this comment in English.
 
-If you have a suggestion to improve an English source string, ignore the Weblate advice and see [[#Change English source strings|Change English source strings]] about how to communicate this.
+If you have a suggestion to improve an English source string, ignore the Weblate advice and see [Change English source strings](#Change-English-source-strings) about how to communicate this.
 
 ### Consistent translation by using a glossary
 

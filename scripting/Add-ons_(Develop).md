@@ -9,7 +9,7 @@ Add-ons are installed in the Freeplane user directory (see *Tools > Open user di
 ## Preparations
 
 ### Install developer tools
-Update to the most recent Freeplane version and install the [Developer Tools](Add-ons_(install).md) from the [Add-ons](Add-ons.md) page (follow the installation instructions there). The add-on provides scripts that relieves you from most of the tedious work. If you experience any problems with it in the future first check if you actually have the most recent add-on version installed.
+Update to the most recent Freeplane version and install the [Developer Tools](../getting-started/Add-ons_(install).md) from the [Add-ons](Add-ons.md) page (follow the installation instructions there). The add-on provides scripts that relieves you from most of the tedious work. If you experience any problems with it in the future first check if you actually have the most recent add-on version installed.
 
 The add-on functions are available in: *Tools > Developer tools*
 

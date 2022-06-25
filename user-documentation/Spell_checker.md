@@ -2,7 +2,7 @@
 
 To enable spell checking, select one of the supported languages using pop-up menu→languages→`[your language]`. from any editor. 
 
-![](images/Spellchecker.png) 
+![](../images/Spellchecker.png) 
 
 Some spell checker options can be configured from Preferences-&gt;Behavior-&gt;Spell checker options.
 

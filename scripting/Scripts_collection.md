@@ -16,7 +16,7 @@ Feel free to add your own scripts to these and this page. If you give script a n
 an extra download button is created for it, and it can be downloaded directly from this page.
 -->
 
-For larger scripts there is a special [git](Git_howto.md) repository [https://github.com/freeplane/addons].
+For larger scripts there is a special [git](../coding/Git_howto.md) repository [https://github.com/freeplane/addons].
 
 
 ## A node with the last modification date of the map
@@ -1952,7 +1952,7 @@ c.findAll().each {
 ```
 
 Idea:  `kunkel321`,  Most of the actual code: `boercher`.  Also significant help from: `jokro`.
-[Category:Script](Category:Script.md)
+<!--[Category:Script](Category:Script.md)-->
 
 ## Remove Node and Log its Text in Parent Note
 
@@ -1990,7 +1990,7 @@ else {
 
 Idea:  `kunkel321`,  Actual code: `boercher`.  See also related [forum thread.](https://sourceforge.net/p/freeplane/discussion/758437/thread/1074bb9f46/)
 
-[Category:Script](Category:Script.md)
+<!--[Category:Script](Category:Script.md)-->
 
 ## Set the color for all children
 
@@ -2199,7 +2199,7 @@ loadUri(new URI('file:///C:/Users/Beheerder/Documents/My%20Dropbox/_MindMap/soun
 // loadUri(new File('C:\\Users\\Beheerder\\Documents\\My%20Dropbox\\_MindMap\\sound.wav').toURI())
 ```
 
-[Category:Script](Category:Script.md)
+<!--[Category:Script](Category:Script.md)-->
 
 ## class FreeplaneWindow
 This example illustrates:
@@ -2250,7 +2250,7 @@ class FreeplaneWindow {
     println w.getHeight()
 </syntaxhighlight>.
 
-Author: [[User:jokro]]
+Author: `jokro`
 
 == open web page in external browser ==
 
@@ -2266,7 +2266,7 @@ EXAMPLE APPLICATION
 I use this script to easily jump into a help web page from within a programming language mindmap. When I describe function definitions like FileOpen() within a node, the script extracts the function name and combines it with a base URI which leads to a description WEB page. Combining the script execution with a keyboard shortcut e.g. <F3> , I can quickly lookup the detailed function documentation. In this example, it applies to the AutoIt scripting language.
 
 
-![example AutoIt](images/PIC_NodesForAutoWebDocu_2.gif ':size=200')
+![example AutoIt](../images/PIC_NodesForAutoWebDocu_2.gif ':size=200')
 
 INSTRUCTIONS
 
@@ -2485,7 +2485,7 @@ THIS SCRIPT DOES
 a script to set (toggle) the MIN NODE WIDTH setting of all siblings of a node to a unified value. This value is based on the maximum node width of all the sibling nodes and can be adjusted using some script parameters (see options). Only those sibling nodes will be regarded which have the same style setting as the node selected when starting the script. When selecting multiple nodes the node styles are disregarded for this functionality but the identifier setting (if present still counts).
 
 
-![example toggle view](images/PIC_ToggleSiblingBlockView.png)
+![example toggle view](../images/PIC_ToggleSiblingBlockView.png)
 
 
 INSTRUCTIONS

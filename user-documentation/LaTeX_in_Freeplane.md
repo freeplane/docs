@@ -4,7 +4,7 @@ Thanks to the excellent [JLaTeXMath](http://forge.scilab.org/index.php/p/jlatexm
 
 # LaTeX Text+Formulae in Freeplane >1.3.x =
 
-![](images/Freeplane_LaTeX.jpg ':size=200')
+![](../images/Freeplane_LaTeX.jpg ':size=200')
 <!--
 See the [example mindmap](http://www.freeplane.org/wiki/images/0/01/Freeplane_LaTeX.jpg).
 -->

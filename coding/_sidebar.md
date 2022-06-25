@@ -1,0 +1,13 @@
+* [Home](/)
+* [Getting started](../getting-started/getting-started.md)
+* [How to get help](../how-to-get-help.md)
+* [User documentation](../user-documentation/first-steps.md)
+* [Mind map examples ◳](https://github.com/freeplane/freeplane/discussions/categories/shared-mind-maps)
+* [Contribute](../contribute/contribute.md)
+* [Scripting](../scripting/Scripting.md)
+* Coding
+  * [Git howto](Git_howto.md)
+  * [How to build Freeplane](How_to_build_Freeplane.md)
+  * [IDE setup](IDE_setup.md)
+  * [Plugin development](Plugin_development.md)
+* [Attic (draft documents)](/docs/attic/ ':ignore :target=_self')

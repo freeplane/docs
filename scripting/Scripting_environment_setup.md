@@ -7,14 +7,14 @@ But it's more or less difficult for beginners to setup an IDE properly for Groov
 * First download and install a Java Development Kit (JDK) -if you don't have it. There is a hyperlink on the Eclipse download page.
 * Then download and install a "Eclipse IDE for Java Developers" or "Eclipse for RCP and RAP Developers" (the latter is more useful for regular Freeplane developers) from [Eclipse download page](http://www.eclipse.org/downloads/packages). Read how to unpack [*here*](http://www.clear.rice.edu/comp310/Eclipse/installation.html) (N.B. for Windows 7 it is not possible to unpack directly into c:/Program Files; no warning is given !) 
 * Launch Eclipse for the first time and select some directory as your workspace root
-![border](images/Eclipse-select-workspace.png ':size=200')
+![border](../images/Eclipse-select-workspace.png ':size=200')
 
 * [Groovy-Eclipse plugin](https://github.com/groovy/groovy-eclipse/wiki). (Select at least "Groovy-Eclipse". - "Groovy Eclipse SDK" and "Extra Groovy Compilers" won't hurt.)
 * Close Eclipse
 
 ## Setup workspace
 ### Install freeplane_src
-This is for installing freeplane_src for the first time. For updating it, read [[#How to upgrade freeplane_src version|How to upgrade freeplane_src version]].
+This is for installing freeplane_src for the first time. For updating it, read [How to upgrade freeplane_src version](#How-to-upgrade-freeplane_src-version).
 
 Download the current Freeplane source distribution (e.g. freeplane_src-1.2.13.tar.gz) and unpack it into the selected workspace. Unpacking this archive may require an additional program like 7zip, jzip or winzip on Windows (check by trying to open the file in the Explorer). Unpacking may need two steps:
 
@@ -29,7 +29,7 @@ For Freeplane >= 1.5 you need to create a gradle build:
 * You need at least gradle 2.x (install a gradle binary distribution if you need to)
 * Create a full gradle build by issuing the following command in the freeplane_src directory:
     $ gradle clean build cleanEclipse eclipse
-Alternatively you can use [[#How to set up your environment with the Eclipse Plug-ins for Gradle|the Eclipse Plug-ins for Gradle]].
+Alternatively you can use [the Eclipse Plug-ins for Gradle](#How-to-set-up-your-environment-with-the-Eclipse-Plug-ins-for-Gradle).
 
 For Freeplane < 1.5 you do not have to perform a build.
 
@@ -46,31 +46,31 @@ The Freeplane sources in *freeplane_src* consist of multiple projects, which are
 
 1. Select File->Import...
 
-![border](images/Eclipse-setup-import-project-select1.png ':size=200')
+![border](../images/Eclipse-setup-import-project-select1.png ':size=200')
 
 
 2. Set the root directory to *<workspace>/freeplane_src* and select all projects except *freeplane-ant* and (unless this happens on a Mac) *freeplane-mac*. Then click "Finish".
 
-![border](images/Eclipse-setup-import-project-select2.png ':size=200')
+![border](../images/Eclipse-setup-import-project-select2.png ':size=200')
 
 ### Create a Groovy project for the scripts
 (You may have to click on "Other..." to see "Groovy project" option.)
 
-![border](images/Eclipse-create-project-scripts-0.png ':size=200')
+![border](../images/Eclipse-create-project-scripts-0.png ':size=200')
 
 
 2. Set the project name to "scripts", uncheck "Use default location" and enter the full path to the freeplane scripts folder (<freeplaneuserdir>/scripts):
 
-![border](images/Eclipse-create-project-scripts-1.png ':size=200')
+![border](../images/Eclipse-create-project-scripts-1.png ':size=200')
 
 
 3. Connect the scripts with Freeplane. 
 
-![border](images/Eclipse-create-project-scripts-2.png ':size=200')
+![border](../images/Eclipse-create-project-scripts-2.png ':size=200')
 
 4. Select a different build output folder. Otherwise a lot of .class files would pollute the scripts directory. This step is not required but helpful.
 
-![border](images/Eclipse-create-project-scripts-3.png ':size=200')
+![border](../images/Eclipse-create-project-scripts-3.png ':size=200')
 
 Done. You can proceed now with page [Edit scripts in Eclipse](Edit_scripts_in_Eclipse.md).
 
@@ -108,7 +108,7 @@ You have "Buildship: Eclipse Plug-ins for Gradle" installed in Eclipse. It is pr
 6. Rename 'New_configuration' to 'Build Freeplane'
 7. In Gradle Tasks add: clean, build and dist (so 3 tasks on 3 separate lines)
 8. Click/select File System... > <workspace>/freeplane_root > OK
-   1. ![](images/Build_Freeplane_Run_Configuration.png ':size=200')
+   1. ![](../images/Build_Freeplane_Run_Configuration.png ':size=200')
 9. Click Run and wait till Gradle build has finished
 10. Click/select File > Import > Existing Gradle Project > Next > Next
 11. Specify the path to the <workspace>/freeplane_root directory in 'Project root directory' and click Finish. All projects are now imported as Gradle projects

@@ -28,7 +28,7 @@ Add-ons are listed below.
 
 # Edit
 
-## ![](images/WikdNode-screenshot-1.png ':size=40') wikdNode
+## ![](../images/WikdNode-screenshot-1.png ':size=40') wikdNode
 **by [L. C. Rees](https://github.com/lcrees), maintainer [Volker Börchers](http://sourceforge.net/users/boercher/)**
 
 Node wrangling features for Freeplane:
@@ -115,7 +115,7 @@ Download [navigation 0.3](https://sourceforge.net/projects/freeplane/files/addon
 
 Installing the addon adds method *Scroll leaves to visible* and method *Demote to upper sibling* to menu Tools>scripts.
 
-## ![](images/Jumper-logo.png ':size=40') Jumper
+## ![](../images/Jumper-logo.png ':size=40') Jumper
 **by lilive**
 
 A fully keyboard driven search box for quick navigation in maps. It filters the nodes on-the-fly as the user types the search terms, and allows to jump to one of the results.
@@ -135,7 +135,7 @@ Some features:
 
 [Find all Jumper features, usage instructions and download here](https://github.com/lilive/Freeplane-Jumper).
 
-## ![](images/Bookmarks-add-on.png ':size=40') Bookmarks
+## ![](../images/Bookmarks-add-on.png ':size=40') Bookmarks
 **by lilive**
 
 This add-on allows to bookmark some nodes in a Freeplane map, and to easily navigate between them.
@@ -148,7 +148,7 @@ You can download it from [its github page](https://github.com/lilive/Freeplane-B
 
 # Problem solving
 
-## ![](images/FreeIBIS-icon.png ':size=40') FreeIBIS
+## ![](../images/FreeIBIS-icon.png ':size=40') FreeIBIS
 **by [L. C. Rees](https://github.com/lcrees), maintainer [Henk van den Akker](https://sourceforge.net/u/haaihenkie/profile/)**
 
 [Issue-Based Information System](https://duckduckgo.com/Issue-Based_Information_System) for Freeplane, supporting coordination and planning of political decision processes, sensemaking and collaborative problem solving in a variety of social and technical contexts.
@@ -161,7 +161,7 @@ In the README file on the [FreeIBIS Github page](https://github.com/HaaiHenkie/F
 
 # Plan and organize
 
-## ![](images/FreeplaneGTD-icon.png ':size=40') Freeplane|GTD
+## ![](../images/FreeplaneGTD-icon.png ':size=40') Freeplane|GTD
 
 This add-on enables using a mind map as a 'trusted system' in the [Getting Things Done (GTD)](http://en.wikipedia.org/wiki/Getting_Things_Done) methodology.
 
@@ -178,7 +178,7 @@ See [here](http://auxilus.com/freeplanegtd/) for more details.
 
 [Download latest version](http://sourceforge.net/projects/freeplanegtd/)
 
-## ![](images/FreeplaneGTD+-icon.png ':size=40') Freeplane|GTD+
+## ![](../images/FreeplaneGTD+-icon.png ':size=40') Freeplane|GTD+
 
 A generic task management add-on, with a special focus in supporting the [Getting Things Done (GTD)](http://en.wikipedia.org/wiki/Getting_Things_Done) methodology.
 
@@ -205,7 +205,7 @@ See [here](http://www.itworks.hu/index.php/freeplane-gtd/) for more details.
 
 [Download latest version](http://www.itworks.hu/freeplanegtd-release)
 
-## ![](images/GtdSyncWithTodoTxt.png ':size=40') GTD Sync
+## ![](../images/GtdSyncWithTodoTxt.png ':size=40') GTD Sync
 **by [Henk van den Akker](https://sourceforge.net/u/haaihenkie/profile/)**
 
 Groovy script to synchronise a Freeplane|GTD mind map with todo.txt. The catch is that you can make your Next Action list available to other applications and systems. For example, you can use Dropbox to distribute todo.txt and use SimpleTask for Android to consult and maintain todo.txt. What does GTD sync do?
@@ -221,7 +221,7 @@ For Freeplane 1.8.9 and higher: [download the latest version of GTD Sync](https:
 
 For upgrade information and Freeplane version compatibility read the [README file](https://sourceforge.net/projects/gtdsync/files/)
 
-## ![](images/FreeplaneWBS.png ':size=40') Freeplane|WBS
+## ![](../images/FreeplaneWBS.png ':size=40') Freeplane|WBS
 
 It aggregates the costs and durations for a task tree. It also assigns codes to each task in a doted form for later reference.
 
@@ -231,7 +231,7 @@ You should consider the root of the map as the project root, and each node as a 
 
 [Download latest version](https://github.com/gpapp/freeplaneWBS/releases)
 
-## ![](images/StudyPlanner-icon.png ':size=40') Study Planner
+## ![](../images/StudyPlanner-icon.png ':size=40') Study Planner
 **by [Predrag Cuklin](http://sourceforge.net/users/pegi7/)**
 
 Study Planner will help in better organization of learning.
@@ -257,7 +257,7 @@ For more information see [this page](http://sourceforge.net/apps/phpbb/freeplane
 
 # Images and icons
 
-## ![](images/InsertInlineImage-icon.png ':size=40') Insert Inline Image
+## ![](../images/InsertInlineImage-icon.png ':size=40') Insert Inline Image
 **by [Volker Börchers](http://sourceforge.net/users/boercher/), [Rickenbroc](http://sourceforge.net/users/rickenbroc/)**
 
 This add-on is a convenient way to add images on the fly in your maps. The images can come from :
@@ -280,13 +280,13 @@ You can even decorate the image inserted with a link which point wherever you wo
 
 [Download v1.0 for Freeplane v1.2.10 to v1.7.x](https://sourceforge.net/projects/freeplane/files/addons/insertInlineImage/InsertInlineImage-v1.0.addon.mm/download)
 
-## ![](images/Oldicons-theme.png ':size=40') Old Icons Theme
+## ![](../images/Oldicons-theme.png ':size=40') Old Icons Theme
 
 This little theme add-on installs the old (pre 1.2.9) link icons (Link.png and LinkLocal.png).
 
 [Download v0.9.5](https://sourceforge.net/projects/freeplane/files/addons/oldicons-theme/oldicons-theme-v0.9.5.addon.mm)
 
-## ![](images/PalmIcons-icon.png ':size=40') Palm Icons
+## ![](../images/PalmIcons-icon.png ':size=40') Palm Icons
 **by Steve Kunkel**
 
 Free Palm Os Icons categorized by groups Office, Home.... for Freeplane.
@@ -295,7 +295,7 @@ Compiled by Steve Kunkel and converted to an Add-on by Predrag. For artist infor
 
 [Download v1.0](https://sourceforge.net/projects/freeplane/files/addons/palmIcons/palmIcons-v.1.0.addon.mm)
 
-## ![](images/UserIcons-icon.png ':size=40') User Icons
+## ![](../images/UserIcons-icon.png ':size=40') User Icons
 **by [Predrag Cuklin](http://sourceforge.net/users/pegi7/)**
 
 This add-on adds standard Freeplane icons under *User icons* in bigger size (24 px) and adds other icons (computer, more office icons...).
@@ -306,7 +306,7 @@ This add-on adds standard Freeplane icons under *User icons* in bigger size (24 
 
 # Collaborate
 
-## ![](images/RoAn_logo.png ':size=40') Roan-Presentation
+## ![](../images/RoAn_logo.png ':size=40') Roan-Presentation
 **by [Jodi D. Krol](http://sourceforge.net/users/jokro/)**
 
 RoAn-Presentation provides a combination of mind mapping with Powerpoint- and Prezi like presentation, using automatic filtering and zooming.
@@ -325,7 +325,7 @@ Installing the add-on results in a new menu *Tools> RoAn-Presentation*. This men
 
 **Download [roan-presentation 0.1.3](https://sourceforge.net/projects/freeplane/files/addons/roan/presentation/roan-presentation-0.1.3.addon.mm)** for Freeplane 1.3.
 
-## ![](images/Translation-icon.png ':size=40') Translation
+## ![](../images/Translation-icon.png ':size=40') Translation
 **by [Volker Börchers](http://sourceforge.net/users/boercher/)**
 
 Utilities for automatic translation of maps and language resources that use the [mymemory translation service](http://mymemory.translated.net). Of most interest for Freeplane translators.
@@ -361,7 +361,7 @@ Feedback and contributions are welcome.
 
 # Import and export
 
-## ![](images/PackAndGo-icon.png ':size=40') Pack & Go
+## ![](../images/PackAndGo-icon.png ':size=40') Pack & Go
 **by [Volker Börchers](http://sourceforge.net/users/boercher/)**
 
 Pack and Go provides a function to pack a map with all its dependencies into one zip file.
@@ -452,7 +452,7 @@ When opening and instaling the add-on:
 See video with instructions for [installation](http://www.youtube.com/watch?v=ZUAjmlLloeA).
 
 
-## ![](images/MapSavingOptions.png ':size=40') Map Saving Options
+## ![](../images/MapSavingOptions.png ':size=40') Map Saving Options
 **by [EdoFro](https://github.com/EdoFro)**
 
 'Map Saving Options' is a Freeplane AddOn that gives you the possibility to add saving preferences to each of your maps.
@@ -475,7 +475,7 @@ This way, you can define for each map if it will use the central Freeplane prefe
 
 # For developers
 
-## ![](images/Devtools-icon.png ':size=40') Developer Tools
+## ![](../images/Devtools-icon.png ':size=40') Developer Tools
 **by [Volker Börchers](http://sourceforge.net/users/boercher/)**
 
 This add-on collects some utilities that script and/or add-on developers will find useful.
@@ -499,7 +499,7 @@ For Freeplane 1.3.x and 1.5.x: [Download v0.9.22](http://sourceforge.net/project
 
 For Freeplane 1.2.x: [Download v0.9.14](http://sourceforge.net/projects/freeplane/files/addons/devtools/devtools-v0.9.14.addon.mm/download)
 
-## ![](images/WikdShell.png ':size=40') wikdShell
+## ![](../images/WikdShell.png ':size=40') wikdShell
 **by [L. C. Rees](https://github.com/lcrees), maintainer [Volker Börchers](http://sourceforge.net/users/boercher/)**
 
 Groovy console for interacting with a running Freeplane instance.
@@ -512,7 +512,7 @@ For Freeplane 1.5.x: [Download 0.3.0](https://bintray.com/artifact/download/vboe
 
 For Freeplane 1.3.x and 1.2.x: [Download 0.2.3](https://bintray.com/artifact/download/vboerchers/freeplane/wikdShell-0.2.3.addon.mm)
 
-## ![](images/Scriptlib_help.jpg ':size=80') scriptlib
+## ![](../images/Scriptlib_help.jpg ':size=80') scriptlib
 **by [Jodi D. Krol](http://sourceforge.net/users/jokro/)**
 
 This add-on is aimed at starting developers. It:

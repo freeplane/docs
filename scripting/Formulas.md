@@ -165,7 +165,7 @@ Note that the special editor will only be used if the node text *already starts*
 
 ## Formatting
 
-Formatting of numbers and dates in node core is available as an element of [Node styles](Node_styles.md), that means that they are not formula specific. Formatting of attribute values, details and notes must be handled by setting the value to a formatted object via [format(Object, formatString)](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html#format(java.lang.Object,%20java.lang.String) ). For more on data and formatting see [this page](Data_recognition_and_data_formats.md).
+Formatting of numbers and dates in node core is available as an element of [styles](../user-documentation/styles.md), that means that they are not formula specific. Formatting of attribute values, details and notes must be handled by setting the value to a formatted object via [format(Object, formatString)](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html#format(java.lang.Object,%20java.lang.String) ). For more on data and formatting see [this page](Data_recognition_and_data_formats.md).
 
 
 ## Security
@@ -201,7 +201,7 @@ Do you have an idea how such names should be defined? Is it enough to have named
 
 ### Implementation of functions available in spreadsheet processors?
 
-Spreadsheet processors have a large number of functions that are not directly supported by Freeplane (see [[http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office#odf12 ODF specification]]). Of course many of these functions are not easily translatable from tabulars to mindmaps but one might strive to provide as many as possible to increase portability of existing formulas to Freeplane.
+Spreadsheet processors have a large number of functions that are not directly supported by Freeplane (see [ODF specification](http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office#odf12)). Of course many of these functions are not easily translatable from tabulars to mindmaps but one might strive to provide as many as possible to increase portability of existing formulas to Freeplane.
 
 What do you think, do we need implementations for functions like NOW(), SECOND(), PPMT(), RRI(), COLUMNS(), etc., even if Groovy equivalents exist? If you do you are encouraged to provide a Groovy class with appropriate static methods and we'll see how to integrate them into Freeplane.
 

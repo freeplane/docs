@@ -1,5 +1,6 @@
 ## Command-line options
 Call freeplane like this:
+
     freeplane [options] [file1 [file2 ...]]
 
 * -h|--help: list available options
@@ -13,6 +14,7 @@ Batch execution of menu items (e.g. scripts) is described in a [special wiki art
 ## Debug start script under Linux
 
 Start Freeplane in debug mode (if you have problems starting):
+
     DEBUG=true freeplane.sh
 
 # Environment variables
@@ -36,6 +38,7 @@ Use of Java 16 can be permitted only on Linux by setting variable <code>FREEPLAN
 
 ## JAVA_OPTS
 Set Java Properties, e.g. set the freeplane user config directory in Freeplane < 1.3.3:
+
     JAVA_OPTS=-Dorg.freeplane.userfpdir=$HOME/blabla freeplane.sh
 
 <!-- ({Category:Documentation}) -->

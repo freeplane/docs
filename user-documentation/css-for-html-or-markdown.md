@@ -38,15 +38,7 @@ blockquote {
 
 Requires Freeplane 1.9.12 or higher
 
-<a id="mmdownload" href="/Node_CSS_Functionality.mm" download>Node_CSS_Functionality.mm</a>
-<script>
-    // The above link is correct when the Markdown page is viewed directly
-    // When viewed on freeplane.github.io/wiki/ (docsify), the link needs to be changed
-    if (location.pathname.startsWith('/wiki/')) {
-        const mmd = document.querySelector('#mmdownload');
-        mmd.href = `${location.origin}/wiki/Node_CSS_Functionality.mm`;
-    }
-</script>
+[Node_CSS_Functionality.mm](/docs/user-documentation/Node_CSS_Functionality.mm ':ignore')
 
 ## CSS For Core Text
 

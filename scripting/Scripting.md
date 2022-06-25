@@ -54,21 +54,21 @@ For ambitious scripting projects or if you have Java/Eclipse know-how you should
 "Hello World" is the traditional first program when taking up a programming language. Let's create a Groovy Freeplane version of it:
 
 * Create an empty Groovy script file named <tt>HelloWorld.groovy</tt> in your scripts directory (remember that you can get there via *Tools > Open user directory*). The suffix <tt>.groovy</tt> is mandatory.
-* Open <tt>HelloWorld.groovy</tt> in an appropriate editor as detailed [[#Create_a_script_and_integrate_it_into_Freeplane|above]].  
+* Open <tt>HelloWorld.groovy</tt> in an appropriate editor as detailed [above](#Create-a-script-and-integrate-it-into-Freeplane).  
 * Copy the following script into the file and save it.
 ```groovy
 node.text = "Hello World!"
 ```
 
-* Now save your script in the editor and restart Freeplane since Freeplane will only find new scripts after a restart. Then you will find your new script in the Freeplane menu location *Tools-&gt;Scripts-&gt;Hello World*. You see three sub menus *Execute on one selected node*, *Execute on all selected nodes* and *Execute on all selected nodes, recursively*. [starting with FP version 1.5 there is no sub menu anymore. The execution mode is shown on mouse hover over the menu entry](Note:)
+* Now save your script in the editor and restart Freeplane since Freeplane will only find new scripts after a restart. Then you will find your new script in the Freeplane menu location *Tools-&gt;Scripts-&gt;Hello World*. You see three sub menus *Execute on one selected node*, *Execute on all selected nodes* and *Execute on all selected nodes, recursively*. Note: starting with FP version 1.5 there is no sub menu anymore. The execution mode is shown on mouse hover over the menu entry
 * At *Tools->Preferences->Plugins->Scripting*<!--
     --><ul><!--
     -->  <li> set ''Script execution enabled'' to ''Yes''</li><!--
     -->  <li> enable ''Permit File/Read Operations (NOT recommended)'' - despite the warning.<!--
     --></ul><!--
-    -->These changes take effect without restarting Freeplane and only need to be done once. For more details see [[Scripting!_Security_considerations|Scripting! Security considerations]].
+    -->These changes take effect without restarting Freeplane and only need to be done once. For more details see [Scripting! Security considerations](Scripting!_Security_considerations.md).
 
-* Execute the script by selecting *Tools-&gt;Scripts-&gt;Hello World-&gt;Execute on one selected node*. (Never mind the difference between the *Execute ...* variants; we'll come to that [[#Execution_modes|later]].)
+* Execute the script by selecting *Tools-&gt;Scripts-&gt;Hello World-&gt;Execute on one selected node*. (Never mind the difference between the *Execute ...* variants; we'll come to that [later](#Execution_modes).)
 * The text of the selected node will be changed to "Hello World!".
 * To restore the original, press Ctrl-Z.
 * If you like try the other "Execute..." menu items. Test the influence of selecting multiple nodes. Always press Ctrl-Z to revert the changes.
@@ -155,7 +155,7 @@ The second "Hello World" version printed to the status bar. This only has to hap
 // @ExecutionModes({ON_SINGLE_NODE})
 ``` 
 
-It's a good idea to put the "annotations" at the beginning of the script. (In section [[#Simple_text_replacement:_getIconName.groovy|Simple text replacement]] we will see an exception.) ON_SELECTED_NODE_RECURSIVELY applies a script on any node in the branch that has a selected node as root. You can also enable more than one mode by concatening them with commas:
+It's a good idea to put the "annotations" at the beginning of the script. (In section [Simple text replacement](#Simple-text-replacement-getIconName.groovy) we will see an exception.) ON_SELECTED_NODE_RECURSIVELY applies a script on any node in the branch that has a selected node as root. You can also enable more than one mode by concatening them with commas:
 
 ```groovy
 // @ExecutionModes({ON_SELECTED_NODE, ON_SELECTED_NODE_RECURSIVELY})
@@ -171,7 +171,7 @@ Scripts can determine to which menu or submenu a script will be added. Even the 
 // @ExecutionModes({on_single_node="/menu_bar/help[scripting_api_generator_title]"})
 ```
 
-You can find out about the internal menu keys using the [Developer Tools > Menu item info](Add-ons_(install).md).
+You can find out about the internal menu keys using the [Developer Tools > Menu item info](../getting-started/Add-ons_(install).md).
 
 ## Per node execution: addIcon.groovy
 
@@ -199,7 +199,7 @@ if (node.text.toLowerCase().matches(".*\\b(yes|ok)\\b.*"))
     node.icons.add("button_ok")
 ``` 
 
-Note that <tt>node.text</tt> makes use of the special (compared to Java) attribute handling - see section [[#On_Groovy_properties_and_the_Scripting_API|On Groovy properties and the Scripting API]].
+Note that <tt>node.text</tt> makes use of the special (compared to Java) attribute handling - see section [On Groovy properties and the Scripting API](#On-Groovy-properties-and-the-Scripting-API).
 
 <br>
 
@@ -441,7 +441,7 @@ The menu item *Help -> Scripting API* shows the attributes instead of get/set me
 
 #### The operator == means equals()
 
-In Groovy the operator <tt>==</tt> is overridden to mean <tt>equals()</tt>. To check for identity use the method [is()](http://groovy-lang.org/groovy-jdk/java/lang/Object.html#is%28java.lang.Object%20other%29): 
+In Groovy the operator <tt>==</tt> is overridden to mean <tt>equals()</tt>. To check for identity use the method [is()](http://groovy-lang.org/groovy-jdk/java/lang/Object.html#is%28java.lang.Object%20other%29)
 
 ```groovy
 Integer i = new Integer(3)

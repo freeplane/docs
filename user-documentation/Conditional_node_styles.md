@@ -12,7 +12,7 @@ Demo video of Conditional Styles (with and without the STOP option), and a resum
 
 https://youtu.be/ayfifHlbyjc
 
-![FreeplaneConditionalStyle_161113_222746.png}}](images/FreeplaneConditionalStyle_161113_222746.png ':size=200')
+![FreeplaneConditionalStyle_161113_222746.png}}](../images/FreeplaneConditionalStyle_161113_222746.png ':size=200')
 
 <!-- ({Category:Documentation}) -->
 

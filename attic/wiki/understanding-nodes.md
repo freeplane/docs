@@ -17,7 +17,7 @@ Additional information can be stored in nodes outside the core as node details, 
 The node core is the only part of the node that is always visible whenever the node itself is visible.
 The node core can itself contain several types of information: text (including numbers), icons,  images, and links.
 
-![Several Node cores in a mind map](images/node_core.png ':size=200')
+![Several Node cores in a mind map](../images/node_core.png ':size=200')
 
 The text in the node core can be interpreted or parsed by Freeplane in different ways, which can be set in the Format Panel drop-down menu `Core text->Format`.
 To understand the implications of this setting, see (to be added).
@@ -47,7 +47,7 @@ The other options are `Line`②, `Linear path`③ and `Simulate edge`④.
 The last one does exactly that: simulates an edge between the nodes.
 Freeplane achieves this by applying the formatting properties of the edge defined for the target node, ignoring the **Connector**-dialog properties.
 
-![](images/connector_styles.png ':size=200')
+![](../images/connector_styles.png ':size=200')
 
 The shape of `Curve`①. `Line`② and `Linear path`③ can be changed using curve-shaping of either end – just click on the line near a node (it's best to select the node first).
 You will see handles appear.
@@ -55,7 +55,7 @@ By dragging your mouse up to ~50% of the distance between the nodes, the near ha
 Going beyond ~50% or clicking near the middle adjusts both handles at once.
 You'll often need to repeat your click-drag-release several times before you get the expected result, i.e. without affecting the far end.
 
-![connectors](images/connectors.gif ':size=200')
+![connectors](../images/connectors.gif ':size=200')
 
 #### Same-node connectors
 
@@ -91,7 +91,7 @@ In addition to standard nodes, there are some special types of nodes:
 1. the root node
 2. free nodes
 
-![](images/nodes_root_node_free_nodes.png ':size=200')
+![](../images/nodes_root_node_free_nodes.png ':size=200')
 
 ### The root node
 Every mind map begins with a central node called the root node.
@@ -121,7 +121,7 @@ Other nodes can also be given the style `Floating node` and can be set to be pos
 ### Node groups
 #### Summary nodes
 
-![](images/nodes_summary_nodes.png ':size=200')
+![](../images/nodes_summary_nodes.png ':size=200')
 
 Summary nodes have brackets that suggest that their content summarizes a group of sibling nodes.
 Technically, summary nodes are specially marked sibling nodes of the summarized nodes.

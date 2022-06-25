@@ -9,7 +9,7 @@ A template might have additional styles, and any mind map created from such a te
 
 A style can be applied to a selected node by choosing the style in `Toolbar` on in `Tool panel`.
 
-![](images/style_in_Toolbar_and_Tool_panel-1'10'2.png ':size=200')
+![](../images/style_in_Toolbar_and_Tool_panel-1'10'2.png ':size=200')
 
 By default, a node has no style assigned and Freeplane uses `Default` to format the node.
 
@@ -17,7 +17,7 @@ It's worth to note that there can be several styles active for a node.
 The most common scenario is that `Automatic level styles` are enabled in a map, usually painting each level a different color.
 Still, each node can be explicitly assigned a style, e.g. `Important`. Then style properties from both `Level ?` style and `Important` will blend.
 
-![](images/apply_level_styles_and_explicitly_applied_style-1'10'2.png ':size=200')
+![](../images/apply_level_styles_and_explicitly_applied_style-1'10'2.png ':size=200')
 
 To better understand how formatting using styles works, one needs to know that Freeplane uses a concept of layered Styles.
 
@@ -44,7 +44,7 @@ An `explicitly applied style` will overwrite the former two, and will be overwri
 To manage styles you need first to open the styles editor:
 `Styles->Edit styles`. Result: a map containing all styles is displayed.
 
-![](images/style_editing_dialog-1'10'2.png ':size=200')
+![](../images/style_editing_dialog-1'10'2.png ':size=200')
 
 There you can modify all defined styles&nbsp;: either styles provided by default with Freeplane, or add/change your own styles. Note that's its allowed to remove default freeplane's styles.<br>
 

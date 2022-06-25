@@ -91,7 +91,7 @@ by a '/', i.e. 'docear/trunk'.
 
 Below, you see the a general structure of branches as they are proposed for any Freeplane developer to use. The remote branch *origin/master* is the global master branch for any development aiming a release in an official version. Each developer may fork his own *origin/<devbranch>* (just once) by forking the sources from *origin/master* using the respective Git web site function button. On the local *master*, the developer works out his functions, pushes them up to his *origin/<devbranch>* and updates from *origin/master*. Using the depicted structure, even some GIT commands take an easy form ("$ git push" and "$ git pull" could be executed without further parameters).
 
-![Nnako_UsageOfGit.gif](images/Nnako_UsageOfGit.gif ':size=200')
+![Nnako_UsageOfGit.gif](../images/Nnako_UsageOfGit.gif ':size=200')
 
     LEGEND
     - locations of branches and persons are depicted in BLACK,
@@ -110,7 +110,7 @@ Here are the basic commands for working with branches. The diagram is given
 just as an overview,
 *read the step descriptions in the following sections before trying any git commands*.
 
-![](images/Git-steps.png ':size=x200')
+![](../images/Git-steps.png ':size=x200')
 
 1. The remote repository is cloned from origin (sourceforge). You now have a complete local copy of the repository including all branches and the complete history.
 2. The user creates (and checks out) a new *local* branch *user/newdev1*.
@@ -180,8 +180,9 @@ Eclipse git is also able to do the local commits from the team menu
 Setup git so that only the current "upstream" branch gets pulled/pushed
 (instead of pushing *all* branches that have an upstream tracking branch
 which can be confusing!):
-
-    $ git config push.default tracking
+```shell
+$ git config push.default tracking
+```
 **Note**: this option is ignored by current EGit. On EGit you get the
 same behavior by selecting *Team->Push To Upstream*.
 
@@ -192,9 +193,10 @@ others can see (and review!) it.
 
 **Currently it's best to do this on the command line, because *push -u* sets up the tracking branch properly.**
 *Make sure you use the same name!* *Use --dry-run first*.
-
-    $ <go to the local copy of the repo ("$ cd $HOME/git/freeplane")>
-    $ git push -u origin <devbranch> [--dry-run]
+```shell
+$ <go to the local copy of the repo ("$ cd $HOME/git/freeplane")>
+$ git push -u origin <devbranch> [--dry-run]
+```
 You should see a message like:
 
     Branch user/dev1 set up to track remote branch user/dev1 from origin.
@@ -208,10 +210,14 @@ branch to its (configured) remote branch on origin.
 Follow the cycle:
 Switch to the right branch (may not be necessary)
 
-    $ git checkout <devbranch> # **Team->Switch To->user/dev1** from EGit 
+```shell
+$ git checkout <devbranch> # **Team->Switch To->user/dev1** from EGit 
+```
 pull other people's changes on your devbranch (as a beginner you might want to do this on a copy of your repository first, it's all local!)
 
-    $ git pull # **Team->Pull** from EGit
+```shell
+$ git pull # **Team->Pull** from EGit
+```
 (People recommend to use git fetch and git merge instead of git pull)
 
 you might have to resolve conflicts: (might want to use 'git mergetool'
@@ -225,36 +231,46 @@ for each conflict x:
 
 to undo the merge you can use
 
-     $ git reset --hard # **Team->Reset...** in EGit
+```shell
+$ git reset --hard # **Team->Reset...** in EGit
+```
 **but this will throw away all uncommitted changes(!)**
 
 * commit the conflict resolution(s):
 
-     $ git commit [-m message] # **Team->Commit** in EGit
+```shell
+$ git commit [-m message] # **Team->Commit** in EGit
+```
 
 * create local commits (see "Step 3")
 * merge changes from master (to integrate the latest code into your feature and to make Step 6 easier)
 
-     $ git pull origin master
+```shell
+$ git pull origin master
+```
 
 * merge changes from master with EGit: 
     * *Team->Fetch from Upstream*
     * *Team->Merge...*, select *origin/master*
 * push the result of the merge with master to your remote dev branch (always run git push with --dry-run first!)
 
-     $ git push [--dry-run] # EGit: **Team->Push to Upstream**
-     # (same as **git push origin <devbranch>** because tracking is set up)
+```shell
+$ git push [--dry-run] # EGit: **Team->Push to Upstream**
+# (same as **git push origin <devbranch>** because tracking is set up)
+```
 
 ### Step 6: Merge your development into master
 When you are done with your branch, and you have completed a code review of your dev branch, it should be merged into master (!) As a new developer, you **must let a more experienced developer do this**!
 
-    $ git checkout <devbranch> # Switch to <devbranch> in EGit
-    $ git pull # **Team->Pull** in EGit
-    $ git checkout master # Switch to **master** in EGit
-    $ git pull # **Team->Pull** in EGit
-    $ git merge <devbranch> # EGit: **Team->Merge...**, select **local** <devbranch>
-    $ git push [--dry-run] # EGit: **Team->Push to Upstream**
-    # (same as **git push origin master** because tracking is set up)
+```shell
+$ git checkout <devbranch> # Switch to <devbranch> in EGit
+$ git pull # **Team->Pull** in EGit
+$ git checkout master # Switch to **master** in EGit
+$ git pull # **Team->Pull** in EGit
+$ git merge <devbranch> # EGit: **Team->Merge...**, select **local** <devbranch>
+$ git push [--dry-run] # EGit: **Team->Push to Upstream**
+# (same as **git push origin master** because tracking is set up)
+```
 
 # How to's
 This section contains useful information for working with git, including stuff
@@ -264,29 +280,37 @@ with branches, undoing commits/reverting files, and a bit more.
 ## Checkout in more detail
 Checking out is termed <tt>cloning</tt> in git speak:
 
-    $ cd ~
-    $ mkdir git
-    $ cd git
-    $ git clone https://github.com/freeplane/freeplane.git freeplane
+```shell
+$ cd ~
+$ mkdir git
+$ cd git
+$ git clone https://github.com/freeplane/freeplane.git freeplane
+```
 
 If you want/have read-only access, use this as the last command:
 
-    $ git clone git://github.com/freeplane/freeplane.git freeplane
+```shell
+$ git clone git://github.com/freeplane/freeplane.git freeplane
+```
 
 However, this will only configure the *master* branch (named *trunk* in
 other VCS's such as svn) locally:
 
-    $ git branch -a
-    * master
-    remotes/origin/HEAD -> origin/master
-    remotes/origin/docear/trunk
-    remotes/origin/master
+```shell
+$ git branch -a
+* master
+remotes/origin/HEAD -> origin/master
+remotes/origin/docear/trunk
+remotes/origin/master
+```
 
 In order to check out a branch (which is simply a reference to a commit)
-that currently only exists remotely (the remotes/origin/* references are
+that currently only exists remotely (the `remotes/origin/*` references are
 called *remote tracking branches*), simply switch to that branch:
 
-    $ git checkout docear/trunk
+```shell
+$ git checkout docear/trunk
+```
 
 This can be done more easily
 [using Eclipse](http://wiki.eclipse.org/EGit/User_Guide#Starting_from_existing_Git_Repositories).
@@ -295,32 +319,46 @@ This page also describes how to import a repository into eclipse.
 ## Using Tags
 Show all tags:
 
-    $ git tag
+```shell
+$ git tag
+```
 
 Search for a tag:
 
-    $ git tag -l "release-1.1*"
+```shell
+$ git tag -l "release-1.1*"
+```
 
 Show information about a tag:
 
-    $ git show release-1.1.2
+```shell
+$ git show release-1.1.2
+```
 
 Define a tag locally:
 
-    $ git tag -a <tagname>
-    # (an editor opens for you to add a description)
+```shell
+$ git tag -a <tagname>
+# (an editor opens for you to add a description)
+```
 
 Tags are not automatically transferred when doing a <code>git push</code>,
 you have to push individually:
 
-    $ git push origin <tagname>
+```shell
+$ git push origin <tagname>
+```
 or push *all* tags:
 
-    $ git push --tags origin
+```shell
+$ git push --tags origin
+```
 
 You *might* need a
 
-    $ git pull --tags
+```shell
+$ git pull --tags
+```
 to get all tags. See git-fetch(1) for situations when you will need this (rarely).
 
 TODO: sign tags?
@@ -336,69 +374,83 @@ branch** (and NOT all configured branches):
 **Note**: this option is ignored by current EGit. On EGit you get the
 same behavior by selecting *Team->Push To Upstream*.
 
-    $ git config push.default tracking
+```shell
+$ git config push.default tracking
+```
 
 (you can equivalently set this to *upstream* in recent git versions).
 
 ### Switch to another branch
 
-    $ git checkout <branchname>
+```shell
+$ git checkout <branchname>
+```
 
-(Team->Switch To->... in Eclipse)
+(`Team->Switch To->...` in Eclipse)
 
 ### How to create a new branch
 
 New (feature) branches should be named <code><user>/<feature></code>
 or (if several devs work on a feature): <code><feature></code>.
 
-    # commit everything that should go into the new branch
-    $ git status
-    $ git add <file>
-    [...]
-    $ git commit -m "my changes"
+```shell
+# commit everything that should go into the new branch
+$ git status
+$ git add <file>
+[...]
+$ git commit -m "my changes"
 
-    # create new branch locally
-    $ git checkout -b <newbranch>
- 
-    # check commit log to see that above commit is in there
-    $ git log
- 
-    # new branch must be visible and selected:
-    $ git branch -a  
+# create new branch locally
+$ git checkout -b <newbranch>
 
-    # (make sure that the name of the new branch is correct! it is diffcult/impossible
-    #  to rename published branches!)
- 
-    # create branch remotely, use -u to automatically configure upstream location
-    $ git push -u origin <newbranch>
-    # this should output something like this:
-    **Branch <newbranch> set up to track remote branch <newbranch> from origin.**
-    # (**'Note**': -u is important if you want to use git pull/push without
-    specifying a remote/refspec)
+# check commit log to see that above commit is in there
+$ git log
 
-    # remote branch of <newbranch> must be visible:
-    $ git branch -a
+# new branch must be visible and selected:
+$ git branch -a  
+
+# (make sure that the name of the new branch is correct! it is diffcult/impossible
+#  to rename published branches!)
+
+# create branch remotely, use -u to automatically configure upstream location
+$ git push -u origin <newbranch>
+# this should output something like this:
+**Branch <newbranch> set up to track remote branch <newbranch> from origin.**
+# (**'Note**': -u is important if you want to use git pull/push without
+specifying a remote/refspec)
+
+# remote branch of <newbranch> must be visible:
+$ git branch -a
+```
 
 So the short story is:
 
-    $ git checkout -b <newbranch>
-    $ git push -u origin <newbranch>
+```shell
+$ git checkout -b <newbranch>
+$ git push -u origin <newbranch>
+```
 
 ### Rename a *local* branch
 
-    $ git branch -m <old-branch-name> <new-branch-name>
+```shell
+$ git branch -m <old-branch-name> <new-branch-name>
+```
 
 TODO: how to rename the remote tracking branch => difficult!!
 
 ### How to merge local branches
 
-    $ git checkout <destination_branch>
-    $ git merge <source_branch>
+```shell
+$ git checkout <destination_branch>
+$ git merge <source_branch>
+```
 
 If you want to abort a merge (revert the working directory to the state
 before the merge command), do this:
  
-    $ git reset --hard
+```shell
+$ git reset --hard
+```
 
 (WARNING: this will remove all uncommitted changes!!)
 
@@ -415,35 +467,43 @@ Often the creation of a merge commit (merge node) is not necessary,
 and <code>git merge</code> uses a *fast-forward* merge, omitting
 the merge node:
 
-    $ git merge foo
-    Updating 9e9a63a..732b657
-    Fast-forward
-    testfoo.txt |    1 +
-    1 file changed, 1 insertion(+)
-    create mode 100644 testfoo.txt
+```shell
+$ git merge foo
+Updating 9e9a63a..732b657
+Fast-forward
+testfoo.txt |    1 +
+1 file changed, 1 insertion(+)
+create mode 100644 testfoo.txt
+```
 
 results in:
 
-    * 732b657 commit in branch foo
-    * [...]
+```shell
+* 732b657 commit in branch foo
+* [...]
+```
 
 Using the option <code>--no-ff</code> you can force git to create a merge
 node even if isn't absolutely necessary (*non-fast-forward* merge):
 
-    $ git merge --no-ff foo2
-    Merge made by the 'recursive' strategy.
-    testfoo2.txt |    1 +
-    1 file changed, 1 insertion(+)
-    create mode 100644 testfoo2.txt
+```shell
+$ git merge --no-ff foo2
+Merge made by the 'recursive' strategy.
+testfoo2.txt |    1 +
+1 file changed, 1 insertion(+)
+create mode 100644 testfoo2.txt
+```
 
 which will result in:
 
-    *   3890bc8 (HEAD, master) Merge branch 'foo2'
-    |\  
-    | * 6bc24c5 (foo2) commit on foo2
-    |/  
-    * 
-    * [...]
+```shell
+*   3890bc8 (HEAD, master) Merge branch 'foo2'
+|\  
+| * 6bc24c5 (foo2) commit on foo2
+|/  
+* 
+* [...]
+```
 
 This is useful when merging feature branches because it clearly shows
 the integration of a new feature. On the other hand, many merge nodes
@@ -451,19 +511,25 @@ make the commit graph less readable.
 
 #### Merge master->dev-branch *locally*
 
-    $ git checkout <devbranch>
-    $ git merge master
+```shell
+$ git checkout <devbranch>
+$ git merge master
+```
 
 #### Merge dev-branch->master *locally*
 
-    $ git checkout master
-    $ git merge <devbranch>
+```shell
+$ git checkout master
+$ git merge <devbranch>
+```
 
 ### How to remove a branch
 
-    # remove branch locally
-    # (use -D instead if you want to delete a branch that is not fully merged into HEAD!)
-    $ git branch -d <branchname>
+```shell
+# remove branch locally
+# (use -D instead if you want to delete a branch that is not fully merged into HEAD!)
+$ git branch -d <branchname>
+```
 
 You can do this with EGit using *Team->Advanced->Delete Branch...*.
 
@@ -471,9 +537,11 @@ If you accidentally deleted a (local) branch, you can recover it by
 starting a new branch from the location that <code>git branch -d <branchname></code>
 echoed (or by searching for the last commit on that branch in <code>git reflog</code>):
 
-    $ git branch -D foo
-    Deleted branch foo (was 732b657).
-    $ git branch foo 732b657
+```shell
+$ git branch -D foo
+Deleted branch foo (was 732b657).
+$ git branch foo 732b657
+```
 
 (remember that branches are simply pointers to commits)
 
@@ -482,46 +550,56 @@ commits will be deleted after some time!
 
 Delete a remote branch(!):
 
-    $ git push origin --delete <branchname>
+```shell
+$ git push origin --delete <branchname>
+```
 
 Now the local and the remote tracking branch should be gone:
 
-    $ git branch -a
-    docear/trunk
-    * master
-    remotes/origin/docear/trunk
-    remotes/origin/master
+```shell
+$ git branch -a
+docear/trunk
+* master
+remotes/origin/docear/trunk
+remotes/origin/master
+```
 
 NOTE: The *stale* branch will still exist in other checkouts, until you
 do a:
 
-    $ git remote prune origin
+```shell
+$ git remote prune origin
+```
 
 in that other checkout. TODO: but it still exists there as a local branch!
 
 ### Check whether your branches are set up correctly
 Make sure your branches are set up correctly for push/pull:
 
-    $ git remote show origin
-    * remote origin
-    Fetch URL: https://github.com/freeplane/freeplane.git
-    Push  URL: https://github.com/freeplane/freeplane.git
-    HEAD branch: master
-    Remote branches:
-    docear/trunk tracked
-    master       tracked
-    Local branches configured for 'git pull':
-    docear/trunk merges with remote docear/trunk
-    master       merges with remote master
-    Local refs configured for 'git push':
-    docear/trunk pushes to docear/trunk (up to date)
-    master       pushes to master       (up to date)
+```shell
+$ git remote show origin
+* remote origin
+Fetch URL: https://github.com/freeplane/freeplane.git
+Push  URL: https://github.com/freeplane/freeplane.git
+HEAD branch: master
+Remote branches:
+docear/trunk tracked
+master       tracked
+Local branches configured for 'git pull':
+docear/trunk merges with remote docear/trunk
+master       merges with remote master
+Local refs configured for 'git push':
+docear/trunk pushes to docear/trunk (up to date)
+master       pushes to master       (up to date)
+```
 
 ### Importing a remote branch
 Using command line git:
 
-    $ git pull # fetches the remote (tracking) branch
-    $ git checkout <branchname>
+```shell
+$ git pull # fetches the remote (tracking) branch
+$ git checkout <branchname>
+```
 
 Using Eclipse/EGit:
 
@@ -534,28 +612,30 @@ Create a dev branch (see section on creating branches above).
 
 ### Work on your feature branch
 
-    # switch to feature branch
-    $ git checkout <feature>
+```shell
+# switch to feature branch
+$ git checkout <feature>
 
-    # fetch and merge changes (in case another dev works on this)
-    $ git pull
+# fetch and merge changes (in case another dev works on this)
+$ git pull
 
-    # you might have to resolve conflicts: (might want to use 'git mergetool'
-    # or [http://wiki.eclipse.org/EGit/User_Guide#Resolving_a_merge_conflict Eclipse/EGit])
-    for each conflict x:
-    1. resolve conflict in x, remove markers
-    2. git add x # mark as resolved
-    # commit the conflict resolution(s)
-    $ git commit
+# you might have to resolve conflicts: (might want to use 'git mergetool'
+# or [http://wiki.eclipse.org/EGit/User_Guide#Resolving_a_merge_conflict Eclipse/EGit])
+for each conflict x:
+1. resolve conflict in x, remove markers
+2. git add x # mark as resolved
+# commit the conflict resolution(s)
+$ git commit
 
-    $ git add ...
-    $ git commit
-    [...]
+$ git add ...
+$ git commit
+[...]
 
-    # This will push commits to the remote branch that is tracked
-    # make sure that push.default=tracking|upstream (see above),
-    # otherwise other branches will be pushed as well!
-    $ git push [--dry-run]
+# This will push commits to the remote branch that is tracked
+# make sure that push.default=tracking|upstream (see above),
+# otherwise other branches will be pushed as well!
+$ git push [--dry-run]
+```
 
 ### Merging
 Merge master -> <devbranch> (see section on merging above) every
@@ -568,13 +648,17 @@ master (see section on merging above).
 
 ### Revert (reset) files
 
-    git checkout <filename>
+```shell
+git checkout <filename>
+```
 
 In EGit do this: Right-click on file -> Replace With -> HEAD Revision
 
 Revert all files in working copy (!):
 
-    git reset --hard
+```shell
+git reset --hard
+```
 
 ### Undoing/editing commits
 TODO: how to remove/edit a commit locally using rebase.
@@ -582,12 +666,16 @@ TODO: how to remove/edit a commit locally using rebase.
 ### Undoing a commit that is already pushed
 Use <code>git revert <commit-hash></code>, like this:
 
-    $ git revert b1e9b4c9755b091f95aaa3035aca04dcb02ec1fd
+```shell
+$ git revert b1e9b4c9755b091f95aaa3035aca04dcb02ec1fd
+```
 
 This will generate an inverse commit, it will *not* remove the original commit:
 
-    * 171881e (HEAD, master) Revert "a simple commit"
-    * b1e9b4c a simple commit
+```shell
+* 171881e (HEAD, master) Revert "a simple commit"
+* b1e9b4c a simple commit
+```
 
 ### Avoid entering passwords on each commit
 At least if you use the command line git interface you should consider to deposit your public ssh key at github. See the [section about ssh configuration](https://help.github.com/categories/56/articles) on github.
