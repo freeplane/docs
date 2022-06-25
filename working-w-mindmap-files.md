@@ -49,16 +49,16 @@ In the saving-dialogue you can choose standard or user-defined template mind map
 
 Enable and customize Autosave with settings in `Tools -> Preferences` in section `Environment->Automatic save`.
 
-The preferences you can set are:
+There you can set the following preferences:
 
 | Setting | Notes |
 | ----- | ----- | 
-| `Environment->Automatic save->Time for automatic save` | Sets the time in milliseconds between autosaves. To disable autosave set this number to 2000000000.|
-| `Environment->Automatic save->Use single directory for backup files` | If filled, Freeplane will autosave backup files to a single directory. If cleared, Freeplane will autosave backup files for each map to that map's directory |
-| `Environment->Automatic save->Backup directory` | If  `Environment->Automatic save->Use single directory for backup files`  is filled, this sets the directory where autosave files are saved. By default, it is set to `.backup` in the Freeplane user directory.|
-| `Environment->Automatic save->Delete automatic saves at exit` | If filled, autosave files are deleted automatically when Freeplane is shutdown normally.|
-| `Environment->Automatic save->Number of different files for automatic save` | Sets the number of different autosave files to keep when Freeplane is open before the autosave files begin to be overwritten.|
-| `Environment->Automatic save->Number of kept backup files`| Sets the number of different autosave files that are kept after Freeplane is shut down normally.|
+| `Time for automatic save` | Sets the time in milliseconds between autosaves. To disable autosave set this number to 2000000000.|
+| `Use single directory for backup files` | If filled, Freeplane will autosave backup files to a single directory. If cleared, Freeplane will autosave backup files for each map to that map's directory |
+| `Backup directory` | If  `Use single directory for backup files`  is filled, this sets the directory where autosave files are saved. By default, it is set to `.backup` in the Freeplane user directory.|
+| `Delete automatic saves at exit` | If filled, autosave files are deleted automatically when Freeplane is shutdown normally.|
+| `Number of different files for automatic save` | Sets the number of different autosave files to keep when Freeplane is open before the autosave files begin to be overwritten.|
+| `Number of kept backup files`| Sets the number of different autosave files that are kept after Freeplane is shut down normally.|
 
 ## Import
 
