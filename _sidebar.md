@@ -36,7 +36,7 @@
   * [How to build Freeplane](How_to_build_Freeplane.md)
   * [IDE setup](IDE_setup.md)
   * [Plugin development](Plugin_development.md)
-* Attic (draft documents) <!-- as a separate docsify? -->
+* [Attic (draft documents)](/docs/attic/ ':ignore target=_self')
   * [Old home](old-Home.md)
   * [Many unsorted ideas related to Freeplane](many-unsorted-ideas-related-to-freeplane.md)
   * [Understand the Freeplane interface](understanding-interface.md)
