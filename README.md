@@ -1,64 +1,31 @@
-# Using Freeplane 1.10
+# Freeplane docs
 
-We suggest viewing this wiki at https://freeplane.github.io/docs/#/
+The site is served as GitHub Pages at https://freeplane.github.io/docs/.
 
-This is a work in progress. Please contribute! Find out how [here](contribute.md).
+The main site is `Docs`, with `Attic` as a sub-site.
+Each one is a separate [docsify](https://docsify.js.org/#/?id=docsify) instance.
 
----
+`Attic` contains MediaWiki pages (pre-2022 wiki) migrated to Markdown for GitHub.
+The vision is to bring all MediaWiki content from `Attic` to `Docs`.
+Some content in `Attic` might be outdated, some unconverted, some media files missing.
+Each `attic` page needs to be reviewed/completed before incorporating it to `Docs`.
 
-[Introduction](introduction.md)
+When a page is incorporated to `Docs` and removed from `Attic`, all existing `Attic` pages linking to it should be updated.
+The new link should use [docsify special instruction ':ignore'](https://docsify.js.org/#/helpers?id=ignore-to-compile-link), e.g. `[Page Name](/docs/#/<sub-folder>/Page_Name ':ignore')`
 
-<!--
-[Understand the Freeplane interface](understanding-interface.md)
+Both sites use 
+* [relativePath: true](https://docsify.js.org/#/configuration?id=relativepath)
+* [nested sidebars](https://docsify.js.org/#/more-pages?id=nested-sidebars) with CSS in index.html
+* [header and footer hook](https://docsify.js.org/#/write-a-plugin?id=example)
+* [search plugin](https://docsify.js.org/#/plugins?id=full-text-search) with a dedicated namespace for each site
+* [image zoom plugin](https://docsify.js.org/#/plugins?id=zoom-image)
+* [Groovy language syntax highlight](https://docsify.js.org/#/language-highlight)
 
-[Working with mind-map files](working-w-mind-map-files.md)
+## How to run docsify locally 
 
-[Understanding nodes](understanding-nodes.md)
-
-[Adding and removing nodes](add-remove-nodes.md)
-
-[Editing nodes](editing-nodes.md)
-
-[Selecting nodes](selecting-nodes.md)
-
-[Moving and organizing nodes](moving-nodes.md)
-
-[Node links](node-links.md)
-
-[Filtering nodes](filtering-nodes.md)
-
-[Searching nodes](searching-nodes.md)
-
-[Formatting maps and nodes](formatting-maps-nodes.md)
-
-[Styles](styles.md)
-
-[CSS for HTML/Markdown](css-for-html-or-markdown.md)
-
-[Templates](templates.md)
-
-[Navigating the map](navigating-map.md)
-
-[Using icons](using-icons.md)
-
-[Using images](using-images.md)
-
-[Customizing Freeplane](customizing-freeplane.md)
-
-[Task and project management](task-project-management.md)
-
-[Presentations](presentations.md)
-
-[Sharing and printing mind maps](sharing-printing-mind-maps.md)
-
-[Using Freeplane with other applications](using-freeplane-other-apps.md)
-
-[Programming scripts and plugins](scripts-addons-plugins.md)
-
-[Other topics](other-topics.md)
-
-[Reference information](reference-info.md)
--->
----
-
-This site was created using [**Docsify**](https://docsify.js.org), which is an open source documentation site generator, and imported in GitHub page. 
+* Install python, if not already available → https://www.python.org/downloads/
+* Create a directory e.g. `freeplane-github-io`
+* Change to the directory you created: `cd freeplane-github-io`
+* Clone the repository: `git clone https://github.com/freeplane/docs.git`
+dd* In `freeplane-github-io` run python http server: `python -m http.server 3000` → [Manually preview your site](https://docsify.js.org/#/quickstart?id=manually-preview-your-site)
+* Browse the site at http://127.0.0.1:3000/docs/

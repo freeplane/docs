@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css">
   <title>Freeplane</title>
   <style>
     /* override vue.css */
@@ -13,19 +13,9 @@
     }
     article.markdown-section {
         padding-top: 10px;
-        padding-bottom: 0px;
     }
 
     /* sidebar */
-    /* fix vue.css missing size for non-anchor elems – align to ".sidebar ul li a" */
-    .sidebar ul li {
-      font-size: 14px;
-    }
-    /* add an external-link indicator */
-    .sidebar-nav ul li a[title="Mind map examples"]::after {
-      content: "❐";
-      padding-left: 3px;
-    }
     /* add a dash before expanded menu items */
     .sidebar-nav ul li ul a::before {
       content: "-";
@@ -39,36 +29,31 @@
   <script>
     window.$docsify = {
       el: "#app",
-      homepage: 'home.md',
+      homepage: 'Home.md',
       loadSidebar: true,
       auto2top: true,
       executeScript: true,
       relativePath: true,
-      notFoundPage: true,
       search : {
-        namespace: 'docs',
+        namespace: 'attic',
       },
       // The date template pattern
       formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
       plugins: [
         function(hook, vm) {
           hook.beforeEach(function(html) {
-            let header = `
+            var header = `
+<div style="opacity: 0.7; border: 1px solid var(--theme-color,#0074d9); padding: 5px;">
+  ℹ️ <b>Attic</b> contains MediaWiki pages (pre-2022 wiki) migrated to Markdown for GitHub.
+  Some content might be outdated, some unconverted, some media files missing.
+  Each page needs to be reviewed/completed before incorporating it to <b>Docs</b>.
+</div>
 <div id="toc"></div>
 <script>freeplane_docs_execute_script();</` + 'script>\n\n';
-            let footer;
-            if (html.indexOf('<div id="four-zero-four">') > 0) {
-              footer = '';  // no footer in 404 pages
-            } else {
-              let url = 'https://github.com/freeplane/docs/blob/main/' + vm.route.file;
-              let edit = '[📝](' + url + ')\n';
-              footer = '\n----\n<span style="opacity: 0.5;">' + edit + ' Last modified {docsify-updated}</span>';
-            }
 
             return (
               header +
-              html +
-              footer
+              html
             );
           });
         }
