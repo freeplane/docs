@@ -15,7 +15,7 @@ By default, a node has no style assigned and Freeplane uses `Default` to format 
 
 It's worth to note that there can be several styles active for a node.
 The most common scenario is that `Automatic level styles` are enabled in a map, usually painting each level a different color.
-Still, each node can be explicitly assigned a style, e.g. `Important`. Then style properties from both `Level ?` style and `Important` will blend.
+Still, each node can be explicitly assigned a style, e.g. `Important`. Then formatting properties from both `Level` and `Important` will blend.
 
 ![](../images/apply_level_styles_and_explicitly_applied_style-1'10'2.png ':size=200')
 
