@@ -18,6 +18,7 @@ See the [example mindmap](http://www.freeplane.org/wiki/images/0/01/Freeplane_La
 * The editor supports LaTeX syntax highlighting
 
 Example:
+
     \latex my formula: $x_2=\frac{1}{2}$
 
 ## Common/global LaTeX Macros
@@ -36,12 +37,15 @@ Nodes designated like this will use LaTeX syntax highlighting and will be export
 
 ## Including LaTeX content from file system
 If your node matches the pattern
+
     \latexinput{<file>}
+
 then Freeplane will include the given file at the given position in the LaTeX export.
 Note that the export will fail if the document cannot be read.
 
 Caveat: The file must be a well-formed XML document, so you must have a root tag and escape <, > and & (&lt;, &gt;, &amp;),
 like this:
+
     <doc>
     \begin{tabular}{cc}
     1 &amp;amp; 2 \\
@@ -56,11 +60,13 @@ Here's how to format formula results as LaTeX:
 2. Let your formula generate LaTeX code.
 
 Example (copy 'n paste it into a map)
+
     ="\\LaTeX: \$\\sum_{children} = ${children.sum(0)}\$"
     2
     3
     4
-Note that LaTeX symbol '\' has to be doubled in a double quoted string and that a $ have to be escaped with a single '\' to prevent Groovy from interpreting it as the prefix of a variable.
+
+Note that LaTeX symbol `\` has to be doubled in a double quoted string and that a `$` have to be escaped with a single `\` to prevent Groovy from interpreting it as the prefix of a variable.
 
 ## Known Problems
 
@@ -92,5 +98,6 @@ boxes)! Please see the 1.3.x section above if you're using Freeplane 1.3.x.
 * does not support automatic linebreaks
 
 Example:
+
     x_2=\frac{1}{2}
 
