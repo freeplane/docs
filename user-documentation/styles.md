@@ -46,34 +46,40 @@ To manage styles you need first to open the styles editor:
 
 ![](../images/style_editing_dialog-1'10'2.png ':size=200')
 
-There you can modify all defined styles&nbsp;: either styles provided by default with Freeplane, or add/change your own styles. Note that's its allowed to remove default freeplane's styles.<br>
+There you can modify all defined styles: either styles provided by default with Freeplane, or add/change your own styles. 
+Note that's its allowed to remove default freeplane's styles.
 
 **To add your own style:**
 
-*in the styles editor, choose the style with the nearest format of the style you want to create, right click on this style, select in the contextual menu "Save as new style...", enter new style name. Result: a new style is added and appears in the user's styles branch.
+* in the styles editor, choose the style with the nearest format of the style you want to create, right click on this style, select in the contextual menu `Save as new style...`, enter new style name.\
+  Result: a new style is added and appears in the user's styles branch.
 
-You can now fully define the style with the formatting panel. Close the style editor. Your new style is available for immediate use in toolbar's style list. Tip&nbsp;: you can also create a new style from a main map's node with the command "Styles&rarr;New style from selection".
+You can now fully define the style with the formatting panel. 
+Close the style editor. 
+Your new style is available for immediate use in toolbar's style list. 
+Tip: you can also create a new style from a main map's node with the command `Styles->New style from selection`.
 
 **To rename a user style:**
 
-*in the styles editor, select you style, right click, select in the contextual menu "Save as new style...", enter the new name you want, remove the old style entry.<br>
+* in the styles editor, select you style, right click, select in the contextual menu `Save as new style...`, enter the new name you want, remove the old style entry.
 
 **To change the display order of styles in the main toolbar styles list:**
 
-*in the styles editor, move up / down branchs or styles.<br>
+* in the styles editor, move up / down branchs or styles.
 
 ### Pre-defined styles
-Some predefined styles are available in Freeplane. You can either use them "as they are" or change them as it's convient for you. Two pre-defined styles named "Details" and "Notes" have a particular behaviour because they are used  to format Node Details and Node Notes :
+Some predefined styles are available in Freeplane. 
+You can either use them "as they are" or change them as it's convient for you. 
+Two pre-defined styles named "Details" and "Notes" have a particular behaviour because they are used  to format Node Details and Node Notes:
 
 * Font and colors of node details is controlled by style "Details"
 * Font of notes (not the color) is controlled by style "Notes".
 
 ### Other style features
 
-*menu "Styles&rarr;Copy styles..." imports, in the current map, styles from an other mindmap.
-
-*menu "Styles&rarr;Redefine style" redefine node style based on current node formats. It changes formats of all nodes using this style.
+* menu `Styles->Copy styles...` imports, in the current map, styles from an other mindmap.
+* menu `Styles->Redefine style` redefine node style based on current node formats. It changes formats of all nodes using this style.
 
 ## Making styles available to other mind maps
 
-For a style to be available in other mind maps, it needs to be saved in a template → [templates](templates.md)
+For a style to be available in other mind maps, it needs to be saved in a template -> [templates](templates.md)
