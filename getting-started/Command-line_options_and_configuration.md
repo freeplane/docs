@@ -32,8 +32,11 @@ or, under Linux/UNIX:
 
     FREEPLANE_JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/ ./freeplane.sh
 
-Freeplane requires Java between Java 8 and Java 15 because Java 16 is not compatible with current Groovy Engine.
+### Java version
 
+Freeeplane 1.10.x requires Java between Java 8 and Java 17.
+
+Freeplane 1.9.x requires Java between Java 8 and Java 15, because Java 16 is not compatible with current Groovy Engine.\
 Use of Java 16 can be permitted only on Linux by setting variable <code>FREEPLANE_USE_UNSUPPORTED_JAVA_VERSION</code> to 1.
 
 ## JAVA_OPTS
