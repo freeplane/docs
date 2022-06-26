@@ -92,7 +92,7 @@ A New **[User Manual](User_Manual.md)** is coming. [Read and contribute](User_Ma
 ***イメージサイズは、右下角をダブルクリックすることによってリセットすることができます。
 **Images can be scaled by dragging the bottom right corner 
 ***画像は、右下角をドラッグすることによって縮尺することができます。
-*Good [Scripting](Scripting.md) support: 
+*Good [Scripting](/docs/#/scripting/Scripting ':ignore') support: 
 **良い Scripting サポート: 
 **[New scripting API](Scripting_API.md) 
 ***新しい API スクリプト。
@@ -167,7 +167,7 @@ A New **[User Manual](User_Manual.md)** is coming. [Read and contribute](User_Ma
 **たとえどちらの目標もソースノードも選ばれないとしても、関連ポップアップメニューのリンクを使用できるようにしてください。
 *Exception traces for internal errors are automatically sent to freeplane team for analysis. 
 **内部のエラーのための痕跡は例外なく、分析のために freeplane チームに自動的に送られます。
-*[Export Using XSLT](Export_Using_XSLT.md) 
+*[Export Using XSLT](/docs/#/scripting/Export_Using_XSLT ':ignore') 
 **XSLT を使用してエクスポート。
 *Hide tabs if only one map is loaded 
 **1つのマップを載せれば、タブを隠してください。
@@ -214,7 +214,7 @@ A New **[User Manual](User_Manual.md)** is coming. [Read and contribute](User_Ma
 
 *Have a look at the (preliminary!) [Architecture](Architecture.md) description.
 
-*Some users might be interested in the [Translation How-To](Translation_How-To.md).<br><br>
+*Some users might be interested in the [Translation How-To](/docs/#/contribute/Translation_How-To ':ignore').<br><br>
 
 
 ## Testing Freeplane : Freeplaneをテストすること

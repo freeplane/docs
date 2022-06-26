@@ -15,7 +15,7 @@ node.style.textColor = Java.type("java.awt.Color").RED;
 c.statusInfo = "JavaScript script done!";
 ```
 
-You see that the convenient [property access](Scripting.md) known from Groovy is also supported for JavaScript.
+You see that the convenient [property access](/docs/#/scripting/Scripting ':ignore') known from Groovy is also supported for JavaScript.
 
 ## Installation of other languages
 
@@ -32,7 +32,7 @@ Here a step-by-step instruction to install [Jython](http://jython.org), the Pyth
 5. run it via *Tools -> Scripts -> Test Jython -> Execute...one selected node*. Note that the same code is also valid in Groovy and JavaScript:
     c.statusInfo = "Jython's here: Node's text is " + node.text
 
-Hints for scripting Freeplane in Python/Jython can be found on page [Scripting! Jython](Scripting!_Jython.md).
+Hints for scripting Freeplane in Python/Jython can be found on page [Scripting! Jython](/docs/#/scripting/Scripting!_Jython ':ignore').
 
 ## Drawbacks
 

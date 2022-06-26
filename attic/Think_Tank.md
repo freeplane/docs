@@ -13,7 +13,7 @@ Please start every in-page comment with "&gt; " so that it is displayed indented
 
 * [Project Vision](Visions.md) 
 * [Project Goals](Goals.md) 
-* [Relationship to FreeMind](Relationship_to_FreeMind.md)
+* [Relationship to FreeMind](/docs/#/user-documentation/Relationship_to_FreeMind ':ignore')
 
 ### Development
 

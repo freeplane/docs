@@ -1,2 +1,2 @@
-#REDIRECT [Scripts collection](Scripts_collection.md)
+#REDIRECT [Scripts collection](/docs/#/scripting/Scripts_collection  ':ignore')
 

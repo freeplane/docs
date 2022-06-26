@@ -3,7 +3,7 @@
 This page lists important features of Freeplane that are not available in
 FreeMind.
 
-* Simple [script](Scripting.md) invocation
+* Simple [script](/docs/#/scripting/Scripting ':ignore') invocation
 * Simple hotkey assignment
 * [add-ons](Add-ons.md) (packaged scripts, see below)
 * Format panel
@@ -11,7 +11,7 @@ FreeMind.
 * Node formats
 * Attributes panel
 * Integration with Docear
-* 1.3.x: Inline [LaTeX](LaTeX_in_Freeplane.md) ("LaTeX in core") with LaTeX syntax highlighting editor
+* 1.3.x: Inline [LaTeX](/docs/#/user-documentation/LaTeX_in_Freeplane ':ignore') ("LaTeX in core") with LaTeX syntax highlighting editor
 * Node details, 
 * Freely positionable nodes,
 * Summary nodes
@@ -23,7 +23,7 @@ FreeMind.
 
 ## Add-ons
 
-* Several [add-ons](Add-ons_(install).md) are available, including:
+* Several [add-ons](/docs/#/getting-started/Add-ons_(install) ':ignore') are available, including:
     * Pack and Go (ability to pull all FP dependencies into a single zip file for sharing with others)
     * Study planner (tool for assisting with the efficient use of study time, including pomodoro timers
     * Getting Things Done (task management application)

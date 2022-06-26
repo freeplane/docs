@@ -18,7 +18,7 @@ If you wanted the default <tt>%USERPROFILE%\.freeplane\scripts</tt> directory, a
 (default: <tt>scripts</tt>, i.e. directory <tt>scripts</tt> in the freeplane user home).
 
 ## Adding external libraries
-If your script needs external libraries (.jar or .class files) add the directory containing them to the "Script classpath", see [example scripts](Scripting.md).
+If your script needs external libraries (.jar or .class files) add the directory containing them to the "Script classpath", see [example scripts](/docs/#/scripting/Scripting ':ignore').
 
 ## Executing Scripts
 * Matching scripts are listed in the menu <tt>Extra->Scripts</tt>.
@@ -27,7 +27,7 @@ If your script needs external libraries (.jar or .class files) add the directory
 
 * Due to the flexible standard hotkey assignment it's possible to create hotkeys for these scripts.
 
-For each script there is a submenu with three menu entries (see [Scripting](Scripting.md) for instructions how this can be controlled by the script writer).:
+For each script there is a submenu with three menu entries (see [Scripting](/docs/#/scripting/Scripting ':ignore') for instructions how this can be controlled by the script writer).:
 * *Execute for one selected node*: This will invoke the script for one selected node (arbitrarily choosen), i.e. if three nodes are selected, it will be executed once, with the <tt>node</tt> variable set to one of the selected nodes. Since setting of <tt>node</tt> is not really predictable this variable should not be used. 
 * *Execute for all selected nodes*: This will invoke the script on every selected node, i.e. if three nodes are selected, it will be executed three times, once for each node with the *node* variable set to the respective node. 
 * *Execute for all selected nodes, recursively*: This will invoke the script on every selected node and recursively on all of its children.

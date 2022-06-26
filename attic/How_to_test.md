@@ -29,7 +29,7 @@ If you want to test an official Freeplane release, here's what to do:
 
 ## Testing a test version
 
-If you wish to test a bleeding edge test version, replace step 1 above with one of the two following options: you can either download the latest binary archive from the [testing area](https://www.freeplane.org/testversion/), or you can check out the latest release from the development repository, and build it.  See the [How to Build Freeplane](How_to_build_Freeplane.md) wiki page for more information on getting the source and building binaries.
+If you wish to test a bleeding edge test version, replace step 1 above with one of the two following options: you can either download the latest binary archive from the [testing area](https://www.freeplane.org/testversion/), or you can check out the latest release from the development repository, and build it.  See the [How to Build Freeplane](/docs/#/coding/How_to_build_Freeplane ':ignore') wiki page for more information on getting the source and building binaries.
 
 Additionally, if you're testing a test version please complete the [smoke test](https://www.freeplane.org/wiki/index.php/Release_smoke_test), until unit-tests are available to carry out these tests. 
 
