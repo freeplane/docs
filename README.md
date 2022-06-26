@@ -27,5 +27,5 @@ Both sites use
 * Create a directory e.g. `freeplane-github-io`
 * Change to the directory you created: `cd freeplane-github-io`
 * Clone the repository: `git clone https://github.com/freeplane/docs.git`
-dd* In `freeplane-github-io` run python http server: `python -m http.server 3000` → [Manually preview your site](https://docsify.js.org/#/quickstart?id=manually-preview-your-site)
+* In `freeplane-github-io` run python http server: `python -m http.server 3000` → [Manually preview your site](https://docsify.js.org/#/quickstart?id=manually-preview-your-site)
 * Browse the site at http://127.0.0.1:3000/docs/
