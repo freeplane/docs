@@ -219,7 +219,7 @@ This process is for new tool tips only. If you want to improve the source string
 14. Enter the text for the tool tip (the bottom field) and press OK.
 15. Repeat the last 2 steps till you have finished what you had planned
 16. Close Freeplane
-17. Create a [new bug report](https://sourceforge.net/p/freeplane/bugs/new/) titled "New tool tips" and attach <fpuserdir>UserResources_en.properties
+17. Create a [new bug report](https://github.com/freeplane/freeplane/issues/new?template=bug_report.md&title=New%20tool%20tips) titled "New tool tips" and attach `<fpuserdir>UserResources_en.properties`
 18. If necessary, change Freeplane back to the original language.
 
 ### Translator process
@@ -271,7 +271,7 @@ If you want to review and edit your glossary, you can click the 'Manage glossary
 
 ### Discussion in a topic on the Freeplane forum
 
-If you feel the need to have a discussion with your fellow translators you can check if there is an existing thread for your language on the [Freeplane forum](https://sourceforge.net/p/freeplane/discussion/758437/). If not, you can start a new topic for translation to your language. Since such topic is for people having the same primary language, you are allowed to write in your mother tongue. If you subscribe to this thread, e-mail messages will notify you of new posts.
+If you feel the need to have a discussion with your fellow translators you can check if there is an existing thread for your language on [Discussions](https://github.com/freeplane/freeplane/discussions). If not, you can start a new topic for translation to your language. Since such topic is for people having the same primary language, you are allowed to write in your mother tongue. If you subscribe to this thread, e-mail messages will notify you of new posts.
 
 Here is an incomplete list of forum threads and pages related to the translation to different languages. If any existing translation thread is missing from this list or if you started a new translation topic for your language, report it in the thread: [Questions about translating Freeplane via the Weblate tool](https://sourceforge.net/p/freeplane/discussion/758437/thread/3b20093b/)
 
@@ -305,7 +305,7 @@ You can have a look at:
   <dt>Some values begins by &lt;html&gt; with no &lt;/html&gt; at the end?&nbsp;</dt>
     <dd>Java accepts unclosed tags - don't care.</dd>
   <dt>Some keys are not used / displayed in the software&nbsp;</dt>
-    <dd>you should stay aligned with the English version to be on the safe side, but if keys are not used, it's a bug you can report it <a rel="nofollow" class="external text" href="https://sourceforge.net/p/freeplane/bugs/">here</a>.</dd>
+    <dd>you should stay aligned with the English version to be on the safe side, but if keys are not used, it's a bug you can report it <a rel="nofollow" class="external text" href="https://github.com/freeplane/freeplane/issues/new?template=bug_report.md">here</a>.</dd>
   <dt>When testing Freeplane with my translation file, some menus are missing or some buttons have no label, why?&nbsp;</dt>
     <dd>If you leave any empty keys in the file, Freeplane assumes they are valid translations and displays nothing. There are differences between "empty key in the translation file" which displays nothing and "missing key in the translation file" which displays `<English text> [translate me]` (see above).</dd>
   <dt>Your translation is truncated&nbsp;</dt>
@@ -313,7 +313,7 @@ You can have a look at:
 </dl>
 
 # Translation of Freeplane add-ons
-[Add-ons](Add-ons.md) manage their translations on their own, i.e. the translations are integrated into the add-on sources. Nevertheless, it's simple to translate an add-on by editing the add-on installation package in Freeplane and modifying the translations therein. If the translations contain non-ASCII characters you have to encode the text using a script, either from the [Developer Tools](https://www.freeplane.org/wiki/index.php/Add-ons#Add-on_Developer_Tools) (since version 0.9.16) or from [here](https://sourceforge.net/apps/mantisbt/freeplane/view.php?id=2091).
+[Add-ons](../getting-started/Add-ons_(install).md) manage their translations on their own, i.e. the translations are integrated into the add-on sources. Nevertheless, it's simple to translate an add-on by editing the add-on installation package in Freeplane and modifying the translations therein. If the translations contain non-ASCII characters you have to encode the text using a script, either from the [Developer Tools](../getting-started/Add-ons_(install).md#Add-on_Developer_Tools) (since version 0.9.16) or from [here](https://sourceforge.net/apps/mantisbt/freeplane/view.php?id=2091).
 
 # Translation of third party tool used in Freeplane
 ## JOrtho spell checker

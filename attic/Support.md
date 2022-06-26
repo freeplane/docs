@@ -72,7 +72,7 @@ Freeplane maps can be used as a basis for creating an animation or video. There 
 # Open forum
 Open forums give fast and easy access to the active user community of Freeplane. You can ask questions or post suggestions.
 
-* The [Open Discussion Forum](https://sourceforge.net/p/freeplane/discussion/758437/) is the main forum. You must register before posting.
+* [Discussions](https://github.com/freeplane/freeplane/discussions) is the main forum. You must register before posting.
 
 # FAQ's
 *the [Troubleshooting](Troubleshooting.md) page

@@ -4,7 +4,7 @@ With Freeplane scripting you can
 
 * write your own functions and use them from the menu or via keyboard shortcuts,
 * use [formulas](Formulas.md) in your map to compute stuff like in Excel, and
-* create [add-ons](Add-ons.md) to share it with other users,
+* create [add-ons](../getting-started/Add-ons_(install).md) to share it with other users,
 * have [init scripts](Init_scripts.md) executed on startup that changes Freeplane's behavior (since Freeplane 1.5).
 
 Most people use scripting to automate otherwise tedious procedures like creating a node with a special style and some standard attributes. But much more is possible with scripting.

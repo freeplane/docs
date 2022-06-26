@@ -1,4 +1,4 @@
-This page gives instructions for developing [Freeplane add-ons](Add-ons.md).
+This page gives instructions for developing [Freeplane add-ons](../getting-started/Add-ons_(install).md).
 
 Freeplane is built from modules called "plugins" like the Scripting, Formula or LaTeX plugin, ... Add-ons are a more light-weight extension mechanism than plugins. There are several add-ons that don't need any programming know-how, but depending on the purpose of your add-on you might have to write [scripts](Scripting.md). Scripts can be organized in a special lib where they are compiled automatically when Freeplane is run, see [wiki](Your_own_utility_script_library.md).
 
@@ -9,7 +9,7 @@ Add-ons are installed in the Freeplane user directory (see *Tools > Open user di
 ## Preparations
 
 ### Install developer tools
-Update to the most recent Freeplane version and install the [Developer Tools](../getting-started/Add-ons_(install).md) from the [Add-ons](Add-ons.md) page (follow the installation instructions there). The add-on provides scripts that relieves you from most of the tedious work. If you experience any problems with it in the future first check if you actually have the most recent add-on version installed.
+Update to the most recent Freeplane version and install the [Developer Tools](../getting-started/Add-ons_(install).md#-developer-tools) from the Add-ons page (follow the installation instructions there). The add-on provides scripts that relieves you from most of the tedious work. If you experience any problems with it in the future first check if you actually have the most recent add-on version installed.
 
 The add-on functions are available in: *Tools > Developer tools*
 
