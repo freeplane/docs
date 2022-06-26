@@ -1,5 +1,4 @@
-<!-- introduction -->
-# Many unsorted ideas related to Freeplane
+# Introduction aka many unsorted ideas related to Freeplane
 
 ### Getting started
 

@@ -1,3 +1,4 @@
+* [wiki](wiki/customizing-freeplane.md)
 * [Add-on Howto](Add-on_Howto.md)
 * [Add-ons](Add-ons.md)
 * [Add-ons (Develop)](/docs/#/scripting/Add-ons_(Develop) ':ignore')
