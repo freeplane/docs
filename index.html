@@ -44,6 +44,7 @@
       auto2top: true,
       executeScript: true,
       relativePath: true,
+      notFoundPage: true,
       search : {
         namespace: 'docs',
       },
@@ -52,12 +53,17 @@
       plugins: [
         function(hook, vm) {
           hook.beforeEach(function(html) {
-            var header = `
+            let header = `
 <div id="toc"></div>
-<script>populateToc();</` + 'script>\n\n';
-            var url = 'https://github.com/freeplane/docs/blob/main/' + vm.route.file;
-            var edit = '[📝](' + url + ')\n';
-            var footer = '\n----\n<span style="opacity: 0.5;">' + edit + ' Last modified {docsify-updated}</span>';
+<script>freeplane_docs_execute_script();</` + 'script>\n\n';
+            let footer;
+            if (html.indexOf('<div id="four-zero-four">') > 0) {
+              footer = '';  // no footer in 404 pages
+            } else {
+              let url = 'https://github.com/freeplane/docs/blob/main/' + vm.route.file;
+              let edit = '[📝](' + url + ')\n';
+              footer = '\n----\n<span style="opacity: 0.5;">' + edit + ' Last modified {docsify-updated}</span>';
+            }
 
             return (
               header +
