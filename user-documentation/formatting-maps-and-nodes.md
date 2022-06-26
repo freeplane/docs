@@ -37,6 +37,8 @@ In text templates "%s" represent the original node text like in "Beware: %s".
 By setting **Format** to `Text` you switch all formatting off.
 `Text` also disables formula evaluation.
 
+**Format** can be set to `LaTeX` or `Unparsed LaTeX` → [LaTeX in Freeplane](LaTeX_in_Freeplane.md)
+
 ## Styles
 
 Finally, a node can be formatted by applying a style to the node → [styles](styles.md)
