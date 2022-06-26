@@ -2,7 +2,7 @@
 * [Getting started](../getting-started/getting-started.md)
 * [How to get help](../how-to-get-help.md)
 * [User documentation](../user-documentation/first-steps.md)
-* [Mind map examples ❐](https://github.com/freeplane/freeplane/discussions/categories/shared-mind-maps)
+* [Mind map examples](https://github.com/freeplane/freeplane/discussions/categories/shared-mind-maps)
 * [Contribute](contribute.md)
   * [Translation How-To](Translation_How-To.md)
   * [Contributing to Freeplane's Development](Contributing_to_Freeplane's_Development.md)

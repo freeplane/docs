@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-  <title>Using Freeplane</title>
+  <title>Freeplane</title>
   <style>
     /* override vue.css */
     section.content {
@@ -14,6 +14,23 @@
     article.markdown-section {
         padding-top: 10px;
         padding-bottom: 0px;
+    }
+
+    /* sidebar */
+    /* fix vue.css missing size for non-anchor elems – align to ".sidebar ul li a" */
+    .sidebar ul li {
+      font-size: 14px;
+    }
+    /* add an external-link indicator */
+    .sidebar-nav ul li a[title="Mind map examples"]::after {
+      content: "❐";
+      padding-left: 3px;
+    }
+    /* add a dash before expanded menu items */
+    .sidebar-nav ul li ul a::before {
+      content: "-";
+      padding-right: 3px;
+      float: left;
     }
   </style>
 </head>

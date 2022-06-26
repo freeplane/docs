@@ -13,7 +13,7 @@
   * [Relationship to FreeMind](Relationship_to_FreeMind.md)
   * [Spell checker](Spell_checker.md)
 <!--  * References to other known documentation/tutorial sites -->
-* [Mind map examples ❐](https://github.com/freeplane/freeplane/discussions/categories/shared-mind-maps)
+* [Mind map examples](https://github.com/freeplane/freeplane/discussions/categories/shared-mind-maps)
 * [Contribute](../contribute/contribute.md)
 * [Scripting](../scripting/Scripting.md)
 * [Coding](../coding/Git_howto.md)
