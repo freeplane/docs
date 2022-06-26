@@ -10,9 +10,9 @@
   * [CSS for HTML/Markdown](css-for-html-or-markdown.md)
   * [Conditional node styles](Conditional_node_styles.md)
   * [LaTeX in Freeplane](LaTeX_in_Freeplane.md)
-  * [Relationship to FreeMind](Relationship_to_FreeMind.md)
   * [Spell checker](Spell_checker.md)
-<!--  * References to other known documentation/tutorial sites -->
+  * [Relationship to FreeMind](Relationship_to_FreeMind.md)
+  * [References to other known documentation/tutorial sites](other-docs-tutorials.md)
 * [Mind map examples](https://github.com/freeplane/freeplane/discussions/categories/shared-mind-maps)
 * [Contribute](../contribute/contribute.md)
 * [Scripting](../scripting/Scripting.md)
