@@ -1,5 +1,5 @@
 # Introduction
-In the following the origin of Freeplane is described. Since then Freeplane has got and is still is getting new functionality at a rapid speed, while keeping the easy way of working which is known from Freemind, see Freeplane's [Main Page](Main_Page.md). The power of this new functionality is shown by the *Quick reference* and *Documentation*, which are themselves mind maps. In addition there is a growing base of didactic maps in the wiki [Tutorial Freeplane](Tutorial_Freeplane.md).
+In the following the origin of Freeplane is described. Since then Freeplane has got and is still is getting new functionality at a rapid speed, while keeping the easy way of working which is known from Freemind, see Freeplane's [home page](../). The power of this new functionality is shown by the *Quick reference* and *Documentation*, which are themselves mind maps. In addition there is a growing base of didactic maps in the wiki [Tutorial Freeplane](Tutorial_Freeplane.md).
 
 # Why fork?
 
