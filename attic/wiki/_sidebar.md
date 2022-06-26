@@ -1,4 +1,5 @@
-* [Attic](../)
+* [**📖 docs**](../ ':ignore :target=_self')
+* [**↩ Attic**](../)
 * [customizing-freeplane](customizing-freeplane.md)
 * [freeplane-api-groovy](freeplane-api-groovy.md)
 * [glossary](glossary.md)
