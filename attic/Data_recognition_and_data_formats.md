@@ -14,7 +14,7 @@ You can change the "Format" in the format panel (View -> Properties panel). Ther
 * .## -> .12
 * 0.000000 -> 0.123450 (zero-padded)
 
-An alternative formatter ("printf") style uses the percent sign specially, see [Formatter documentation](http://docs.oracle.com/javase/1.5.0/docs/api/java/util/Formatter.html) (again for a given input number 0.12345):
+An alternative formatter ("printf") style uses the percent sign specially, see [Formatter documentation](http://docs.oracle.com/javase/1.5.0/api/java/util/Formatter.html) (again for a given input number 0.12345):
 
 * %f -> 0.123450 (standard decimal format)
 * %.07f -> 0.1234500
@@ -42,7 +42,7 @@ You can change the "Format" in the format panel (View -> Properties panel). The 
 * yyyy-MM-dd HH:mm -> 2012-12-28 12:31
 * MM/dd/yy -> 12/28/12
 
-A ["printf" style](http://docs.oracle.com/javase/1.5.0/docs/api/java/util/Formatter.html) is also available for dates but more useful are the language setting depending shortcuts
+A ["printf" style](http://docs.oracle.com/javase/1.5.0/api/java/util/Formatter.html) is also available for dates but more useful are the language setting depending shortcuts
 
 * SHORT
 * MEDIUM

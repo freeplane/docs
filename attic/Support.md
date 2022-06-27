@@ -17,15 +17,15 @@ Freeplane runs on any operationg system which has a recent version of Java insat
 ## Install language
 The Freeplane menu's are translated in many languages. For many languages spell check dictionaries are available.
 
-* [spell check](/docs/#/user-documentation/Spell_checker ':ignore')
-* [translation](/docs/#/contribute/Translation_How-To ':ignore')
+* [spell check](/#/user-documentation/Spell_checker ':ignore')
+* [translation](/#/contribute/Translation_How-To ':ignore')
 
 If you want to supply a translation of the tutorial or documentation in your language, see [[Translation_How-To#Translation_of_Tutorial_or_Documentation_maps |***how to***]].
 
 ## Install add-ons
 The standard functionality of Freeplane can be extended in different ways: 
 
-* See [Add-ons_(install)](/docs/#/getting-started/Add-ons_(install) ':ignore') for extensions and for customization of Freeplane.
+* See [Add-ons_(install)](/#/getting-started/Add-ons_(install) ':ignore') for extensions and for customization of Freeplane.
 * See [Academic liturature suite](http://www.docear.org). 
 * See the Freeplane CD below for free icons, clipart and examples. (N.B. It is not necessary to create a CD to use its information)
 ![](Cd_label-f.jpg) <br>

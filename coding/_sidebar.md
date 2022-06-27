@@ -10,4 +10,4 @@
   * [How to build Freeplane](How_to_build_Freeplane.md)
   * [IDE setup](IDE_setup.md)
   * [Plugin development](Plugin_development.md)
-* [Attic (draft documents)](/docs/attic/ ':ignore :target=_self')
+* [Attic (draft documents)](/attic/ ':ignore :target=_self')

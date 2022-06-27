@@ -81,15 +81,15 @@ Freeplane supports the above application areas with the following functions:
 * Password protecting of whole map and of individual nodes with DES encryption;
 * Ease of use with inline- and dialog editors, object oriented main menu, context menu’s, multi-language support, spell checker, properties panel, drag& drop functionality, hot keys, options for batch execution, publishing, sharing and selectable preferences;
 * [Approximate Search](Approximate_search.md) (similarity search) which allows to find search terms in a text, even if there is no *exact* match (e.g. "setup" = "set up" or "flie" = "file").
-* [Support for LaTeX formulae](/docs/#/user-documentation/LaTeX_in_Freeplane ':ignore') underneath/in nodes
-* Easy extension of functionality with [add-ons](Add-ons.md) and home made [scripts](/docs/#/scripting/Scripting ':ignore');
+* [Support for LaTeX formulae](/#/user-documentation/LaTeX_in_Freeplane ':ignore') underneath/in nodes
+* Easy extension of functionality with [add-ons](Add-ons.md) and home made [scripts](/#/scripting/Scripting ':ignore');
 * Integration with Docear academic literature suite;
 * Extensive support through Wiki and Forum; and tutorial and documentation in the form of a mind map.
 
 The map called *Freeplane functions* illustrates the main functions of Freeplane. Besides it provides an index with hyperlinks to the tutorial an documentation where you can read more. The links are hidden at first, but become visible and can be clicked if you hover with the cursor over a function (node). This is another example of the power of Freeplane. (To experience these functions, open *Help > Getting Started* in the Freeplane program and select Index).
 
 ## Add-ons and Scripts
-It is possible to extend the functionality of Freeplane using [Add-ons](Add-ons.md) and [scripts](/docs/#/scripting/Scripting ':ignore'). You can make your own add-ons and scripts using the built in scripting language Groovy (based on JavaScript), and beginning with version 1.5 other languages, like python. Check page [Add-ons_(install)](/docs/#/getting-started/Add-ons_(install) ':ignore') for add-ons other users have made and shared. They can be downloaded and installed with a simple mouse click. [Instructions are available](/docs/#/scripting/Add-ons_(Develop) ':ignore') if you want  to make your own add-ons.
+It is possible to extend the functionality of Freeplane using [Add-ons](Add-ons.md) and [scripts](/#/scripting/Scripting ':ignore'). You can make your own add-ons and scripts using the built in scripting language Groovy (based on JavaScript), and beginning with version 1.5 other languages, like python. Check page [Add-ons_(install)](/#/getting-started/Add-ons_(install) ':ignore') for add-ons other users have made and shared. They can be downloaded and installed with a simple mouse click. [Instructions are available](/#/scripting/Add-ons_(Develop) ':ignore') if you want  to make your own add-ons.
 
 ## Presenting mind maps
 Once you have a mind map you may want to use and present it. RoAn-Presentation provides a combination of mind mapping with Powerpoint- and Prezi like presentation, using automatic filtering and zooming. Stepping the presentation not only unfolds nodes, but also displays hidden details, centers the current node and more. In short it supports traversing a mind map, taking over abundant clicking from the user. You may download and install addon RoAn-presentation
@@ -99,9 +99,9 @@ Once you have a mind map you may want to use and present it. RoAn-Presentation p
 ![Why Freeplane](WHY_Freeplane1.2Narrative.jpg ':size=300')\
 *[WhyFreeplane.mm](https://www.freeplane.org/mapsOnline/?map=WhyFreeplane.mm)*
 
-Freeplane aims for maximum ease and speed of use. Occupying the middle ground between an editor and a diagramming tool, Freeplane allows the user to add content as quickly and naturally as they would in a text editor, yet producing structured content that can be manipulated as easily as a diagram. The workflow is unimpeded by the need to think about and manually place each piece of information; the user can intuitively input content as paragraphs and headings, and easily reorganise at a later stage. The width and other aspect of each topic (node) can be set independently and a node can be defined to behave indepently from the nodes in the tree structure, to be *free positionable*. The use of adaptable styles makes formatting an easy job and conditional styles make it automatic. A growing set of node extensions provide for details, metadata, scalable images, in-line hyperlinks and more which can be independently controlled to be visible or not. Freeplane maps can be easily integrated with Internet pages as in this wiki. And Freeplane is integrated with the [*Docear academic literature suite*](http://docear.org).  Although Freeplane functionality is intended for non-programmers, the Freeplane project offers potential programmers a versatile [scripting](/docs/#/scripting/Scripts_collection  ':ignore') language. Programmers may easily develop powerful extensions and students are stimulated to learn programming in a natural and stimulating environment. Freeplane also has a powerful mechanism to install [packages](Add-ons.md) of scripts, icons, images, language dictionaries for spell checking and other preferences including a different menu structure; and which can be used by non-programmers.
+Freeplane aims for maximum ease and speed of use. Occupying the middle ground between an editor and a diagramming tool, Freeplane allows the user to add content as quickly and naturally as they would in a text editor, yet producing structured content that can be manipulated as easily as a diagram. The workflow is unimpeded by the need to think about and manually place each piece of information; the user can intuitively input content as paragraphs and headings, and easily reorganise at a later stage. The width and other aspect of each topic (node) can be set independently and a node can be defined to behave indepently from the nodes in the tree structure, to be *free positionable*. The use of adaptable styles makes formatting an easy job and conditional styles make it automatic. A growing set of node extensions provide for details, metadata, scalable images, in-line hyperlinks and more which can be independently controlled to be visible or not. Freeplane maps can be easily integrated with Internet pages as in this wiki. And Freeplane is integrated with the [*Docear academic literature suite*](http://docear.org).  Although Freeplane functionality is intended for non-programmers, the Freeplane project offers potential programmers a versatile [scripting](/#/scripting/Scripts_collection  ':ignore') language. Programmers may easily develop powerful extensions and students are stimulated to learn programming in a natural and stimulating environment. Freeplane also has a powerful mechanism to install [packages](Add-ons.md) of scripts, icons, images, language dictionaries for spell checking and other preferences including a different menu structure; and which can be used by non-programmers.
 
-Freeplane was created because of [short-comings](http://freemind.sourceforge.net/wiki/index.php/Freemind_refactoring_plan) in the design of the popular open source mind mapping program [Freemind](http://freemind.sourceforge.net/wiki/index.php/Main_Page).  Freeplane has been [refactored](/docs/#/user-documentation/Relationship_to_FreeMind ':ignore') from Freemind to make its code and packages more modular, make it easier for new [software developers](Contributors.md) to contribute to Freeplane development, and to release new versions of Freeplane more often.
+Freeplane was created because of [short-comings](http://freemind.sourceforge.net/wiki/index.php/Freemind_refactoring_plan) in the design of the popular open source mind mapping program [Freemind](http://freemind.sourceforge.net/wiki/index.php/Main_Page).  Freeplane has been [refactored](/#/user-documentation/Relationship_to_FreeMind ':ignore') from Freemind to make its code and packages more modular, make it easier for new [software developers](Contributors.md) to contribute to Freeplane development, and to release new versions of Freeplane more often.
 
 FreeMind users can have a look at the [list of the most helpful features](Freeplane_features_you_were_missing_in_FreeMind.md) missed in FreeMind and available in Freeplane.
 
@@ -110,7 +110,7 @@ FreeMind users can have a look at the [list of the most helpful features](Freepl
 *[freeplaneTutorial.mm](https://www.freeplane.org/mapsOnline/?map=freeplaneTutorial.mm)*
 
 The versatility of Freeplane is demonstrated by the fact that the main user documentation is contained in mind maps. The mind map on the right shows the basic *Tutorial* for using Freeplane. The actual version of this map is contained in the Freeplane program in menu *Help > Tutorial.*
-This wiki contains a page *[Freeplane_Tutorial_Extensions](Freeplane_Tutorial_Extensions.md)* with use cases which can be navigated or can be downloaded and extended. For some of the examples there are animations illustrating the making of the map. See [Translated wiki pages](/docs/#/contribute/Translation_How-To ':ignore') if the page *Freeplane Tutorial Extensions* has been translated into your language. The advanced user is helped with detailed documentation in Freeplane's*Help > Documentation* and by many specific wiki pages explaining things like *[Scripting](/docs/#/scripting/Scripting ':ignore')*, *[Formulas](/docs/#/scripting/Formulas ':ignore')* and *[Add-ons](Add-ons.md)*. The [mind map galleries](Mind_map_gallery.md) provide a place for sharing mind maps in several languages. Online help is available at the open Forum, see below. It is possible to create a high quality animation or video of using Freeplane, see [how to](Videos_and_animations_How-to.md).
+This wiki contains a page *[Freeplane_Tutorial_Extensions](Freeplane_Tutorial_Extensions.md)* with use cases which can be navigated or can be downloaded and extended. For some of the examples there are animations illustrating the making of the map. See [Translated wiki pages](/#/contribute/Translation_How-To ':ignore') if the page *Freeplane Tutorial Extensions* has been translated into your language. The advanced user is helped with detailed documentation in Freeplane's*Help > Documentation* and by many specific wiki pages explaining things like *[Scripting](/#/scripting/Scripting ':ignore')*, *[Formulas](/#/scripting/Formulas ':ignore')* and *[Add-ons](Add-ons.md)*. The [mind map galleries](Mind_map_gallery.md) provide a place for sharing mind maps in several languages. Online help is available at the open Forum, see below. It is possible to create a high quality animation or video of using Freeplane, see [how to](Videos_and_animations_How-to.md).
 
 ## Freeplane books
 
@@ -120,7 +120,7 @@ This wiki contains a page *[Freeplane_Tutorial_Extensions](Freeplane_Tutorial_Ex
 
 ![community structure](Nnako_CommunityStructure.png ':size=300')
 
-Freeplane is a non-commercial project. It lives by our active and vibrant [community](/docs/#/contribute/Contributing_to_Freeplane's_Development ':ignore'), where we try to support each other in order to develop and provide an outstanding knowledge management application. Please, feel free to discuss Freeplane and its features with other interested Freeplane users. For this purpose, we provided two forums (see structure picture on the right):
+Freeplane is a non-commercial project. It lives by our active and vibrant [community](/#/contribute/Contributing_to_Freeplane's_Development ':ignore'), where we try to support each other in order to develop and provide an outstanding knowledge management application. Please, feel free to discuss Freeplane and its features with other interested Freeplane users. For this purpose, we provided two forums (see structure picture on the right):
 
 We invite you to do the following things:
 
@@ -128,7 +128,7 @@ in our **[OPEN DISCUSSION FORUM](https://github.com/freeplane/freeplane/discussi
 
 * discuss the usage of existing features
 * discuss the suitability of new features
-* discuss the development of [existing scripts](/docs/#/scripting/Scripts_collection  ':ignore') and new ones
+* discuss the development of [existing scripts](/#/scripting/Scripts_collection  ':ignore') and new ones
 
 New bug reports go into the [bug reports](https://github.com/freeplane/freeplane/issues/new?template=bug_report.md)
 
@@ -143,7 +143,7 @@ To understand the Freeplane document structure (XML) and get it's XSD schema go 
 
 To understand the the project goal, see the Freeplane [vision](Visions.md).
 
-[Join](/docs/#/contribute/Contributing_to_Freeplane's_Development ':ignore') the Freeplane [team](Contributors.md) not only as user but maybe as a
+[Join](/#/contribute/Contributing_to_Freeplane's_Development ':ignore') the Freeplane [team](Contributors.md) not only as user but maybe as a
 
 * developer (coder and designer)
 * tester (writer of tutorials, screencasts and help texts)

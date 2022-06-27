@@ -55,7 +55,7 @@ It is a java issue on linux. Use Firefox for Windows with Wine.
 Install the latest sun java from http://www.java.com/de/download/. The open jdk behaves buggy and is also significantly slower.
 
 ## I cannot find the spell check function
-The spell checker has to be enabled, see the [Spell checker how-to](/docs/#/user-documentation/Spell_checker ':ignore').
+The spell checker has to be enabled, see the [Spell checker how-to](/#/user-documentation/Spell_checker ':ignore').
 
 ## The editor freezes
 Create an entry in [Bugs](https://sourceforge.net/p/freeplane/bugs/) and provide as much information as possible about the conditions under which the behavior occurs:
@@ -75,7 +75,7 @@ It would be of great help in any case if you would provide a listing ("stacktrac
 
 (You have to replace "2345" with the real PID.) For comparison also post the jstack output of Freeplane before the freeze (if possible). As you can easily check by inspecting the output it's pure technical stuff, nothing of your private mindmap is contained in it. Unfortunately you have to have the JDK installed to use jstack (the JRE wouldn't suffice). Please tell us, if you cannot install the JDK for some reason. - We might be able to help.
 
-For more on <tt>jstack</tt> see its [Sun documentation](http://java.sun.com/javase/6/docs/technotes/tools/share/jstack.html).
+For more on <tt>jstack</tt> see its [Sun documentation](http://java.sun.com/javase/6/technotes/tools/share/jstack.html).
 
 
 <!-- ({Category:Documentation}) ({Category:Needs_Updating}) -->

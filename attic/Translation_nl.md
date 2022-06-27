@@ -11,7 +11,7 @@ Deze pagina ondersteunt de vertaling van Freeplane naar het Vlaams/Nederlands. D
 6. &-geheugensteuntjes weglaten uit Nederlandse vertaling (zie ook [[#&-geheugensteuntjes|&-geheugensteuntjes]])
 
 ## Voorkeurstermen
-Het doel van de voorkeurstermen is om met verschillende vertalers tot een consistente vertaling te komen. De voorkeurstermen zijn opgenomen in de woordenlijst op Weblate. Voor de werking van de woordenlijst, zie [Glossary](/docs/#/contribute/Translation_How-To ':ignore')
+Het doel van de voorkeurstermen is om met verschillende vertalers tot een consistente vertaling te komen. De voorkeurstermen zijn opgenomen in de woordenlijst op Weblate. Voor de werking van de woordenlijst, zie [Glossary](/#/contribute/Translation_How-To ':ignore')
 
 Deze lijst is nog niet volledig en bestaande suggesties kunnen nog voor verbetering vatbaar zijn. Nieuwe suggesties kun je gewoon toevoegen. Voor verbetering van bestaande suggesties, overleg dit in de discussie [Dutch/Flemish translation / Vlaamse/Nederlandse vertaling](https://sourceforge.net/p/freeplane/discussion/758437/thread/fe83a1fb/)
 

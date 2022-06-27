@@ -11,7 +11,7 @@ Some content in `Attic` might be outdated, some unconverted, some media files mi
 Each `attic` page needs to be reviewed/completed before incorporating it to `Docs`.
 
 When a page is incorporated to `Docs` and removed from `Attic`, all existing `Attic` pages linking to it should be updated.
-The new link should use [docsify special instruction ':ignore'](https://docsify.js.org/#/helpers?id=ignore-to-compile-link), e.g. `[Page Name](/docs/#/<sub-folder>/Page_Name ':ignore')`
+The new link should use [docsify special instruction ':ignore'](https://docsify.js.org/#/helpers?id=ignore-to-compile-link), e.g. `[Page Name](/#/<sub-folder>/Page_Name ':ignore')`
 
 Both sites use 
 * [relativePath: true](https://docsify.js.org/#/configuration?id=relativepath)
@@ -28,4 +28,4 @@ Both sites use
 * Change to the directory you created: `cd freeplane-github-io`
 * Clone the repository: `git clone https://github.com/freeplane/docs.git`
 * In `freeplane-github-io` run python http server: `python -m http.server 3000` → [Manually preview your site](https://docsify.js.org/#/quickstart?id=manually-preview-your-site)
-* Browse the site at http://127.0.0.1:3000/docs/
+* Browse the site at http://127.0.0.1:3000/

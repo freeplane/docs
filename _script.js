@@ -3,7 +3,7 @@ function freeplane_docs_execute_script() {
     const fourZeroFour = document.querySelector('div#four-zero-four');
     if (fourZeroFour) {
         const locationShort = location.href.replace(location.origin, '');
-        const atticHref = locationShort.split('/docs/')[0] + '/docs/attic/#/';
+        const atticHref = locationShort.split('/#/')[0] + '/attic/#/';
         const lastSegment = location.href.replace(questionMarkAll, '').split('/').pop();
         const targetHref = atticHref + lastSegment;
         const fourZeroFour = document.querySelector('div#four-zero-four');
@@ -31,7 +31,6 @@ function freeplane_docs_execute_script() {
                     a.href = `${location.hash.replace(questionMarkAll, '')}?id=${h.id}`;
                     a.textContent = h.textContent;
                 }
-                //toc.insertAdjacentHTML('afterEnd', '<hr>');
             }
         }
     }
