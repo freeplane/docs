@@ -10,7 +10,7 @@ If you need map specific behavior encode this in your scripts by checking the na
 
 ## Examples
 
-* [Register a Markdown IContentTransformer](/docs/#/scripting/Scripts_collection  ':ignore')
+* [Register a Markdown IContentTransformer](/#/scripting/Scripts_collection  ':ignore')
 * An extended script can be found in this [forum article](http://sourceforge.net/p/freeplane/discussion/758437/thread/748f90ad/?limit=25.md).
 
 <!-- ({Category:Script}) -->

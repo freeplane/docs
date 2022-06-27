@@ -12,11 +12,11 @@ You can open this directory in a file manager via the Freeplane menu under *Tool
 
 ## The most important new features
 ### Implemented
-* [Node styles](/docs/#/user-documentation/styles ':ignore') replace style patterns (like in text processors)
-* [Conditional node styles](/docs/#/user-documentation/Conditional_node_styles ':ignore'): node formatting depends on its content and position
+* [Node styles](/#/user-documentation/styles ':ignore') replace style patterns (like in text processors)
+* [Conditional node styles](/#/user-documentation/Conditional_node_styles ':ignore'): node formatting depends on its content and position
 * [Map templates](Map_templates.md) for new maps (all previous maps can be used)
 * [Menus and commands](Menus_and_commands.md) have been re-ordered to improve user efficiency (both to better integrate new features and to give a more "natural access" to already existing features)
-* Properties panel - [Format tab](/docs/#/user-documentation/styles ':ignore')
+* Properties panel - [Format tab](/#/user-documentation/styles ':ignore')
 * Hyperlinks for menu items
 * Keyboard shortcut documentation: Map and HTML table generation added for the documentation map
 * Check for newer auto save files on opening of a map
@@ -35,7 +35,7 @@ You can open this directory in a file manager via the Freeplane menu under *Tool
 * Freeplane portable version (download and install file named *FreeplanePortable_X.paf.exe*)
 * File -> Properties... dialog shows informations about the map (e.g. total number of nodes)
 * add new icons in main and contextual menus to improve user efficiency
-* [Formulas](/docs/#/scripting/Formulas ':ignore'): Use of formulas in node text, nodes and attributes (like in spreadsheet processors)
+* [Formulas](/#/scripting/Formulas ':ignore'): Use of formulas in node text, nodes and attributes (like in spreadsheet processors)
 * Node numbering and Formats/templates as style attributes
 * Parsing and formatting of numbers and dates in node texts and attribute values.
 <noinclude>

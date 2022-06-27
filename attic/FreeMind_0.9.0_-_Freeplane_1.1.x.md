@@ -8,7 +8,7 @@
 * [External objects](External_objects.md): External bitmap and SVG images can be attached using menu Insert-&gt;External object and resized 
     * Image size can be reset by double clicking on the bottom right corner 
     * Images can be scaled by dragging the bottom right corner 
-* Good [Scripting](/docs/#/scripting/Scripting ':ignore') support: 
+* Good [Scripting](/#/scripting/Scripting ':ignore') support: 
     * [New scripting API](Scripting_API.md) 
     * [Loading and execution of external groovy scripts](External_script_file_execution.md) 
 * Insert image dialog and insert external object dialog have file previews 
@@ -22,7 +22,7 @@
     * Here's a video of freeplane outline view in action: [http://www.youtube.com/watch?v=aAc8FYUeQAU](http://www.youtube.com/watch?v=xGBGwu1kVt4])
 * [Portable Freeplane](Portable_Freeplane.md) 
 * Selective paste from edit menu (Paste as...) 
-* [Spell checker](/docs/#/user-documentation/Spell_checker ':ignore') 
+* [Spell checker](/#/user-documentation/Spell_checker ':ignore') 
 * Structured HTML paste
 
 
@@ -47,7 +47,7 @@
 * Edit nodes with line breaks in in-line editor (alt+enter to quit , shift+enter for line break) 
 * Enable link pop-up menu even if neither target nor source node is selected. 
 * Exception traces for internal errors are automatically sent to freeplane team for analysis. 
-* [Export Using XSLT](/docs/#/scripting/Export_Using_XSLT ':ignore') 
+* [Export Using XSLT](/#/scripting/Export_Using_XSLT ':ignore') 
 * Hide tabs if only one map is loaded 
 * Hot keys: CONTROL + ALT + RIGHT, CONTROL + ALT + LEFT 
 * Icon actions moved in separate menu 

@@ -10,7 +10,7 @@ Feel free to add your own scripts here. If you give script a name using wiki tex
 
 an extra download button is created for it, and it can be downloaded directly from this page.
 
-For larger scripts there is a special [git](/docs/#/coding/Git_howto ':ignore') repository [https://github.com/freeplane/addons].
+For larger scripts there is a special [git](/#/coding/Git_howto ':ignore') repository [https://github.com/freeplane/addons].
 
 
 

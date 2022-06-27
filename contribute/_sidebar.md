@@ -8,4 +8,4 @@
   * [Contributing to Freeplane's Development](Contributing_to_Freeplane's_Development.md)
 * [Scripting](../scripting/Scripting.md)
 * [Coding](../coding/Git_howto.md)
-* [Attic (draft documents)](/docs/attic/ ':ignore :target=_self')
+* [Attic (draft documents)](/attic/ ':ignore :target=_self')

@@ -38,7 +38,7 @@ blockquote {
 
 Requires Freeplane 1.9.12 or higher
 
-[Node_CSS_Functionality.mm](/docs/user-documentation/Node_CSS_Functionality.mm ':ignore')
+[Node_CSS_Functionality.mm](/user-documentation/Node_CSS_Functionality.mm ':ignore')
 
 ## CSS For Core Text
 
