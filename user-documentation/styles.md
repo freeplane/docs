@@ -87,4 +87,4 @@ Two pre-defined styles named "Details" and "Notes" have a particular behaviour b
 
 ## Making styles available to other mind maps
 
-For a style to be available in other mind maps, it needs to be saved in a template -> [templates](templates.md)
+For a style to be available in other mind maps, it needs to be saved in a template → [templates](templates.md)
