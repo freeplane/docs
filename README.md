@@ -1,6 +1,6 @@
 # Freeplane docs
 
-The site is served as GitHub Pages at https://freeplane.github.io/docs/.
+The site is served as GitHub Pages at https://docs.freeplane.org/.
 
 The main site is `Docs`, with `Attic` as a sub-site.
 Each one is a separate [docsify](https://docsify.js.org/#/?id=docsify) instance.
