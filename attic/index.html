@@ -19,6 +19,12 @@
     article.markdown-section {
         padding-top: 50px;
     }
+    .markdown-section code {
+      font-weight:500
+    }
+    pre:after {
+      font-weight:400
+    }
 
     /* sidebar */
     /* add a dash before expanded menu items */
@@ -45,10 +51,10 @@
       // The date template pattern
       formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
       darklightTheme: {
-        siteFont : 'PT Sans | Source Sans Pro',
+        siteFont : 'Source Sans Pro',
         defaultTheme : 'dark',
         codeFontFamily : 'Roboto Mono, Monaco, courier, monospace',
-        bodyFontSize : '12pt'
+        bodyFontSize : '10pt'
       },
       plugins: [
         function(hook, vm) {

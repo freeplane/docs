@@ -20,6 +20,12 @@
         padding-top: 10px;
         padding-bottom: 0px;
     }
+    .markdown-section code {
+      font-weight:500
+    }
+    pre:after {
+      font-weight:400
+    }
 
     /* sidebar */
     /* fix vue.css missing size for non-anchor elems – align to ".sidebar ul li a" */
@@ -37,6 +43,7 @@
       padding-right: 3px;
       float: left;
     }
+
   </style>
 </head>
 <body>
@@ -56,10 +63,10 @@
       // The date template pattern
       formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
       darklightTheme: {
-        siteFont : 'PT Sans | Source Sans Pro',
+        siteFont : 'Source Sans Pro',
         defaultTheme : 'dark',
         codeFontFamily : 'Roboto Mono, Monaco, courier, monospace',
-        bodyFontSize : '12pt'
+        bodyFontSize : '10pt'
       },
       plugins: [
         function(hook, vm) {
