@@ -12,13 +12,20 @@
   />
   <title>Freeplane</title>
   <style>
-    /* override vue.css */
+    /* override docsify-darklight-theme */
+    @import url("https://fonts.googleapis.com/css?family=PT+Sans|Source+Sans+Pro|Roboto+Mono&display=swap");
+    .markdown-section code {
+      font-size: .8rem;
+    }
+    .markdown-section > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) a {
+      text-decoration: underline;
+    }
     section.content {
         padding-top: 0px;
     }
     article.markdown-section {
         padding-top: 10px;
-        padding-bottom: 0px;
+        padding-bottom: 5px;
     }
     .markdown-section code {
       font-weight:500
@@ -28,7 +35,7 @@
     }
 
     /* sidebar */
-    /* fix vue.css missing size for non-anchor elems – align to ".sidebar ul li a" */
+    /* fix missing size for non-anchor elems – align to ".sidebar ul li a" */
     .sidebar ul li {
       font-size: 14px;
     }
@@ -43,7 +50,6 @@
       padding-right: 3px;
       float: left;
     }
-
   </style>
 </head>
 <body>
@@ -66,7 +72,13 @@
         siteFont : 'Source Sans Pro',
         defaultTheme : 'dark',
         codeFontFamily : 'Roboto Mono, Monaco, courier, monospace',
-        bodyFontSize : '10pt'
+        bodyFontSize : '15px',
+        dark: {
+          highlightColor: 'rgb(236, 136, 54)'
+        },
+        light: {
+          highlightColor: 'rgb(236, 106, 0)'
+        }
       },
       plugins: [
         function(hook, vm) {
@@ -79,8 +91,8 @@
               footer = '';  // no footer in 404 pages
             } else {
               let url = 'https://github.com/freeplane/docs/blob/main/' + vm.route.file;
-              let edit = '[📝](' + url + ')\n';
-              footer = '\n----\n<span style="opacity: 0.5;">' + edit + ' Last modified {docsify-updated}</span>';
+              let edit = `<a href="${url}">📝</a>\n`;
+              footer = '\n<div style="opacity: 0.5; padding-top: 20px;">' + edit + ' Last modified {docsify-updated}</div>';
             }
 
             return (
