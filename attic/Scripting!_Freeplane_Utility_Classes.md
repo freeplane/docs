@@ -1,4 +1,4 @@
-[Back to Scripting overview](/#/scripting/Scripting ':ignore')
+[Back to Scripting overview](../scripting/Scripting.md)
 
 
 There are a few utility classes in Freeplane that are of special use for scripting. Look up their API in the Freeplane scripting API docs, for example coming from the menu - *Help -> Scripting API*. Here are the direct links:

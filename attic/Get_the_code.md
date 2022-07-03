@@ -2,7 +2,7 @@ Freeplane uses a [distributed revision control](http://en.wikipedia.org/wiki/Dis
 
 Our master repository if available at https://github.com/freeplane/freeplane
 
-* [Learn how to use git and get the code](/#/coding/Git_howto ':ignore')
+* [Learn how to use git and get the code](../coding/Git_howto.md)
 
 <!-- ({Category:Coding}) -->
 

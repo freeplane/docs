@@ -1,4 +1,4 @@
-[Back to Scripting overview](/#/scripting/Scripting ':ignore')
+[Back to Scripting overview](../scripting/Scripting.md)
 
 
 OSGI allows to control exactly which packages should be exported by a library. By this means only a few of the libraries included in the Freeplane distribution are accessible by scripts:

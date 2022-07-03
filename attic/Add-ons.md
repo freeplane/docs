@@ -1,2 +1,2 @@
-#REDIRECT [Add-ons (install)](/#/getting-started/Add-ons_(install) ':ignore')
+#REDIRECT [Add-ons (install)](../getting-started/Add-ons_(install).md)
 
