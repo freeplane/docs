@@ -37,7 +37,7 @@ A lot of very useful scripts need one or another of those but you can defer enab
 Formulas are somewhat similar to Office macros in that they are evaluated on loading of a map. But formulas are restricted without anyone having the possibility to override this restrictions manually. The worst a formula can do is to read and display local files if you have given scripts the "read file" permission. (That is needed if you have extended the classpath of scripts.) So be careful but not anxious.
 
 ## Add-ons
-Scripts that are part of [add-ons](Add-ons.md) have their own, independent rights management so you don't have to loosen your scripting permissions just if a certain add-on needs special permissions.
+Scripts that are part of [add-ons](../getting-started/Add-ons_(install).md) have their own, independent rights management so you don't have to loosen your scripting permissions just if a certain add-on needs special permissions.
 
 <!-- ({Category:Script}) -->
 

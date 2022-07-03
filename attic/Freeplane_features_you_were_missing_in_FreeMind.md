@@ -5,7 +5,7 @@ FreeMind.
 
 * Simple [script](/#/scripting/Scripting ':ignore') invocation
 * Simple hotkey assignment
-* [add-ons](Add-ons.md) (packaged scripts, see below)
+* [add-ons](../getting-started/Add-ons_(install).md) (packaged scripts, see below)
 * Format panel
 * Formulas
 * Node formats
