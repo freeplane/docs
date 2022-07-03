@@ -18,7 +18,6 @@
 * [Debugging scripts](Debugging_scripts.md)
 * [Document Format](Document_Format.md)
 * [Edit scripts in Eclipse](Edit_scripts_in_Eclipse.md)
-* [Embedding mind maps](Embedding_mind_maps.md)
 * [Export Using XSLT](/#/scripting/Export_Using_XSLT ':ignore')
 * [External objects](External_objects.md)
 * [External script file execution](External_script_file_execution.md)

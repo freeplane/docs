@@ -79,26 +79,5 @@ In alphabetical order:
 * [French/Français](Mind_Map_Gallery/French.md)
 * [German](Mind_Map_Gallery/German.md)
 
-# How to download maps to your computer
-
-1. Follow the map links given above (click on the link below the image). This opens the map.
-2. Click on the map name displayed above the opened map.
-
-# How to contribute new maps
-You'll need to be a registered user of this wiki with Administrator rights to be able to publish mind maps to the gallery.  Don't let that deter you, anyone can be granted Administrator rights.  
-
-Here's how to get Administrator rights and post mind maps to the gallery:
-
-* Register as a user for this wiki.
-* Create a post in the [Freeplane forum](https://www.freeplane.org/forum2012/viewforum.php?f=1), asking to be given Administrator rights to the wiki so you can upload mind maps to the gallery.  You'll need to a be a registered member of SourceForge to post to the forum.  In the post include your user name for this wiki.  You should get a response within a day or so.
-* Having been granted Administrator rights to this wiki, log into the wiki.
-* If it's helpful, edit your maps for publication. Add a branch with some explanations about your map.
-* Upload the map, using the wiki's [Upload file](Special:Upload.md) page.  This page can also be reached by clicking the "Special pages" link in the toolbox in the left-hand menu of each wiki page.
-* Embed your map into the gallery. [Here's how to do it.](Embedding_mind_maps.md)
-
-    * Make use of this page for publishing your mind maps in English language.
-    * For non-English mind maps use separate wiki pages and link to them from [[#Maps in other languages|this section]]
-* Some extra care is needed if your map contains images.
-
 <!-- ({Category:Example_maps}) -->
 
