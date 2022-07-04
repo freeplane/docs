@@ -70,7 +70,7 @@ Because of limitations of the mind map viewer, the interactive maps may  behave 
 For more information about these maps see [Freeplane Tutorial Extensions](Freeplane_Tutorial_Extensions.md) and the (hidden) information in the interactive maps when you hover or unfold the nodes.
 
 # Screenshots
-* You might want to check also for [Screenshots](Screenshots.md)
+* You might want to check also for [Screenshots](Freeplane_Tutorial_How-to_Screenshots.md)
 
 # Galleries in other languages than English
 In alphabetical order:

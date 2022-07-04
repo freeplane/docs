@@ -53,7 +53,6 @@
 * [Release cycle](Release_cycle.md)
 * [Release smoke test](Release_smoke_test.md)
 * [Rules to build user friendly menus](Rules_to_build_user_friendly_menus.md)
-* [Screenshots](Screenshots.md)
 * [Script incubator](Script_incubator.md)
 * [Scripting! API Changes](Scripting!_API_Changes.md)
 * [Scripting! Example scripts using external libraries](Scripting!_Example_scripts_using_external_libraries.md)
