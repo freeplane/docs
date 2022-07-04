@@ -33,7 +33,6 @@
 * [Help!Contents](Help!Contents.md)
 * [Help!Editing](Help!Editing.md)
 * [Help Previous Freeplane Versions](Help_Previous_Freeplane_Versions.md)
-* [How to nl](How_to_nl.md)
 * [How to publish add-ons](How_to_publish_add-ons.md)
 * [How to test](How_to_test.md)
 * [Information management with Freeplane add-on dView(indexfile)](Information_management_with_Freeplane_add-on_dView(indexfile).md)
