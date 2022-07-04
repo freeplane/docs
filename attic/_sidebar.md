@@ -68,7 +68,6 @@
 * [Think Tank](Think_Tank.md)
 * [Translation nl](Translation_nl.md)
 * [Troubleshooting](Troubleshooting.md)
-* [Tutorial Freeplane](Tutorial_Freeplane.md)
 * [Tutorial Freeplane How-to nl](Tutorial_Freeplane_How-to_nl.md)
 * [Tutorial Freeplane nl](Tutorial_Freeplane_nl.md)
 * [User icons](User_icons.md)
