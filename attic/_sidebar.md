@@ -74,7 +74,6 @@
 * [Tutorial Freeplane](Tutorial_Freeplane.md)
 * [Tutorial Freeplane How-to nl](Tutorial_Freeplane_How-to_nl.md)
 * [Tutorial Freeplane nl](Tutorial_Freeplane_nl.md)
-* [Ubuntu](Ubuntu.md)
 * [User icons](User_icons.md)
 * [Videos and animations How-to](Videos_and_animations_How-to.md)
 * [Visions](Visions.md)
