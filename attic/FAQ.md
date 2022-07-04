@@ -18,7 +18,7 @@ And of course there are a lot of books on Mindmapping in general.
 
 ## What made it worth forking from Freemind?
 
-See the article on the [Freeplane/FreeMind relationship](/#/user-documentation/Relationship_to_FreeMind ':ignore').
+See the article on the [Freeplane/FreeMind relationship](../user-documentation/Relationship_to_FreeMind.md).
 
 ## What's the "Freeplane user directory"?
 The Freeplane user directory can be found by invoking the menu item Tools->Open user directory. It's location is the directory <tt>1.2.x</tt> respectively <tt>1.3.x</tt> in <tt>%APPDATA%\Freeplane</tt> (Windows) respectively <tt>~/.freeplane/</tt> (Linux, Mac). It contains all user settings: options in <tt>auto.properties</tt>, scripts, [configuration of data recognition](Data_recognition_and_data_formats.md), ...
@@ -27,7 +27,7 @@ The Freeplane user directory can be found by invoking the menu item Tools->Open 
 Almost all preferences are stored in [<userdirectory>](FAQ.md)/auto.properties. It contains all settings, keyboard bindings and more. If you want to install a second copy of Freeplane, e. g. to another computer you can copy auto.properties to copy all settings.
 
 ## Where's the log file?
-Sometimes you need to know where the log file is located, e.g. if you write [scripts](/#/scripting/Scripting ':ignore') or [reporting bugs](https://github.com/freeplane/freeplane/issues) . Find it in subdirectory <tt>logs</tt> of the Freeplane "user directory" (see above). It's named <tt>log.0</tt> in most cases. If you have more than one Freeplane instance opened then it might have the name <tt>log.1</tt> or even <tt>log.0.1</tt>. The most recently changed file matching the pattern <tt>log.*</tt> will be the one you are looking for.
+Sometimes you need to know where the log file is located, e.g. if you write [scripts](../scripting/Scripting.md) or [reporting bugs](https://github.com/freeplane/freeplane/issues) . Find it in subdirectory <tt>logs</tt> of the Freeplane "user directory" (see above). It's named <tt>log.0</tt> in most cases. If you have more than one Freeplane instance opened then it might have the name <tt>log.1</tt> or even <tt>log.0.1</tt>. The most recently changed file matching the pattern <tt>log.*</tt> will be the one you are looking for.
 
 ## How to replace the splash screen
 Find directory resources in the freeplane installation directory,

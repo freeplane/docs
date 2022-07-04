@@ -151,7 +151,7 @@ In nevenstaande mindmap is de samenstelling van het [Rutte**](http://www.kioo.nl
 
 * [WikiT](http://www.informationtamers.com/WikIT)
 * [startpagina](http://mindmap.startpagina.nl/)
-* [Download Freeplane](How_to_nl.md)
+* [Download Freeplane](Tutorial_Freeplane_How-to_nl.md)
 
 **Onderwijs**
 

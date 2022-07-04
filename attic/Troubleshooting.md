@@ -55,7 +55,7 @@ It is a java issue on linux. Use Firefox for Windows with Wine.
 Install the latest sun java from http://www.java.com/de/download/. The open jdk behaves buggy and is also significantly slower.
 
 ## I cannot find the spell check function
-The spell checker has to be enabled, see the [Spell checker how-to](/#/user-documentation/Spell_checker ':ignore').
+The spell checker has to be enabled, see the [Spell checker how-to](../user-documentation/Spell_checker.md).
 
 ## The editor freezes
 Create an entry in [Bugs](https://sourceforge.net/p/freeplane/bugs/) and provide as much information as possible about the conditions under which the behavior occurs:

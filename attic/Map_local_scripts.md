@@ -1,4 +1,4 @@
-[Back to scripting overview](/#/scripting/Scripting ':ignore') 
+[Back to scripting overview](../scripting/Scripting.md) 
 
 Map local scripts are a legacy from FreeMind that most experienced script developers don't use. But some people like them to test some bit of code quickly.
 
@@ -65,7 +65,7 @@ println("2nd script: " + node.text)
 
 Both scripts are executed. 
 
-*Note:* Map local scripts will ever have their "node" variable set to the node the respective script is attached to. If you don't want that you have to use external scripts, see [Scripting](/#/scripting/Scripting ':ignore') or [External script file execution](External_script_file_execution.md). External scripts allow to tune the way scripts are executed on which node.
+*Note:* Map local scripts will ever have their "node" variable set to the node the respective script is attached to. If you don't want that you have to use external scripts, see [Scripting](../scripting/Scripting.md) or [External script file execution](External_script_file_execution.md). External scripts allow to tune the way scripts are executed on which node.
 
 ## Signed scripts
 

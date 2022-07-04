@@ -92,7 +92,7 @@ A New **[User Manual](User_Manual.md)** is coming. [Read and contribute](User_Ma
 ***イメージサイズは、右下角をダブルクリックすることによってリセットすることができます。
 **Images can be scaled by dragging the bottom right corner 
 ***画像は、右下角をドラッグすることによって縮尺することができます。
-*Good [Scripting](/#/scripting/Scripting ':ignore') support: 
+*Good [Scripting](../scripting/Scripting.md) support: 
 **良い Scripting サポート: 
 **[New scripting API](Scripting_API.md) 
 ***新しい API スクリプト。
@@ -167,7 +167,7 @@ A New **[User Manual](User_Manual.md)** is coming. [Read and contribute](User_Ma
 **たとえどちらの目標もソースノードも選ばれないとしても、関連ポップアップメニューのリンクを使用できるようにしてください。
 *Exception traces for internal errors are automatically sent to freeplane team for analysis. 
 **内部のエラーのための痕跡は例外なく、分析のために freeplane チームに自動的に送られます。
-*[Export Using XSLT](/#/scripting/Export_Using_XSLT ':ignore') 
+*[Export Using XSLT](../scripting/Export_Using_XSLT.md) 
 **XSLT を使用してエクスポート。
 *Hide tabs if only one map is loaded 
 **1つのマップを載せれば、タブを隠してください。
@@ -214,7 +214,7 @@ A New **[User Manual](User_Manual.md)** is coming. [Read and contribute](User_Ma
 
 *Have a look at the (preliminary!) [Architecture](Architecture.md) description.
 
-*Some users might be interested in the [Translation How-To](/#/contribute/Translation_How-To ':ignore').<br><br>
+*Some users might be interested in the [Translation How-To](../contribute/Translation_How-To.md).<br><br>
 
 
 ## Testing Freeplane : Freeplaneをテストすること
@@ -241,10 +241,6 @@ Many pages on this wiki are tagged with one or more of the following Categories:
 
 
 # Contributing to the Wiki : Wiki に貢献すること
-
-You can use this wiki to share information and tips about Freeplane and its features. 
-
-You can create new pages and edit all existing pages including this one after you [register and log in](http://www.freeplane.org/wiki/index.php?title=Special:UserLogin&returnto=Main_Page). 
 
 You can subscribe to [atom feed](http://www.freeplane.org/wiki/index.php?title=Special:RecentChanges&feed=atom) to be informed about all changes in this wiki. Using [this web service](http://www.feedmyinbox.com/) you can get daily e-mail notifications whenever the content changes. The same service can also be used for notifications about any changes to the project pages on SourceForge.
 

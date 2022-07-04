@@ -15,7 +15,7 @@ node.style.textColor = Java.type("java.awt.Color").RED;
 c.statusInfo = "JavaScript script done!";
 ```
 
-You see that the convenient [property access](/#/scripting/Scripting ':ignore') known from Groovy is also supported for JavaScript.
+You see that the convenient [property access](../scripting/Scripting.md) known from Groovy is also supported for JavaScript.
 
 ## Installation of other languages
 
@@ -32,7 +32,7 @@ Here a step-by-step instruction to install [Jython](http://jython.org), the Pyth
 5. run it via *Tools -> Scripts -> Test Jython -> Execute...one selected node*. Note that the same code is also valid in Groovy and JavaScript:
     c.statusInfo = "Jython's here: Node's text is " + node.text
 
-Hints for scripting Freeplane in Python/Jython can be found on page [Scripting! Jython](/#/scripting/Scripting!_Jython ':ignore').
+Hints for scripting Freeplane in Python/Jython can be found on page [Scripting! Jython](../scripting/Scripting!_Jython.md).
 
 ## Drawbacks
 
@@ -40,7 +40,7 @@ Groovy is the distinguished scripting language for Freeplane and will be most pr
 
 * Since most Freeplane scripting happens in Groovy, you will more likely find one to help you with problems in the Freeplane forum.
 * Groovy is (so far) the only language to write formulas and filters with.
-* The Groovy scripting API is extended by some methods and tweaks (see [a separate page](Scripting_text_editing.md) ):
+* The Groovy scripting API is extended by some methods and tweaks (see [a separate page](Scripting!_text_editing.md) ):
     - Shortcut methods 
     - Simple references to other nodes like ''ID_1723255651.text''
 

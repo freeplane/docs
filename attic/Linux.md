@@ -1,4 +1,4 @@
-For UBUNTU, see [here](Ubuntu.md)
+For UBUNTU, see [here](Freeplane_installation_for_Ubuntu_OS.md)
 
 '''Update: Freeplane is packaged for Debian/Ubuntu => just run:
     apt-get install freeplane
