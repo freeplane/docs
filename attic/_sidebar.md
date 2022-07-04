@@ -69,7 +69,6 @@
 * [Scripting! Your own utility library](Scripting!_Your_own_utility_library.md)
 * [Scripting! text editing](Scripting!_text_editing.md)
 * [Scripting API](Scripting_API.md)
-* [Scripting API (Preview)](Scripting_API_(Preview).md)
 * [Scripting text editing](Scripting_text_editing.md)
 * [Support](Support.md)
 * [Think Tank](Think_Tank.md)

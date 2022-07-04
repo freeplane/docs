@@ -57,8 +57,7 @@ The following statement sums over the numerical values of the attribute <tt>item
 Formulas have access to a read-only variant of the [Scripting API](Scripting_API.md),
 i.e. formulas may not change anything in a map. There are some
 minor extensions to the Groovy language for formulas to improve the ease of
-use, e.g. for simpler data type conversion. See [preview version of the Scripting API](Scripting_API_(Preview).md) for the latest API.
-
+use, e.g. for simpler data type conversion.
 Note that properties and methods of a formula node (like <tt>children</tt> or
 <tt>text</tt>) are directly available to the formula, i.e. the leading
 "node." can be left out.
