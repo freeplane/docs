@@ -67,7 +67,6 @@
 * [Scripting! Update Freeplane's Groovy version](Scripting!_Update_Freeplane's_Groovy_version.md)
 * [Scripting! text editing](Scripting!_text_editing.md)
 * [Scripting API](Scripting_API.md)
-* [Scripting text editing](Scripting_text_editing.md)
 * [Support](Support.md)
 * [Think Tank](Think_Tank.md)
 * [Translation nl](Translation_nl.md)

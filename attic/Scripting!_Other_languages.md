@@ -40,7 +40,7 @@ Groovy is the distinguished scripting language for Freeplane and will be most pr
 
 * Since most Freeplane scripting happens in Groovy, you will more likely find one to help you with problems in the Freeplane forum.
 * Groovy is (so far) the only language to write formulas and filters with.
-* The Groovy scripting API is extended by some methods and tweaks (see [a separate page](Scripting_text_editing.md) ):
+* The Groovy scripting API is extended by some methods and tweaks (see [a separate page](Scripting!_text_editing.md) ):
     - Shortcut methods 
     - Simple references to other nodes like ''ID_1723255651.text''
 
