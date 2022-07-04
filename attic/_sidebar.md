@@ -1,5 +1,5 @@
-* [**Docs**](../ ':ignore :target=_self')
-* [Home](/)
+* [**Docs**](../home.md)
+* [Home](Home.md)
 * [**Wiki**](wiki/customizing-freeplane.md)
 * [Add-on Howto](Add-on_Howto.md)
 * [Approximate search](Approximate_search.md)

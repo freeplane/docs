@@ -57,6 +57,14 @@ You'll often need to repeat your click-drag-release several times before you get
 
 ![connectors](../images/connectors.gif ':size=200')
 
+#### Hidden connectors
+
+Connector lines can be hidden: `Preferences…->Defaults->Connectors->Paint connectors behind nodes`
+
+#### Go to a connected node
+
+Like for clones, the right-click node menu item `Goto` list the other ends of Connectors.
+
 #### Same-node connectors
 
 Both ends of a connector can be attached to the same node, looping back to itself.

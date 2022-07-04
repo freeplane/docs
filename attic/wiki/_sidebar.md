@@ -1,6 +1,6 @@
-* [**Docs**](../ ':ignore :target=_self')
-* [Home](../)
-* Wiki
+* [**Docs**](../../home.md)
+* [Home](../Home.md)
+* **Wiki**
     * [customizing-freeplane](customizing-freeplane.md)
     * [freeplane-api-groovy](freeplane-api-groovy.md)
     * [glossary](glossary.md)

@@ -6,4 +6,4 @@
 * [Contribute](contribute/contribute.md)
 * [Scripting](scripting/Scripting.md)
 * [Coding](coding/Git_howto.md)
-* [Attic (draft documents)](/attic/ ':ignore :target=_self')
+* [Attic (draft documents)](attic/Home.md)

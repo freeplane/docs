@@ -2,12 +2,14 @@ function freeplane_docs_execute_script() {
     const questionMarkAll = /\?.*/;
     const fourZeroFour = document.querySelector('div#four-zero-four');
     if (fourZeroFour) {
-        const locationShort = location.href.replace(location.origin, '');
-        const atticHref = locationShort.split('/#/')[0] + '/attic/#/';
-        const lastSegment = location.href.replace(questionMarkAll, '').split('/').pop();
-        const targetHref = atticHref + lastSegment;
-        const fourZeroFour = document.querySelector('div#four-zero-four');
-        fourZeroFour.innerHTML = `Try the Attic: <a href="${targetHref}">${targetHref}</a>`;
+        const isAttic = /\/attic\//.test(location.href);
+        if (!isAttic) {
+            const locationShort = location.href.replace(location.origin, '');
+            const atticHref = locationShort.split('/#/')[0] + '/#/attic/';
+            const lastSegment = location.href.replace(questionMarkAll, '').split('/').pop();
+            const targetHref = atticHref + lastSegment;
+            fourZeroFour.innerHTML = `Try the Attic: <a href="${targetHref}">${targetHref}</a>`;
+        }
     } else {
         const toc = document.querySelector('div#toc');
         if (toc) {

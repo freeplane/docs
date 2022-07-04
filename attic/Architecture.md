@@ -192,7 +192,7 @@ Look at existing plug-ins and core for examples.
 
 A simple tool helps to get started with plugin development. It's an Ant Task named 'create-plugin' that is available from the <tt>freeplane_framework/ant</tt> directory. The task reads all required parameters from the command line. (If you want to do it non-interactively you have to create your own Ant task.)
 
-See [Plugin development](/#/coding/Plugin_development ':ignore') for details.
+See [Plugin development](../coding/Plugin_development.md) for details.
 
 
 
