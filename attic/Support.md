@@ -92,8 +92,6 @@ Open forums give fast and easy access to the active user community of Freeplane.
 # This wiki
 [![Index wiki](FreeplaneWiki.jpg)](https://www.freeplane.org/mapsOnline/?map=IndexWiki.mm)
 Many pages on this wiki are tagged at the end of the page with Categories. You can click on the Category at the end of the page to display an index of all pages of the same Category. The  categories and pages are summarized in the mind map *Index wiki* on the right.
-
-You are invited to use this wiki to share information and tips about Freeplane and its features. You can create new pages and edit all existing pages including this one after you [register and log in](https://www.freeplane.org/wiki/index.php?title=Special:UserLogin&returnto=Main_Page). 
 <div style="background-color: rgb(255, 255, 204);">NOTE: because of spammer attacks, editing of this wiki is now only allowed for registered wiki editors. If you want to become a wiki editor, [write](http://sourceforge.net/apps/phpbb/freeplane/viewforum.php?f=1) to the Freeplane team.</div>
 
 
