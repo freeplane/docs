@@ -16,7 +16,6 @@
 * [Fixed security vulnerabilities](Fixed_security_vulnerabilities.md)
 * [FreeMind 0.9.0 - Freeplane 1.1.x](FreeMind_0.9.0_-_Freeplane_1.1.x.md)
 * [Freeplane2PowerPoint](Freeplane2PowerPoint.md)
-* [Freeplane File Format](Freeplane_File_Format.md)
 * [Freeplane Tutorial Extensions](Freeplane_Tutorial_Extensions.md)
 * [Freeplane Tutorial How-to Screenshots](Freeplane_Tutorial_How-to_Screenshots.md)
 * [Freeplane Tutorial How-to Video](Freeplane_Tutorial_How-to_Video.md)
