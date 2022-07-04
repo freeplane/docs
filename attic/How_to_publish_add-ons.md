@@ -22,7 +22,7 @@ Freeplane periodically checks for add-ons updates but you can also do that direc
 To enable update check for your add-on you have to
 
 5. create a downloadable file with versioning information in one of the two formats described below,
-6. Freeplane will find a "version.properties" or "version.txt" file if it located directly on the add-on's homepage like the one of the [[Add-ons#Add-on_Developer_Tools devtools add-on]]: [devtools/version.properties](http://www.freeplane.org/addons/devtools/version.properties).
+6. Freeplane will find a "version.properties" or "version.txt" file if it located directly on the add-on's homepage like the one of the [devtools add-on](../scripting/Add-ons_(Develop).md#install-developer-tools): [devtools/version.properties](http://www.freeplane.org/addons/devtools/version.properties).
 7. If the file has a different name or location you have to specify the URL as the *updateUrl* of the add-on map's root node, like http://my.addon.com/path/to/version.properties.
 
 ### .properties file format
