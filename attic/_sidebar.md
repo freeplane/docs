@@ -59,7 +59,6 @@
 * [Screenshots](Screenshots.md)
 * [Script incubator](Script_incubator.md)
 * [Scripting! API Changes](Scripting!_API_Changes.md)
-* [Scripting! Example scripts](Scripting!_Example_scripts.md)
 * [Scripting! Example scripts using external libraries](Scripting!_Example_scripts_using_external_libraries.md)
 * [Scripting! Freeplane Utility Classes](Scripting!_Freeplane_Utility_Classes.md)
 * [Scripting! Included libraries](Scripting!_Included_libraries.md)

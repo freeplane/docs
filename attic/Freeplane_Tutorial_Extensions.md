@@ -220,7 +220,6 @@ Some free icons
 Some very simple scripting examples
 
 * [Dialog in script](https://sourceforge.net/projects/freeplane/forums/forum/758437/topic/4542178)
-* [Caret position](http://www.freeplane.org/wiki/index.php/Scripting!_Example_scripts#Transpose_the_two_characters_around_the_cursor_.28for_bad_typists.29)
 
 Other
 * [Examples of cv-maps](http://jobmob.co.il/blog/cv-mind-map-examples/)
