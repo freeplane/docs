@@ -3,7 +3,7 @@
 
 Add-ons are a way to extend and customize Freeplane similar to how [plug-ins](http://en.wikipedia.org/wiki/Plug-in_(computing) ) and [extensions](http://en.wikipedia.org/wiki/Software_extension) can be used to extend and customize well-known applications like [Firefox](http://addons.mozilla.org/) or [LibreOffice](http://www.libreoffice.org/). Freeplane add-ons can be used to provide a single function, a bundle of multiple functions, bind those functions to a menu item, and much more.
 
-Anybody can write an add-on! [(see the add-on developer documentation)](Add-on_Howto.md)
+Anybody can write an add-on! [(see the add-on developer documentation)](../scripting/Add-ons_(Develop).md)
 
 *note: add-ons are not necessarily provided by the Freeplane core developers.*
 

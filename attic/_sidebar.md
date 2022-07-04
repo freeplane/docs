@@ -1,7 +1,6 @@
 * [**Docs**](../home.md)
 * [Home](Home.md)
 * [**Wiki**](wiki/customizing-freeplane.md)
-* [Add-on Howto](Add-on_Howto.md)
 * [Approximate search](Approximate_search.md)
 * [Architecture](Architecture.md)
 * [Batch Jobs](Batch_Jobs.md)
