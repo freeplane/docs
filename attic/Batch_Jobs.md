@@ -8,7 +8,7 @@ But there are some cases where you might want to let Freeplane do something for 
 All is build on two building blocks:
 
 * All functions in the menu (e.g. scripts) are available for batch execution.
-* The functions are submitted to Freeplane [on the command line](/#/getting-started/Command-line_options_and_configuration).
+* The functions are submitted to Freeplane [on the command line](../getting-started/Command-line_options_and_configuration.md).
 
 ## Howto
 ### Preparation
