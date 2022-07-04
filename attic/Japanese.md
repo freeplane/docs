@@ -242,10 +242,6 @@ Many pages on this wiki are tagged with one or more of the following Categories:
 
 # Contributing to the Wiki : Wiki に貢献すること
 
-You can use this wiki to share information and tips about Freeplane and its features. 
-
-You can create new pages and edit all existing pages including this one after you [register and log in](http://www.freeplane.org/wiki/index.php?title=Special:UserLogin&returnto=Main_Page). 
-
 You can subscribe to [atom feed](http://www.freeplane.org/wiki/index.php?title=Special:RecentChanges&feed=atom) to be informed about all changes in this wiki. Using [this web service](http://www.feedmyinbox.com/) you can get daily e-mail notifications whenever the content changes. The same service can also be used for notifications about any changes to the project pages on SourceForge.
 
 

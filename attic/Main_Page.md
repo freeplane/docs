@@ -1,2 +1,0 @@
-#REDIRECT [Home](Home.md)
-

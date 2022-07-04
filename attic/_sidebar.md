@@ -39,7 +39,6 @@
 * [Linux](Linux.md)
 * [Logo and splashscreen](Logo_and_splashscreen.md)
 * [Macintosh](Macintosh.md)
-* [Main Page](Main_Page.md)
 * [Map local scripts](Map_local_scripts.md)
 * [Map templates](Map_templates.md)
 * [Menus and commands](Menus_and_commands.md)
