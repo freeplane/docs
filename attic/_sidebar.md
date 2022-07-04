@@ -5,7 +5,6 @@
 * [Approximate search](Approximate_search.md)
 * [Architecture](Architecture.md)
 * [Batch Jobs](Batch_Jobs.md)
-* [Command-line options](Command-line_options.md)
 * [Contributors](Contributors.md)
 * [Current Freeplane File Format](Current_Freeplane_File_Format.md)
 * [Data recognition and data formats](Data_recognition_and_data_formats.md)
