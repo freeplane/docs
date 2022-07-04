@@ -113,7 +113,7 @@ Also note that references between texts, notes and attributes of the same node d
 
 ## When formulas get too big: Build your own utility classes
 
-Starting with Freeplane 1.3.2 all .groovy files in the script classpath directories are automatically compiled when Freeplane starts. See [Scripting! Your own utility library](Scripting!_Your_own_utility_library.md).
+Starting with Freeplane 1.3.2 all .groovy files in the script classpath directories are automatically compiled when Freeplane starts. See [Scripting! Your own utility library](Your_own_utility_script_library.md).
 
 ## Plus operator for nodes
 

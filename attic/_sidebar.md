@@ -65,7 +65,6 @@
 * [Scripting! Other languages](Scripting!_Other_languages.md)
 * [Scripting! Security considerations](Scripting!_Security_considerations.md)
 * [Scripting! Update Freeplane's Groovy version](Scripting!_Update_Freeplane's_Groovy_version.md)
-* [Scripting! Your own utility library](Scripting!_Your_own_utility_library.md)
 * [Scripting! text editing](Scripting!_text_editing.md)
 * [Scripting API](Scripting_API.md)
 * [Scripting text editing](Scripting_text_editing.md)
