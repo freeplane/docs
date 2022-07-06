@@ -1,6 +1,6 @@
-* [**Docs**](../../home.md)
-* [Home](../Home.md)
-* **Wiki**
+* [**Home**](../../home.md)
+* [**Old MediaWiki site**](../old-mediawiki-site/Home.md)
+* **New wiki initiative**
     * [customizing-freeplane](customizing-freeplane.md)
     * [freeplane-api-groovy](freeplane-api-groovy.md)
     * [glossary](glossary.md)
