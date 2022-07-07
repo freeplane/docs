@@ -1,4 +1,4 @@
-* [**Home**](../../../)
+* [**Home**](../../)
 * [**New wiki initiative**](../new-wiki-initiative/customizing-freeplane.md)
 * **Old MediaWiki site**
     * [Old MediaWiki Home](Home.md)
