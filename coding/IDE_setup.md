@@ -62,7 +62,7 @@ Detailed instructions:
 * copy <code>freeplane_debughelper/idea/runConfigurations</code> (the whole <code>runConfigurations</code> directory!) containing run configuration files into <code>.idea</code> created by IntelliJ in project root
 * Restart IntelliJ afterwards.
 
-=== Import the Freeplane build system (IntelliJ <= 2020) ===
+### Import the Freeplane build system (IntelliJ <= 2020)
 
 * Click *Import Project* (when starting IntelliJ)
 * Point to the *settings.gradle* in your checkout and click *OK*
