@@ -2,9 +2,9 @@
 
 You have been redirected to the new Freeplane documentation site.
 
-The most parts of the mediawiki content can be found here.
+Most of the MediaWiki content ended up here, segregated into
 
-* The most relevant documentation is available from [Home](/). 
-* Some pages of the old media wiki are available in the [Attic (draft documents)](attic/old-mediawiki-site/Home.md) area.
+* [Docs](/) – the most relevant documentation
+* [Attic (draft documents)](attic/old-mediawiki-content/Home.md) – most of the other pages of the old MediaWiki
 
 The old mediawiki instance can be found at https://www.freeplane.org/oldwiki.
