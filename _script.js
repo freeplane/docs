@@ -1,4 +1,37 @@
-function freeplane_docs_execute_script() {
+function freeplaneDocsAddHeader(hook, vm) {
+    hook.beforeEach(function(html) {
+        let atticBanner;
+        if (/\/attic\//.test(vm.route.path)) {
+            atticBanner = `
+<div style="opacity: 0.7; border: 1px solid #0074d9; padding: 5px; margin-top: 40px;">
+  ℹ️ <b>Attic</b> contains MediaWiki pages (pre-2022 wiki) migrated to Markdown for GitHub.
+  Some content might be outdated, some unconverted, some media files missing.
+  Each page needs to be reviewed/completed before incorporating it to <b>Docs</b>.
+</div>`
+    } else {
+        atticBanner = '';
+    }
+    const questionMarkAll = /\?.*/;
+    const lastSegmentAkaPageName = vm.route.path.replace(questionMarkAll, '').split('/').pop();
+    let tocId;
+    if (freeplaneDocsTocBlacklist.includes(lastSegmentAkaPageName)) { // _toc-blacklist.js
+        tocId = 'ignore-toc';
+    } else {
+        tocId = 'toc';
+    }
+    let header = `
+<div id="${tocId}"></div>
+<script>freeplaneDocsMain();</script>\n\n`;
+
+    return (
+        atticBanner +
+        header +
+        html
+    );
+  });
+}
+
+function freeplaneDocsMain() {
     const questionMarkAll = /\?.*/;
     const fourZeroFour = document.querySelector('div#four-zero-four');
     if (fourZeroFour) {
