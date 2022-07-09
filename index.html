@@ -55,6 +55,8 @@
 </head>
 <body>
   <div id="app"></div>
+  <script src="_toc-blacklist.js"></script>
+  <script src="_script.js"></script>
   <script>
     window.$docsify = {
       el: "#app",
@@ -68,8 +70,6 @@
       search : {
         namespace: 'docs',
       },
-      // The date template pattern
-      formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
       darklightTheme: {
         siteFont : 'Source Sans Pro',
         defaultTheme : 'dark',
@@ -83,41 +83,7 @@
         }
       },
       plugins: [
-        function(hook, vm) {
-          hook.beforeEach(function(html) {
-            let atticBanner;
-            if (/\/attic\//.test(vm.route.path)) {
-              atticBanner = `
-<div style="opacity: 0.7; border: 1px solid #0074d9; padding: 5px; margin-top: 40px;">
-  ℹ️ <b>Attic</b> contains MediaWiki pages (pre-2022 wiki) migrated to Markdown for GitHub.
-  Some content might be outdated, some unconverted, some media files missing.
-  Each page needs to be reviewed/completed before incorporating it to <b>Docs</b>.
-</div>`
-            } else {
-              atticBanner = '';
-            }
-            const questionMarkAll = /\?.*/;
-            const lastSegmentAkaPageName = vm.route.path.replace(questionMarkAll, '').split('/').pop();
-            const tocBlacklist = [
-              'after-redirect'
-            ];
-            let tocId;
-            if (tocBlacklist.includes(lastSegmentAkaPageName)) {
-              tocId = 'ignore-toc';
-            } else {
-              tocId = 'toc';
-            }
-            let header = `
-<div id="${tocId}"></div>
-<script>freeplane_docs_execute_script();</` + 'script>\n\n';
-
-            return (
-              atticBanner +
-              header +
-              html
-            );
-          });
-        }
+        freeplaneDocsAddHeader,
       ]
     }
   </script>
@@ -130,6 +96,5 @@
     src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"
     type="text/javascript">
   </script>
-  <script src="_script.js"></script>
 </body>
 </html>
