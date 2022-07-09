@@ -1,6 +1,6 @@
 * [Home](/)
-* [Getting started](../getting-started/getting-started.md)
 * [How to get help](../how-to-get-help.md)
+* [Getting started](../getting-started/getting-started.md)
 * User documentation
   * [First steps](first-steps.md)
   * [Working with mindmap files](working-w-mindmap-files.md)
