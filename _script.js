@@ -5,7 +5,7 @@ function freeplane_docs_execute_script() {
         const isAttic = /\/attic\//.test(location.href);
         if (!isAttic) {
             const locationShort = location.href.replace(location.origin, '');
-            const atticHref = locationShort.split('/#/')[0] + '/#/attic/old-mediawiki-site/';
+            const atticHref = locationShort.split('/#/')[0] + '/#/attic/old-mediawiki-content/';
             const lastSegment = location.href.replace(questionMarkAll, '').split('/').pop();
             const targetHref = atticHref + lastSegment;
             fourZeroFour.innerHTML = `Try the Attic: <a href="${targetHref}">${targetHref}</a>`;
