@@ -21,9 +21,18 @@ function freeplane_docs_execute_script() {
                 }
                 const blockquote = document.createElement('blockquote');
                 toc.insertAdjacentElement('afterBegin', blockquote);
-                blockquote.insertAdjacentHTML('afterBegin', '<span style="font-weight: 600;">Contents</span><br>');
+                const details = document.createElement('details');
+                details.onclick = function() {
+                    localStorage.setItem('keepTocClosed', details.open);
+                };
+                const keepTocClosed = localStorage.getItem('keepTocClosed') == 'true';
+                if (!keepTocClosed) {
+                    details.open = true;
+                }
+                blockquote.insertAdjacentElement('afterBegin', details);
+                details.insertAdjacentHTML('afterBegin', '<summary style="font-weight: 600;">Contents</summary>');
                 const ul = document.createElement('ul');
-                blockquote.insertAdjacentElement('beforeEnd', ul);
+                details.insertAdjacentElement('beforeEnd', ul);
                 for (let h of lst) {
                     const li = document.createElement('li');
                     ul.insertAdjacentElement('beforeEnd', li);

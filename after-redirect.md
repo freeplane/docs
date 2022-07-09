@@ -1,3 +1,5 @@
+# After redirect
+
 You have been redirected to the new Freeplane documentation site.
 
 The most parts of the mediawiki content can be found here.

@@ -96,8 +96,19 @@
             } else {
               atticBanner = '';
             }
+            const questionMarkAll = /\?.*/;
+            const lastSegmentAkaPageName = vm.route.path.replace(questionMarkAll, '').split('/').pop();
+            const tocBlacklist = [
+              'after-redirect'
+            ];
+            let tocId;
+            if (tocBlacklist.includes(lastSegmentAkaPageName)) {
+              tocId = 'ignore-toc';
+            } else {
+              tocId = 'toc';
+            }
             let header = `
-<div id="toc"></div>
+<div id="${tocId}"></div>
 <script>freeplane_docs_execute_script();</` + 'script>\n\n';
 
             return (
