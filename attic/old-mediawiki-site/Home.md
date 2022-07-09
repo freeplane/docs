@@ -1,3 +1,5 @@
+**The old wiki content is also available at the [old MediaWiki site](https://www.freeplane.org/oldwiki)**
+
 
 ![Index wiki](FreeplaneWiki.jpg ':size=300')\
 *[IndexWiki.mm](https://www.freeplane.org/mapsOnline/?map=IndexWiki.mm)*

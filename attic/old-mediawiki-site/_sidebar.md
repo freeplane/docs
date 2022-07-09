@@ -1,7 +1,7 @@
 * [**Home**](../../)
 * [**New wiki initiative**](../new-wiki-initiative/customizing-freeplane.md)
-* **Old MediaWiki site**
-    * [Old MediaWiki Home](Home.md)
+* **Old MediaWiki content**
+    * [Old Home](Home.md)
     * [Approximate search](Approximate_search.md)
     * [Architecture](Architecture.md)
     * [Batch Jobs](Batch_Jobs.md)
