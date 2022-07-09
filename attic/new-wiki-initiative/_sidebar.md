@@ -6,4 +6,4 @@
     * [introduction-aka-many-unsorted-ideas-related-to-freeplane](introduction-aka-many-unsorted-ideas-related-to-freeplane.md)
     * [understanding-interface](understanding-interface.md)
     * [understanding-nodes](understanding-nodes.md)
-* [**Old MediaWiki content**](../old-mediawiki-site/Home.md)
+* [**Old MediaWiki content**](../old-mediawiki-content/Home.md)
