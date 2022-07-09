@@ -17,4 +17,4 @@
   * Add-ons
     * [Add-ons (Develop)](Add-ons_(Develop).md)
 * [Coding](../coding/Git_howto.md)
-* [Attic (draft documents)](../attic/Home.md)
+* [Attic (draft documents)](../attic/home.md)
