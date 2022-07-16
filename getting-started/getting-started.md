@@ -9,6 +9,6 @@
 [change log](https://www.freeplane.org/info/history/history_en.txt) \
 Download last development versions ( [***preview***](https://sourceforge.net/projects/freeplane/files/freeplane%20preview/) )
 
-### Extend with add-ons
+→ [Find out](Distributions.md) which distribution better fits your requirements.
 
-→ [Extend with add-ons](Add-ons_(install).md)
+→ [Extend with add-ons](Add-ons_(install).md).
