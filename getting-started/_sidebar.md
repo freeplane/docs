@@ -1,6 +1,7 @@
 * [Home](/)
 * [How to get help](../how-to-get-help.md)
 * [Getting started](getting-started.md)
+  * [Distributions](Distributions.md)
   * [Command-line options and configuration](Command-line_options_and_configuration.md)
   * [Extend with add-ons](Add-ons_(install).md)
 * [User documentation](../user-documentation/first-steps.md)
