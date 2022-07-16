@@ -9,6 +9,8 @@ It runs on any operating system that has a current version of Java installed.
 It can be run locally or portably from removable storage like a USB drive.
 
 Download and install the latest version over at [Sourceforge](https://sourceforge.net/projects/freeplane/files/).
+The change log is available [here](https://www.freeplane.org/changelog). 
+
 If you would like to report a bug, you can go report it over at [Issues](https://github.com/freeplane/freeplane/issues)
 
 Hop on to our [Discussions](https://github.com/freeplane/freeplane/discussions) if you have any questions, ideas, or thoughts you'd like to share.
