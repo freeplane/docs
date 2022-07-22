@@ -1,17 +1,20 @@
+# Security considerations
+
+### Scripting
 Groovy, the scripting language of choice in Freeplane is a full-fledged programming language which can nearly do everything with your computer if it's unconstrained. For this reason Freeplane severely restricts script execution after installation. For script development and for using scripts most of the restrictions should be disabled.
 
-Disabling these restriction doesn't cause a threat by its own although you should be very careful...
+Disabling these restriction doesn't cause a threat by its own although you should be very careful:
 
-*with scripts from persons that you don't know,
-*with maps that contain scripts (see [Map local scripts](Map_local_scripts.md) ), and
-*when writing your own scripts.
+* with scripts from persons that you don't know
+* with maps that contain scripts (see [Map local scripts](Map_local_scripts.md) )
+* when writing your own scripts
 
 That said normal scripts in Freeplane are less dangerous than macros contained in Office documents since there are no hooks that may start scripts on load of a map or on start of Freeplane. Every script invocation is triggered by you alone so the best advice might be this:
 
-*think twice before installing a script,
-*think twice before executing a script,
+* think twice before *installing* a script
+* think twice before *executing* a script
 
-and everything should be safe - even if you disable most of the restrictions.
+Then everything should be safe - even if you disable most of the restrictions.
 
 Script developers and regular script users will certainly check the following options in the Preferences under *Tools->Preferences->Scripting*:
 
