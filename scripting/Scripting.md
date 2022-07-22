@@ -19,26 +19,17 @@ After some preparation we'll create the first script.
 
 A newly installed Freeplane installation is almost ready for scripting:
 
-* The <tt>scripts</tt> directory is created in the *User Configuration Folder* which you can open via *Tools > Open user directory*. It's empty, initially.
-* This directory is automatically searched for ".groovy" files on startup.
-* Scripting is disabled by default, but we'll fix that in a minute.
+* The <tt>scripts</tt> directory is created in the *User Configuration Folder* which you can open via *Tools \> Open user directory*.
 
-First create a new mindmap with this content (just copy 'n paste it into a new map): 
+* The <tt>scripts</tt> directory is empty, initially. On startup, the directory is automatically searched for ".groovy" files.
 
-<pre>
-test
-  numbers
-    1
-    2
-    3
-  text
-  text
-  text ok
-  text okay
-</pre>
+* Scripting is disabled by default, but before enabling it, let's take **security into consideration**.
 
-Then add some icons to the map - no matter how many and which icons. But we'll need them later. 
+* After having **reflected on security**, navigate the menu to *Tools \> Preferences \> Plugins\> Scripting* and:
 
+    * set ''Script execution enabled'' to ''Yes''
+    * enable ''Permit File/Read Operations (NOT recommended)'' - despite the warning.
+    * These changes take effect without restarting Freeplane and only need to be done once.
 
 ### Select an editor
 
@@ -60,13 +51,6 @@ For ambitious scripting projects or if you have Java/Eclipse know-how you should
 node.text = "Hello World!"
 ```
 
-* Now save your script in the editor and restart Freeplane since Freeplane will only find new scripts after a restart. Then you will find your new script in the Freeplane menu location *Tools-&gt;Scripts-&gt;Hello World*. You see three sub menus *Execute on one selected node*, *Execute on all selected nodes* and *Execute on all selected nodes, recursively*. Note: starting with FP version 1.5 there is no sub menu anymore. The execution mode is shown on mouse hover over the menu entry
-* At *Tools->Preferences->Plugins->Scripting*<!--
-    --><ul><!--
-    -->  <li> set ''Script execution enabled'' to ''Yes''</li><!--
-    -->  <li> enable ''Permit File/Read Operations (NOT recommended)'' - despite the warning.<!--
-    --></ul><!--
-    -->These changes take effect without restarting Freeplane and only need to be done once. For more details see [Scripting! Security considerations](Scripting!_Security_considerations.md).
 
 * Execute the script by selecting *Tools-&gt;Scripts-&gt;Hello World-&gt;Execute on one selected node*. (Never mind the difference between the *Execute ...* variants; we'll come to that [later](#Execution_modes).)
 * The text of the selected node will be changed to "Hello World!".
