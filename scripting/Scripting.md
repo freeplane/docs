@@ -23,9 +23,9 @@ A newly installed Freeplane installation is almost ready for scripting:
 
 * The <tt>scripts</tt> directory is empty, initially. On startup, the directory is automatically searched for ".groovy" files.
 
-* Scripting is disabled by default, but before enabling it, let's take **security into consideration**.
+* Scripting is disabled by default, but before enabling it, let's take [**security into consideration**](Security_considerations.md).
 
-* After having **reflected on security**, navigate the menu to *Tools \> Preferences \> Plugins\> Scripting* and:
+* After having [**reflected on security**](Security_considerations.md), navigate the menu to *Tools \> Preferences \> Plugins\> Scripting* and:
 
     * set ''Script execution enabled'' to ''Yes''
     * enable ''Permit File/Read Operations (NOT recommended)'' - despite the warning.
