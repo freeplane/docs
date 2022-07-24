@@ -2,6 +2,16 @@
 
 The site is served as GitHub Pages at https://docs.freeplane.org/.
 
+The main site is `Docs`, with `Attic` as a sub-directory.
+
+`Attic` contains MediaWiki pages (pre-2022 wiki) migrated to Markdown for GitHub.
+The vision is to bring all MediaWiki content from `Attic` to `Docs`.
+Some content in `Attic` might be outdated, some unconverted, some media files missing.
+Each `attic` page needs to be reviewed/completed before incorporating it to `Docs`.
+
+When a page is incorporated to `Docs` and removed from `Attic`, all existing `Attic` pages linking to it should be updated.
+Relative links should be used.
+
 The site uses [docsify](https://docsify.js.org/#/?id=docsify) with the following options/plugins:
 * [relativePath: true](https://docsify.js.org/#/configuration?id=relativepath)
 * [nested sidebars](https://docsify.js.org/#/more-pages?id=nested-sidebars) with CSS in index.html
