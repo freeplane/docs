@@ -31,4 +31,4 @@ The site uses [docsify](https://docsify.js.org/#/?id=docsify) with the following
 
 ## Edit on-line
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/freeplane/docs)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)
