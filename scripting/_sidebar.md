@@ -16,5 +16,9 @@
     * [Export Using XSLT](Export_Using_XSLT.md)
   * Add-ons
     * [Add-ons (Develop)](Add-ons_(Develop).md)
+  * Security considerations
+    * [Scripting (Groovy)](Security_considerations.md#scripting)
+    * [Formulas](Security_considerations.md#formulas)
+    * [Add-ons](Security_considerations.md#add-ons)
 * [Coding](../coding/Git_howto.md)
 * [Attic (draft documents)](../attic/home.md)
