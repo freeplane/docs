@@ -33,6 +33,6 @@ The site uses [docsify](https://docsify.js.org/#/?id=docsify) with the following
 
 ## Edit on-line
 
-Alternatively, once changes in your fork are committed and pushed, you can navigate to `README.md` in your fork on GitHub and click the button to run the python http server in GitPod.
+You can edit and preview the documentation in an online IDE Gitpod. It contains an embedded python HTTP server which starts automatically and shows all changes as you introduce them. To run it with your forked repository, you can navigate to README.md in your fork on GitHub and click the `Open in Gitpod` button below.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)
