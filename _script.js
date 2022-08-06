@@ -4,9 +4,9 @@ function freeplaneDocsAddHeader(hook, vm) {
         if (/\/attic\//.test(vm.route.path)) {
             atticBanner = `
 <div style="opacity: 0.7; border: 1px solid #0074d9; padding: 5px; margin-top: 40px;">
-  ℹ️ <b>Attic</b> contains MediaWiki pages (pre-2022 wiki) migrated to Markdown for GitHub.
+  ℹ️ <b>old-mediawiki-content</b> contains MediaWiki pages (pre-2022 wiki) migrated to Markdown for GitHub.
   Some content might be outdated, some unconverted, some media files missing.
-  Each page needs to be reviewed/completed before incorporating it to <b>Docs</b>.
+  Each <b>attic</b> page needs to be reviewed/completed before incorporating it to <b>docs root</b>.
 </div>`
     } else {
         atticBanner = '';
