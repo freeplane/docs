@@ -1,32 +1,17 @@
 ## How to reference a node
 
-```
-node.mindMap.root.text = "this" //root node
-```
-```
-node.parent.text = "this" //parent of the selected node
-```
-```
-node.text = "this" //selected node
-```
-```
-node.at("~1").text = "this" //first child of the selected node
-```
-```
-node.allAt("*").each {
-	it.text = "this"
-} //all children of the selected node
-```
-```
-node.allAt("*").text = "this" //first child of the selected node
-```
-```
-node.findAll().each {
-	it.text = "this"
-} //the whole branch of the selected node
-```
+In all the examples, the text of the referenced node is changed to `this`.
 
-See more at the methods at() and allAt() under NodeRO, in the API
+| Node               | Example                                |
+| ------------------ | -------------------------------------- |
+| Root               | node.mindMap.root.text = "this"        |
+| Parent             | node.parent.text = "this"              |
+| Selected Node      | node.text = "this"                     |
+| All selected Nodes | node.text = "this"                     |
+| First child        | node.children\[0\] = "this"            |
+| All children       | node.children.each {it.text = "this"}  |
+| The whole branch   | node.findAll().each {it.text = "this"} |
+
 
 ## Inspector
 
