@@ -21,14 +21,20 @@ Download the current Freeplane source distribution (e.g. freeplane_src-1.2.13.ta
 1. In a program like 7zip open the archive freeplane_src-1.2.13.tar.gz. Most unpackers will allow directly extract into a directory, but jzip creates an intermediate freeplane_src-1.2.13.tar file
 2. Rename freeplane-1.2.13 into freeplane_src and make sure this directory is in the workspace.
 On the command line (Linux/Unix/Mac, Windows 10 now also supports <code>tar</code> but use <code>rename</code> instead of <code>mv</code>):
+```shell
     cd <workspace> # your selected workspace, like ~/freeplanescripts
     tar -xzvf freeplane_src-1.2.13.tar.gz
     mv freeplane-1.2.13 freeplane_src
+```
+
 For Freeplane >= 1.5 you need to create a gradle build:
 
 * You need at least gradle 2.x (install a gradle binary distribution if you need to)
 * Create a full gradle build by issuing the following command in the freeplane_src directory:
+```shell
     $ gradle clean build cleanEclipse eclipse
+```
+
 Alternatively you can use [the Eclipse Plug-ins for Gradle](#How-to-set-up-your-environment-with-the-Eclipse-Plug-ins-for-Gradle).
 
 For Freeplane < 1.5 you do not have to perform a build.
@@ -36,9 +42,10 @@ For Freeplane < 1.5 you do not have to perform a build.
 ### Install groovy support
 Freeplane's regular script directory <freeplaneuserdir>/scripts will be the script project directory where script development happens. To add special support for Freeplane scripting you have to copy the file *freeplane_bin/scripts/freeplane.dsld* to the script directory.
 On the command line (assuming that ~/.freeplane/1.2.x/scripts is Freeplane's script directory; Linux/Unix/Mac):
+```shell
     cd <workspace> # your selected workspace, like ~/freeplanescripts
     cp ./freeplane_bin/scripts/freeplane.dsld ~/.freeplane/1.2.x/scripts
-
+```
 ## Create projects
 ### Import the Freeplane project(s)
 
