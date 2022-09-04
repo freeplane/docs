@@ -27,9 +27,9 @@ jobs:
         run: |
           curl -O -L https://github.com/rust-lang/mdBook/releases/download/v0.4.21/mdbook-v0.4.21-x86_64-unknown-linux-gnu.tar.gz
           tar xf mdbook-v0.4.21-x86_64-unknown-linux-gnu.tar.gz
-          mkdir build
+          ./mdbook build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build # The folder the action should deploy.
+          folder: book # The folder the action should deploy.

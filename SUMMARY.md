@@ -1,5 +1,5 @@
 # Summary
-[Home](/)
+[Home](home.md)
 [How to get help](how-to-get-help.md)
 [Getting started](getting-started/getting-started.md)
 [User documentation](user-documentation/first-steps.md)
