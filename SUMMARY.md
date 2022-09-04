@@ -1,0 +1,10 @@
+# Summary
+[Home](/)
+[How to get help](how-to-get-help.md)
+[Getting started](getting-started/getting-started.md)
+[User documentation](user-documentation/first-steps.md)
+[Mind map examples](https://github.com/freeplane/freeplane/discussions/categories/shared-mind-maps)
+[Contribute](contribute/contribute.md)
+[Scripting](scripting/Scripting.md)
+[Coding](coding/Git_howto.md)
+[Attic (draft documents)](attic/home.md)
