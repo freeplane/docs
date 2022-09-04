@@ -1,0 +1,6 @@
+[book]
+authors = ["macmarrum"]
+language = "en"
+multilingual = false
+src = "."
+title = "Freeplane Docs"
