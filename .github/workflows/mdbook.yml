@@ -30,7 +30,7 @@ jobs:
           curl -O -L https://github.com/rust-lang/mdBook/releases/download/v0.4.21/mdbook-v0.4.21-x86_64-unknown-linux-gnu.tar.gz
           tar xf mdbook-v0.4.21-x86_64-unknown-linux-gnu.tar.gz
           cd ../..
-          ./build/tools/mdbook build src/docs --dest-dir ../../build/gh-pages
+          ./build/tools/mdbook build src --dest-dir ../../build/gh-pages
           rm -rf build/tools
           rm -rf 'build/gh-pages/https:'
           rm -rf 'src/docs/https:'

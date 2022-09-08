@@ -1,0 +1,6 @@
+[book]
+authors = ["macmarrum", "dpolivaev"]
+language = "en"
+multilingual = false
+src = "docs"
+title = "Freeplane Documentation"
