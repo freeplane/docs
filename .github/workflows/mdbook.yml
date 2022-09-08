@@ -25,19 +25,17 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          mkdir .temp
-          cd .temp
+          mkdir -p build/tools
+          cd build/tools
           curl -O -L https://github.com/rust-lang/mdBook/releases/download/v0.4.21/mdbook-v0.4.21-x86_64-unknown-linux-gnu.tar.gz
           tar xf mdbook-v0.4.21-x86_64-unknown-linux-gnu.tar.gz
-          cd ..
-          .temp/mdbook build --dest-dir "./gh-pages"
-          rm -rf 'gh-pages/https:'
-          rm -rf 'gh-pages/.temp'
-          rm -rf 'gh-pages/.github'
-          rm -rf 'https:'
-          rm -rf '.temp'
+          cd ../..
+          ./build/tools/mdbook build src/docs --dest-dir ../../build/gh-pages
+          rm -rf build/tools
+          rm -rf 'build/gh-pages/https:'
+          rm -rf 'src/docs/https:'
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: gh-pages # The folder the action should deploy.
+          folder: build/gh-pages # The folder the action should deploy.
