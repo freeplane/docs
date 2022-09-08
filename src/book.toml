@@ -4,3 +4,7 @@ language = "en"
 multilingual = false
 src = "docs"
 title = "Freeplane Documentation"
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+max-level = 4
