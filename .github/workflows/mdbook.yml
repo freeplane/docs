@@ -31,6 +31,8 @@ jobs:
           tar xf mdbook-v0.4.21-x86_64-unknown-linux-gnu.tar.gz
           curl -O -L https://github.com/badboy/mdbook-toc/releases/download/0.9.0/mdbook-toc-0.9.0-x86_64-unknown-linux-gnu.tar.gz
           tar xf mdbook-toc-0.9.0-x86_64-unknown-linux-gnu.tar.gz
+          curl -O -L https://github.com/badboy/mdbook-open-on-gh/releases/download/2.2.0/mdbook-open-on-gh-2.2.0-x86_64-unknown-linux-gnu.tar.gz
+          tar xf mdbook-open-on-gh-2.2.0-x86_64-unknown-linux-gnu.tar.gz
           cd ../..
           export PATH="./build/tools/:$PATH"
           mdbook build src --dest-dir ../build/gh-pages
