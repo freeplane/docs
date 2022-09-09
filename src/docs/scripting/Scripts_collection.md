@@ -2390,6 +2390,8 @@ Author: `nnako`
 
 ## Paste clipboard
 
+NOTE: this script stopped working after 1.10.4-pre07. To simply paste, an option is `menuUtils.executeMenuItems(['PasteAction',])`.
+	
 These scripts just pastes the clipboard content into the current node. Use "Execute Paste on all selected nodes" to paste into all selected nodes. 
 
 1. This script is equivalent to the default Edit/Paste as.../ "HTML as node hierarchy" if there is text/html type in the clipboard, otherwise equivalent to "Plain text as node hierarchy":

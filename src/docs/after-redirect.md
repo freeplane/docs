@@ -2,6 +2,8 @@
 
 You have been redirected to the new Freeplane documentation site.
 
+Download and install the latest Freeplane version from [Sourceforge](https://sourceforge.net/projects/freeplane/files/).
+
 Most of the MediaWiki content ended up here, segregated into
 
 * [Docs](/) – the most relevant documentation

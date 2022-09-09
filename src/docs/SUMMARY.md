@@ -24,6 +24,7 @@
   - [Translation How-To](contribute/Translation_How-To.md)
   - [Contributing to Freeplane's Development](contribute/Contributing_to_Freeplane's_Development.md)
 - [Scripting](scripting/Scripting.md)
+  - [Scripting Cheatsheet](scripting/Scripting_Cheatsheet.md)
   - [Formulas](scripting/Formulas.md)
     - [Formulas](scripting/Formulas.md)
     - [Formula filter](scripting/Scripting!_Script_filter.md)
