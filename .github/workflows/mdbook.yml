@@ -33,7 +33,7 @@ jobs:
           tar xf mdbook-toc-0.9.0-x86_64-unknown-linux-gnu.tar.gz
           cd ../..
           export PATH="./build/tools/:$PATH"
-          mdbook build src --dest-dir ../../build/gh-pages
+          mdbook build src --dest-dir ../build/gh-pages
           rm -rf build/tools
           rm -rf 'build/gh-pages/https:'
           rm -rf 'src/docs/https:'
