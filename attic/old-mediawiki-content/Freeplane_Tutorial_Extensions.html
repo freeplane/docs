@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Freeplane Tutorial Extensions - Freeplane Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../open-in.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><li class="part-title">User guide</li><li class="chapter-item "><a href="../../home.html"><strong aria-hidden="true">1.</strong> Home</a></li><li class="chapter-item "><a href="../../how-to-get-help.html"><strong aria-hidden="true">2.</strong> How to get help</a></li><li class="chapter-item "><a href="../../getting-started/getting-started.html"><strong aria-hidden="true">3.</strong> Getting started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../getting-started/Distributions.html"><strong aria-hidden="true">3.1.</strong> Distributions</a></li><li class="chapter-item "><a href="../../getting-started/Command-line_options_and_configuration.html"><strong aria-hidden="true">3.2.</strong> Command-line options and configuration</a></li><li class="chapter-item "><a href="../../getting-started/Add-ons_(install).html"><strong aria-hidden="true">3.3.</strong> Extend with add-ons</a></li></ol></li><li class="chapter-item "><a href="../../user-documentation/first-steps.html"><strong aria-hidden="true">4.</strong> User documentation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../user-documentation/first-steps.html"><strong aria-hidden="true">4.1.</strong> First steps</a></li><li class="chapter-item "><a href="../../user-documentation/working-w-mindmap-files.html"><strong aria-hidden="true">4.2.</strong> Working with mindmap files</a></li><li class="chapter-item "><a href="../../user-documentation/formatting-maps-and-nodes.html"><strong aria-hidden="true">4.3.</strong> Formatting maps and nodes</a></li><li class="chapter-item "><a href="../../user-documentation/styles.html"><strong aria-hidden="true">4.4.</strong> Styles</a></li><li class="chapter-item "><a href="../../user-documentation/templates.html"><strong aria-hidden="true">4.5.</strong> Templates</a></li><li class="chapter-item "><a href="../../user-documentation/css-for-html-or-markdown.html"><strong aria-hidden="true">4.6.</strong> CSS for HTML/Markdown</a></li><li class="chapter-item "><a href="../../user-documentation/Conditional_node_styles.html"><strong aria-hidden="true">4.7.</strong> Conditional node styles</a></li><li class="chapter-item "><a href="../../user-documentation/LaTeX_in_Freeplane.html"><strong aria-hidden="true">4.8.</strong> LaTeX in Freeplane</a></li><li class="chapter-item "><a href="../../user-documentation/Spell_checker.html"><strong aria-hidden="true">4.9.</strong> Spell checker</a></li><li class="chapter-item "><a href="../../user-documentation/Relationship_to_FreeMind.html"><strong aria-hidden="true">4.10.</strong> Relationship to FreeMind</a></li><li class="chapter-item "><a href="../../user-documentation/other-docs-tutorials.html"><strong aria-hidden="true">4.11.</strong> References to other known documentation/tutorial sites</a></li></ol></li><li class="chapter-item "><a href="../../contribute/contribute.html"><strong aria-hidden="true">5.</strong> Contribute</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../contribute/Translation_How-To.html"><strong aria-hidden="true">5.1.</strong> Translation How-To</a></li><li class="chapter-item "><a href="../../contribute/Contributing_to_Freeplane's_Development.html"><strong aria-hidden="true">5.2.</strong> Contributing to Freeplane's Development</a></li></ol></li><li class="chapter-item "><a href="../../scripting/Scripting.html"><strong aria-hidden="true">6.</strong> Scripting</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../scripting/Formulas.html"><strong aria-hidden="true">6.1.</strong> Formulas</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../scripting/Formulas.html"><strong aria-hidden="true">6.1.1.</strong> Formulas</a></li><li class="chapter-item "><a href="../../scripting/Scripting!_Script_filter.html"><strong aria-hidden="true">6.1.2.</strong> Formula filter</a></li></ol></li><li class="chapter-item "><a href="../../scripting/Scripting_Cheatsheet.html"><strong aria-hidden="true">6.2.</strong> Scripting Cheatsheet</a></li><li class="chapter-item "><a href="../../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.</strong> Scripts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.1.</strong> Scripts collection</a></li><li class="chapter-item "><a href="../../scripting/Scripting_text_editing.html"><strong aria-hidden="true">6.3.2.</strong> Scripts for text editing</a></li><li class="chapter-item "><a href="../../scripting/Example_scripts_using_external_libraries.html"><strong aria-hidden="true">6.3.3.</strong> Scripts using external libraries</a></li><li class="chapter-item "><a href="../../scripting/Script_incubator.html"><strong aria-hidden="true">6.3.4.</strong> Script incubator</a></li><li class="chapter-item "><a href="../../scripting/Scripting!_Jython.html"><strong aria-hidden="true">6.3.5.</strong> Scripting! Jython</a></li><li class="chapter-item "><a href="../../scripting/Scripting_environment_setup.html"><strong aria-hidden="true">6.3.6.</strong> Scripting environment setup</a></li></ol></li><li class="chapter-item "><a href="../../scripting/Export_Using_XSLT.html"><strong aria-hidden="true">6.4.</strong> XSLT for export/import</a></li><li class="chapter-item "><a href="../../scripting/Add-ons_(Develop).html"><strong aria-hidden="true">6.5.</strong> Add-ons (Development)</a></li><li class="chapter-item "><a href="../../scripting/Security_considerations.html"><strong aria-hidden="true">6.6.</strong> Security considerations</a></li></ol></li><li class="chapter-item "><a href="../../coding/Git_howto.html"><strong aria-hidden="true">7.</strong> Coding</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../coding/Git_howto.html"><strong aria-hidden="true">7.1.</strong> Git howto</a></li><li class="chapter-item "><a href="../../coding/How_to_build_Freeplane.html"><strong aria-hidden="true">7.2.</strong> How to build Freeplane</a></li><li class="chapter-item "><a href="../../coding/IDE_setup.html"><strong aria-hidden="true">7.3.</strong> IDE setup</a></li><li class="chapter-item "><a href="../../coding/Plugin_development.html"><strong aria-hidden="true">7.4.</strong> Plugin development</a></li></ol></li><li class="chapter-item "><li class="part-title">Attic</li><li class="chapter-item expanded "><a href="../../attic/home.html"><strong aria-hidden="true">8.</strong> Attic (draft documents)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.</strong> Old MediaWiki content</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.1.</strong> Old Home</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Approximate_search.html"><strong aria-hidden="true">8.1.2.</strong> Approximate search</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Architecture.html"><strong aria-hidden="true">8.1.3.</strong> Architecture</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Batch_Jobs.html"><strong aria-hidden="true">8.1.4.</strong> Batch Jobs</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Contributors.html"><strong aria-hidden="true">8.1.5.</strong> Contributors</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Current_Freeplane_File_Format.html"><strong aria-hidden="true">8.1.6.</strong> Current Freeplane File Format</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Data_recognition_and_data_formats.html"><strong aria-hidden="true">8.1.7.</strong> Data recognition and data formats</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Debugging_scripts.html"><strong aria-hidden="true">8.1.8.</strong> Debugging scripts</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Document_Format.html"><strong aria-hidden="true">8.1.9.</strong> Document Format</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Edit_scripts_in_Eclipse.html"><strong aria-hidden="true">8.1.10.</strong> Edit scripts in Eclipse</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/External_objects.html"><strong aria-hidden="true">8.1.11.</strong> External objects</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/External_script_file_execution.html"><strong aria-hidden="true">8.1.12.</strong> External script file execution</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/FAQ.html"><strong aria-hidden="true">8.1.13.</strong> FAQ</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Fixed_security_vulnerabilities.html"><strong aria-hidden="true">8.1.14.</strong> Fixed security vulnerabilities</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/FreeMind_0.9.0_-_Freeplane_1.1.x.html"><strong aria-hidden="true">8.1.15.</strong> FreeMind 0.9.0 - Freeplane 1.1.x</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane2PowerPoint.html"><strong aria-hidden="true">8.1.16.</strong> Freeplane2PowerPoint</a></li><li class="chapter-item expanded "><a href="../../attic/old-mediawiki-content/Freeplane_Tutorial_Extensions.html" class="active"><strong aria-hidden="true">8.1.17.</strong> Freeplane Tutorial Extensions</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Screenshots.html"><strong aria-hidden="true">8.1.18.</strong> Freeplane Tutorial How-to Screenshots</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Video.html"><strong aria-hidden="true">8.1.19.</strong> Freeplane Tutorial How-to Video</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Wiki!Administrators.html"><strong aria-hidden="true">8.1.20.</strong> Freeplane Wiki!Administrators</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_and_problem_solving.html"><strong aria-hidden="true">8.1.21.</strong> Freeplane and problem solving</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_features_you_were_missing_in_FreeMind.html"><strong aria-hidden="true">8.1.22.</strong> Freeplane features you were missing in FreeMind</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_for_Windows_Mobile.html"><strong aria-hidden="true">8.1.23.</strong> Freeplane for Windows Mobile</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_installation_for_Ubuntu_OS.html"><strong aria-hidden="true">8.1.24.</strong> Freeplane installation for Ubuntu OS</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Get_the_code.html"><strong aria-hidden="true">8.1.25.</strong> Get the code</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Goals.html"><strong aria-hidden="true">8.1.26.</strong> Goals</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Groovy_scripts_and_formulas_can_escape_sandbox.html"><strong aria-hidden="true">8.1.27.</strong> Groovy scripts and formulas can escape sandbox</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Harmonizing_FP-menu.html"><strong aria-hidden="true">8.1.28.</strong> Harmonizing FP-menu</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Help!Contents.html"><strong aria-hidden="true">8.1.29.</strong> Help!Contents</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Help!Editing.html"><strong aria-hidden="true">8.1.30.</strong> Help!Editing</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Help_Previous_Freeplane_Versions.html"><strong aria-hidden="true">8.1.31.</strong> Help Previous Freeplane Versions</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/How_to_publish_add-ons.html"><strong aria-hidden="true">8.1.32.</strong> How to publish add-ons</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/How_to_test.html"><strong aria-hidden="true">8.1.33.</strong> How to test</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Information_management_with_Freeplane_add-on_dView(indexfile).html"><strong aria-hidden="true">8.1.34.</strong> Information management with Freeplane add-on dView(indexfile)</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Init_scripts.html"><strong aria-hidden="true">8.1.35.</strong> Init scripts</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Japanese.html"><strong aria-hidden="true">8.1.36.</strong> Japanese</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Linux.html"><strong aria-hidden="true">8.1.37.</strong> Linux</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Logo_and_splashscreen.html"><strong aria-hidden="true">8.1.38.</strong> Logo and splashscreen</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Macintosh.html"><strong aria-hidden="true">8.1.39.</strong> Macintosh</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Map_local_scripts.html"><strong aria-hidden="true">8.1.40.</strong> Map local scripts</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Map_templates.html"><strong aria-hidden="true">8.1.41.</strong> Map templates</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Menus_and_commands.html"><strong aria-hidden="true">8.1.42.</strong> Menus and commands</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Mind_map_gallery.html"><strong aria-hidden="true">8.1.43.</strong> Mind map gallery</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/New_Freeplane_File_Format_(Proposal).html"><strong aria-hidden="true">8.1.44.</strong> New Freeplane File Format (Proposal)</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/New_features_in_Freeplane_1.2.html"><strong aria-hidden="true">8.1.45.</strong> New features in Freeplane 1.2</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/New_features_in_Freeplane_1.3.html"><strong aria-hidden="true">8.1.46.</strong> New features in Freeplane 1.3</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/OSGI_based_plug-ins.html"><strong aria-hidden="true">8.1.47.</strong> OSGI based plug-ins</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Patterns.html"><strong aria-hidden="true">8.1.48.</strong> Patterns</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Portable_Freeplane.html"><strong aria-hidden="true">8.1.49.</strong> Portable Freeplane</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Release_cycle.html"><strong aria-hidden="true">8.1.50.</strong> Release cycle</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Release_smoke_test.html"><strong aria-hidden="true">8.1.51.</strong> Release smoke test</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Rules_to_build_user_friendly_menus.html"><strong aria-hidden="true">8.1.52.</strong> Rules to build user friendly menus</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_API_Changes.html"><strong aria-hidden="true">8.1.53.</strong> Scripting! API Changes</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Freeplane_Utility_Classes.html"><strong aria-hidden="true">8.1.54.</strong> Scripting! Freeplane Utility Classes</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Included_libraries.html"><strong aria-hidden="true">8.1.55.</strong> Scripting! Included libraries</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Other_languages.html"><strong aria-hidden="true">8.1.56.</strong> Scripting! Other languages</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Update_Freeplane's_Groovy_version.html"><strong aria-hidden="true">8.1.57.</strong> Scripting! Update Freeplane's Groovy version</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting_API.html"><strong aria-hidden="true">8.1.58.</strong> Scripting API</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Support.html"><strong aria-hidden="true">8.1.59.</strong> Support</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Think_Tank.html"><strong aria-hidden="true">8.1.60.</strong> Think Tank</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Translation_nl.html"><strong aria-hidden="true">8.1.61.</strong> Translation nl</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Troubleshooting.html"><strong aria-hidden="true">8.1.62.</strong> Troubleshooting</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Tutorial_Freeplane_How-to_nl.html"><strong aria-hidden="true">8.1.63.</strong> Tutorial Freeplane How-to nl</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Tutorial_Freeplane_nl.html"><strong aria-hidden="true">8.1.64.</strong> Tutorial Freeplane nl</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/User_icons.html"><strong aria-hidden="true">8.1.65.</strong> User icons</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Videos_and_animations_How-to.html"><strong aria-hidden="true">8.1.66.</strong> Videos and animations How-to</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Visions.html"><strong aria-hidden="true">8.1.67.</strong> Visions</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Wish_List.html"><strong aria-hidden="true">8.1.68.</strong> Wish List</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/XML_External_Entity_vulnerability_in_map_parser.html"><strong aria-hidden="true">8.1.69.</strong> XML External Entity vulnerability in map parser</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Your_own_utility_script_library.html"><strong aria-hidden="true">8.1.70.</strong> Your own utility script library</a></li></ol></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.</strong> New wiki initiative</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.1.</strong> customizing-freeplane</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/freeplane-api-groovy.html"><strong aria-hidden="true">8.2.2.</strong> freeplane-api-groovy</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/glossary.html"><strong aria-hidden="true">8.2.3.</strong> glossary</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/introduction-aka-many-unsorted-ideas-related-to-freeplane.html"><strong aria-hidden="true">8.2.4.</strong> introduction-aka-many-unsorted-ideas-related-to-freeplane</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/understanding-interface.html"><strong aria-hidden="true">8.2.5.</strong> understanding-interface</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/understanding-nodes.html"><strong aria-hidden="true">8.2.6.</strong> understanding-nodes</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">Special pages</li><li class="chapter-item "><a href="../../after-redirect.html"><strong aria-hidden="true">9.</strong> After redirect from the old media wiki</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Freeplane Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/freeplane/docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#download-example-map">Download example map</a></li>
+<li><a href="#instructional-examples-of-freeplane-maps">Instructional examples of Freeplane maps</a>
+<ul>
+<li><a href="#what-is-mind-mapping">What is mind mapping</a></li>
+<li><a href="#brainstorming-with-digital-post-its">Brainstorming with digital post-its</a></li>
+<li><a href="#map-as-index">Map as index</a></li>
+<li><a href="#meeting-support">Meeting support</a></li>
+<li><a href="#organize-your-collection">Organize your collection</a></li>
+<li><a href="#vault-for-information">Vault for information</a></li>
+<li><a href="#dashboard-for-gtd">Dashboard for GTD</a></li>
+<li><a href="#swot-analysis">SWOT analysis</a></li>
+<li><a href="#assignment--presentation">Assignment &amp; Presentation</a></li>
+<li><a href="#tutorial">Tutorial</a></li>
+</ul>
+</li>
+<li><a href="#information-management">Information management</a></li>
+<li><a href="#docear-academic-literature-suite">Docear Academic literature suite</a></li>
+<li><a href="#special">Special</a>
+<ul>
+<li><a href="#floating-nodes">Floating nodes</a></li>
+<li><a href="#calculations-with-formula-plug-in">Calculations with formula plug in</a></li>
+<li><a href="#conditional-styles">Conditional styles</a></li>
+<li><a href="#summary-nodes">Summary nodes</a></li>
+<li><a href="#writing-with-freeplane">Writing with Freeplane</a></li>
+<li><a href="#developing-a-video-script-with-freeplane">Developing a video script with Freeplane</a></li>
+<li><a href="#problem-solving-using-freeplane">Problem solving using Freeplane</a></li>
+<li><a href="#publishing-multiple-maps-in-one-java-applet">Publishing multiple maps in one Java applet</a></li>
+<li><a href="#other">Other</a></li>
+</ul>
+</li>
+<li><a href="#animations">Animations</a></li>
+<li><a href="#user-forum">User forum</a></li>
+<li><a href="#links">Links</a></li>
+</ul>
+<p>If you are not English: see <a href="Category:Translation.html">Translated wiki pages</a> if this tutorial has been translated into your language.</p>
+<p><big><strong>This tutorial refers to Freeplane 1.2, which was released on October 20, 2012.</strong></big>
+<br><br>
+<a href="http://www.freeplane.org/mapsOnline/?map=IndexWiki.mm"><img src="FreeplaneWiki.jpg" alt="Index wiki" /></a></p>
+<h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>This Freeplane Tutorial Extensions describes a Tutorial with basic terms and how to use the basic Freeplane functions. In addition it contains examples of use cases and concrete instructions how to make these cases. The Tutorial is divided into parts for the <em>Beginner</em>, <em>Advanced user</em> and <em>Professional user</em>. The examples below are labelled in a similar way helping to indicate the level of difficulty if you want to make a map yourself. It is no problem if the beginner wants to navigate a map for the advanced or professional user.</p>
+<h1 id="download-example-map"><a class="header" href="#download-example-map">Download example map</a></h1>
+<p>You may view the examples without having Freeplane installed. So it is not necessary to download the example. It is possible to download the example once you have opened an example.mm as follows. In the browser you see the address of the opened map, e.g. <em>www.freeplane.org/mapsOnline/?map=example.map</em>. Now remove the part &quot;?map=&quot; (e.g. <em>www.freeplane.org/mapsOnline/example.map</em>) and press the Enter key to start the download.</p>
+<h1 id="instructional-examples-of-freeplane-maps"><a class="header" href="#instructional-examples-of-freeplane-maps">Instructional examples of Freeplane maps</a></h1>
+<h2 id="what-is-mind-mapping"><a class="header" href="#what-is-mind-mapping">What is mind mapping</a></h2>
+<p><a href="http://www.freeplane.org/mapsOnline/?map=WhatIsMindMapping.mm"><img src="WhatIsMindMapping.jpg" alt="Mind mapping - Advanced" /></a>
+Mind mapping is a technique for collecting, developing and sharing ideas (like the plot of a story or threads of a new idea) in a visual map.  Developing a mind map helps to structure information in a visual way. It follows the random way in which the mind generates thoughts rather than following a linear format such as text in a Word document. You can plan a project, summarise your notes for an exam, brainstorm a new idea, take a brief. The uses are endless. </p>
+<p>The mind map on the right shows you some of the processes involved.<br></p>
+<p>The advantage of electronic mind maps over paper mind maps is that you can have as many nodes and branches as you like and can minimise them so as not to have a lot of clutter on your screen. There's no limit to the amount of information you can put in a mind map. You can also link to documents and web pages, delete unneeded nodes and branches and do lots of editing which is more limited with paper mind maps.</p>
+<p>The advantages of Freeplane are presented in the mind map, as hidden information. Click the link below the picture to open the map. Then click the topic help <em>Navigation</em> for learning how to unhide hidden information. <br><br></p>
+<h2 id="brainstorming-with-digital-post-its"><a class="header" href="#brainstorming-with-digital-post-its">Brainstorming with digital post-its</a></h2>
+<p>Generally brainstorming starts with writing ideas on post-its and sticking them to the wall. Freeplane has a &quot;free node&quot; for this: if you Ctrl + double click on a free place of the mind map, a node opens. When  you start typing you will see your text in this free node. Note: This feature doesn't work on Mac yet. If you're done, you can do the same with a different idea in a different place. Once you're ready, you can move similar ideas closer together and connect them in a hierarchy by dragging and dropping. See [[#Floating_nodes|Floating nodes]] for more examples.</p>
+<h2 id="map-as-index"><a class="header" href="#map-as-index">Map as index</a></h2>
+<p><a href="http://www.freeplane.org/mapsOnline/?map=IndexWiki.mm"><img src="FreeplaneWiki.jpg" alt="Index wiki - Beginner" /></a>
+<a href="http://www.freeplane.org/mapsOnline/?map=freeplaneFunctions.mm"><img src="freeplaneFunctions.jpg" alt="Index functions - Advanced" /></a>
+<a href="http://www.freeplane.org/mapsOnline/?map=freeplaneApplications.mm"><img src="FreeplaneOverview_en.jpg" alt="Index applications - Professional" /></a>
+<strong>Beginner.</strong> One way to bring structure to linear text is to use categories as we have in this wiki. A limitation of these categories however is that hierarchical relations cannot be displayed in a simple way. A mind map is better suited for this, as is shown by the example map on the right.</p>
+<p>In this particular case the categories of the wiki are represented as underlined hyperlinks. The pages of the wiki are represented by red-arrow hyperlinks. The latter are created simply by dragging the page address (URL) of a wiki page onto a node and then editing the title of the node. If you clik on the hyperlink under the image, the mind map opens and you can click the links to jump to the pages of the wiki.</p>
+<p><strong>Advanced.</strong> An index can have many different forms. The map on the right displays all Freeplane functions. These functions are described in more detail in two maps called <em>Tutorial</em> and <em>Documentation</em> respectively. The map contains two solutions for linking a function to the two descriptive maps. The functions on the left half have the two hyperlinks themselves, but they are hidden until the  mouse cursor is hovering over the function (tool tip). The functions on the right half of the map have an external pointer - the nodes with the question mark. These external pointers contain the hyperlinks, which again are hidden until you hover with the cursor over the question mark.</p>
+<p><strong>Professional.</strong> The map on the right is an index map for the use of cases mentioned in this tutorial. Unlike a classical linear index the indexed items in the mind map can be displayed in any order as can the relationships between them. This map uses most of the functionalities of Freeplane in one map.
+Click the link under the image to open the mind map.  Then read the node called <em>Caption</em> to learn how to navigate the map and unhide hidden information.</p>
+<h2 id="meeting-support"><a class="header" href="#meeting-support">Meeting support</a></h2>
+<p><a href="http://www.freeplane.org/mapsOnline/?map=MeetingBeginner.mm"><img src="meetingBeginner_en.jpg" alt="Meeting support - Beginner" /></a>
+<a href="http://www.freeplane.org/mapsOnline/?map=MeetingAdvanced.mm"><img src="meetingAdvanced_en.jpg" alt="Meeting support - Advanced" /></a>
+Freeplane is very suited for rapid and easy <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Notetaking">note taking</a> during meetings. In fact Freeplane can support the whole meeting process. This process starts with designing and distributing the topics of the agenda, keeping the attendants list, adding notes to the topics of the agenda and finally producing the decisions and action list of the meeting. Actions can also be supported with time signals. It is even possible to include the incoming and outgoing information in the map, either as hyperlinks or in a special area (Notes). And last but not least, part or all of the information can be password protected.</p>
+<p>The maps for the beginner and advanced user display the same meeting information, but differently &quot;formatted&quot;, with the different components available in Freeplane (node core versus node details, attributes, images, styles, etc.). Click on the hyperlinks below the images to open and navigate the respective maps. In <em>Meeting advanced</em>: hover the nodes (texts) to see hidden text like notes.</p>
+<p>Instructions (animation) on how to make and use the beginner meeting support are available <a href="http://www.kioo.nl/freeplane/CoreMeeting"><strong>here</strong></a>. When the example is stripped from its specific information, the remaining structure could be used as a template for meetings in general.</p>
+<h2 id="organize-your-collection"><a class="header" href="#organize-your-collection">Organize your collection</a></h2>
+<p>[[File:CollectionBeginner.jpg|left|<a href="http://www.freeplane.org/mapsOnline/?map=CollectionBeginner.mm">Collection - Beginner</a> ]]
+<a href="http://www.freeplane.org/mapsOnline/?map=CollectionAdvanced.mm"><img src="CollectionAdvanced.jpg" alt="Collection - Advanced" /></a>
+With Freeplane you can order, index and describe your collections, whether images, audio files or any other kind of information. It's especially easy to select a group of files and copy them in one action to a mind map. In that case these files appear as clickable arrows (hyperlinks) in separate nodes, as shown in the mind map on the left (<em>Beginner collection</em>). Once in the mind map, you can rename and sort the nodes. For image links, you can turn the links to images which are visible in the map. </p>
+<p>Of course it's possible to build a collection item by item too. And it is possible to add additional information and format it any way you want, as in the mind map on the right (<em>Advanced collection</em>). If you hover over the names, you will see additional information about location and time, which appear in a table of attributes. Or you can click the name of an image, which makes the image appear or disappear (fold).</p>
+<p>If you have collections of different kinds in one map, consider using a different style or a different icon for each kind. In that way you can use filtering to create a view of all elements of the same kind.</p>
+<h2 id="vault-for-information"><a class="header" href="#vault-for-information">Vault for information</a></h2>
+<p><a href="http://www.freeplane.org/mapsOnline/?map=Vault.mm"><img src="MyVault.jpg" alt="My Vault - Advanced" /></a>
+If you would like to keep certain information private, you can password protect it. It's possible to protect the whole map or just protect a (sub)tree of nodes. The example on the right contains a protected map &quot;MyVault&quot;. Within this protected map are branches for finance and for websites. These are separately protected. </p>
+<p>Open the map by clicking <em>My Vault</em> under the picture. Then find the unlock icon in the menubar and click it. Enter the password &quot;MyVault&quot;. Now the map opens (unfolds) and you see the branches for websites and for finance. Select creditcard of one of the banks, click the unlock menu button and enter password &quot;creditcard&quot;. Now the creditcard information unfolds. You can do the same with the other creditcard. Then go to the websites and select the Freeplane open forum, click the unlock button and enter &quot;Freeplane&quot; as a password. Now the information for login unfolds. Note that an explanation of each node is presented below each node titel.</p>
+<h2 id="dashboard-for-gtd"><a class="header" href="#dashboard-for-gtd">Dashboard for GTD</a></h2>
+<p><a href="http://www.freeplane.org/mapsOnline/?map=Action-dashboard.mm"><img src="Action-dashboard_en.jpg" alt="Action dashboard" /></a>
+When <em>Freeplane</em> opens it starts with a standard map. This map can be modelled into a dashboard with direct access to the most important information at home and on the Internet. You can do this by simply dragging hyperlinks into your map. Besides you can add (hidden) content to hyperlinks to remember their meaning. Alo you can set signals to remember when you have to give attention to this information. This makes Freeplane particularly supportive for <a href="http://nl.wikipedia.org/wiki/Getting_Things_Done">Getting Things Done</a>. To view and navigate the map, click on the link below the image.</p>
+<p>For advanced features for helping to get your Getting Things Done system work more flawlessly, you can try to use the <a href="http://www.freeplane.org/wiki/index.php/Add-ons_(install)#Freeplane.7CGTD.2B">Freeplane|GTD+</a> plugin. There is a template designed to help you get started with the plugin available <a href="https://www.itworks.hu/index.php/template-to-get-you-started-with-freeplane-gtd/">here</a></p>
+<h2 id="swot-analysis"><a class="header" href="#swot-analysis">SWOT analysis</a></h2>
+<p><a href="http://www.freeplane.org/mapsOnline/?map=SWOT.mm"><img src="SWOT_en.jpg" alt="SWOT analysis" /></a>
+Mind maps are a fantastic tool for carrying out all kinds of analyses. In this, Freeplane suports using images and arrows with labels to display concepts, which helps to keep oversight and focus. In case this is not enough, Freeplane supports using hidden text which the user can roll down or hover over. Click on the small triangles, or hover the cursor over the images to see a descriptive text. To view and navigate the map, click on the link below the image.
+<br><br><br></p>
+<h2 id="assignment--presentation"><a class="header" href="#assignment--presentation">Assignment &amp; Presentation</a></h2>
+<p><a href="http://www.kioo.nl/freeplane/Octopus/SjabloonOctopus.html"><img src="SjabloonOctopus.jpg" alt="Sjabloon spreekbeurt" /></a>
+<a href="http://www.kioo.nl/freeplane/Octopus/AntwoordenOctopus.html"><img src="AntwoordenOctopus.jpg" alt="Spreekbeurt" /></a>
+A map can be used as a student assignment, and can include directions, set questions and give links to literature. The student can click the literature links to open the literature and add answers to the questions - in the map itself. 
+<br>
+The map to the left contains a map with keywords for questions and literature links. For the advanced student these could be removed. Once the assigment is completed and the result is entered in the map, the map could be used to learn and do the presentation.
+The map to the right contains model answers to the questions which could be used to check the result. Answers could be password-protected so that students can only see them once given the password. To view and navigate a map, click on the link below the image.
+<To DO: translate the maps in English></p>
+<h2 id="tutorial"><a class="header" href="#tutorial">Tutorial</a></h2>
+<p><a href="http://www.freeplane.org/mapsOnline/?map=TutorialAsABook.mm"><img src="FreeplaneTutorial_VBook.jpg" alt="Tutorial - As a book" /></a>
+<a href="http://www.freeplane.org/mapsOnline/?map=freeplaneTutorial.mm"><img src="FreeplaneTutorial_en.jpg" alt="Tutorial - Professional" /></a>
+<br>
+Freeplane's Tutorial is an example of how a Freeplane map can be used to hold extensive amounts of (hidden) information and for delivering it in a user determined way, adapted to the user's experience level. </p>
+<p>In Freeplane the node hierarchy of parent-child-grandchild nodes is by default displayed in left-right direction. Hierarchical levels can be used to display a chapter - (sub)subchapter - content chain. To be visible, the chain needs to be horizontally scrolled. Freeplane helps to do this by automatically scrolling to make the node where the cursor is fully visible. Yet the classic book-view with titles and content oriented in a top down direction may be advantageous in situations where you gradually unfold the text and want to easily read back and forward. </p>
+<p>On the left and right side are two example maps which at first glance may appear very similar, yet are very different if you start using them.</p>
+<ul>
+<li>
+<p>In the map on the right the content node has been moved below its parent sub chapter (= title) node. The title-nodes have Node style <em>combined</em>. As a result, when the title node is folded (child with content is hidden) it has a bubble and when it is unfolded the bubble disappears. When more sub chapters are unfolded, this gives a structured page like appearance with content separated by chapter headers which can be easily read back and forth - without horizontal scrolling. On the other hand, the user has maximum overview if he folds most of the nodes.</p>
+</li>
+<li>
+<p>In the map on the left the two nodes for title  and content are combined in one node: title and content are displayed in the Core and Details fields respectively. This has the advantage that node core can be styled with a colour, bubble, icon etc. to make the title stand out. And the text in Details can be formatted as a paragraph in a word processor. The result is an appearance which is very similar to a named paragraph of a book. The details field could be hidden and displayed in a tool tip, which is equivalent for the folding discussed above. </p>
+</li>
+</ul>
+<p>If the two maps are compared one can conclude that the view of the left map is relatively static. The view of the right map is more flexible. If in the right map you select a chapter (e.g. chapter 2) and then in the menu bar click the icon &quot;Unfolds all selected nodes and their children&quot;, all text becomes visible as in the view of the left map. In many cases this is not what you want and then you could select a sub chapter and only unfold all text of this subchapter. From these examples it is clear that it is possible to implement book-like view in different ways, with different characteristics.</p>
+<p>When implementing a map with tutorial information it is a choice if and when the hierarchical relations should be as prominently left-right oriented as possible or if, for practical reasons or taste, children with content could be shown below parents with titles (right hand map); or alternatively if the mechanism with core-details (and hiding) are used (left hand map).</p>
+<p><em>Note that when viewing the reference through the Internet the look and feel is less and some features are not available (e.g. the predefined filters and the Freeplane menu's). If you use the reference from the Help, the look and feel is optimal, but the options are restricted to read only. Only if you load the reference as a .mm file in Freeplane, alle functionality is present.</em></p>
+<h1 id="information-management"><a class="header" href="#information-management">Information management</a></h1>
+<p>Freeplane can support organizing, managing and accessing information. With the add-on IndexFile you can turn a clasic file system into a flexible system for information sharing and working on dossiers in teams.  Read <a href="Information_management_with_add-on_IndexFile.html"><strong>more ...</strong></a></p>
+<h1 id="docear-academic-literature-suite"><a class="header" href="#docear-academic-literature-suite">Docear Academic literature suite</a></h1>
+<p><a href="http://docear.org"><strong>Docear</strong></a> supports in doing all the tasks related to literature management:</p>
+<ul>
+<li>Finding new literature (searching and exploring)</li>
+<li>Organizing literature (reading, annotating, and retrieving)</li>
+<li>Creating your own literature (drafting, writing, referencing, and publishing) 
+Docear is going to be inegrated with Freeplane at the end of 2011.</li>
+</ul>
+<h1 id="special"><a class="header" href="#special">Special</a></h1>
+<h2 id="floating-nodes"><a class="header" href="#floating-nodes">Floating nodes</a></h2>
+<p>Floating nodes come in sorts. The most easy to use is the free (posional) floating node which is created by <em>ctrl+double clicking</em> a free area of the map. It is handy like a post-it to gather unstructered ideas in a brain storm. They differ from the post-it because it is possible to start an independent hierachy of nodes within the <em>cloud</em> of the post-it node. These post-it nodes can be susequently connected to the hierarchical nodes by dragging and dropping it on the node of your choice: it will become a child node of this node.  Below you see other types of free nodes as well. The formatting of a floating node is determined by the system style <em>Floating node</em>. This standard style can be edited to hide the cloud, to show the edges of children, color and more. <br><br>
+<strong>General examples</strong><br>
+<img src="Freeplane_map_with_multiple_sorts_of_floating_central_nodes.jpg" alt="" /></p>
+<p><a href="/attic/Freeplane_map_with_multiple_sorts_of_floating_central_nodes.mm" title=":ignore">Multiple sorts of floating central nodes</a></p>
+<p><img src="An_example_of_the_Use_of_Freeplane_Floating_Nodes_in_Digital_Logic.jpg" alt="Floating Nodes in DigitalLogic" /></p>
+<ul>
+<li>Multiple sorts of floating nodes</li>
+<li>Floating nodes in digital logic</li>
+<li><a href="http://www.kioo.nl/freeplane/TasksWithFreeplane">Free nodes in <em>Index applications</em></a></li>
+</ul>
+<p><br><br><br><br></p>
+<br>
+<p><strong>Free positioned versus floating nodes</strong><br>
+<a href="/attic/TypesOfFreeOrFloatingNodes.mm" title=":ignore">Behaviour of free or floating nodes</a> 
+<img src="TypesOfFreeOrFloatingNodes.jpg" alt="" />
+There are several ways to make independent or semi-independent groups. The group free 1 consists of a free positionable node with free posistionable children and regular grand childern.
+To make the group called free 1:</p>
+<ul>
+<li>define a free positionable parent node (free 1).</li>
+<li>define its children.</li>
+<li>select all children, next choose Edit &gt; Free positionable node; (this makes appear all nodes in a pile, on top of each other)</li>
+<li>set the childrens edges to visible  (do it a once, keep the selection; it may be handy to define a style for this)</li>
+<li>drag each child from the pile to its wanted position</li>
+<li>define the children’s children – if you want them</li>
+</ul>
+<p>Open the mind map on the right and read the text hidden in the root node for peculiarities of the groups free2, free 3 an free 4. For example, group free 2 is a copy of free 1, but is not the same...</p>
+<h2 id="calculations-with-formula-plug-in"><a class="header" href="#calculations-with-formula-plug-in">Calculations with formula plug in</a></h2>
+<p><img src="Iron_Sulfate_Production_-_Calculations_with_Formula_plugin_(AAGG_-_andressf).jpg" alt="Iron Sulfate Production Calculations" />
+<a href="/attic/Iron_Sulfate_Production_-_Calculations_with_Formula_plugin_(AAGG_-_andressf).mm" title=":ignore">Iron_Sulfate_Production_-<em>Calculations_with_Formula_plugin</em>(AAGG_-_andressf).mm</a></p>
+<p><a href="/attic/Iron_Sulfate_Production-AAGG_-_andressf-.mm" title=":ignore">Iron Sulfate Production-AAGG</a>
+<img src="Iron_Sulfate_Production-AAGG_-_andressf-.jpg" alt="" />
+<br><br><br><br><br></p>
+<h2 id="conditional-styles"><a class="header" href="#conditional-styles">Conditional styles</a></h2>
+<p><a href="/attic/Example_-_ConceptMap.mm" title=":ignore">Example concept map</a>
+<img src="Example_-_ConceptMap.jpg" alt="" />
+<br><br><br><br><br><br></p>
+<h2 id="summary-nodes"><a class="header" href="#summary-nodes">Summary nodes</a></h2>
+<p><img src="Example-USA_Economic_and_Regional_Structures.jpg" alt="Example summary nodes" />
+<br><br><br><br><br><br></p>
+<h2 id="writing-with-freeplane"><a class="header" href="#writing-with-freeplane">Writing with Freeplane</a></h2>
+<p><img src="Wilson_(version_adapted_by_AAGG_-_andressf)_-_Writing_an_essay_with_Freeplane.jpg" alt="Writing_an_essay_with_Freeplane" /></p>
+<p><a href="/attic/NovelWritersNotebook.mm" title=":ignore">Novel Writer's Notebook: A sample map for writers</a>
+<img src="NovelWritersNotebook.jpg" alt="" /></p>
+<p>See node <em>The making of this documentation</em> in Freeplane's <em>Help &gt; Documentation</em> for an example how to create a documentation mind map. See also <em>Floating nodes</em> above.
+<br><br><br><br><br><br><br></p>
+<h2 id="developing-a-video-script-with-freeplane"><a class="header" href="#developing-a-video-script-with-freeplane">Developing a video script with Freeplane</a></h2>
+<p><img src="WHY_Freeplane1.2Narrative.jpg" alt="" /> 
+http://www.freeplane.org/mapsOnline/?map=WhyFreeplane.mm</p>
+<p>Developing a script for a film or video is a creative process in which the ordering and content of the image and audio parts are changed continuously. The mind map on the right side is being used to develop the introduction video <em>WHY Freeplane</em>. The left side of the map contains the structure underlying the video. At a certain level each structural part ends in a narrative and a series of actions on the screen. The narratives have been given style Narrative. You can use filtering for “style” equal to “Narrative” and with condition &quot;do not show ancestors&quot; to see all narratives in a linear chain. If you unfold a narrative you see a sub tree of actions taking place on the screen during the narrative. Because filtering is not possible on-line, see <a href="http://www.freeplane.org/mapsOnline/WhyFreeplane.pdf">here</a> for the filtered list of narratives.
+<br><br><br></p>
+<h2 id="problem-solving-using-freeplane"><a class="header" href="#problem-solving-using-freeplane">Problem solving using Freeplane</a></h2>
+<p>For the concepts of tool maps and work maps see page <a href="Freeplane_and_problem_solving.html">Freeplane and problem solving</a>.</p>
+<h2 id="publishing-multiple-maps-in-one-java-applet"><a class="header" href="#publishing-multiple-maps-in-one-java-applet">Publishing multiple maps in one Java applet</a></h2>
+<p>Freeplane lets you export a map for publishing it on Internet or Intranet. If you have multiple maps to publish and maintain, it is more economic to use the procedure described <em><strong>here</strong></em>. The maps in <a href="Freeplane_Tutorial_Extensions.html">Freeplane Tutorial Extensions</a> are published in this way.</p>
+<h2 id="other"><a class="header" href="#other">Other</a></h2>
+<ul>
+<li>
+<p><a href="/attic/Fishbone_&amp;_Tree_Diagrams_in_Freeplane.mm" title=":ignore">Fishbone_&amp;_Tree_Diagrams_in_Freeplane</a></p>
+</li>
+<li>
+<p><a href="/attic/Comparison_FP2_1vsFP1_2.mm" title=":ignore">Comparison between Freeplane 1.1.2 and Freeplane 1.2.1 alpha</a> (Must be updated)</p>
+</li>
+</ul>
+<h1 id="animations"><a class="header" href="#animations">Animations</a></h1>
+<p>The following are some examples of animations. They were made in Dutch for FP 1.1.3 and need to be adapted to 1.2 and translated in English.</p>
+<ul>
+<li><a href="http://www.kioo.nl/freeplane/tutorial_en/navigation"><strong>Instruction for viewing maps in Freeplane</strong></a>.</li>
+<li><a href="http://www.kioo.nl/gwr/gwr.htm"><strong>Demonstration of Details, notes, attributes and filtering</strong></a>.</li>
+<li><a href="http://www.kioo.nl/freeplane/FreeplaneInstructie/Basisinstructie-knoopbehandeling.htm"><strong>Making your first map</strong></a>.</li>
+<li><a href="https://www.youtube.com/watch?v=0xkUzsd4naA">Video illustration possibilities moving nodes</a> N.B. The possibilities of free floating nodes are not shown.</li>
+<li><a href="Videos_and_animations_How-to.html">Video's and animations How-to</a> for Freeplane</li>
+</ul>
+<h1 id="user-forum"><a class="header" href="#user-forum">User forum</a></h1>
+<p><a href="https://www.freeplane.org/forum2012/viewforum.php?f=1">Open forum Freeplane</a> for questions and discussions.</p>
+<h1 id="links"><a class="header" href="#links">Links</a></h1>
+<p>Some free icons</p>
+<ul>
+<li><a href="http://www.famfamfam.com/lab/icons/silk/">Silk Icons</a> organized into folders <a href="http://www.mediafire.com/file/dy4ynmkvmhz/Silk_icons_organized.zip.md">http://www.mediafire.com/file/dy4ynmkvmhz/Silk icons organized.zip</a> </li>
+<li><a href="http://www.famfamfam.com/lab/icons/flags/">Flags of the world</a> icons organized into folders <a href="http://www.mediafire.com/file/nomjzj3wmyw/Country_Flags_organized.zip.md">http://www.mediafire.com/file/nomjzj3wmyw/Country Flags organized.zip</a></li>
+</ul>
+<p>Some very simple scripting examples</p>
+<ul>
+<li><a href="https://sourceforge.net/projects/freeplane/forums/forum/758437/topic/4542178">Dialog in script</a></li>
+</ul>
+<p>Other</p>
+<ul>
+<li><a href="http://jobmob.co.il/blog/cv-mind-map-examples/">Examples of cv-maps</a></li>
+</ul>
+<!-- ({Category:Documentation}) ({Category:Example_maps}) -->
+<footer id="open-on-gh">Found a mistake? <a href="https://github.com/freeplane/docs/edit/main/src/docs/attic/old-mediawiki-content/Freeplane_Tutorial_Extensions.md">Edit this page on GitHub.</a></footer>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../attic/old-mediawiki-content/Freeplane2PowerPoint.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Screenshots.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../attic/old-mediawiki-content/Freeplane2PowerPoint.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Screenshots.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

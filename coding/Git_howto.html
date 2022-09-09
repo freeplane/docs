@@ -1,0 +1,759 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Git howto - Freeplane Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../open-in.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><li class="part-title">User guide</li><li class="chapter-item "><a href="../home.html"><strong aria-hidden="true">1.</strong> Home</a></li><li class="chapter-item "><a href="../how-to-get-help.html"><strong aria-hidden="true">2.</strong> How to get help</a></li><li class="chapter-item "><a href="../getting-started/getting-started.html"><strong aria-hidden="true">3.</strong> Getting started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../getting-started/Distributions.html"><strong aria-hidden="true">3.1.</strong> Distributions</a></li><li class="chapter-item "><a href="../getting-started/Command-line_options_and_configuration.html"><strong aria-hidden="true">3.2.</strong> Command-line options and configuration</a></li><li class="chapter-item "><a href="../getting-started/Add-ons_(install).html"><strong aria-hidden="true">3.3.</strong> Extend with add-ons</a></li></ol></li><li class="chapter-item "><a href="../user-documentation/first-steps.html"><strong aria-hidden="true">4.</strong> User documentation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../user-documentation/first-steps.html"><strong aria-hidden="true">4.1.</strong> First steps</a></li><li class="chapter-item "><a href="../user-documentation/working-w-mindmap-files.html"><strong aria-hidden="true">4.2.</strong> Working with mindmap files</a></li><li class="chapter-item "><a href="../user-documentation/formatting-maps-and-nodes.html"><strong aria-hidden="true">4.3.</strong> Formatting maps and nodes</a></li><li class="chapter-item "><a href="../user-documentation/styles.html"><strong aria-hidden="true">4.4.</strong> Styles</a></li><li class="chapter-item "><a href="../user-documentation/templates.html"><strong aria-hidden="true">4.5.</strong> Templates</a></li><li class="chapter-item "><a href="../user-documentation/css-for-html-or-markdown.html"><strong aria-hidden="true">4.6.</strong> CSS for HTML/Markdown</a></li><li class="chapter-item "><a href="../user-documentation/Conditional_node_styles.html"><strong aria-hidden="true">4.7.</strong> Conditional node styles</a></li><li class="chapter-item "><a href="../user-documentation/LaTeX_in_Freeplane.html"><strong aria-hidden="true">4.8.</strong> LaTeX in Freeplane</a></li><li class="chapter-item "><a href="../user-documentation/Spell_checker.html"><strong aria-hidden="true">4.9.</strong> Spell checker</a></li><li class="chapter-item "><a href="../user-documentation/Relationship_to_FreeMind.html"><strong aria-hidden="true">4.10.</strong> Relationship to FreeMind</a></li><li class="chapter-item "><a href="../user-documentation/other-docs-tutorials.html"><strong aria-hidden="true">4.11.</strong> References to other known documentation/tutorial sites</a></li></ol></li><li class="chapter-item "><a href="../contribute/contribute.html"><strong aria-hidden="true">5.</strong> Contribute</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../contribute/Translation_How-To.html"><strong aria-hidden="true">5.1.</strong> Translation How-To</a></li><li class="chapter-item "><a href="../contribute/Contributing_to_Freeplane's_Development.html"><strong aria-hidden="true">5.2.</strong> Contributing to Freeplane's Development</a></li></ol></li><li class="chapter-item "><a href="../scripting/Scripting.html"><strong aria-hidden="true">6.</strong> Scripting</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../scripting/Formulas.html"><strong aria-hidden="true">6.1.</strong> Formulas</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../scripting/Formulas.html"><strong aria-hidden="true">6.1.1.</strong> Formulas</a></li><li class="chapter-item "><a href="../scripting/Scripting!_Script_filter.html"><strong aria-hidden="true">6.1.2.</strong> Formula filter</a></li></ol></li><li class="chapter-item "><a href="../scripting/Scripting_Cheatsheet.html"><strong aria-hidden="true">6.2.</strong> Scripting Cheatsheet</a></li><li class="chapter-item "><a href="../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.</strong> Scripts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.1.</strong> Scripts collection</a></li><li class="chapter-item "><a href="../scripting/Scripting_text_editing.html"><strong aria-hidden="true">6.3.2.</strong> Scripts for text editing</a></li><li class="chapter-item "><a href="../scripting/Example_scripts_using_external_libraries.html"><strong aria-hidden="true">6.3.3.</strong> Scripts using external libraries</a></li><li class="chapter-item "><a href="../scripting/Script_incubator.html"><strong aria-hidden="true">6.3.4.</strong> Script incubator</a></li><li class="chapter-item "><a href="../scripting/Scripting!_Jython.html"><strong aria-hidden="true">6.3.5.</strong> Scripting! Jython</a></li><li class="chapter-item "><a href="../scripting/Scripting_environment_setup.html"><strong aria-hidden="true">6.3.6.</strong> Scripting environment setup</a></li></ol></li><li class="chapter-item "><a href="../scripting/Export_Using_XSLT.html"><strong aria-hidden="true">6.4.</strong> XSLT for export/import</a></li><li class="chapter-item "><a href="../scripting/Add-ons_(Develop).html"><strong aria-hidden="true">6.5.</strong> Add-ons (Development)</a></li><li class="chapter-item "><a href="../scripting/Security_considerations.html"><strong aria-hidden="true">6.6.</strong> Security considerations</a></li></ol></li><li class="chapter-item expanded "><a href="../coding/Git_howto.html" class="active"><strong aria-hidden="true">7.</strong> Coding</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../coding/Git_howto.html" class="active"><strong aria-hidden="true">7.1.</strong> Git howto</a></li><li class="chapter-item "><a href="../coding/How_to_build_Freeplane.html"><strong aria-hidden="true">7.2.</strong> How to build Freeplane</a></li><li class="chapter-item "><a href="../coding/IDE_setup.html"><strong aria-hidden="true">7.3.</strong> IDE setup</a></li><li class="chapter-item "><a href="../coding/Plugin_development.html"><strong aria-hidden="true">7.4.</strong> Plugin development</a></li></ol></li><li class="chapter-item "><li class="part-title">Attic</li><li class="chapter-item "><a href="../attic/home.html"><strong aria-hidden="true">8.</strong> Attic (draft documents)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.</strong> Old MediaWiki content</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.1.</strong> Old Home</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Approximate_search.html"><strong aria-hidden="true">8.1.2.</strong> Approximate search</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Architecture.html"><strong aria-hidden="true">8.1.3.</strong> Architecture</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Batch_Jobs.html"><strong aria-hidden="true">8.1.4.</strong> Batch Jobs</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Contributors.html"><strong aria-hidden="true">8.1.5.</strong> Contributors</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Current_Freeplane_File_Format.html"><strong aria-hidden="true">8.1.6.</strong> Current Freeplane File Format</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Data_recognition_and_data_formats.html"><strong aria-hidden="true">8.1.7.</strong> Data recognition and data formats</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Debugging_scripts.html"><strong aria-hidden="true">8.1.8.</strong> Debugging scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Document_Format.html"><strong aria-hidden="true">8.1.9.</strong> Document Format</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Edit_scripts_in_Eclipse.html"><strong aria-hidden="true">8.1.10.</strong> Edit scripts in Eclipse</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/External_objects.html"><strong aria-hidden="true">8.1.11.</strong> External objects</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/External_script_file_execution.html"><strong aria-hidden="true">8.1.12.</strong> External script file execution</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/FAQ.html"><strong aria-hidden="true">8.1.13.</strong> FAQ</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Fixed_security_vulnerabilities.html"><strong aria-hidden="true">8.1.14.</strong> Fixed security vulnerabilities</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/FreeMind_0.9.0_-_Freeplane_1.1.x.html"><strong aria-hidden="true">8.1.15.</strong> FreeMind 0.9.0 - Freeplane 1.1.x</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane2PowerPoint.html"><strong aria-hidden="true">8.1.16.</strong> Freeplane2PowerPoint</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_Extensions.html"><strong aria-hidden="true">8.1.17.</strong> Freeplane Tutorial Extensions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Screenshots.html"><strong aria-hidden="true">8.1.18.</strong> Freeplane Tutorial How-to Screenshots</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Video.html"><strong aria-hidden="true">8.1.19.</strong> Freeplane Tutorial How-to Video</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Wiki!Administrators.html"><strong aria-hidden="true">8.1.20.</strong> Freeplane Wiki!Administrators</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_and_problem_solving.html"><strong aria-hidden="true">8.1.21.</strong> Freeplane and problem solving</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_features_you_were_missing_in_FreeMind.html"><strong aria-hidden="true">8.1.22.</strong> Freeplane features you were missing in FreeMind</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_for_Windows_Mobile.html"><strong aria-hidden="true">8.1.23.</strong> Freeplane for Windows Mobile</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_installation_for_Ubuntu_OS.html"><strong aria-hidden="true">8.1.24.</strong> Freeplane installation for Ubuntu OS</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Get_the_code.html"><strong aria-hidden="true">8.1.25.</strong> Get the code</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Goals.html"><strong aria-hidden="true">8.1.26.</strong> Goals</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Groovy_scripts_and_formulas_can_escape_sandbox.html"><strong aria-hidden="true">8.1.27.</strong> Groovy scripts and formulas can escape sandbox</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Harmonizing_FP-menu.html"><strong aria-hidden="true">8.1.28.</strong> Harmonizing FP-menu</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help!Contents.html"><strong aria-hidden="true">8.1.29.</strong> Help!Contents</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help!Editing.html"><strong aria-hidden="true">8.1.30.</strong> Help!Editing</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help_Previous_Freeplane_Versions.html"><strong aria-hidden="true">8.1.31.</strong> Help Previous Freeplane Versions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/How_to_publish_add-ons.html"><strong aria-hidden="true">8.1.32.</strong> How to publish add-ons</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/How_to_test.html"><strong aria-hidden="true">8.1.33.</strong> How to test</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Information_management_with_Freeplane_add-on_dView(indexfile).html"><strong aria-hidden="true">8.1.34.</strong> Information management with Freeplane add-on dView(indexfile)</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Init_scripts.html"><strong aria-hidden="true">8.1.35.</strong> Init scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Japanese.html"><strong aria-hidden="true">8.1.36.</strong> Japanese</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Linux.html"><strong aria-hidden="true">8.1.37.</strong> Linux</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Logo_and_splashscreen.html"><strong aria-hidden="true">8.1.38.</strong> Logo and splashscreen</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Macintosh.html"><strong aria-hidden="true">8.1.39.</strong> Macintosh</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Map_local_scripts.html"><strong aria-hidden="true">8.1.40.</strong> Map local scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Map_templates.html"><strong aria-hidden="true">8.1.41.</strong> Map templates</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Menus_and_commands.html"><strong aria-hidden="true">8.1.42.</strong> Menus and commands</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Mind_map_gallery.html"><strong aria-hidden="true">8.1.43.</strong> Mind map gallery</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_Freeplane_File_Format_(Proposal).html"><strong aria-hidden="true">8.1.44.</strong> New Freeplane File Format (Proposal)</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_features_in_Freeplane_1.2.html"><strong aria-hidden="true">8.1.45.</strong> New features in Freeplane 1.2</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_features_in_Freeplane_1.3.html"><strong aria-hidden="true">8.1.46.</strong> New features in Freeplane 1.3</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/OSGI_based_plug-ins.html"><strong aria-hidden="true">8.1.47.</strong> OSGI based plug-ins</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Patterns.html"><strong aria-hidden="true">8.1.48.</strong> Patterns</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Portable_Freeplane.html"><strong aria-hidden="true">8.1.49.</strong> Portable Freeplane</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Release_cycle.html"><strong aria-hidden="true">8.1.50.</strong> Release cycle</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Release_smoke_test.html"><strong aria-hidden="true">8.1.51.</strong> Release smoke test</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Rules_to_build_user_friendly_menus.html"><strong aria-hidden="true">8.1.52.</strong> Rules to build user friendly menus</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_API_Changes.html"><strong aria-hidden="true">8.1.53.</strong> Scripting! API Changes</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Freeplane_Utility_Classes.html"><strong aria-hidden="true">8.1.54.</strong> Scripting! Freeplane Utility Classes</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Included_libraries.html"><strong aria-hidden="true">8.1.55.</strong> Scripting! Included libraries</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Other_languages.html"><strong aria-hidden="true">8.1.56.</strong> Scripting! Other languages</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Update_Freeplane's_Groovy_version.html"><strong aria-hidden="true">8.1.57.</strong> Scripting! Update Freeplane's Groovy version</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting_API.html"><strong aria-hidden="true">8.1.58.</strong> Scripting API</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Support.html"><strong aria-hidden="true">8.1.59.</strong> Support</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Think_Tank.html"><strong aria-hidden="true">8.1.60.</strong> Think Tank</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Translation_nl.html"><strong aria-hidden="true">8.1.61.</strong> Translation nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Troubleshooting.html"><strong aria-hidden="true">8.1.62.</strong> Troubleshooting</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Tutorial_Freeplane_How-to_nl.html"><strong aria-hidden="true">8.1.63.</strong> Tutorial Freeplane How-to nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Tutorial_Freeplane_nl.html"><strong aria-hidden="true">8.1.64.</strong> Tutorial Freeplane nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/User_icons.html"><strong aria-hidden="true">8.1.65.</strong> User icons</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Videos_and_animations_How-to.html"><strong aria-hidden="true">8.1.66.</strong> Videos and animations How-to</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Visions.html"><strong aria-hidden="true">8.1.67.</strong> Visions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Wish_List.html"><strong aria-hidden="true">8.1.68.</strong> Wish List</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/XML_External_Entity_vulnerability_in_map_parser.html"><strong aria-hidden="true">8.1.69.</strong> XML External Entity vulnerability in map parser</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Your_own_utility_script_library.html"><strong aria-hidden="true">8.1.70.</strong> Your own utility script library</a></li></ol></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.</strong> New wiki initiative</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.1.</strong> customizing-freeplane</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/freeplane-api-groovy.html"><strong aria-hidden="true">8.2.2.</strong> freeplane-api-groovy</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/glossary.html"><strong aria-hidden="true">8.2.3.</strong> glossary</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/introduction-aka-many-unsorted-ideas-related-to-freeplane.html"><strong aria-hidden="true">8.2.4.</strong> introduction-aka-many-unsorted-ideas-related-to-freeplane</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/understanding-interface.html"><strong aria-hidden="true">8.2.5.</strong> understanding-interface</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/understanding-nodes.html"><strong aria-hidden="true">8.2.6.</strong> understanding-nodes</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">Special pages</li><li class="chapter-item "><a href="../after-redirect.html"><strong aria-hidden="true">9.</strong> After redirect from the old media wiki</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Freeplane Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/freeplane/docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <ul>
+<li><a href="#quickstart-guide">Quickstart Guide</a>
+<ul>
+<li><a href="#installation--configuration">Installation / Configuration</a></li>
+<li><a href="#initial-checkout-clone">Initial checkout (&quot;clone&quot;)</a>
+<ul>
+<li><a href="#solution-1-with-git-bash">Solution 1: with Git Bash</a></li>
+<li><a href="#solution-2--with-eclipseegit">Solution 2 : with Eclipse/EGit</a></li>
+</ul>
+</li>
+<li><a href="#working-with-branches">Working with branches</a>
+<ul>
+<li><a href="#overview-of-structure-and-commands">Overview of structure and commands</a></li>
+<li><a href="#command-sequence-and-basic-steps">Command sequence and basic steps</a></li>
+<li><a href="#step-1-checkout-parent-branch">Step 1: checkout parent branch</a></li>
+<li><a href="#step-2-create-your-local-branch">Step 2: create your local branch</a></li>
+<li><a href="#step-3-work-locally-on-your-branch">Step 3: Work locally on your branch</a></li>
+<li><a href="#step-4-first-push-from-your-new-local-branch-to-the-repository">Step 4: First push from your new local branch to the repository</a></li>
+<li><a href="#step-5-development-cycles">Step 5: Development cycles</a></li>
+<li><a href="#step-6-merge-your-development-into-master">Step 6: Merge your development into master</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#how-tos">How to's</a>
+<ul>
+<li><a href="#checkout-in-more-detail">Checkout in more detail</a></li>
+<li><a href="#using-tags">Using Tags</a></li>
+<li><a href="#working-with-branches-1">Working with branches</a>
+<ul>
+<li><a href="#switch-to-another-branch">Switch to another branch</a></li>
+<li><a href="#how-to-create-a-new-branch">How to create a new branch</a></li>
+<li><a href="#rename-a-local-branch">Rename a local branch</a></li>
+<li><a href="#how-to-merge-local-branches">How to merge local branches</a>
+<ul>
+<li><a href="#fast-forward-merges-merge-nodes">Fast-Forward Merges (merge-nodes)</a></li>
+<li><a href="#merge-master-dev-branch-locally">Merge master-&gt;dev-branch locally</a></li>
+<li><a href="#merge-dev-branch-master-locally">Merge dev-branch-&gt;master locally</a></li>
+</ul>
+</li>
+<li><a href="#how-to-remove-a-branch">How to remove a branch</a></li>
+<li><a href="#check-whether-your-branches-are-set-up-correctly">Check whether your branches are set up correctly</a></li>
+<li><a href="#importing-a-remote-branch">Importing a remote branch</a></li>
+</ul>
+</li>
+<li><a href="#general-workflow">General workflow</a>
+<ul>
+<li><a href="#work-on-your-feature-branch">Work on your feature branch</a></li>
+<li><a href="#merging">Merging</a></li>
+</ul>
+</li>
+<li><a href="#miscellaneous">Miscellaneous</a>
+<ul>
+<li><a href="#revert-reset-files">Revert (reset) files</a></li>
+<li><a href="#undoingediting-commits">Undoing/editing commits</a></li>
+<li><a href="#undoing-a-commit-that-is-already-pushed">Undoing a commit that is already pushed</a></li>
+<li><a href="#avoid-entering-passwords-on-each-commit">Avoid entering passwords on each commit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Freeplane uses a <a href="http://en.wikipedia.org/wiki/Distributed_revision_control">distributed revision control</a> system named <em>git</em>. Use this instead of the source packages that are contained in the releases if you plan to take up coding.</p>
+<p>This is a guide to Working with freeplane's git repository. The first part
+covers the commands you need the most, while the second part (&quot;How to's&quot;)
+adds some commands for special tasks such as undoing commits or
+reverting files (currently there is some redundancy between the two which
+we will remove soon).</p>
+<p>At least one Freeplane developer learned to use git with the help of an excellent
+<a href="http://gitbu.ch/">German Open Source Press book on git</a>.</p>
+<p>You can (and probably want to) use eclipse for most operations. We try to
+explain this in each section, but it is a good idea to read the
+<a href="http://wiki.eclipse.org/EGit/User_Guide">EGit documentation</a>. Some operations,
+such as creating remote branches should be applied with the command line only
+(e.g. for publishing branches: in order to make sure that tracking branches are setup correctly).</p>
+<p>There is a <a href="http://www.youtube.com/watch?v=4XpnKHJAok8">fun Google Tech Talk</a>
+by Linus Torvalds on git and a <a href="http://vimeo.com/46010208">excellent introductory Git talk</a> by Jessica Kerr.</p>
+<h1 id="quickstart-guide"><a class="header" href="#quickstart-guide">Quickstart Guide</a></h1>
+<p>This section is meant to be as brief as possible while still explaining the
+necessary commands a bit so that you understand what you are doing.</p>
+<h2 id="installation--configuration"><a class="header" href="#installation--configuration">Installation / Configuration</a></h2>
+<p>Install git as <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">described here</a>.</p>
+<p>You probably want to use the latest Eclipse (make sure to get <em>Eclipse for RCP and RAP Developers</em>) with the EGit (Eclipse-git) plugin that is part of recent Eclipse builds. Although EGit comes with its own pure java git implementation <em>JGit</em>, we rely on a native git for some commands, so please install git as described above, too.</p>
+<p>After Git installation, you need to start Git Bash and run the following command line which first set the author details globally (which will be recorded for each changeset):</p>
+<pre><code class="language-shell">$ git config --global user.name &quot;&lt;Firstname&gt; &lt;Lastname&gt;&quot;
+$ git config --global user.email &quot;&lt;email address&gt;&quot;
+</code></pre>
+<h2 id="initial-checkout-clone"><a class="header" href="#initial-checkout-clone">Initial checkout (&quot;clone&quot;)</a></h2>
+<h3 id="solution-1-with-git-bash"><a class="header" href="#solution-1-with-git-bash">Solution 1: with Git Bash</a></h3>
+<p>Create a new directory named 'git' for git repositories:</p>
+<pre><code class="language-shell">$ cd $HOME
+$ mkdir git
+$ cd git
+</code></pre>
+<p>Create a local copy of the (whole!) git repository for Freeplane by <em>cloning</em> (git-speak for &quot;checking out&quot;):</p>
+<pre><code class="language-shell">$ git clone https://github.com/freeplane/freeplane.git
+</code></pre>
+<p>This will take 3-20 minutes depending on your network connection. </p>
+<p>Now you can quit Git console:</p>
+<pre><code class="language-shell">$ exit
+</code></pre>
+<p>A local copy of the complete history and all branches has been created. Therefore
+it is possible to develop and make commits offline and only connect
+for the purpose of getting changes from other devs (<em>pull</em>) or sending
+your commits to a remote branch (<em>push</em>).</p>
+<p>Continue with <em>Post-checkout operations</em> below!</p>
+<h3 id="solution-2--with-eclipseegit"><a class="header" href="#solution-2--with-eclipseegit">Solution 2 : with Eclipse/EGit</a></h3>
+<p>you can  clone the repository as follows</p>
+<ul>
+<li>
+<p>open the Java Perspective</p>
+</li>
+<li>
+<p>open the <em>Git Repositories View</em> (<em>Window&gt;Show View-&gt;Other...-&gt;Git-&gt;Git Repositories</em>)</p>
+</li>
+<li>
+<p>select the <em>Clone a Git repository</em> option with the URL: https://github.com/freeplane/freeplane.git</p>
+</li>
+<li>
+<p>enter credentials, <strong>choose all branches</strong> (!), accept the defaults or choose a different directory location (for the <em>local</em> copy of the repo), then check <em>import all existing projects after clone finishes</em>, hit <em>Finish</em> and be patient (should take &lt;10 minutes)</p>
+</li>
+<li>
+<p><strong>NOTE:</strong>: <em>import all existing projects after clone finishes</em> is not needed when using gradle</p>
+</li>
+<li>
+<p><strong>If you already have cloned the repository</strong> just import the projects to eclipse and execute Team-&gt;Share project-&gt;Git-&gt;Use or create repository in parent folder of project</p>
+</li>
+<li>
+<p><strong>Enable following renames in history views.</strong> By default history view does not follow changes resulting from renaming of classes or packages and moving of java classes to other packages. These features should be activated as follows:</p>
+<ul>
+<li>In Eclipse main menu: Window -&gt; Preferences -&gt; Team -&gt; Git -&gt; History, here you should enable option &quot;Follow Renames&quot; </li>
+<li>Using the command line set git option diff.renameLimit to some big number so that commits with big number of changes are properly processed either for the cloned repository or as a global setting:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-shell">$ git config diff.renameLimit 100000
+</code></pre>
+<p>You can change the both settings also from git configuration dialog under eclipse preferences.</p>
+<p><strong>Enable Git keyboard shortcuts.</strong> Funnily enough you have to give Git shortcuts some blessing before they work, see <a href="http://stackoverflow.com/a/12918446/1112408">this Stackoverflow</a> answer.</p>
+<h2 id="working-with-branches"><a class="header" href="#working-with-branches">Working with branches</a></h2>
+<!--
+Freeplane follows the general git convention to have prefixes separated from the name
+by a '/', i.e. 'docear/trunk'.
+-->
+<h3 id="overview-of-structure-and-commands"><a class="header" href="#overview-of-structure-and-commands">Overview of structure and commands</a></h3>
+<p>Below, you see the a general structure of branches as they are proposed for any Freeplane developer to use. The remote branch <em>origin/master</em> is the global master branch for any development aiming a release in an official version. Each developer may fork his own <em>origin/<devbranch></em> (just once) by forking the sources from <em>origin/master</em> using the respective Git web site function button. On the local <em>master</em>, the developer works out his functions, pushes them up to his <em>origin/<devbranch></em> and updates from <em>origin/master</em>. Using the depicted structure, even some GIT commands take an easy form (&quot;$ git push&quot; and &quot;$ git pull&quot; could be executed without further parameters).</p>
+<p><img src="../images/Nnako_UsageOfGit.gif" alt="Nnako_UsageOfGit.gif" title=":size=200" /></p>
+<pre><code>LEGEND
+- locations of branches and persons are depicted in BLACK,
+- possible activities are shown in BLUE text.
+- Each activity marked wirh a &quot;star&quot; can be performed by the code developer,
+- the &quot;boxed&quot; activities are performed by the admins.
+- UNDERLINED activities accord to GIT commands,
+- PLAIN activities describe ordinary tasks (e.g. for modification or building of code).
+</code></pre>
+<p>The main branch which was termed <em>trunk</em> in BAZAAR, is termed <em>master</em> in GIT. It holds all the Freeplane sources. For the Docear main branch, we use <em>docear/trunk</em>.  New (feature) branches should always be named <user>/<feature> or (if several devs are
+expected to work on a feature) just <feature>. Docear branches should accordingly be prefixed with <em>docear/</em>.</p>
+<h3 id="command-sequence-and-basic-steps"><a class="header" href="#command-sequence-and-basic-steps">Command sequence and basic steps</a></h3>
+<p>Here are the basic commands for working with branches. The diagram is given
+just as an overview,
+<em>read the step descriptions in the following sections before trying any git commands</em>.</p>
+<p><img src="../images/Git-steps.png" alt="" title=":size=x200" /></p>
+<ol>
+<li>The remote repository is cloned from origin (sourceforge). You now have a complete local copy of the repository including all branches and the complete history.</li>
+<li>The user creates (and checks out) a new <em>local</em> branch <em>user/newdev1</em>.</li>
+<li>This branch is created on the remote side too (pushed, with <em>-u</em> to setup the tracking correctly).</li>
+<li>After some development on that branch, you want to integrate this with changes in <em>master</em>. This is done by pulling from the remote master branch on origin.</li>
+<li>After having checked the merge (pull = fetch + merge), you push the integrated <em>user/newdev1</em> branch to its remote counterpart.</li>
+<li>You are done with development on <em>user/newdev1</em>. In order to merge your changes into <em>master</em>, you switch to the master branch (<em>git checkout master</em>) and update it (<em>git pull</em>).</li>
+<li>The local <em>user/newdev</em> branch is merged into the local <em>master</em> branch.</li>
+<li>After having checked the result of the merge, it is pushed to the <em>remote</em> <em>master</em> branch.</li>
+</ol>
+<p>In the following, development steps which roughly correspond to the commands
+above are described.</p>
+<h3 id="step-1-checkout-parent-branch"><a class="header" href="#step-1-checkout-parent-branch">Step 1: checkout parent branch</a></h3>
+<p>Find and checkout original source branch <em>'branchname</em> (the branch you want to base
+your work on, <strong>usually master</strong>) to the local work space.</p>
+<p>If your parent branch is not the master you should select it first</p>
+<ul>
+<li>Using command line git:</li>
+</ul>
+<pre><code class="language-shell"># fetches the remote (tracking) branch (not necessary if you just cloned the repo)
+$ git pull 
+# switch to **branchname**
+$ git checkout &lt;branchname&gt;
+</code></pre>
+<ul>
+<li>Using Eclipse/EGit, 
+<ul>
+<li><em>Team-&gt;fetch from upstream</em> fetches all remote branches (may not be necessary)</li>
+<li><em>Team-&gt;Switch To-&gt;New branch...</em>, select <em>Source ref = refs/remotes/origin/<branchname></em>,  <em>merge</em> and <em>checkout new branch</em></li>
+</ul>
+</li>
+</ul>
+<h3 id="step-2-create-your-local-branch"><a class="header" href="#step-2-create-your-local-branch">Step 2: create your local branch</a></h3>
+<p>Create + check out your own <em>local</em> branch based on the original branch:
+Since branches are really really cheap in git, it makes sense to create a branch
+for most development tasks (especially if you want a review before you integrate into master!).
+The following command creates a new local branch <devbranch> and switches to it:</p>
+<pre><code class="language-shell">$ git checkout -b &lt;devbranch&gt;
+</code></pre>
+<h3 id="step-3-work-locally-on-your-branch"><a class="header" href="#step-3-work-locally-on-your-branch">Step 3: Work locally on your branch</a></h3>
+<p>Please read <a href="http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository">chapter 2.2 of the official git book</a>
+in order to get started with working with git locally. You should understand how to stage and commit changes.
+Here are some basic steps:</p>
+<ul>
+<li>modify/add files...</li>
+<li>add the modifications to the <em>index</em>:</li>
+</ul>
+<pre><code class="language-shell">$ git add foo.java # (**Team-&gt;Add to index** in eclipse)
+</code></pre>
+<ul>
+<li>create a <em>commit</em> from the changes in the index:</li>
+</ul>
+<pre><code class="language-shell">$ git commit [-m message] # (**Team-&gt;Commit** in eclipse)
+</code></pre>
+<p>(if you omit -m then you will be prompted for a commit message)</p>
+<ul>
+<li>create more commits, this is all done locally!</li>
+<li>look at the commit graph:</li>
+</ul>
+<pre><code class="language-shell">$ git log # might want to use **gitk** as a graphical tool
+</code></pre>
+<p>Eclipse git is also able to do the local commits from the team menu</p>
+<h3 id="step-4-first-push-from-your-new-local-branch-to-the-repository"><a class="header" href="#step-4-first-push-from-your-new-local-branch-to-the-repository">Step 4: First push from your new local branch to the repository</a></h3>
+<p>Setup git so that only the current &quot;upstream&quot; branch gets pulled/pushed
+(instead of pushing <em>all</em> branches that have an upstream tracking branch
+which can be confusing!):</p>
+<pre><code class="language-shell">$ git config push.default tracking
+</code></pre>
+<p><strong>Note</strong>: this option is ignored by current EGit. On EGit you get the
+same behavior by selecting <em>Team-&gt;Push To Upstream</em>.</p>
+<p>Publish (&quot;push&quot;) your branch (including the commits you made) so that
+others can see (and review!) it.</p>
+<p><strong>NOTE: Run every push command with --dry-run first!!</strong></p>
+<p><strong>Currently it's best to do this on the command line, because <em>push -u</em> sets up the tracking branch properly.</strong>
+<em>Make sure you use the same name!</em> <em>Use --dry-run first</em>.</p>
+<pre><code class="language-shell">$ &lt;go to the local copy of the repo (&quot;$ cd $HOME/git/freeplane&quot;)&gt;
+$ git push -u origin &lt;devbranch&gt; [--dry-run]
+</code></pre>
+<p>You should see a message like:</p>
+<pre><code>Branch user/dev1 set up to track remote branch user/dev1 from origin.
+</code></pre>
+<p>(When pushing from eclipse you <strong>have to configure the remote tracking
+branch</strong> manually!). In any case (tracking branch configured
+automatically or manually), <em>Team-&gt;Push to Upstream</em> will push the current
+branch to its (configured) remote branch on origin.</p>
+<h3 id="step-5-development-cycles"><a class="header" href="#step-5-development-cycles">Step 5: Development cycles</a></h3>
+<p>Follow the cycle:
+Switch to the right branch (may not be necessary)</p>
+<pre><code class="language-shell">$ git checkout &lt;devbranch&gt; # **Team-&gt;Switch To-&gt;user/dev1** from EGit 
+</code></pre>
+<p>pull other people's changes on your devbranch (as a beginner you might want to do this on a copy of your repository first, it's all local!)</p>
+<pre><code class="language-shell">$ git pull # **Team-&gt;Pull** from EGit
+</code></pre>
+<p>(People recommend to use git fetch and git merge instead of git pull)</p>
+<p>you might have to resolve conflicts: (might want to use 'git mergetool'
+or <a href="http://wiki.eclipse.org/EGit/User_Guide#Resolving_a_merge_conflict">Eclipse/EGit</a> )
+git will place &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; and &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; comments to show the locations of the conflict(s)</p>
+<p>for each conflict x:</p>
+<ul>
+<li>resolve conflict in <em>x</em>, remove markers</li>
+<li>git add x # mark <em>x</em> as resolved</li>
+</ul>
+<p>to undo the merge you can use</p>
+<pre><code class="language-shell">$ git reset --hard # **Team-&gt;Reset...** in EGit
+</code></pre>
+<p><strong>but this will throw away all uncommitted changes(!)</strong></p>
+<ul>
+<li>commit the conflict resolution(s):</li>
+</ul>
+<pre><code class="language-shell">$ git commit [-m message] # **Team-&gt;Commit** in EGit
+</code></pre>
+<ul>
+<li>create local commits (see &quot;Step 3&quot;)</li>
+<li>merge changes from master (to integrate the latest code into your feature and to make Step 6 easier)</li>
+</ul>
+<pre><code class="language-shell">$ git pull origin master
+</code></pre>
+<ul>
+<li>merge changes from master with EGit: 
+<ul>
+<li><em>Team-&gt;Fetch from Upstream</em></li>
+<li><em>Team-&gt;Merge...</em>, select <em>origin/master</em></li>
+</ul>
+</li>
+<li>push the result of the merge with master to your remote dev branch (always run git push with --dry-run first!)</li>
+</ul>
+<pre><code class="language-shell">$ git push [--dry-run] # EGit: **Team-&gt;Push to Upstream**
+# (same as **git push origin &lt;devbranch&gt;** because tracking is set up)
+</code></pre>
+<h3 id="step-6-merge-your-development-into-master"><a class="header" href="#step-6-merge-your-development-into-master">Step 6: Merge your development into master</a></h3>
+<p>When you are done with your branch, and you have completed a code review of your dev branch, it should be merged into master (!) As a new developer, you <strong>must let a more experienced developer do this</strong>!</p>
+<pre><code class="language-shell">$ git checkout &lt;devbranch&gt; # Switch to &lt;devbranch&gt; in EGit
+$ git pull # **Team-&gt;Pull** in EGit
+$ git checkout master # Switch to **master** in EGit
+$ git pull # **Team-&gt;Pull** in EGit
+$ git merge &lt;devbranch&gt; # EGit: **Team-&gt;Merge...**, select **local** &lt;devbranch&gt;
+$ git push [--dry-run] # EGit: **Team-&gt;Push to Upstream**
+# (same as **git push origin master** because tracking is set up)
+</code></pre>
+<h1 id="how-tos"><a class="header" href="#how-tos">How to's</a></h1>
+<p>This section contains useful information for working with git, including stuff
+like checking that tracking branches are set up correctly, details about working
+with branches, undoing commits/reverting files, and a bit more.</p>
+<h2 id="checkout-in-more-detail"><a class="header" href="#checkout-in-more-detail">Checkout in more detail</a></h2>
+<p>Checking out is termed <tt>cloning</tt> in git speak:</p>
+<pre><code class="language-shell">$ cd ~
+$ mkdir git
+$ cd git
+$ git clone https://github.com/freeplane/freeplane.git freeplane
+</code></pre>
+<p>If you want/have read-only access, use this as the last command:</p>
+<pre><code class="language-shell">$ git clone git://github.com/freeplane/freeplane.git freeplane
+</code></pre>
+<p>However, this will only configure the <em>master</em> branch (named <em>trunk</em> in
+other VCS's such as svn) locally:</p>
+<pre><code class="language-shell">$ git branch -a
+* master
+remotes/origin/HEAD -&gt; origin/master
+remotes/origin/docear/trunk
+remotes/origin/master
+</code></pre>
+<p>In order to check out a branch (which is simply a reference to a commit)
+that currently only exists remotely (the <code>remotes/origin/*</code> references are
+called <em>remote tracking branches</em>), simply switch to that branch:</p>
+<pre><code class="language-shell">$ git checkout docear/trunk
+</code></pre>
+<p>This can be done more easily
+<a href="http://wiki.eclipse.org/EGit/User_Guide#Starting_from_existing_Git_Repositories">using Eclipse</a>.
+This page also describes how to import a repository into eclipse.</p>
+<h2 id="using-tags"><a class="header" href="#using-tags">Using Tags</a></h2>
+<p>Show all tags:</p>
+<pre><code class="language-shell">$ git tag
+</code></pre>
+<p>Search for a tag:</p>
+<pre><code class="language-shell">$ git tag -l &quot;release-1.1*&quot;
+</code></pre>
+<p>Show information about a tag:</p>
+<pre><code class="language-shell">$ git show release-1.1.2
+</code></pre>
+<p>Define a tag locally:</p>
+<pre><code class="language-shell">$ git tag -a &lt;tagname&gt;
+# (an editor opens for you to add a description)
+</code></pre>
+<p>Tags are not automatically transferred when doing a <code>git push</code>,
+you have to push individually:</p>
+<pre><code class="language-shell">$ git push origin &lt;tagname&gt;
+</code></pre>
+<p>or push <em>all</em> tags:</p>
+<pre><code class="language-shell">$ git push --tags origin
+</code></pre>
+<p>You <em>might</em> need a</p>
+<pre><code class="language-shell">$ git pull --tags
+</code></pre>
+<p>to get all tags. See git-fetch(1) for situations when you will need this (rarely).</p>
+<p>TODO: sign tags?</p>
+<h2 id="working-with-branches-1"><a class="header" href="#working-with-branches-1">Working with branches</a></h2>
+<p>Branches are very central to git. Do not hesitate to create feature, team
+and (of course) maintenance branches.</p>
+<p>You probably want set push.default to <em>tracking</em> or <em>upstream</em> which
+makes sure that <em>only the current branch</em> is pushed to its <strong>upstream
+branch</strong> (and NOT all configured branches):
+<strong>Note</strong>: this option is ignored by current EGit. On EGit you get the
+same behavior by selecting <em>Team-&gt;Push To Upstream</em>.</p>
+<pre><code class="language-shell">$ git config push.default tracking
+</code></pre>
+<p>(you can equivalently set this to <em>upstream</em> in recent git versions).</p>
+<h3 id="switch-to-another-branch"><a class="header" href="#switch-to-another-branch">Switch to another branch</a></h3>
+<pre><code class="language-shell">$ git checkout &lt;branchname&gt;
+</code></pre>
+<p>(<code>Team-&gt;Switch To-&gt;...</code> in Eclipse)</p>
+<h3 id="how-to-create-a-new-branch"><a class="header" href="#how-to-create-a-new-branch">How to create a new branch</a></h3>
+<p>New (feature) branches should be named <code><user>/<feature></code>
+or (if several devs work on a feature): <code><feature></code>.</p>
+<pre><code class="language-shell"># commit everything that should go into the new branch
+$ git status
+$ git add &lt;file&gt;
+[...]
+$ git commit -m &quot;my changes&quot;
+
+# create new branch locally
+$ git checkout -b &lt;newbranch&gt;
+
+# check commit log to see that above commit is in there
+$ git log
+
+# new branch must be visible and selected:
+$ git branch -a  
+
+# (make sure that the name of the new branch is correct! it is diffcult/impossible
+#  to rename published branches!)
+
+# create branch remotely, use -u to automatically configure upstream location
+$ git push -u origin &lt;newbranch&gt;
+# this should output something like this:
+**Branch &lt;newbranch&gt; set up to track remote branch &lt;newbranch&gt; from origin.**
+# (**'Note**': -u is important if you want to use git pull/push without
+specifying a remote/refspec)
+
+# remote branch of &lt;newbranch&gt; must be visible:
+$ git branch -a
+</code></pre>
+<p>So the short story is:</p>
+<pre><code class="language-shell">$ git checkout -b &lt;newbranch&gt;
+$ git push -u origin &lt;newbranch&gt;
+</code></pre>
+<h3 id="rename-a-local-branch"><a class="header" href="#rename-a-local-branch">Rename a <em>local</em> branch</a></h3>
+<pre><code class="language-shell">$ git branch -m &lt;old-branch-name&gt; &lt;new-branch-name&gt;
+</code></pre>
+<p>TODO: how to rename the remote tracking branch =&gt; difficult!!</p>
+<h3 id="how-to-merge-local-branches"><a class="header" href="#how-to-merge-local-branches">How to merge local branches</a></h3>
+<pre><code class="language-shell">$ git checkout &lt;destination_branch&gt;
+$ git merge &lt;source_branch&gt;
+</code></pre>
+<p>If you want to abort a merge (revert the working directory to the state
+before the merge command), do this:</p>
+<pre><code class="language-shell">$ git reset --hard
+</code></pre>
+<p>(WARNING: this will remove all uncommitted changes!!)</p>
+<p>In eclipse, this can be achieved by:</p>
+<ul>
+<li>Team-&gt;Switch To and choose &lt;destination_branch&gt;</li>
+<li>Team-&gt;Merge... and choose &lt;source_branch&gt;</li>
+</ul>
+<p>In Eclipse, you may have to refresh all projects (F5) if a branch
+has been added/modified/deleted via the command line.</p>
+<h4 id="fast-forward-merges-merge-nodes"><a class="header" href="#fast-forward-merges-merge-nodes">Fast-Forward Merges (merge-nodes)</a></h4>
+<p>Often the creation of a merge commit (merge node) is not necessary,
+and <code>git merge</code> uses a <em>fast-forward</em> merge, omitting
+the merge node:</p>
+<pre><code class="language-shell">$ git merge foo
+Updating 9e9a63a..732b657
+Fast-forward
+testfoo.txt |    1 +
+1 file changed, 1 insertion(+)
+create mode 100644 testfoo.txt
+</code></pre>
+<p>results in:</p>
+<pre><code class="language-shell">* 732b657 commit in branch foo
+* [...]
+</code></pre>
+<p>Using the option <code>--no-ff</code> you can force git to create a merge
+node even if isn't absolutely necessary (<em>non-fast-forward</em> merge):</p>
+<pre><code class="language-shell">$ git merge --no-ff foo2
+Merge made by the 'recursive' strategy.
+testfoo2.txt |    1 +
+1 file changed, 1 insertion(+)
+create mode 100644 testfoo2.txt
+</code></pre>
+<p>which will result in:</p>
+<pre><code class="language-shell">*   3890bc8 (HEAD, master) Merge branch 'foo2'
+|\  
+| * 6bc24c5 (foo2) commit on foo2
+|/  
+* 
+* [...]
+</code></pre>
+<p>This is useful when merging feature branches because it clearly shows
+the integration of a new feature. On the other hand, many merge nodes
+make the commit graph less readable.</p>
+<h4 id="merge-master-dev-branch-locally"><a class="header" href="#merge-master-dev-branch-locally">Merge master-&gt;dev-branch <em>locally</em></a></h4>
+<pre><code class="language-shell">$ git checkout &lt;devbranch&gt;
+$ git merge master
+</code></pre>
+<h4 id="merge-dev-branch-master-locally"><a class="header" href="#merge-dev-branch-master-locally">Merge dev-branch-&gt;master <em>locally</em></a></h4>
+<pre><code class="language-shell">$ git checkout master
+$ git merge &lt;devbranch&gt;
+</code></pre>
+<h3 id="how-to-remove-a-branch"><a class="header" href="#how-to-remove-a-branch">How to remove a branch</a></h3>
+<pre><code class="language-shell"># remove branch locally
+# (use -D instead if you want to delete a branch that is not fully merged into HEAD!)
+$ git branch -d &lt;branchname&gt;
+</code></pre>
+<p>You can do this with EGit using <em>Team-&gt;Advanced-&gt;Delete Branch...</em>.</p>
+<p>If you accidentally deleted a (local) branch, you can recover it by
+starting a new branch from the location that <code>git branch -d <branchname></code>
+echoed (or by searching for the last commit on that branch in <code>git reflog</code>):</p>
+<pre><code class="language-shell">$ git branch -D foo
+Deleted branch foo (was 732b657).
+$ git branch foo 732b657
+</code></pre>
+<p>(remember that branches are simply pointers to commits)</p>
+<p><strong>Warning</strong>: this only works if the delete was quite recent as orphaned
+commits will be deleted after some time!</p>
+<p>Delete a remote branch(!):</p>
+<pre><code class="language-shell">$ git push origin --delete &lt;branchname&gt;
+</code></pre>
+<p>Now the local and the remote tracking branch should be gone:</p>
+<pre><code class="language-shell">$ git branch -a
+docear/trunk
+* master
+remotes/origin/docear/trunk
+remotes/origin/master
+</code></pre>
+<p>NOTE: The <em>stale</em> branch will still exist in other checkouts, until you
+do a:</p>
+<pre><code class="language-shell">$ git remote prune origin
+</code></pre>
+<p>in that other checkout. TODO: but it still exists there as a local branch!</p>
+<h3 id="check-whether-your-branches-are-set-up-correctly"><a class="header" href="#check-whether-your-branches-are-set-up-correctly">Check whether your branches are set up correctly</a></h3>
+<p>Make sure your branches are set up correctly for push/pull:</p>
+<pre><code class="language-shell">$ git remote show origin
+* remote origin
+Fetch URL: https://github.com/freeplane/freeplane.git
+Push  URL: https://github.com/freeplane/freeplane.git
+HEAD branch: master
+Remote branches:
+docear/trunk tracked
+master       tracked
+Local branches configured for 'git pull':
+docear/trunk merges with remote docear/trunk
+master       merges with remote master
+Local refs configured for 'git push':
+docear/trunk pushes to docear/trunk (up to date)
+master       pushes to master       (up to date)
+</code></pre>
+<h3 id="importing-a-remote-branch"><a class="header" href="#importing-a-remote-branch">Importing a remote branch</a></h3>
+<p>Using command line git:</p>
+<pre><code class="language-shell">$ git pull # fetches the remote (tracking) branch
+$ git checkout &lt;branchname&gt;
+</code></pre>
+<p>Using Eclipse/EGit:</p>
+<ul>
+<li><em>Team-&gt;Pull</em> fetches the remote (tracking) branch</li>
+<li><em>Team-&gt;Switch To-&gt;New branch...</em>, select <em>Source ref = refs/remotes/origin/<name></em></li>
+</ul>
+<h2 id="general-workflow"><a class="header" href="#general-workflow">General workflow</a></h2>
+<p>Create a dev branch (see section on creating branches above).</p>
+<h3 id="work-on-your-feature-branch"><a class="header" href="#work-on-your-feature-branch">Work on your feature branch</a></h3>
+<pre><code class="language-shell"># switch to feature branch
+$ git checkout &lt;feature&gt;
+
+# fetch and merge changes (in case another dev works on this)
+$ git pull
+
+# you might have to resolve conflicts: (might want to use 'git mergetool'
+# or [http://wiki.eclipse.org/EGit/User_Guide#Resolving_a_merge_conflict Eclipse/EGit])
+for each conflict x:
+1. resolve conflict in x, remove markers
+2. git add x # mark as resolved
+# commit the conflict resolution(s)
+$ git commit
+
+$ git add ...
+$ git commit
+[...]
+
+# This will push commits to the remote branch that is tracked
+# make sure that push.default=tracking|upstream (see above),
+# otherwise other branches will be pushed as well!
+$ git push [--dry-run]
+</code></pre>
+<h3 id="merging"><a class="header" href="#merging">Merging</a></h3>
+<p>Merge master -&gt; <devbranch> (see section on merging above) every
+once-in-a-while.</p>
+<p>After a final code review (on your dev branch), merge <devbranch> -&gt;
+master (see section on merging above).</p>
+<h2 id="miscellaneous"><a class="header" href="#miscellaneous">Miscellaneous</a></h2>
+<h3 id="revert-reset-files"><a class="header" href="#revert-reset-files">Revert (reset) files</a></h3>
+<pre><code class="language-shell">git checkout &lt;filename&gt;
+</code></pre>
+<p>In EGit do this: Right-click on file -&gt; Replace With -&gt; HEAD Revision</p>
+<p>Revert all files in working copy (!):</p>
+<pre><code class="language-shell">git reset --hard
+</code></pre>
+<h3 id="undoingediting-commits"><a class="header" href="#undoingediting-commits">Undoing/editing commits</a></h3>
+<p>TODO: how to remove/edit a commit locally using rebase.</p>
+<h3 id="undoing-a-commit-that-is-already-pushed"><a class="header" href="#undoing-a-commit-that-is-already-pushed">Undoing a commit that is already pushed</a></h3>
+<p>Use <code>git revert <commit-hash></code>, like this:</p>
+<pre><code class="language-shell">$ git revert b1e9b4c9755b091f95aaa3035aca04dcb02ec1fd
+</code></pre>
+<p>This will generate an inverse commit, it will <em>not</em> remove the original commit:</p>
+<pre><code class="language-shell">* 171881e (HEAD, master) Revert &quot;a simple commit&quot;
+* b1e9b4c a simple commit
+</code></pre>
+<h3 id="avoid-entering-passwords-on-each-commit"><a class="header" href="#avoid-entering-passwords-on-each-commit">Avoid entering passwords on each commit</a></h3>
+<p>At least if you use the command line git interface you should consider to deposit your public ssh key at github. See the <a href="https://help.github.com/categories/56/articles">section about ssh configuration</a> on github.</p>
+<!-- ({Category:Coding}) -->
+<footer id="open-on-gh">Found a mistake? <a href="https://github.com/freeplane/docs/edit/main/src/docs/coding/Git_howto.md">Edit this page on GitHub.</a></footer>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../scripting/Security_considerations.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../coding/Git_howto.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../scripting/Security_considerations.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../coding/Git_howto.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

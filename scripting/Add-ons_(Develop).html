@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Add-ons (Development) - Freeplane Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../open-in.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><li class="part-title">User guide</li><li class="chapter-item "><a href="../home.html"><strong aria-hidden="true">1.</strong> Home</a></li><li class="chapter-item "><a href="../how-to-get-help.html"><strong aria-hidden="true">2.</strong> How to get help</a></li><li class="chapter-item "><a href="../getting-started/getting-started.html"><strong aria-hidden="true">3.</strong> Getting started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../getting-started/Distributions.html"><strong aria-hidden="true">3.1.</strong> Distributions</a></li><li class="chapter-item "><a href="../getting-started/Command-line_options_and_configuration.html"><strong aria-hidden="true">3.2.</strong> Command-line options and configuration</a></li><li class="chapter-item "><a href="../getting-started/Add-ons_(install).html"><strong aria-hidden="true">3.3.</strong> Extend with add-ons</a></li></ol></li><li class="chapter-item "><a href="../user-documentation/first-steps.html"><strong aria-hidden="true">4.</strong> User documentation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../user-documentation/first-steps.html"><strong aria-hidden="true">4.1.</strong> First steps</a></li><li class="chapter-item "><a href="../user-documentation/working-w-mindmap-files.html"><strong aria-hidden="true">4.2.</strong> Working with mindmap files</a></li><li class="chapter-item "><a href="../user-documentation/formatting-maps-and-nodes.html"><strong aria-hidden="true">4.3.</strong> Formatting maps and nodes</a></li><li class="chapter-item "><a href="../user-documentation/styles.html"><strong aria-hidden="true">4.4.</strong> Styles</a></li><li class="chapter-item "><a href="../user-documentation/templates.html"><strong aria-hidden="true">4.5.</strong> Templates</a></li><li class="chapter-item "><a href="../user-documentation/css-for-html-or-markdown.html"><strong aria-hidden="true">4.6.</strong> CSS for HTML/Markdown</a></li><li class="chapter-item "><a href="../user-documentation/Conditional_node_styles.html"><strong aria-hidden="true">4.7.</strong> Conditional node styles</a></li><li class="chapter-item "><a href="../user-documentation/LaTeX_in_Freeplane.html"><strong aria-hidden="true">4.8.</strong> LaTeX in Freeplane</a></li><li class="chapter-item "><a href="../user-documentation/Spell_checker.html"><strong aria-hidden="true">4.9.</strong> Spell checker</a></li><li class="chapter-item "><a href="../user-documentation/Relationship_to_FreeMind.html"><strong aria-hidden="true">4.10.</strong> Relationship to FreeMind</a></li><li class="chapter-item "><a href="../user-documentation/other-docs-tutorials.html"><strong aria-hidden="true">4.11.</strong> References to other known documentation/tutorial sites</a></li></ol></li><li class="chapter-item "><a href="../contribute/contribute.html"><strong aria-hidden="true">5.</strong> Contribute</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../contribute/Translation_How-To.html"><strong aria-hidden="true">5.1.</strong> Translation How-To</a></li><li class="chapter-item "><a href="../contribute/Contributing_to_Freeplane's_Development.html"><strong aria-hidden="true">5.2.</strong> Contributing to Freeplane's Development</a></li></ol></li><li class="chapter-item expanded "><a href="../scripting/Scripting.html"><strong aria-hidden="true">6.</strong> Scripting</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../scripting/Formulas.html"><strong aria-hidden="true">6.1.</strong> Formulas</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../scripting/Formulas.html"><strong aria-hidden="true">6.1.1.</strong> Formulas</a></li><li class="chapter-item "><a href="../scripting/Scripting!_Script_filter.html"><strong aria-hidden="true">6.1.2.</strong> Formula filter</a></li></ol></li><li class="chapter-item "><a href="../scripting/Scripting_Cheatsheet.html"><strong aria-hidden="true">6.2.</strong> Scripting Cheatsheet</a></li><li class="chapter-item "><a href="../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.</strong> Scripts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.1.</strong> Scripts collection</a></li><li class="chapter-item "><a href="../scripting/Scripting_text_editing.html"><strong aria-hidden="true">6.3.2.</strong> Scripts for text editing</a></li><li class="chapter-item "><a href="../scripting/Example_scripts_using_external_libraries.html"><strong aria-hidden="true">6.3.3.</strong> Scripts using external libraries</a></li><li class="chapter-item "><a href="../scripting/Script_incubator.html"><strong aria-hidden="true">6.3.4.</strong> Script incubator</a></li><li class="chapter-item "><a href="../scripting/Scripting!_Jython.html"><strong aria-hidden="true">6.3.5.</strong> Scripting! Jython</a></li><li class="chapter-item "><a href="../scripting/Scripting_environment_setup.html"><strong aria-hidden="true">6.3.6.</strong> Scripting environment setup</a></li></ol></li><li class="chapter-item "><a href="../scripting/Export_Using_XSLT.html"><strong aria-hidden="true">6.4.</strong> XSLT for export/import</a></li><li class="chapter-item expanded "><a href="../scripting/Add-ons_(Develop).html" class="active"><strong aria-hidden="true">6.5.</strong> Add-ons (Development)</a></li><li class="chapter-item "><a href="../scripting/Security_considerations.html"><strong aria-hidden="true">6.6.</strong> Security considerations</a></li></ol></li><li class="chapter-item "><a href="../coding/Git_howto.html"><strong aria-hidden="true">7.</strong> Coding</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../coding/Git_howto.html"><strong aria-hidden="true">7.1.</strong> Git howto</a></li><li class="chapter-item "><a href="../coding/How_to_build_Freeplane.html"><strong aria-hidden="true">7.2.</strong> How to build Freeplane</a></li><li class="chapter-item "><a href="../coding/IDE_setup.html"><strong aria-hidden="true">7.3.</strong> IDE setup</a></li><li class="chapter-item "><a href="../coding/Plugin_development.html"><strong aria-hidden="true">7.4.</strong> Plugin development</a></li></ol></li><li class="chapter-item "><li class="part-title">Attic</li><li class="chapter-item "><a href="../attic/home.html"><strong aria-hidden="true">8.</strong> Attic (draft documents)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.</strong> Old MediaWiki content</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.1.</strong> Old Home</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Approximate_search.html"><strong aria-hidden="true">8.1.2.</strong> Approximate search</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Architecture.html"><strong aria-hidden="true">8.1.3.</strong> Architecture</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Batch_Jobs.html"><strong aria-hidden="true">8.1.4.</strong> Batch Jobs</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Contributors.html"><strong aria-hidden="true">8.1.5.</strong> Contributors</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Current_Freeplane_File_Format.html"><strong aria-hidden="true">8.1.6.</strong> Current Freeplane File Format</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Data_recognition_and_data_formats.html"><strong aria-hidden="true">8.1.7.</strong> Data recognition and data formats</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Debugging_scripts.html"><strong aria-hidden="true">8.1.8.</strong> Debugging scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Document_Format.html"><strong aria-hidden="true">8.1.9.</strong> Document Format</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Edit_scripts_in_Eclipse.html"><strong aria-hidden="true">8.1.10.</strong> Edit scripts in Eclipse</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/External_objects.html"><strong aria-hidden="true">8.1.11.</strong> External objects</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/External_script_file_execution.html"><strong aria-hidden="true">8.1.12.</strong> External script file execution</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/FAQ.html"><strong aria-hidden="true">8.1.13.</strong> FAQ</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Fixed_security_vulnerabilities.html"><strong aria-hidden="true">8.1.14.</strong> Fixed security vulnerabilities</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/FreeMind_0.9.0_-_Freeplane_1.1.x.html"><strong aria-hidden="true">8.1.15.</strong> FreeMind 0.9.0 - Freeplane 1.1.x</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane2PowerPoint.html"><strong aria-hidden="true">8.1.16.</strong> Freeplane2PowerPoint</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_Extensions.html"><strong aria-hidden="true">8.1.17.</strong> Freeplane Tutorial Extensions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Screenshots.html"><strong aria-hidden="true">8.1.18.</strong> Freeplane Tutorial How-to Screenshots</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Video.html"><strong aria-hidden="true">8.1.19.</strong> Freeplane Tutorial How-to Video</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Wiki!Administrators.html"><strong aria-hidden="true">8.1.20.</strong> Freeplane Wiki!Administrators</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_and_problem_solving.html"><strong aria-hidden="true">8.1.21.</strong> Freeplane and problem solving</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_features_you_were_missing_in_FreeMind.html"><strong aria-hidden="true">8.1.22.</strong> Freeplane features you were missing in FreeMind</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_for_Windows_Mobile.html"><strong aria-hidden="true">8.1.23.</strong> Freeplane for Windows Mobile</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_installation_for_Ubuntu_OS.html"><strong aria-hidden="true">8.1.24.</strong> Freeplane installation for Ubuntu OS</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Get_the_code.html"><strong aria-hidden="true">8.1.25.</strong> Get the code</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Goals.html"><strong aria-hidden="true">8.1.26.</strong> Goals</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Groovy_scripts_and_formulas_can_escape_sandbox.html"><strong aria-hidden="true">8.1.27.</strong> Groovy scripts and formulas can escape sandbox</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Harmonizing_FP-menu.html"><strong aria-hidden="true">8.1.28.</strong> Harmonizing FP-menu</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help!Contents.html"><strong aria-hidden="true">8.1.29.</strong> Help!Contents</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help!Editing.html"><strong aria-hidden="true">8.1.30.</strong> Help!Editing</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help_Previous_Freeplane_Versions.html"><strong aria-hidden="true">8.1.31.</strong> Help Previous Freeplane Versions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/How_to_publish_add-ons.html"><strong aria-hidden="true">8.1.32.</strong> How to publish add-ons</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/How_to_test.html"><strong aria-hidden="true">8.1.33.</strong> How to test</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Information_management_with_Freeplane_add-on_dView(indexfile).html"><strong aria-hidden="true">8.1.34.</strong> Information management with Freeplane add-on dView(indexfile)</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Init_scripts.html"><strong aria-hidden="true">8.1.35.</strong> Init scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Japanese.html"><strong aria-hidden="true">8.1.36.</strong> Japanese</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Linux.html"><strong aria-hidden="true">8.1.37.</strong> Linux</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Logo_and_splashscreen.html"><strong aria-hidden="true">8.1.38.</strong> Logo and splashscreen</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Macintosh.html"><strong aria-hidden="true">8.1.39.</strong> Macintosh</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Map_local_scripts.html"><strong aria-hidden="true">8.1.40.</strong> Map local scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Map_templates.html"><strong aria-hidden="true">8.1.41.</strong> Map templates</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Menus_and_commands.html"><strong aria-hidden="true">8.1.42.</strong> Menus and commands</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Mind_map_gallery.html"><strong aria-hidden="true">8.1.43.</strong> Mind map gallery</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_Freeplane_File_Format_(Proposal).html"><strong aria-hidden="true">8.1.44.</strong> New Freeplane File Format (Proposal)</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_features_in_Freeplane_1.2.html"><strong aria-hidden="true">8.1.45.</strong> New features in Freeplane 1.2</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_features_in_Freeplane_1.3.html"><strong aria-hidden="true">8.1.46.</strong> New features in Freeplane 1.3</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/OSGI_based_plug-ins.html"><strong aria-hidden="true">8.1.47.</strong> OSGI based plug-ins</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Patterns.html"><strong aria-hidden="true">8.1.48.</strong> Patterns</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Portable_Freeplane.html"><strong aria-hidden="true">8.1.49.</strong> Portable Freeplane</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Release_cycle.html"><strong aria-hidden="true">8.1.50.</strong> Release cycle</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Release_smoke_test.html"><strong aria-hidden="true">8.1.51.</strong> Release smoke test</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Rules_to_build_user_friendly_menus.html"><strong aria-hidden="true">8.1.52.</strong> Rules to build user friendly menus</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_API_Changes.html"><strong aria-hidden="true">8.1.53.</strong> Scripting! API Changes</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Freeplane_Utility_Classes.html"><strong aria-hidden="true">8.1.54.</strong> Scripting! Freeplane Utility Classes</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Included_libraries.html"><strong aria-hidden="true">8.1.55.</strong> Scripting! Included libraries</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Other_languages.html"><strong aria-hidden="true">8.1.56.</strong> Scripting! Other languages</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Update_Freeplane's_Groovy_version.html"><strong aria-hidden="true">8.1.57.</strong> Scripting! Update Freeplane's Groovy version</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting_API.html"><strong aria-hidden="true">8.1.58.</strong> Scripting API</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Support.html"><strong aria-hidden="true">8.1.59.</strong> Support</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Think_Tank.html"><strong aria-hidden="true">8.1.60.</strong> Think Tank</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Translation_nl.html"><strong aria-hidden="true">8.1.61.</strong> Translation nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Troubleshooting.html"><strong aria-hidden="true">8.1.62.</strong> Troubleshooting</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Tutorial_Freeplane_How-to_nl.html"><strong aria-hidden="true">8.1.63.</strong> Tutorial Freeplane How-to nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Tutorial_Freeplane_nl.html"><strong aria-hidden="true">8.1.64.</strong> Tutorial Freeplane nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/User_icons.html"><strong aria-hidden="true">8.1.65.</strong> User icons</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Videos_and_animations_How-to.html"><strong aria-hidden="true">8.1.66.</strong> Videos and animations How-to</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Visions.html"><strong aria-hidden="true">8.1.67.</strong> Visions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Wish_List.html"><strong aria-hidden="true">8.1.68.</strong> Wish List</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/XML_External_Entity_vulnerability_in_map_parser.html"><strong aria-hidden="true">8.1.69.</strong> XML External Entity vulnerability in map parser</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Your_own_utility_script_library.html"><strong aria-hidden="true">8.1.70.</strong> Your own utility script library</a></li></ol></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.</strong> New wiki initiative</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.1.</strong> customizing-freeplane</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/freeplane-api-groovy.html"><strong aria-hidden="true">8.2.2.</strong> freeplane-api-groovy</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/glossary.html"><strong aria-hidden="true">8.2.3.</strong> glossary</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/introduction-aka-many-unsorted-ideas-related-to-freeplane.html"><strong aria-hidden="true">8.2.4.</strong> introduction-aka-many-unsorted-ideas-related-to-freeplane</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/understanding-interface.html"><strong aria-hidden="true">8.2.5.</strong> understanding-interface</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/understanding-nodes.html"><strong aria-hidden="true">8.2.6.</strong> understanding-nodes</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">Special pages</li><li class="chapter-item "><a href="../after-redirect.html"><strong aria-hidden="true">9.</strong> After redirect from the old media wiki</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Freeplane Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/freeplane/docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <ul>
+<li><a href="#preparations">Preparations</a>
+<ul>
+<li><a href="#install-developer-tools">Install developer tools</a></li>
+<li><a href="#editors-build-tools-ides">Editors, build tools, IDEs</a></li>
+</ul>
+</li>
+<li><a href="#steps-towards-your-own-add-on">Steps towards your own add-on</a></li>
+<li><a href="#script-configuration">Script configuration</a>
+<ul>
+<li><a href="#menulocations">menuLocations</a></li>
+</ul>
+</li>
+<li><a href="#adding-jars-and-class-files">Adding JARs and class files</a>
+<ul>
+<li><a href="#creating-libraries">Creating Libraries</a></li>
+</ul>
+</li>
+<li><a href="#translations">Translations</a>
+<ul>
+<li><a href="#adding-new-languages">Adding new languages</a></li>
+</ul>
+</li>
+<li><a href="#add-ons-may-have-their-own-preferences">Add-ons may have their own preferences</a>
+<ul>
+<li><a href="#preferencesxml">preferences.xml</a></li>
+<li><a href="#defaultproperties">default.properties</a></li>
+<li><a href="#translation-of-preference-entries">Translation of preference entries</a></li>
+<li><a href="#access-the-variables">Access the variables</a></li>
+</ul>
+</li>
+<li><a href="#publish">Publish</a></li>
+<li><a href="#worked-out-example">Worked out example</a></li>
+</ul>
+<p>This page gives instructions for developing <a href="../getting-started/Add-ons_(install).html">Freeplane add-ons</a>.</p>
+<p>Freeplane is built from modules called &quot;plugins&quot; like the Scripting, Formula or LaTeX plugin, ... Add-ons are a more light-weight extension mechanism than plugins. There are several add-ons that don't need any programming know-how, but depending on the purpose of your add-on you might have to write <a href="Scripting.html">scripts</a>. Scripts can be organized in a special lib where they are compiled automatically when Freeplane is run, see <a href="Your_own_utility_script_library.html">wiki</a>.</p>
+<p>Add-ons are installed in the Freeplane user directory (see <em>Tools &gt; Open user directory</em>). They may contain any number of scripts and Zip archives which are unpacked on installation. Combinations of scripts and Zips are especially interesting since they enable you to package scripts with required libraries/JARs/class files. For instance it's possible to bundle some Groovy scripts for creating diagrams with the JFreechart library - so there's no need to download and install the JFreechart libraries anymore. Another applications are custom Java libraries that provide additional functionality for use in formulas. See <a href="Adding_JARs_and_class_files.html">Adding JARs and class files</a> on how to handle these cases.</p>
+<p><strong>Note:</strong> You will find th most current documentation of the add-on file format as comments in the add-on map itself after it has been updated by the &quot;Check Add-on&quot; tool.</p>
+<h2 id="preparations"><a class="header" href="#preparations">Preparations</a></h2>
+<h3 id="install-developer-tools"><a class="header" href="#install-developer-tools">Install developer tools</a></h3>
+<p>Update to the most recent Freeplane version and install the <a href="../getting-started/Add-ons_(install).html#-developer-tools">Developer Tools</a> from the Add-ons page (follow the installation instructions there). The add-on provides scripts that relieves you from most of the tedious work. If you experience any problems with it in the future first check if you actually have the most recent add-on version installed.</p>
+<p>The add-on functions are available in: <em>Tools &gt; Developer tools</em></p>
+<h3 id="editors-build-tools-ides"><a class="header" href="#editors-build-tools-ides">Editors, build tools, IDEs</a></h3>
+<p>If you are considering to create scripts as part of your add-on you it's advisable to <a href="Scripting_environment_setup.html">set up an integrated scripting environment</a>. If you have 250 MB spare disk space do it. - It will pay-off soon.
+There is a gradle plug-in which makes development and IDE integration easier. You find it at https://github.com/freeplane/gradle-plugin.</p>
+<h2 id="steps-towards-your-own-add-on"><a class="header" href="#steps-towards-your-own-add-on">Steps towards your own add-on</a></h2>
+<p>The goal of the example add-on is to put:</p>
+<ol>
+<li>an existing script <tt>myCoolScript.groovy</tt> in <tt><freeplaneuserdir>/script/myCoolScript.groovy</tt>; and</li>
+<li>an icon <tt>mycoolicon.png</tt> in <tt><freeplaneuserdir>/icons/mycoolicon.png</tt>.</li>
+</ol>
+<p>The steps to follow are:</p>
+<ol>
+<li>In Freeplane create a new empty map by <em>Ctrl+n</em>.</li>
+<li>Invoke <em>Tools &gt; Developer Tools &gt; Build add-on</em>. You will be asked for the name of your add-on. Answer <em>My Cool Add-on</em></li>
+<li>Look through the messages in the info box that is shown if everything looks alright. The <em>name</em> attribute of the root node will be <em>myCoolAddOn</em>. This is the identifying technical name of the add-on that is usually used as a file name, for menu locations and translation keys and so on. The node text <em>My Cool Add-on</em> is the English name/translation of the add-on.</li>
+<li>Set the version attribute of the root node to <tt>v0.1</tt> and fill the other attributes of the root node (only <em>freeplaneVersionTo</em> is optional).</li>
+<li>Write an initial description of the add-on as a child node of the <em>description</em> node.</li>
+<li>Create a new directory somewhere with the technical name of the add-on, <tt>myCoolAddOn</tt>.</li>
+<li>Save the new map to <tt>myCoolAddOn/myCoolAddOn.mm</tt>.</li>
+<li>Copy or move <tt>myCoolScript.groovy</tt> to <tt>myCoolAddOn/scripts/myCoolScript.groovy</tt>.</li>
+<li>In the map create a new subnode of the <em>scripts</em> node with name <em>myCoolScript.groovy</em>.</li>
+<li>Copy <tt>mycoolicon.png</tt> to <tt>zips/icons/mycoolicon.png</tt>.</li>
+<li>In the map create a new subnode of the <em>zips</em> node with name <em>icons</em>.</li>
+<li>Invoke <em>Tools &gt; Developer Tools &gt; Build add-on</em> again. This will add the required attributes of the script node and proposes proper <em>deinstall</em> rules (just accept them when you are asked for it).</li>
+<li>Fill the attributes of the <em>myCoolScript.groovy</em> node. The notes on the <em>scripts</em> node will help you to find the right attribute values. See also the section about <tt>menuLocation</tt> below.</li>
+<li>Save the map.</li>
+<li>Invoke <em>Tools &gt; Developer Tools &gt; Package add-on for publication</em>. This will create the file <tt>myCoolAddOn-v0.1.mm</tt> which can be installed via <em>Tools &gt; Scripts &gt; Install Add-on</em> (or via <em>Tools &gt; Add-ons</em>).</li>
+</ol>
+<p>Before publishing your add-on read all notes in the add-on map. (They are meant for add-on developers, not for users since users are not expected to read an add-on package.) The notes should guide you to add all missing information. Carefully revise the defaults that the <em>Build add-on</em> script has entered.</p>
+<h2 id="script-configuration"><a class="header" href="#script-configuration">Script configuration</a></h2>
+<p>This is a bit tricky since the script configuration consists of quite a lot attributes, some of them with a strong relation to translations and to menu configuration. For most questions the notes on the <em>scripts</em> node will be sufficient as a documentation.</p>
+<h3 id="menulocations"><a class="header" href="#menulocations"><tt>menuLocation</tt>s</a></h3>
+<p>A menu location is the menu or submenu into which the new menu item for the script will be put into. </p>
+<p>The Freeplane menus (main menu, context menu, menu for applets and file browser) are configured via XML files. It helps a lot if you get an understanding how the structure in this file relates to the actual menu. The most relevant menus for scripts are configured through <a href="http://freeplane.bzr.sf.net/bzr/freeplane/freeplane_program/trunk/annotate/head%3A/freeplane/resources/xml/mindmapmodemenu.xml">mindmapmodemenu.xml</a>. To inspect it select <em>Download file</em> and load the file in your web browser. To get an overview over its structure fold/unfold the nodes. You see that the &quot;file&quot; submenu is a sub node of the &quot;menu_bar&quot; menu_category which defines the main menu. (There're also definitions for context menus: &quot;map_popup&quot;, &quot;node_popup&quot; and the &quot;main_toolbar&quot;). A menu location is a path that starts with a root menu_category, e.g.</p>
+<pre><code>/menu_bar/file/import
+</code></pre>
+<p>For some paths there are aliases/shortcuts. These are defined as &quot;menu_key&quot; attribute of a menu_submenu node, e.g.</p>
+<pre><code>main_menu_scripting
+</code></pre>
+<p>which is an alias for</p>
+<pre><code>/menu_bar/extras/first/scripting
+</code></pre>
+<p>Note that you can define <tt>menuLocation</tt>s that do not exist in the menu already. If you do that you have to make sure that for every submenu level there's a translation for its name. Here's an example from the <em>Edit Goodies</em> add-on:</p>
+<pre><code>/menu_bar/edit/editGoodies
+</code></pre>
+<p>This creates a new submenu below the <em>Edit</em> menu. From Freeplane v1.2.10_5 on this only requires the definition of a translation for</p>
+<pre><code>addons.editGoodies
+</code></pre>
+<p>(&quot;addons.&quot; could have been omitted but leave it there to avoid naming collisions.)</p>
+<p>More about the configuration of menus can be found on the wiki page <a href="Menus_and_commands.html">Menus and commands</a>.</p>
+<h2 id="adding-jars-and-class-files"><a class="header" href="#adding-jars-and-class-files">Adding JARs and class files</a></h2>
+<p>An add-on map may contain any number of nodes containing binary files (normally .jar files) which are automatically added to the add-on's classpath if you place them under the &quot;lib&quot; node.</p>
+<ul>
+<li>The immediate child nodes contain the name of the file, e.g. 'mysql-connector-java-5.1.25.jar'). Put the file into a 'lib' subdirectory of the add-on base directory.</li>
+<li>The child nodes of these nodes contain the actual files.</li>
+<li>Any lib file will be extracted in <installationbase>/<addonname>/lib.</li>
+<li>The files will be processed in the sequence as seen in the map.</li>
+</ul>
+<h3 id="creating-libraries"><a class="header" href="#creating-libraries">Creating Libraries</a></h3>
+<p>Libraries (JARs) can not only be used to include external software. Often the scripts of an add-on can be improved by extracting common functions into a library created from one or more aditional Groovy or Java files.</p>
+<p>To create such libraries you should use a builder like <a href="https://gradle.org/">Gradle</a>:</p>
+<ul>
+<li>Place your source files in the right subdirectory:
+<ul>
+<li>for <code>.groovy</code> files: <code>src/main/groovy</code></li>
+<li>for <code>.java</code> files: <code>src/main/java</code></li>
+</ul>
+</li>
+<li>create a build.gradle file like one of <a href="https://github.com/vboerchers/wikdshell">wikdshell</a> or <a href="https://github.com/vboerchers/roan-presentation">roan-presentation</a>.</li>
+<li>run <code>gradle</code> to create the jar</li>
+</ul>
+<h2 id="translations"><a class="header" href="#translations">Translations</a></h2>
+<p>Add-ons can be translated. If you used the &quot;Build add-on&quot; script from the &quot;Developer tools&quot; add-on to create your add-on, it created a &quot;translations&quot; branch and an &quot;en&quot; node for your add-on. The following keys are mandatory:</p>
+<ul>
+<li>'addons.${name}' for the add-on's name</li>
+<li>'addons.${name}.description' for the description, e.g. in the add-on overview dialog (not necessary for English)</li>
+<li>'addons.${name}.<scriptname>' for the <tt>menuTitleKey</tt> attribute of each script which is used as the menu title.</li>
+</ul>
+<p>Add-on developers can define more messages at their will and use them via <tt>textUtils.getText(&quot;addons.myAddon.someAdditionalMessageKey&quot;)</tt>. Include the add-on name to avoid clashes with keys that Freeplane uses for itself.</p>
+<h3 id="adding-new-languages"><a class="header" href="#adding-new-languages">Adding new languages</a></h3>
+<ul>
+<li>Duplicate the &quot;en&quot; node under &quot;translations&quot; and rename it to your locale (e.g. &quot;fr&quot;, &quot;de&quot;, &quot;ru&quot;, ...).</li>
+<li>Edit the translations.</li>
+<li>Don't forget to send the file/translation node to the add-on author!</li>
+</ul>
+<p>Note that if the translations contain non-ASCII characters you should upgrade to minimally Developer Tools v0.9.24 and Freeplane v1.7.4. With older versions your will see java escape codes instead of non-ASCII characters in your menus and other translations. Despite the fact that Freeplane can only work with java-encoded non-ASCII characters in translation strings, there is no need java-encode them before installation: this is automatically done during installation. On the other hand it is not a problem if non-ASCII characters in your translations already have been java-encoded.</p>
+<h2 id="add-ons-may-have-their-own-preferences"><a class="header" href="#add-ons-may-have-their-own-preferences">Add-ons may have their own preferences</a></h2>
+<p>If you have properties/variables that should be configurable by the user you can extend the option panel under Tools-&gt;Preferences. Let's assume the plugin needs the variables</p>
+<ul>
+<li>my_addon_server_url</li>
+<li>my_addon_timeout_sec</li>
+</ul>
+<p>You have to consider the following nodes in the add-on source map:</p>
+<h3 id="preferencesxml"><a class="header" href="#preferencesxml">preferences.xml</a></h3>
+<p>This is a complete, syntactically correct XML string that is constructed like the <tt>preferences.xml</tt> files that are part of Freeplane. (There is <a href="https://github.com/freeplane/freeplane/blob/master/freeplane/resources/xml/preferences.xml">one main file</a>, <a href="https://github.com/freeplane/freeplane/blob/master/freeplane_plugin_script/src/org/freeplane/plugin/script/preferences.xml">one of the Scripting plugin</a> and <a href="https://github.com/freeplane/freeplane/blob/master/freeplane_plugin_formula/src/org/freeplane/plugin/formula/preferences.xml">one of the Formula plugin</a>.) For our purpose we need (see the previous links for extensive examples):</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;preferences_structure&gt;
+	&lt;tabbed_pane&gt;
+		&lt;tab name=&quot;plugins&quot;&gt;
+			&lt;separator name=&quot;myaddon&quot;&gt;
+				&lt;string name=&quot;my_addon_server_url&quot; /&gt;
+				&lt;number name=&quot;my_addon_timeout_sec&quot; min=&quot;0&quot; /&gt;
+			&lt;/separator&gt;
+		&lt;/tab&gt;
+	&lt;/tabbed_pane&gt;
+&lt;/preferences_structure&gt;
+</code></pre>
+<p>This will place a new block for the new add-on in the &quot;Plugins&quot; tab.</p>
+<p>Some other types to use are:</p>
+<pre><code class="language-xml">    &lt;number name=&quot;my_addon_timeout_sec&quot; min=&quot;0&quot; max=&quot;1000&quot; /&gt;
+    &lt;number name=&quot;my_addon_timeout_sec&quot; /&gt;
+    &lt;boolean name=&quot;myAddon_myBoolean&quot;/&gt;
+</code></pre>
+<h3 id="defaultproperties"><a class="header" href="#defaultproperties">default.properties</a></h3>
+<p>All preference variables should have a default value so the &quot;default.properties&quot; node needs two attributes:</p>
+<div class="table-wrapper"><table><thead><tr><th>default.properties</th><th></th></tr></thead><tbody>
+<tr><td>my_addon_server_url</td><td>http://server.org/my_addon</td></tr>
+<tr><td>my_addon_timeout_sec</td><td>15</td></tr>
+</tbody></table>
+</div>
+<p>Unfortunately it leads to an error during the creation of the add-on if you enter an URL up to Freeplane version 1.2.20. Workaround: Add a single quote in front the URL to avoid it being parsed and remove the space by manually editing the .mm file.</p>
+<h3 id="translation-of-preference-entries"><a class="header" href="#translation-of-preference-entries">Translation of preference entries</a></h3>
+<p>You have to add translations for the preferences block (&quot;separator&quot;) and for each variable. For preferences the key is the variable name prefixed by &quot;OptionPanel.&quot; For messages which are not preferences the variable is the key only:</p>
+<div class="table-wrapper"><table><thead><tr><th>en</th><th></th></tr></thead><tbody>
+<tr><td>OptionPanel.separator.myaddon</td><td>My add-on</td></tr>
+<tr><td>OptionPanel.my_addon_server_url</td><td>Server URL</td></tr>
+<tr><td>OptionPanel.my_addon_timeout_sec</td><td>Timeout[seconds]</td></tr>
+<tr><td>my_addon_message_text</td><td>ERROR: some message text</td></tr>
+</tbody></table>
+</div>
+<h3 id="access-the-variables"><a class="header" href="#access-the-variables">Access the variables</a></h3>
+<p>Here's how you access the variables set in the OptionPanel in scripts (second parameter are default values if the value should be null):</p>
+<pre><code>def timeout = config.getIntProperty('my_addon_timeout_sec', 15)
+def url = config.getProperty('my_addon_server_url', 'http://server.org/default')
+</code></pre>
+<p>See FreeplaneScriptBaseClass.ConfigProperties in the <a href="http://www.freeplane.org/doc/api/">scripting API documentation</a> for details.</p>
+<p>Variables which hold a translation of e.g. a message text can be accessed in a similar way:</p>
+<pre><code>def static textUtils= new org.freeplane.core.util.TextUtils()
+def myMessage=textUtils.getText('my_addon_message_text', 'ERROR: example message')
+</code></pre>
+<p>In scripts textUltils is a global parameter, hence the first rule is redundant. myMessage returns its text in the current language (translation).</p>
+<h2 id="publish"><a class="header" href="#publish">Publish</a></h2>
+<p>Once you are done with a new add-on you can create a package for publication via <em>Tools &gt; Developer Tools &gt; Package add-on for publication</em>. If this succeeds you can actually publish it, see the <a href="How_to_publish_add-ons.html">How to publish add-ons</a> page. - Don't miss the information on the add-on updater there!</p>
+<h2 id="worked-out-example"><a class="header" href="#worked-out-example">Worked out example</a></h2>
+<p>See <a href="http://www.freeplane.org/wiki/index.php?title=Add-ons_%28install%29#scriptlib">scriptlib</a> for a worked out example. It also contains some generic scripts and illustrates adding Help to your script.</p>
+<!-- ({Category:Advanced}) ({Category:Developer})-->
+<footer id="open-on-gh">Found a mistake? <a href="https://github.com/freeplane/docs/edit/main/src/docs/scripting/Add-ons_(Develop).md">Edit this page on GitHub.</a></footer>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../scripting/Export_Using_XSLT.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../scripting/Security_considerations.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../scripting/Export_Using_XSLT.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../scripting/Security_considerations.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

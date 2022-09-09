@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Tutorial Freeplane nl - Freeplane Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../open-in.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><li class="part-title">User guide</li><li class="chapter-item "><a href="../../home.html"><strong aria-hidden="true">1.</strong> Home</a></li><li class="chapter-item "><a href="../../how-to-get-help.html"><strong aria-hidden="true">2.</strong> How to get help</a></li><li class="chapter-item "><a href="../../getting-started/getting-started.html"><strong aria-hidden="true">3.</strong> Getting started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../getting-started/Distributions.html"><strong aria-hidden="true">3.1.</strong> Distributions</a></li><li class="chapter-item "><a href="../../getting-started/Command-line_options_and_configuration.html"><strong aria-hidden="true">3.2.</strong> Command-line options and configuration</a></li><li class="chapter-item "><a href="../../getting-started/Add-ons_(install).html"><strong aria-hidden="true">3.3.</strong> Extend with add-ons</a></li></ol></li><li class="chapter-item "><a href="../../user-documentation/first-steps.html"><strong aria-hidden="true">4.</strong> User documentation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../user-documentation/first-steps.html"><strong aria-hidden="true">4.1.</strong> First steps</a></li><li class="chapter-item "><a href="../../user-documentation/working-w-mindmap-files.html"><strong aria-hidden="true">4.2.</strong> Working with mindmap files</a></li><li class="chapter-item "><a href="../../user-documentation/formatting-maps-and-nodes.html"><strong aria-hidden="true">4.3.</strong> Formatting maps and nodes</a></li><li class="chapter-item "><a href="../../user-documentation/styles.html"><strong aria-hidden="true">4.4.</strong> Styles</a></li><li class="chapter-item "><a href="../../user-documentation/templates.html"><strong aria-hidden="true">4.5.</strong> Templates</a></li><li class="chapter-item "><a href="../../user-documentation/css-for-html-or-markdown.html"><strong aria-hidden="true">4.6.</strong> CSS for HTML/Markdown</a></li><li class="chapter-item "><a href="../../user-documentation/Conditional_node_styles.html"><strong aria-hidden="true">4.7.</strong> Conditional node styles</a></li><li class="chapter-item "><a href="../../user-documentation/LaTeX_in_Freeplane.html"><strong aria-hidden="true">4.8.</strong> LaTeX in Freeplane</a></li><li class="chapter-item "><a href="../../user-documentation/Spell_checker.html"><strong aria-hidden="true">4.9.</strong> Spell checker</a></li><li class="chapter-item "><a href="../../user-documentation/Relationship_to_FreeMind.html"><strong aria-hidden="true">4.10.</strong> Relationship to FreeMind</a></li><li class="chapter-item "><a href="../../user-documentation/other-docs-tutorials.html"><strong aria-hidden="true">4.11.</strong> References to other known documentation/tutorial sites</a></li></ol></li><li class="chapter-item "><a href="../../contribute/contribute.html"><strong aria-hidden="true">5.</strong> Contribute</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../contribute/Translation_How-To.html"><strong aria-hidden="true">5.1.</strong> Translation How-To</a></li><li class="chapter-item "><a href="../../contribute/Contributing_to_Freeplane's_Development.html"><strong aria-hidden="true">5.2.</strong> Contributing to Freeplane's Development</a></li></ol></li><li class="chapter-item "><a href="../../scripting/Scripting.html"><strong aria-hidden="true">6.</strong> Scripting</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../scripting/Formulas.html"><strong aria-hidden="true">6.1.</strong> Formulas</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../scripting/Formulas.html"><strong aria-hidden="true">6.1.1.</strong> Formulas</a></li><li class="chapter-item "><a href="../../scripting/Scripting!_Script_filter.html"><strong aria-hidden="true">6.1.2.</strong> Formula filter</a></li></ol></li><li class="chapter-item "><a href="../../scripting/Scripting_Cheatsheet.html"><strong aria-hidden="true">6.2.</strong> Scripting Cheatsheet</a></li><li class="chapter-item "><a href="../../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.</strong> Scripts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.1.</strong> Scripts collection</a></li><li class="chapter-item "><a href="../../scripting/Scripting_text_editing.html"><strong aria-hidden="true">6.3.2.</strong> Scripts for text editing</a></li><li class="chapter-item "><a href="../../scripting/Example_scripts_using_external_libraries.html"><strong aria-hidden="true">6.3.3.</strong> Scripts using external libraries</a></li><li class="chapter-item "><a href="../../scripting/Script_incubator.html"><strong aria-hidden="true">6.3.4.</strong> Script incubator</a></li><li class="chapter-item "><a href="../../scripting/Scripting!_Jython.html"><strong aria-hidden="true">6.3.5.</strong> Scripting! Jython</a></li><li class="chapter-item "><a href="../../scripting/Scripting_environment_setup.html"><strong aria-hidden="true">6.3.6.</strong> Scripting environment setup</a></li></ol></li><li class="chapter-item "><a href="../../scripting/Export_Using_XSLT.html"><strong aria-hidden="true">6.4.</strong> XSLT for export/import</a></li><li class="chapter-item "><a href="../../scripting/Add-ons_(Develop).html"><strong aria-hidden="true">6.5.</strong> Add-ons (Development)</a></li><li class="chapter-item "><a href="../../scripting/Security_considerations.html"><strong aria-hidden="true">6.6.</strong> Security considerations</a></li></ol></li><li class="chapter-item "><a href="../../coding/Git_howto.html"><strong aria-hidden="true">7.</strong> Coding</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../coding/Git_howto.html"><strong aria-hidden="true">7.1.</strong> Git howto</a></li><li class="chapter-item "><a href="../../coding/How_to_build_Freeplane.html"><strong aria-hidden="true">7.2.</strong> How to build Freeplane</a></li><li class="chapter-item "><a href="../../coding/IDE_setup.html"><strong aria-hidden="true">7.3.</strong> IDE setup</a></li><li class="chapter-item "><a href="../../coding/Plugin_development.html"><strong aria-hidden="true">7.4.</strong> Plugin development</a></li></ol></li><li class="chapter-item "><li class="part-title">Attic</li><li class="chapter-item expanded "><a href="../../attic/home.html"><strong aria-hidden="true">8.</strong> Attic (draft documents)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.</strong> Old MediaWiki content</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.1.</strong> Old Home</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Approximate_search.html"><strong aria-hidden="true">8.1.2.</strong> Approximate search</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Architecture.html"><strong aria-hidden="true">8.1.3.</strong> Architecture</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Batch_Jobs.html"><strong aria-hidden="true">8.1.4.</strong> Batch Jobs</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Contributors.html"><strong aria-hidden="true">8.1.5.</strong> Contributors</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Current_Freeplane_File_Format.html"><strong aria-hidden="true">8.1.6.</strong> Current Freeplane File Format</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Data_recognition_and_data_formats.html"><strong aria-hidden="true">8.1.7.</strong> Data recognition and data formats</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Debugging_scripts.html"><strong aria-hidden="true">8.1.8.</strong> Debugging scripts</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Document_Format.html"><strong aria-hidden="true">8.1.9.</strong> Document Format</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Edit_scripts_in_Eclipse.html"><strong aria-hidden="true">8.1.10.</strong> Edit scripts in Eclipse</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/External_objects.html"><strong aria-hidden="true">8.1.11.</strong> External objects</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/External_script_file_execution.html"><strong aria-hidden="true">8.1.12.</strong> External script file execution</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/FAQ.html"><strong aria-hidden="true">8.1.13.</strong> FAQ</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Fixed_security_vulnerabilities.html"><strong aria-hidden="true">8.1.14.</strong> Fixed security vulnerabilities</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/FreeMind_0.9.0_-_Freeplane_1.1.x.html"><strong aria-hidden="true">8.1.15.</strong> FreeMind 0.9.0 - Freeplane 1.1.x</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane2PowerPoint.html"><strong aria-hidden="true">8.1.16.</strong> Freeplane2PowerPoint</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Tutorial_Extensions.html"><strong aria-hidden="true">8.1.17.</strong> Freeplane Tutorial Extensions</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Screenshots.html"><strong aria-hidden="true">8.1.18.</strong> Freeplane Tutorial How-to Screenshots</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Video.html"><strong aria-hidden="true">8.1.19.</strong> Freeplane Tutorial How-to Video</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Wiki!Administrators.html"><strong aria-hidden="true">8.1.20.</strong> Freeplane Wiki!Administrators</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_and_problem_solving.html"><strong aria-hidden="true">8.1.21.</strong> Freeplane and problem solving</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_features_you_were_missing_in_FreeMind.html"><strong aria-hidden="true">8.1.22.</strong> Freeplane features you were missing in FreeMind</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_for_Windows_Mobile.html"><strong aria-hidden="true">8.1.23.</strong> Freeplane for Windows Mobile</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_installation_for_Ubuntu_OS.html"><strong aria-hidden="true">8.1.24.</strong> Freeplane installation for Ubuntu OS</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Get_the_code.html"><strong aria-hidden="true">8.1.25.</strong> Get the code</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Goals.html"><strong aria-hidden="true">8.1.26.</strong> Goals</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Groovy_scripts_and_formulas_can_escape_sandbox.html"><strong aria-hidden="true">8.1.27.</strong> Groovy scripts and formulas can escape sandbox</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Harmonizing_FP-menu.html"><strong aria-hidden="true">8.1.28.</strong> Harmonizing FP-menu</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Help!Contents.html"><strong aria-hidden="true">8.1.29.</strong> Help!Contents</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Help!Editing.html"><strong aria-hidden="true">8.1.30.</strong> Help!Editing</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Help_Previous_Freeplane_Versions.html"><strong aria-hidden="true">8.1.31.</strong> Help Previous Freeplane Versions</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/How_to_publish_add-ons.html"><strong aria-hidden="true">8.1.32.</strong> How to publish add-ons</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/How_to_test.html"><strong aria-hidden="true">8.1.33.</strong> How to test</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Information_management_with_Freeplane_add-on_dView(indexfile).html"><strong aria-hidden="true">8.1.34.</strong> Information management with Freeplane add-on dView(indexfile)</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Init_scripts.html"><strong aria-hidden="true">8.1.35.</strong> Init scripts</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Japanese.html"><strong aria-hidden="true">8.1.36.</strong> Japanese</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Linux.html"><strong aria-hidden="true">8.1.37.</strong> Linux</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Logo_and_splashscreen.html"><strong aria-hidden="true">8.1.38.</strong> Logo and splashscreen</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Macintosh.html"><strong aria-hidden="true">8.1.39.</strong> Macintosh</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Map_local_scripts.html"><strong aria-hidden="true">8.1.40.</strong> Map local scripts</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Map_templates.html"><strong aria-hidden="true">8.1.41.</strong> Map templates</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Menus_and_commands.html"><strong aria-hidden="true">8.1.42.</strong> Menus and commands</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Mind_map_gallery.html"><strong aria-hidden="true">8.1.43.</strong> Mind map gallery</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/New_Freeplane_File_Format_(Proposal).html"><strong aria-hidden="true">8.1.44.</strong> New Freeplane File Format (Proposal)</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/New_features_in_Freeplane_1.2.html"><strong aria-hidden="true">8.1.45.</strong> New features in Freeplane 1.2</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/New_features_in_Freeplane_1.3.html"><strong aria-hidden="true">8.1.46.</strong> New features in Freeplane 1.3</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/OSGI_based_plug-ins.html"><strong aria-hidden="true">8.1.47.</strong> OSGI based plug-ins</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Patterns.html"><strong aria-hidden="true">8.1.48.</strong> Patterns</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Portable_Freeplane.html"><strong aria-hidden="true">8.1.49.</strong> Portable Freeplane</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Release_cycle.html"><strong aria-hidden="true">8.1.50.</strong> Release cycle</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Release_smoke_test.html"><strong aria-hidden="true">8.1.51.</strong> Release smoke test</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Rules_to_build_user_friendly_menus.html"><strong aria-hidden="true">8.1.52.</strong> Rules to build user friendly menus</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_API_Changes.html"><strong aria-hidden="true">8.1.53.</strong> Scripting! API Changes</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Freeplane_Utility_Classes.html"><strong aria-hidden="true">8.1.54.</strong> Scripting! Freeplane Utility Classes</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Included_libraries.html"><strong aria-hidden="true">8.1.55.</strong> Scripting! Included libraries</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Other_languages.html"><strong aria-hidden="true">8.1.56.</strong> Scripting! Other languages</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Update_Freeplane's_Groovy_version.html"><strong aria-hidden="true">8.1.57.</strong> Scripting! Update Freeplane's Groovy version</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting_API.html"><strong aria-hidden="true">8.1.58.</strong> Scripting API</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Support.html"><strong aria-hidden="true">8.1.59.</strong> Support</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Think_Tank.html"><strong aria-hidden="true">8.1.60.</strong> Think Tank</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Translation_nl.html"><strong aria-hidden="true">8.1.61.</strong> Translation nl</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Troubleshooting.html"><strong aria-hidden="true">8.1.62.</strong> Troubleshooting</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Tutorial_Freeplane_How-to_nl.html"><strong aria-hidden="true">8.1.63.</strong> Tutorial Freeplane How-to nl</a></li><li class="chapter-item expanded "><a href="../../attic/old-mediawiki-content/Tutorial_Freeplane_nl.html" class="active"><strong aria-hidden="true">8.1.64.</strong> Tutorial Freeplane nl</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/User_icons.html"><strong aria-hidden="true">8.1.65.</strong> User icons</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Videos_and_animations_How-to.html"><strong aria-hidden="true">8.1.66.</strong> Videos and animations How-to</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Visions.html"><strong aria-hidden="true">8.1.67.</strong> Visions</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Wish_List.html"><strong aria-hidden="true">8.1.68.</strong> Wish List</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/XML_External_Entity_vulnerability_in_map_parser.html"><strong aria-hidden="true">8.1.69.</strong> XML External Entity vulnerability in map parser</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Your_own_utility_script_library.html"><strong aria-hidden="true">8.1.70.</strong> Your own utility script library</a></li></ol></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.</strong> New wiki initiative</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.1.</strong> customizing-freeplane</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/freeplane-api-groovy.html"><strong aria-hidden="true">8.2.2.</strong> freeplane-api-groovy</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/glossary.html"><strong aria-hidden="true">8.2.3.</strong> glossary</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/introduction-aka-many-unsorted-ideas-related-to-freeplane.html"><strong aria-hidden="true">8.2.4.</strong> introduction-aka-many-unsorted-ideas-related-to-freeplane</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/understanding-interface.html"><strong aria-hidden="true">8.2.5.</strong> understanding-interface</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/understanding-nodes.html"><strong aria-hidden="true">8.2.6.</strong> understanding-nodes</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">Special pages</li><li class="chapter-item "><a href="../../after-redirect.html"><strong aria-hidden="true">9.</strong> After redirect from the old media wiki</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Freeplane Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/freeplane/docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <ul>
+<li><a href="#instructie-freeplane">Instructie Freeplane</a>
+<ul>
+<li><a href="#wat-is-mindmappen">Wat is mindmappen</a></li>
+<li><a href="#een-mindmap-op-deze-pagina-bekijken">Een mindmap op deze pagina bekijken</a></li>
+<li><a href="#hoe-maak-ik-een-mindmap-">Hoe maak ik een mindmap ?</a></li>
+<li><a href="#inhoud-van-deze-galerij">Inhoud van deze galerij</a></li>
+</ul>
+</li>
+<li><a href="#mindmap-als-persoonlijke-omgeving">Mindmap als persoonlijke omgeving</a>
+<ul>
+<li><a href="#digitale-kluis">Digitale kluis</a></li>
+<li><a href="#contacten">Contacten</a></li>
+</ul>
+</li>
+<li><a href="#mindmap-op-het-werk">Mindmap op het werk</a>
+<ul>
+<li><a href="#freeplane-als-hulp-bij-vergaderen">Freeplane als hulp bij vergaderen</a></li>
+<li><a href="#dingen-gedaan-krijgen-gtd-getting-things-done">Dingen gedaan krijgen (GTD: Getting Things Done)</a></li>
+<li><a href="#mindmap-als-hulp-bij-plannen">Mindmap als hulp bij plannen</a></li>
+<li><a href="#mindmap-bij-samenwerken-teamrollen-van-belbin">Mindmap bij samenwerken (teamrollen van Belbin)</a></li>
+<li><a href="#mindmap-bij-een-swot-analyse">Mindmap bij een SWOT-analyse</a></li>
+<li><a href="#mindmap-voor-de-samenhang-van-metagegevens">Mindmap voor de samenhang van metagegevens</a></li>
+<li><a href="#mindmap-voor-informatiebeheerregels">Mindmap voor informatiebeheerregels</a></li>
+<li><a href="#mindmap-voor-informatiebeheer-bij-digitaal-werken">Mindmap voor informatiebeheer bij digitaal werken</a></li>
+<li><a href="#mindmap-bij-het-oplossen-van-problemen">Mindmap bij het oplossen van problemen</a></li>
+</ul>
+</li>
+<li><a href="#mindmap-in-de-klas">Mindmap in de klas</a>
+<ul>
+<li><a href="#sneller-leren-door-vooraf-vragen-te-stellen">Sneller leren door vooraf vragen te stellen</a></li>
+<li><a href="#maken-en-geven-spreekbeurt">Maken en geven spreekbeurt</a></li>
+<li><a href="#geordend-presenteren-en-verwerken-van-informatie">Geordend presenteren en verwerken van informatie</a></li>
+</ul>
+</li>
+<li><a href="#instructievideos">Instructievideo's</a></li>
+<li><a href="#links">Links</a></li>
+</ul>
+<br>
+**Als gevolg van een cyber aanval zijn de voorbeelden op deze pagina niet in te zien.<br> Raadpleeg de Engelse voorbeelden...**
+<br>
+<p>Deze Tutorial heeft betrekking op Freeplane 1.2.x. Je kunt Freeplane <a href="Main_Page.html"><strong>hier</strong></a> gratis downloaden. <br><br></p>
+<h1 id="instructie-freeplane"><a class="header" href="#instructie-freeplane">Instructie Freeplane</a></h1>
+<h2 id="wat-is-mindmappen"><a class="header" href="#wat-is-mindmappen">Wat is mindmappen</a></h2>
+<p>[<mm>[<a href="File:WhatIsMindMapping_nl.jpg.html">:WhatIsMindMapping_nl.mm |applet|Wat is mindmappen</a> </mm>]]
+Een mindmap (spreek uit: maintmep) is een kaart van informatie die is geordend in onderwerpen en deelonderwerpen rond een centraal thema. Op scholen wordt ook wel de term woordweb of woordspin gebruikt. De informatie kan de vorm hebben van teksten, plaatjes en/of verwijzingen naar multimedia en andere programma’s. Het proces van het maken van een mindmap kan helpen bij het uitvoeren van creatieve processen zoals analyseren, plannen en organiseren; en bij leren en onthouden. Een elektronische mindmap kun je gebruiken als persoonlijke werkomgeving en om het werken in je bedrijf of op school te ondersteunen: zie  <a href="http://nl.wikipedia.org/wiki/Mindmap">wikipedia</a> en de voorbeelden op deze pagina.</p>
+<p>Er zijn mensen die de voorkeur geven aan het maken van mindmaps op papier en mensen die de voorkeur geven aan het maken van mindmaps met de computer. In de mindmap hiernaast zijn de belangrijkste voor- en nadelen opgenomen in verborgen tekst. Open de mindmap door op de link onder het plaatje te klikken. Klik vervolgens op de Help bij <em>Navigeren</em> om te leren hoe je de verborgen tekst kunt tonen.</p>
+<h2 id="een-mindmap-op-deze-pagina-bekijken"><a class="header" href="#een-mindmap-op-deze-pagina-bekijken">Een mindmap op deze pagina bekijken</a></h2>
+<p>Door op een plaatje van een mindmap aan de rechterkant van deze pagina te klikken, kunt je het plaatje vergroten. Onder elk plaatje bevindt zich een snelkoppeling met de naam van de mindmap. Als je hier op klikt opent de mindmap in een presentatievenster en kunt je takken open/dichtvouwen en koppelingen (pijltjes) volgen door er op te klikken. Bij sommige takken verschijnt een onderliggende tekst als je de muiscursor boven de tekst van de tak (knoop) houdt. Je kunt ook de hele mindmap verplaatsen door op een lege plaats in de achtergrond te klikken en te slepen. Zie ook de <a href="http://www.freeplane.org/wiki/index.php/Mind_Map_Gallery/Dutch#Instructievideo.27s"><strong>instructievideo</strong> </a> voor beginners.  Je kunt de inhoud van de mindmap in deze gallerij niet wijzigen: daarvoor moet je een mindmap-programma gebruiken.</p>
+<h2 id="hoe-maak-ik-een-mindmap-"><a class="header" href="#hoe-maak-ik-een-mindmap-">Hoe maak ik een mindmap ?</a></h2>
+<p>Deze galerij bevat voorbeelden van mindmaps. Op de pagina <a href="How_to_nl.html"><strong>Hoe maak ik een mindmap</strong></a> is beschreven hoe je het gratis programma <em>Freeplane</em> kunt downloadenen en hoe je een mindmap kunt maken of aanpassen met dit programma. De software van Freeplane is voor iedereen vrij beschikbaar (&quot;open source&quot;).  Het gebruik van Freeplane sluit daardoor aan bij het <a href="https://noiv.nl/over-noiv/">overheidsbeleid (NOIV)</a>. Voor het bekijken van de voorbeelden op deze pagina is het niet nodig om <em>Freeplane</em> op je computer te hebben: bij het openen van een mindmap op deze pagina wordt automatisch een freeplane-viewer geopend voor het bekijken van de mindmap. (Helaas worden de Nederlandse menubalken daarbij in het Engels weergegeven.)
+<br><br>
+<a href="http://www.kioo.nl/freeplane/tutorial_nl"><img src="FreeplaneTutorial_nl.jpg" alt="Beginners instructie" /></a> 
+<strong>Handleiding Freeplane</strong><br>
+Om inzicht te krijgen in de mogelijkheden van Freeplane kun je behalve de voorbeelden op deze pagina, ook de handleiding van Freepane bekijken.  Deze handleiding is opgenomen in een mindmap en dient zo zelf ook als een voorbeeld van wat je met een elektronische mindmap kunt doen.
+<br><br>
+Kik op de hyperlink onder het plaatje om de handleiding te openen. Klik vervolgens op de woorden en snelkoppelingen in de mindmap om te zien wat de mogelijkheden van <em>Freeplane</em> zijn.
+<br><br>
+N.B. Je kunt een mindmap met extentie .mm ook met het programma Freemind bewerken. Omdat Freemind minder functionaliteit bevat dan Freeplane, zal je dan niet alles zien. Omgekeerd kan een mindmap die met Freemind is gemaakt wel door Freeplane worden getoond.</p>
+<h2 id="inhoud-van-deze-galerij"><a class="header" href="#inhoud-van-deze-galerij">Inhoud van deze galerij</a></h2>
+<p>Deze galerij bevat Nederlandstalige mindmaps die laten zien wat een elektronische mindmap is en waarvoor je deze kunt gebruiken. De gallerij bevat tevens mindmaps en ideeën voor mindmaps die je kunt aanpassen voor eigen gebruik. In de tekst is aangegeven als je de mindmap op je eigen computer kunt laden (download) voor gebruik met het programma <em>Freeplane</em> of een ander mindmap-programma dat .mm bestanden kan lezen.
+<br></p>
+<h1 id="mindmap-als-persoonlijke-omgeving"><a class="header" href="#mindmap-als-persoonlijke-omgeving">Mindmap als persoonlijke omgeving</a></h1>
+<p><a href="http://www.kioo.nl/freeplane/Actie-dashboard"><img src="Action-dashboard_nl.jpg" alt="Actie dashboard" /></a>
+<em>Freeplane</em> start op met een standaard mindmap. Van deze mindmap kun je een persoonlijke werkomgeving maken met directe toegang tot je belangrijkste informatie op Internet en je bedrijfsomgeving. Snelkoppelingen naar pagina's, bestanden en applicaties kunnen eenvoudig met plakken en knippen (drag and drop) aan de mindmap worden toegevoegd. Verder kun je op elk punt eenvoudig notities en signaleringen toevoegen. Hiermee is Freeplane uitermate geschikt om <a href="http://nl.wikipedia.org/wiki/Getting_Things_Done">actielijsten</a> te maken en onderhouden. Verder is Freeplane te gebruiken als een dashboard waarmee je toegang tot al je documenten en applicaties hebt. Als je je mindmaps en andere documenten bijvoorbeeld met <a href="http://www.dropbox.com/">dropbox</a>  bewaart, kun je hier vanaf elke computer bij.</p>
+<h3 id="digitale-kluis"><a class="header" href="#digitale-kluis">Digitale kluis</a></h3>
+<p><a href="http://www.kioo.nl/freeplane/MyVault"><img src="MyVault.jpg" alt="Mijn kluis" /></a>
+Als je informatie hebt die anderen niet mogen kennen dan kun je deze informatie met een wachtwoord beschermen. Het is mogelijk een hele mindamp te beveiligen of alleen een (deel)tak met knopen. In het voorbeeld hiernaast is de hele mindmap met een wachtwoord beschermd. De mindmap heeft twee hoofdtakken voor repectievelijk geldzaken en websites. Deze zijn elk apart nogmaals beschermd. </p>
+<p>Open the mindmap door op <em>Mijn kluis</em> onder het plaatje te klikken. Zoek dan het pictogram het slotje in de balken bovenin het scherm en klik hierop. Er verschijnt dan een venster waarin je een wachtwoord moet typen. Type MyVault. De mindmap opent nu en laat de takken voor geldzaken en websites zien. Selecteer van een van de banken de knoop &quot;creditcard&quot;. Klik op het slotje en vul als wachtwoord opnieuw creditard in. Er open nu een knoop met de gegevens van de creditcard. Hetzelfde kun je doen met de andere bank. Ga nu naar de kant van de websites. Kies  Freeplane open forum, klik op het slotje en voer als wachtwoord &quot;Freeplane&quot; in. Nu wordt de inlog informatie van de website zichtbaar. </p>
+<h2 id="contacten"><a class="header" href="#contacten">Contacten</a></h2>
+<p><a href="http://www.kioo.nl/freeplane/contacten"><img src="Contacten.jpg" alt="Contacten" /></a>
+Er zijn verschillende manieren om adreslijsten e.d. in een mindmap te vatten. De linker kant van de mindmap toont contactgegevens welke in de attributen van een knoop zijn vastgelegd. De rechterkant van de mindmap toont contactgegevens die in zogenaamde kindknopen zijn vastgelegd. De vorm van de takken is in dit geval rechthoekig gekozen.
+<br><br><br><br></p>
+<h1 id="mindmap-op-het-werk"><a class="header" href="#mindmap-op-het-werk">Mindmap op het werk</a></h1>
+<h2 id="freeplane-als-hulp-bij-vergaderen"><a class="header" href="#freeplane-als-hulp-bij-vergaderen">Freeplane als hulp bij vergaderen</a></h2>
+<p><a href="http://www.kioo.nl/freeplane/meetingBeginner"><img src="meetingBeginner_en.jpg" alt="Meeting support: Beginner" /></a>
+<a href="http://www.kioo.nl/freeplane/meetingAdvanced"><img src="meetingAdvanced_en.jpg" alt="Meeting support: Advanced" /></a>
+Een van de dingen waarvoor Freeplane vaak wordt gebruikt is het maken van aantekeningen tijdens vergaderen. Freeplane kan zelfs het hele vergaderproces ondersteunen. De ondersteuning begint bij het het opstellen en verspreiden van de agenda, het bijhouden van de deelnemerslijst, het toevoegen van aantekeningen bij de agendapunten en eindigt met het vastleggen van de notulen met besluiten en acties. Daarbij kan Freeplane elke actie een herinnering koppelen zodat deze niet wordt vergeten. Ook is het mogelijk informatie die nodig is tijdens de vergadering via de mindmap te ontsluiten. En niet in de laatste plaats kan gevoelige informatie met een wachtwoord worden afgeschermd.</p>
+<p>De boven besproken handleiding maakt onderscheid tussen drie ervaringsniveaus: Beginner, Ervaren en Professional. De twee figuren hiernaast tonen dezelfde informatie, maar dan opgemaakt door een beginnende en een ervaren Freeplane gebruiker. Als je beide mindmaps bekijkt dan zie je dat de mindmap van de ervaren gebruiker een betere ondersteuning biedt. Van belang is verder dat als je de speciefieke informatie van de behandelde vergadering weg haalt, een generiek vergadersjabloon over blijft dat ook voor andere vergaderingen kan worden gebruikt.</p>
+<p>Klik op de hyperlinks onder de plaatjes om de beide mindmaps te openenen. In <em>Vergadering geavanceerd</em>: zweef met de cursor over de teksten om de verborgen teksten te zien. Je kunt <a href="http://www.kioo.nl/freeplane/CoreMeeting"><strong>hier</strong></a> een animatie zien hoe deze mindmap is gemaakt.</p>
+<p>Als je precies wilt weten hoe notuleren met een mindmap in zijn werk gaat, lees dan  <a href="http://www.taaltek.nl/mindmappen_okt_2008.pdf"><em>Notuleren en mindmappen, een perfecte comninatie</em></a> van Marjolein de Jong. Zij maakt een aparte mindmap voor elk agendapunt, hetgeen bij een mindmap op papier is aan te raden. Bij een elektronische mindmap kunnen alle agendapunten binnen één mindmap worden opgenomen, zoals in het voorbeeld hiernaast, omdat de agendapunten desgewenst kunnen worden verborgen (dichtgevouwen) of getoond (opengevouwen). 
+<br><br></p>
+<h2 id="dingen-gedaan-krijgen-gtd-getting-things-done"><a class="header" href="#dingen-gedaan-krijgen-gtd-getting-things-done">Dingen gedaan krijgen (GTD: Getting Things Done)</a></h2>
+<p><a href="http://www.kioo.nl/freeplane/GTD/GettingThingsDone_nl.html"><img src="GettingThingsDone_nl.jpg" alt="Dingen gedaan krijgen" /></a></p>
+<p>David Allen heeft een methodiek beschreven om efficienter en relaxter te kunnen werken. Deze methodiek wordt wereldwijd door vele kenniswerkers gebruikt. De methodiek is samengevat in nevenstaande mindmap. De mindmap kan daarbij worden gebruikt als ondersteuningsmiddel om activitiviteiten en gegevens te beschrijven.</p>
+<h2 id="mindmap-als-hulp-bij-plannen"><a class="header" href="#mindmap-als-hulp-bij-plannen">Mindmap als hulp bij plannen</a></h2>
+<p>Een mindmap kan worden gebruikt om acties te plannen. Hoe de mindmap er uit moet zien is afhankelijk van de situatie. Soms heb je genoeg aan een actielijst met per actie een naam en een aanduiding van de prioriteit (mindmap links; klik op het plaatje om dit te vergroten). Soms wil je ook de datum gereed en een actiehouder tonen (mindmap midden). En soms is het handig om ook een beschrijving of toelichting van de actie te kunnen tonen (mindmap rechts). Freeplane combineert deze drie mogelijkheden in één en dezelfde mindmap. Ook is het mogelijk een moment in te stellen waarop je herinnert wilt worden dat actie nodig is (aqenda). En natuurlijk kan aan elke actie (taak) een boom van deelacties worden gekoppeld. Er ontstaat zo een logisch stroomschema van gerelateerde acties. Met verbindingslijnen kunnen relaties tussen acties in verschillende stromen worden aangegeven.
+<br><br>
+Open de mindmap <em>Actielijst</em> door op de hyperlink onder een van de plaatjes te klikken. Klik in de bovenste actie (knoop) op het pijltje omhoog (driehoekje) om de toelichting (= bijlagetekst) te verbergen. Houd de cursor boven de tekst van de derde actie om de verborgen toelichting, actiehouder en datum gereed te zien. (Actiehouder en datum-gereed zijn opgenomen als attributen.) Houd de cursor boven de tweede actie om de brief te zien die Jan Janse heeft gestuurd en waarop een antwoord wordt gevraagd (= notitietekst). De agendafunctie is alleen beschikbaar als de mindmap met Freeplane op de eigen computer wordt uitgevoerd. 
+[[File:Taakverdeling3.jpg|left|<a href="http://www.kioo.nl/freeplane/taakverdeling">Actielijst</a> ]]
+[[File:Taakverdeling1.jpg|left|<a href="http://www.kioo.nl/freeplane/taakverdeling">Actielijst</a> ]]
+[[File:Taakverdeling2.jpg|left|<a href="http://www.kioo.nl/freeplane/taakverdeling">Actielijst</a> ]]</p>
+<p><br><br><br><br><br><br><br> <br><br><br><br><br></p>
+<h2 id="mindmap-bij-samenwerken-teamrollen-van-belbin"><a class="header" href="#mindmap-bij-samenwerken-teamrollen-van-belbin">Mindmap bij samenwerken (teamrollen van Belbin)</a></h2>
+<p><a href="http://www.kioo.nl/freeplane/teamrollen-belbin"><img src="Teamrollen-Belbin.jpg" alt="Teamrollen Belbin" /></a></p>
+<p>Samenwerken binnen organisaties is niet altijd even gemakkelijk. Op basis van onderzoek onderscheidt <a href="http://nl.wikipedia.org/wiki/Meredith_Belbin"><strong>Belbin</strong></a> 9 teamrollen. In de juiste verhouding en combinatie kunnen deze rollen elkaar versterken en bijdragen aan het succes van projecten. In de verkeerde verhouding kunnen ze leiden tot het mislukken van projecten. Met een <a href="http://www.thesis.nl/index.php?option=com_db8belbin&amp;Itemid=43">test</a> kun je bepalen welke (drie) rollen je teamleden en jou het beste liggen. Vervolgens kun je in de mindmap hiernaast achter elke rol de namen van de personen plaatsen die geschikt zijn voor de betreffende rol. Hiermee maak je inzichtelijk en bespreekbaar in hoeverre het team voldoende gevarieerd en volledig is en welke rollen bijzondere aandacht vereisen. 
+<br><br>
+Open de mindmap door op de hyperlink onder het plaatje te klikken. Beweeg de cursor boven elke teamrol en er verschijnt een beschrijving van de rol; de tekst is overgenomen uit de wiki over Belbin. Klik op de pijltjes en er opent een relevante webpagina. Eén van de pijltjes opent een videofilmpje over de 9 rollen van Belbin op Youtube.</p>
+<h2 id="mindmap-bij-een-swot-analyse"><a class="header" href="#mindmap-bij-een-swot-analyse">Mindmap bij een SWOT-analyse</a></h2>
+<pre><code>[[File:SWOT.jpg|thumb| [http://www.kioo.nl/freeplane/swot  SWOT-analyse] ]]
+</code></pre>
+<p>Bij het analyseren van een organisatie of project wordt soms gebruik gemaakt van een SWOT-analyse, zie <a href="http://nl.wikipedia.org/wiki/Sterkte-zwakteanalyse">Wikipedia</a>. Een elektronische mindmap kan helpen om de <em>Sterkten, Zwakten, Kansen en Bedreigingen</em> te beschrijven en vervolgens te ordenen. De mindmap kan bovendien helpen om de betekenis van deze begrippen uit te leggen.
+<br><br>
+Klik onder het plaatje op de hyperlink SWOT-analyse om de mindmap te openen. Merk op dat (schaalbare) plaatjes zijn gebruikt om de begrippen <em>Sterkte, Zwakte, Kans en Bedreiging</em> te illustreren. Breng de cursor boven respectievelijk de tekst <em>Sterkte, Zwakte, Kans en Bedreiging</em> om te zien wat deze begrippen betekenen. Naast elk van deze begrippen wordt een voorbeeldinvulling getoond. Breng de cursor boven de basisknoop (SWOT) om verwijzingen naar literatuur te zien.</p>
+<h2 id="mindmap-voor-de-samenhang-van-metagegevens"><a class="header" href="#mindmap-voor-de-samenhang-van-metagegevens">Mindmap voor de samenhang van metagegevens</a></h2>
+<p><a href="http://www.kioo.nl/metagegevens"><img src="SamenhangMetagegevens.jpg" alt="Samenhang metagegevens" /></a>
+Informatie binnen een organisatie moet worden geordend, beschreven en beheerd om te zorgen dat dat deze kan fungeren als betrouwbaar en toegankelijk bedrijfsgeheugen. De mindmap rechts maakt zichtbaar dat de metagegevens die hiervoor nodig zijn uiteenvallen in een aantal groepen: elke groep is omgeven door een rechthoekig kader. Pijlen geven relaties tussen gegevens aan en labels bij de pijlen beschrijven de aard van de relatie. Op deze wijze kunnen bijvoorbeeld alle <a href="http://www.e-overheid.nl/e-overheid-2.0/live/binaries/kennislab/pdf_bestanden/091210-toepassingsprofiel-metagegevens--v1-0-.pdf">metagegevens voor de rijksoverheid</a> worden beschreven.
+<br><br>
+Klik op de hyperlink onder het plaatje om de mindmap te openen. Beweeg met de cursor over de teksten om de verborgen toelichtende tekst te tonen. Selecteer de centrale knoop en klik vervolgens in de menubalk op de rode cirkel met het minteken om de hele mindmap dicht te vouwen: je ziet dat alleen de vijf groepen gegevens. Klik vervolgens op elke groep om deze één voor één open te vouwen.</p>
+<h2 id="mindmap-voor-informatiebeheerregels"><a class="header" href="#mindmap-voor-informatiebeheerregels">Mindmap voor informatiebeheerregels</a></h2>
+<p><a href="http://www.kioo.nl/gwr"><img src="GeneriekWaarderingsmodelRijk2010.jpg" alt="Generiek waarderingsmodel" /></a>
+Voor de <a href="http://www.archief.nl/waardering-selectie/projecten/bewerking-archiefachterstanden-vanaf-1976/generiek-waarderi">rijksoverheid</a> is in het <a href="http://www.archief.nl/sites/default/files/generiek_waarderingsmodel_rijksoverheid_1.0.pdf">Generiek waarderingsmodel rijksoverheid (GWR)</a> beschreven welke informatie blijvend (B) dan wel een bepaalde tijd (V + vernietigingstermijn in jaren) bewaard moet worden. De beschrijving bestaat uit een document en tabel van 26 pagina’s met hoofdprocessen en subprocessen; en voor elk van deze processen een beschrijving, toelichting, waardering (B/V) en voorbeelden.  Dit is veel en daardoor minder makkelijk te overzien en gebruiken. Dezelfde informatie wordt in de mindmap rechts gelaagd en modulair gepresenteerd. Met het zoek- en filtermechanisme van de mindmap heb je direct toegang tot alleen die informatie die je op een bepaald moment wilt zien.
+<br><br>
+Bekijk de <a href="http://www.kioo.nl/gwr/gwr.htm">demonstratie</a>. Open daarna de mindmap door op de hyperlink onder het plaatje te klikken. Beweeg de cursor over de teksten (hoofdprocessen) om de volledige beschrijving (categorie), toelichting en voorbeelden te zien. klik op een hoofdproces om deze open te vouwen zodat de subprocessen worden getoond. Beweeg de cursor over de subprocessen om de volledige beschrijving, toelichting, waardering en voorbeelden te zien. Vul in de zoek/filterbalk een term in om te zoeken/filteren zoals in de demonstratie.  Raadpleeg de handleiding om meer over zoeken en filteren te lezen.</p>
+<h2 id="mindmap-voor-informatiebeheer-bij-digitaal-werken"><a class="header" href="#mindmap-voor-informatiebeheer-bij-digitaal-werken">Mindmap voor informatiebeheer bij digitaal werken</a></h2>
+<p><a href="http://www.kioo.nl/freeplane/InformatiebeheerBijVolledigDigitaalWerken"><img src="InformatiebeheerBijDigitaalWerken.jpg" alt="Informatiebeheer bij digitaal werken" /></a>
+Bij digitaal werken verandert er veel, zowel voor de gebruiker als de beheerder van informatie. Deze mindmap toont per proces van de gebruiker en de beheerder de belangrijkste veranderingen.
+<br><br><br><br></p>
+<h2 id="mindmap-bij-het-oplossen-van-problemen"><a class="header" href="#mindmap-bij-het-oplossen-van-problemen">Mindmap bij het oplossen van problemen</a></h2>
+<p>In het engelstalige artikel <a href="Freeplane_and_problem_solving.html"><strong>Freeplane and problem solving</strong></a> wordt een algemene methode beschreven om met gebruik van twee mindmaps een veelheid aan problemen op te lossen.</p>
+<br>
+<hr />
+<h1 id="mindmap-in-de-klas"><a class="header" href="#mindmap-in-de-klas">Mindmap in de klas</a></h1>
+<p>Een mindmap kan worden gebruikt om op een flexibele en interactieve manier informatie voor een les aan te bieden.
+Dezelfde mindmap kan daarbij door de leerling worden gebruikt om de antwoorden op de vragen die hij heeft gevonden vast te leggen, en eventueel te leren. Zie ook <a href="http://www.digitaledidactiek.nl/wp/?p=527">TU Delft, sectie EduTec</a> en <a href="http://www.onderwijsvanmorgen.nl/mindmaps-in-het-onderwijs/">Onderwijs van morgen</a>.</p>
+<h2 id="sneller-leren-door-vooraf-vragen-te-stellen"><a class="header" href="#sneller-leren-door-vooraf-vragen-te-stellen">Sneller leren door vooraf vragen te stellen</a></h2>
+<p><a href="http://www.kioo.nl/freeplane/WHVragen"><img src="WH-Vragen.jpg" alt="WH-Vragen" /></a>Om sneller te leren helpt het om vooraf wat- en hoe-vragen te stellen en deze tijdens het leren te beantwoorden, zie <a href="http://www.lereniseenmakkie.nl/Maakwerk/Vragen_klaarzetten.html">lereniseenmakkie.nl</a>. Een mindmap kan dit proces handig ondersteunen. De mindmap is te <strong><a href="http://www.kioo.nl/download/?dfile=WH-Vragen.zip">downloaden</a></strong>.
+<br> <br> <br> <br><br></p>
+<h2 id="maken-en-geven-spreekbeurt"><a class="header" href="#maken-en-geven-spreekbeurt">Maken en geven spreekbeurt</a></h2>
+<p>[[File:SjabloonOctopus.jpg| left|  <a href="http://www.kioo.nl/freeplane/Octopus/SjabloonOctopus.html">Sjabloon spreekbeurt</a> ]]
+<a href="http://www.kioo.nl/freeplane/Octopus/AntwoordenOctopus.html"><img src="AntwoordenOctopus.jpg" alt="Spreekbeurt" /></a>
+Een mindmap kan worden gebruikt om een opdracht voor een spreekbeurt te geven met aanwijzingen (hints) op welke vragen de leerling een antwoord kan of moet zoeken en met een begin van literatuur. 
+De leerling kan de literatuurverwijzingen in de mindmap aanklikken en bestuderen en de antwoorden op de (eigen) vragen aan de mindmap toevoegen. Links is een voorbeeld mindmap met kernwoorden voor vragen en literatuurverwijzingen opgenomen. Voor de gevorderde leerling kan men de kernwoorden en/of de literatuur eventueel verwijderen.
+Als de mindmap is ingevuld kan deze worden gebruikt om de spreekbeurt te leren en te houden. Rechts is een mindmap met antwoorden opgenomen die kan worden gebruikt voor het houden of controleren van de spreekbeurt. Beide mindmaps zijn te <strong><a href="http://www.kioo.nl/download/?dfile=Octopus.zip">downloaden</a></strong>.
+<br><br></p>
+<h2 id="geordend-presenteren-en-verwerken-van-informatie"><a class="header" href="#geordend-presenteren-en-verwerken-van-informatie">Geordend presenteren en verwerken van informatie</a></h2>
+<p><a href="http://www.kioo.nl/freeplane/Kabinet_Rutte"><img src="Kabinet_Rutte.jpg" alt="Kabinet Rutte" /></a>
+In nevenstaande mindmap is de samenstelling van het <a href="http://www.kioo.nl/freeplane/Kabinet_Rutte%7C**kabinet">Rutte**</a> samengevat. Bij elke minister en staatssecretaris is een snelkoppeling opgenomen naar het politieke profiel en de CV van de betreffende minister en staatssecretaris. De les zou kunnen bestaan uit het opzoeken van de politieke partij waartoe elke lid van het kabinet behoort. Het antwoord op deze vraag zou door de leerling zelf kunnen worden toegevoegd aan de mindmap. De mindmap kan hij daarna bewaren als persoonlijke geheugensteun.
+<br> <br> <br></p>
+<hr />
+<h1 id="instructievideos"><a class="header" href="#instructievideos">Instructievideo's</a></h1>
+<p><strong>LET OP</strong>: de instructievideo's maken gebruik van de menustructuur van Freeplane 1.1.3. Vanaf versie 1.2.5 wordt een minder complexe menustructuur gebruikt (zie boven de mindmap van de handleiding met de nieuwe menustructuur).</p>
+<ul>
+<li><a href="http://www.kioo.nl/freeplane/FreeplaneInstructie/BasisGebruikerInstructie.htm"><strong>Instructie voor de beginnende gebruiker</strong></a> van Freeplane en Freemind. Deze video behandelt alleen het bekijken van mindmaps.</li>
+<li><a href="http://www.kioo.nl/gwr/gwr.htm"><strong>Demonstratie</strong></a> van verborgen teksten (bijlage, notitie, attributen) en filteren.</li>
+<li><a href="http://www.kioo.nl/freeplane/FreeplaneInstructie/Basisinstructie-knoopbehandeling.htm"><strong>Instructie voor de beginnende maker van mindmaps</strong></a> met Freeplane of Freemind.</li>
+</ul>
+<hr />
+<h1 id="links"><a class="header" href="#links">Links</a></h1>
+<ul>
+<li><a href="http://www.informationtamers.com/WikIT">WikiT</a></li>
+<li><a href="http://mindmap.startpagina.nl/">startpagina</a></li>
+<li><a href="Tutorial_Freeplane_How-to_nl.html">Download Freeplane</a></li>
+</ul>
+<p><strong>Onderwijs</strong></p>
+<ul>
+<li><a href="http://www.leraar24.nl/video/2380">Woord web vo</a> en <a href="http://www.leraar24.nl/video/2329">lo</a></li>
+<li><a href="http://www.onderwijsmaakjesamen.nl/actueel/e-college-wat-is-een-mindmap/">wat is een mm</a></li>
+<li><a href="http://www.onderwijsmaakjesamen.nl/actueel/een-mindmap-oh-dat-ken-ik-al-dat-is-een-woordweb/">verschil woordweb en mindmap</a></li>
+<li><a href="http://www.leraar24.nl/video/1836/engelse-woordjes-in-beeld-met-lomo">engelse woordjes; lomo</a></li>
+<li><a href="http://www.onderwijsmaakjesamen.nl/actueel/gratis-mindmap-ideeenboek/">ideeenboek</a></li>
+<li><a href="http://www.slo.nl/primair/leergebieden/ned/taalsite/lexicon/00703/">woordveld</a></li>
+<li><a href="https://encrypted.google.com/search?q=woordweb&amp;hl=nl&amp;client=firefox-a&amp;hs=rlJ&amp;rlz=1R1GGHP_nl___IT434&amp;prmd=imvns&amp;ei=REXeTufgLIqE-wbu0pU6&amp;start=10&amp;sa=N&amp;biw=1333&amp;bih=533">woordweb in 8 stappen</a></li>
+<li><a href="http://www.iselinge.nl/scholenplein/pabolessen/Wendy%20Doornink/Lesvoorbereiding%20woordweb.pdf">lesvoorbereiding italie</a></li>
+<li><a href="http://issuu.com/blom/woordweb-voorbereiding-schrijven">voorbereiding schrijven</a></li>
+<li><a href="http://www.allestelt.nl/allestelt/pagina.asp?pagkey=50440">alles telt</a></li>
+<li><a href="http://www.coutinho.nl/geloofjehetzelf/10_lesvoorbeeld_woordweb_rondom_emoties.pdf">emoties</a></li>
+<li><a href="http://www.slideshare.net/pkoning/microsoft-word-studietaak-zoeken-en-vinden">studietk zoeken en vinden</a></li>
+<li><a href="http://leerling.naskoveral.epn.nl/site/EPN_naskoveral_Leerling/htm/vaardigheden%202%20havo_vwo.pdf">natuurkunde</a></li>
+<li><a href="http://prezi.com/rqoheevb-5yq/liguster-pijlstaart-rups-woord-web-jouke/">dynamische mm pijlstaart rups</a></li>
+<li><a href="http://www.phl.be/Bijlagen/Departementen/Lerarenopleiding/Langdurig%20zieke%20kinderen/Bijlage%201%20-%20woordweb%20kanker.pdf">woordweb kanker</a></li>
+<li><a href="http://www.op-expeditie.nl/pages/toon_film_fullscreen.php?swf=http://referentiemateriaalbao.noordhoff.nl/Opexpeditie/Overig%20-%20cursus%202-def2.flv&amp;title=Hoe%20maak%20je%20een%20woordweb?">instructie woordwebbouwer</a></li>
+<li><a href="http://www.hunzeenaas.nl/Leren,basisonderwijs/Spreekbeurt-of-werkstuk.html">zo maak je een werkstuk of spreekbeurt</a></li>
+<li><a href="http://leermiddel.digischool.nl/po/leermiddel/a64b6483fccbaac02acaa52a057abe2e">digischool</a></li>
+<li><a href="http://www.ipfier6.nl/ip/uploads/downloads/Hulpkaarten_montaigne_eindversie.pdf">hulpkaarten</a></li>
+</ul>
+<p>Images</p>
+<ul>
+<li><a href="http://www.kioo.nl/download/?dfile=freeplaneCD.zip">FreeplaneCD downloaden</a></li>
+</ul>
+<!-- ({Category:Documentation}) ({Category:Translation}) -->
+<footer id="open-on-gh">Found a mistake? <a href="https://github.com/freeplane/docs/edit/main/src/docs/attic/old-mediawiki-content/Tutorial_Freeplane_nl.md">Edit this page on GitHub.</a></footer>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../attic/old-mediawiki-content/Tutorial_Freeplane_How-to_nl.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../attic/old-mediawiki-content/User_icons.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../attic/old-mediawiki-content/Tutorial_Freeplane_How-to_nl.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../attic/old-mediawiki-content/User_icons.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

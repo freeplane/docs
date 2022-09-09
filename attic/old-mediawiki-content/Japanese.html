@@ -1,0 +1,437 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Japanese - Freeplane Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../open-in.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><li class="part-title">User guide</li><li class="chapter-item "><a href="../../home.html"><strong aria-hidden="true">1.</strong> Home</a></li><li class="chapter-item "><a href="../../how-to-get-help.html"><strong aria-hidden="true">2.</strong> How to get help</a></li><li class="chapter-item "><a href="../../getting-started/getting-started.html"><strong aria-hidden="true">3.</strong> Getting started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../getting-started/Distributions.html"><strong aria-hidden="true">3.1.</strong> Distributions</a></li><li class="chapter-item "><a href="../../getting-started/Command-line_options_and_configuration.html"><strong aria-hidden="true">3.2.</strong> Command-line options and configuration</a></li><li class="chapter-item "><a href="../../getting-started/Add-ons_(install).html"><strong aria-hidden="true">3.3.</strong> Extend with add-ons</a></li></ol></li><li class="chapter-item "><a href="../../user-documentation/first-steps.html"><strong aria-hidden="true">4.</strong> User documentation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../user-documentation/first-steps.html"><strong aria-hidden="true">4.1.</strong> First steps</a></li><li class="chapter-item "><a href="../../user-documentation/working-w-mindmap-files.html"><strong aria-hidden="true">4.2.</strong> Working with mindmap files</a></li><li class="chapter-item "><a href="../../user-documentation/formatting-maps-and-nodes.html"><strong aria-hidden="true">4.3.</strong> Formatting maps and nodes</a></li><li class="chapter-item "><a href="../../user-documentation/styles.html"><strong aria-hidden="true">4.4.</strong> Styles</a></li><li class="chapter-item "><a href="../../user-documentation/templates.html"><strong aria-hidden="true">4.5.</strong> Templates</a></li><li class="chapter-item "><a href="../../user-documentation/css-for-html-or-markdown.html"><strong aria-hidden="true">4.6.</strong> CSS for HTML/Markdown</a></li><li class="chapter-item "><a href="../../user-documentation/Conditional_node_styles.html"><strong aria-hidden="true">4.7.</strong> Conditional node styles</a></li><li class="chapter-item "><a href="../../user-documentation/LaTeX_in_Freeplane.html"><strong aria-hidden="true">4.8.</strong> LaTeX in Freeplane</a></li><li class="chapter-item "><a href="../../user-documentation/Spell_checker.html"><strong aria-hidden="true">4.9.</strong> Spell checker</a></li><li class="chapter-item "><a href="../../user-documentation/Relationship_to_FreeMind.html"><strong aria-hidden="true">4.10.</strong> Relationship to FreeMind</a></li><li class="chapter-item "><a href="../../user-documentation/other-docs-tutorials.html"><strong aria-hidden="true">4.11.</strong> References to other known documentation/tutorial sites</a></li></ol></li><li class="chapter-item "><a href="../../contribute/contribute.html"><strong aria-hidden="true">5.</strong> Contribute</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../contribute/Translation_How-To.html"><strong aria-hidden="true">5.1.</strong> Translation How-To</a></li><li class="chapter-item "><a href="../../contribute/Contributing_to_Freeplane's_Development.html"><strong aria-hidden="true">5.2.</strong> Contributing to Freeplane's Development</a></li></ol></li><li class="chapter-item "><a href="../../scripting/Scripting.html"><strong aria-hidden="true">6.</strong> Scripting</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../scripting/Formulas.html"><strong aria-hidden="true">6.1.</strong> Formulas</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../scripting/Formulas.html"><strong aria-hidden="true">6.1.1.</strong> Formulas</a></li><li class="chapter-item "><a href="../../scripting/Scripting!_Script_filter.html"><strong aria-hidden="true">6.1.2.</strong> Formula filter</a></li></ol></li><li class="chapter-item "><a href="../../scripting/Scripting_Cheatsheet.html"><strong aria-hidden="true">6.2.</strong> Scripting Cheatsheet</a></li><li class="chapter-item "><a href="../../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.</strong> Scripts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.1.</strong> Scripts collection</a></li><li class="chapter-item "><a href="../../scripting/Scripting_text_editing.html"><strong aria-hidden="true">6.3.2.</strong> Scripts for text editing</a></li><li class="chapter-item "><a href="../../scripting/Example_scripts_using_external_libraries.html"><strong aria-hidden="true">6.3.3.</strong> Scripts using external libraries</a></li><li class="chapter-item "><a href="../../scripting/Script_incubator.html"><strong aria-hidden="true">6.3.4.</strong> Script incubator</a></li><li class="chapter-item "><a href="../../scripting/Scripting!_Jython.html"><strong aria-hidden="true">6.3.5.</strong> Scripting! Jython</a></li><li class="chapter-item "><a href="../../scripting/Scripting_environment_setup.html"><strong aria-hidden="true">6.3.6.</strong> Scripting environment setup</a></li></ol></li><li class="chapter-item "><a href="../../scripting/Export_Using_XSLT.html"><strong aria-hidden="true">6.4.</strong> XSLT for export/import</a></li><li class="chapter-item "><a href="../../scripting/Add-ons_(Develop).html"><strong aria-hidden="true">6.5.</strong> Add-ons (Development)</a></li><li class="chapter-item "><a href="../../scripting/Security_considerations.html"><strong aria-hidden="true">6.6.</strong> Security considerations</a></li></ol></li><li class="chapter-item "><a href="../../coding/Git_howto.html"><strong aria-hidden="true">7.</strong> Coding</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../coding/Git_howto.html"><strong aria-hidden="true">7.1.</strong> Git howto</a></li><li class="chapter-item "><a href="../../coding/How_to_build_Freeplane.html"><strong aria-hidden="true">7.2.</strong> How to build Freeplane</a></li><li class="chapter-item "><a href="../../coding/IDE_setup.html"><strong aria-hidden="true">7.3.</strong> IDE setup</a></li><li class="chapter-item "><a href="../../coding/Plugin_development.html"><strong aria-hidden="true">7.4.</strong> Plugin development</a></li></ol></li><li class="chapter-item "><li class="part-title">Attic</li><li class="chapter-item expanded "><a href="../../attic/home.html"><strong aria-hidden="true">8.</strong> Attic (draft documents)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.</strong> Old MediaWiki content</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.1.</strong> Old Home</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Approximate_search.html"><strong aria-hidden="true">8.1.2.</strong> Approximate search</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Architecture.html"><strong aria-hidden="true">8.1.3.</strong> Architecture</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Batch_Jobs.html"><strong aria-hidden="true">8.1.4.</strong> Batch Jobs</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Contributors.html"><strong aria-hidden="true">8.1.5.</strong> Contributors</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Current_Freeplane_File_Format.html"><strong aria-hidden="true">8.1.6.</strong> Current Freeplane File Format</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Data_recognition_and_data_formats.html"><strong aria-hidden="true">8.1.7.</strong> Data recognition and data formats</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Debugging_scripts.html"><strong aria-hidden="true">8.1.8.</strong> Debugging scripts</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Document_Format.html"><strong aria-hidden="true">8.1.9.</strong> Document Format</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Edit_scripts_in_Eclipse.html"><strong aria-hidden="true">8.1.10.</strong> Edit scripts in Eclipse</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/External_objects.html"><strong aria-hidden="true">8.1.11.</strong> External objects</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/External_script_file_execution.html"><strong aria-hidden="true">8.1.12.</strong> External script file execution</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/FAQ.html"><strong aria-hidden="true">8.1.13.</strong> FAQ</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Fixed_security_vulnerabilities.html"><strong aria-hidden="true">8.1.14.</strong> Fixed security vulnerabilities</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/FreeMind_0.9.0_-_Freeplane_1.1.x.html"><strong aria-hidden="true">8.1.15.</strong> FreeMind 0.9.0 - Freeplane 1.1.x</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane2PowerPoint.html"><strong aria-hidden="true">8.1.16.</strong> Freeplane2PowerPoint</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Tutorial_Extensions.html"><strong aria-hidden="true">8.1.17.</strong> Freeplane Tutorial Extensions</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Screenshots.html"><strong aria-hidden="true">8.1.18.</strong> Freeplane Tutorial How-to Screenshots</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Video.html"><strong aria-hidden="true">8.1.19.</strong> Freeplane Tutorial How-to Video</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Wiki!Administrators.html"><strong aria-hidden="true">8.1.20.</strong> Freeplane Wiki!Administrators</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_and_problem_solving.html"><strong aria-hidden="true">8.1.21.</strong> Freeplane and problem solving</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_features_you_were_missing_in_FreeMind.html"><strong aria-hidden="true">8.1.22.</strong> Freeplane features you were missing in FreeMind</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_for_Windows_Mobile.html"><strong aria-hidden="true">8.1.23.</strong> Freeplane for Windows Mobile</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_installation_for_Ubuntu_OS.html"><strong aria-hidden="true">8.1.24.</strong> Freeplane installation for Ubuntu OS</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Get_the_code.html"><strong aria-hidden="true">8.1.25.</strong> Get the code</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Goals.html"><strong aria-hidden="true">8.1.26.</strong> Goals</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Groovy_scripts_and_formulas_can_escape_sandbox.html"><strong aria-hidden="true">8.1.27.</strong> Groovy scripts and formulas can escape sandbox</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Harmonizing_FP-menu.html"><strong aria-hidden="true">8.1.28.</strong> Harmonizing FP-menu</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Help!Contents.html"><strong aria-hidden="true">8.1.29.</strong> Help!Contents</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Help!Editing.html"><strong aria-hidden="true">8.1.30.</strong> Help!Editing</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Help_Previous_Freeplane_Versions.html"><strong aria-hidden="true">8.1.31.</strong> Help Previous Freeplane Versions</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/How_to_publish_add-ons.html"><strong aria-hidden="true">8.1.32.</strong> How to publish add-ons</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/How_to_test.html"><strong aria-hidden="true">8.1.33.</strong> How to test</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Information_management_with_Freeplane_add-on_dView(indexfile).html"><strong aria-hidden="true">8.1.34.</strong> Information management with Freeplane add-on dView(indexfile)</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Init_scripts.html"><strong aria-hidden="true">8.1.35.</strong> Init scripts</a></li><li class="chapter-item expanded "><a href="../../attic/old-mediawiki-content/Japanese.html" class="active"><strong aria-hidden="true">8.1.36.</strong> Japanese</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Linux.html"><strong aria-hidden="true">8.1.37.</strong> Linux</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Logo_and_splashscreen.html"><strong aria-hidden="true">8.1.38.</strong> Logo and splashscreen</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Macintosh.html"><strong aria-hidden="true">8.1.39.</strong> Macintosh</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Map_local_scripts.html"><strong aria-hidden="true">8.1.40.</strong> Map local scripts</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Map_templates.html"><strong aria-hidden="true">8.1.41.</strong> Map templates</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Menus_and_commands.html"><strong aria-hidden="true">8.1.42.</strong> Menus and commands</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Mind_map_gallery.html"><strong aria-hidden="true">8.1.43.</strong> Mind map gallery</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/New_Freeplane_File_Format_(Proposal).html"><strong aria-hidden="true">8.1.44.</strong> New Freeplane File Format (Proposal)</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/New_features_in_Freeplane_1.2.html"><strong aria-hidden="true">8.1.45.</strong> New features in Freeplane 1.2</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/New_features_in_Freeplane_1.3.html"><strong aria-hidden="true">8.1.46.</strong> New features in Freeplane 1.3</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/OSGI_based_plug-ins.html"><strong aria-hidden="true">8.1.47.</strong> OSGI based plug-ins</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Patterns.html"><strong aria-hidden="true">8.1.48.</strong> Patterns</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Portable_Freeplane.html"><strong aria-hidden="true">8.1.49.</strong> Portable Freeplane</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Release_cycle.html"><strong aria-hidden="true">8.1.50.</strong> Release cycle</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Release_smoke_test.html"><strong aria-hidden="true">8.1.51.</strong> Release smoke test</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Rules_to_build_user_friendly_menus.html"><strong aria-hidden="true">8.1.52.</strong> Rules to build user friendly menus</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_API_Changes.html"><strong aria-hidden="true">8.1.53.</strong> Scripting! API Changes</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Freeplane_Utility_Classes.html"><strong aria-hidden="true">8.1.54.</strong> Scripting! Freeplane Utility Classes</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Included_libraries.html"><strong aria-hidden="true">8.1.55.</strong> Scripting! Included libraries</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Other_languages.html"><strong aria-hidden="true">8.1.56.</strong> Scripting! Other languages</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Update_Freeplane's_Groovy_version.html"><strong aria-hidden="true">8.1.57.</strong> Scripting! Update Freeplane's Groovy version</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting_API.html"><strong aria-hidden="true">8.1.58.</strong> Scripting API</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Support.html"><strong aria-hidden="true">8.1.59.</strong> Support</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Think_Tank.html"><strong aria-hidden="true">8.1.60.</strong> Think Tank</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Translation_nl.html"><strong aria-hidden="true">8.1.61.</strong> Translation nl</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Troubleshooting.html"><strong aria-hidden="true">8.1.62.</strong> Troubleshooting</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Tutorial_Freeplane_How-to_nl.html"><strong aria-hidden="true">8.1.63.</strong> Tutorial Freeplane How-to nl</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Tutorial_Freeplane_nl.html"><strong aria-hidden="true">8.1.64.</strong> Tutorial Freeplane nl</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/User_icons.html"><strong aria-hidden="true">8.1.65.</strong> User icons</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Videos_and_animations_How-to.html"><strong aria-hidden="true">8.1.66.</strong> Videos and animations How-to</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Visions.html"><strong aria-hidden="true">8.1.67.</strong> Visions</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Wish_List.html"><strong aria-hidden="true">8.1.68.</strong> Wish List</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/XML_External_Entity_vulnerability_in_map_parser.html"><strong aria-hidden="true">8.1.69.</strong> XML External Entity vulnerability in map parser</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Your_own_utility_script_library.html"><strong aria-hidden="true">8.1.70.</strong> Your own utility script library</a></li></ol></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.</strong> New wiki initiative</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.1.</strong> customizing-freeplane</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/freeplane-api-groovy.html"><strong aria-hidden="true">8.2.2.</strong> freeplane-api-groovy</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/glossary.html"><strong aria-hidden="true">8.2.3.</strong> glossary</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/introduction-aka-many-unsorted-ideas-related-to-freeplane.html"><strong aria-hidden="true">8.2.4.</strong> introduction-aka-many-unsorted-ideas-related-to-freeplane</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/understanding-interface.html"><strong aria-hidden="true">8.2.5.</strong> understanding-interface</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/understanding-nodes.html"><strong aria-hidden="true">8.2.6.</strong> understanding-nodes</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">Special pages</li><li class="chapter-item "><a href="../../after-redirect.html"><strong aria-hidden="true">9.</strong> After redirect from the old media wiki</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Freeplane Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/freeplane/docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <ul>
+<li><a href="#what-is-freeplane-freeplane-%E3%81%AF%E4%BD%95%E3%81%A7%E3%81%99%E3%81%8B">What is Freeplane? Freeplane は、何ですか？</a></li>
+<li><a href="#getting-freeplane--freeplane-%E3%82%92%E5%BE%97%E3%82%8B%E3%81%93%E3%81%A8">Getting Freeplane : Freeplane を得ること</a></li>
+<li><a href="#freeplane-features--freeplane-%E6%A9%9F%E8%83%BD">Freeplane features : Freeplane 機能</a>
+<ul>
+<li><a href="#the-most-important-new-features--%E6%9C%80%E3%82%82%E9%87%8D%E8%A6%81%E3%81%AA%E6%96%B0%E6%A9%9F%E8%83%BD">The most important new features : 最も重要な新機能</a></li>
+<li><a href="#new-filtering-features--%E6%96%B0%E3%81%97%E3%81%84%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0%E6%A9%9F%E8%83%BD">New filtering features : 新しいフィルタリング機能</a></li>
+<li><a href="#other-features--%E4%BB%96%E3%81%AE%E7%89%B9%E5%BE%B4">Other features : 他の特徴</a></li>
+</ul>
+</li>
+<li><a href="#contributing-to-freeplanes-development--freeplane-%E3%81%AE%E7%99%BA%E5%B1%95%E3%81%AB%E9%96%A2%E4%B8%8E%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8">Contributing to Freeplane's Development : Freeplane の発展に関与すること</a>
+<ul>
+<li><a href="#testing-freeplane--freeplane%E3%82%92%E3%83%86%E3%82%B9%E3%83%88%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8">Testing Freeplane : Freeplaneをテストすること</a></li>
+</ul>
+</li>
+<li><a href="#browsing-this-wiki--%E3%81%93%E3%81%AE-wiki-%E3%82%92%E9%96%B2%E8%A6%A7%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8">Browsing this Wiki : この Wiki を閲覧すること</a></li>
+<li><a href="#contributing-to-the-wiki--wiki-%E3%81%AB%E8%B2%A2%E7%8C%AE%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8">Contributing to the Wiki : Wiki に貢献すること</a></li>
+<li><a href="#useful-links--%E5%BD%B9%E3%81%AB%E7%AB%8B%E3%81%A4%E9%96%A2%E9%80%A3">Useful links : 役に立つ関連</a></li>
+<li><a href="#thanks--%E6%84%9F%E8%AC%9D">Thanks : 感謝</a></li>
+<li><a href="#freeplane%E3%83%95%E3%83%AA%E3%83%BC%E3%83%97%E3%83%AC%E3%83%BC%E3%83%B3-japanese-guide%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%82%AC%E3%82%A4%E3%83%89">Freeplane(フリープレーン) Japanese guide(日本語ガイド)</a></li>
+</ul>
+<center>
+<p><big> <em><strong>Boost your brain with Freeplane<br />Freeplane であなたの脳を高めてください。</strong></em> </big></p>
+</center>
+<p><a href="Image:Download.png.html">Download Freeplane|link=http://sourceforge.net/projects/freeplane/|Download Freeplane</a> </p>
+<center>
+<p><big> <strong><a href="http://sourceforge.net/projects/freeplane/">Download Freeplane now!<br />すぐに Freeplane をダウンロードしてください！ : English</a></strong> </big></p>
+<p><big> <strong><a href="http://sourceforge.jp/projects/sfnet_freeplane/">Download Freeplane now!<br />Freeplane プロジェクト日本語トップページ - SourceForge.JP！ : sfnet_freeplane : Japanese</a></strong> </big></p>
+</center>
+<h1 id="what-is-freeplane-freeplane-は何ですか"><a class="header" href="#what-is-freeplane-freeplane-は何ですか">What is Freeplane? <p>Freeplane は、何ですか？</p></a></h1>
+<p>Freeplane is a powerful and free mind mapping application.  It is a redesigned version of the well known <a href="http://freemind.sourceforge.net">FreeMind</a>, and is created by one of FreeMind's key developers. The software is written in Java, and supports any platform capable of running current versions of Java, including:</p>
+<p>Freeplane（フリープレーン）は、パワフルで無料のマインドマッピングアプリケーションです。それは有名な FreeMind の改良 (再デザイン) されたバージョンで、FreeMind の重要な開発者のうちの1人によってつくられました。ソフトウェアは Java で記述されて、Java の現在のバージョンを走らせることができる、どんなプラットフォームでもサポートします：</p>
+<p>*Microsoft Windows
+*Mac OS X
+*Linux / BSD / Solaris
+*<a href="Portable_Freeplane.html">Portable Freeplane</a> for Windows (runs from a USB drive) : ポータブル Freeplane (ＵＳＢドライブからの起動)</p>
+<p>Freeplane is available in several different languages.  The currently available translations are: English, French, German, Italian, Russian, and Croatian.</p>
+<p>Freeplaneは、いくつかの異なる言語で利用できます。現在利用できる翻訳は以下の通りです：英語、フランス語、ドイツ語、イタリア語、ロシア語、クロアティア語。</p>
+<p>日本語 : <a href="http://sourceforge.jp/projects/sfnet_freeplane/">Download Freeplane now!<br />Freeplane プロジェクト日本語トップページ - SourceForge.JP！ : sfnet_freeplane : Japanese</a></p>
+<p>Freeplane is released under the GNU General Public License (GPL). : Freeplane は、GPL 下でリリースされています。</p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><a href="News.html">Older news</a></p>
+<h1 id="getting-freeplane--freeplane-を得ること"><a class="header" href="#getting-freeplane--freeplane-を得ること">Getting Freeplane : Freeplane を得ること</a></h1>
+<p>First make sure you have installed a recent version of <a href="http://www.java.com/getjava/">Java</a>, 1.5 or above.</p>
+<p>To download Freeplane, go to the <a href="http://sourceforge.net/projects/freeplane/">SourceForge page</a>, and click on the &quot;Download Now!&quot; button. </p>
+<p>To run, simply extract the downloaded zipfile, and run the &quot;freeplane.bat&quot; file (Windows), or the &quot;freeplane.sh&quot; file (Unix) file.</p>
+<p>最初に、あなたが <a href="http://www.java.com/getjava/">Java</a>、1.5以上の最近のバージョンをインストールしたことを確認してください。
+*動作にはJava Runtime Environment(JRE) が必要です。<a href="http://java.sun.com/javase/ja/6/download.html">J2SE の JRE（または SDK）</a></p>
+<p>ダウンロード Freeplane、<a href="http://sourceforge.net/projects/freeplane/">SourceForge page</a>, へ行き、そして、「すぐにダウンロードしてください！」ボタンをクリックします。 : こちらは、English Site になります。
+*日本語 : <a href="http://sourceforge.jp/projects/sfnet_freeplane/">Download Freeplane now!<br />Freeplane プロジェクト日本語トップページ - SourceForge.JP！ : sfnet_freeplane : Japanese</a></p>
+<p>起動するために、単にダウンロードされた zipfile を展開してください。そして、「freeplane.bat」ファイル（Windows）を走らせてください、さもなければ、「freeplane.sh」ファイル（Unix）を走らせます。
+*<a href="http://sourceforge.jp/projects/sfnet_freeplane/howto/install">Freeplane のインストール方法 - Freeplane - SourceForge.JP : sfnet_freeplane : Japanese</a> Ubuntu 9.04 Linux 版のインストールが、でています。 </p>
+<h1 id="freeplane-features--freeplane-機能"><a class="header" href="#freeplane-features--freeplane-機能">Freeplane features : Freeplane 機能</a></h1>
+<p>A New <strong><a href="User_Manual.html">User Manual</a></strong> is coming. <a href="User_Manual.html">Read and contribute</a>.
+*新しいユーザーマニュアルはこちらにあります。読んで、使用してください。(英語です。)</p>
+<h2 id="the-most-important-new-features--最も重要な新機能"><a class="header" href="#the-most-important-new-features--最も重要な新機能">The most important new features : 最も重要な新機能</a></h2>
+<p>*Better inline_editor for all plain text nodes 
+**すべてのプレーンテキストノードのためのより良いインラインエディタ。
+*Edge-like connectors (available from connector pop-up menu) 
+**エッジ コネクタ (ポップアップメニューからコネクタ入手可能)。
+*<a href="External_objects.html">External objects</a>: External bitmap and SVG images can be attached using menu Insert-&gt;External object and resized 
+**外部オブジェクト: 外部のビットマップ、そして、SVGイメージは、リサイズと挿入-外部オブジェクトのメニューを用いて付けることができる。
+**Image size can be reset by double clicking on the bottom right corner 
+***イメージサイズは、右下角をダブルクリックすることによってリセットすることができます。
+**Images can be scaled by dragging the bottom right corner 
+***画像は、右下角をドラッグすることによって縮尺することができます。
+*Good <a href="../scripting/Scripting.html">Scripting</a> support: 
+**良い Scripting サポート: 
+**<a href="Scripting_API.html">New scripting API</a> 
+***新しい API スクリプト。
+**<a href="External_script_file_execution.html">Loading and execution of external groovy scripts</a> 
+***外部の型にはまったスクリプトの積載と実行。
+*Insert image dialog and insert external object dialog have file previews 
+**ダイアログイメージの挿入とダイアログの外部オブジェクト挿入は、ファイルプレビューができる。
+*F-Toolbar 
+**F-ツールバー (F バー)。
+*Find or Replace in all open maps 
+**すべての開いたマップで検索、あるいは、置換ます。
+*Full screen mode 
+**フルスクリーンモード。
+*Hidden Edge Style 
+**隠れるエッジスタイル。
+*Horizontal Edge Style 
+**水平エッジスタイル。
+*Hot keys can be set by pressing left mouse button on menu item and holding CONTROL key 
+**ホットキーは、CONTROL キーを押さえてメニュー項目の上で左マウスボタン押すことでセットできます。
+*Outline view 
+**アウトライン (概略) 表示。
+*<a href="Portable_Freeplane.html">Portable Freeplane</a> 
+**ポータブル (携帯型) Freeplane .
+*Selective paste from edit menu (Paste as...) 
+**編集メニューからの選択的な貼り付け（貼り付け...）。
+*Spell checker 
+**スペルチェッカー。
+*Structured HTML paste
+**構造化 HTML 貼り付け。</p>
+<h2 id="new-filtering-features--新しいフィルタリング機能"><a class="header" href="#new-filtering-features--新しいフィルタリング機能">New filtering features : 新しいフィルタリング機能</a></h2>
+<p>*Date based filter </p>
+<pre><code>* データベースのフィルタ。
+</code></pre>
+<p>*Filter conditions for numeric values return false for non numeric values </p>
+<pre><code>* 数でない値のために間違って戻る数の値のフィルタ条件。
+</code></pre>
+<p>*Filter based on link labels </p>
+<pre><code>* ラベルのリンクに基づくフィルタ。
+</code></pre>
+<p>*Filter history </p>
+<pre><code>* フィルタ履歴。
+</code></pre>
+<p>*Filter menu </p>
+<pre><code>* フィルタメニュー。
+</code></pre>
+<p>*Filter tool bar can be hidden like all other tool bars, </p>
+<pre><code>* フィルタツールバーは、他の全てのツールバーのように隠すことができます。
+</code></pre>
+<p>*Filter status is displayed in status line</p>
+<pre><code>* フィルタ状態は、線の状態 (ステータスライン) で示されます。
+</code></pre>
+<p>*Filter node text by regular expressions</p>
+<pre><code>* 正規表現によるフィルタノードのテキスト。
+</code></pre>
+<h2 id="other-features--他の特徴"><a class="header" href="#other-features--他の特徴">Other features : 他の特徴</a></h2>
+<p>*All backup or autosave files are numbered from 1 to maximum number, the bigger number the latest file. 
+**すべてのバックアップまたは自動保存ファイルは、1から最大数まで数えられます、より大きいものは、最新のファイルを数えます。
+*Automatic backup for all loaded files on first save. 
+**自動バックアップは、最初の保存ですべてのファイルをロードしました。
+*Backup and autosave use directory &quot;.backup&quot; created in the map directory.
+**バックアップと自動保存は、マップディレクトリでつくった「.backup」ディレクトリを使います。 
+*Edit nodes with line breaks in in-line editor (alt+enter to quit , shift+enter for line break) 
+**インラインエディタで改行してノードを編集してください (やめる alt + enter、改行 shift + enter)
+　(インライン エディタは、プロパティ ウィンドウで値を直接編集できるエディタです。)
+*Enable link pop-up menu even if neither target nor source node is selected. 
+**たとえどちらの目標もソースノードも選ばれないとしても、関連ポップアップメニューのリンクを使用できるようにしてください。
+*Exception traces for internal errors are automatically sent to freeplane team for analysis. 
+**内部のエラーのための痕跡は例外なく、分析のために freeplane チームに自動的に送られます。
+*<a href="../scripting/Export_Using_XSLT.html">Export Using XSLT</a> 
+**XSLT を使用してエクスポート。
+*Hide tabs if only one map is loaded 
+**1つのマップを載せれば、タブを隠してください。
+*Hot keys: CONTROL + ALT + RIGHT, CONTROL + ALT + LEFT 
+**ホットキー : CONTROL + ALT + RIGHT, CONTROL + ALT + LEFT .
+*Icon actions moved in separate menu 
+**別々のメニューで動かされるアイコンの動作。
+*Icon toolbar hidden by default 
+**デフォルトで隠されるアイコンツールバー。
+*Linking to arbitrary URI integrated 
+**統合［組織化］される URI と任意につながること。
+*Links where target or source are selected are found first. 
+**目標またはソースが最初であるとわかり選ばれるところを結びます。
+*New icons: 0%, 25%, 50%, 75%, 100% 
+**新しいアイコン：0%、25%、50%、75%、100% .
+*New navigation actions useful for presentation &quot;next node&quot; and &quot;previous node&quot;. They traverse the map in depth-first order. 
+**「次のノード」と「前のノード」のプレゼンテーションに役立つ新しいナビゲーションの動作。
+　それらは、深い状態と最初の状態の順序でマップを行ったり来たりします。
+*Personal modification color can be set in prefeences 
+**個人の変更の色は、好きなものでセットすることができます。
+*Plain text search for filter in html nodes added 
+**加えた html ノードのフィルタのプレーンテキストの検索。
+*Priority filters based on priority icons 
+**優先するアイコンに基づく優先するフィルタ。
+*Text labels can be added to any end and in the middle of any link by link pop-up menu 
+**テキストラベルは、どんな終わりまででも、そして、関連ポップアップメニューによるどんな関連の中央ででも、加えられることができます。
+*Text rendering mode use more exact fractional metric based version. 
+**テキストレンダリング（描写）モード使用により正確なメートル法のベースのバージョン。
+*The action is also available from pop-up menu 
+**動作は、ポップアップメニューからも利用可能です。
+*The attached file can be opened by double click on the image itself 
+**添付ファイルは、イメージそのものを、ダブルクリックによって開けることができます。
+*The same zooms applies to all maps 
+**すべてのマップに同じにズーム活用します。
+*Zoom keep selected node position 
+**ズームキープは、ノードの位置を選びました。
+*Zoom saved between sessions
+**ズームセッションの間保存される。</p>
+<h1 id="contributing-to-freeplanes-development--freeplane-の発展に関与すること"><a class="header" href="#contributing-to-freeplanes-development--freeplane-の発展に関与すること">Contributing to Freeplane's Development : <p>Freeplane の発展に関与すること</p></a></h1>
+<p>*Visit the <a href="Think_Tank.html">Think Tank</a></p>
+<p>*Have a look at the (preliminary!) <a href="Architecture.html">Architecture</a> description.</p>
+<p>*Some users might be interested in the <a href="../contribute/Translation_How-To.html">Translation How-To</a>.<br><br></p>
+<h2 id="testing-freeplane--freeplaneをテストすること"><a class="header" href="#testing-freeplane--freeplaneをテストすること">Testing Freeplane : Freeplaneをテストすること</a></h2>
+<p>*<a href="How_to_test.html">How to test</a></p>
+<p>*<a href="Testing/release_policy.html">Testing/release policy</a></p>
+<h1 id="browsing-this-wiki--この-wiki-を閲覧すること"><a class="header" href="#browsing-this-wiki--この-wiki-を閲覧すること">Browsing this Wiki : この Wiki を閲覧すること</a></h1>
+<p>Many pages on this wiki are tagged with one or more of the following Categories:<br> </p>
+<p>*<a href=":Category:Advanced_Users.html">Advanced Users</a> - Documentation for experienced and/or technical users<br> 
+*<a href=":Category:Developer_Documentation.html">Developer Documentation</a> - Information for software developers wishing to enhance or customize Freeplane<br> 
+*<a href=":Category:Needs_Updating.html">Needs Updating</a> - Pages which contain valuable information, though some of it needs to be updated<br> 
+*<a href=":Category:Old_Wiki.html">Old Wiki</a> - Pages imported from the previous Wiki which may now be obsolete<br> 
+*<a href=":Category:Scripting.html">Scripting</a> - Extending Freeplane using Groovy scripts<br> 
+*<a href=":Category:Team_Freeplane.html">Team Freeplane</a> - Freeplane team members and project coordination<br> 
+*<a href=":Category:Testing.html">Testing</a> - Details about testing new versions of Freeplane which are under development<br> 
+*<a href=":Category:Tutorials.html">Tutorials</a> - HowTo articles and other &quot;hands on&quot; documentation<br> 
+*<a href=":Category:User_Documentation.html">User Documentation</a> - Basic information about Freeplane including usage and features<br>
+*<a href=":Category:Wiki.html">Wiki</a> - Help for using this Wiki<br></p>
+<h1 id="contributing-to-the-wiki--wiki-に貢献すること"><a class="header" href="#contributing-to-the-wiki--wiki-に貢献すること">Contributing to the Wiki : Wiki に貢献すること</a></h1>
+<p>You can subscribe to <a href="http://www.freeplane.org/wiki/index.php?title=Special:RecentChanges&amp;feed=atom">atom feed</a> to be informed about all changes in this wiki. Using <a href="http://www.feedmyinbox.com/">this web service</a> you can get daily e-mail notifications whenever the content changes. The same service can also be used for notifications about any changes to the project pages on SourceForge.</p>
+<h1 id="useful-links--役に立つ関連"><a class="header" href="#useful-links--役に立つ関連">Useful links : 役に立つ関連</a></h1>
+<p>*Freeplane <a href="http://sourceforge.net/projects/freeplane/">SourceForge page</a> with summary on the latest project activity 
+*Freeplane <a href="http://sourceforge.net/projects/freeplane/forums/forum/758437">Open discussion forum</a> 
+*<a href="http://sourceforge.net/projects/freeplane/files/freeplane%20testing/">Old builds repository</a> of Freeplane 
+*<a href="http://www.freeplane.org/testversion/">Current test builds</a> of Freeplane 
+*Icons 
+**<a href="http://www.famfamfam.com/lab/icons/silk/">Silk Icons</a> organized into folders <a href="http://www.mediafire.com/file/dy4ynmkvmhz/Silk_icons_organized.zip.md">http://www.mediafire.com/file/dy4ynmkvmhz/Silk icons organized.zip</a> 
+**<a href="http://www.famfamfam.com/lab/icons/flags/">Flags of the world</a> icons organized into folders <a href="http://www.mediafire.com/file/nomjzj3wmyw/Country_Flags_organized.zip.md">http://www.mediafire.com/file/nomjzj3wmyw/Country Flags organized.zip</a></p>
+<p><em>Hint: all of wiki/forum/files pages (and even sections) can be easily followed via newsfeeds, so don't hesitate to subscribe!</em> </p>
+<h1 id="thanks--感謝"><a class="header" href="#thanks--感謝">Thanks : 感謝</a></h1>
+<p>Freeplane team uses: </p>
+<p>*<strong>YourKit Java Profiler</strong> developed and donated by <a href="http://www.yourkit.com">YourKit</a>, for analysis of memory consumption and performance issues
+*Code analyser <a href="http://stan4j.com">stanj4</a>, developed and donated by Odysseus Software GmbH </p>
+<h1 id="freeplaneフリープレーン-japanese-guide日本語ガイド"><a class="header" href="#freeplaneフリープレーン-japanese-guide日本語ガイド">Freeplane(フリープレーン) Japanese guide(日本語ガイド)</a></h1>
+<ul>
+<li>
+<p>I added a guide for people to employ in Japanese.</p>
+</li>
+<li>
+<p>日本語で使う人のためのガイドを追加しました。</p>
+<ul>
+<li>It is the blog of a person participating in translation in Japanese. How to use and explanation are given.</li>
+<li>日本語で翻訳に参加している人のブログです。使い方や説明がでています。
+<ul>
+<li><a href="http://d.hatena.ne.jp/ymymOmymy/20100508/1273280861">2010-05-08 初めまして - ymymOmymyの日記</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>It is the site of the Japanese project. &quot;日本語プロジェクトのサイトです。&quot;</p>
+<ul>
+<li>sfnet_freeplane 日本語プロジェクトのサイトです。(sourceforge.jp には、２つのプロジェクトがあります。)
+<ul>
+<li>sfnet_freeplane <a href="http://sourceforge.jp/projects/sfnet_freeplane/">Freeplane プロジェクト日本語トップページ - SourceForge.JP</a></li>
+<li>sfnet_freeplane <a href="http://sourceforge.jp/projects/sfnet_freeplane/howto/install">Freeplane のインストール方法 - Freeplane - SourceForge.JP</a></li>
+<li>sfnet_freeplane <a href="http://sourceforge.jp/projects/sfnet_freeplane/howto/usage">Freeplane の使い方 - Freeplane - SourceForge.JP</a> ダウンロードは日本版です。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Welcome to freshmeat.net | freshmeat.net (freshmeat.net) 英語です。</p>
+<ul>
+<li><a href="http://freshmeat.net/projects/freeplane">Freeplane | freshmeat.net</a></li>
+<li>freshmeat_freeplane 日本語プロジェクトのサイトです。(sourceforge.jp には、２つのプロジェクトがあります。)
+<ul>
+<li>freshmeat_freeplane <a href="http://sourceforge.jp/projects/freshmeat_freeplane/">Freeplane プロジェクト日本語トップページ - SourceForge.JP</a></li>
+<li>freshmeat_freeplane <a href="http://sourceforge.jp/projects/freshmeat_freeplane/howto/install">Freeplane のインストール方法 - Freeplane - SourceForge.JP</a></li>
+<li>freshmeat_freeplane <a href="http://sourceforge.jp/projects/freshmeat_freeplane/howto/usage">Freeplane の使い方 - Freeplane - SourceForge.JP</a> ダウンロードは英語版です。</li>
+</ul>
+</li>
+</ul>
+<p>[[Category:Developer]] [[Category:Translation]]</p>
+</li>
+</ul>
+<footer id="open-on-gh">Found a mistake? <a href="https://github.com/freeplane/docs/edit/main/src/docs/attic/old-mediawiki-content/Japanese.md">Edit this page on GitHub.</a></footer>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../attic/old-mediawiki-content/Init_scripts.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../attic/old-mediawiki-content/Linux.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../attic/old-mediawiki-content/Init_scripts.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../attic/old-mediawiki-content/Linux.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Scripting - Freeplane Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../open-in.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><li class="part-title">User guide</li><li class="chapter-item "><a href="../home.html"><strong aria-hidden="true">1.</strong> Home</a></li><li class="chapter-item "><a href="../how-to-get-help.html"><strong aria-hidden="true">2.</strong> How to get help</a></li><li class="chapter-item "><a href="../getting-started/getting-started.html"><strong aria-hidden="true">3.</strong> Getting started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../getting-started/Distributions.html"><strong aria-hidden="true">3.1.</strong> Distributions</a></li><li class="chapter-item "><a href="../getting-started/Command-line_options_and_configuration.html"><strong aria-hidden="true">3.2.</strong> Command-line options and configuration</a></li><li class="chapter-item "><a href="../getting-started/Add-ons_(install).html"><strong aria-hidden="true">3.3.</strong> Extend with add-ons</a></li></ol></li><li class="chapter-item "><a href="../user-documentation/first-steps.html"><strong aria-hidden="true">4.</strong> User documentation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../user-documentation/first-steps.html"><strong aria-hidden="true">4.1.</strong> First steps</a></li><li class="chapter-item "><a href="../user-documentation/working-w-mindmap-files.html"><strong aria-hidden="true">4.2.</strong> Working with mindmap files</a></li><li class="chapter-item "><a href="../user-documentation/formatting-maps-and-nodes.html"><strong aria-hidden="true">4.3.</strong> Formatting maps and nodes</a></li><li class="chapter-item "><a href="../user-documentation/styles.html"><strong aria-hidden="true">4.4.</strong> Styles</a></li><li class="chapter-item "><a href="../user-documentation/templates.html"><strong aria-hidden="true">4.5.</strong> Templates</a></li><li class="chapter-item "><a href="../user-documentation/css-for-html-or-markdown.html"><strong aria-hidden="true">4.6.</strong> CSS for HTML/Markdown</a></li><li class="chapter-item "><a href="../user-documentation/Conditional_node_styles.html"><strong aria-hidden="true">4.7.</strong> Conditional node styles</a></li><li class="chapter-item "><a href="../user-documentation/LaTeX_in_Freeplane.html"><strong aria-hidden="true">4.8.</strong> LaTeX in Freeplane</a></li><li class="chapter-item "><a href="../user-documentation/Spell_checker.html"><strong aria-hidden="true">4.9.</strong> Spell checker</a></li><li class="chapter-item "><a href="../user-documentation/Relationship_to_FreeMind.html"><strong aria-hidden="true">4.10.</strong> Relationship to FreeMind</a></li><li class="chapter-item "><a href="../user-documentation/other-docs-tutorials.html"><strong aria-hidden="true">4.11.</strong> References to other known documentation/tutorial sites</a></li></ol></li><li class="chapter-item "><a href="../contribute/contribute.html"><strong aria-hidden="true">5.</strong> Contribute</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../contribute/Translation_How-To.html"><strong aria-hidden="true">5.1.</strong> Translation How-To</a></li><li class="chapter-item "><a href="../contribute/Contributing_to_Freeplane's_Development.html"><strong aria-hidden="true">5.2.</strong> Contributing to Freeplane's Development</a></li></ol></li><li class="chapter-item expanded "><a href="../scripting/Scripting.html" class="active"><strong aria-hidden="true">6.</strong> Scripting</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../scripting/Formulas.html"><strong aria-hidden="true">6.1.</strong> Formulas</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../scripting/Formulas.html"><strong aria-hidden="true">6.1.1.</strong> Formulas</a></li><li class="chapter-item "><a href="../scripting/Scripting!_Script_filter.html"><strong aria-hidden="true">6.1.2.</strong> Formula filter</a></li></ol></li><li class="chapter-item "><a href="../scripting/Scripting_Cheatsheet.html"><strong aria-hidden="true">6.2.</strong> Scripting Cheatsheet</a></li><li class="chapter-item "><a href="../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.</strong> Scripts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.1.</strong> Scripts collection</a></li><li class="chapter-item "><a href="../scripting/Scripting_text_editing.html"><strong aria-hidden="true">6.3.2.</strong> Scripts for text editing</a></li><li class="chapter-item "><a href="../scripting/Example_scripts_using_external_libraries.html"><strong aria-hidden="true">6.3.3.</strong> Scripts using external libraries</a></li><li class="chapter-item "><a href="../scripting/Script_incubator.html"><strong aria-hidden="true">6.3.4.</strong> Script incubator</a></li><li class="chapter-item "><a href="../scripting/Scripting!_Jython.html"><strong aria-hidden="true">6.3.5.</strong> Scripting! Jython</a></li><li class="chapter-item "><a href="../scripting/Scripting_environment_setup.html"><strong aria-hidden="true">6.3.6.</strong> Scripting environment setup</a></li></ol></li><li class="chapter-item "><a href="../scripting/Export_Using_XSLT.html"><strong aria-hidden="true">6.4.</strong> XSLT for export/import</a></li><li class="chapter-item "><a href="../scripting/Add-ons_(Develop).html"><strong aria-hidden="true">6.5.</strong> Add-ons (Development)</a></li><li class="chapter-item "><a href="../scripting/Security_considerations.html"><strong aria-hidden="true">6.6.</strong> Security considerations</a></li></ol></li><li class="chapter-item "><a href="../coding/Git_howto.html"><strong aria-hidden="true">7.</strong> Coding</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../coding/Git_howto.html"><strong aria-hidden="true">7.1.</strong> Git howto</a></li><li class="chapter-item "><a href="../coding/How_to_build_Freeplane.html"><strong aria-hidden="true">7.2.</strong> How to build Freeplane</a></li><li class="chapter-item "><a href="../coding/IDE_setup.html"><strong aria-hidden="true">7.3.</strong> IDE setup</a></li><li class="chapter-item "><a href="../coding/Plugin_development.html"><strong aria-hidden="true">7.4.</strong> Plugin development</a></li></ol></li><li class="chapter-item "><li class="part-title">Attic</li><li class="chapter-item "><a href="../attic/home.html"><strong aria-hidden="true">8.</strong> Attic (draft documents)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.</strong> Old MediaWiki content</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.1.</strong> Old Home</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Approximate_search.html"><strong aria-hidden="true">8.1.2.</strong> Approximate search</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Architecture.html"><strong aria-hidden="true">8.1.3.</strong> Architecture</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Batch_Jobs.html"><strong aria-hidden="true">8.1.4.</strong> Batch Jobs</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Contributors.html"><strong aria-hidden="true">8.1.5.</strong> Contributors</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Current_Freeplane_File_Format.html"><strong aria-hidden="true">8.1.6.</strong> Current Freeplane File Format</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Data_recognition_and_data_formats.html"><strong aria-hidden="true">8.1.7.</strong> Data recognition and data formats</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Debugging_scripts.html"><strong aria-hidden="true">8.1.8.</strong> Debugging scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Document_Format.html"><strong aria-hidden="true">8.1.9.</strong> Document Format</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Edit_scripts_in_Eclipse.html"><strong aria-hidden="true">8.1.10.</strong> Edit scripts in Eclipse</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/External_objects.html"><strong aria-hidden="true">8.1.11.</strong> External objects</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/External_script_file_execution.html"><strong aria-hidden="true">8.1.12.</strong> External script file execution</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/FAQ.html"><strong aria-hidden="true">8.1.13.</strong> FAQ</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Fixed_security_vulnerabilities.html"><strong aria-hidden="true">8.1.14.</strong> Fixed security vulnerabilities</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/FreeMind_0.9.0_-_Freeplane_1.1.x.html"><strong aria-hidden="true">8.1.15.</strong> FreeMind 0.9.0 - Freeplane 1.1.x</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane2PowerPoint.html"><strong aria-hidden="true">8.1.16.</strong> Freeplane2PowerPoint</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_Extensions.html"><strong aria-hidden="true">8.1.17.</strong> Freeplane Tutorial Extensions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Screenshots.html"><strong aria-hidden="true">8.1.18.</strong> Freeplane Tutorial How-to Screenshots</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Video.html"><strong aria-hidden="true">8.1.19.</strong> Freeplane Tutorial How-to Video</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Wiki!Administrators.html"><strong aria-hidden="true">8.1.20.</strong> Freeplane Wiki!Administrators</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_and_problem_solving.html"><strong aria-hidden="true">8.1.21.</strong> Freeplane and problem solving</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_features_you_were_missing_in_FreeMind.html"><strong aria-hidden="true">8.1.22.</strong> Freeplane features you were missing in FreeMind</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_for_Windows_Mobile.html"><strong aria-hidden="true">8.1.23.</strong> Freeplane for Windows Mobile</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_installation_for_Ubuntu_OS.html"><strong aria-hidden="true">8.1.24.</strong> Freeplane installation for Ubuntu OS</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Get_the_code.html"><strong aria-hidden="true">8.1.25.</strong> Get the code</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Goals.html"><strong aria-hidden="true">8.1.26.</strong> Goals</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Groovy_scripts_and_formulas_can_escape_sandbox.html"><strong aria-hidden="true">8.1.27.</strong> Groovy scripts and formulas can escape sandbox</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Harmonizing_FP-menu.html"><strong aria-hidden="true">8.1.28.</strong> Harmonizing FP-menu</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help!Contents.html"><strong aria-hidden="true">8.1.29.</strong> Help!Contents</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help!Editing.html"><strong aria-hidden="true">8.1.30.</strong> Help!Editing</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help_Previous_Freeplane_Versions.html"><strong aria-hidden="true">8.1.31.</strong> Help Previous Freeplane Versions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/How_to_publish_add-ons.html"><strong aria-hidden="true">8.1.32.</strong> How to publish add-ons</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/How_to_test.html"><strong aria-hidden="true">8.1.33.</strong> How to test</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Information_management_with_Freeplane_add-on_dView(indexfile).html"><strong aria-hidden="true">8.1.34.</strong> Information management with Freeplane add-on dView(indexfile)</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Init_scripts.html"><strong aria-hidden="true">8.1.35.</strong> Init scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Japanese.html"><strong aria-hidden="true">8.1.36.</strong> Japanese</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Linux.html"><strong aria-hidden="true">8.1.37.</strong> Linux</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Logo_and_splashscreen.html"><strong aria-hidden="true">8.1.38.</strong> Logo and splashscreen</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Macintosh.html"><strong aria-hidden="true">8.1.39.</strong> Macintosh</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Map_local_scripts.html"><strong aria-hidden="true">8.1.40.</strong> Map local scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Map_templates.html"><strong aria-hidden="true">8.1.41.</strong> Map templates</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Menus_and_commands.html"><strong aria-hidden="true">8.1.42.</strong> Menus and commands</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Mind_map_gallery.html"><strong aria-hidden="true">8.1.43.</strong> Mind map gallery</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_Freeplane_File_Format_(Proposal).html"><strong aria-hidden="true">8.1.44.</strong> New Freeplane File Format (Proposal)</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_features_in_Freeplane_1.2.html"><strong aria-hidden="true">8.1.45.</strong> New features in Freeplane 1.2</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_features_in_Freeplane_1.3.html"><strong aria-hidden="true">8.1.46.</strong> New features in Freeplane 1.3</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/OSGI_based_plug-ins.html"><strong aria-hidden="true">8.1.47.</strong> OSGI based plug-ins</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Patterns.html"><strong aria-hidden="true">8.1.48.</strong> Patterns</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Portable_Freeplane.html"><strong aria-hidden="true">8.1.49.</strong> Portable Freeplane</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Release_cycle.html"><strong aria-hidden="true">8.1.50.</strong> Release cycle</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Release_smoke_test.html"><strong aria-hidden="true">8.1.51.</strong> Release smoke test</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Rules_to_build_user_friendly_menus.html"><strong aria-hidden="true">8.1.52.</strong> Rules to build user friendly menus</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_API_Changes.html"><strong aria-hidden="true">8.1.53.</strong> Scripting! API Changes</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Freeplane_Utility_Classes.html"><strong aria-hidden="true">8.1.54.</strong> Scripting! Freeplane Utility Classes</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Included_libraries.html"><strong aria-hidden="true">8.1.55.</strong> Scripting! Included libraries</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Other_languages.html"><strong aria-hidden="true">8.1.56.</strong> Scripting! Other languages</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Update_Freeplane's_Groovy_version.html"><strong aria-hidden="true">8.1.57.</strong> Scripting! Update Freeplane's Groovy version</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting_API.html"><strong aria-hidden="true">8.1.58.</strong> Scripting API</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Support.html"><strong aria-hidden="true">8.1.59.</strong> Support</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Think_Tank.html"><strong aria-hidden="true">8.1.60.</strong> Think Tank</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Translation_nl.html"><strong aria-hidden="true">8.1.61.</strong> Translation nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Troubleshooting.html"><strong aria-hidden="true">8.1.62.</strong> Troubleshooting</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Tutorial_Freeplane_How-to_nl.html"><strong aria-hidden="true">8.1.63.</strong> Tutorial Freeplane How-to nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Tutorial_Freeplane_nl.html"><strong aria-hidden="true">8.1.64.</strong> Tutorial Freeplane nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/User_icons.html"><strong aria-hidden="true">8.1.65.</strong> User icons</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Videos_and_animations_How-to.html"><strong aria-hidden="true">8.1.66.</strong> Videos and animations How-to</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Visions.html"><strong aria-hidden="true">8.1.67.</strong> Visions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Wish_List.html"><strong aria-hidden="true">8.1.68.</strong> Wish List</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/XML_External_Entity_vulnerability_in_map_parser.html"><strong aria-hidden="true">8.1.69.</strong> XML External Entity vulnerability in map parser</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Your_own_utility_script_library.html"><strong aria-hidden="true">8.1.70.</strong> Your own utility script library</a></li></ol></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.</strong> New wiki initiative</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.1.</strong> customizing-freeplane</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/freeplane-api-groovy.html"><strong aria-hidden="true">8.2.2.</strong> freeplane-api-groovy</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/glossary.html"><strong aria-hidden="true">8.2.3.</strong> glossary</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/introduction-aka-many-unsorted-ideas-related-to-freeplane.html"><strong aria-hidden="true">8.2.4.</strong> introduction-aka-many-unsorted-ideas-related-to-freeplane</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/understanding-interface.html"><strong aria-hidden="true">8.2.5.</strong> understanding-interface</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/understanding-nodes.html"><strong aria-hidden="true">8.2.6.</strong> understanding-nodes</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">Special pages</li><li class="chapter-item "><a href="../after-redirect.html"><strong aria-hidden="true">9.</strong> After redirect from the old media wiki</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Freeplane Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/freeplane/docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <ul>
+<li><a href="#preparation">Preparation</a></li>
+<li><a href="#select-an-editor">Select an editor</a></li>
+<li><a href="#the-first-script-helloworldgroovy">The first script: HelloWorld.groovy</a></li>
+<li><a href="#hello-controller">Hello Controller</a>
+<ul>
+<li><a href="#the-scripting-api">The scripting API</a></li>
+</ul>
+</li>
+<li><a href="#setting-links">Setting links</a></li>
+<li><a href="#execution-modes">Execution modes</a></li>
+<li><a href="#menu-locations">Menu locations</a></li>
+<li><a href="#per-node-execution-addicongroovy">Per node execution: addIcon.groovy</a></li>
+<li><a href="#the-status-bar-again-geticonnamegroovy">The status bar again: getIconName.groovy</a></li>
+<li><a href="#formulas">Formulas</a></li>
+<li><a href="#data-parsing-and-formatting">Data parsing and formatting</a></li>
+<li><a href="#navigation-and-iteration">Navigation and iteration</a>
+<ul>
+<li><a href="#filtering">Filtering</a></li>
+<li><a href="#transformation">Transformation</a></li>
+</ul>
+</li>
+<li><a href="#clones-since-155">Clones (since 1.5.5)</a></li>
+<li><a href="#appendix">Appendix</a>
+<ul>
+<li><a href="#using-external-libraries">Using external libraries</a></li>
+<li><a href="#on-groovy">On Groovy</a>
+<ul>
+<li><a href="#using-external-libraries-from-groovy-scripts-and-formulas">Using external libraries from groovy scripts and formulas</a></li>
+<li><a href="#on-iteration">On iteration</a></li>
+<li><a href="#on-groovy-properties-and-the-scripting-api">On Groovy properties and the Scripting API</a></li>
+<li><a href="#the-operator--means-equals">The operator == means equals()</a></li>
+<li><a href="#caveat">Caveat</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#wanted-your-participation">Wanted: Your participation!</a></li>
+<li><a href="#what-users-say">What users say</a></li>
+<li><a href="#further-reading">Further reading</a></li>
+</ul>
+<p>Freeplane's builtin functionality can be extended by <a href="http://groovy-lang.org/">Groovy</a> and <a href="http://en.wikipedia.org/wiki/JavaScript">JavaScript</a> scripts. Starting with Freeplane 1.3.5_05 you can use <a href="Scripting!_Other_languages.html">many other languages</a>, e.g Python. This page gives a first impression what you can do with Groovy scripting and helps to get started.</p>
+<p>With Freeplane scripting you can</p>
+<ul>
+<li>write your own functions and use them from the menu or via keyboard shortcuts,</li>
+<li>use <a href="Formulas.html">formulas</a> in your map to compute stuff like in Excel, and</li>
+<li>create <a href="../getting-started/Add-ons_(install).html">add-ons</a> to share it with other users,</li>
+<li>have <a href="Init_scripts.html">init scripts</a> executed on startup that changes Freeplane's behavior (since Freeplane 1.5).</li>
+</ul>
+<p>Most people use scripting to automate otherwise tedious procedures like creating a node with a special style and some standard attributes. But much more is possible with scripting.</p>
+<p><br> <strong>TOC</strong> </p>
+<p><a href="External_script_file_execution.html">External Groovy scripts</a> can be integrated simply by placing them in the <em>scripts</em> subdirectory of the Freeplane homedir. Such scripts can be used like any other built-in function of Freeplane.</p>
+<p>After some preparation we'll create the first script.</p>
+<h3 id="preparation"><a class="header" href="#preparation">Preparation</a></h3>
+<p>A newly installed Freeplane installation is almost ready for scripting:</p>
+<ul>
+<li>
+<p>The <tt>scripts</tt> directory is created in the <em>User Configuration Folder</em> which you can open via <em>Tools &gt; Open user directory</em>.</p>
+</li>
+<li>
+<p>The <tt>scripts</tt> directory is empty, initially. On startup, the directory is automatically searched for &quot;.groovy&quot; files.</p>
+</li>
+<li>
+<p>Scripting is disabled by default, but before enabling it, let's take <a href="Security_considerations.html"><strong>security into consideration</strong></a>.</p>
+</li>
+<li>
+<p>After having <a href="Security_considerations.html"><strong>reflected on security</strong></a>, navigate the menu to <em>Tools &gt; Preferences &gt; Plugins&gt; Scripting</em> and:</p>
+<ul>
+<li>set ''Script execution enabled'' to ''Yes''</li>
+<li>enable ''Permit File/Read Operations (NOT recommended)'' - despite the warning.</li>
+<li>These changes take effect without restarting Freeplane and only need to be done once.</li>
+</ul>
+</li>
+</ul>
+<h3 id="select-an-editor"><a class="header" href="#select-an-editor">Select an editor</a></h3>
+<p>You will need a text editor. For the first steps presented on this page any editor will do, such as Notepad on Windows (though <a href="http://notepad-plus-plus.org">the free Notepad++</a>is much better), <a href="http://www.sublimetext.com/">Sublime Text</a> or TextEdit on Mac OS X. You can find an overview of editors with Groovy support <a href="http://stackoverflow.com/questions/10864770/editor-for-groovy-and-grails">on Stackoverflow</a> and on the <a href="http://groovy-lang.org/ides.html">Groovy website</a>.</p>
+<p>Freeplane also has a small script editor built into it. It is reached through <em>Tools-&gt;Edit Script</em>. You can run the scripts directly in the editor and store them as attributes of the node you are working in. But such <a href="Map_local_scripts.html">map local scripts</a> are most useful for quick tests since you can not write the scripts directly to &quot;.groovy&quot; files.</p>
+<p>For ambitious scripting projects or if you have Java/Eclipse know-how you should have a look at the page on <a href="Scripting_environment_setup.html">Scripting environment setup</a>.</p>
+<h2 id="the-first-script-helloworldgroovy"><a class="header" href="#the-first-script-helloworldgroovy">The first script: HelloWorld.groovy</a></h2>
+<p>&quot;Hello World&quot; is the traditional first program when taking up a programming language. Let's create a Groovy Freeplane version of it:</p>
+<ul>
+<li>Create an empty Groovy script file named <tt>HelloWorld.groovy</tt> in your scripts directory (remember that you can get there via <em>Tools &gt; Open user directory</em>). The suffix <tt>.groovy</tt> is mandatory.</li>
+<li>Open <tt>HelloWorld.groovy</tt> in an appropriate editor as detailed <a href="#Create-a-script-and-integrate-it-into-Freeplane">above</a>.</li>
+<li>Copy the following script into the file and save it.</li>
+</ul>
+<pre><code class="language-groovy">node.text = &quot;Hello World!&quot;
+</code></pre>
+<ul>
+<li>Execute the script by selecting <em>Tools-&gt;Scripts-&gt;Hello World-&gt;Execute on one selected node</em>. (Never mind the difference between the <em>Execute ...</em> variants; we'll come to that <a href="#Execution_modes">later</a>.)</li>
+<li>The text of the selected node will be changed to &quot;Hello World!&quot;.</li>
+<li>To restore the original, press Ctrl-Z.</li>
+<li>If you like try the other &quot;Execute...&quot; menu items. Test the influence of selecting multiple nodes. Always press Ctrl-Z to revert the changes.</li>
+</ul>
+<h2 id="hello-controller"><a class="header" href="#hello-controller">Hello Controller</a></h2>
+<p>Every script is given the variables </p>
+<table border="1" style="background-color:#E0E0E0;">
+<tr>
+<td>**node**</td>
+<td>set to the currently selected node</td>
+<tr>
+<td>**c**</td>
+<td>tool box for various tasks relating to the map or Freeplane altogether</td>
+</tr>
+</table>
+<p>These give access to the two most important bits of a map. In HelloWorld we used <em>node</em>, which gave access to the selected node.</p>
+<p>Now we'll change HelloWorld.groovy to use the second, the Controller variable <em>c</em>:</p>
+<ul>
+<li>Copy the following script into the file and save it:</li>
+</ul>
+<pre><code class="language-groovy">c.statusInfo = &quot;Hello World!&quot;
+</code></pre>
+<ul>
+<li>Execute the script by selecting <em>Tools-&gt;Scripts-&gt;Hello World-&gt;Execute on one selected node</em>.</li>
+</ul>
+<p>The &quot;Controller&quot; manages the status bar. By assigning &quot;Hello World!&quot; to the Controller attribute &quot;statusInfo&quot; we are able to print text to the status bar.</p>
+<h3 id="the-scripting-api"><a class="header" href="#the-scripting-api">The scripting API</a></h3>
+<p>The variables <em>node</em> and <em>c</em> are &quot;objects&quot; with a list of <em>attributes</em> (like &quot;text&quot;, &quot;details&quot; or &quot;style&quot;) and <em>methods</em> that operate on the object, like &quot;addConnector()&quot;, &quot;createChild()&quot; or &quot;moveTo()&quot;. The &quot;type&quot; of the object decides on the list of attribute of attributes and methods an object has. &quot;node&quot; is of type <a href="http://www.freeplane.org/doc/api/org/freeplane/plugin/script/proxy/Proxy.NodeRO.html">Proxy.Node</a> while &quot;c&quot; has the type <a href="http://www.freeplane.org/doc/api/org/freeplane/plugin/script/proxy/Proxy.Controller.html">Proxy.Controller</a>.</p>
+<p>To get started with Freeplane scripting you have to get slowly accustomed to the Groovy syntax and the Freeplane specialities too. The types and objects that Freeplane supports are defined by <a href="Scripting_API.html">Freeplane's scripting API</a>. You can learn it step by step: Very little is required to write useful scripts.</p>
+<p>An important resource is the built-in scripting documentation that is available via <em>Help-&gt;Scripting API</em>. Open it now and search for the <em>statusInfo</em> attribute at <em>Scripting API-&gt;Proxy-&gt;Controller-&gt;statusInfo: String (w)</em>. The text means: The Controller has an attribute <em>statusInfo</em> that only can be written to (<em>w</em>), that is you can't find out what is currently displayed on the status bar. The attribute has type <em>String</em> (either use &quot;double quotes&quot; or 'single quotes'). If you unfold the node you see <em>void setStatusInfo(String)</em>. That means that</p>
+<pre><code class="language-groovy">c.statusInfo = 'Hello World!'
+</code></pre>
+<p>and</p>
+<pre><code class="language-groovy">c.setStatusInfo('Hello World!')
+</code></pre>
+<p>are equivalent. But the first &quot;attribute&quot; style is preferable since it is clearer. The clickable links in the &quot;Scripting API&quot; map carry to the respective location in the <a href="http://www.freeplane.org/doc/api">detailed API description</a> which might be a bit overwhelming at this point.</p>
+<h2 id="setting-links"><a class="header" href="#setting-links">Setting links</a></h2>
+<p>In the &quot;Scripting API&quot; map, near to statusInfo you find the <em>userDirectory</em> attribute. You can use it to add a link to this directory to your map. Create a new script file <em>addLink.groovy</em> in the script directory with the following content:</p>
+<pre><code class="language-groovy">node.link.file = c.userDirectory
+</code></pre>
+<p>Here an slightly extended version that adds an <em>external link</em> to the selected node(s) and creates a node with a <em>local link</em> back to its parent node:</p>
+<pre><code class="language-groovy">node.link.text = 'http://freeplane.org/wiki/index.php?title=Scripting'
+</code></pre>
+<p>This script creates a <em>local link</em> back to its parent node:</p>
+<pre><code class="language-groovy">node.link.node = node.parent
+</code></pre>
+<p>In the next section we'll see what the &quot;@ExecutionModes&quot; line is about.</p>
+<h2 id="execution-modes"><a class="header" href="#execution-modes">Execution modes</a></h2>
+<p>For each script we had three submenu entries of &quot;Hello World&quot;. These entries are different with respect to multiple selected nodes: </p>
+<p>*In the case of <em>Execute on one selected node</em> a script is executed only once no matter how many nodes are selected. It's best to be used when only a single node is selected since in this case the <tt>node</tt> variable of the script is set to the selected node. If multiple nodes are selected then <tt>node</tt> is set to one of the nodes arbitrarily. That is, you shouldn't count on the selection if multiple nodes are selected.
+*With <em>Execute on all selected nodes</em> it is called once for each selected node (with <tt>node</tt> set to the respective node) and with 
+*<em>Execute on all selected nodes, recursively</em> the selection will be implicitly extended by all child trees of the selected nodes.</p>
+<p>If we chose <em>Execute on all selected nodes</em> for the first version of &quot;Hello World&quot; then the text of all selected nodes changed. - Probably what you expect. By adding the line</p>
+<pre><code class="language-groovy">// @ExecutionModes({ON_SELECTED_NODE})
+</code></pre>
+<p>all other choices would be suppressed.</p>
+<p>The second &quot;Hello World&quot; version printed to the status bar. This only has to happen once so here <em>Execute on one selected node</em> is the right choice and we have to add the line </p>
+<pre><code class="language-groovy">// @ExecutionModes({ON_SINGLE_NODE})
+</code></pre>
+<p>It's a good idea to put the &quot;annotations&quot; at the beginning of the script. (In section <a href="#Simple-text-replacement-getIconName.groovy">Simple text replacement</a> we will see an exception.) ON_SELECTED_NODE_RECURSIVELY applies a script on any node in the branch that has a selected node as root. You can also enable more than one mode by concatening them with commas:</p>
+<pre><code class="language-groovy">// @ExecutionModes({ON_SELECTED_NODE, ON_SELECTED_NODE_RECURSIVELY})
+</code></pre>
+<p>Note that for Groovy this is a comment. - This line is only interpreted by Freeplane. Omitting the <tt>//</tt> will result in a Groovy compilation error. </p>
+<h2 id="menu-locations"><a class="header" href="#menu-locations">Menu locations</a></h2>
+<p>Scripts can determine to which menu or submenu a script will be added. Even the menu title can be set (although the standard file name to menu title translation should be enough in most cases):</p>
+<pre><code class="language-groovy">// @ExecutionModes({on_single_node=&quot;/menu_bar/help[scripting_api_generator_title]&quot;})
+</code></pre>
+<p>You can find out about the internal menu keys using the <a href="../getting-started/Add-ons_(install).html">Developer Tools &gt; Menu item info</a>.</p>
+<h2 id="per-node-execution-addicongroovy"><a class="header" href="#per-node-execution-addicongroovy">Per node execution: addIcon.groovy</a></h2>
+<p>Now let's use the <tt>node</tt> variable again in our next script, <tt>addIcon.groovy</tt> (restart Freeplane to see it in the menu). This script will add the &quot;button_ok&quot; icon to any selected node:</p>
+<pre><code class="language-groovy">node.icons.add(&quot;button_ok&quot;)
+// @ExecutionModes({ON_SELECTED_NODE})
+</code></pre>
+<p>This will add the &quot;check&quot; icon to each selected node. Hopefully it's clear that the execution mode <em>Execute on one selected node</em> makes no sense in this case. So let's remove this from the &quot;Extra&quot; menu:</p>
+<pre><code class="language-groovy">// @ExecutionModes({ON_SELECTED_NODE, ON_SELECTED_NODE_RECURSIVELY})
+node.icons.add(&quot;button_ok&quot;)
+</code></pre>
+<p>(To see the change in the menu you have to restart Freeplane.)</p>
+<p>We will extend this script now a little further to only set the icon if the node text contains the words &quot;yes&quot; or &quot;OK&quot; (case insensitively): </p>
+<pre><code class="language-groovy">// @ExecutionModes({ON_SELECTED_NODE, ON_SELECTED_NODE_RECURSIVELY})
+if (node.text.toLowerCase().matches(&quot;.*\\b(yes|ok)\\b.*&quot;))
+    node.icons.add(&quot;button_ok&quot;)
+</code></pre>
+<p>Note that <tt>node.text</tt> makes use of the special (compared to Java) attribute handling - see section <a href="#On-Groovy-properties-and-the-Scripting-API">On Groovy properties and the Scripting API</a>.</p>
+<br>
+<h2 id="the-status-bar-again-geticonnamegroovy"><a class="header" href="#the-status-bar-again-geticonnamegroovy">The status bar again: getIconName.groovy</a></h2>
+<p>Finding the proper name of an icon may be a bit difficult. One way is to use the wanted icon in some map and to look it up in the sources. The XML for a node with an icon might look like that: </p>
+<p>&lt;node TEXT=&quot;done&quot; ID=&quot;ID_789648746&quot; CREATED=&quot;1239285242562&quot; MODIFIED=&quot;1242658193277&quot;&gt;<br />
+&lt;icon BUILTIN=&quot;button_ok&quot;/&gt;<br />
+&lt;/node&gt;</p>
+<p>This script writes the icon names of the selected node to the status bar:</p>
+<pre><code class="language-groovy">c.statusInfo = &quot;Icons: &quot; + node.icons.icons
+</code></pre>
+<p>Note: For built-in icons, the icon name is the same as the corresponding graphic file name, that may be found <a href="https://freeplane.sourceforge.io/wiki/index.php/User_icons">here</a>.</p>
+<h2 id="formulas"><a class="header" href="#formulas">Formulas</a></h2>
+<p>Starting with Freeplane 1.2 one use scripts as <a href="Formulas.html">Formulas</a> directly in the node core like in Excel. Type this formula in the node core:</p>
+<pre><code class="language-groovy">= &quot;Icons: &quot; + node.icons.icons
+</code></pre>
+<p>This will display the result of the formula instead of the formula itself.</p>
+<p>Notes: </p>
+<ul>
+<li>The equal sign has to be the very first character in the script.</li>
+<li>On typing the equal sign as the first character a special script editor pops up which supports syntax highlighting.</li>
+</ul>
+<h2 id="data-parsing-and-formatting"><a class="header" href="#data-parsing-and-formatting">Data parsing and formatting</a></h2>
+<p>TODO: add text</p>
+<pre><code class="language-groovy">node.object = 40
+def answer = node.to.num0 + 2
+</code></pre>
+<pre><code class="language-groovy">node.text = '2013-02-15'
+c.statusInfo = node.to.date + 1
+</code></pre>
+<pre><code class="language-groovy">node.object = 42
+node.format = '#.00'
+</code></pre>
+<pre><code class="language-groovy">c.statusInfo = format(42, '#.00').toString()
+</code></pre>
+<h2 id="navigation-and-iteration"><a class="header" href="#navigation-and-iteration">Navigation and iteration</a></h2>
+<p>Many useful scripts operate only on the current/selected node. But most scripts need to access multiple nodes. The scripting API provides methods for accessing special nodes:</p>
+<ul>
+<li>node.parent - parent node</li>
+<li>node.map.root - root of the map</li>
+</ul>
+<p>For example this script prints the text of the parent node to the status bar:</p>
+<pre><code class="language-groovy">c.statusInfo = node.parent.text
+</code></pre>
+<p>Other methods return node lists:</p>
+<ul>
+<li>children - list of all children of a node, maybe empty</li>
+<li>c.findAll() - all nodes of the map in breath first order</li>
+<li>c.findDepthFirst() - all nodes of the map in depth first order</li>
+<li>c.find(<closure>) - all nodes for which <closure> returns <em>true</em>.</li>
+</ul>
+<p>The use of this methods requires some knowledge of <a href="http://groovy-lang.org/Collections">Groovy collections</a>.</p>
+<h3 id="filtering"><a class="header" href="#filtering">Filtering</a></h3>
+<p>The most important concept is that of &quot;closures&quot;, small code blocks that are used for filtering and modification of the element currently being iterated over. Let's start with filtering:</p>
+<pre><code class="language-groovy">def matches = c.find{ it.text.contains('ok') }
+c.statusInfo = matches.size() + &quot; nodes contain 'ok'&quot;
+</code></pre>
+<p>The method <em>find</em> has a closure argument which is applied to all nodes in the map. All nodes for which the closure returns <em>true</em> are returned as a new list which is assigned to the <em>matches</em> variable. In the closure the &quot;current item&quot; has a default name <em>it</em>. As <em>c.find</em> iterates over nodes <em>it</em> is a Node that has the attribute <em>text</em> which is a String that has a method contains() returning true if <em>OK</em> is contained somewhere in the text, like in &quot;grok&quot; or &quot;it's ok&quot;.</p>
+<h3 id="transformation"><a class="header" href="#transformation">Transformation</a></h3>
+<p>Many Groovy methods transform lists/collections into others:</p>
+<pre><code class="language-groovy">def squares = children.collect{ it.to.num0 * it.to.num0 }
+</code></pre>
+<p>and others transform lists into single values:</p>
+<pre><code class="language-groovy">def sumOfSquares = children.sum(0){ it.to.num0 * it.to.num0 }
+</code></pre>
+<p>When using <em>sum()</em> it's always a good idea to give it a start value since if the node had no children <em>sumOfSquares</em> would be <em>null</em> instead of <em>0</em>.</p>
+<h2 id="clones-since-155"><a class="header" href="#clones-since-155">Clones (since 1.5.5)</a></h2>
+<p>There are several methods to create clones of nodes and to act on the clones of a node. Note that cloning works symmetrically so we could better speak of shared nodes instead of clone and cloned since none of both is privileged. However each clone or shared node has a unique nodeId and may or not (depending on the share mode) have its own child nodes.</p>
+<p>Add two clones of this node to the root node, one as single node, one including the branch starting at this node. Warning: before beta-1.5.5-pre03 appendAsCloneWithSubtree and appendAsCloneWithoutSubtree have reversed meaning!</p>
+<pre><code class="language-groovy">def root = node.map.root
+def lonelyClone = root.appendAsCloneWithoutSubtree(node)
+def childWithSubtree = root.appendAsCloneWithSubtree(node)
+// add nodes to the clones
+lonelyClone.createChild('a child not shared')
+childWithSubtree.createChild('a shared child')
+</code></pre>
+<p>Mark a node with yellow background color if it has any clone:</p>
+<pre><code class="language-groovy">if (node.getCountNodesSharingContent() &gt; 0)
+    node.backgroundColorCode = '#ffff00'
+</code></pre>
+<p>Mark all nodes of a map having any clone:</p>
+<pre><code class="language-groovy">c.find{ it.getCountNodesSharingContent() &gt; 0 }.each {
+    it.backgroundColorCode = '#ffff00'
+}
+</code></pre>
+<p>If you should be interested in clones that share also the subtree (and not only the core properties) filter for countNodesSharingContentAndSubtree instead of countNodesSharingContent.</p>
+<p>Add a connector from node to all of its clones using property-access instead of method (nodesSharingContent instead of getNodesSharingContent()):</p>
+<pre><code class="language-groovy">node.nodesSharingContent.each { node.addConnectorTo(it) }
+</code></pre>
+<p>TODO: Tutorial ends here...</p>
+<h2 id="appendix"><a class="header" href="#appendix">Appendix</a></h2>
+<h3 id="using-external-libraries"><a class="header" href="#using-external-libraries">Using external libraries</a></h3>
+<p>Some libraries are <a href="Scripting!_Included_libraries.html">already included</a>, but almost all other available Java libraries can be used. Place them in the <tt>lib</tt> directory in the &lt;freeplane_userdir&gt; which is already included in the &quot;Script classpath&quot; (see also Tools-&gt;Preferences-&gt;Plugins). All .class files and the content of all .jar files are automatically available in scripts and formulas.</p>
+<p>Starting with Freeplane 1.3 <a href="Scripting!_Freeplane_Utility_Classes.html">utility scripts</a> on the script classpath are compiled automatically.</p>
+<p>You can also create <a href="Your_own_utility_script_library.html">your own utility script library</a>.</p>
+<p>The add-on <a href="http://www.freeplane.org/wiki/index.php/Add-ons_%28install%29#scriptlib"><strong>scriptlib</strong></a> contains some libraries you can load and install. They include some node operations missing in the scripting API, file operations and a method to play audio with a hidden player.</p>
+<h3 id="on-groovy"><a class="header" href="#on-groovy">On Groovy</a></h3>
+<p>Although Groovy is more or less a superset of Java it would be a shame not to use the new opportunities Groovy provides. On the other hand there are notable differences between Groovy and Ruby. In this section some of the differences between Java, Groovy and Ruby will be listed.</p>
+<h4 id="using-external-libraries-from-groovy-scripts-and-formulas"><a class="header" href="#using-external-libraries-from-groovy-scripts-and-formulas">Using external libraries from groovy scripts and formulas</a></h4>
+<p>Freeplane 1.7.4 and later also support groovy annotation <code>@grab</code> to add required libraries to your scripts. It means you do not need to place your libraries in lib folder and they are downloaded and managed by groovy itself. The whole dependency management in Groovy scripts is documented at http://docs.groovy-lang.org/latest/html/documentation/grape.html .</p>
+<p>The following example shows using a cvs parsing library from https://github.com/xlson/groovycsv available at maven central repository</p>
+<pre><code class="language-groovy">@Grab('com.xlson.groovycsv:groovycsv:1.3')
+import static com.xlson.groovycsv.CsvParser.parseCsv
+
+def csv = '''Name,Lastname
+Mark,Andersson
+Pete,Hansen'''
+
+def data = parseCsv(csv)
+for(line in data) {
+    node.createChild(&quot;$line.Name $line.Lastname&quot;)
+}
+</code></pre>
+<h4 id="on-iteration"><a class="header" href="#on-iteration">On iteration</a></h4>
+<p>Groovy provides much improved ways to work on collections of data. This helps a lot in Freeplane scripting since most of the time you are working with collection of <tt>Node</tt> instances. From Java you might be used to this pattern:</p>
+<pre><code class="language-groovy">  // NEVER do that in Freeplane scripting!!!
+  for (i = 0; i &lt; c.selecteds.size()-1; i++) {
+    aNode = c.selecteds[i]
+    aNode.text = &quot;Do it groovy instead!&quot;
+  }
+</code></pre>
+<p>But this code is not even ineffective in Freeplane scripting (since every &quot;c.selecteds&quot; call creates a new list with new wrapped Node instances!) but it might even lead to errors since the list might change on the way. The following is better...</p>
+<pre><code class="language-groovy">  // better, but still NOT GOOD
+  def selected = c.selecteds
+  for (i = 0; i &lt; selected.size()-1; i++) {
+    def aNode = selected[i]
+    aNode.text = &quot;Do it groovy instead!&quot;
+  }
+</code></pre>
+<p>Do yourself a favor and read this short <a href="http://groovy-lang.org/Collections">article on Groovy Collections</a>. Then you will see that the best way to do the same is</p>
+<pre><code class="language-groovy">// Good!
+c.selecteds.each {
+  it.text = &quot;That's groovy!&quot;
+}
+</code></pre>
+<p>c.selecteds is only evaluated once and there are no redundant variables and method calls.</p>
+<h4 id="on-groovy-properties-and-the-scripting-api"><a class="header" href="#on-groovy-properties-and-the-scripting-api">On Groovy properties and the Scripting API</a></h4>
+<p>If an object, e.g. <tt>Node node</tt>, has a method <tt>getXyz()</tt> then groovy allows to use <tt>node.xyz</tt>. If it also has a proper <tt>setXyz()</tt> method (proper in the sense of the JavaBeans specification) then the property is writable. </p>
+<p>Example of a read-only property: <syntaxhighlight lang="Groovy">
+assert node.getId() == node.id
+println(&quot;ok&quot;)</p>
+<p>This will print &quot;ok&quot; into the logfile since the assertion is valid. </p>
+<p>Example of a read-write property: <syntaxhighlight lang="Groovy">
+println(node.text)
+node.text = &quot;please note!&quot;
+println(node.text)</p>
+<p>The second <tt>println</tt> will print the changed node text.</p>
+<p>It's considered better style in Groovy if you use the properties instead of getters and setters. So better use</p>
+<pre><code class="language-groovy">c.statusInfo = &quot;Icons: &quot; + node.icons.icons
+</code></pre>
+<p>instead of</p>
+<pre><code class="language-groovy">c.setStatusInfo(&quot;Icons: &quot; + node.getIcons().getIcons())
+</code></pre>
+<p>The menu item <em>Help -&gt; Scripting API</em> shows the attributes instead of get/set methods where possible and indicates if the attributes are read-only, read-write or write-only.</p>
+<h4 id="the-operator--means-equals"><a class="header" href="#the-operator--means-equals">The operator == means equals()</a></h4>
+<p>In Groovy the operator <tt>==</tt> is overridden to mean <tt>equals()</tt>. To check for identity use the method <a href="http://groovy-lang.org/groovy-jdk/java/lang/Object.html#is%28java.lang.Object%20other%29">is()</a></p>
+<pre><code class="language-groovy">Integer i = new Integer(3)
+Integer j = new Integer(3)
+assert i == j
+assert ! i.is(j)
+</code></pre>
+<h4 id="caveat"><a class="header" href="#caveat">Caveat</a></h4>
+<p>Note that - unlike in <a href="http://www.ruby-lang.org/">Ruby</a> - it's not allowed to omit the parens of a function without parameters in Groovy. So to get the number of children a node has, use <tt>node.children.size()</tt>, not <tt>node.children.size</tt>. The latter would be OK if <tt>java.util.List</tt> had a method <tt>getSize()</tt>.</p>
+<br>
+<h2 id="wanted-your-participation"><a class="header" href="#wanted-your-participation">Wanted: Your participation!</a></h2>
+<p>It's very likely that scripting support lacking some functionality that would be useful for a large number of users. For this reason you are strongly encouraged to give feedback on issues you are having with scripting and on things you are missing. </p>
+<ul>
+<li>For discussions use https://github.com/freeplane/freeplane/discussions</li>
+<li>Submit bugs and feature requests at https://github.com/freeplane/freeplane/issues</li>
+<li>Please share useful scripts at https://github.com/freeplane/freeplane/discussions</li>
+</ul>
+<h2 id="what-users-say"><a class="header" href="#what-users-say">What users say</a></h2>
+<ul>
+<li>Advice for taking up scripting by <a href="http://sourceforge.net/p/freeplane/discussion/758437/thread/4d367b8d/#3454">Quinbus</a> and <a href="http://sourceforge.net/p/freeplane/discussion/758437/thread/4d367b8d/#3454/451a">Miguel</a>.</li>
+</ul>
+<h2 id="further-reading"><a class="header" href="#further-reading">Further reading</a></h2>
+<p>This guide should have given you a quick overview over what can be done with scripts in Freeplane. Of course we have only scratched the surface. Here are some suggestions to dig further into Groovy / Freeplane scripting: </p>
+<ul>
+<li><a href="http://groovy-lang.org/learn.html">groovy-learn.org</a> docs, books, presentation and  books for Groovy beginners</li>
+<li><a href="http://www.freeplane.org/doc/api/">scripting API</a></li>
+<li><a href="Scripts_collection.html">Scripts collection</a> Learn by example</li>
+<li><a href="Scripting!_Freeplane_Utility_Classes.html">Freeplane utility classes</a> </li>
+<li><a href="Scripting!_Included_libraries.html">Libraries included in Freeplane</a> </li>
+<li><a href="Scripting!_API_Changes.html">Scripting! API Changes</a> </li>
+<li>New: <a href="Scripting!_Other_languages.html">Scripting! Other languages</a> - How to use other scripting languages like JavaScript or Python.</li>
+</ul>
+<!-- ({Category:Script}) -->
+<footer id="open-on-gh">Found a mistake? <a href="https://github.com/freeplane/docs/edit/main/src/docs/scripting/Scripting.md">Edit this page on GitHub.</a></footer>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../contribute/Contributing_to_Freeplane&#x27;s_Development.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../scripting/Formulas.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../contribute/Contributing_to_Freeplane&#x27;s_Development.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../scripting/Formulas.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

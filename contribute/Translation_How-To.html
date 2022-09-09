@@ -1,0 +1,586 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Translation How-To - Freeplane Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../open-in.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><li class="part-title">User guide</li><li class="chapter-item "><a href="../home.html"><strong aria-hidden="true">1.</strong> Home</a></li><li class="chapter-item "><a href="../how-to-get-help.html"><strong aria-hidden="true">2.</strong> How to get help</a></li><li class="chapter-item "><a href="../getting-started/getting-started.html"><strong aria-hidden="true">3.</strong> Getting started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../getting-started/Distributions.html"><strong aria-hidden="true">3.1.</strong> Distributions</a></li><li class="chapter-item "><a href="../getting-started/Command-line_options_and_configuration.html"><strong aria-hidden="true">3.2.</strong> Command-line options and configuration</a></li><li class="chapter-item "><a href="../getting-started/Add-ons_(install).html"><strong aria-hidden="true">3.3.</strong> Extend with add-ons</a></li></ol></li><li class="chapter-item "><a href="../user-documentation/first-steps.html"><strong aria-hidden="true">4.</strong> User documentation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../user-documentation/first-steps.html"><strong aria-hidden="true">4.1.</strong> First steps</a></li><li class="chapter-item "><a href="../user-documentation/working-w-mindmap-files.html"><strong aria-hidden="true">4.2.</strong> Working with mindmap files</a></li><li class="chapter-item "><a href="../user-documentation/formatting-maps-and-nodes.html"><strong aria-hidden="true">4.3.</strong> Formatting maps and nodes</a></li><li class="chapter-item "><a href="../user-documentation/styles.html"><strong aria-hidden="true">4.4.</strong> Styles</a></li><li class="chapter-item "><a href="../user-documentation/templates.html"><strong aria-hidden="true">4.5.</strong> Templates</a></li><li class="chapter-item "><a href="../user-documentation/css-for-html-or-markdown.html"><strong aria-hidden="true">4.6.</strong> CSS for HTML/Markdown</a></li><li class="chapter-item "><a href="../user-documentation/Conditional_node_styles.html"><strong aria-hidden="true">4.7.</strong> Conditional node styles</a></li><li class="chapter-item "><a href="../user-documentation/LaTeX_in_Freeplane.html"><strong aria-hidden="true">4.8.</strong> LaTeX in Freeplane</a></li><li class="chapter-item "><a href="../user-documentation/Spell_checker.html"><strong aria-hidden="true">4.9.</strong> Spell checker</a></li><li class="chapter-item "><a href="../user-documentation/Relationship_to_FreeMind.html"><strong aria-hidden="true">4.10.</strong> Relationship to FreeMind</a></li><li class="chapter-item "><a href="../user-documentation/other-docs-tutorials.html"><strong aria-hidden="true">4.11.</strong> References to other known documentation/tutorial sites</a></li></ol></li><li class="chapter-item expanded "><a href="../contribute/contribute.html"><strong aria-hidden="true">5.</strong> Contribute</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../contribute/Translation_How-To.html" class="active"><strong aria-hidden="true">5.1.</strong> Translation How-To</a></li><li class="chapter-item "><a href="../contribute/Contributing_to_Freeplane's_Development.html"><strong aria-hidden="true">5.2.</strong> Contributing to Freeplane's Development</a></li></ol></li><li class="chapter-item "><a href="../scripting/Scripting.html"><strong aria-hidden="true">6.</strong> Scripting</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../scripting/Formulas.html"><strong aria-hidden="true">6.1.</strong> Formulas</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../scripting/Formulas.html"><strong aria-hidden="true">6.1.1.</strong> Formulas</a></li><li class="chapter-item "><a href="../scripting/Scripting!_Script_filter.html"><strong aria-hidden="true">6.1.2.</strong> Formula filter</a></li></ol></li><li class="chapter-item "><a href="../scripting/Scripting_Cheatsheet.html"><strong aria-hidden="true">6.2.</strong> Scripting Cheatsheet</a></li><li class="chapter-item "><a href="../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.</strong> Scripts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.1.</strong> Scripts collection</a></li><li class="chapter-item "><a href="../scripting/Scripting_text_editing.html"><strong aria-hidden="true">6.3.2.</strong> Scripts for text editing</a></li><li class="chapter-item "><a href="../scripting/Example_scripts_using_external_libraries.html"><strong aria-hidden="true">6.3.3.</strong> Scripts using external libraries</a></li><li class="chapter-item "><a href="../scripting/Script_incubator.html"><strong aria-hidden="true">6.3.4.</strong> Script incubator</a></li><li class="chapter-item "><a href="../scripting/Scripting!_Jython.html"><strong aria-hidden="true">6.3.5.</strong> Scripting! Jython</a></li><li class="chapter-item "><a href="../scripting/Scripting_environment_setup.html"><strong aria-hidden="true">6.3.6.</strong> Scripting environment setup</a></li></ol></li><li class="chapter-item "><a href="../scripting/Export_Using_XSLT.html"><strong aria-hidden="true">6.4.</strong> XSLT for export/import</a></li><li class="chapter-item "><a href="../scripting/Add-ons_(Develop).html"><strong aria-hidden="true">6.5.</strong> Add-ons (Development)</a></li><li class="chapter-item "><a href="../scripting/Security_considerations.html"><strong aria-hidden="true">6.6.</strong> Security considerations</a></li></ol></li><li class="chapter-item "><a href="../coding/Git_howto.html"><strong aria-hidden="true">7.</strong> Coding</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../coding/Git_howto.html"><strong aria-hidden="true">7.1.</strong> Git howto</a></li><li class="chapter-item "><a href="../coding/How_to_build_Freeplane.html"><strong aria-hidden="true">7.2.</strong> How to build Freeplane</a></li><li class="chapter-item "><a href="../coding/IDE_setup.html"><strong aria-hidden="true">7.3.</strong> IDE setup</a></li><li class="chapter-item "><a href="../coding/Plugin_development.html"><strong aria-hidden="true">7.4.</strong> Plugin development</a></li></ol></li><li class="chapter-item "><li class="part-title">Attic</li><li class="chapter-item "><a href="../attic/home.html"><strong aria-hidden="true">8.</strong> Attic (draft documents)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.</strong> Old MediaWiki content</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.1.</strong> Old Home</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Approximate_search.html"><strong aria-hidden="true">8.1.2.</strong> Approximate search</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Architecture.html"><strong aria-hidden="true">8.1.3.</strong> Architecture</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Batch_Jobs.html"><strong aria-hidden="true">8.1.4.</strong> Batch Jobs</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Contributors.html"><strong aria-hidden="true">8.1.5.</strong> Contributors</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Current_Freeplane_File_Format.html"><strong aria-hidden="true">8.1.6.</strong> Current Freeplane File Format</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Data_recognition_and_data_formats.html"><strong aria-hidden="true">8.1.7.</strong> Data recognition and data formats</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Debugging_scripts.html"><strong aria-hidden="true">8.1.8.</strong> Debugging scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Document_Format.html"><strong aria-hidden="true">8.1.9.</strong> Document Format</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Edit_scripts_in_Eclipse.html"><strong aria-hidden="true">8.1.10.</strong> Edit scripts in Eclipse</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/External_objects.html"><strong aria-hidden="true">8.1.11.</strong> External objects</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/External_script_file_execution.html"><strong aria-hidden="true">8.1.12.</strong> External script file execution</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/FAQ.html"><strong aria-hidden="true">8.1.13.</strong> FAQ</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Fixed_security_vulnerabilities.html"><strong aria-hidden="true">8.1.14.</strong> Fixed security vulnerabilities</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/FreeMind_0.9.0_-_Freeplane_1.1.x.html"><strong aria-hidden="true">8.1.15.</strong> FreeMind 0.9.0 - Freeplane 1.1.x</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane2PowerPoint.html"><strong aria-hidden="true">8.1.16.</strong> Freeplane2PowerPoint</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_Extensions.html"><strong aria-hidden="true">8.1.17.</strong> Freeplane Tutorial Extensions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Screenshots.html"><strong aria-hidden="true">8.1.18.</strong> Freeplane Tutorial How-to Screenshots</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Video.html"><strong aria-hidden="true">8.1.19.</strong> Freeplane Tutorial How-to Video</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Wiki!Administrators.html"><strong aria-hidden="true">8.1.20.</strong> Freeplane Wiki!Administrators</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_and_problem_solving.html"><strong aria-hidden="true">8.1.21.</strong> Freeplane and problem solving</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_features_you_were_missing_in_FreeMind.html"><strong aria-hidden="true">8.1.22.</strong> Freeplane features you were missing in FreeMind</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_for_Windows_Mobile.html"><strong aria-hidden="true">8.1.23.</strong> Freeplane for Windows Mobile</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_installation_for_Ubuntu_OS.html"><strong aria-hidden="true">8.1.24.</strong> Freeplane installation for Ubuntu OS</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Get_the_code.html"><strong aria-hidden="true">8.1.25.</strong> Get the code</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Goals.html"><strong aria-hidden="true">8.1.26.</strong> Goals</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Groovy_scripts_and_formulas_can_escape_sandbox.html"><strong aria-hidden="true">8.1.27.</strong> Groovy scripts and formulas can escape sandbox</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Harmonizing_FP-menu.html"><strong aria-hidden="true">8.1.28.</strong> Harmonizing FP-menu</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help!Contents.html"><strong aria-hidden="true">8.1.29.</strong> Help!Contents</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help!Editing.html"><strong aria-hidden="true">8.1.30.</strong> Help!Editing</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help_Previous_Freeplane_Versions.html"><strong aria-hidden="true">8.1.31.</strong> Help Previous Freeplane Versions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/How_to_publish_add-ons.html"><strong aria-hidden="true">8.1.32.</strong> How to publish add-ons</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/How_to_test.html"><strong aria-hidden="true">8.1.33.</strong> How to test</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Information_management_with_Freeplane_add-on_dView(indexfile).html"><strong aria-hidden="true">8.1.34.</strong> Information management with Freeplane add-on dView(indexfile)</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Init_scripts.html"><strong aria-hidden="true">8.1.35.</strong> Init scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Japanese.html"><strong aria-hidden="true">8.1.36.</strong> Japanese</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Linux.html"><strong aria-hidden="true">8.1.37.</strong> Linux</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Logo_and_splashscreen.html"><strong aria-hidden="true">8.1.38.</strong> Logo and splashscreen</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Macintosh.html"><strong aria-hidden="true">8.1.39.</strong> Macintosh</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Map_local_scripts.html"><strong aria-hidden="true">8.1.40.</strong> Map local scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Map_templates.html"><strong aria-hidden="true">8.1.41.</strong> Map templates</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Menus_and_commands.html"><strong aria-hidden="true">8.1.42.</strong> Menus and commands</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Mind_map_gallery.html"><strong aria-hidden="true">8.1.43.</strong> Mind map gallery</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_Freeplane_File_Format_(Proposal).html"><strong aria-hidden="true">8.1.44.</strong> New Freeplane File Format (Proposal)</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_features_in_Freeplane_1.2.html"><strong aria-hidden="true">8.1.45.</strong> New features in Freeplane 1.2</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_features_in_Freeplane_1.3.html"><strong aria-hidden="true">8.1.46.</strong> New features in Freeplane 1.3</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/OSGI_based_plug-ins.html"><strong aria-hidden="true">8.1.47.</strong> OSGI based plug-ins</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Patterns.html"><strong aria-hidden="true">8.1.48.</strong> Patterns</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Portable_Freeplane.html"><strong aria-hidden="true">8.1.49.</strong> Portable Freeplane</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Release_cycle.html"><strong aria-hidden="true">8.1.50.</strong> Release cycle</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Release_smoke_test.html"><strong aria-hidden="true">8.1.51.</strong> Release smoke test</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Rules_to_build_user_friendly_menus.html"><strong aria-hidden="true">8.1.52.</strong> Rules to build user friendly menus</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_API_Changes.html"><strong aria-hidden="true">8.1.53.</strong> Scripting! API Changes</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Freeplane_Utility_Classes.html"><strong aria-hidden="true">8.1.54.</strong> Scripting! Freeplane Utility Classes</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Included_libraries.html"><strong aria-hidden="true">8.1.55.</strong> Scripting! Included libraries</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Other_languages.html"><strong aria-hidden="true">8.1.56.</strong> Scripting! Other languages</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Update_Freeplane's_Groovy_version.html"><strong aria-hidden="true">8.1.57.</strong> Scripting! Update Freeplane's Groovy version</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting_API.html"><strong aria-hidden="true">8.1.58.</strong> Scripting API</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Support.html"><strong aria-hidden="true">8.1.59.</strong> Support</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Think_Tank.html"><strong aria-hidden="true">8.1.60.</strong> Think Tank</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Translation_nl.html"><strong aria-hidden="true">8.1.61.</strong> Translation nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Troubleshooting.html"><strong aria-hidden="true">8.1.62.</strong> Troubleshooting</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Tutorial_Freeplane_How-to_nl.html"><strong aria-hidden="true">8.1.63.</strong> Tutorial Freeplane How-to nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Tutorial_Freeplane_nl.html"><strong aria-hidden="true">8.1.64.</strong> Tutorial Freeplane nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/User_icons.html"><strong aria-hidden="true">8.1.65.</strong> User icons</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Videos_and_animations_How-to.html"><strong aria-hidden="true">8.1.66.</strong> Videos and animations How-to</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Visions.html"><strong aria-hidden="true">8.1.67.</strong> Visions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Wish_List.html"><strong aria-hidden="true">8.1.68.</strong> Wish List</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/XML_External_Entity_vulnerability_in_map_parser.html"><strong aria-hidden="true">8.1.69.</strong> XML External Entity vulnerability in map parser</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Your_own_utility_script_library.html"><strong aria-hidden="true">8.1.70.</strong> Your own utility script library</a></li></ol></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.</strong> New wiki initiative</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.1.</strong> customizing-freeplane</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/freeplane-api-groovy.html"><strong aria-hidden="true">8.2.2.</strong> freeplane-api-groovy</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/glossary.html"><strong aria-hidden="true">8.2.3.</strong> glossary</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/introduction-aka-many-unsorted-ideas-related-to-freeplane.html"><strong aria-hidden="true">8.2.4.</strong> introduction-aka-many-unsorted-ideas-related-to-freeplane</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/understanding-interface.html"><strong aria-hidden="true">8.2.5.</strong> understanding-interface</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/understanding-nodes.html"><strong aria-hidden="true">8.2.6.</strong> understanding-nodes</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">Special pages</li><li class="chapter-item "><a href="../after-redirect.html"><strong aria-hidden="true">9.</strong> After redirect from the old media wiki</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Freeplane Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/freeplane/docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <ul>
+<li><a href="#freeplane-gui-translation-and-improvement">Freeplane GUI translation and improvement</a>
+<ul>
+<li><a href="#tools-weblate-and-freeplane-translation-editor">Tools: Weblate and Freeplane translation editor</a>
+<ul>
+<li><a href="#weblate">Weblate</a></li>
+<li><a href="#freeplane-translation-editor">Freeplane translation editor</a></li>
+<li><a href="#online-or-offline-translation">Online or offline translation?</a></li>
+</ul>
+</li>
+<li><a href="#online-translation">Online translation</a>
+<ul>
+<li><a href="#how-to-find-filter-andor-review-translation-items">How to find, filter and/or review translation items</a></li>
+<li><a href="#how-to-translate">How to translate</a></li>
+<li><a href="#how-to-test-your-weblate-translations">How to test your Weblate translations:</a></li>
+</ul>
+</li>
+<li><a href="#offline-translation">Offline translation</a>
+<ul>
+<li><a href="#how-to-upload-your-translation">How to upload your translation</a></li>
+<li><a href="#how-to-keep-your-local-translation-files-up-to-date">How to keep your local translation files up to date</a></li>
+<li><a href="#how-to-prevent-offline-translation-risks">How to prevent offline translation risks</a></li>
+</ul>
+</li>
+<li><a href="#new-tool-tips">New tool tips</a>
+<ul>
+<li><a href="#ui-designer-process">UI designer process</a></li>
+<li><a href="#translator-process">Translator process</a></li>
+<li><a href="#offline-translation-process-for-new-tool-tips">Offline translation process for new tool tips</a></li>
+</ul>
+</li>
+<li><a href="#change-english-source-strings">Change English source strings</a></li>
+<li><a href="#how-to-collaborate-to-translate-freeplane-to-your-language">How to collaborate to translate Freeplane to your language</a>
+<ul>
+<li><a href="#communication-by-comments-and-review-flags-in-weblate">Communication by comments and review flags in Weblate</a></li>
+<li><a href="#consistent-translation-by-using-a-glossary">Consistent translation by using a glossary</a></li>
+<li><a href="#discussion-in-a-topic-on-the-freeplane-forum">Discussion in a topic on the Freeplane forum</a>
+<ul>
+<li><a href="#french--fran%C3%A7ais">French / Français</a></li>
+<li><a href="#flemishdutch--nederlandsvlaams">Flemish/Dutch / Nederlands/Vlaams</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#frequently-asked-questions--tips-for-translators">Frequently Asked Questions / Tips for translators</a></li>
+</ul>
+</li>
+<li><a href="#translation-of-freeplane-add-ons">Translation of Freeplane add-ons</a></li>
+<li><a href="#translation-of-third-party-tool-used-in-freeplane">Translation of third party tool used in Freeplane</a>
+<ul>
+<li><a href="#jortho-spell-checker">JOrtho spell checker</a></li>
+</ul>
+</li>
+<li><a href="#translation-of-tutorial-or-documentation-maps">Translation of Tutorial or Documentation maps</a>
+<ul>
+<li><a href="#basic-steps">Basic steps</a></li>
+</ul>
+</li>
+<li><a href="#keys-mapping-translation">Keys Mapping translation</a></li>
+<li><a href="#java-help-translation">Java Help translation</a></li>
+</ul>
+<p>This page will give you all the information you need to translate Freeplane into your own language.</p>
+<h1 id="freeplane-gui-translation-and-improvement"><a class="header" href="#freeplane-gui-translation-and-improvement">Freeplane GUI translation and improvement</a></h1>
+<p>This How-To section describes the tools and (alternative) processes for Freeplane GUI translation. This concerns the translation of all the English source strings displayed in the Freeplane interface, especially in menus and dialogs.</p>
+<p>English is the source language for all translations, so you need to know English to be a translator.</p>
+<p>UI designers need to be able to improve the UI by improving the existing English source strings and by adding new tool tips. Since they use the same tools and almost the same processes, these processes are also described here.</p>
+<p>This How-To uses the following conventions and terms:</p>
+<ul>
+<li>
+<p><strong>Language code:</strong> 'xx' in any file name or URL means the two letter language code of the language you are translating to. So you have to replace it by that language code to make it work.</p>
+</li>
+<li>
+<p><strong>Your language page:</strong> <code>https://hosted.weblate.org/projects/freeplane/translation/xx/</code>, Weblate page that gives an overview of the translation of Freeplane to your language. For details see <a href="#Weblate">Weblate</a></p>
+</li>
+<li>
+<p><strong>Your translation item:</strong> An untranslated English source string that you would like to translate or an existing translation that you would like to improve.</p>
+</li>
+<li>
+<p><strong>Translate page:</strong> Weblate page where you can edit your translation item, see <a href="#How-to-translate">How to translate</a></p>
+</li>
+<li>
+<p><strong>Translation key:</strong> This is a unique text string that links a certain English source string to all its translations and defines the location where the source string or its translation is displayed in the user interface.</p>
+</li>
+<li>
+<p><strong>File separator:</strong> '/' (forward slash) is used as file separator in the display of paths in order to be compatible with all relevant operating systems. '' (backward slash) is the default in Windows, but '/' will work as well.</p>
+</li>
+<li>
+<p><strong>Freeplane user directory:</strong> <fpuserdir> preceding any file name is the path to the Freeplane user directory. This path ends in /Freeplane/1.5.x/ where the last subdirectory varies between major releases. You can open this directory in your file manager via the Freeplane menu Tools &gt; Open user directory.</p>
+</li>
+</ul>
+<p>If you have any questions or suggestions with regard to this part of the How-To, post them at the thread <a href="https://sourceforge.net/p/freeplane/discussion/758437/thread/3b20093b/">Questions about translating Freeplane via the Weblate tool</a></p>
+<h2 id="tools-weblate-and-freeplane-translation-editor"><a class="header" href="#tools-weblate-and-freeplane-translation-editor">Tools: Weblate and Freeplane translation editor</a></h2>
+<h3 id="weblate"><a class="header" href="#weblate">Weblate</a></h3>
+<p>Since version 1.3.x Freeplane uses a collaborative <a href="http://weblate.org">web based translation</a> tool developed by <a href="http://cihar.com">Michal Čihař</a>. For all described processes the translations are entered or imported in Weblate (except for new tool tips which are merged directly into git). From Weblate all new and changed are committed to the Freeplane git release branch. Weblate stays in sync with the Freeplane git release branche, so any committed new tool tip or other new translation key and its English source string are immediately available for translation in Weblate. With every new Freeplane release the current state of the Freeplane translation in Weblate is also released.</p>
+<p>In order to get started as a Freeplane translator or UI designer in Weblate you need to know and do a few things:</p>
+<ul>
+<li>
+<p>You can find the Freeplane Weblate project page here: http://hosted.weblate.org/projects/freeplane.</p>
+</li>
+<li>
+<p>If you have not registered for Weblate yet, you need to do so by clicking 'Register' in the top-right corner and following the instructions.</p>
+</li>
+<li>
+<p>It is important that you know how to find your language page, i.e. the Freeplane Weblate page that gives an overview of the translation to your language, has some handy filters for strings to check and has the menu items Search and Files that we are going to use in this How-To:</p>
+<ul>
+<li>On the Freeplane Weblate project page, click component Translation and then on your language</li>
+<li>If in your Weblate profile you specify your translated language and subscribe to the Freeplane project, a link to this page appears in your Weblate Dashboard</li>
+<li>The web address of this page is <code>https://hosted.weblate.org/projects/freeplane/translation/xx/</code> where 'xx' is the 2-letter code for your language.</li>
+</ul>
+</li>
+<li>
+<p>You need to get yourself familiar with Weblate functionality, so take a look at the <a href="http://docs.weblate.org/en/latest/user/index.html">Weblate translator guide</a> and keep it as a reference next to this How-To.</p>
+</li>
+</ul>
+<p>If you find bugs on the Weblate tool, you can report them <a href="https://github.com/nijel/weblate/issues">here</a>.</p>
+<h3 id="freeplane-translation-editor"><a class="header" href="#freeplane-translation-editor">Freeplane translation editor</a></h3>
+<p>The Freeplane translation editor is a tool for translators and UI designers that is available in the Freeplane GUI. It is included in Freeplane v1.5.16 or higher and is enabled by installing the <a href="https://sourceforge.net/projects/freeplane/files/addons/user-translation-support/User-Translation-Support-v1.0.addon.mm/download">User Translation Support add-on</a>.</p>
+<p>The translation editor appears when you press Crtr+Shift+F10 while your mouse is hovering above the text of your translation item. It shows a translation window for the text string and, if applicable, for the tool tip associated with the text string. You can choose to do one of 2 things:</p>
+<ul>
+<li>You can choose to translate in the translation window itself (i.e. offline translation). When you close Freeplane, all translated items are stored in a local file: <fpuserdir>UserResources_xx.properties, that can be uploaded to Weblate.</li>
+<li>Or you can choose to press the Weblate button. This takes you straight to the correct translate page, the Weblate page where you can edit your translation item.</li>
+</ul>
+<p>The translation editor does not work for all GUI text strings. In that case the message &quot;No translatable string found&quot; appears in the bottom-left corner of the Freeplane Window.</p>
+<p>For some tool tip items you might notice that offline editing is disabled and that the translate page cannot be found. In that case it is a <a href="#New-tool-tips">new tool tips</a>.</p>
+<p>If you would like to change the standard hot key for the translation editor, you can do so by selecting <strong>Tools &gt; Set text change hot key from</strong> the menu.</p>
+<h3 id="online-or-offline-translation"><a class="header" href="#online-or-offline-translation">Online or offline translation?</a></h3>
+<p>In the following 2 paragraphs it is explained in detail how these 2 tools work together in online or offline translation. Both ways have advantages over the other.</p>
+<div class="table-wrapper"><table><thead><tr><th>Online translation</th><th>Offline translation</th></tr></thead><tbody>
+<tr><td>Easy to collaborate</td><td>Fast</td></tr>
+<tr><td>Automatically work on the most current translation</td><td>You immediately can check the result of your translation in the Freeplane UI</td></tr>
+<tr><td>More information and tools to support translation: glossary, machine translation, review flags, comments, history</td><td>You do not need Internet during translation</td></tr>
+</tbody></table>
+</div>
+<p>When to use online or offline translation depends on what you have to do, your circumstances, your translation skills and the preferences of you and your co-translators. Here are a few examples </p>
+<div class="table-wrapper"><table><thead><tr><th>Online translation</th><th>Offline translation</th></tr></thead><tbody>
+<tr><td>When you have to improve existing translations</td><td>When you have to translate untranslated items</td></tr>
+<tr><td>When you translate a few items from time to time</td><td>When you want to and are able to translate a lot of items in a short time</td></tr>
+<tr><td>When you need to collaborate with other translators for your language</td><td>When you are the only translator for a language</td></tr>
+<tr><td>When machine translation and a secondary language can help you translate</td><td>When you are able to translate without any aids</td></tr>
+<tr><td>When the quality of translation is more important</td><td>When the speed of translation is more important</td></tr>
+<tr><td>When you always have access to Internet</td><td>When you need to be able to do part of the work offline</td></tr>
+</tbody></table>
+</div>
+<h2 id="online-translation"><a class="header" href="#online-translation">Online translation</a></h2>
+<p>Online translation has basically 3 steps:</p>
+<ol>
+<li>You need to find, filter and/or review translation items</li>
+<li>Translate an item</li>
+<li>Test your Weblate translation</li>
+</ol>
+<h3 id="how-to-find-filter-andor-review-translation-items"><a class="header" href="#how-to-find-filter-andor-review-translation-items">How to find, filter and/or review translation items</a></h3>
+<p>The following 4 scenarios can help you to get from no translation to a complete and improved translation. You could use a combination of scenario 1 and 2 to go through all menu's and screens systematically followed by scenario 3. Scenario 1 is the only scenario that can be replaced with offline translation. Scenario 4 can take place at any time. In case of a largely completed translation that needs maintenance, the scenarios can be used in any order. New tool tips and other new English source strings and translation keys that are added during development are probably easiest found through scenario 3, though it might be difficult to find the location of these strings in the user interface.</p>
+<p><strong>Scenario 1: In the Freeplane user interface you see a string you would like to translate or improve and you can use the Freeplane translation editor.</strong> You can recognise untranslated strings as the English source string with the token <code>[Translate me]</code> attached to it. Otherwise you could see a string that needs better formulation or  correction of a language error. Hold your mouse above the intended string and press Ctrl+Shift+F10 to invoke the Freeplane translation editor. It will show the string and, if applicable, its tool tip. Press the Weblate button of the string you would like to translate or improve. That will directly open your web browser with the Weblate page for your translation item. In a few cases this scenario does not work or stops here:</p>
+<ul>
+<li>When you press Ctrl+Shift+F10 the translation editor does not appear and the message &quot;No translatable string found&quot; appears in the bottom-left corner of the Freeplane Window. The translation editor cannot handle this type of string and you should use scenario 2 to find and translate this string.</li>
+<li>After you press the Weblate button, the translation item cannot be found in Weblate. This concerns a new tool tip, see <a href="#New-tool-tips">new tool tips</a></li>
+<li>You may find that the string is already translated or improved. This is because Weblate can be ahead of the translation that came with the Freeplane release you are using.</li>
+</ul>
+<p><strong>Scenario 2: As scenario 1 but without the Freeplane translation editor.</strong> Once you have identified your translation item you go to your language page (<code>https://hosted.weblate.org/projects/freeplane/translation/xx/</code>) and press Search. In case of translation you enter the English source string in Query and enable option &quot;Search in source strings&quot; In case of an improvement you enter the current translation in Query and enable option &quot;Search in target strings&quot;. After pressing the Search button you might directly find the page for your translation item. If you find more than one item, you can browse through them to find your translation item. If you find nothing or the wrong item the English source text or the translated text has been changed in Weblate since the moment of the Freeplane release you are using. You can try to find them by reducing the number of keywords in the search.</p>
+<p><strong>Scenario 3: Finding remaining or new untranslated items in Weblate.</strong> In Weblate you can easily find all untranslated items by clicking 'Not translated strings' on your language page. Disadvantage over scenario 1 and 2 is that you might have difficulties to find the location of these translation items in the Freeplane interface, so you miss the context that helps you to translate or improve it. After having gone systematically through all menu's and screens with scenario 1 and 2, this is the only way to find the remaining untranslated items.</p>
+<p><strong>Scenario 4: Reviewing translations.</strong> In scenario 1 and 2 you review the translations directly in the Freeplane interface. In Weblate there are many additional ways to select translations for review:</p>
+<ul>
+<li><strong>Review all translation items marked for review:</strong> Click the link 'Strings marked for review' from your language page. You can now browse through all translations that are marked for review by other translators or automatically by Weblate if the English source string has changed. If necessary you can improve the translation. If your are satisfied with the translation, remove the tick &quot;Needs review&quot; and save.</li>
+<li><strong>Review all translations done by other translators since a certain date:</strong> From your language page click Search, in the Review pane specify the date and click &quot;Start review&quot;.</li>
+<li><strong>Review consistent translation of a certain keyword:</strong> From your language page click search, enter the keyword, only enable &quot;Search in source strings&quot; and hit the Search button.</li>
+<li><strong>Review translations with failed checks:</strong> From your language page click the link &quot;Strings with failed checks&quot;. On the search page you can use &quot;Search filter&quot; to filter on specific failed checks.</li>
+</ul>
+<h3 id="how-to-translate"><a class="header" href="#how-to-translate">How to translate</a></h3>
+<p>The basis of the translate page is the English source string and the translation field. For an untranslated item you can enter the translation. An existing translation you can review and change. You can also enable or disable 'Needs review' if necessary. Then you can save your changes.</p>
+<p>If the English source string has changed, the change is shown as well. If you have another secondary language that you know better than English, you can specify that in your Weblate profile and the translation to this secondary language is also shown on the translate page. </p>
+<p>If you do not know the location of your translation item in the Freeplane user interface (scenario 3 and 4), the context string (which is in fact the translation key) and the Nearby messages might give a clue.</p>
+<p>You can check what Machine translation suggests and how translators have changed the translation in History. Comments and Glossary are discussed in <a href="#How-to-collaborate-to-translate-Freeplane-to-your-language">How to collaborate to translate Freeplane to your language</a></p>
+<h3 id="how-to-test-your-weblate-translations"><a class="header" href="#how-to-test-your-weblate-translations">How to test your Weblate translations:</a></h3>
+<ul>
+<li>Open your language page: <code>https://hosted.weblate.org/projects/freeplane/translation/xx/</code></li>
+<li>Choose Files</li>
+<li>Click &quot;Download&quot;, save freeplane-translation-xx.properties</li>
+<li>Copy freeplane-translation-xx.properties to <fpuserdir>resources/translations/Resources_xx.properties</li>
+<li>Restart Freeplane</li>
+<li>Test your translations</li>
+<li>Close Freeplane</li>
+<li>Remove <fpuserdir>resources/translations/Resources_xx.properties, otherwise it will overrule newer translations that will come with new Freeplane releases.</li>
+</ul>
+<h2 id="offline-translation"><a class="header" href="#offline-translation">Offline translation</a></h2>
+<p>The basic steps of offline translation are simple: you translate your translation items with the translation editor and then you upload your translation to Weblate. The use of the translation editor <a href="#Freeplane-translation-editor">has already been explained</a>. The <a href="#How-to-upload-your-translation">first paragraph</a> explains how to upload your translation.</p>
+<p>When you plan to translate offline you need to realise that there are 3 risks that could upset you and your peer translators compared to the situation where you and the other translators use online translation exclusively:</p>
+<ol>
+<li>Your local Freeplane translation files are not automatically up to date with the most current translation to your language. There is a risk that you translate items that already have been translated.</li>
+<li>You and other translators for your language are not automatically aware of reach others work. There is a risk that you and your co-translators work on the same translation items. </li>
+<li>You do not automatically compare your translation with an existing translation that is added after the local outdated translation (risk 1) or while you were working on your offline translation (risk 2). There is a risk that you accidentally overwrite a preferable translation.
+In the best case scenario there is no translation to your language yet and you are able to ensure that you are the only translator. In other scenarios these unwanted results could occur and might upset you and/or your co-translators. So it is better to prevent these risks from happening by the measures explained in the <a href="#How-to-prevent-offline-translation-risks">third paragraph</a>. Part of these measures concern updating the local language files and it helps to understand their hierarchy as explained in the <a href="#Understanding-translation-file-hierarchy">second paragraph</a>.</li>
+</ol>
+<h3 id="how-to-upload-your-translation"><a class="header" href="#how-to-upload-your-translation">How to upload your translation</a></h3>
+<p>When you have finished your offline translation and would like to upload your translation to Weblate, you can take steps 5 to 10 in the procedure described  in <a href="#How-to-prevent-offline-translation-risks">How to prevent offline translation risks</a>. In step 9 you can choose from the following settings:</p>
+<p>The standard recommended settings are:
+: <strong>Merge method:</strong> Add as a translation
+: <strong>Processing of strings needing review:</strong> Do not import
+: <strong>Merge file header:</strong> Disabled
+: <strong>Merge translation comments:</strong> Disabled
+: <strong>Overwrite existing translations:</strong> Enabled
+You apply these settings if you are sure there are no existing translations, if you have an alternative for reviewing translations that are going to be overwritten or if you are intentionally overwriting existing translations with improved translations.</p>
+<p>If there is a chance that you are going to overwrite other translations unintentionally, the following alternative settings allows you or you co-translator to review whether you have accidentally overwritten a preferable translation.
+: <strong>Merge method:</strong> Add as a translation needing review
+: <strong>Processing of strings needing review:</strong> Import as string needing review
+See also the procedure in <a href="#How-to-prevent-offline-translation-risks">How to prevent offline translation risks</a> for a smarter way to review for preferable translations that are accidentally overwritten.</p>
+<p>If you want to prevent that your import overwrites existing translations, you can change the last setting as follows
+: <strong>Overwrite existing translations:</strong> Disabled</p>
+<p>Other variations are not relevant, since the type of translation file we use does not have a file header and does not support marking individual strings needing review or adding translations comments.</p>
+<h3 id="how-to-keep-your-local-translation-files-up-to-date"><a class="header" href="#how-to-keep-your-local-translation-files-up-to-date">How to keep your local translation files up to date</a></h3>
+<p>If you understand Freeplane's translation file hierarchy, you can figure out how to keep the local Freeplane translation up to date. Freeplane looks for a translation of a certain translation key in the following order:</p>
+<ol start="4">
+<li>in <fpuserdir>UserResources_xx.properties (where translation editor stores translations)</li>
+<li>in <fpuserdir>resources/translations/Resources_xx.properties (that you can use to save the most recent translation from Weblate)</li>
+<li>in the file Resources_xx.properties that came with the release (in the installation directory)</li>
+<li>in the file with the English resource strings, displaying it as <code>&lt;English text&gt; [translate me]</code></li>
+</ol>
+<p>With this file hierarchy in mind you can easily grasp the following situations:</p>
+<ul>
+<li>Suppose you download the translation file in your language from Weblate and save it as <fpuserdir>resources/translations/Resources_xx.properties. Then the updated translations from Weblate will overrule the outdated translations that came with your current Freeplane version.</li>
+<li>The previous bullet is not true if you kept an <fpuserdir>UserResources_xx.properties with some outdated translation strings that overrule the strings with the same translation keys in <fpuserdir>resources/translations/Resources_xx.properties. So it is good practise to remove <fpuserdir>UserResources_xx.properties after you have uploaded your translationThat will also prevent you from uploading the same translation strings twice. </li>
+<li>Suppose you have finished your translation work, you keep <fpuserdir>resources/translations/Resources_xx.properties without updating it and you update Freeplane to a new version. At that moment outdated translations in <fpuserdir>resources/translations/Resources_xx.properties overrule updated translations that come with the Freeplane releases. So if you want to benefit from automatic translation updates that come worth Freeplane releases you should remove <fpuserdir>resources/translations/Resources_xx.properties.</li>
+</ul>
+<h3 id="how-to-prevent-offline-translation-risks"><a class="header" href="#how-to-prevent-offline-translation-risks">How to prevent offline translation risks</a></h3>
+<p>When you start offline translation you need to assess to what extent the risks of outdated translation files and hidden translation work do apply. Here are some suggested measures and a procedure, just check what applies to your situation. If you work with a group of translators, you can agree on your measures and procedures.</p>
+<p><strong>Measures</strong></p>
+<ul>
+<li>Announce on the Freeplane forum that you are going to do an offline translation. You can do this in an existing or new thread as explained in <a href="#Discussion-in-a-topic-on-the-Freeplane-forum">Discussion in a topic on the Freeplane forum</a></li>
+<li>Keep the moment between starting the offline translation and uploading it to Weblate as short as possible. For example, if you can work on the translation fulltime for 2 days, upload it immediately after you have finished. If you can work on it one hour now and then, upload it after each hour.</li>
+</ul>
+<p><strong>Procedure</strong></p>
+<p>This is an example procedure that updates your local translation before you start offline translation and allows you to review whether your upload overwrites any new or changed translations that other translators have added to Weblate while you were working offline. Some steps might not apply to all situations, e.g. if Weblate does not contain any translations in your language yet, there is no need to download a translation file to update the translation in Freeplane (step 2).</p>
+<ol start="8">
+<li>
+<p>Remove the file <fpuserdir>UserResources_xx.properties if you have uploaded offline translations previously and forgot to remove it.</p>
+</li>
+<li>
+<p>In Weblate go to your language page and click Files &gt; Download original translation file (Java Properties (ISO-8859-1)). Save the file as <fpuserdir>resources/translations/Resources_xx.properties. Restart Freeplane. The Freeplane translation for your language is now up to date with Weblate.</p>
+</li>
+<li>
+<p>If you have not done so, change the language of the Freeplane user interface to your language in Tools &gt; Preferences &gt; Environment &gt; Language and restart Freeplane.</p>
+</li>
+<li>
+<p>Carry out your offline translation.</p>
+</li>
+<li>
+<p>Close Freeplane to make sure that all your translations are stored in <fpuserdir>UserResources_xx.properties</p>
+</li>
+<li>
+<p>Open your language page (<code>https://hosted.weblate.org/projects/freeplane/translation/xx/</code>)</p>
+</li>
+<li>
+<p>Click Files &gt; Upload translation</p>
+</li>
+<li>
+<p>Choose the file <fpuserdir>UserResources_xx.properties</p>
+</li>
+<li>
+<p>Choose the options as recommended in <a href="#How-to-upload-your-translation">these instructions</a>. You can use the standard settings or, if you do not want to spent time on reviewing in the next step, you can choose not to overwrite existing translations.</p>
+</li>
+<li>
+<p>Click the upload button</p>
+</li>
+<li>
+<p>From your language page, click history and check that your translations have been imported. Click on every item with action'Translation changed' and check in the history tab of the displayed translate page whether you unintentionally have overwritten something. If you find the previous translation better than yours, you can restore the previous one.</p>
+</li>
+<li>
+<p>Remove <fpuserdir>UserResources_xx.properties to prevent that you upload the same translations again and to enable you to see updates through the other language files, see the previous paragraph.</p>
+</li>
+</ol>
+<h2 id="new-tool-tips"><a class="header" href="#new-tool-tips">New tool tips</a></h2>
+<p>The translator editor has also functionality for UI Designers to add new tool tips in order to improve the user interface. Translators can recognise these new tool tips by the fact that the entry field in translator editor is disabled or by the fact the Weblate button does not find the translation item. A translator can enable the translation of a tool tip by taking over the role of the UI designer. It requires the translator to submit an English source string before the actual translation can start. It also requires an developer to add the new translation key and source string to Weblate, so enabling is not an instant action. The next paragraphs describe in detail the different processes with regard to new tool tips.</p>
+<h3 id="ui-designer-process"><a class="header" href="#ui-designer-process">UI designer process</a></h3>
+<p>This process is for new tool tips only. If you want to improve the source string of existing tool tips follow the <a href="#Change-English-source-strings">regular process</a> to change source strings.</p>
+<ol start="7">
+<li>Check if there is any open &quot;New tool tips&quot; bug report. If so, wait till they are all closed and Weblate is up to date. If not, you might repeat your own work or overwrite your co-designers work.</li>
+<li>If the Freeplane language is other than English, change it to English in Preferences</li>
+<li>Close Freeplane</li>
+<li>Remove <fpuserdir>UserResources_en.properties to prevent submitting the same new tool tips</li>
+<li>Download the English source through menu &quot;Files &gt; Download original translation file (Java Properties(ISO-8859-1))&quot; from https://hosted.weblate.org/projects/freeplane/translation/en/. Save it as <fpuserdir>viewer-resources/translations/Resources_en.properties. In this way your local source strings are up to date.</li>
+<li>Start Freeplane</li>
+<li>Hover over the item that you would like to add a tool tip to. If there is already a tool tip, skip the item. If not, press Ctrl+Shift+F10</li>
+<li>Enter the text for the tool tip (the bottom field) and press OK.</li>
+<li>Repeat the last 2 steps till you have finished what you had planned</li>
+<li>Close Freeplane</li>
+<li>Create a <a href="https://github.com/freeplane/freeplane/issues/new?template=bug_report.md&amp;title=New%20tool%20tips">new bug report</a> titled &quot;New tool tips&quot; and attach <code>&lt;fpuserdir&gt;UserResources_en.properties</code></li>
+<li>If necessary, change Freeplane back to the original language.</li>
+</ol>
+<h3 id="translator-process"><a class="header" href="#translator-process">Translator process</a></h3>
+<p>If you want to enable translation for a certain tool tip, you should follow the following steps.</p>
+<ol start="19">
+<li>Hover over the item with the disabled tool tip and press Ctrl+Shift+F10.</li>
+<li>Press the Weblate button. If the translation key is present in Weblate, you can continue with normal online translation. For the offline translation process continue with that section below. If no translation key is present, continue with the next step</li>
+<li>Follow the steps of the UI designer process</li>
+<li>When the &quot;New tool tips&quot; bug report is closed, continue with online translation. For offline translation process continue with that section below. </li>
+</ol>
+<h3 id="offline-translation-process-for-new-tool-tips"><a class="header" href="#offline-translation-process-for-new-tool-tips">Offline translation process for new tool tips</a></h3>
+<p>This is the same as the normal offline translation process, except that you need to update the English source strings to enable the new tool tip fields:</p>
+<ul>
+<li>Download the English source through menu &quot;Files &gt; Download original translation file (Java Properties(ISO-8859-1))&quot; from https://hosted.weblate.org/projects/freeplane/translation/en/. Save it as <fpuserdir>viewer-resources/translations/Resources_en.properties. In this way your local source strings are up to date.</li>
+</ul>
+<h2 id="change-english-source-strings"><a class="header" href="#change-english-source-strings">Change English source strings</a></h2>
+<p>It is possible to change the English source strings with the same tools as used for translation. You should do this with the utmost care. If you see a spelling error in the source text you can correct it just like that. Other improvements you should discuss in the <a href="https://sourceforge.net/p/freeplane/discussion/758437/thread/e234f3f6/">Improvement of Freeplane usability</a> thread. In addition can go to the English translate page of the item you would like to improve, check 'Needs review' and leave your suggestions as a <a href="#Communication-by-comments-and-review-flags-in-Weblate">comment at the translation level</a>.</p>
+<p>I recommend you to change English source strings only online because you will make a few changes at a time and you will prevent a mix up with <a href="#New-tool-tips">new tool tips</a>. </p>
+<p>You can follow the instructions for online and offline translation with a few adjustments:</p>
+<ul>
+<li>In order to use the Freeplane translation editor for English source text, you need to change the interface language to English in Freeplane's preferences.</li>
+<li>Where it says 'your language page' you can start off from the Freeplane English source page: https://hosted.weblate.org/projects/freeplane/translation/en/</li>
+<li>Obviously on the translate page for English there is no source string, in the translation field you can change the source string</li>
+<li>While you are on a translate page for a language other than English, there is a icon of a pencil next to the label 'Source'. This icon links to the translate page for the English source string.</li>
+<li>If you want to test or update the English source strings in your local Freeplane, you can download them from Weblate in the same way as for translations, but you should save it as: <fpuserdir>viewer-resources/translations/Resources_en.properties.</li>
+</ul>
+<h2 id="how-to-collaborate-to-translate-freeplane-to-your-language"><a class="header" href="#how-to-collaborate-to-translate-freeplane-to-your-language">How to collaborate to translate Freeplane to your language</a></h2>
+<p>Weblate makes it very easy to collaborate on translating Freeplane to your language. If you or another translator add a new translation, the other translators immediately see this new translation in Weblate. If something unexpected has happened to a translation item you can check in the history tab of the translate page who has done what. The following paragraphs highlight some other Weblate collaboration features and the fact that you also can communicate through the Freeplane forum. </p>
+<h3 id="communication-by-comments-and-review-flags-in-weblate"><a class="header" href="#communication-by-comments-and-review-flags-in-weblate">Communication by comments and review flags in Weblate</a></h3>
+<p>If you are not sure about your or somebody else's translation you can check 'Needs review' and add a translation comment with your question or concern. Be sure to choose 'Translation comment' as a scope so that it is only visible to other translators in your language. This means you can write the comment in your language.</p>
+<p>If you have a remark that can help translators of all languages, e.g. &quot;<em>Clone</em> and <em>copy</em> should be translated to different words, because they are functionally different.&quot;, you can choose 'Source string comment' as a scope. Of course you should write this comment in English.</p>
+<p>If you have a suggestion to improve an English source string, ignore the Weblate advice and see <a href="#Change-English-source-strings">Change English source strings</a> about how to communicate this.</p>
+<h3 id="consistent-translation-by-using-a-glossary"><a class="header" href="#consistent-translation-by-using-a-glossary">Consistent translation by using a glossary</a></h3>
+<p>A Weblate glossary is a great way to agree on a consistent translation of certain keywords. If we repeat the example of the terms <em>clone</em> and <em>copy</em>, that are functionally different in Freeplane: in the glossary you can actually suggest how both words should be translated in your language. Once a keyword in the glossary appears in the source string on the translate page, suggested translations appear in the Glossary window in the right top corner of the translate page. You can also add a new keyword with translation to the glossary through this window.</p>
+<p>If you want to review and edit your glossary, you can click the 'Manage glossary' icon in the top right corner of the glossary window. Alternatively, you can go to the page https://hosted.weblate.org/dictionaries/freeplane/ and select the glossary for your language from the overview.</p>
+<h3 id="discussion-in-a-topic-on-the-freeplane-forum"><a class="header" href="#discussion-in-a-topic-on-the-freeplane-forum">Discussion in a topic on the Freeplane forum</a></h3>
+<p>If you feel the need to have a discussion with your fellow translators you can check if there is an existing thread for your language on <a href="https://github.com/freeplane/freeplane/discussions">Discussions</a>. If not, you can start a new topic for translation to your language. Since such topic is for people having the same primary language, you are allowed to write in your mother tongue. If you subscribe to this thread, e-mail messages will notify you of new posts.</p>
+<p>Here is an incomplete list of forum threads and pages related to the translation to different languages. If any existing translation thread is missing from this list or if you started a new translation topic for your language, report it in the thread: <a href="https://sourceforge.net/p/freeplane/discussion/758437/thread/3b20093b/">Questions about translating Freeplane via the Weblate tool</a></p>
+<h4 id="french--français"><a class="header" href="#french--français">French / Français</a></h4>
+<p>You can have a look at:</p>
+<ul>
+<li>
+<p><a href="https://www.freeplane.org/forum2012/viewtopic.php?f=1&amp;t=69&amp;sid=6fe29d34506a47b7f1b2942e19cc0a22">Old forum thread 1</a></p>
+</li>
+<li>
+<p><a href="https://sourceforge.net/projects/freeplane/forums/forum/758437/topic/3496807">Old forum thread 2</a>.</p>
+</li>
+</ul>
+<h4 id="flemishdutch--nederlandsvlaams"><a class="header" href="#flemishdutch--nederlandsvlaams">Flemish/Dutch / Nederlands/Vlaams</a></h4>
+<ul>
+<li>
+<p>You can consult <a href="Translation_nl.html">Translation nl</a> for general guidelines</p>
+</li>
+<li>
+<p>Your can post your questions, remarks and requests in <a href="https://sourceforge.net/p/freeplane/discussion/758437/thread/fe83a1fb/">this thread</a></p>
+</li>
+<li>
+<p>This is an <a href="https://sourceforge.net/p/freeplane/discussion/758437/thread/36e42c1c/">old thread</a> on Dutch documentation</p>
+</li>
+</ul>
+<h2 id="frequently-asked-questions--tips-for-translators"><a class="header" href="#frequently-asked-questions--tips-for-translators">Frequently Asked Questions / Tips for translators</a></h2>
+<dl>
+  <dt>While running Freeplane, why are some strings ending with `[translate me]`?&nbsp;</dt>
+    <dd>As long as a key is missing in a translation, Freeplane automatically uses `<English text> [translate me]` as translation. Translators should translate these strings in priority and then remove `[translate me]`.</dd>
+  <dt>Why are strings ending with `[auto]`?&nbsp;</dt>
+    <dd>Translation files can be submitted to an automatic translation tool, then strings of type `<English text> [translate me]` becomes strings of type `&lt;local language text&gt; [auto]`. Translators should search and review these strings and then remove `[auto]`.</dd>
+  <dt>Why is there sometimes space before values?&nbsp;</dt>
+    <dd>spaces before values are ignored, don't care.</dd>
+  <dt>Why is there &amp; character before some values (sometimes "in" the words)?&nbsp;</dt>
+    <dd>The ampersand (&amp;) is used to mark keys in the menu (i.e. open the menu, press the key/letter to activate the menu entry) - It is not necessary to add the &amp; character to your translation, because Freeplane will automatically mark keys in the menu. I you do want to have full control over which keys are marked, you can add the &amp; character to your translation strings and you need to make sure that each letter is only used once per menu. The easiest way to do this is to finalize your translation and than quickly add the &amp; characters in <a href="#Offline_translation">offline translation</a> because then you can immediately check the result in the Freeplane interface.</dd>
+  <dt>Some values begins by &lt;html&gt; with no &lt;/html&gt; at the end?&nbsp;</dt>
+    <dd>Java accepts unclosed tags - don't care.</dd>
+  <dt>Some keys are not used / displayed in the software&nbsp;</dt>
+    <dd>you should stay aligned with the English version to be on the safe side, but if keys are not used, it's a bug you can report it <a rel="nofollow" class="external text" href="https://github.com/freeplane/freeplane/issues/new?template=bug_report.md">here</a>.</dd>
+  <dt>When testing Freeplane with my translation file, some menus are missing or some buttons have no label, why?&nbsp;</dt>
+    <dd>If you leave any empty keys in the file, Freeplane assumes they are valid translations and displays nothing. There are differences between "empty key in the translation file" which displays nothing and "missing key in the translation file" which displays `<English text> [translate me]` (see above).</dd>
+  <dt>Your translation is truncated&nbsp;</dt>
+    <dd>If your translation is truncated when displayed, it may contains a ' (apostrophe) character (e.g. Freeplane displays "Copier l" instead of "Copier l'identifiant"), you may simply enter the ' character twice (ie "Copier l"identifiant") as translation, where " is twice the character '. Most of the time, ' apostrophe characters should be handled as in the English version (for some strings which are used in format statements put them twice, for other strings put them once).</dd>
+</dl>
+<h1 id="translation-of-freeplane-add-ons"><a class="header" href="#translation-of-freeplane-add-ons">Translation of Freeplane add-ons</a></h1>
+<p><a href="../getting-started/Add-ons_(install).html">Add-ons</a> manage their translations on their own, i.e. the translations are integrated into the add-on sources. Nevertheless, it's simple to translate an add-on by editing the add-on installation package in Freeplane and modifying the translations therein. If the translations contain non-ASCII characters you have to encode the text using a script, either from the <a href="../getting-started/Add-ons_(install).html#Add-on_Developer_Tools">Developer Tools</a> (since version 0.9.16) or from <a href="https://sourceforge.net/apps/mantisbt/freeplane/view.php?id=2091">here</a>.</p>
+<h1 id="translation-of-third-party-tool-used-in-freeplane"><a class="header" href="#translation-of-third-party-tool-used-in-freeplane">Translation of third party tool used in Freeplane</a></h1>
+<h2 id="jortho-spell-checker"><a class="header" href="#jortho-spell-checker">JOrtho spell checker</a></h2>
+<p>For spell check Freeplane relies on JOrtho project. JOrtho translation file contains very few strings and only 5 are used in Freeplane but if you want to translate this file too, you can get it at its <a href="https://github.com/freeplane/freeplane/tree/master/JOrtho_0.4_freeplane/src/com/inet/jortho/i18n">current location</a>.</p>
+<h1 id="translation-of-tutorial-or-documentation-maps"><a class="header" href="#translation-of-tutorial-or-documentation-maps">Translation of Tutorial or Documentation maps</a></h1>
+<p>These are the mind maps you get when you press Help → Tutorial (freeplaneTutorial.mm) and Help → Documentation (freeplane.mm).</p>
+<h2 id="basic-steps"><a class="header" href="#basic-steps">Basic steps</a></h2>
+<ol start="23">
+<li>Create a working directory <em>myTranslations</em>.</li>
+<li>Copy the most recent English documentation from https://www.freeplane.org/mapsOnline. For this choose <em>Help &gt; Documentation Maps Online</em> and select the map of your choice; or copy your last translation.</li>
+<li>make a subdirecory structure for images: <em>myTranslations/doc</em>; (if you use these, also <em>myTranslations/mouse</em> and <em>myTranslations/key</em>).</li>
+<li>Copy images you reuse or put new images you use in myTranslations.doc (possibly also  myTranslations/mouse and myTranslations/key).</li>
+<li>Edit your translation. Drag your images from the defined subdirectories into your translation (assuming URI's are relative). </li>
+<li>Test the translation, in particular the images.</li>
+<li>Zip directory myTranslations.</li>
+<li>Select <em>Help &gt; report a bug</em>, select new report of type translation and upload the zip file. </li>
+</ol>
+<p><strong>Note</strong>
+Check Help &gt; Documentation Maps Online &gt; indexMap &gt; Images/doc for the images used in the present doc mind maps.</p>
+<p>Old</p>
+<ol>
+<li>Download the latest version of <tt>freeplane.mm</tt> and <tt>FP_MenuReference.mm</tt> (or an already existing versions in your language) from the repository.
+<ul>
+<li>The current link is https://github.com/freeplane/freeplane/tree/master/freeplane/resources/translations/ (but check if it's not an outdated link)</li>
+</ul>
+</li>
+<li>Visit pages https://www.freeplane.org/doc/freeplane_all_languages.html and https://www.freeplane.org/doc/FP_MenuReference_all_languages.html to see how the documentation is automaticly translated by Google Translate.</li>
+<li>Using the latest development version of Freeplane, just create a map in your language (or complete the one already existing).
+<ul>
+<li>As it's almost impossible to track differences between maps and ensure an exact one to one relationship between the languages, we don't expect this from translators.</li>
+<li>To track changes of <tt>freeplane.mm</tt> filters can be useful: Open the file in normal mindmap mode (not via F1) and apply a &quot;Date filter&quot; with the modification time set to the last time you have edited the translated map.</li>
+<li>Just make sure that the map is consistent with the current version of Freeplane, as complete as possible and helpful to users.</li>
+</ul>
+</li>
+<li>Go to the <a href="http://sourceforge.net/apps/mantisbt/freeplane/search.php?project_id=12&amp;hide_status_id=90">tracker</a> (requires Sourceforge log-in) and upload your map (the Project should be set to Translations).</li>
+</ol>
+<h1 id="keys-mapping-translation"><a class="header" href="#keys-mapping-translation">Keys Mapping translation</a></h1>
+<p>TBD</p>
+<h1 id="java-help-translation"><a class="header" href="#java-help-translation">Java Help translation</a></h1>
+<p>TBD (the current version doesn't allow for localization). Hint for later: http://jhelpdev.sourceforge.net/</p>
+<!-- ({Category:Advanced}) ({Category:Translation}) -->
+<footer id="open-on-gh">Found a mistake? <a href="https://github.com/freeplane/docs/edit/main/src/docs/contribute/Translation_How-To.md">Edit this page on GitHub.</a></footer>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../contribute/contribute.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../contribute/Contributing_to_Freeplane&#x27;s_Development.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../contribute/contribute.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../contribute/Contributing_to_Freeplane&#x27;s_Development.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

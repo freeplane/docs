@@ -1,0 +1,909 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Current Freeplane File Format - Freeplane Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../open-in.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><li class="part-title">User guide</li><li class="chapter-item "><a href="../../home.html"><strong aria-hidden="true">1.</strong> Home</a></li><li class="chapter-item "><a href="../../how-to-get-help.html"><strong aria-hidden="true">2.</strong> How to get help</a></li><li class="chapter-item "><a href="../../getting-started/getting-started.html"><strong aria-hidden="true">3.</strong> Getting started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../getting-started/Distributions.html"><strong aria-hidden="true">3.1.</strong> Distributions</a></li><li class="chapter-item "><a href="../../getting-started/Command-line_options_and_configuration.html"><strong aria-hidden="true">3.2.</strong> Command-line options and configuration</a></li><li class="chapter-item "><a href="../../getting-started/Add-ons_(install).html"><strong aria-hidden="true">3.3.</strong> Extend with add-ons</a></li></ol></li><li class="chapter-item "><a href="../../user-documentation/first-steps.html"><strong aria-hidden="true">4.</strong> User documentation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../user-documentation/first-steps.html"><strong aria-hidden="true">4.1.</strong> First steps</a></li><li class="chapter-item "><a href="../../user-documentation/working-w-mindmap-files.html"><strong aria-hidden="true">4.2.</strong> Working with mindmap files</a></li><li class="chapter-item "><a href="../../user-documentation/formatting-maps-and-nodes.html"><strong aria-hidden="true">4.3.</strong> Formatting maps and nodes</a></li><li class="chapter-item "><a href="../../user-documentation/styles.html"><strong aria-hidden="true">4.4.</strong> Styles</a></li><li class="chapter-item "><a href="../../user-documentation/templates.html"><strong aria-hidden="true">4.5.</strong> Templates</a></li><li class="chapter-item "><a href="../../user-documentation/css-for-html-or-markdown.html"><strong aria-hidden="true">4.6.</strong> CSS for HTML/Markdown</a></li><li class="chapter-item "><a href="../../user-documentation/Conditional_node_styles.html"><strong aria-hidden="true">4.7.</strong> Conditional node styles</a></li><li class="chapter-item "><a href="../../user-documentation/LaTeX_in_Freeplane.html"><strong aria-hidden="true">4.8.</strong> LaTeX in Freeplane</a></li><li class="chapter-item "><a href="../../user-documentation/Spell_checker.html"><strong aria-hidden="true">4.9.</strong> Spell checker</a></li><li class="chapter-item "><a href="../../user-documentation/Relationship_to_FreeMind.html"><strong aria-hidden="true">4.10.</strong> Relationship to FreeMind</a></li><li class="chapter-item "><a href="../../user-documentation/other-docs-tutorials.html"><strong aria-hidden="true">4.11.</strong> References to other known documentation/tutorial sites</a></li></ol></li><li class="chapter-item "><a href="../../contribute/contribute.html"><strong aria-hidden="true">5.</strong> Contribute</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../contribute/Translation_How-To.html"><strong aria-hidden="true">5.1.</strong> Translation How-To</a></li><li class="chapter-item "><a href="../../contribute/Contributing_to_Freeplane's_Development.html"><strong aria-hidden="true">5.2.</strong> Contributing to Freeplane's Development</a></li></ol></li><li class="chapter-item "><a href="../../scripting/Scripting.html"><strong aria-hidden="true">6.</strong> Scripting</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../scripting/Formulas.html"><strong aria-hidden="true">6.1.</strong> Formulas</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../scripting/Formulas.html"><strong aria-hidden="true">6.1.1.</strong> Formulas</a></li><li class="chapter-item "><a href="../../scripting/Scripting!_Script_filter.html"><strong aria-hidden="true">6.1.2.</strong> Formula filter</a></li></ol></li><li class="chapter-item "><a href="../../scripting/Scripting_Cheatsheet.html"><strong aria-hidden="true">6.2.</strong> Scripting Cheatsheet</a></li><li class="chapter-item "><a href="../../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.</strong> Scripts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.1.</strong> Scripts collection</a></li><li class="chapter-item "><a href="../../scripting/Scripting_text_editing.html"><strong aria-hidden="true">6.3.2.</strong> Scripts for text editing</a></li><li class="chapter-item "><a href="../../scripting/Example_scripts_using_external_libraries.html"><strong aria-hidden="true">6.3.3.</strong> Scripts using external libraries</a></li><li class="chapter-item "><a href="../../scripting/Script_incubator.html"><strong aria-hidden="true">6.3.4.</strong> Script incubator</a></li><li class="chapter-item "><a href="../../scripting/Scripting!_Jython.html"><strong aria-hidden="true">6.3.5.</strong> Scripting! Jython</a></li><li class="chapter-item "><a href="../../scripting/Scripting_environment_setup.html"><strong aria-hidden="true">6.3.6.</strong> Scripting environment setup</a></li></ol></li><li class="chapter-item "><a href="../../scripting/Export_Using_XSLT.html"><strong aria-hidden="true">6.4.</strong> XSLT for export/import</a></li><li class="chapter-item "><a href="../../scripting/Add-ons_(Develop).html"><strong aria-hidden="true">6.5.</strong> Add-ons (Development)</a></li><li class="chapter-item "><a href="../../scripting/Security_considerations.html"><strong aria-hidden="true">6.6.</strong> Security considerations</a></li></ol></li><li class="chapter-item "><a href="../../coding/Git_howto.html"><strong aria-hidden="true">7.</strong> Coding</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../coding/Git_howto.html"><strong aria-hidden="true">7.1.</strong> Git howto</a></li><li class="chapter-item "><a href="../../coding/How_to_build_Freeplane.html"><strong aria-hidden="true">7.2.</strong> How to build Freeplane</a></li><li class="chapter-item "><a href="../../coding/IDE_setup.html"><strong aria-hidden="true">7.3.</strong> IDE setup</a></li><li class="chapter-item "><a href="../../coding/Plugin_development.html"><strong aria-hidden="true">7.4.</strong> Plugin development</a></li></ol></li><li class="chapter-item "><li class="part-title">Attic</li><li class="chapter-item expanded "><a href="../../attic/home.html"><strong aria-hidden="true">8.</strong> Attic (draft documents)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.</strong> Old MediaWiki content</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.1.</strong> Old Home</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Approximate_search.html"><strong aria-hidden="true">8.1.2.</strong> Approximate search</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Architecture.html"><strong aria-hidden="true">8.1.3.</strong> Architecture</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Batch_Jobs.html"><strong aria-hidden="true">8.1.4.</strong> Batch Jobs</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Contributors.html"><strong aria-hidden="true">8.1.5.</strong> Contributors</a></li><li class="chapter-item expanded "><a href="../../attic/old-mediawiki-content/Current_Freeplane_File_Format.html" class="active"><strong aria-hidden="true">8.1.6.</strong> Current Freeplane File Format</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Data_recognition_and_data_formats.html"><strong aria-hidden="true">8.1.7.</strong> Data recognition and data formats</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Debugging_scripts.html"><strong aria-hidden="true">8.1.8.</strong> Debugging scripts</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Document_Format.html"><strong aria-hidden="true">8.1.9.</strong> Document Format</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Edit_scripts_in_Eclipse.html"><strong aria-hidden="true">8.1.10.</strong> Edit scripts in Eclipse</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/External_objects.html"><strong aria-hidden="true">8.1.11.</strong> External objects</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/External_script_file_execution.html"><strong aria-hidden="true">8.1.12.</strong> External script file execution</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/FAQ.html"><strong aria-hidden="true">8.1.13.</strong> FAQ</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Fixed_security_vulnerabilities.html"><strong aria-hidden="true">8.1.14.</strong> Fixed security vulnerabilities</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/FreeMind_0.9.0_-_Freeplane_1.1.x.html"><strong aria-hidden="true">8.1.15.</strong> FreeMind 0.9.0 - Freeplane 1.1.x</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane2PowerPoint.html"><strong aria-hidden="true">8.1.16.</strong> Freeplane2PowerPoint</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Tutorial_Extensions.html"><strong aria-hidden="true">8.1.17.</strong> Freeplane Tutorial Extensions</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Screenshots.html"><strong aria-hidden="true">8.1.18.</strong> Freeplane Tutorial How-to Screenshots</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Video.html"><strong aria-hidden="true">8.1.19.</strong> Freeplane Tutorial How-to Video</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_Wiki!Administrators.html"><strong aria-hidden="true">8.1.20.</strong> Freeplane Wiki!Administrators</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_and_problem_solving.html"><strong aria-hidden="true">8.1.21.</strong> Freeplane and problem solving</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_features_you_were_missing_in_FreeMind.html"><strong aria-hidden="true">8.1.22.</strong> Freeplane features you were missing in FreeMind</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_for_Windows_Mobile.html"><strong aria-hidden="true">8.1.23.</strong> Freeplane for Windows Mobile</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Freeplane_installation_for_Ubuntu_OS.html"><strong aria-hidden="true">8.1.24.</strong> Freeplane installation for Ubuntu OS</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Get_the_code.html"><strong aria-hidden="true">8.1.25.</strong> Get the code</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Goals.html"><strong aria-hidden="true">8.1.26.</strong> Goals</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Groovy_scripts_and_formulas_can_escape_sandbox.html"><strong aria-hidden="true">8.1.27.</strong> Groovy scripts and formulas can escape sandbox</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Harmonizing_FP-menu.html"><strong aria-hidden="true">8.1.28.</strong> Harmonizing FP-menu</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Help!Contents.html"><strong aria-hidden="true">8.1.29.</strong> Help!Contents</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Help!Editing.html"><strong aria-hidden="true">8.1.30.</strong> Help!Editing</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Help_Previous_Freeplane_Versions.html"><strong aria-hidden="true">8.1.31.</strong> Help Previous Freeplane Versions</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/How_to_publish_add-ons.html"><strong aria-hidden="true">8.1.32.</strong> How to publish add-ons</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/How_to_test.html"><strong aria-hidden="true">8.1.33.</strong> How to test</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Information_management_with_Freeplane_add-on_dView(indexfile).html"><strong aria-hidden="true">8.1.34.</strong> Information management with Freeplane add-on dView(indexfile)</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Init_scripts.html"><strong aria-hidden="true">8.1.35.</strong> Init scripts</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Japanese.html"><strong aria-hidden="true">8.1.36.</strong> Japanese</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Linux.html"><strong aria-hidden="true">8.1.37.</strong> Linux</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Logo_and_splashscreen.html"><strong aria-hidden="true">8.1.38.</strong> Logo and splashscreen</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Macintosh.html"><strong aria-hidden="true">8.1.39.</strong> Macintosh</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Map_local_scripts.html"><strong aria-hidden="true">8.1.40.</strong> Map local scripts</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Map_templates.html"><strong aria-hidden="true">8.1.41.</strong> Map templates</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Menus_and_commands.html"><strong aria-hidden="true">8.1.42.</strong> Menus and commands</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Mind_map_gallery.html"><strong aria-hidden="true">8.1.43.</strong> Mind map gallery</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/New_Freeplane_File_Format_(Proposal).html"><strong aria-hidden="true">8.1.44.</strong> New Freeplane File Format (Proposal)</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/New_features_in_Freeplane_1.2.html"><strong aria-hidden="true">8.1.45.</strong> New features in Freeplane 1.2</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/New_features_in_Freeplane_1.3.html"><strong aria-hidden="true">8.1.46.</strong> New features in Freeplane 1.3</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/OSGI_based_plug-ins.html"><strong aria-hidden="true">8.1.47.</strong> OSGI based plug-ins</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Patterns.html"><strong aria-hidden="true">8.1.48.</strong> Patterns</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Portable_Freeplane.html"><strong aria-hidden="true">8.1.49.</strong> Portable Freeplane</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Release_cycle.html"><strong aria-hidden="true">8.1.50.</strong> Release cycle</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Release_smoke_test.html"><strong aria-hidden="true">8.1.51.</strong> Release smoke test</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Rules_to_build_user_friendly_menus.html"><strong aria-hidden="true">8.1.52.</strong> Rules to build user friendly menus</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_API_Changes.html"><strong aria-hidden="true">8.1.53.</strong> Scripting! API Changes</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Freeplane_Utility_Classes.html"><strong aria-hidden="true">8.1.54.</strong> Scripting! Freeplane Utility Classes</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Included_libraries.html"><strong aria-hidden="true">8.1.55.</strong> Scripting! Included libraries</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Other_languages.html"><strong aria-hidden="true">8.1.56.</strong> Scripting! Other languages</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting!_Update_Freeplane's_Groovy_version.html"><strong aria-hidden="true">8.1.57.</strong> Scripting! Update Freeplane's Groovy version</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Scripting_API.html"><strong aria-hidden="true">8.1.58.</strong> Scripting API</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Support.html"><strong aria-hidden="true">8.1.59.</strong> Support</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Think_Tank.html"><strong aria-hidden="true">8.1.60.</strong> Think Tank</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Translation_nl.html"><strong aria-hidden="true">8.1.61.</strong> Translation nl</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Troubleshooting.html"><strong aria-hidden="true">8.1.62.</strong> Troubleshooting</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Tutorial_Freeplane_How-to_nl.html"><strong aria-hidden="true">8.1.63.</strong> Tutorial Freeplane How-to nl</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Tutorial_Freeplane_nl.html"><strong aria-hidden="true">8.1.64.</strong> Tutorial Freeplane nl</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/User_icons.html"><strong aria-hidden="true">8.1.65.</strong> User icons</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Videos_and_animations_How-to.html"><strong aria-hidden="true">8.1.66.</strong> Videos and animations How-to</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Visions.html"><strong aria-hidden="true">8.1.67.</strong> Visions</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Wish_List.html"><strong aria-hidden="true">8.1.68.</strong> Wish List</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/XML_External_Entity_vulnerability_in_map_parser.html"><strong aria-hidden="true">8.1.69.</strong> XML External Entity vulnerability in map parser</a></li><li class="chapter-item "><a href="../../attic/old-mediawiki-content/Your_own_utility_script_library.html"><strong aria-hidden="true">8.1.70.</strong> Your own utility script library</a></li></ol></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.</strong> New wiki initiative</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.1.</strong> customizing-freeplane</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/freeplane-api-groovy.html"><strong aria-hidden="true">8.2.2.</strong> freeplane-api-groovy</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/glossary.html"><strong aria-hidden="true">8.2.3.</strong> glossary</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/introduction-aka-many-unsorted-ideas-related-to-freeplane.html"><strong aria-hidden="true">8.2.4.</strong> introduction-aka-many-unsorted-ideas-related-to-freeplane</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/understanding-interface.html"><strong aria-hidden="true">8.2.5.</strong> understanding-interface</a></li><li class="chapter-item "><a href="../../attic/new-wiki-initiative/understanding-nodes.html"><strong aria-hidden="true">8.2.6.</strong> understanding-nodes</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">Special pages</li><li class="chapter-item "><a href="../../after-redirect.html"><strong aria-hidden="true">9.</strong> After redirect from the old media wiki</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Freeplane Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/freeplane/docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <ul>
+<li><a href="#original-freemind-file-format">Original FreeMind File Format</a></li>
+<li><a href="#freeplanes-version-of-it">Freeplane's version of it</a></li>
+<li><a href="#mapping-between-old-and-new-format">Mapping between old and new format</a></li>
+</ul>
+<!-- ({Category:Coding}) -->
+<p>This page tries to reflect changes of the Freeplane file format.</p>
+<h1 id="original-freemind-file-format"><a class="header" href="#original-freemind-file-format">Original FreeMind File Format</a></h1>
+<p>The original FreeMind format was never described completely formally, but there is some documentation:</p>
+<ul>
+<li>FreeMind's file format is described <a href="http://freemind.sourceforge.net/wiki/index.php/File_format">in the Wiki</a>.</li>
+<li>There is a schema validation in <a href="http://freemind.cvs.sourceforge.net/viewvc/freemind/freemind/freemind.xsd?view=log&amp;pathrev=fm_060405_integration">SVN (integration branch)</a>, with a <a href="http://freemind.cvs.sourceforge.net/viewvc/freemind/freemind/freemind.xsd?revision=1.1.2.4.4.2&amp;view=markup&amp;pathrev=fm_060405_integration">latest revision</a>.</li>
+</ul>
+<dl>
+    <dt>Note</dt>
+    <dd>the above documentation is outdated in regard to elements introduced by Freeplane, like connector labels, attributes, scripts, user icons and (scalable) images embedded in the map.</dd>
+</dl>
+<h1 id="freeplanes-version-of-it"><a class="header" href="#freeplanes-version-of-it">Freeplane's version of it</a></h1>
+<p>The following schema takes the schema pointed at in the previous chapter and completes it with Freeplane specific extensions (in <strong>bold</strong> for easy identification):</p>
+<dl><dt>Attention:&#160;</dt>
+<dd>The file format was accurate as per version 1.1.x, new features in 1.2.x have not (yet) been documented.</dd></dl>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema xmlns:xs="<a rel="nofollow" class="external free" href="http://www.w3.org/2001/XMLSchema">http://www.w3.org/2001/XMLSchema</a>" elementFormDefault="qualified"&gt;
+<p>&lt;xs:element name='Parameters'&gt;
+&lt;xs:complexType&gt;
+&lt;!--Is the time management plugin.--&gt;
+&lt;xs:attribute name='REMINDUSERAT' type='xs:integer' use='optional'/&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;!--Used for node notes.--&gt;
+&lt;xs:element name='text'&gt;
+&lt;xs:complexType/&gt;
+&lt;/xs:element&gt;</p>
+<p><b>&lt;!-- BEGIN ATTRIBUTES --&gt;</b></p>
+<p><b>&lt;xs:element name='attribute_value'&gt;</b>
+<b>&lt;xs:complexType&gt;</b>
+<b>&lt;xs:attribute name='VALUE' type='xs:string' use='required'/&gt;</b>
+<b>&lt;xs:attribute name='TYPE' type='xs:string' use='optional'/&gt;</b>
+<b>&lt;/xs:complexType&gt;</b>
+<b>&lt;/xs:element&gt;</b></p>
+<p><b>&lt;xs:element name='attribute_name'&gt;</b>
+<b>&lt;xs:complexType&gt;</b>
+<b>&lt;xs:choice minOccurs='0' maxOccurs='unbounded'&gt;</b>
+<b>&lt;xs:element ref='attribute_value'/&gt;</b>
+<b>&lt;/xs:choice&gt;</b>
+<b>&lt;xs:attribute name='NAME' type='xs:string' use='required'/&gt;</b>
+<b>&lt;xs:attribute name='MANUAL' type='xs:boolean' use='optional' /&gt;</b>
+<b>&lt;xs:attribute name='RESTRICTED' type='xs:boolean' use='optional' /&gt;</b>
+<b>&lt;xs:attribute name='VISIBLE' type='xs:boolean' use='optional' /&gt;</b>
+<b>&lt;/xs:complexType&gt;</b>
+<b>&lt;/xs:element&gt;</b></p>
+<p><b>&lt;xs:element name='attribute_registry'&gt;</b>
+<b>&lt;xs:complexType&gt;</b>
+<b>&lt;xs:choice minOccurs='0' maxOccurs='unbounded'&gt;</b>
+<b>&lt;xs:element ref='attribute_name'/&gt;</b>
+<b>&lt;/xs:choice&gt;</b>
+<b>&lt;xs:attribute name='RESTRICTED' type='xs:boolean' use='optional' /&gt;</b>
+<b>&lt;xs:attribute name='SHOW_ATTRIBUTES' use='optional'&gt;</b>
+<b>&lt;xs:simpleType&gt;</b>
+<b>&lt;xs:restriction base='xs:string'&gt;</b>
+<b>&lt;xs:enumeration value='selected'/&gt;</b>
+<b>&lt;xs:enumeration value='hide'/&gt;</b>
+<b>&lt;/xs:restriction&gt;</b>
+<b>&lt;/xs:simpleType&gt;</b>
+<b>&lt;/xs:attribute&gt;</b>
+<b>&lt;/xs:complexType&gt;</b>
+<b>&lt;/xs:element&gt;</b></p>
+<p><b>&lt;xs:element name='attribute_layout'&gt;</b>
+<b>&lt;xs:complexType&gt;</b>
+<b>&lt;xs:attribute name='NAME_WIDTH'  type='xs:integer' use='optional'/&gt;</b>
+<b>&lt;xs:attribute name='VALUE_WIDTH' type='xs:integer' use='optional'/&gt;</b>
+<b>&lt;/xs:complexType&gt;</b>
+<b>&lt;/xs:element&gt;</b></p>
+<p><b>&lt;xs:element name='attribute'&gt;</b>
+<b>&lt;xs:complexType&gt;</b>
+<b>&lt;xs:attribute name='NAME'  type='xs:string' use='required'/&gt;</b>
+<b>&lt;xs:attribute name='VALUE' type='xs:string' use='required'/&gt;</b>
+<b>&lt;xs:attribute name='TYPE' type='xs:string' use='optional'/&gt;</b>
+<b>&lt;/xs:complexType&gt;</b>
+<b>&lt;/xs:element&gt;</b></p>
+<p><b>&lt;!-- END ATTRIBUTES --&gt;</b></p>
+<p>&lt;xs:element name='arrowlink'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:attribute name='COLOR' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='DESTINATION' type='xs:string' use='required'/&gt;
+&lt;xs:attribute name='ENDARROW' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='ENDINCLINATION' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='ID' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='STARTARROW' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='STARTINCLINATION' type='xs:string' use='optional'/&gt;
+<b>&lt;xs:attribute name='SOURCE_LABEL' type='xs:string' use='optional'/&gt;</b>
+<b>&lt;xs:attribute name='MIDDLE_LABEL' type='xs:string' use='optional'/&gt;</b>
+<b>&lt;xs:attribute name='TARGET_LABEL' type='xs:string' use='optional'/&gt;</b>
+<b>&lt;xs:attribute name='EDGE_LIKE' type='xs:boolean' use='optional'/&gt;</b>
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;xs:element name='cloud'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:attribute name='COLOR' type='xs:string' use='optional'/&gt;
+<b>&lt;xs:attribute name='WIDTH' type='xs:integer' use='optional'/&gt;</b>
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;xs:element name='edge'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:attribute name='COLOR' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='STYLE' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='WIDTH' type='xs:string' use='optional'/&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;xs:element name='font'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:attribute name='BOLD' use='optional'&gt;
+&lt;xs:simpleType&gt;
+&lt;xs:restriction base='xs:string'&gt;
+&lt;xs:enumeration value='true'/&gt;
+<b>&lt;xs:enumeration value='false'/&gt;</b>
+&lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;
+&lt;xs:attribute name='ITALIC' use='optional'&gt;
+&lt;xs:simpleType&gt;
+&lt;xs:restriction base='xs:string'&gt;
+&lt;xs:enumeration value='true'/&gt;
+&lt;xs:enumeration value='false'/&gt;
+&lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;
+&lt;xs:attribute name='NAME' type='xs:string' use='<b>optional'</b>/&gt;
+&lt;xs:attribute name='SIZE' type='xs:integer' use='<b>optional'</b>/&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;xs:element name='hook'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:sequence&gt;
+&lt;xs:element ref='Parameters' minOccurs='0' maxOccurs='1'/&gt;
+&lt;xs:element ref='text' minOccurs='0' maxOccurs='1'/&gt;
+&lt;/xs:sequence&gt;
+&lt;xs:attribute name='NAME' type='xs:string' use='required'/&gt;
+<b>&lt;!-- for embedded images NAME=&quot;ExternalObject&quot; --&gt;</b>
+<b>&lt;xs:attribute name='URI'  type='xs:anyURI' use='optional'/&gt;</b>
+<b>&lt;xs:attribute name='SIZE' type='xs:decimal' use='optional'/&gt;</b>
+<b>&lt;!-- for map config info NAME=&quot;MapStyle&quot; --&gt;</b>
+<b>&lt;xs:attribute name='max_node_width'  type='xs:integer' use='optional'/&gt;</b>
+<b>&lt;xs:attribute name='zoom' type='xs:decimal' use='optional'/&gt;</b>
+<b>&lt;!-- for equations NAME=&quot;plugins/latex/LatexNodeHook.properties&quot; --&gt;</b>
+<b>&lt;xs:attribute name='EQUATION' type='xs:string' use='optional'/&gt;</b>
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;xs:element name='icon'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:attribute name='BUILTIN' type='xs:string' use='required'/&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;xs:element name='html'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:sequence&gt;
+&lt;!--Anything that is valid XML, but should be http://www.w3.org/1999/xhtml --&gt;
+&lt;xs:any namespace=&quot;##any&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; processContents=&quot;skip&quot;/&gt;
+&lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;xs:element name='richcontent'&gt;
+&lt;xs:complexType&gt;
+&lt;!-- And contains XHTML as unique child:--&gt;
+&lt;xs:sequence&gt;
+&lt;xs:element ref='html' minOccurs='1' maxOccurs='1'/&gt;
+&lt;/xs:sequence&gt;
+&lt;!--Currently, only NODE or NOTE is allowed.--&gt;
+&lt;xs:attribute name='TYPE' use='required'&gt;
+&lt;xs:simpleType&gt;
+&lt;xs:restriction base='xs:string'&gt;
+&lt;xs:enumeration value='NODE'/&gt;
+&lt;xs:enumeration value='NOTE'/&gt;
+&lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;xs:element name='map'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:sequence&gt;
+<b>&lt;xs:element ref='attribute_registry' minOccurs='0' maxOccurs='1'/&gt;</b>
+&lt;xs:element ref='node' <b>minOccurs='1' maxOccurs='1' </b>/&gt;
+&lt;/xs:sequence&gt;
+&lt;xs:attribute name='version' type='xs:string' use='required'/&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;xs:element name='node'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:choice minOccurs='0' maxOccurs='unbounded'&gt;
+&lt;xs:element ref='arrowlink'/&gt;
+&lt;xs:element ref='cloud'/&gt;
+&lt;xs:element ref='edge'/&gt;
+&lt;xs:element ref='font'/&gt;
+&lt;xs:element ref='hook'/&gt;
+&lt;xs:element ref='icon'/&gt;
+&lt;xs:element ref='node'/&gt;
+&lt;!-- For nodes with extended formatting content or for notes to nodes. --&gt;
+&lt;xs:element ref='richcontent'/&gt;
+<b>&lt;xs:element ref='attribute_layout'/&gt;</b>
+<b>&lt;xs:element ref='attribute'/&gt;</b>
+&lt;/xs:choice&gt;
+&lt;xs:attribute name='BACKGROUND_COLOR' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='COLOR' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='FOLDED' use='optional'&gt;
+&lt;xs:simpleType&gt;
+&lt;xs:restriction base='xs:string'&gt;
+&lt;xs:enumeration value='true'/&gt;
+&lt;xs:enumeration value='false'/&gt;
+&lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;
+&lt;xs:attribute name='ID' type='xs:ID' use='optional'/&gt;
+&lt;xs:attribute name='LINK' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='POSITION' use='optional'&gt;
+&lt;xs:simpleType&gt;
+&lt;xs:restriction base='xs:string'&gt;
+&lt;xs:enumeration value='left'/&gt;
+&lt;xs:enumeration value='right'/&gt;
+&lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;
+&lt;xs:attribute name='STYLE' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='TEXT' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='LOCALIZED_TEXT' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='TYPE' type='xs:string' use='optional'/&gt;
+&lt;xs:attribute name='CREATED' type='xs:integer' use='optional'/&gt;
+&lt;xs:attribute name='MODIFIED' type='xs:integer' use='optional'/&gt;
+&lt;xs:attribute name='HGAP' type='xs:integer' use='optional'/&gt;
+&lt;xs:attribute name='VGAP' type='xs:integer' use='optional'/&gt;
+&lt;xs:attribute name='VSHIFT' type='xs:integer' use='optional'/&gt;
+&lt;xs:attribute name='ENCRYPTED_CONTENT' type='xs:string' use='optional'/&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;
+&lt;/xs:schema&gt;
+</pre></p>
+<h1 id="mapping-between-old-and-new-format"><a class="header" href="#mapping-between-old-and-new-format">Mapping between old and new format</a></h1>
+<dl><dt>Attention:&#160;</dt>
+<dd>This effort is on hold until further notice (perhaps after release of version 1.2/1.3).</dd></dl>
+<table border="1" cellpadding="20" cellspacing="0">
+<caption>Mapping between old and new format
+</caption>
+<tbody><tr>
+<td>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema xmlns:xs="<a rel="nofollow" class="external free" href="http://www.w3.org/2001/XMLSchema">http://www.w3.org/2001/XMLSchema</a>"
+           elementFormDefault="qualified"&gt;
+</pre>
+</td>
+<td>not relevant
+</td></tr>
+<tr>
+<td>
+<pre> &lt;xs:element name='Parameters'&gt;
+  &lt;xs:complexType&gt;
+	  &lt;!--Is the time management plugin.--&gt;
+   &lt;xs:attribute name='REMINDUSERAT' type='xs:integer' use='optional'/&gt;
+  &lt;/xs:complexType&gt;
+ &lt;/xs:element&gt;
+</pre>
+</td>
+<td>Replaced by parameter <tt>node:reminder="dateTime"</tt> to <tt>node:node</tt> (this limits the number of reminders to one per node but Freeplane can't anyway handle more than one).
+</td></tr>
+<tr>
+<td>
+<pre> &lt;!--Used for node notes.--&gt;
+ &lt;xs:element name='text'&gt;
+  &lt;xs:complexType/&gt;
+ &lt;/xs:element&gt;
+</pre>
+</td>
+<td>Obsolete - all nodes are "rich"
+</td></tr>
+<tr>
+<td>
+<pre> &lt;!-- BEGIN ATTRIBUTES --&gt;
+<p>&lt;xs:element name='attribute_value'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:attribute name='VALUE' type='xs:string' use='required'/&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;xs:element name='attribute_name'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:choice minOccurs='0' maxOccurs='unbounded'&gt;
+&lt;xs:element ref='attribute_value'/&gt;
+&lt;/xs:choice&gt;
+&lt;xs:attribute name='NAME' type='xs:string' use='required'/&gt;
+&lt;xs:attribute name='MANUAL' type='xs:boolean' use='optional' /&gt;
+&lt;xs:attribute name='RESTRICTED' type='xs:boolean' use='optional' /&gt;
+&lt;xs:attribute name='VISIBLE' type='xs:boolean' use='optional' /&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;xs:element name='attribute_registry'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:choice minOccurs='0' maxOccurs='unbounded'&gt;
+&lt;xs:element ref='attribute_name'/&gt;
+&lt;/xs:choice&gt;
+&lt;xs:attribute name='RESTRICTED' type='xs:boolean' use='optional' /&gt;
+&lt;xs:attribute name='SHOW_ATTRIBUTES' use='optional'&gt;
+&lt;xs:simpleType&gt;
+&lt;xs:restriction base='xs:string'&gt;
+&lt;xs:enumeration value='selected'/&gt;
+&lt;xs:enumeration value='hide'/&gt;
+&lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;xs:element name='attribute_layout'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:attribute name='NAME_WIDTH'  type='xs:integer' use='optional'/&gt;
+&lt;xs:attribute name='VALUE_WIDTH' type='xs:integer' use='optional'/&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;xs:element name='attribute'&gt;
+&lt;xs:complexType&gt;
+&lt;xs:attribute name='NAME'  type='xs:string' use='required'/&gt;
+&lt;xs:attribute name='VALUE' type='xs:string' use='required'/&gt;
+&lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</p>
+<p>&lt;!-- END ATTRIBUTES --&gt;
+</pre></p>
+</td>
+<td>The whole attribute will be replaced as follows. First define the sets of attributes at the map level:
+<pre>&lt;map:attributes attribute:restricted="false|true"&gt;
+ &lt;attribute:attribute meta:name="..."
+                      attribute:restricted="false|true"
+                      attribute:selected="false|true"&gt;
+  &lt;attribute:value&gt;some value&lt;/attribute:value&gt;
+  ...
+ &lt;/attribute:attribute&gt;
+ ...
+&lt;/map:attributes&gt;
+</pre>
+<p>And then assign the attributes at the node level:
+</p>
+<pre>&lt;node:attributes attribute:name-width="..."
+                 attribute:value-width="..."&gt;
+ &lt;attribute:attribute
+           meta:name="..."&gt;some value&lt;/attribute:attribute&gt;
+ ...
+&lt;/node:attributes&gt;
+</pre>
+</td></tr>
+<tr>
+<td>
+<pre> &lt;xs:element name='arrowlink'&gt;
+  &lt;xs:complexType&gt;
+   &lt;xs:attribute name='COLOR' type='xs:string' use='optional'/&gt;
+   &lt;xs:attribute name='DESTINATION' type='xs:string' use='required'/&gt;
+   &lt;xs:attribute name='ENDARROW' type='xs:string' use='optional'/&gt;
+   &lt;xs:attribute name='ENDINCLINATION' type='xs:string' use='optional'/&gt;
+   &lt;xs:attribute name='ID' type='xs:string' use='optional'/&gt;
+   &lt;xs:attribute name='STARTARROW' type='xs:string' use='optional'/&gt;
+   &lt;xs:attribute name='STARTINCLINATION' type='xs:string' use='optional'/&gt;
+   &lt;xs:attribute name='SOURCE_LABEL' type='xs:string' use='optional'/&gt;
+   &lt;xs:attribute name='MIDDLE_LABEL' type='xs:string' use='optional'/&gt;
+   &lt;xs:attribute name='TARGET_LABEL' type='xs:string' use='optional'/&gt;
+   &lt;xs:attribute name='EDGE_LIKE' type='xs:boolean' use='optional'/&gt;
+  &lt;/xs:complexType&gt;
+ &lt;/xs:element&gt;
+</pre>
+</td>
+<td>Replaced by element <tt>&lt;draw:connector ... /&gt;</tt> with attributes
+<pre>draw:start-shape="ID"
+draw:color="#rrggbb"
+draw:end-shape="ID"
+map:start-arrow="true|false"
+map:end-arrow="true|false"
+xml:id="ID"
+map:start-inclination="int;int;"
+map:end-inclination="int;int;"
+draw:style="normal|edge-like"
+</pre>
+<p>And with possible sub-nodes:
+</p>
+<pre>&lt;map:start-label&gt;...&lt;/map:start-label&gt;
+&lt;svg:title&gt;...&lt;/svg:title&gt; (or svg:desc?!)
+&lt;map:end-label&gt;...&lt;/map:end-label&gt;
+</pre>
+</td></tr>
+<tr>
+<td>
+<pre> &lt;xs:element name='cloud'&gt;
+  &lt;xs:complexType&gt;
+   &lt;xs:attribute name='COLOR' type='xs:string' use='optional'/&gt;
+   &lt;xs:attribute name='WIDTH' type='xs:integer' use='optional'/&gt;
+  &lt;/xs:complexType&gt;
+ &lt;/xs:element&gt;
+</pre>
+</td>
+<td>Replaced by element <tt>&lt;node:cloud ... /&gt;</tt> with attributes
+<pre>draw:color="#rrggbb"
+</pre>
+<p>(<tt>WIDTH</tt> parameter isn't used currently and is always 0)
+</p>
+</td></tr>
+<tr>
+<td>
+<pre> &lt;xs:element name='edge'&gt;
+  &lt;xs:complexType&gt;
+   &lt;xs:attribute name='COLOR' type='xs:string' use='optional'/&gt;
+   &lt;xs:attribute name='STYLE' type='xs:string' use='optional'/&gt;
+   &lt;xs:attribute name='WIDTH' type='xs:string' use='optional'/&gt;
+  &lt;/xs:complexType&gt;
+ &lt;/xs:element&gt;
+</pre>
+</td>
+<td>Replaced by element <tt>&lt;node:edge ... /&gt;</tt> with attributes
+<pre>draw:color="#rrggbb"
+draw:style="linear|sharp-linear|bezier|sharp-bezier|horizontal"
+draw:stroke="solid|none"
+svg:stroke-width="length" (Freeplane uses only integers)
+</pre>
+<dl><dt>Note</dt>
+<dd>those attributes should be moved to a <tt>&lt;style:style&gt;</tt> element that defines a style with the family value of graphic, and referenced by name through the <tt>draw:style-name</tt> attribute.</dd></dl>
+</td></tr>
+<tr>
+<td>
+<pre> &lt;xs:element name='font'&gt;
+  &lt;xs:complexType&gt;
+   &lt;xs:attribute name='BOLD' use='optional'&gt;
+    &lt;xs:simpleType&gt;
+     &lt;xs:restriction base='xs:string'&gt;
+      &lt;xs:enumeration value='true'/&gt;
+      &lt;xs:enumeration value='false'/&gt;
+     &lt;/xs:restriction&gt;
+    &lt;/xs:simpleType&gt;
+   &lt;/xs:attribute&gt;
+   &lt;xs:attribute name='ITALIC' use='optional'&gt;
+    &lt;xs:simpleType&gt;
+     &lt;xs:restriction base='xs:string'&gt;
+      &lt;xs:enumeration value='true'/&gt;
+      &lt;xs:enumeration value='false'/&gt;
+     &lt;/xs:restriction&gt;
+    &lt;/xs:simpleType&gt;
+   &lt;/xs:attribute&gt;
+   &lt;xs:attribute name='NAME' type='xs:string' use='optional'/&gt;
+   &lt;xs:attribute name='SIZE' type='xs:integer' use='optional'/&gt;
+  &lt;/xs:complexType&gt;
+ &lt;/xs:element&gt;
+</pre>
+</td>
+<td>Replaced by element <tt>&lt;style:text-properties ... /&gt;</tt> with attributes
+<pre>fo:color="#rrggbb"
+fo:font-weight="normal|bold"
+fo:font-style="normal|italic"
+fo:font-family="name of the font"
+fo:font-size="integer"
+</pre>
+<dl><dt>Note</dt>
+<dd><tt>&lt;style:font-name&gt;</tt> could be used instead of <tt>fo:font-family</tt> but, according to specs, this would mean a separate definition of a font through a <tt>style:font-face</tt> element and that makes the whole thing more complex. See <a href="/wiki/index.php/Freeplane_File_Format#3.14_.3Coffice:font-face-decls.3E" class="mw-redirect" title="Freeplane File Format">Freeplane_File_Format#3.14_.3Coffice:font-face-decls.3E</a>.</dd>
+<dt>Note</dt>
+<dd>this element should be moved to a <tt>&lt;style:style&gt;</tt> element that defines a style with the family value of text, and referenced by name through the <tt>text:style-name</tt> attribute.</dd></dl>
+</td></tr>
+<tr>
+<td>
+<pre> &lt;xs:element name='hook'&gt;
+  &lt;xs:complexType&gt;
+   &lt;xs:sequence&gt;
+    &lt;xs:element ref='Parameters' minOccurs='0' maxOccurs='1'/&gt;
+    &lt;xs:element ref='text' minOccurs='0' maxOccurs='1'/&gt;
+   &lt;/xs:sequence&gt;
+   &lt;xs:attribute name='NAME' type='xs:string' use='required'/&gt;
+   &lt;!-- for embedded images NAME="ExternalObject" --&gt;
+   &lt;xs:attribute name='URI'  type='xs:anyURI' use='optional'/&gt;
+   &lt;xs:attribute name='SIZE' type='xs:decimal' use='optional'/&gt;
+</pre>
+</td>
+<td>Replaced by the following element:
+<pre>&lt;draw:frame draw:transform="scale(sx [sy])"&gt;
+ &lt;draw:image xlink:href="URL"/&gt;
+&lt;/draw:frame&gt;
+</pre>
+<dl><dt>Note</dt>
+<dd>if wished, the <tt>&lt;draw:image&gt;</tt> element could also have an attribute <tt>draw:filter-name="ExternalObject"</tt> but I wouldn't see the point (rather the name of a plugin for image formats not supported by Freeplane).</dd></dl>
+</td></tr>
+<tr>
+<td>
+<pre>   &lt;!-- for map config info NAME="MapStyle" --&gt;
+   &lt;xs:attribute name='max_node_width'  type='xs:integer' use='optional'/&gt;
+   &lt;xs:attribute name='zoom' type='xs:decimal' use='optional'/&gt;
+</pre>
+</td>
+<td>It actually depends if those settings shall be different from map to map (within a same file) or the same for the whole file.
+<p>In the first case, they would be attributes to the <tt>&lt;map:map&gt;</tt> element:
+</p>
+<pre>node:max-width="integer"
+map:zoom="percentage"
+</pre>
+<p>And in the 2nd case, they would be <a href="/wiki/index.php/Freeplane_File_Format#3.10_.3Coffice:settings.3E" class="mw-redirect" title="Freeplane File Format">office settings</a>:
+</p>
+<pre>&lt;config:config-item config:name="NodeMaxWidth"
+                    config:type="int"&gt;40&lt;/config:config-item&gt;
+&lt;config:config-item config:name="MapZoom"
+                    config:type="int"&gt;150&lt;/config:config-item&gt;
+</pre>
+<p><i><b>TBD</b></i>
+</p>
+</td></tr>
+<tr>
+<td>
+<pre>   &lt;!-- for equations NAME="plugins/latex/LatexNodeHook.properties" --&gt;
+   &lt;xs:attribute name='EQUATION' type='xs:string' use='optional'/&gt;
+  &lt;/xs:complexType&gt;
+ &lt;/xs:element&gt;
+</pre>
+</td>
+<td>Plugin hooks (like Latex) are replaced by an element <tt>&lt;node:content&gt;</tt> with a corresponding namespace definition, like in:
+<pre>&lt;node:content 
+      xmlns:latex="plugins/latex/LatexNodeHook.properties"&gt;
+ &lt;latex:equation&gt;
+  &lt;![CDATA[<i>some equation in Latex</i>]]&gt;
+ &lt;/latex:equation&gt;
+&lt;/node:content&gt;
+</pre>
+<p>As shown here, in the case of non-XML dialect, the use of a CDATA section is highly recommended.
+</p>
+</td></tr>
+<tr>
+<td>
+<pre> &lt;xs:element name='icon'&gt;
+  &lt;xs:complexType&gt;
+   &lt;xs:attribute name='BUILTIN' type='xs:string' use='required'/&gt;
+  &lt;/xs:complexType&gt;
+ &lt;/xs:element&gt;
+</pre>
+</td>
+<td>Replaced by element <tt>&lt;node:icon ... /&gt;</tt> with attributes
+<pre>node:icon-name="..." (a string)
+</pre>
+</td></tr>
+<tr>
+<td>
+<pre> &lt;xs:element name='html'&gt;
+  &lt;xs:complexType&gt;
+   &lt;xs:sequence&gt;
+    &lt;!--Anything that is valid XML,
+                 but should be http://www.w3.org/1999/xhtml --&gt;
+    &lt;xs:any namespace="##any" minOccurs="0" maxOccurs="unbounded"
+            processContents="skip"/&gt;
+   &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+ &lt;/xs:element&gt;
+</pre>
+</td>
+<td>Obsolete, as all nodes are rich content...
+</td></tr>
+<tr>
+<td>
+<pre> &lt;xs:element name='richcontent'&gt;
+  &lt;xs:complexType&gt;
+   &lt;!-- And contains XHTML as unique child:--&gt;
+   &lt;xs:sequence&gt;
+    &lt;xs:element ref='html' minOccurs='1' maxOccurs='1'/&gt;
+   &lt;/xs:sequence&gt;
+   &lt;!--Currently, only NODE or NOTE is allowed.--&gt;
+   &lt;xs:attribute name='TYPE' use='required'&gt;
+    &lt;xs:simpleType&gt;
+     &lt;xs:restriction base='xs:string'&gt;
+      &lt;xs:enumeration value='NODE'/&gt;
+      &lt;xs:enumeration value='NOTE'/&gt;
+     &lt;/xs:restriction&gt;
+    &lt;/xs:simpleType&gt;
+   &lt;/xs:attribute&gt;
+  &lt;/xs:complexType&gt;
+ &lt;/xs:element&gt;
+</pre>
+</td>
+<td>Replaced by either
+<pre>&lt;node:content xmlns:xhtml="<a rel="nofollow" class="external free" href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>"&gt;
+ &lt;xhtml:body&gt; ... &lt;/xhtml:body&gt;
+</pre>
+<p>or
+</p>
+<pre>&lt;office:annotation xmlns:xhtml="<a rel="nofollow" class="external free" href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>"&gt;
+ &lt;xhtml:body&gt; ... &lt;/xhtml:body&gt;
+</pre>
+<dl><dd>Note:the XHTML body is specific to Freeplane, ODF has actually its own markup, but that would be too much to implement. In the future, other type of elements could be implemented in a node or a note (Latex, etc...) instead of XHTML.</dd></dl>
+</td></tr>
+<tr>
+<td>
+<pre> &lt;xs:element name='map'&gt;
+  &lt;xs:complexType&gt;
+   &lt;xs:sequence&gt;
+    &lt;xs:element ref='attribute_registry' minOccurs='0' maxOccurs='1'/&gt;
+    &lt;xs:element ref='node' minOccurs='1' maxOccurs='1' /&gt;
+   &lt;/xs:sequence&gt;
+   &lt;xs:attribute name='version' type='xs:string' use='required'/&gt;
+  &lt;/xs:complexType&gt;
+ &lt;/xs:element&gt;
+</pre>
+</td>
+<td>Replaced by element <tt>&lt;map:map&gt;</tt>
+</td></tr>
+<tr>
+<td>
+<pre> &lt;xs:element name='node'&gt;
+</pre>
+</td>
+<td>Replaced by element <tt>&lt;node:node&gt;</tt>
+</td></tr>
+<tr>
+<td>
+<pre>  &lt;xs:complexType&gt;
+   &lt;xs:choice minOccurs='0' maxOccurs='unbounded'&gt;
+    &lt;xs:element ref='arrowlink'/&gt;
+    &lt;xs:element ref='cloud'/&gt;
+    &lt;xs:element ref='edge'/&gt;
+    &lt;xs:element ref='font'/&gt;
+    &lt;xs:element ref='hook'/&gt;
+    &lt;xs:element ref='icon'/&gt;
+    &lt;xs:element ref='node'/&gt;
+    &lt;!-- For nodes with extended formatting content or for notes. --&gt;
+    &lt;xs:element ref='richcontent'/&gt;
+    &lt;xs:element ref='attribute_layout'/&gt;
+    &lt;xs:element ref='attribute'/&gt;
+   &lt;/xs:choice&gt;
+</pre>
+</td>
+<td>Mapped obviously as described above...
+</td></tr>
+<tr>
+<td>
+<pre>   &lt;xs:attribute name='BACKGROUND_COLOR'
+                 type='xs:string' use='optional'/&gt;
+</pre>
+</td>
+<td>Replaced by attribute <tt>draw:fill-color="#rrggbb"</tt>
+</td></tr>
+<tr>
+<td>
+<pre>   &lt;xs:attribute name='COLOR' type='xs:string' use='optional'/&gt;
+</pre>
+</td>
+<td>It's actually the color of the font and has been moved to the corresponding element <tt>&lt;style:text-properties ... /&gt;</tt>.
+</td></tr>
+<tr>
+<td>
+<pre>   &lt;xs:attribute name='FOLDED' use='optional'&gt;
+    &lt;xs:simpleType&gt;
+     &lt;xs:restriction base='xs:string'&gt;
+      &lt;xs:enumeration value='true'/&gt;
+      &lt;xs:enumeration value='false'/&gt;
+     &lt;/xs:restriction&gt;
+    &lt;/xs:simpleType&gt;
+   &lt;/xs:attribute&gt;
+</pre>
+</td>
+<td>Replaced by attribute <tt>node:folded="false|true"</tt>
+</td></tr>
+<tr>
+<td>
+<pre>   &lt;xs:attribute name='ID' type='xs:ID' use='optional'/&gt;
+</pre>
+</td>
+<td>Replaced by attribute <tt>xml:id="ID"</tt>
+</td></tr>
+<tr>
+<td>
+<pre>   &lt;xs:attribute name='LINK' type='xs:string' use='optional'/&gt;
+</pre>
+</td>
+<td>Replaced by attribute <tt>xlink:href="URL"</tt>
+</td></tr>
+<tr>
+<td>
+<pre>   &lt;xs:attribute name='POSITION' use='optional'&gt;
+    &lt;xs:simpleType&gt;
+     &lt;xs:restriction base='xs:string'&gt;
+      &lt;xs:enumeration value='left'/&gt;
+      &lt;xs:enumeration value='right'/&gt;
+     &lt;/xs:restriction&gt;
+    &lt;/xs:simpleType&gt;
+   &lt;/xs:attribute&gt;
+</pre>
+</td>
+<td>Replaced by attribute <tt>node:side="left|right"</tt>
+</td></tr>
+<tr>
+<td>
+<pre>   &lt;xs:attribute name='STYLE' type='xs:string' use='optional'/&gt;
+</pre>
+</td>
+<td>Replaced by attribute <tt>draw:style="fork|bubble"</tt>
+</td></tr>
+<tr>
+<td>
+<pre>   &lt;xs:attribute name='TEXT' type='xs:string' use='optional'/&gt;
+</pre>
+</td>
+<td>Obsolete.
+</td></tr>
+<tr>
+<td>
+<pre>   &lt;xs:attribute name='CREATED' type='xs:integer' use='optional'/&gt;
+   &lt;xs:attribute name='MODIFIED' type='xs:integer' use='optional'/&gt;
+</pre>
+</td>
+<td>Replaced respectively by attributes <tt>node:inserted="dateTime"</tt> and <tt>node:modified="dateTime"</tt>
+<dl><dt>Note</dt>
+<dd>the 'dateTime' format is normally according to <a rel="nofollow" class="external text" href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#isoformats">ISO8601</a> instead of the current UN*X-like number of seconds. <i><b>TBD</b></i> - To Be Discussed.</dd></dl>
+</td></tr>
+<tr>
+<td>
+<pre>   &lt;xs:attribute name='HGAP' type='xs:integer' use='optional'/&gt;
+   &lt;xs:attribute name='VGAP' type='xs:integer' use='optional'/&gt;
+   &lt;xs:attribute name='VSHIFT' type='xs:integer' use='optional'/&gt;
+</pre>
+</td>
+<td>Replaced respectively by attributes <tt>node:margin-horizontal="integer"</tt>, <tt>node:margin-vertical="integer"</tt> and <tt>node:shift-vertical="integer"</tt>
+</td></tr>
+<tr>
+<td>
+<pre>   &lt;xs:attribute name='ENCRYPTED_CONTENT'
+                 type='xs:string' use='optional'/&gt;
+</pre>
+</td>
+<td>Replaced by attribute <tt>node:encrypted="false|true"</tt>
+</td></tr>
+<tr>
+<td>
+<pre>  &lt;/xs:complexType&gt;
+ &lt;/xs:element&gt;
+&lt;/xs:schema&gt;
+</pre>
+</td>
+<td>
+</td></tr></tbody></table>
+<footer id="open-on-gh">Found a mistake? <a href="https://github.com/freeplane/docs/edit/main/src/docs/attic/old-mediawiki-content/Current_Freeplane_File_Format.md">Edit this page on GitHub.</a></footer>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../attic/old-mediawiki-content/Contributors.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../attic/old-mediawiki-content/Data_recognition_and_data_formats.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../attic/old-mediawiki-content/Contributors.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../attic/old-mediawiki-content/Data_recognition_and_data_formats.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

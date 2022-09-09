@@ -1,0 +1,355 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Formulas - Freeplane Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../open-in.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><li class="part-title">User guide</li><li class="chapter-item "><a href="../home.html"><strong aria-hidden="true">1.</strong> Home</a></li><li class="chapter-item "><a href="../how-to-get-help.html"><strong aria-hidden="true">2.</strong> How to get help</a></li><li class="chapter-item "><a href="../getting-started/getting-started.html"><strong aria-hidden="true">3.</strong> Getting started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../getting-started/Distributions.html"><strong aria-hidden="true">3.1.</strong> Distributions</a></li><li class="chapter-item "><a href="../getting-started/Command-line_options_and_configuration.html"><strong aria-hidden="true">3.2.</strong> Command-line options and configuration</a></li><li class="chapter-item "><a href="../getting-started/Add-ons_(install).html"><strong aria-hidden="true">3.3.</strong> Extend with add-ons</a></li></ol></li><li class="chapter-item "><a href="../user-documentation/first-steps.html"><strong aria-hidden="true">4.</strong> User documentation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../user-documentation/first-steps.html"><strong aria-hidden="true">4.1.</strong> First steps</a></li><li class="chapter-item "><a href="../user-documentation/working-w-mindmap-files.html"><strong aria-hidden="true">4.2.</strong> Working with mindmap files</a></li><li class="chapter-item "><a href="../user-documentation/formatting-maps-and-nodes.html"><strong aria-hidden="true">4.3.</strong> Formatting maps and nodes</a></li><li class="chapter-item "><a href="../user-documentation/styles.html"><strong aria-hidden="true">4.4.</strong> Styles</a></li><li class="chapter-item "><a href="../user-documentation/templates.html"><strong aria-hidden="true">4.5.</strong> Templates</a></li><li class="chapter-item "><a href="../user-documentation/css-for-html-or-markdown.html"><strong aria-hidden="true">4.6.</strong> CSS for HTML/Markdown</a></li><li class="chapter-item "><a href="../user-documentation/Conditional_node_styles.html"><strong aria-hidden="true">4.7.</strong> Conditional node styles</a></li><li class="chapter-item "><a href="../user-documentation/LaTeX_in_Freeplane.html"><strong aria-hidden="true">4.8.</strong> LaTeX in Freeplane</a></li><li class="chapter-item "><a href="../user-documentation/Spell_checker.html"><strong aria-hidden="true">4.9.</strong> Spell checker</a></li><li class="chapter-item "><a href="../user-documentation/Relationship_to_FreeMind.html"><strong aria-hidden="true">4.10.</strong> Relationship to FreeMind</a></li><li class="chapter-item "><a href="../user-documentation/other-docs-tutorials.html"><strong aria-hidden="true">4.11.</strong> References to other known documentation/tutorial sites</a></li></ol></li><li class="chapter-item "><a href="../contribute/contribute.html"><strong aria-hidden="true">5.</strong> Contribute</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../contribute/Translation_How-To.html"><strong aria-hidden="true">5.1.</strong> Translation How-To</a></li><li class="chapter-item "><a href="../contribute/Contributing_to_Freeplane's_Development.html"><strong aria-hidden="true">5.2.</strong> Contributing to Freeplane's Development</a></li></ol></li><li class="chapter-item expanded "><a href="../scripting/Scripting.html"><strong aria-hidden="true">6.</strong> Scripting</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../scripting/Formulas.html" class="active"><strong aria-hidden="true">6.1.</strong> Formulas</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../scripting/Formulas.html" class="active"><strong aria-hidden="true">6.1.1.</strong> Formulas</a></li><li class="chapter-item "><a href="../scripting/Scripting!_Script_filter.html"><strong aria-hidden="true">6.1.2.</strong> Formula filter</a></li></ol></li><li class="chapter-item "><a href="../scripting/Scripting_Cheatsheet.html"><strong aria-hidden="true">6.2.</strong> Scripting Cheatsheet</a></li><li class="chapter-item "><a href="../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.</strong> Scripts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../scripting/Scripts_collection.html"><strong aria-hidden="true">6.3.1.</strong> Scripts collection</a></li><li class="chapter-item "><a href="../scripting/Scripting_text_editing.html"><strong aria-hidden="true">6.3.2.</strong> Scripts for text editing</a></li><li class="chapter-item "><a href="../scripting/Example_scripts_using_external_libraries.html"><strong aria-hidden="true">6.3.3.</strong> Scripts using external libraries</a></li><li class="chapter-item "><a href="../scripting/Script_incubator.html"><strong aria-hidden="true">6.3.4.</strong> Script incubator</a></li><li class="chapter-item "><a href="../scripting/Scripting!_Jython.html"><strong aria-hidden="true">6.3.5.</strong> Scripting! Jython</a></li><li class="chapter-item "><a href="../scripting/Scripting_environment_setup.html"><strong aria-hidden="true">6.3.6.</strong> Scripting environment setup</a></li></ol></li><li class="chapter-item "><a href="../scripting/Export_Using_XSLT.html"><strong aria-hidden="true">6.4.</strong> XSLT for export/import</a></li><li class="chapter-item "><a href="../scripting/Add-ons_(Develop).html"><strong aria-hidden="true">6.5.</strong> Add-ons (Development)</a></li><li class="chapter-item "><a href="../scripting/Security_considerations.html"><strong aria-hidden="true">6.6.</strong> Security considerations</a></li></ol></li><li class="chapter-item "><a href="../coding/Git_howto.html"><strong aria-hidden="true">7.</strong> Coding</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../coding/Git_howto.html"><strong aria-hidden="true">7.1.</strong> Git howto</a></li><li class="chapter-item "><a href="../coding/How_to_build_Freeplane.html"><strong aria-hidden="true">7.2.</strong> How to build Freeplane</a></li><li class="chapter-item "><a href="../coding/IDE_setup.html"><strong aria-hidden="true">7.3.</strong> IDE setup</a></li><li class="chapter-item "><a href="../coding/Plugin_development.html"><strong aria-hidden="true">7.4.</strong> Plugin development</a></li></ol></li><li class="chapter-item "><li class="part-title">Attic</li><li class="chapter-item "><a href="../attic/home.html"><strong aria-hidden="true">8.</strong> Attic (draft documents)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.</strong> Old MediaWiki content</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/old-mediawiki-content/Home.html"><strong aria-hidden="true">8.1.1.</strong> Old Home</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Approximate_search.html"><strong aria-hidden="true">8.1.2.</strong> Approximate search</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Architecture.html"><strong aria-hidden="true">8.1.3.</strong> Architecture</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Batch_Jobs.html"><strong aria-hidden="true">8.1.4.</strong> Batch Jobs</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Contributors.html"><strong aria-hidden="true">8.1.5.</strong> Contributors</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Current_Freeplane_File_Format.html"><strong aria-hidden="true">8.1.6.</strong> Current Freeplane File Format</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Data_recognition_and_data_formats.html"><strong aria-hidden="true">8.1.7.</strong> Data recognition and data formats</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Debugging_scripts.html"><strong aria-hidden="true">8.1.8.</strong> Debugging scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Document_Format.html"><strong aria-hidden="true">8.1.9.</strong> Document Format</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Edit_scripts_in_Eclipse.html"><strong aria-hidden="true">8.1.10.</strong> Edit scripts in Eclipse</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/External_objects.html"><strong aria-hidden="true">8.1.11.</strong> External objects</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/External_script_file_execution.html"><strong aria-hidden="true">8.1.12.</strong> External script file execution</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/FAQ.html"><strong aria-hidden="true">8.1.13.</strong> FAQ</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Fixed_security_vulnerabilities.html"><strong aria-hidden="true">8.1.14.</strong> Fixed security vulnerabilities</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/FreeMind_0.9.0_-_Freeplane_1.1.x.html"><strong aria-hidden="true">8.1.15.</strong> FreeMind 0.9.0 - Freeplane 1.1.x</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane2PowerPoint.html"><strong aria-hidden="true">8.1.16.</strong> Freeplane2PowerPoint</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_Extensions.html"><strong aria-hidden="true">8.1.17.</strong> Freeplane Tutorial Extensions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Screenshots.html"><strong aria-hidden="true">8.1.18.</strong> Freeplane Tutorial How-to Screenshots</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Tutorial_How-to_Video.html"><strong aria-hidden="true">8.1.19.</strong> Freeplane Tutorial How-to Video</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_Wiki!Administrators.html"><strong aria-hidden="true">8.1.20.</strong> Freeplane Wiki!Administrators</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_and_problem_solving.html"><strong aria-hidden="true">8.1.21.</strong> Freeplane and problem solving</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_features_you_were_missing_in_FreeMind.html"><strong aria-hidden="true">8.1.22.</strong> Freeplane features you were missing in FreeMind</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_for_Windows_Mobile.html"><strong aria-hidden="true">8.1.23.</strong> Freeplane for Windows Mobile</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Freeplane_installation_for_Ubuntu_OS.html"><strong aria-hidden="true">8.1.24.</strong> Freeplane installation for Ubuntu OS</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Get_the_code.html"><strong aria-hidden="true">8.1.25.</strong> Get the code</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Goals.html"><strong aria-hidden="true">8.1.26.</strong> Goals</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Groovy_scripts_and_formulas_can_escape_sandbox.html"><strong aria-hidden="true">8.1.27.</strong> Groovy scripts and formulas can escape sandbox</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Harmonizing_FP-menu.html"><strong aria-hidden="true">8.1.28.</strong> Harmonizing FP-menu</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help!Contents.html"><strong aria-hidden="true">8.1.29.</strong> Help!Contents</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help!Editing.html"><strong aria-hidden="true">8.1.30.</strong> Help!Editing</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Help_Previous_Freeplane_Versions.html"><strong aria-hidden="true">8.1.31.</strong> Help Previous Freeplane Versions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/How_to_publish_add-ons.html"><strong aria-hidden="true">8.1.32.</strong> How to publish add-ons</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/How_to_test.html"><strong aria-hidden="true">8.1.33.</strong> How to test</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Information_management_with_Freeplane_add-on_dView(indexfile).html"><strong aria-hidden="true">8.1.34.</strong> Information management with Freeplane add-on dView(indexfile)</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Init_scripts.html"><strong aria-hidden="true">8.1.35.</strong> Init scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Japanese.html"><strong aria-hidden="true">8.1.36.</strong> Japanese</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Linux.html"><strong aria-hidden="true">8.1.37.</strong> Linux</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Logo_and_splashscreen.html"><strong aria-hidden="true">8.1.38.</strong> Logo and splashscreen</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Macintosh.html"><strong aria-hidden="true">8.1.39.</strong> Macintosh</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Map_local_scripts.html"><strong aria-hidden="true">8.1.40.</strong> Map local scripts</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Map_templates.html"><strong aria-hidden="true">8.1.41.</strong> Map templates</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Menus_and_commands.html"><strong aria-hidden="true">8.1.42.</strong> Menus and commands</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Mind_map_gallery.html"><strong aria-hidden="true">8.1.43.</strong> Mind map gallery</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_Freeplane_File_Format_(Proposal).html"><strong aria-hidden="true">8.1.44.</strong> New Freeplane File Format (Proposal)</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_features_in_Freeplane_1.2.html"><strong aria-hidden="true">8.1.45.</strong> New features in Freeplane 1.2</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/New_features_in_Freeplane_1.3.html"><strong aria-hidden="true">8.1.46.</strong> New features in Freeplane 1.3</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/OSGI_based_plug-ins.html"><strong aria-hidden="true">8.1.47.</strong> OSGI based plug-ins</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Patterns.html"><strong aria-hidden="true">8.1.48.</strong> Patterns</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Portable_Freeplane.html"><strong aria-hidden="true">8.1.49.</strong> Portable Freeplane</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Release_cycle.html"><strong aria-hidden="true">8.1.50.</strong> Release cycle</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Release_smoke_test.html"><strong aria-hidden="true">8.1.51.</strong> Release smoke test</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Rules_to_build_user_friendly_menus.html"><strong aria-hidden="true">8.1.52.</strong> Rules to build user friendly menus</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_API_Changes.html"><strong aria-hidden="true">8.1.53.</strong> Scripting! API Changes</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Freeplane_Utility_Classes.html"><strong aria-hidden="true">8.1.54.</strong> Scripting! Freeplane Utility Classes</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Included_libraries.html"><strong aria-hidden="true">8.1.55.</strong> Scripting! Included libraries</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Other_languages.html"><strong aria-hidden="true">8.1.56.</strong> Scripting! Other languages</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting!_Update_Freeplane's_Groovy_version.html"><strong aria-hidden="true">8.1.57.</strong> Scripting! Update Freeplane's Groovy version</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Scripting_API.html"><strong aria-hidden="true">8.1.58.</strong> Scripting API</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Support.html"><strong aria-hidden="true">8.1.59.</strong> Support</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Think_Tank.html"><strong aria-hidden="true">8.1.60.</strong> Think Tank</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Translation_nl.html"><strong aria-hidden="true">8.1.61.</strong> Translation nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Troubleshooting.html"><strong aria-hidden="true">8.1.62.</strong> Troubleshooting</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Tutorial_Freeplane_How-to_nl.html"><strong aria-hidden="true">8.1.63.</strong> Tutorial Freeplane How-to nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Tutorial_Freeplane_nl.html"><strong aria-hidden="true">8.1.64.</strong> Tutorial Freeplane nl</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/User_icons.html"><strong aria-hidden="true">8.1.65.</strong> User icons</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Videos_and_animations_How-to.html"><strong aria-hidden="true">8.1.66.</strong> Videos and animations How-to</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Visions.html"><strong aria-hidden="true">8.1.67.</strong> Visions</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Wish_List.html"><strong aria-hidden="true">8.1.68.</strong> Wish List</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/XML_External_Entity_vulnerability_in_map_parser.html"><strong aria-hidden="true">8.1.69.</strong> XML External Entity vulnerability in map parser</a></li><li class="chapter-item "><a href="../attic/old-mediawiki-content/Your_own_utility_script_library.html"><strong aria-hidden="true">8.1.70.</strong> Your own utility script library</a></li></ol></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.</strong> New wiki initiative</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../attic/new-wiki-initiative/customizing-freeplane.html"><strong aria-hidden="true">8.2.1.</strong> customizing-freeplane</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/freeplane-api-groovy.html"><strong aria-hidden="true">8.2.2.</strong> freeplane-api-groovy</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/glossary.html"><strong aria-hidden="true">8.2.3.</strong> glossary</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/introduction-aka-many-unsorted-ideas-related-to-freeplane.html"><strong aria-hidden="true">8.2.4.</strong> introduction-aka-many-unsorted-ideas-related-to-freeplane</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/understanding-interface.html"><strong aria-hidden="true">8.2.5.</strong> understanding-interface</a></li><li class="chapter-item "><a href="../attic/new-wiki-initiative/understanding-nodes.html"><strong aria-hidden="true">8.2.6.</strong> understanding-nodes</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">Special pages</li><li class="chapter-item "><a href="../after-redirect.html"><strong aria-hidden="true">9.</strong> After redirect from the old media wiki</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Freeplane Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/freeplane/docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#when-formulas-get-too-big-build-your-own-utility-classes">When formulas get too big: Build your own utility classes</a></li>
+<li><a href="#plus-operator-for-nodes">Plus operator for nodes</a></li>
+<li><a href="#when-the-map-is-changed">When the map is changed...</a>
+<ul>
+<li><a href="#caching-formula-evaluation-results">Caching formula evaluation results</a></li>
+</ul>
+</li>
+<li><a href="#editor-support-for-formulas">Editor support for formulas</a></li>
+<li><a href="#formatting">Formatting</a></li>
+<li><a href="#security">Security</a></li>
+<li><a href="#miscelleneous">Miscelleneous</a></li>
+<li><a href="#open-issues">Open issues</a>
+<ul>
+<li><a href="#named-nodes">Named nodes</a></li>
+<li><a href="#implementation-of-functions-available-in-spreadsheet-processors">Implementation of functions available in spreadsheet processors?</a></li>
+</ul>
+</li>
+<li><a href="#limitations">Limitations</a></li>
+<li><a href="#further-reads">Further reads</a></li>
+<li><a href="#example-maps">Example Maps</a></li>
+<li><a href="#videos">Videos</a></li>
+</ul>
+<p>Formulas are very similar to formulas in spreadsheet processors like Excel or OpenOffice Calc:</p>
+<pre><code class="language-groovy"> =2 + 3
+</code></pre>
+<p>Formulas, which are identified by the leading '=', are expressions that
+are evaluated for display. That is their result is displayed instead of
+the formula text. In case of <tt>=2 + 3</tt> this would be <tt>5</tt>. The formula
+itself (<tt>=2 + 3</tt>) is only visible in the editor.</p>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>Formulas can be defined in</p>
+<ul>
+<li>node texts</li>
+<li>attribute values</li>
+<li>notes</li>
+</ul>
+<p>Formulas are evaluated as Groovy scripts. This fact defines the basic
+syntax of formulas. But although Groovy is a full-blown programming
+language simple things are very simple in Groovy like this:</p>
+<pre><code class="language-groovy">  = 3 * 2
+</code></pre>
+<p>gives <tt>6</tt>,</p>
+<pre><code class="language-groovy">  = (3 * 2) + &quot; times&quot;
+</code></pre>
+<p>gives <tt>6 times</tt>. Note that the space after the '=' is
+optional.</p>
+<p>Now something more complex:</p>
+<pre><code class="language-groovy">  = children.sum(&quot;&quot;){ it.text }
+</code></pre>
+<p>gives the concatenation of all child node texts. By using <tt>sum(&quot;&quot;)</tt> instead of <tt>sum</tt> we set the start value to &quot;&quot; and ensure that the formula also works if the node has no children at all.</p>
+<pre><code class="language-groovy">  = children.sum(0){ it.to.num }
+</code></pre>
+<p>sums over the numerical values of the child nodes.</p>
+<p>The following statement sums over the numerical values of the attribute <tt>item</tt> of all childrens. If one child does not have that attribute or if it isn't convertible to a number <tt>num0</tt> (or <tt>getNum0()</tt>) uses 0 instead (since 1.2.1_17).</p>
+<pre><code class="language-groovy">  = children.sum(0){ it['item'].num0 }
+</code></pre>
+<p>Formulas have access to a read-only variant of the <a href="Scripting_API.html">Scripting API</a>,
+i.e. formulas may not change anything in a map. There are some
+minor extensions to the Groovy language for formulas to improve the ease of
+use, e.g. for simpler data type conversion.
+Note that properties and methods of a formula node (like <tt>children</tt> or
+<tt>text</tt>) are directly available to the formula, i.e. the leading
+&quot;node.&quot; can be left out.</p>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<p>Formulas have access to all nodes in the map by</p>
+<ul>
+<li>navigating the hierarchy for instance via <tt>=node.children</tt>, <tt>=node.parent</tt> or <tt>=node.map.root</tt></li>
+<li>searching the map via <tt>find</tt>, e.g. <tt>=node.find{ it.text == 'sum'}</tt>.</li>
+<li>direct references to a specific node by id like <tt>ID_172581364.to.num</tt>. To enter the id of a node double-click on the node while the formula editor is opened or use the function <em>Copy Node ID</em> in the context menu of a node.</li>
+</ul>
+<p>Note that like in Excel you can easily create circular references if a node references itself (either directly or indirectly). </p>
+<pre><code class="language-groovy">  = parent.children.sum{ it.to.text }
+</code></pre>
+<p>The circular reference is obviously due to navigating back and forth
+in the hierarchy. Now an Example that more likely may occur to you
+(paste the next lines into a map):</p>
+<pre><code class="language-groovy">  = &quot;count nodes above 10: &quot; + node.find { it.to.num &gt; 10 }.size()
+    = 10
+    = 11
+</code></pre>
+<p>The result should be <tt>count nodes above 10: 1</tt> but the
+<tt>find</tt> tries to evaluate itself since <tt>it.to</tt> involves a formula evaluation. This leads
+to this error:</p>
+<pre><code>Circular reference: The formula in node '= count nodes....' references itself.
+</code></pre>
+<p>To prevent that you should avoid formula evaluation in the argument to <tt>find</tt> like this:</p>
+<pre><code class="language-groovy">  = &quot;count nodes matching '11': &quot; + node.find { it.text == '11' }.size()
+</code></pre>
+<p>For analysis of complicated cases you will have to look up the logfile. Search for messages like this:</p>
+<pre><code>WARNING: Circular reference detected! Traceback (innermost last):
+* ID_1323597872 = &quot;count nodes above 10: &quot; ... -&gt;  &quot;count nodes above 10: &quot; + node.find { it.to.num &gt; 10 }....
+-&gt; * ID_1323597872 = &quot;count nodes above 10: &quot; ... -&gt;  &quot;count nodes above 10: &quot; + node.find { it.to.num &gt; 10 }....
+</code></pre>
+<p>The node that is causing the circular reference is highlighted by an asterisk. We see that the cycle is a direct one, i.e. the node is directly referencing itself. But it doesn't need to be so simple and there might be more nodes involved when you happen to see this kind of error.</p>
+<p>Note that many problems with circular references arise from using
+<tt>find</tt>. So here's one advice: Avoid <tt>find</tt> if you don't need it.</p>
+<p>Also note that references between texts, notes and attributes of the same node do not result in a &quot;circular reference&quot; warning. On the other hand it doesn't matter which attribute, text or note is referenced by another node: cycles are detected only on the (coarse) node level.</p>
+<h2 id="when-formulas-get-too-big-build-your-own-utility-classes"><a class="header" href="#when-formulas-get-too-big-build-your-own-utility-classes">When formulas get too big: Build your own utility classes</a></h2>
+<p>Starting with Freeplane 1.3.2 all .groovy files in the script classpath directories are automatically compiled when Freeplane starts. See <a href="Your_own_utility_script_library.html">Scripting! Your own utility library</a>.</p>
+<h2 id="plus-operator-for-nodes"><a class="header" href="#plus-operator-for-nodes">Plus operator for nodes</a></h2>
+<p>Given the following map:</p>
+<pre><code class="language-groovy"> = children.sum()
+   1
+   2
+</code></pre>
+<p>This will result in &quot;3&quot; since the plus operator for nodes is defined as Node.to.num0 + Node.to.num0. While this is simple and nice in most cases you have to keep in mind that &quot;+&quot; is numeric only and will never concatenate strings.</p>
+<h2 id="when-the-map-is-changed"><a class="header" href="#when-the-map-is-changed">When the map is changed...</a></h2>
+<p>Formulas are immediately updated when necessary. (Otherwise it's a bug that you should report.)</p>
+<p>Formula evaluation is significantly more costly than many other
+things that will happen during normal operation. To reduce the
+overhead of formula evaluation Freeplane implements a dependency
+tracking mechanism that takes care to only update those formulas that
+reference a changed node.</p>
+<p>But this mechanism could theoretically get fooled by complex Groovy expressions.
+I can't give you an example currently but it's definitely possible.</p>
+<p>So just in case the formula processor got confused somehow there's a
+function <tt>Tools &gt; Formulas &gt; Evaluate all</tt> that re-evaluate the
+whole map.</p>
+<h3 id="caching-formula-evaluation-results"><a class="header" href="#caching-formula-evaluation-results">Caching formula evaluation results</a></h3>
+<p>For continuous node visualization the properties of a node are queried much more often than they are changed. To avoid recalculation in this cases all evaluation results are stored/cached internally. This cache is initially filled on opening a map and emptied on unload of it.</p>
+<p>For debugging purposes it is possible to switch off caching completely via the preferences page of the formula plugin. But keep in mind that this might severely impair application's performance, so don't switch caching off unless you really, really need that.</p>
+<h2 id="editor-support-for-formulas"><a class="header" href="#editor-support-for-formulas">Editor support for formulas</a></h2>
+<p>For editing of nodes containing a formula a special editor is used that provides the following features:</p>
+<ul>
+<li>Syntax highlighting: Support for standard Groovy expressions and node references.</li>
+<li>GUI-Support for referencing other nodes: Double click a node to insert a reference to it into the formula.</li>
+<li>GUI-Support for visualization of node references: If the cursor is in a node id the referenced node will be selected in the map. The tooltip of the editor will show the (transformed) text of the node in this case.</li>
+</ul>
+<p>Note that the special editor will only be used if the node text <em>already starts</em> with an equal sign. The editor support will be further extended in the future, especially with code completion.</p>
+<h2 id="formatting"><a class="header" href="#formatting">Formatting</a></h2>
+<p>Formatting of numbers and dates in node core is available as an element of <a href="../user-documentation/styles.html">styles</a>, that means that they are not formula specific. Formatting of attribute values, details and notes must be handled by setting the value to a formatted object via <a href="http://www.freeplane.org/doc/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html#format(java.lang.Object,%20java.lang.String)">format(Object, formatString)</a>. For more on data and formatting see <a href="Data_recognition_and_data_formats.html">this page</a>.</p>
+<h2 id="security"><a class="header" href="#security">Security</a></h2>
+<p>Formulas will have strict security limitations that can not be disabled via configuration. From formulas it's impossible to write to the file system or the network and you can not execute external programs. Read access is granted to Formulas only if you have enabled that for all scripts.</p>
+<h2 id="miscelleneous"><a class="header" href="#miscelleneous">Miscelleneous</a></h2>
+<p><em>Richtext nodes</em> (in node texts and notes) are supported by stripping
+all HTML clutter from the text before evaluation but using plaintext
+is definitely preferable for formulas.</p>
+<p><em>Borders:</em> Formula nodes are marked with a green border. This can be changed at
+<em>View-&gt;View settings-&gt;Highlight formulas</em>.</p>
+<p><em>Attribute Access:</em> Formulas provide simplified attribute access via the <tt>['name']</tt> operator:</p>
+<pre><code class="language-groovy">  = children.sum(0){ it['attrib_name'].num0 }
+</code></pre>
+<h2 id="open-issues"><a class="header" href="#open-issues">Open issues</a></h2>
+<p>Please help to fix some open issues. Please leave your opinion on the discussion page or in the discussion forum.</p>
+<h3 id="named-nodes"><a class="header" href="#named-nodes">Named nodes</a></h3>
+<p>Node references by node id are effective and the referenced node can be easily inspected if viewed in the formula editor. But without the editor support the node ids don't make any sense for themselves.</p>
+<p>Named nodes would allow to make references more readable. If for instance one &quot;parameter node&quot; with ID <tt>ID_241399282</tt> is used in many formulas in a map, then it would be good to give it a name, e.g. <tt>scale</tt> and to use <tt>N(&quot;scale&quot;).to.num</tt> instead of using <tt>ID_241399282.to.num</tt>.</p>
+<p>Do you have an idea how such names should be defined? Is it enough to have named nodes or do we need named collections of nodes, too?</p>
+<h3 id="implementation-of-functions-available-in-spreadsheet-processors"><a class="header" href="#implementation-of-functions-available-in-spreadsheet-processors">Implementation of functions available in spreadsheet processors?</a></h3>
+<p>Spreadsheet processors have a large number of functions that are not directly supported by Freeplane (see <a href="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office#odf12">ODF specification</a>). Of course many of these functions are not easily translatable from tabulars to mindmaps but one might strive to provide as many as possible to increase portability of existing formulas to Freeplane.</p>
+<p>What do you think, do we need implementations for functions like NOW(), SECOND(), PPMT(), RRI(), COLUMNS(), etc., even if Groovy equivalents exist? If you do you are encouraged to provide a Groovy class with appropriate static methods and we'll see how to integrate them into Freeplane.</p>
+<h2 id="limitations"><a class="header" href="#limitations">Limitations</a></h2>
+<ul>
+<li>References to nodes in other maps.</li>
+</ul>
+<h2 id="further-reads"><a class="header" href="#further-reads">Further reads</a></h2>
+<ul>
+<li>most important: <a href="Scripting_API.html">Scripting API</a></li>
+<li><a href="Scripting.html">Scripting</a></li>
+<li><a href="Scripting_environment_setup.html">Scripting_environment_setup</a></li>
+</ul>
+<h2 id="example-maps"><a class="header" href="#example-maps">Example Maps</a></h2>
+<ul>
+<li><a href="Scripting-convertible-and-more.mm">Scripting API improvements</a></li>
+<li><a href="http://www.freeplane.org/wiki/images/6/69/Example_-_General_Balance_form.mm">General Balance form.mm</a> - requires at least 1.2.1_20.</li>
+<li><a href="http://www.freeplane.org/wiki/index.php/File:Bayes_Theorem_in_Control_of_Quality_%28v.2_of_2_-_calculations_in_attributes%29.mm">Bayes Theorem in Control of Quality.mm</a> - requires at least 1.2.4_03</li>
+</ul>
+<h2 id="videos"><a class="header" href="#videos">Videos</a></h2>
+<ul>
+<li><a href="http://www.youtube.com/watch?v=qym9pG3AP4E">Expense Reporting in Freeplane</a></li>
+</ul>
+<!-- ({Category:Documentation})({Category:Script}) -->
+<footer id="open-on-gh">Found a mistake? <a href="https://github.com/freeplane/docs/edit/main/src/docs/scripting/Formulas.md">Edit this page on GitHub.</a></footer>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../scripting/Scripting.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../scripting/Formulas.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../scripting/Scripting.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../scripting/Formulas.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
