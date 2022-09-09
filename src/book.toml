@@ -4,6 +4,8 @@ language = "en"
 multilingual = false
 src = "docs"
 title = "Freeplane Documentation"
+[output.html.fold]
+enable = true
 [preprocessor.toc]
 command = "mdbook-toc"
 renderer = ["html"]

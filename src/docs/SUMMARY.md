@@ -1,3 +1,5 @@
+# Summary
+
 # User guide
 
 - [Home](home.md)
@@ -33,10 +35,7 @@
     - [Export Using XSLT](scripting/Export_Using_XSLT.md)
   - [Add-ons]()
     - [Add-ons (Develop)](scripting/Add-ons_(Develop).md)
-  - [Security considerations]()
-    - [Scripting (Groovy)](scripting/Security_considerations.md#scripting)
-    - [Formulas](scripting/Security_considerations.md#formulas)
-    - [Add-ons](scripting/Security_considerations.md#add-ons)
+  - [Security considerations](scripting/Security_considerations.md)
 - [Coding](coding/Git_howto.md)
   - [Git howto](coding/Git_howto.md)
   - [How to build Freeplane](coding/How_to_build_Freeplane.md)
@@ -80,7 +79,7 @@
     - [Help Previous Freeplane Versions](attic/old-mediawiki-content/Help_Previous_Freeplane_Versions.md)
     - [How to publish add-ons](attic/old-mediawiki-content/How_to_publish_add-ons.md)
     - [How to test](attic/old-mediawiki-content/How_to_test.md)
-    - [Information management with Freeplane add-on dView(attic/old-mediawiki-content/indexfile)](attic/old-mediawiki-content/Information_management_with_Freeplane_add-on_dView(attic/old-mediawiki-content/indexfile).md)
+    - [Information management with Freeplane add-on dView(indexfile)](attic/old-mediawiki-content/Information_management_with_Freeplane_add-on_dView(indexfile).md)
     - [Init scripts](attic/old-mediawiki-content/Init_scripts.md)
     - [Japanese](attic/old-mediawiki-content/Japanese.md)
     - [Linux](attic/old-mediawiki-content/Linux.md)
@@ -90,7 +89,7 @@
     - [Map templates](attic/old-mediawiki-content/Map_templates.md)
     - [Menus and commands](attic/old-mediawiki-content/Menus_and_commands.md)
     - [Mind map gallery](attic/old-mediawiki-content/Mind_map_gallery.md)
-    - [New Freeplane File Format (attic/old-mediawiki-content/Proposal)](attic/old-mediawiki-content/New_Freeplane_File_Format_(attic/old-mediawiki-content/Proposal).md)
+    - [New Freeplane File Format (Proposal)](attic/old-mediawiki-content/New_Freeplane_File_Format_(Proposal).md)
     - [New features in Freeplane 1.2](attic/old-mediawiki-content/New_features_in_Freeplane_1.2.md)
     - [New features in Freeplane 1.3](attic/old-mediawiki-content/New_features_in_Freeplane_1.3.md)
     - [OSGI based plug-ins](attic/old-mediawiki-content/OSGI_based_plug-ins.md)
@@ -105,7 +104,6 @@
     - [Scripting! Freeplane Utility Classes](attic/old-mediawiki-content/Scripting!_Freeplane_Utility_Classes.md)
     - [Scripting! Included libraries](attic/old-mediawiki-content/Scripting!_Included_libraries.md)
     - [Scripting! Other languages](attic/old-mediawiki-content/Scripting!_Other_languages.md)
-    - [Scripting! Security considerations](attic/old-mediawiki-content/Scripting!_Security_considerations.md)
     - [Scripting! Update Freeplane's Groovy version](attic/old-mediawiki-content/Scripting!_Update_Freeplane's_Groovy_version.md)
     - [Scripting! text editing](attic/old-mediawiki-content/Scripting!_text_editing.md)
     - [Scripting API](attic/old-mediawiki-content/Scripting_API.md)
