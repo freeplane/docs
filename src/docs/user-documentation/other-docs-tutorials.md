@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # References to other known documentation/tutorial sites
 
 ## Documentation mind maps distributed with Freeplane

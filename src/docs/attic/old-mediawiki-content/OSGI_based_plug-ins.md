@@ -1,3 +1,5 @@
+<!-- toc -->
+
 FreeMind has a proprietary extension mechanism further called *plug-ins*. FreeMind plug-ins are automatically loaded by FreeMind using their XML descriptors. This mechanism should be replaced because of the following reasons: 
 
 #Current plug-in design defines many additional classes and interfaces which are actually not necessary and can be replaced by interface used in the freemind kernel. 

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Starting with Freeplane 1.3.5_05 Groovy isn't your only choice for doing scripting in Freeplane. You can use all languages that (a) build on the Java Virtual Machine (JVM) and (b) provide a [JSR 223](http://en.wikipedia.org/wiki/Scripting_for_the_Java_Platform) adapter. These include most of the large [list of JVM-languages ](http://en.wikipedia.org/wiki/List_of_JVM_languages), e.g. JavaScript, Jython, Scala, Clojure, ...
 
 

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Spell checker how-to
 
 To enable spell checking, select one of the supported languages using pop-up menu→languages→`[your language]`. from any editor. 

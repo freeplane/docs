@@ -1,3 +1,5 @@
+<!-- toc -->
+
 In [this forum](https://sourceforge.net/projects/freeplane/forums/forum/758437/topic/4384594) storment74 (Stefan) posed some questions on how to improve the menu structure of Freeplane. <br><br>
 
 In the following I would like to invite you in helping to think over the menu structure of FP. I will follow a process way of thinking, and ask you  not to jump to the end result. Also, no decisions are final until the last step, the extreme being the decision that nothing will change  if the end result is not evaluated as better than the current situation. Besides, it is to the programmers to make the decision to implement the result.

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ## Prerequisites
 
 Freeplane's build system is based on GRADLE. So gradle can support concerning development processing and generation of configuration files.

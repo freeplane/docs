@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Introduction
 There are many programs which can capture what you are doing on the screen and turn it into a video which can be viewed on Youtube. The problem with Freeplane maps in following this procedure is:
 

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 This page will give you all the information you need to translate Freeplane into your own language.
 
 

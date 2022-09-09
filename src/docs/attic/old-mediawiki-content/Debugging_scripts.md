@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Debugging allows to run scripts step by step, to inspect the content of script variables and to view the interaction between Freeplane and scripts. Debugging of scripts is a bit complicated at first but once you have mastered the first steps it will be easy.
 
 Almost all your scripts will access properties from Freeplane - the selected node (<tt>node</tt>), the controller (<tt>c</tt>), ... Such scripts need a running Freeplane instance of course. That's why debugging of scripts starts with starting Freeplane. This must happen from Eclipse and in a special way since otherwise Eclipse will neither know about the Freeplane instance nor about your script you want to test.

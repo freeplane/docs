@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # How to Start Contributing
 
 We're currently looking for contributors for developing the documentation.

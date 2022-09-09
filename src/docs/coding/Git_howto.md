@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Freeplane uses a [distributed revision control](http://en.wikipedia.org/wiki/Distributed_revision_control) system named *git*. Use this instead of the source packages that are contained in the releases if you plan to take up coding.
 
 This is a guide to Working with freeplane's git repository. The first part

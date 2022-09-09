@@ -1,3 +1,5 @@
+<!-- toc -->
+
 <big>**[Download Freeplane now!](http://sourceforge.net/projects/freeplane/)** </big>
 
 <mm>[applet|title New features as a mind map|See some new features in a mind map](:Freeplane_-_Changes_since_2008.mm.md) </mm>.

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 For the [Scripting](../scripting/Scripting.md) API see its [Javadoc documentation](http://www.freeplane.org/doc/api/).
 
 The Scripting API is in some sense extended by [Freeplane's utility classes](Scripting!_Freeplane_Utility_Classes.md) and by the [Libraries included in Freeplane](Scripting!_Included_libraries.md).

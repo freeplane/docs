@@ -1,3 +1,5 @@
+<!-- toc -->
+
 -- Eric - begin -- 
 
 # Freeplane as a free flat surface

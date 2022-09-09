@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Freeplane team and contributors
 
 ## Freeplane 1.3 (2012 - 2014)

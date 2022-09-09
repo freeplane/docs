@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # CSS For HTML/Markdown
 
 _Since 1.9.12 (Dec 2021)_

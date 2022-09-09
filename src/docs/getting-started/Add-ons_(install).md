@@ -1,3 +1,5 @@
+<!-- toc -->
+
 <!-- Add-ons (Install) -->
 # What is an Add-on?
 

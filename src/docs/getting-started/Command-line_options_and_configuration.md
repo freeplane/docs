@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ## Command-line options
 Call freeplane like this:
 

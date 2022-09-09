@@ -1,3 +1,5 @@
+<!-- toc -->
+
 After the installation of the [Scripting environment](../scripting/Scripting_environment_setup .md) you can start editing scripts. You might also be interested in [debugging scripts](Debugging_scripts.md)
 
 This is what it looks like after opening a script via *Ctrl+Shift+R*:

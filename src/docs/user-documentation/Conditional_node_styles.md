@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Nodes can be formatted depending on its content. The rules for automatic node formatting consist of a condition like the conditions used for filters and a style name. Thus node formatting can depend on its content, attributes, icons or level. They can be set using "Styles->Manage conditional styles".
 
 Because each style may set only some of the formatting attributes the resulting node formatting is a sum of formats defined by explicitly set format, explicitly assigned style and all matching conditional styles.

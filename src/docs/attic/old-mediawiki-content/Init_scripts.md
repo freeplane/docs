@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Starting with 1.5.8 Freeplane supports init scripts, i. e. scripts that are executed on startup. This is especially useful for scripts that change the behavior of Freeplane, e. g. via listeners that listen on events like opening maps, mouse or keyboard events.
 
 So here are the rules (may change until 1.5 is declared stable):

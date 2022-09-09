@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Answers to questions are to be found on different places, depending on the Freeplane version.
 
 

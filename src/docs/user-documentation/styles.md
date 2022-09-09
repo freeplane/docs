@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Styles
 
 A style is a bundle of [formatting](formatting-maps-and-nodes.md) properties and icons, saved under a style name. 

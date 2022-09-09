@@ -1,3 +1,5 @@
+<!-- toc -->
+
 <!-- Glossary -->
 
 # node core

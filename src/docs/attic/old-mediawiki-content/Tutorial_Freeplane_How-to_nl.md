@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Voor de meest recente/uitgebreide informatie: bekijk de Engelse pagina's met Google vertalen naar het Nederlands.
 
 Deze pagina beschrijft het maken van mindmaps met de nieuwste versie van Freeplane (1.2.x) welke zich nog in alfa-stadium bevindt. Deze versie is voor de meeste doeleinden voldoende stabiel om gebruikt te worden. Voor een inleiding in wat mindmaps zijn en voorbeelden van mindmaps, ga naar de [**Gallerij met voorbeelden**](http://www.freeplane.org/wiki/index.php/Mind_Map_Gallery/Dutch). Voor het downloaden van Freeplane en het zelf maken van een mindmap, zie hieronder. De verwachting is dat in de zomer van 2011 1.2 in beta fase gaat en definitief wordt gemaakt.

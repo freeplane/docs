@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Every new version is uploaded to the project web space before it is released publicly. This allows team members or interested parties to check for the basic quality before each release. When it is reported that there are no major problems, the file will be released for further and public testing. 
 
 Here is a basic check list for pre-release testing. This is not a comprehensive or systematic testing routine, it is a basic list that be carried out in a few minutes before each release: 

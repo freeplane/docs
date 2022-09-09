@@ -1,3 +1,5 @@
+<!-- toc -->
+
 [Back to scripting overview](../scripting/Scripting.md) 
 
 Map local scripts are a legacy from FreeMind that most experienced script developers don't use. But some people like them to test some bit of code quickly.

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ## Freeplane on Mac OS X
 
 The following steps have been tested using Mac OS X Mountain Lion (10.8) and Snow Leopard (10.6.8). If you have comments on the download they are welcome on the [Talk:Macintosh discussion](Talk:Macintosh.md) page. <br> 

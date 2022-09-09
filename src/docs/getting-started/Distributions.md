@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Distributions for Windows
 
 * Freeplane-Setup-with-Java-xxx.exe - Windows installer with embedded Java.

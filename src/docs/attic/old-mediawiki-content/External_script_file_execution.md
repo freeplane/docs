@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ## Setting the External Script Directories Search Path
 
 There is a mechanism to load and execute scripts from *script directories* matching a given name scheme (hardcoded: <tt>".*\.groovy"</tt>). 

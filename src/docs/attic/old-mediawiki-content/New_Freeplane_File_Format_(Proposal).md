@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ; Attention`:` : This effort is on hold until further notice (perhaps after release of version 1.2/1.3).
 
 ----

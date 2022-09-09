@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Starting with **Freeplane preview version 1.3.2_02** all .groovy files in the script classpath directories are automatically compiled when Freeplane starts. The .class files are generated besides their .groovy source files in the classpath directories. Keep in mind that <tt>package</tt> declarations in the script files determine the location of the class files. See [scriptlib](http://www.freeplane.org/wiki/index.php?title=Add-ons_%28install%29#scriptlib) for some generic scripts and adding Help to your script.
 
 ## Extract often used functionality

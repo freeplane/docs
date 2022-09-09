@@ -1,3 +1,5 @@
+<!-- toc -->
+
 <!-- customization -->
 
 # Customizing Freeplane

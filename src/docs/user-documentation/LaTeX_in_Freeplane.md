@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Freeplane 1.2.x supports LaTeX formulae in boxes underneath nodes while Freeplane 1.3.x deprecates those boxes and adds LaTeX directly to node contents. Please see the relevant subsections below.
 
 Thanks to the excellent [JLaTeXMath](http://forge.scilab.org/index.php/p/jlatexmath/)!

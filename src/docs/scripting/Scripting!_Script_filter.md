@@ -1,3 +1,5 @@
+<!-- toc -->
+
 For special search and filtering tasks scripting can be employed. The rich [scripting API](http://www.freeplane.org/wiki/index.php/Scripting_API) gives access to all relevant properties of nodes and the [Groovy language](http://groovy.codehaus.org/) provides all measures to express every filtering condition you may think of.
 
 Script filters are selected either via *Filter->Compose filter* or via the filtering toolbar in the following way:

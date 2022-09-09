@@ -1,3 +1,5 @@
+<!-- toc -->
+
 
 The following describes the difference between Freeplane 1.1.3 and Freeplane 1.2.x. To load the development version 1.2.x go to the [preview area](http://www.freeplane.org/preview/).''
 

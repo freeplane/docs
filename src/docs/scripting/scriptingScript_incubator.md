@@ -1,3 +1,5 @@
+<!-- toc -->
+
 A collection of scripts that might need a review before adding them to the "official" [Scripts collection](../scripting/Scripts_collection .md).
 
 Feel free to add your own scripts to this page. If you give script a name using wiki text like

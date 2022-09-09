@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Problem solving is one of the most important human activities. 
 Here comes information about a powerful method for computer aided problem solving.
 

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 These are the steps to publish an add-on:
 
 ## Put the source code under public version control

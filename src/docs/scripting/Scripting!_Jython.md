@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Hints for scripting Freeplane in Python/Jython
 
 You may want to have this url http://www.freeplane.org/doc/api/ at hand.

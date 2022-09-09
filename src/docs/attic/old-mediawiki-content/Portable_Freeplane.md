@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Portable Freeplane
 
 Freeplane can run as a [portable application](http://portableapps.com/) from your USB stick. 

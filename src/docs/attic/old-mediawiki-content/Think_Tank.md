@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Think Tank
 
 Team discussion space for developing our goals, visions and steps. 

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ## Freeplane does not start
 
 * Check that the java runtime environment is installed. Sun JRE 1.6 or later is recommended.

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Freeplane's release cycle is time boxed at 6-9 months, and meant to allow for 1-2 stable releases per year (but much more unstable releases ;-) ).
 
 ![](Freeplane_Release_model.png ':size=800')

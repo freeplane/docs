@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Top level projects
 
 Freeplane is a Java Swing application that has two major

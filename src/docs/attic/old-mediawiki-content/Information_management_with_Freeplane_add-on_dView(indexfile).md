@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Introduction
 The add-on *dView(indexfile)* supports adding annotations, hyperlinks and reminders to file names in a folder structure. For this a specialized dashboard mindmap must be put into the folder to index. When this dashboard is opened and button *Index* is pressed, a hierarchy of nodes with hyperlinks to the subfolders and files of the indexed folder is generated. Next one can add annotations, add hyperlinks to other files or websites, and add reminders (clock) for file related actions. If email adresses are registerd, with one click  all users of a particular dashboard can be sent a group-email. The resulting mindmap can be shared with other users, which can navigate it without having to install the add-on. With special options set the add-on can be used with MS Sharepoint or on the internet, and/or be used to generate NATO-compliant file names.
 

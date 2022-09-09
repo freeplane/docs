@@ -1,3 +1,5 @@
+<!-- toc -->
+
 [<mm>[[:FreeplaneWiki.mm |applet| Index wiki](File:FreeplaneWiki.jpg.md) </mm>]]
 <div style="background-color: rgb(255, 255, 204);">Because of spammer  attacks editing of this wiki is allowed only for registered wiki editors. 
 

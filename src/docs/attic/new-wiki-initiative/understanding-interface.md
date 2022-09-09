@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Understand the Freeplane interface
 
 ## Overview

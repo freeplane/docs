@@ -1,3 +1,5 @@
+<!-- toc -->
+
 With external Java libraries you can explore completely new application fields with Freeplane and accomplish amazing things. Remember: Groovy is fully Java compatible, i.e. you can use *any* available Java library.
 
 # General installation instructions for external Java libraries

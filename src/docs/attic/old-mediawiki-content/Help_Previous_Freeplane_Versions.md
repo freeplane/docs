@@ -1,3 +1,5 @@
+<!-- toc -->
+
 If you are having questions, or are experiencing problems there is information in the documention and on the internet. In the following is described where to find the information for different versions of Freeplane. 
 
 # Freeplane 1.1.x

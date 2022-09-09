@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Right click on the node or select menu Insert&gt;External object... 
 
 ![Inserting external object](Mezer_09-18_15-46-25.png) &nbsp; 

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Our main goals for Freeplane are: 
 
 Better Mind Map editor than FreeMind 

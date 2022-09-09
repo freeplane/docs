@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Integrated Development Environments (IDE) like [Eclipse](http://www.eclipse.org) or [Idea](http://www.jetbrains.com/idea/) make it much easier to edit Groovy scripts for Freeplane as in a normal text editor. Syntax highlighting, code completion, error detection, debugging and source navigation are extremely useful especially if you are not that experienced.
 
 But it's more or less difficult for beginners to setup an IDE properly for Groovy scripting, so here's a step-by-step guide. If you have done that already you can skip to page [Edit scripts in Eclipse](Edit_scripts_in_Eclipse.md).

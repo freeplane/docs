@@ -1,3 +1,5 @@
+<!-- toc -->
+
 See [Help Previous Freeplane Versions](Help_Previous_Freeplane_Versions.md) for Freeplane 1.1.3.
 The following is Help for Freeplane 1.2.x
 [![Index wiki](FreeplaneWiki.jpg)](https://www.freeplane.org/mapsOnline/?map=IndexWiki.mm)

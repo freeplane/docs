@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Here are a few screencasts of Freeplane in action.
 
 I would highly recommend screencast-o-matic for recording as it works on every platform with Java installed.

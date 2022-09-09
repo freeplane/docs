@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Freeplane document format is written in XML.
 
 [Here](https://github.com/igor-go/mm_xslt_exports/blob/master/freeplane_1.3.x.xsd) you can find the last version of its XSD schema.

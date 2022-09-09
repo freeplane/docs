@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ## Freeplane Release Process 
 
 Releasing a stable or unstable version of Freeplane is a two stage process.  Each new test version is uploaded to a [testing area](https://www.freeplane.org/testversion/) prior to release.  When one or more tester confirms that the test version has introduced no major bugs, it will be uploaded as an official release to the Sourceforge files section.  Otherwise, a new test version will be uploaded.  At the moment only team members and selected testers are alerted when new test versions are available, but you are free to periodically check and download any new versions in the [testing area](https://www.freeplane.org/testversion/).

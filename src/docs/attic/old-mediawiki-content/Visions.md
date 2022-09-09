@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # What is a vision?
 
 A vision for a project is like a constitution for a state, it should give a common sense of values by which all members of the community abide, it should be broad and generic enough that it doesn't need to be changed often, but it should also be precise enough that rules and decisions can be checked against it. 

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 This page contains a gallery of screenshots showing the features of Freeplane, and all the nice things you can do with it.
 
 ----

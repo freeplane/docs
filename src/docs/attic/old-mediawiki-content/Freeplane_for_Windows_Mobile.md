@@ -1,3 +1,5 @@
+<!-- toc -->
+
 A "light" version of Freeplane called Freeplane for Windows Mobile is available for Pocket PC running under Windows Mobile OS.
 
 ![](WinMo_FreeplaneV2.jpg)

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ## Description of Vulnerability
 A malicious mind map containing scripts or formulas can be used to escape the JVM sandbox and take full control over the victim's computer by leveraging Groovy to violate Java's access modifiers and disable the Security Manager. We recommend all our users to upgrade to the latest version as soon as possible.
 

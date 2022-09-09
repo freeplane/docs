@@ -1,3 +1,5 @@
+<!-- toc -->
+
 The first version of this [Scripting](Scripting.md) article mainly consists/consisted of a port of the [FreeMind script collection](http://freemind.sourceforge.net/wiki/index.php/Example_scripts). Some of those scripts got a general rewrite; - especially those that were marked buggy or even broken. But I took the freedom to improve every script where it made sense. With one exception ("Sum up all subnodes...", a very long script) I have ported all scripts from the FreeMind page, regardless of how useful I found them since I believe that you will be able to learn from all of them.
 
 Unfortunately scripts might get old over time, i.e. when scripting idioms evolve over time old scripts should be upgraded. If you find such scripts do a post in the [forum](http://sourceforge.net/apps/phpbb/freeplane/viewforum.php?f=1).

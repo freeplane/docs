@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Freeplane comes with it's own version of the Groovy library. If you want up update it to a more recent one you can do that quite easily. It just takes the following steps:
 
 1. Download Groovy binary distribution package (e.g. <tt>groovy-binary-1.8.0.zip</tt>) from http://groovy.codehaus.org/Download.

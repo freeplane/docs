@@ -1,3 +1,5 @@
+<!-- toc -->
+
 This page gives instructions for developing [Freeplane add-ons](../getting-started/Add-ons_(install).md).
 
 Freeplane is built from modules called "plugins" like the Scripting, Formula or LaTeX plugin, ... Add-ons are a more light-weight extension mechanism than plugins. There are several add-ons that don't need any programming know-how, but depending on the purpose of your add-on you might have to write [scripts](Scripting.md). Scripts can be organized in a special lib where they are compiled automatically when Freeplane is run, see [wiki](Your_own_utility_script_library.md).

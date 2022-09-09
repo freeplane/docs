@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Freeplane features you were missing in FreeMind
 
 This page lists important features of Freeplane that are not available in

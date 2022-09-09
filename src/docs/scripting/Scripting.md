@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Freeplane's builtin functionality can be extended by [Groovy](http://groovy-lang.org/) and [JavaScript](http://en.wikipedia.org/wiki/JavaScript) scripts. Starting with Freeplane 1.3.5_05 you can use [many other languages](Scripting!_Other_languages.md), e.g Python. This page gives a first impression what you can do with Groovy scripting and helps to get started.
 
 With Freeplane scripting you can

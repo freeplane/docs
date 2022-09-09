@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Any mind map can be used as a template for new mind maps. In this case its styles and nodes are copied to the new map.
 
 * Use action "File->new map from template..." to select a template map.

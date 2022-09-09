@@ -1,3 +1,5 @@
+<!-- toc -->
+
 
 
 ## Add your own icons to Freeplane

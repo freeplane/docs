@@ -1,3 +1,5 @@
+<!-- toc -->
+
 
 # Formatting maps and nodes
 

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 **This page explains how to install Freeplane for the Ubuntu operating system, there are 3 main ways to proceed.**
 
 

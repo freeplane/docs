@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Introduction
 The purpose of this page is to describe **basic principles to build easy to use Menus for a rich mind map software called Freeplane** !
 

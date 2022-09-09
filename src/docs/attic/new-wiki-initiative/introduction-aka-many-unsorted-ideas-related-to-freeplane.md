@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Introduction aka many unsorted ideas related to Freeplane
 
 ### Getting started

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Security considerations
 
 ### Scripting

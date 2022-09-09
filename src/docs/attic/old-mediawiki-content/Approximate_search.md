@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Approximate Search in Freeplane
 
 Starting with 1.2.13, Freeplane includes an 'Approximate Search' feature which allows to find

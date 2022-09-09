@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Freeplane menus definition
 
 ## Introduction

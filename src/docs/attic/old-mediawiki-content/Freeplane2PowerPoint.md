@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Exporting from Freeplane to PowerPoint is quite easy. These steps where done with PowerPoint 2007 and Freeplane 1.2.12 beta.
 
 1. Select the node that is one level above what will be your slides in PowerPoint (usually the center topic), right click, select Copy.![](ScreenClip_-13-.png)

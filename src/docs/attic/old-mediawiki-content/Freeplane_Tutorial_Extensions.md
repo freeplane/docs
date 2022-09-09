@@ -1,3 +1,5 @@
+<!-- toc -->
+
 If you are not English: see [Translated wiki pages](Category:Translation.md) if this tutorial has been translated into your language.
 
 

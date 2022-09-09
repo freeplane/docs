@@ -1,3 +1,5 @@
+<!-- toc -->
+
 ## First steps
 
 * to create a new node, press `enter`

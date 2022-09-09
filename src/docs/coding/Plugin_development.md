@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Create a new Plugin
 
 With the introduction of the gradle build system (Freeplane >= 1.4.1), the

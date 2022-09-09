@@ -1,3 +1,5 @@
+<!-- toc -->
+
 These are scripts which deal mostly with editing the text of nodes.
 
 Some of them are also available in the editgoodies addon. 

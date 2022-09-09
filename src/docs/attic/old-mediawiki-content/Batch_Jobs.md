@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Freeplane is a program with a graphical user interface. - That's smart since it would be hard to create mindmaps otherwise...
 
 But there are some cases where you might want to let Freeplane do something for you unattended especially if you have appropriate scripts. So here's what Freeplane supports in this respect:

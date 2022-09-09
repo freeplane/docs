@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Working with mind-map files
 
 ## Create a new map

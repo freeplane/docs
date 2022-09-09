@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Formulas are very similar to formulas in spreadsheet processors like Excel or OpenOffice Calc:
 
 ```groovy

@@ -1,3 +1,5 @@
+<!-- toc -->
+
 <!-- ({Category:Coding}) -->
 
 This page tries to reflect changes of the Freeplane file format.

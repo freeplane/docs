@@ -1,3 +1,5 @@
+<!-- toc -->
+
 Deze pagina ondersteunt de vertaling van Freeplane naar het Vlaams/Nederlands. Discussie is mogelijk op het forum in [Dutch/Flemish translation / Vlaamse/Nederlandse vertaling](https://sourceforge.net/p/freeplane/discussion/758437/thread/fe83a1fb/). Deze pagina kan dan verder gewijzigd en aangevuld worden met conclusies uit deze discussie.
 
 
