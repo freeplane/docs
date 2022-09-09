@@ -4,7 +4,7 @@ With external Java libraries you can explore completely new application fields w
 
 Java libraries normally come in form of <tt>.jar</tt> files which you have to make known to the application that wants to use them. Here's the way to do that in Freeplane:
 
-1. only before 1.4: Create a folder <tt>lib</tt> in your [Freeplane user directory](https://www.freeplane.org/wiki/index.php/FAQ#Where_is_the_.22user_directory.22.3F)
+1. only before 1.4: Create a folder <tt>lib</tt> in your Freeplane user directory
 
 2. Copy the <tt>.jar</tt> file to that directory.
 
@@ -20,9 +20,9 @@ Test script that shows how to connect to an Oracle database. Thanks to Pascal [f
 
 **Installation instructions:**
 
-1. Save the script to the scripts folder in your [Freeplane user directory](https://www.freeplane.org/wiki/index.php/FAQ#Where_is_the_.22user_directory.22.3F) and edit <tt>USERNAME/PASSWORD</tt> and the rest of the database url appropriately.
+1. Save the script to the scripts folder in your Freeplane user directory and edit <tt>USERNAME/PASSWORD</tt> and the rest of the database url appropriately.
 
-2. Follow the instructions at the beginning of this chapter to install [ojdbc14-10.1.0.4.0.jar](http://www.google.com/search?q=oracle+jdbc+driver+download) (or later) to the <tt>lib</tt> directory in your [Freeplane user directory](https://www.freeplane.org/wiki/index.php/FAQ#Where_is_the_.22user_directory.22.3F)
+2. Follow the instructions at the beginning of this chapter to install [ojdbc14-10.1.0.4.0.jar](http://www.google.com/search?q=oracle+jdbc+driver+download) (or later) to the <tt>lib</tt> directory in your Freeplane user directory
 
 Required permissions: Execute script, read file, network access.
 Requires Freeplane 1.2.
@@ -53,9 +53,9 @@ Test script that shows how to connect to a MySQL database. Thanks to [Pascal and
 
 **Installation instructions:**
 
-1. Save the script to the scripts folder in your [Freeplane user directory](https://www.freeplane.org/wiki/index.php/FAQ#Where_is_the_.22user_directory.22.3F) and edit database access properties appropriately.
+1. Save the script to the scripts folder in your Freeplane user directory and edit database access properties appropriately.
 
-2. Follow the instructions at the beginning of this chapter to install [mysql-connector-java-5.1.17-bin.jar](http://www.google.com/search?q=mysql+jdbc+driver+download) (or similar) to the <tt>lib</tt> directory in your [Freeplane user directory](https://www.freeplane.org/wiki/index.php/FAQ#Where_is_the_.22user_directory.22.3F)
+2. Follow the instructions at the beginning of this chapter to install [mysql-connector-java-5.1.17-bin.jar](http://www.google.com/search?q=mysql+jdbc+driver+download) (or similar) to the <tt>lib</tt> directory in your Freeplane user directory
 
 Required permissions: Execute script, read file, network access.
 Requires Freeplane 1.2.
@@ -90,9 +90,9 @@ Test script that shows how to connect to a SQLite database.
 
 **Installation instructions:**
 
-1. Save the script to the scripts folder in your [Freeplane user directory](https://www.freeplane.org/wiki/index.php/FAQ#Where_is_the_.22user_directory.22.3F) and edit database access properties appropriately.
+1. Save the script to the scripts folder in your Freeplane user directory and edit database access properties appropriately.
 
-2. Download [sqlite-jdbc-(VERSION).jar](https://www.google.de/?gws_rd=ssl#q=download+sqlite+jdbc) to the <tt>lib</tt> directory in your [Freeplane user directory](https://www.freeplane.org/wiki/index.php/FAQ#Where_is_the_.22user_directory.22.3F)
+2. Download [sqlite-jdbc-(VERSION).jar](https://www.google.de/?gws_rd=ssl#q=download+sqlite+jdbc) to the <tt>lib</tt> directory in your Freeplane user directory
 
 Required permissions: Execute script, read+write file, network access.
 Requires Freeplane 1.3.
@@ -126,7 +126,7 @@ Example how to use [JFreeChart](http://www.jfree.org/jfreechart) in Freeplane. T
 
 Follow the instructions at 
 [the beginning of this chapter](https://www.freeplane.org/wiki/index.php/Scripting!_Example_scripts#General_installation_instructions_for_external_Java_libraries) 
-to install <tt>jfreechart-<version>.jar</tt> and <tt>jcommon-<version>.jar</tt> [(download)](http://www.jfree.org/jfreechart/download.html) to the <tt>lib</tt> directory in your [Freeplane user directory](https://www.freeplane.org/wiki/index.php/FAQ#Where_is_the_.22user_directory.22.3F)
+to install <tt>jfreechart-<version>.jar</tt> and <tt>jcommon-<version>.jar</tt> [(download)](http://www.jfree.org/jfreechart/download.html) to the <tt>lib</tt> directory in your Freeplane user directory
 
 Required permissions: Execute script, read file.
 Requires Freeplane 1.2.

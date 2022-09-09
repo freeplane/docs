@@ -29,6 +29,9 @@
     - [Formula filter](scripting/Scripting!_Script_filter.md)
   - [Scripts]()
     - [Scripts collection](scripting/Scripts_collection.md)
+    - [Scripts for text editing](scripting/Scripting_text_editing.md)
+    - [Scripts using external libraries](scripting/Example_scripts_using_external_libraries.md), too.
+    - [Script incubator](scripting/Script_incubator.md)
     - [Scripting! Jython](scripting/Scripting!_Jython.md)
     - [Scripting environment setup](scripting/Scripting_environment_setup.md)
   - [XSLT for export/import]()
@@ -44,7 +47,7 @@
 
 # Attic
 
--[Attic (draft documents)](attic/home.md)
+- [Attic (draft documents)](attic/home.md)
   - [Old MediaWiki content]()
     - [Old Home](attic/old-mediawiki-content/Home.md)
     - [Approximate search](attic/old-mediawiki-content/Approximate_search.md)
@@ -98,14 +101,11 @@
     - [Release cycle](attic/old-mediawiki-content/Release_cycle.md)
     - [Release smoke test](attic/old-mediawiki-content/Release_smoke_test.md)
     - [Rules to build user friendly menus](attic/old-mediawiki-content/Rules_to_build_user_friendly_menus.md)
-    - [Script incubator](attic/old-mediawiki-content/Script_incubator.md)
     - [Scripting! API Changes](attic/old-mediawiki-content/Scripting!_API_Changes.md)
-    - [Scripting! Example scripts using external libraries](attic/old-mediawiki-content/Scripting!_Example_scripts_using_external_libraries.md)
     - [Scripting! Freeplane Utility Classes](attic/old-mediawiki-content/Scripting!_Freeplane_Utility_Classes.md)
     - [Scripting! Included libraries](attic/old-mediawiki-content/Scripting!_Included_libraries.md)
     - [Scripting! Other languages](attic/old-mediawiki-content/Scripting!_Other_languages.md)
     - [Scripting! Update Freeplane's Groovy version](attic/old-mediawiki-content/Scripting!_Update_Freeplane's_Groovy_version.md)
-    - [Scripting! text editing](attic/old-mediawiki-content/Scripting!_text_editing.md)
     - [Scripting API](attic/old-mediawiki-content/Scripting_API.md)
     - [Support](attic/old-mediawiki-content/Support.md)
     - [Think Tank](attic/old-mediawiki-content/Think_Tank.md)
@@ -126,3 +126,7 @@
     - [introduction-aka-many-unsorted-ideas-related-to-freeplane](attic/new-wiki-initiative/introduction-aka-many-unsorted-ideas-related-to-freeplane.md)
     - [understanding-interface](attic/new-wiki-initiative/understanding-interface.md)
     - [understanding-nodes](attic/new-wiki-initiative/understanding-nodes.md)
+
+# Special pages
+
+- [After redirect from the old media wiki](after-redirect.md)

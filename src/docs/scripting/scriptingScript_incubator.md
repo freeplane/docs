@@ -18,7 +18,7 @@ So these scripts aim at increasing/decreasing the node-width (the same way that 
 
 ### How to install the scripts
 
-1. Download the 2 scripts from https://www.freeplane.org/wiki/index.php/Script_incubator and put them inside the directory "<freeplane-user-dir>/scripts" (you can open "<freeplane-user-dir>" clicking in "Tools/Open user directory")
+1. Download the 2 scripts from this page and put them inside the directory "<freeplane-user-dir>/scripts" (you can open "<freeplane-user-dir>" clicking in "Tools/Open user directory")
 2. Restart Freeplane   - Verify that the 2 new scripts appear in these 2 new menu-entries "Tools/Scripts/Node Width_Increase" and "Tools/Scripts/Node Width_Decrease"
 3. optional Assign a shortcut-key to each of the 2 menu-entries (hold CTRL while clicking a menu-entry)
 
