@@ -13,9 +13,7 @@ tasks:
       tar xf mdbook-open-on-gh-2.2.0-x86_64-unknown-linux-gnu.tar.gz
       cd ../..
     command: |
-      mdbook serve src --dest-dir ../build/gh-pages &
-      python3 -m http.server 8080 --directory build/gh-pages
-
+      mdbook serve src --dest-dir ../build/gh-pages -p 3000
 ports:
   - port: 8080
     onOpen: open-preview
