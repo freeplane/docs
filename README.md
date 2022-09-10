@@ -11,7 +11,7 @@ Is includes only pages listed in the table of content file `src/docs/SUMMARY.md`
 
 The main content is located in the `src/docs` directory.
 There's a sub-directory called `attic`, which contains draft documents, separated into
- 
+
 * `old-mediawiki-content`– MediaWiki pages (pre-2022 wiki) migrated to Markdown for GitHub,
 * `new-wiki-initiative`– pages created around 2021 and later as an attempt to start using GitHub and Markdown for documentation.
 
@@ -24,13 +24,11 @@ Relative links should be used.
 
 ## How to run the site locally
 
-* Install python, if not already available → https://www.python.org/downloads/
 * Install mdbook and the preprocessors
 * Clone the repository, e.g. `git clone https://github.com/freeplane/docs.git`
 * Change directory to docs `cd docs`
-* Run `mdbook serve src --dest-dir ../build/gh-pages &`
-* Run python http server: `python3 -m http.server 8080 --directory build/gh-pages`
-* Browse the site at http://localhost:8080/
+* Run `mdbook serve src --dest-dir ../build/gh-pages -p 3000`
+* Browse the site at http://localhost:3000/
 * When you edit the pages, the changes are applied automatically
 
 ## Edit on-line
