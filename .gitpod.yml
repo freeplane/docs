@@ -15,5 +15,5 @@ tasks:
     command: |
       mdbook serve src --dest-dir ../build/gh-pages -p 3000
 ports:
-  - port: 8080
+  - port: 3000
     onOpen: open-preview
