@@ -22,7 +22,6 @@
   - [References to other known documentation/tutorial sites](user-documentation/other-docs-tutorials.md)- [Mind map examples](https://github.com/freeplane/freeplane/discussions/categories/shared-mind-maps)
 - [Contribute](contribute/contribute.md)
   - [Translation How-To](contribute/Translation_How-To.md)
-  - [Contributing to Freeplane's Development](contribute/Contributing_to_Freeplane's_Development.md)
 - [Scripting](scripting/Scripting.md)
   - [Formulas](scripting/Formulas.md)
     - [Formulas](scripting/Formulas.md)
