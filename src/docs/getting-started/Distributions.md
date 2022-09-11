@@ -1,7 +1,7 @@
 
 Freeplane is available for differents Operating systems. All Freeplane setup files are available for [download here](https://sourceforge.net/projects/freeplane/).
 
-Please find below recommandations to choose which **file to download before installing Freeplane on your computer**.
+Please find below recommendations to choose which **file to download before installing Freeplane on your computer**.
 
 <!-- toc -->
 
@@ -21,4 +21,6 @@ Requires [Open JDK JRE64 portable java version 15](https://sourceforge.net/proje
 # Distributions for Linux
 
 * **freeplane_xxx~upstream-1_all.deb**: Debian installer compliant with differents Linux derivatives.
-* **freeplane_bin-xxx.zip**: archive without installer. It requires Java 11 to 17 to be installed. To use this version set environment variable path [FREEPLANE_JAVA_HOME](Command-line_options_and_configuration.md#select-java-installation-used-to-run-freeplane).
+* **freeplane_bin-xxx.zip**: archive without installer. 
+
+They both requires Java 11 to 17 to be installed. To use them, set environment variable path [FREEPLANE_JAVA_HOME](Command-line_options_and_configuration.md#select-java-installation-used-to-run-freeplane).
