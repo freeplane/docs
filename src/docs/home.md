@@ -20,18 +20,34 @@ Contributors are very much welcome, of course!
 
 ![student](images/a-students-second-brain.png ':size=600')
 
+-------------
+
 ![slides](images/no-more-slides.png ':size=600')
+
+-------------
 
 ![formatting](images/extensive-formatting-options.png ':size=600')
 
+-------------
+
 ![UI](images/ui.png ':size=600')
+
+-------------
 
 ![addons](images/add-ons-and-scripting-aka-macros.png ':size=600')
 
+-------------
+
 ![command search](images/command-search.png ':size=600')
+
+-------------
 
 ![styling](images/conditional-styling.png ':size=600')
 
+-------------
+
 ![formulas](images/formulas.png ':size=600')
+
+-------------
 
 ![discussions](images/discussions.png ':size=600')
