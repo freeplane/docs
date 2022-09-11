@@ -1,4 +1,4 @@
-# After redirect
+# New documentation site
 
 You have been redirected to the new Freeplane documentation site.
 
