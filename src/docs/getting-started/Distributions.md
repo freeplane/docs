@@ -1,5 +1,5 @@
 
-Freeplane is available for differents Operating systems. All Freeplane setup files are available for [download here](https://sourceforge.net/projects/freeplane/).
+Freeplane is available for differents Operating Systems. All Freeplane setup files are available for [download here](https://sourceforge.net/projects/freeplane/files/freeplane%20stable).
 
 Please find below recommendations to choose which **file to download before installing Freeplane on your computer**.
 
