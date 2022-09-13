@@ -152,7 +152,9 @@
 <p>You can define your own export as xslt table where you can implement all transformations. For instance you can generate your own xhtml and also attribute html elements with class attributes for css styling. XSL files must be stored in the <em>xslt</em> subfolder, either in the Freeplane system directory (e.g. C:\Program Files\Freeplane\resources\xslt) or in the Freeplane user directory (e.g. ~/.freeplane/xslt/). </p>
 <p>XSL files must have the .xsl extension. </p>
 <p>XSL files must contain within the 5 first lines a string matching the following pattern: </p>
-<p>?&gt; MINDMAPEXPORTFILTER <em>extensions</em> <em>description</em></p>
+<blockquote>
+<p>MINDMAPEXPORTFILTER <em>extensions</em> <em>description</em></p>
+</blockquote>
 <p>where the fields in italic are relative to the file format to which the mindmap will be exported to using this specific XSLT sheet: </p>
 <ul>
 <li><em>extensions</em> is a semi-colon separated list of acceptable file extensions without asterisk or dot (e.g. &quot;htm;html&quot;) </li>

@@ -843,7 +843,9 @@ It can be opened by right-clicking on the mind map background and selecting <cod
 <p>In addition to formatting an entire node, it is possible to format each character/word in the node.
 It can be done by using the editor dialog <code>Edit-&gt;Node code-&gt;Edit node core in dialog (Alt+Enter)</code>.</p>
 <p><img src="user-documentation/../images/word-level_dialog_formatting-1&#x27;10&#x27;2.png" alt="" title=":size=200" /></p>
-<p>?&gt; Note: It's also possible to use the hot keys in the in-line editor (e.g. <code>Ctrl+L</code> for blue).</p>
+<blockquote>
+<p>Note: It's also possible to use the hot keys in the in-line editor (e.g. <code>Ctrl+L</code> for blue).</p>
+</blockquote>
 <h3 id="using-format"><a class="header" href="#using-format">Using Format</a></h3>
 <p><strong>Format</strong> allows to apply a special data format, e.g. a special or number date format.
 If for instance a date has the standard format <code>28/12/2012</code> it can be reformatted as <code>12/28/2012</code> by applying the format <code>mm/dd/yyyy</code> to the node.
@@ -871,7 +873,9 @@ In text templates &quot;%s&quot; represent the original node text like in &quot;
 <h1 id="styles-1"><a class="header" href="#styles-1">Styles</a></h1>
 <p>A style is a bundle of <a href="user-documentation/formatting-maps-and-nodes.html">formatting</a> properties and icons, saved under a style name. 
 Styles are saved in the map itself.</p>
-<p>?&gt; Styles' properties can be viewed and changed in <code>Format-&gt;Manage Styles-&gt;Edit stles (Ctrl+F11)</code> → <a href="user-documentation/styles.html#style-editing">style editing</a></p>
+<blockquote>
+<p>Note: Styles' properties can be viewed and changed in <code>Format-&gt;Manage Styles-&gt;Edit stles (Ctrl+F11)</code> → <a href="user-documentation/styles.html#style-editing">style editing</a></p>
+</blockquote>
 <p>Freeplane has several predefined styles, like <code>Default</code>, <code>Floating node</code> or <code>Important</code>, as well as <code>Automatic level styles</code> like <code>Level 1</code>, <code>Level 2</code>.
 A template might have additional styles, and any mind map created from such a template will inherit the template styles. 
 Moreover, any mind map can have its own additional styles and/or delete some of the inherited ones.</p>
@@ -896,7 +900,9 @@ Then formatting properties from both <code>Level</code> and <code>Important</cod
 <li>Automatic level style</li>
 <li>Default style</li>
 </ol>
-<p>?&gt; Note: <code>Selected style</code> is only in effect if <code>Preferences-&gt;Defaits-&gt;Selection colors-&gt;Display selected nodes in bubbles</code> is off.</p>
+<blockquote>
+<p>Note: <code>Selected style</code> is only in effect if <code>Preferences-&gt;Defaits-&gt;Selection colors-&gt;Display selected nodes in bubbles</code> is off.</p>
+</blockquote>
 <p><code>Default</code> is the base layer. 
 Whatever property is set on that layer will either shine through or be overwritten by the next layer put on top of <code>Default</code>.
 If <code>Apply level styles</code> is enabled, any formatting property (e.g. background color) set on an <code>Automatic leve style</code> (e.g. <code>Level 1</code>), will override properties set on <code>Default</code>.
@@ -970,8 +976,10 @@ Once this is done, the style will be available in each new mind map created from
 <h2 id="file-paths-for-templates"><a class="header" href="#file-paths-for-templates">File Paths for Templates</a></h2>
 <p>Depending on your OS, you can find template folders in different directories. 
 However, on every OS, there is a subfolder in the Freeplane installation-folder, where you can store user-defined template files.</p>
-<p>?&gt; You can also change the default directory containing the user configuration.
+<blockquote>
+<p>Note: You can also change the default directory containing the user configuration.
 This means, the file path for templates might be different in your Freeplane (see <a href="user-documentation/templates.html#the-user-directory">The user directory</a>).</p>
+</blockquote>
 <h3 id="windows"><a class="header" href="#windows">Windows</a></h3>
 <!-- FIXME: where are the locations on Windows? -->
 <p><em>TODO</em></p>
@@ -999,8 +1007,10 @@ In the dialogue you have different options, depending on which <code>Files of Ty
 <tr><td style="text-align: left"><code>User templates (*.mm)</code></td><td style="text-align: left">your template mind maps → <a href="user-documentation/templates.html#file-paths-for-templates"><strong>user-defined</strong> path for template files</a></td></tr>
 </tbody></table>
 </div>
-<p>?&gt; Depending on your current choice in the drop-down menu at the bottom of this dialogue, the path in the <em>upper</em> part changes accordingly:<br />
+<blockquote>
+<p>Note: Depending on your current choice in the drop-down menu at the bottom of this dialogue, the path in the <em>upper</em> part changes accordingly:<br />
 If you click on <code>Standard template (*.mm)</code> it will show you the <strong>system-wide</strong> path for templates, if you click on <code>User templates (*.mm)</code> it will change to the <strong>user-defined</strong> path.</p>
+</blockquote>
 <footer id="open-on-gh">Found a mistake? <a href="https://github.com/freeplane/docs/edit/main/src/docs/user-documentation/templates.md">Edit this page on GitHub.</a></footer><div style="break-before: page; page-break-before: always;"></div><ul>
 <li><a href="user-documentation/css-for-html-or-markdown.html#css-for-htmlmarkdown">CSS For HTML/Markdown</a>
 <ul>
@@ -1973,7 +1983,6 @@ Check Help &gt; Documentation Maps Online &gt; indexMap &gt; Images/doc for the 
 <li>have <a href="scripting/Init_scripts.html">init scripts</a> executed on startup that changes Freeplane's behavior (since Freeplane 1.5).</li>
 </ul>
 <p>Most people use scripting to automate otherwise tedious procedures like creating a node with a special style and some standard attributes. But much more is possible with scripting.</p>
-<p><br> <strong>TOC</strong> </p>
 <p><a href="scripting/External_script_file_execution.html">External Groovy scripts</a> can be integrated simply by placing them in the <em>scripts</em> subdirectory of the Freeplane homedir. Such scripts can be used like any other built-in function of Freeplane.</p>
 <p>After some preparation we'll create the first script.</p>
 <h3 id="preparation"><a class="header" href="#preparation">Preparation</a></h3>
@@ -9721,7 +9730,9 @@ On the command line (assuming that ~/.freeplane/1.2.x/scripts is Freeplane's scr
 <p>You can define your own export as xslt table where you can implement all transformations. For instance you can generate your own xhtml and also attribute html elements with class attributes for css styling. XSL files must be stored in the <em>xslt</em> subfolder, either in the Freeplane system directory (e.g. C:\Program Files\Freeplane\resources\xslt) or in the Freeplane user directory (e.g. ~/.freeplane/xslt/). </p>
 <p>XSL files must have the .xsl extension. </p>
 <p>XSL files must contain within the 5 first lines a string matching the following pattern: </p>
-<p>?&gt; MINDMAPEXPORTFILTER <em>extensions</em> <em>description</em></p>
+<blockquote>
+<p>MINDMAPEXPORTFILTER <em>extensions</em> <em>description</em></p>
+</blockquote>
 <p>where the fields in italic are relative to the file format to which the mindmap will be exported to using this specific XSLT sheet: </p>
 <ul>
 <li><em>extensions</em> is a semi-colon separated list of acceptable file extensions without asterisk or dot (e.g. &quot;htm;html&quot;) </li>
@@ -14793,7 +14804,9 @@ Because of limitations of the mind map viewer, the interactive maps may  behave 
 &lt;office:styles&gt;           [...] &lt;/office:styles&gt;
 &lt;/office:document&gt;
 </code></pre>
-<p>?&gt; <strong>Notes</strong> : Once Freeplane has a registered mime-type, mimetype could become <tt>application/freeplane</tt>. The version is made of the ODF version 1.2, 'fp' for Freeplane and an internal version number, 1.0 to start with.</p>
+<blockquote>
+<p><strong>Notes</strong> : Once Freeplane has a registered mime-type, mimetype could become <tt>application/freeplane</tt>. The version is made of the ODF version 1.2, 'fp' for Freeplane and an internal version number, 1.0 to start with.</p>
+</blockquote>
 <h5 id="313-package-opendocument-files"><a class="header" href="#313-package-opendocument-files">3.1.3 Package OpenDocument Files</a></h5>
 <p>File <tt><strong>content</strong>.xml</tt>:</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
@@ -14830,10 +14843,12 @@ Because of limitations of the mind map viewer, the interactive maps may  behave 
 <p>⇒ Freeplane should offer a dialog to enter document information.</p>
 <h4 id="33-officebody"><a class="header" href="#33-officebody">3.3 <a href="office:body">office:body</a></a></h4>
 <p>Mandatory section, but only child needed is a Freeplane specific <tt><code>&lt;x-office:map&gt;</code></tt>.</p>
-<p>?&gt; <strong>Note</strong> : x-office is used instead of office to avoid polluting the 'office' namespace. x-office can be used as an alternative prefix for the same Freeplane namespace as 'map'.</p>
+<blockquote>
+<p><strong>Note</strong> : x-office is used instead of office to avoid polluting the 'office' namespace. x-office can be used as an alternative prefix for the same Freeplane namespace as 'map'.</p>
+</blockquote>
 <h4 id="34-to-39-not-needed-replaced-by-x-officemap"><a class="header" href="#34-to-39-not-needed-replaced-by-x-officemap">3.4 to 3.9 not needed, replaced by <a href="x-office:map">x-office:map</a></a></h4>
 <tt>
-?> **TBD** : The exact content of a map will be described in [Freeplane_File_Format/Maps](Freeplane_File_Format/Maps.md)
+> **TBD** : The exact content of a map will be described in [Freeplane_File_Format/Maps](Freeplane_File_Format/Maps.md)
 <h4 id="310-officesettings"><a class="header" href="#310-officesettings">3.10 <a href="office:settings">office:settings</a></a></h4>
 <p>Section can and should be used as-is. No changes needed.</p>
 <p>Possibly Freeplane doesn't need the full scope and could cope only with <tt>config-item-set</tt> and <tt>config-item</tt> as in:</p>
@@ -14848,14 +14863,18 @@ Because of limitations of the mind map viewer, the interactive maps may  behave 
 [...]
 &lt;/office:settings&gt;
 </code></pre>
-<p>?&gt; <strong>Note</strong> : as described in chapter 19.32, The values of the config:type attribute are boolean, short, int, long, double, string, datetime or base64Binary.</p>
+<blockquote>
+<p><strong>Note</strong> : as described in chapter 19.32, The values of the config:type attribute are boolean, short, int, long, double, string, datetime or base64Binary.</p>
+</blockquote>
 <h4 id="311-cursor-position-setting"><a class="header" href="#311-cursor-position-setting">3.11 Cursor Position Setting</a></h4>
 <p>A bit unclear, but I understand something like the following is possible:</p>
 <pre><code>&lt;?opendocument cursor-position=&quot;''XXX''&quot; ?&gt;
 </code></pre>
 <p>where <em>XXX</em> is a mean to give the cursor position at the time where the document was saved. In Freeplane's case, it could just be a map and/or node ID, but I'm not fully convinced.</p>
 <h4 id="312--313-officescripts"><a class="header" href="#312--313-officescripts">3.12 + 3.13 <a href="office:script%5Bs%5D">office:script[s]</a></a></h4>
-<p>?&gt; <strong>TBD</strong> : The exact handling of scripts will be described in <a href="attic/old-mediawiki-content/Freeplane_File_Format/Scripts.html">Freeplane_File_Format/Scripts</a></p>
+<blockquote>
+<p><strong>TBD</strong> : The exact handling of scripts will be described in <a href="attic/old-mediawiki-content/Freeplane_File_Format/Scripts.html">Freeplane_File_Format/Scripts</a></p>
+</blockquote>
 <pre><code>&lt;office:scripts&gt;
 &lt;office:event-listeners&gt;
 TBD: do we need event listeners in Freeplane? How to implement them?
@@ -14878,7 +14897,9 @@ TBD: do we need event listeners in Freeplane? How to implement them?
 <p>I would recommend to skip this function for the next release of Freeplane, chapter 16.21 <a href="style:font-face">style:font-face</a> seems quite complex to implement. <strong>TBD!</strong></p>
 <h4 id="315-styles"><a class="header" href="#315-styles">3.15 Styles</a></h4>
 <p>The elements <a href="office:automatic-styles">office:automatic-styles</a>, <a href="office:master-styles">office:master-styles</a> and <a href="office:styles">office:styles</a> could possibly be used but would possibly need to contain map specific styles.</p>
-<p>?&gt; <strong>TBD</strong> : The exact handling of styles will be described in Freeplane_File_Format/Styles</p>
+<blockquote>
+<p><strong>TBD</strong> : The exact handling of styles will be described in Freeplane_File_Format/Styles</p>
+</blockquote>
 <h4 id="316-document-and-macro-signatures"><a class="header" href="#316-document-and-macro-signatures">3.16 Document and Macro Signatures</a></h4>
 <p>The section defines 2 (optional) files described in more details in chapter 2.4 of part 3 of the specification:</p>
 <ul>
@@ -14894,7 +14915,9 @@ TBD: do we need event listeners in Freeplane? How to implement them?
 </ol>
 <p>Both can be used as defined in the chapter.</p>
 <h3 id="5-to-20-content-formatting-attributes-etc"><a class="header" href="#5-to-20-content-formatting-attributes-etc">5 to 20 (Content, Formatting, attributes, etc...)</a></h3>
-<p>?&gt; <strong>TBD</strong> : To Be Used as needed, document here what you use as you implement it!!!</p>
+<blockquote>
+<p><strong>TBD</strong> : To Be Used as needed, document here what you use as you implement it!!!</p>
+</blockquote>
 <h3 id="21-document-processing"><a class="header" href="#21-document-processing">21 Document Processing</a></h3>
 <p>Nothing really special...</p>
 <h3 id="22-conformance"><a class="header" href="#22-conformance">22 Conformance</a></h3>
@@ -14957,13 +14980,19 @@ and 22.4 &quot;Consumer Conformance&quot;.</p>
 | <tt>Objects/</tt>
 | for any object that Freeplane would embed without actually being able to do anything with it but just try to display externally.
 |}
-<p>?&gt; <strong>Note</strong> : further directories can be added as needed.</p>
-<p>?&gt; <strong>Note</strong> : to embed objects, OpenOffice creates a binary (format ?) reference file <tt>ObjectReplacements/Object N</tt> (N a growing index) and puts the relevant data in a sub-directory <tt>Object N</tt>, but I don't think we want to do this.</p>
+<blockquote>
+<p><strong>Note</strong> : further directories can be added as needed.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note</strong> : to embed objects, OpenOffice creates a binary (format ?) reference file <tt>ObjectReplacements/Object N</tt> (N a growing index) and puts the relevant data in a sub-directory <tt>Object N</tt>, but I don't think we want to do this.</p>
+</blockquote>
 <h4 id="24-encryption"><a class="header" href="#24-encryption">2.4 Encryption</a></h4>
 <p>probably not in this version of Freeplane</p>
 <h4 id="27-usage-of-iris-within-packages"><a class="header" href="#27-usage-of-iris-within-packages">2.7 Usage of IRIs Within Packages</a></h4>
 <p>the chapter is a bit unclear, but I understand basically that links to files within the package are just normal relative links. As all files present in the package need to be referenced in <tt>META-INF/manifest.xml</tt>, Freeplane can safely compare any relative link to the content of this file, and, only if not found, try to resolve the link outside of the package.</p>
-<p>?&gt; <strong>Note</strong> : when using a packaged directory, the relative link <em>outside of the package</em> means relative to the directory containing the packaged directory. Example: a packaged directory <tt>/home/ewl/Documents/mymap.freeplane.d</tt> where <tt>content.xml</tt> refers to <tt>Scripts/myscript.groovy</tt>; if internal to the package, the absolute path is <tt>/home/ewl/Documents/mymap.freeplane.d/Scripts/myscript.groovy</tt>, but externally resolved, it means <tt>/home/ewl/Documents/Scripts/myscript.groovy</tt>.</p>
+<blockquote>
+<p><strong>Note</strong> : when using a packaged directory, the relative link <em>outside of the package</em> means relative to the directory containing the packaged directory. Example: a packaged directory <tt>/home/ewl/Documents/mymap.freeplane.d</tt> where <tt>content.xml</tt> refers to <tt>Scripts/myscript.groovy</tt>; if internal to the package, the absolute path is <tt>/home/ewl/Documents/mymap.freeplane.d/Scripts/myscript.groovy</tt>, but externally resolved, it means <tt>/home/ewl/Documents/Scripts/myscript.groovy</tt>.</p>
+</blockquote>
 <h3 id="3-to-5-manifest-signatures-and-metadata"><a class="header" href="#3-to-5-manifest-signatures-and-metadata">3 to 5 Manifest, Signatures and Metadata</a></h3>
 <p>Relevant without changes, chapters referenced in files table from chapter 2.</p>
 <h3 id="6-datatypes"><a class="header" href="#6-datatypes">6 Datatypes</a></h3>

@@ -294,7 +294,9 @@
 &lt;office:styles&gt;           [...] &lt;/office:styles&gt;
 &lt;/office:document&gt;
 </code></pre>
-<p>?&gt; <strong>Notes</strong> : Once Freeplane has a registered mime-type, mimetype could become <tt>application/freeplane</tt>. The version is made of the ODF version 1.2, 'fp' for Freeplane and an internal version number, 1.0 to start with.</p>
+<blockquote>
+<p><strong>Notes</strong> : Once Freeplane has a registered mime-type, mimetype could become <tt>application/freeplane</tt>. The version is made of the ODF version 1.2, 'fp' for Freeplane and an internal version number, 1.0 to start with.</p>
+</blockquote>
 <h5 id="313-package-opendocument-files"><a class="header" href="#313-package-opendocument-files">3.1.3 Package OpenDocument Files</a></h5>
 <p>File <tt><strong>content</strong>.xml</tt>:</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
@@ -331,10 +333,12 @@
 <p>⇒ Freeplane should offer a dialog to enter document information.</p>
 <h4 id="33-officebody"><a class="header" href="#33-officebody">3.3 <a href="office:body">office:body</a></a></h4>
 <p>Mandatory section, but only child needed is a Freeplane specific <tt><code>&lt;x-office:map&gt;</code></tt>.</p>
-<p>?&gt; <strong>Note</strong> : x-office is used instead of office to avoid polluting the 'office' namespace. x-office can be used as an alternative prefix for the same Freeplane namespace as 'map'.</p>
+<blockquote>
+<p><strong>Note</strong> : x-office is used instead of office to avoid polluting the 'office' namespace. x-office can be used as an alternative prefix for the same Freeplane namespace as 'map'.</p>
+</blockquote>
 <h4 id="34-to-39-not-needed-replaced-by-x-officemap"><a class="header" href="#34-to-39-not-needed-replaced-by-x-officemap">3.4 to 3.9 not needed, replaced by <a href="x-office:map">x-office:map</a></a></h4>
 <tt>
-?> **TBD** : The exact content of a map will be described in [Freeplane_File_Format/Maps](Freeplane_File_Format/Maps.md)
+> **TBD** : The exact content of a map will be described in [Freeplane_File_Format/Maps](Freeplane_File_Format/Maps.md)
 <h4 id="310-officesettings"><a class="header" href="#310-officesettings">3.10 <a href="office:settings">office:settings</a></a></h4>
 <p>Section can and should be used as-is. No changes needed.</p>
 <p>Possibly Freeplane doesn't need the full scope and could cope only with <tt>config-item-set</tt> and <tt>config-item</tt> as in:</p>
@@ -349,14 +353,18 @@
 [...]
 &lt;/office:settings&gt;
 </code></pre>
-<p>?&gt; <strong>Note</strong> : as described in chapter 19.32, The values of the config:type attribute are boolean, short, int, long, double, string, datetime or base64Binary.</p>
+<blockquote>
+<p><strong>Note</strong> : as described in chapter 19.32, The values of the config:type attribute are boolean, short, int, long, double, string, datetime or base64Binary.</p>
+</blockquote>
 <h4 id="311-cursor-position-setting"><a class="header" href="#311-cursor-position-setting">3.11 Cursor Position Setting</a></h4>
 <p>A bit unclear, but I understand something like the following is possible:</p>
 <pre><code>&lt;?opendocument cursor-position=&quot;''XXX''&quot; ?&gt;
 </code></pre>
 <p>where <em>XXX</em> is a mean to give the cursor position at the time where the document was saved. In Freeplane's case, it could just be a map and/or node ID, but I'm not fully convinced.</p>
 <h4 id="312--313-officescripts"><a class="header" href="#312--313-officescripts">3.12 + 3.13 <a href="office:script%5Bs%5D">office:script[s]</a></a></h4>
-<p>?&gt; <strong>TBD</strong> : The exact handling of scripts will be described in <a href="Freeplane_File_Format/Scripts.html">Freeplane_File_Format/Scripts</a></p>
+<blockquote>
+<p><strong>TBD</strong> : The exact handling of scripts will be described in <a href="Freeplane_File_Format/Scripts.html">Freeplane_File_Format/Scripts</a></p>
+</blockquote>
 <pre><code>&lt;office:scripts&gt;
 &lt;office:event-listeners&gt;
 TBD: do we need event listeners in Freeplane? How to implement them?
@@ -379,7 +387,9 @@ TBD: do we need event listeners in Freeplane? How to implement them?
 <p>I would recommend to skip this function for the next release of Freeplane, chapter 16.21 <a href="style:font-face">style:font-face</a> seems quite complex to implement. <strong>TBD!</strong></p>
 <h4 id="315-styles"><a class="header" href="#315-styles">3.15 Styles</a></h4>
 <p>The elements <a href="office:automatic-styles">office:automatic-styles</a>, <a href="office:master-styles">office:master-styles</a> and <a href="office:styles">office:styles</a> could possibly be used but would possibly need to contain map specific styles.</p>
-<p>?&gt; <strong>TBD</strong> : The exact handling of styles will be described in Freeplane_File_Format/Styles</p>
+<blockquote>
+<p><strong>TBD</strong> : The exact handling of styles will be described in Freeplane_File_Format/Styles</p>
+</blockquote>
 <h4 id="316-document-and-macro-signatures"><a class="header" href="#316-document-and-macro-signatures">3.16 Document and Macro Signatures</a></h4>
 <p>The section defines 2 (optional) files described in more details in chapter 2.4 of part 3 of the specification:</p>
 <ul>
@@ -395,7 +405,9 @@ TBD: do we need event listeners in Freeplane? How to implement them?
 </ol>
 <p>Both can be used as defined in the chapter.</p>
 <h3 id="5-to-20-content-formatting-attributes-etc"><a class="header" href="#5-to-20-content-formatting-attributes-etc">5 to 20 (Content, Formatting, attributes, etc...)</a></h3>
-<p>?&gt; <strong>TBD</strong> : To Be Used as needed, document here what you use as you implement it!!!</p>
+<blockquote>
+<p><strong>TBD</strong> : To Be Used as needed, document here what you use as you implement it!!!</p>
+</blockquote>
 <h3 id="21-document-processing"><a class="header" href="#21-document-processing">21 Document Processing</a></h3>
 <p>Nothing really special...</p>
 <h3 id="22-conformance"><a class="header" href="#22-conformance">22 Conformance</a></h3>
@@ -458,13 +470,19 @@ and 22.4 &quot;Consumer Conformance&quot;.</p>
 | <tt>Objects/</tt>
 | for any object that Freeplane would embed without actually being able to do anything with it but just try to display externally.
 |}
-<p>?&gt; <strong>Note</strong> : further directories can be added as needed.</p>
-<p>?&gt; <strong>Note</strong> : to embed objects, OpenOffice creates a binary (format ?) reference file <tt>ObjectReplacements/Object N</tt> (N a growing index) and puts the relevant data in a sub-directory <tt>Object N</tt>, but I don't think we want to do this.</p>
+<blockquote>
+<p><strong>Note</strong> : further directories can be added as needed.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note</strong> : to embed objects, OpenOffice creates a binary (format ?) reference file <tt>ObjectReplacements/Object N</tt> (N a growing index) and puts the relevant data in a sub-directory <tt>Object N</tt>, but I don't think we want to do this.</p>
+</blockquote>
 <h4 id="24-encryption"><a class="header" href="#24-encryption">2.4 Encryption</a></h4>
 <p>probably not in this version of Freeplane</p>
 <h4 id="27-usage-of-iris-within-packages"><a class="header" href="#27-usage-of-iris-within-packages">2.7 Usage of IRIs Within Packages</a></h4>
 <p>the chapter is a bit unclear, but I understand basically that links to files within the package are just normal relative links. As all files present in the package need to be referenced in <tt>META-INF/manifest.xml</tt>, Freeplane can safely compare any relative link to the content of this file, and, only if not found, try to resolve the link outside of the package.</p>
-<p>?&gt; <strong>Note</strong> : when using a packaged directory, the relative link <em>outside of the package</em> means relative to the directory containing the packaged directory. Example: a packaged directory <tt>/home/ewl/Documents/mymap.freeplane.d</tt> where <tt>content.xml</tt> refers to <tt>Scripts/myscript.groovy</tt>; if internal to the package, the absolute path is <tt>/home/ewl/Documents/mymap.freeplane.d/Scripts/myscript.groovy</tt>, but externally resolved, it means <tt>/home/ewl/Documents/Scripts/myscript.groovy</tt>.</p>
+<blockquote>
+<p><strong>Note</strong> : when using a packaged directory, the relative link <em>outside of the package</em> means relative to the directory containing the packaged directory. Example: a packaged directory <tt>/home/ewl/Documents/mymap.freeplane.d</tt> where <tt>content.xml</tt> refers to <tt>Scripts/myscript.groovy</tt>; if internal to the package, the absolute path is <tt>/home/ewl/Documents/mymap.freeplane.d/Scripts/myscript.groovy</tt>, but externally resolved, it means <tt>/home/ewl/Documents/Scripts/myscript.groovy</tt>.</p>
+</blockquote>
 <h3 id="3-to-5-manifest-signatures-and-metadata"><a class="header" href="#3-to-5-manifest-signatures-and-metadata">3 to 5 Manifest, Signatures and Metadata</a></h3>
 <p>Relevant without changes, chapters referenced in files table from chapter 2.</p>
 <h3 id="6-datatypes"><a class="header" href="#6-datatypes">6 Datatypes</a></h3>
