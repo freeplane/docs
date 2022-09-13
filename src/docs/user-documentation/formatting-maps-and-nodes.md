@@ -25,7 +25,7 @@ It can be done by using the editor dialog `Edit->Node code->Edit node core in di
 
 ![](../images/word-level_dialog_formatting-1'10'2.png ':size=200')
 
-?> Note: It's also possible to use the hot keys in the in-line editor (e.g. `Ctrl+L` for blue).
+> Note: It's also possible to use the hot keys in the in-line editor (e.g. `Ctrl+L` for blue).
 
 ### Using Format
 

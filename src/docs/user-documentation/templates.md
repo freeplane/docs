@@ -17,7 +17,7 @@ There are 2 ways to do it
 Depending on your OS, you can find template folders in different directories. 
 However, on every OS, there is a subfolder in the Freeplane installation-folder, where you can store user-defined template files.
 
-?> You can also change the default directory containing the user configuration.
+> Note: You can also change the default directory containing the user configuration.
 This means, the file path for templates might be different in your Freeplane (see [The user directory](#the-user-directory)).
 
 ### Windows
@@ -63,5 +63,5 @@ In the dialogue you have different options, depending on which `Files of Type` y
 | `Standard Templates (*.mm)` | the templates Freeplane comes with → [**system-wide** path for template files](#file-paths-for-templates) |
 | `User templates (*.mm)` | your template mind maps → [**user-defined** path for template files](#file-paths-for-templates)            |
 
-?> Depending on your current choice in the drop-down menu at the bottom of this dialogue, the path in the _upper_ part changes accordingly:\
+> Note: Depending on your current choice in the drop-down menu at the bottom of this dialogue, the path in the _upper_ part changes accordingly:\
 If you click on `Standard template (*.mm)` it will show you the **system-wide** path for templates, if you click on `User templates (*.mm)` it will change to the **user-defined** path.

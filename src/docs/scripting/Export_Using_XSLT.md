@@ -18,7 +18,7 @@ XSL files must have the .xsl extension.
 
 XSL files must contain within the 5 first lines a string matching the following pattern: 
 
-?> MINDMAPEXPORTFILTER *extensions* *description*
+> MINDMAPEXPORTFILTER *extensions* *description*
 
 where the fields in italic are relative to the file format to which the mindmap will be exported to using this specific XSLT sheet: 
 

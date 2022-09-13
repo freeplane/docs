@@ -11,8 +11,6 @@ With Freeplane scripting you can
 
 Most people use scripting to automate otherwise tedious procedures like creating a node with a special style and some standard attributes. But much more is possible with scripting.
 
-<br> __TOC__ 
-
 [External Groovy scripts](External_script_file_execution.md) can be integrated simply by placing them in the *scripts* subdirectory of the Freeplane homedir. Such scripts can be used like any other built-in function of Freeplane.
 
 After some preparation we'll create the first script.

@@ -100,7 +100,7 @@ A typical single opendocument might look as follows:
     <office:styles>           [...] </office:styles>
     </office:document>
 
-?> **Notes** : Once Freeplane has a registered mime-type, mimetype could become <tt>application/freeplane</tt>. The version is made of the ODF version 1.2, 'fp' for Freeplane and an internal version number, 1.0 to start with.
+> **Notes** : Once Freeplane has a registered mime-type, mimetype could become <tt>application/freeplane</tt>. The version is made of the ODF version 1.2, 'fp' for Freeplane and an internal version number, 1.0 to start with.
 
 ##### 3.1.3 Package OpenDocument Files
 
@@ -148,12 +148,12 @@ Section can and should be used as-is. No changes needed.
 
 Mandatory section, but only child needed is a Freeplane specific <tt>`<x-office:map>`</tt>.
 
-?> **Note** : x-office is used instead of office to avoid polluting the 'office' namespace. x-office can be used as an alternative prefix for the same Freeplane namespace as 'map'.
+> **Note** : x-office is used instead of office to avoid polluting the 'office' namespace. x-office can be used as an alternative prefix for the same Freeplane namespace as 'map'.
 
 #### 3.4 to 3.9 not needed, replaced by <x-office:map>
 
 <tt>
-?> **TBD** : The exact content of a map will be described in [Freeplane_File_Format/Maps](Freeplane_File_Format/Maps.md)
+> **TBD** : The exact content of a map will be described in [Freeplane_File_Format/Maps](Freeplane_File_Format/Maps.md)
 
 #### 3.10 <office:settings>
 
@@ -172,7 +172,7 @@ Possibly Freeplane doesn't need the full scope and could cope only with <tt>conf
     [...]
     </office:settings>
 
-?> **Note** : as described in chapter 19.32, The values of the config:type attribute are boolean, short, int, long, double, string, datetime or base64Binary.
+> **Note** : as described in chapter 19.32, The values of the config:type attribute are boolean, short, int, long, double, string, datetime or base64Binary.
 
 #### 3.11 Cursor Position Setting
 
@@ -184,7 +184,7 @@ where *XXX* is a mean to give the cursor position at the time where the document
 
 #### 3.12 + 3.13 <office:script[s]>
 
-?> **TBD** : The exact handling of scripts will be described in [Freeplane_File_Format/Scripts](Freeplane_File_Format/Scripts.md)
+> **TBD** : The exact handling of scripts will be described in [Freeplane_File_Format/Scripts](Freeplane_File_Format/Scripts.md)
 
     <office:scripts>
     <office:event-listeners>
@@ -212,7 +212,7 @@ I would recommend to skip this function for the next release of Freeplane, chapt
 
 The elements <office:automatic-styles>, <office:master-styles> and <office:styles> could possibly be used but would possibly need to contain map specific styles.
 
-?> **TBD** : The exact handling of styles will be described in Freeplane_File_Format/Styles
+> **TBD** : The exact handling of styles will be described in Freeplane_File_Format/Styles
 
 #### 3.16 Document and Macro Signatures
 
@@ -236,7 +236,7 @@ Both can be used as defined in the chapter.
 
 ### 5 to 20 (Content, Formatting, attributes, etc...)
 
-?> **TBD** : To Be Used as needed, document here what you use as you implement it!!!
+> **TBD** : To Be Used as needed, document here what you use as you implement it!!!
 
 ### 21 Document Processing
 
@@ -319,9 +319,9 @@ The ODF specification states that a package can contain other files, but it does
 | for any object that Freeplane would embed without actually being able to do anything with it but just try to display externally.
 |}
 
-?> **Note** : further directories can be added as needed.
+> **Note** : further directories can be added as needed.
 
-?> **Note** : to embed objects, OpenOffice creates a binary (format ?) reference file <tt>ObjectReplacements/Object N</tt> (N a growing index) and puts the relevant data in a sub-directory <tt>Object N</tt>, but I don't think we want to do this.
+> **Note** : to embed objects, OpenOffice creates a binary (format ?) reference file <tt>ObjectReplacements/Object N</tt> (N a growing index) and puts the relevant data in a sub-directory <tt>Object N</tt>, but I don't think we want to do this.
 
 #### 2.4 Encryption
 
@@ -331,7 +331,7 @@ probably not in this version of Freeplane
 
 the chapter is a bit unclear, but I understand basically that links to files within the package are just normal relative links. As all files present in the package need to be referenced in <tt>META-INF/manifest.xml</tt>, Freeplane can safely compare any relative link to the content of this file, and, only if not found, try to resolve the link outside of the package.
 
-?> **Note** : when using a packaged directory, the relative link *outside of the package* means relative to the directory containing the packaged directory. Example: a packaged directory <tt>/home/ewl/Documents/mymap.freeplane.d</tt> where <tt>content.xml</tt> refers to <tt>Scripts/myscript.groovy</tt>; if internal to the package, the absolute path is <tt>/home/ewl/Documents/mymap.freeplane.d/Scripts/myscript.groovy</tt>, but externally resolved, it means <tt>/home/ewl/Documents/Scripts/myscript.groovy</tt>.
+> **Note** : when using a packaged directory, the relative link *outside of the package* means relative to the directory containing the packaged directory. Example: a packaged directory <tt>/home/ewl/Documents/mymap.freeplane.d</tt> where <tt>content.xml</tt> refers to <tt>Scripts/myscript.groovy</tt>; if internal to the package, the absolute path is <tt>/home/ewl/Documents/mymap.freeplane.d/Scripts/myscript.groovy</tt>, but externally resolved, it means <tt>/home/ewl/Documents/Scripts/myscript.groovy</tt>.
 
 ### 3 to 5 Manifest, Signatures and Metadata
 
