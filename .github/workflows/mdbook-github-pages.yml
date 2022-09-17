@@ -1,0 +1,53 @@
+# https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow
+
+name: mdbook-github-pages
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+#  push:
+#    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions
+permissions:
+  id-token: write
+  pages: write
+
+jobs:
+  build-and-deploy:
+    # https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment
+    environment:
+      name: github-pages # Use the same environment as used by `Deploy from a branch`
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Install and Build 🔧
+        run: |
+          mkdir -p build/tools
+          cd build/tools
+          curl -O -L https://github.com/rust-lang/mdBook/releases/download/v0.4.21/mdbook-v0.4.21-x86_64-unknown-linux-gnu.tar.gz
+          tar xf mdbook-v0.4.21-x86_64-unknown-linux-gnu.tar.gz
+          curl -O -L https://github.com/badboy/mdbook-toc/releases/download/0.9.0/mdbook-toc-0.9.0-x86_64-unknown-linux-gnu.tar.gz
+          tar xf mdbook-toc-0.9.0-x86_64-unknown-linux-gnu.tar.gz
+          curl -O -L https://github.com/badboy/mdbook-open-on-gh/releases/download/2.2.0/mdbook-open-on-gh-2.2.0-x86_64-unknown-linux-gnu.tar.gz
+          tar xf mdbook-open-on-gh-2.2.0-x86_64-unknown-linux-gnu.tar.gz
+          cd ../..
+          export PATH="./build/tools/:$PATH"
+          mdbook build src --dest-dir ../build/gh-pages
+          rm -rf build/tools
+          rm -rf 'build/gh-pages/https:'
+          rm -rf 'src/docs/https:'
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'build/gh-pages'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
