@@ -61,7 +61,8 @@ You'll often need to repeat your click-drag-release several times before you get
 
 #### Hidden connectors
 
-Connector lines can be hidden: `Preferences…->Defaults->Connectors->Paint connectors behind nodes`
+Connector lines can be hidden: `Preferences…->Defaults->Connectors->Show connector lines`
+Alternatively, they can be displayed as the lowest level: `Preferences…->Defaults->Connectors->Paint connectors behind nodes`
 
 #### Go to a connected node
 
