@@ -79,7 +79,7 @@ When using `Line` as the type, the connector appears one-ended.
 #### Connector styles
 
 Connectors use styles.
-The concept is the same as for nodes *(see [Styles](styles.md))*, i.e. the bundle of connector formatting properties is saved as a connector style.
+The concept is the same as for nodes *(see [Styles](../../user-documentation/styles.md))*, i.e. a bundle of connector formatting properties is saved as a connector style.
 Technically, a connector style is part of a node style.
 When a node style has a connector defined, like **Default** has, the style becomes also a connector style.
 
