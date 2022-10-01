@@ -41,6 +41,7 @@
   - [Git howto](coding/Git_howto.md)
   - [How to build Freeplane](coding/How_to_build_Freeplane.md)
   - [IDE setup](coding/IDE_setup.md)
+  - [IntelliJ IDEA setup](coding/intellij-idea-setup.md)
   - [Plugin development](coding/Plugin_development.md)
 
 # Attic
