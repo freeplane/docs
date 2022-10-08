@@ -51,3 +51,13 @@ Contributors are very much welcome, of course!
 -------------
 
 ![discussions](images/discussions.png ':size=600')
+
+
+-------------
+
+# Thanks
+
+Freeplane team uses:
+
+* [YourKit Java Profiler](https://www.yourkit.com/overview/index.jsp) developed and donated by [YourKit LLC](https://www.yourkit.com/company/index.jsp), for analysis of memory consumption and performance issues
+* Free and open source web based translation management system [Weblate](https://weblate.org) developed and [hosted](https://hosted.weblate.org) by [Michal Čihař](https://cihar.com/)
