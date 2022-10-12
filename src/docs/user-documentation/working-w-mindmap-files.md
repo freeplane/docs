@@ -94,7 +94,7 @@ Mindmaps can be exported to the following formats:
 
 
 ### Export map
-To export the mindmap you can select `File->Export map` from the menu. Map can be exported to following formats.
+To export the mindmap you can select `File->Export map` from the menu.
 
 
 ### Export branches
