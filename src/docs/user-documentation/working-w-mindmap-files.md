@@ -51,6 +51,8 @@ In the saving-dialogue you can choose standard or user-defined template mind map
 
 Enable and customize Autosave with settings in `Tools -> Preferences` in section `Environment->Automatic save`.
 
+![Preferences](../images/auto-save-options.png)  
+
 There you can set the following preferences:
 
 | Setting | Notes |
@@ -78,10 +80,29 @@ The other is importing content from non-Freeplane maps into an active map.
 
 ## Export
 
-(to be added)
+Mindmaps can be exported to the following formats:
+- Documentation formats - Asciidoc,Mediawiki, Markdown, xbel, Twiki, pdf,opml
+- Latex - Beamer,book,document,input
+- Image formats - Jpeg, png, svg
+- XML formats - Raw XML with node formatting, xml
+- XHTML - xhtml(clickable html and javascript versions)
+- HTML - htm and html
+- Microsoft office 2003 formats - Microsoft Excel 2003,Word 2003, Project 2003
+- Open office format
+- Tasks from Tasks node to TaskJuggler file
+- Freeplane 1.1 format(old format)
 
-File->Export map…
 
-File->Export branches…
+### Export map
+To export the mindmap you can select `File->Export map` from the menu. Map can be exported to following formats.
+
+
+### Export branches
+To export a specific branch in mindmap you can select the node you want to export and then from menu you select `File->Export branches`.
 
 ## Other resources
+
+## Change Freeplane settings
+Freeplane settings can be customized from `Tools -> Preferences` menu option.
+
+![Preferences](../images/Preferences.png)  
