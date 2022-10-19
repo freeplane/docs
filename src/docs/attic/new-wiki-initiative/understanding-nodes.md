@@ -30,6 +30,19 @@ To understand the implications of this setting, see (to be added).
 
 ### Node Attributes
 
+Attributes can be defined for each node.
+They are displayed in a 2-column table
+
+| Key | Value |
+|--|--|
+|Name|Mac|
+|Username|macmarrum|
+
+The actions related to Attributes can be listed in `Help->Command Search (Ctrl+F1)` – search for `attribute`
+
+Once you have at least one attribute, you can right-click on the table to perform actions (New, Delete, Move up, Move down).\
+Alternatively, you can manage attributes in `View->Controls->Tool panel` – tab `Attributes`
+
 ### Edges
 
 ### Connectors
