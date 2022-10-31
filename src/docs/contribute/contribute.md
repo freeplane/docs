@@ -1,6 +1,8 @@
 # How to Start Contributing
 
-[Join](Contributing_to_Freeplane's_Development.md) the Freeplane team not only as user but maybe as a
+Freeplane is developed and maintained by voluntairs who want to share their passion and skills with the world. The project was launched by its current lead Dimitry Polivaev in 2007.
+
+You can [participate](Contributing_to_Freeplane's_Development.md) not only as user and community member but maybe as a
 
 * developer (coder and designer)
 * tester (writer of tutorials, screencasts and help texts)
