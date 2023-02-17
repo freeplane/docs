@@ -147,6 +147,8 @@ It's a good idea to put the "annotations" at the beginning of the script. (In se
 
 Note that for Groovy this is a comment. - This line is only interpreted by Freeplane. Omitting the <tt>//</tt> will result in a Groovy compilation error. 
 
+Note that, for changes in the Execution Mode ake effect, FreePlane needs to be restarted.
+
 ## Menu locations
 
 Scripts can determine to which menu or submenu a script will be added. Even the menu title can be set (although the standard file name to menu title translation should be enough in most cases):
