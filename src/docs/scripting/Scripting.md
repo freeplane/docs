@@ -147,7 +147,7 @@ It's a good idea to put the "annotations" at the beginning of the script. (In se
 
 Note that for Groovy this is a comment. - This line is only interpreted by Freeplane. Omitting the <tt>//</tt> will result in a Groovy compilation error. 
 
-Note that, for changes in the Execution Mode ake effect, FreePlane needs to be restarted.
+Note that, for changes in the Execution Mode take effect, FreePlane needs to be restarted.
 
 ## Menu locations
 
