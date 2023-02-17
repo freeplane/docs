@@ -95,6 +95,8 @@ https://www.youtube.com/watch?v=cSyhkcsB2-M (made before the script was converte
 
 Add-on is located at https://github.com/adxsoft/MapInsight-Addon
 
+Note that the latest version is this one: https://github.com/adxsoft/MapInsight-Addon/issues/4#issuecomment-715262901
+
 ## Navigation
 '''by [Jodi D. Krol](http://sourceforge.net/users/jokro/)
 
