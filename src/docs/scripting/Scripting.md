@@ -145,9 +145,7 @@ It's a good idea to put the "annotations" at the beginning of the script. (In se
 // @ExecutionModes({ON_SELECTED_NODE, ON_SELECTED_NODE_RECURSIVELY})
 ``` 
 
-Note that for Groovy this is a comment. - This line is only interpreted by Freeplane. Omitting the <tt>//</tt> will result in a Groovy compilation error. 
-
-Note that, for changes in the Execution Mode take effect, FreePlane needs to be restarted.
+Note that for Groovy this is a comment. This line is only interpreted by Freeplane. Omitting the <tt>//</tt> will result in a Groovy compilation error. Additionally, while changes to script's code are picked up immediately, Freeplane needs to be restarted for `@ExecutionModes` changes to take effect.
 
 ## Menu locations
 
