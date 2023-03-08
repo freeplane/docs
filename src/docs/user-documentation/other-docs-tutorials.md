@@ -5,7 +5,7 @@
 ## Documentation mind maps distributed with Freeplane
 * Tutorial mind map
 * Documentation mind map
-* What's new in Freplane 1.5 mind map
+* What's new in Freeplane 1.5 mind map
 
 ## Videos
 * [MindMapping for Business and Study with FreePlane](https://www.youtube.com/watch?v=nCfGAuHJk0s) by _Peter Carruthers_
