@@ -8,7 +8,7 @@
   - [Distributions](getting-started/Distributions.md)
   - [Command-line options and configuration](getting-started/Command-line_options_and_configuration.md)
   - [Extend with add-ons](getting-started/Add-ons_(install).md)
-- [User documentation](user-documentation/first-steps.md)
+- [User documentation](user-documentation/user-documentation.md)
   - [First steps](user-documentation/first-steps.md)
   - [Working with mindmap files](user-documentation/working-w-mindmap-files.md)
   - [Formatting maps and nodes](user-documentation/formatting-maps-and-nodes.md)
