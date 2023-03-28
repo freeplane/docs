@@ -46,8 +46,9 @@ jobs:
           # API docs
           cd build
           export FP_GH=https://github.com/freeplane/freeplane
+          # Change TAG_PATTERN when a new major version is released
           export TAG_PATTERN=release-1.10.*
-          while read -r hash ref; do if [[ $tag != *-pre* ]]; then latest_stable_release_tag=${ref##*/}; fi; done < <(git ls-remote --tags $FP_GH $TAG_PATTERN)
+          while read -r hash ref; do if [[ $ref != *-pre* ]]; then latest_stable_release_tag=${ref##*/}; fi; done < <(git ls-remote --tags $FP_GH $TAG_PATTERN)
           version=${latest_stable_release_tag#release-}
           curl -L https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-${version}.zip/download -o freeplane-bin.zip
           unzip freeplane-bin.zip "freeplane-${version}/docs/api/*"
