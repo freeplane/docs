@@ -51,7 +51,7 @@ jobs:
           while read -r hash ref; do if [[ $ref != *-pre* ]]; then latest_stable_release_tag=${ref##*/}; fi; done < <(git ls-remote --tags $FP_GH $TAG_PATTERN)
           version=${latest_stable_release_tag#release-}
           curl -L https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-${version}.zip/download -o freeplane-bin.zip
-          unzip freeplane-bin.zip "freeplane-${version}/docs/api/*"
+          unzip freeplane-bin.zip "freeplane-${version}/doc/api/*"
           mv "freeplane-${version}/doc/api" gh-pages/docs/
           echo "$latest_stable_release_tag" > gh-pages/docs/api/_from_tag
           rm -f freeplane-bin.zip
