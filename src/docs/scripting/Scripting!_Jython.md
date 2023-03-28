@@ -2,7 +2,7 @@
 
 # Hints for scripting Freeplane in Python/Jython
 
-You may want to have this url http://www.freeplane.org/doc/api/ at hand.
+You may want to have this url http://docs.freeplane.org/api/ at hand.
 
 ## Attributes
 

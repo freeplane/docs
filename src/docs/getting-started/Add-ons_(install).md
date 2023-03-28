@@ -508,7 +508,7 @@ For Freeplane 1.2.x: [Download v0.9.14](http://sourceforge.net/projects/freeplan
 
 Groovy console for interacting with a running Freeplane instance.
 
-Scripts inside the console have the same variables that every script has assigned to, like [node](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/proxy/Proxy.Node.html) (the selected node when launching the shell) and [c](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/proxy/Proxy.Controller.html) (the Controller). See the [groovyconsole description](http://groovy-lang.org/groovyconsole.html) for usage instructions.
+Scripts inside the console have the same variables that every script has assigned to, like [node](http://docs.freeplane.org/api/org/freeplane/plugin/script/proxy/Proxy.Node.html) (the selected node when launching the shell) and [c](http://docs.freeplane.org/api/org/freeplane/plugin/script/proxy/Proxy.Controller.html) (the Controller). See the [groovyconsole description](http://groovy-lang.org/groovyconsole.html) for usage instructions.
 
 Source: [Github](https://github.com/vboerchers/wikdshell)
 

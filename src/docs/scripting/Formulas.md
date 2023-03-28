@@ -166,7 +166,7 @@ Note that the special editor will only be used if the node text *already starts*
 
 ## Formatting
 
-Formatting of numbers and dates in node core is available as an element of [styles](../user-documentation/styles.md), that means that they are not formula specific. Formatting of attribute values, details and notes must be handled by setting the value to a formatted object via [format(Object, formatString)](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html#format(java.lang.Object,%20java.lang.String) ). For more on data and formatting see [this page](Data_recognition_and_data_formats.md).
+Formatting of numbers and dates in node core is available as an element of [styles](../user-documentation/styles.md), that means that they are not formula specific. Formatting of attribute values, details and notes must be handled by setting the value to a formatted object via [format(Object, formatString)](http://docs.freeplane.org/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html#format(java.lang.Object,%20java.lang.String) ). For more on data and formatting see [this page](Data_recognition_and_data_formats.md).
 
 
 ## Security
