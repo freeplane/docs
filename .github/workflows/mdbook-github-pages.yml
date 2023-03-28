@@ -52,8 +52,8 @@ jobs:
           version=${latest_stable_release_tag#release-}
           curl -L https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-${version}.zip/download -o freeplane-bin.zip
           unzip freeplane-bin.zip "freeplane-${version}/doc/api/*"
-          mv "freeplane-${version}/doc/api" gh-pages/docs/
-          echo "$latest_stable_release_tag" > gh-pages/docs/api/_from_tag
+          mv -v "freeplane-${version}/doc/api" gh-pages/
+          echo "$latest_stable_release_tag" > gh-pages/api/_from_tag
           rm -f freeplane-bin.zip
           rm -rf "freeplane-${version}"
 
