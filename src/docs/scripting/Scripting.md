@@ -85,7 +85,7 @@ c.statusInfo = "Hello World!"
 The "Controller" manages the status bar. By assigning "Hello World!" to the Controller attribute "statusInfo" we are able to print text to the status bar.
 
 ### The scripting API
-The variables *node* and *c* are "objects" with a list of *attributes* (like "text", "details" or "style") and *methods* that operate on the object, like "addConnector()", "createChild()" or "moveTo()". The "type" of the object decides on the list of attribute of attributes and methods an object has. "node" is of type [Proxy.Node](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/proxy/Proxy.NodeRO.html) while "c" has the type [Proxy.Controller](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/proxy/Proxy.Controller.html).
+The variables *node* and *c* are "objects" with a list of *attributes* (like "text", "details" or "style") and *methods* that operate on the object, like "addConnector()", "createChild()" or "moveTo()". The "type" of the object decides on the list of attribute of attributes and methods an object has. "node" is of type [Proxy.Node](http://docs.freeplane.org/api/org/freeplane/plugin/script/proxy/Proxy.NodeRO.html) while "c" has the type [Proxy.Controller](http://docs.freeplane.org/api/org/freeplane/plugin/script/proxy/Proxy.Controller.html).
 
 To get started with Freeplane scripting you have to get slowly accustomed to the Groovy syntax and the Freeplane specialities too. The types and objects that Freeplane supports are defined by [Freeplane's scripting API](Scripting_API.md). You can learn it step by step: Very little is required to write useful scripts.
 
@@ -97,7 +97,7 @@ and
 ```groovy
 c.setStatusInfo('Hello World!')
 ```
-are equivalent. But the first "attribute" style is preferable since it is clearer. The clickable links in the "Scripting API" map carry to the respective location in the [detailed API description](http://www.freeplane.org/doc/api) which might be a bit overwhelming at this point.
+are equivalent. But the first "attribute" style is preferable since it is clearer. The clickable links in the "Scripting API" map carry to the respective location in the [detailed API description](http://docs.freeplane.org/api) which might be a bit overwhelming at this point.
 
 
 ## Setting links
@@ -457,7 +457,7 @@ It's very likely that scripting support lacking some functionality that would be
 This guide should have given you a quick overview over what can be done with scripts in Freeplane. Of course we have only scratched the surface. Here are some suggestions to dig further into Groovy / Freeplane scripting: 
 
 * [groovy-learn.org](http://groovy-lang.org/learn.html) docs, books, presentation and  books for Groovy beginners
-* [scripting API](http://www.freeplane.org/doc/api/)
+* [scripting API](http://docs.freeplane.org/api/)
 * [Scripts collection](Scripts_collection.md) Learn by example
 * [Freeplane utility classes](Scripting!_Freeplane_Utility_Classes.md) 
 * [Libraries included in Freeplane](Scripting!_Included_libraries.md) 

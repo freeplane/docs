@@ -172,7 +172,7 @@ Here's how you access the variables set in the OptionPanel in scripts (second pa
     def timeout = config.getIntProperty('my_addon_timeout_sec', 15)
     def url = config.getProperty('my_addon_server_url', 'http://server.org/default')
 
-See FreeplaneScriptBaseClass.ConfigProperties in the [scripting API documentation](http://www.freeplane.org/doc/api/) for details.
+See FreeplaneScriptBaseClass.ConfigProperties in the [scripting API documentation](http://docs.freeplane.org/api/) for details.
 
 Variables which hold a translation of e.g. a message text can be accessed in a similar way:
 

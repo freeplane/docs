@@ -23,7 +23,7 @@ For larger scripts there is a special [git](../coding/Git_howto.md) repository [
 
 ## A node with the last modification date of the map
 
-This script sets the text of the status bar to the last modification timestamp of the whole map. [format()](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html#format(java.lang.Object,%20java.lang.String) ) is a free method of the Groovy script base class [FreeplaneScriptBaseClass](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html).
+This script sets the text of the status bar to the last modification timestamp of the whole map. [format()](http://docs.freeplane.org/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html#format(java.lang.Object,%20java.lang.String) ) is a free method of the Groovy script base class [FreeplaneScriptBaseClass](http://docs.freeplane.org/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html).
 
 <!-- name=lastModificationDate -->
 ```groovy
@@ -37,7 +37,7 @@ Author: `Boercher`
 
 ## Add up attribute values of subnodes.
 
-This script adds up the "AMOUNT" attributes of all child nodes of a node and sets the "SUM" attribute of the selected node to the sum. The start value ensures that the argument is created always, even if the node has no children. Note that `node[]` returns a [Convertible](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/Convertible.html).
+This script adds up the "AMOUNT" attributes of all child nodes of a node and sets the "SUM" attribute of the selected node to the sum. The start value ensures that the argument is created always, even if the node has no children. Note that `node[]` returns a [Convertible](http://docs.freeplane.org/api/org/freeplane/plugin/script/Convertible.html).
 
 <!-- name=sumAttributeValues -->
 ```groovy
@@ -56,7 +56,7 @@ node['SUM'] = format(sum, '0.0')
 
 The following script does the same for the whole map.
 
-[c.findAllDepthFirst()](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/proxy/Proxy.ControllerRO.html#findAllDepthFirst()) iterates the map in the right order, starting from the leaf nodes. Uncomment the lines containing "index".
+[c.findAllDepthFirst()](http://docs.freeplane.org/api/org/freeplane/plugin/script/proxy/Proxy.ControllerRO.html#findAllDepthFirst()) iterates the map in the right order, starting from the leaf nodes. Uncomment the lines containing "index".
 
 You should study how to use [Groovy Collections](http://groovy.codehaus.org/Collections) methods like collect(), each(), sum() since this is one of most important topics for scripting beginners.
 
