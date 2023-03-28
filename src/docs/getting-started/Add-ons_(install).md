@@ -399,6 +399,15 @@ https://youtu.be/hUagckdoeNATo
 
 Add-on is located at https://github.com/adxsoft/ImportOPMLtoselectednode.addon
 
+## Map Obfuscator
+**by [macmarrum](https://github.com/macmarrum)**
+
+Duplicates the current mindmap and obfuscates its content so that it can be shared without exposing private information.
+
+Works with Freeplane version 1.8.0 and above.
+
+[Download Map Obfuscator](https://github.com/macmarrum/freeplane-MapObfuscator/releases)
+
 <br/>
 
 # Others
@@ -474,6 +483,21 @@ With this AddOn you can define if a map have to save the information of any of t
 This way, you can define for each map if it will use the central Freeplane preferences, its own or a mix of both.
 
 [Download the latest release here](https://github.com/EdoFro/Freeplane_Map-Saving-Options/releases/latest)
+
+## Script Execution On Mindmap Open
+**by [macmarrum](https://github.com/macmarrum)**
+
+Freeplane has the functionality to execute Groovy scripts when the application starts. It's known as "init scripts" → https://docs.freeplane.org/?search=init
+
+This add-on extends the functionality with the ability to execute scripts when a mindmap is opened, i.e. individually for each mindmap.
+
+To execute a script for a mindmap, in your root node add an attribute named "scriptOnMapOpen", then use `Tools->Edit script...` to enter the Groovy code.
+
+_Note: The attribute name must start with "scriptOnMapOpen" but can have any suffix_
+
+Works with Freeplane version 1.7.10 and above.
+
+[Download Script Execution On Mindmap Open](https://github.com/macmarrum/freeplane-ScriptExecutionOnMindmapOpen/releases)
 
 <br/>
 
