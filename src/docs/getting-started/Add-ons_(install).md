@@ -374,6 +374,20 @@ All files have to be loaded into the RAM so be prepared to [increase Java heap s
 
 [Download v0.5](https://sourceforge.net/projects/freeplane/files/addons/packAndGo/packAndGo-v0.5.addon.mm)
 
+
+## ![](../images/PackAndGo-icon.png) Pack and Go-Go
+**by [macmarrum](https://github.com/macmarrum)**
+
+_Originally **Pack And Go** by Volker Börchers - no longer maintained_
+
+**Pack and Go-Go** adds a menu item to create a ZIP file with the mindmap, packing also its images and linked mindmaps (without dependencies).
+
+> Note: All files are loaded into RAM. If you get an Out Of Memory Error, see https://docs.freeplane.org/attic/old-mediawiki-content/Troubleshooting.html#freeplane-throws-out-of-memory-exception
+
+Works with Freeplane version 1.9.1 and above.
+
+[**PackAndGoGo.addon.mm** releases](https://github.com/macmarrum/freeplane-PackAndGoGo/releases)
+
 ## Import OPML to selected node
 **by ADXSoft (Allan)**
 
