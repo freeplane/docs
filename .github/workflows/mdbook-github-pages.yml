@@ -52,7 +52,7 @@ jobs:
           cd build
           export FP_GH=https://github.com/freeplane/freeplane
           # Change TAG_PATTERN when a new major version is released
-          export TAG_PATTERN=release-1.10.*
+          export TAG_PATTERN=release-1.11.*
           while read -r hash ref; do if [[ $ref != *-pre* ]]; then latest_stable_release_tag=${ref##*/}; fi; done < <(git ls-remote --tags $FP_GH $TAG_PATTERN)
           _tag=$(curl https://docs.freeplane.org/api/_tag.txt)
           if [[ $_tag && $_tag = $latest_stable_release_tag ]]; then
