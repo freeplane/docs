@@ -8,15 +8,6 @@ Unfortunately scripts might get old over time, i.e. when scripting idioms evolve
 * **Scripts that use external libraries** have their [separate page](Scripting!_Example_scripts_using_external_libraries.md), too.
 * **Scripts that might need a review before they are added here** can be found in the [Script incubator](Script_incubator.md).
 
-<!--
-Feel free to add your own scripts to these and this page. If you give script a name using wiki text like
-
-`<syntaxhighlight lang="Groovy" name="yourScriptName">
- your script
-</syntaxhighlight>`
-
-an extra download button is created for it, and it can be downloaded directly from this page.
--->
 
 For larger scripts there is a special [git](../coding/Git_howto.md) repository [https://github.com/freeplane/addons].
 
@@ -2211,7 +2202,7 @@ This example illustrates:
 3. instantiating the class and passing "ui" as a class parameter:   w=new FreeplaneWindow(ui)
 4. setting & getting the position and size of the Freeplane main window without having to know the underlying specifics. 
  
-<syntaxhighlight lang="Groovy" name="FreeplaneWindow" >
+```groovy
 // class FreeplaneWindow
 import java.awt.Frame;
 import java.awt.Point; 
@@ -2250,7 +2241,7 @@ class FreeplaneWindow {
     println w.getLeft()
     println w.getWidth()
     println w.getHeight()
-</syntaxhighlight>.
+```
 
 Author: `jokro`
 
@@ -2258,9 +2249,9 @@ Author: `jokro`
 
 THIS SCRIPT DOES
 
-# extract text contents from a node as part of a HTTP request
-# construct a valid URI to be understood from a browser
-# display the corresponding web page in an external browser
+- extract text contents from a node as part of a HTTP request
+- construct a valid URI to be understood from a browser
+- display the corresponding web page in an external browser
 
 
 EXAMPLE APPLICATION
