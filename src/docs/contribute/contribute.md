@@ -1,6 +1,6 @@
 # How to Start Contributing
 
-Freeplane is developed and maintained by voluntairs who want to share their passion and skills with the world. The project was launched by its current lead Dimitry Polivaev in 2007.
+Freeplane is developed and maintained by volunteers who want to share their passion and skills with the world. The project was launched by its current lead Dimitry Polivaev in 2007.
 
 You can [participate](../coding/How_to_build_Freeplane.html) not only as user and community member but maybe as a
 
