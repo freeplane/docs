@@ -12,6 +12,7 @@
 * [Freeplane Video Tutorials](https://www.youtube.com/channel/UCh5L_Fyyymhf6X6TnzAMbsg)
 * [Freeplane Videos](https://www.youtube.com/playlist?list=PLhOm7F0YJUlzSA1nUts_3DvFbkEddMoyW) by _Bill McDonald_ 
 * [Freeplane channel](https://www.youtube.com/channel/UCE39SdNgftWlSDJQQnwxz1g) by _Zipizap_
+* [Freeplane channel](https://www.youtube.com/playlist?list=PLIyXLRsF5Cdb09v2b4FkA6Ux_Nf6B2I-a) by _Ken Hill_
 
 ## Forums
 * [Current discussion forum](https://github.com/freeplane/freeplane/discussions)
