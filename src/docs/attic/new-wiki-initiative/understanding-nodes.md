@@ -26,17 +26,12 @@ To understand the implications of this setting, see (to be added).
 
 ### Node Details
 #### Purpose
-A node can hold four pieces of information.  The node core is the central piece of information.  Next is focus of this section - node details - appears beneath the node core.  Additionally, a node can have attributes and notes.  Together they pack lots of information into Freeplane's basic information unit, the node.
+Node details, seen beneath the node core, displays closely-related information about the node core text.  It adds meaning to the node.  One way of looking at this relationship is like a book title and its sub title.  It can elaborate, embellish, clarify, define, etc. - like a child node. But sometimes a child node seems too distant.
 
-Node details uniquely displays information that is very closely related, almost intimately, to the node core text.  The node core is similar to a book title and the node's details a sub title.  It can elaborate, embellish, clarify, define - like a child node.  But sometimes a child node seems too distant. 
-
-Node details can represent many different relationships to the node core.  The following examples are in this format: node core / node details
-parenthetical: **dialog** / *floating editor*
-
-appositional: **Sam** / *my dog*
-
-factual detail: **end of WW2** / *Sept 2.1945*
-
+Node details can represent many different relationships to the node core.  The following examples are in this format: **node core** / *node details*\
+parenthetical: **dialog** / *floating editor*\
+appositional: **Sam** / *my dog*\
+factual detail: **end of WW2** / *Sept 2.1945*\
 elaboration: **our wedding** / *beautiful day - all family members there*
 
 And so on to meet your needs.
@@ -69,9 +64,9 @@ When a node is selected, you can create a detail for it, if none already exists,
 - right-click on the node > Edit > Edit node details in dialog. 
 
 #### Hide node details
-Hiding node(s) details folds the detail out of view, leaving only a sliver visible and a small down-pointing arrow to mark the presence of node(s) details (known as a toggle).  Hovering over such a node with display the details in a tooltip popup.  Clicking the toggle displays the details of that node. 
+Hiding node(s) details folds the detail out of view, leaving only a sliver visible and a small down-pointing arrow to mark the presence of node(s) details (known as a toggle).  Hovering over such a node with display the details in a tooltip popup.  Clicking the toggle displays or hides the details of that node. 
 
-Hiding node details is useful to free a bit of map real estate, viewing the details when you need remember its contents.  It also can help when using the map for presenting your map to others - you can reveal the node details at an appropriate time as you step through your map.  Additionally, some node details may contain confidential information you do not want others to see but which you need to have access to. 
+Hiding node details is useful to free a bit of map real estate, viewing the details when you need remember its contents.  It also can help when presenting your map to others - you can reveal the node details at an appropriate time as you step through your map.  Additionally, some node details may contain confidential information you do not want others to see but which you need to have access to. 
 
 Hide node details is a toggle, hiding details then showing them. 
 
