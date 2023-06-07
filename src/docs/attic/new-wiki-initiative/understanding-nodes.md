@@ -29,10 +29,10 @@ To understand the implications of this setting, see (to be added).
 Node details, seen beneath the node core, displays closely-related information about the node core text.  It adds meaning to the node.  One way of looking at this relationship is like a book title and its sub title.  It can elaborate, embellish, clarify, define, etc. - like a child node. But sometimes a child node seems too distant.
 
 Node details can represent many different relationships to the node core.  The following examples are in this format: **node core** / *node details*\
-parenthetical: **dialog** / *floating editor*\
-appositional: **Sam** / *my dog*\
+parenthetical:  **dialog** / *floating editor*\
+appositional:   **Sam** / *my dog*\
 factual detail: **end of WW2** / *Sept 2.1945*\
-elaboration: **our wedding** / *beautiful day - all family members there*
+elaboration:    **our wedding** / *beautiful day - all family members there*
 
 And so on to meet your needs.
 
@@ -55,7 +55,7 @@ When a node is selected, you can create a detail for it, if none already exists,
 
 **2. Dialog** editing in a floating editor.  The details dialog, a basic text editor, has more robust editing tools (via a menu bar and a toolbar). When done typing, either: 
 - click the "OK" button to save the detail and exit the dialog (keyboard hotkey: Alt+O).  
-- Or, to cancel, press "Esc" to exit the dialog without saving your work. 
+- Or, press the "Cancel" button or press "Esc" to exit the dialog without saving your work. 
 
 **To access dialog editing**:  Select a node then either 
 - press Ctrl+F3 
