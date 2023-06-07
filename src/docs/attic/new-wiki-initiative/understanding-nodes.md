@@ -26,9 +26,14 @@ To understand the implications of this setting, see (to be added).
 
 ### Node Details
 #### Purpose
-Node details, seen beneath the node core, displays closely-related information about the node core text.  It adds meaning to the node.  One way of looking at this relationship is like a book title and its sub title.  It can elaborate, embellish, clarify, define, etc. - like a child node. But sometimes a child node seems too distant.
+Node details, seen beneath the node core, displays closely-related information about the node core text.
+It adds meaning to the node.  One way of looking at this relationship is like a book title and its sub title.
+It can elaborate, embellish, clarify, define, etc. - like a child node.
+But sometimes a child node seems too distant.
 
-Node details can represent many different relationships to the node core.  The following examples are in this format: **node core** / *node details*\
+Node details can represent many different relationships to the node core.
+The following examples are in this format:
+**node core** / *node details*\
 parenthetical: **dialog** / *floating editor*\
 appositional: **Sam** / *my dog*\
 factual detail: **end of WW2** / *Sept 2.1945*\
@@ -40,33 +45,44 @@ And so on to meet your needs.
 There are three operations or actions you can perform on node details. 
 
 ##### Create or edit node details
-When a node is selected, you can create a detail for it, if none already exists, or you can edit an already-created detail.  There are two methods to choose from. 
+When a node is selected, you can create a detail for it, if none already exists, or you can edit an already-created detail.
+There are two methods to choose from. 
 
-**1.  In-line** editing, directly beneath the node.  In-line editing offers fairly basic editing tools (via right-click).  When done typing, either 
+**1.  In-line** editing, directly beneath the node.
+In-line editing offers fairly basic editing tools (via right-click).
+When done typing, either 
 - press "Enter" to save the detail and exit the in-line editor
 - press "Insert" to save the detail and create a new child node.  
 - Or, press "Esc" to cancel and exit the in-line editor without saving your work. 
 
-**To access in-line editing**: Select a node then either 
+**To access in-line editing**:
+Select a node then either 
 - press F3
 - use the Edit menu > Node properties > Edit node details in-line
 - Command search (Ctrl+F1), type "details", choose the matching menu item
 - right-click on the node > Edit > Edit node details in-line. 
 
-**2. Dialog** editing in a floating editor.  The details dialog, a basic text editor, has more robust editing tools (via a menu bar and a toolbar). When done typing, either: 
+**2. Dialog** editing in a floating editor.
+The details dialog, a basic text editor, has more robust editing tools (via a menu bar and a toolbar).
+When done typing, either: 
 - click the "OK" button to save the detail and exit the dialog (keyboard hotkey: Alt+O).  
 - Or, to cancel, press "Esc" to exit the dialog without saving your work. 
 
-**To access dialog editing**:  Select a node then either 
+**To access dialog editing**:
+Select a node then either 
 - press Ctrl+F3 
 - use the Edit menu > Node properties > Edit node details in dialog 
 - use Command search (Ctrl+F1), type "details", choose the matching menu item 
 - right-click on the node > Edit > Edit node details in dialog. 
 
 #### Hide node details
-Hiding node(s) details folds the detail out of view, leaving only a sliver visible and a small down-pointing arrow to mark the presence of node(s) details (known as a toggle).  Hovering over such a node with display the details in a tooltip popup.  Clicking the toggle displays or hides the details of that node. 
+Hiding node(s) details folds the detail out of view, leaving only a sliver visible and a small down-pointing arrow to mark the presence of node(s) details (known as a toggle).
+Hovering over such a node with display the details in a tooltip popup.
+Clicking the toggle displays or hides the details of that node. 
 
-Hiding node details is useful to free a bit of map real estate, viewing the details when you need remember its contents.  It also can help when presenting your map to others - you can reveal the node details at an appropriate time as you step through your map.  Additionally, some node details may contain confidential information you do not want others to see but which you need to have access to. 
+Hiding node details is useful to free a bit of map real estate, viewing the details when you need remember its contents.
+It also can help when presenting your map to others - you can reveal the node details at an appropriate time as you step through your map.
+Additionally, some node details may contain confidential information you do not want others to see but which you need to have access to. 
 
 Hide node details is a toggle, hiding details then showing them. 
 
@@ -78,24 +94,34 @@ Hide node details is a toggle, hiding details then showing them.
 #### Remove node details
 Remove node details will delete the node details content from one or more nodes. 
 
-**To access**: Select one or more nodes then either use 
+**To access**:
+Select one or more nodes then either use 
 - the Edit menu > Node properties > Remove node details 
 - Command search (Ctrl+F1) > type "details" > choose the option matching the menu item
 
 #### Changing node details appearance
-The appearance of node details is controlled by the Details style, one of every map's Predefined styles.  You can change its appearance in the Style editing dialog: 
+The appearance of node details is controlled by the Details style, one of every map's Predefined styles.
+You can change its appearance in the Style editing dialog: 
 - Ctrl+F11
 - Format menu > Manage Styles > Edit styles
 - Command search (Ctrl+F1) > type "edit style" > choose the option matching the menu item
 
-You can make changes by selecting "Details" (under "Default") then make changes using the menu, toolbar, tools panel, and hotkeys.   <see Styles> 
+You can make changes by selecting "Details" (under "Default") then make changes using the menu, toolbar, tools panel, and hotkeys.
+<see Styles> 
 
 #### **Miscellaneous** 
-The Find-Replace dialog has a sortable column labeled "Details" which lets you see which nodes in the map contain text in its node details.  <see Find-Replace> 
+The Find-Replace dialog has a sortable column labeled "Details" which lets you see which nodes in the map contain text in its node details.
+<see Find-Replace> 
 
-The Filter toolbar defaults to searching node core, details, and notes.  But you can restrict Find's scope by looking only in Details.  <see Filtering>
+The Filter toolbar defaults to searching node core, details, and notes.
+But you can restrict Find's scope by looking only in Details.
+<see Filtering>
   
-A node's children can be converted to attributes.  The child(ren) node core(s) contents convert to attribute name(s) ; node details convert to attribute value(s).  (Similarly, attributes can be converted to child nodes.) <see Attributes> 
+A node's children can be converted to attributes.
+The child(ren) node core(s) contents convert to attribute name(s);
+node details convert to attribute value(s).
+(Similarly, attributes can be converted to child nodes.)
+<see Attributes> 
   
   
   
