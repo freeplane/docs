@@ -90,7 +90,7 @@ Hide node details is a toggle, hiding details then showing them.
 - press Alt+F2 
 - use the View menu > Hide details 
 - use Command search (Ctrl+F1), type "details", and choose the matching menu item
-- click the toggle (lower left corner of node core)
+- click the toggle arrow (lower left corner of node core)
 
 #### Remove node details
 Remove node details will delete the node details content from one or more nodes. 
