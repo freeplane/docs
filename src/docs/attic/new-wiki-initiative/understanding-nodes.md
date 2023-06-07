@@ -76,7 +76,7 @@ Select a node then either
 - right-click on the node > Edit > Edit node details in dialog. 
 
 #### Hide node details
-Hiding node(s) details folds the detail out of view, leaving only a sliver visible and a small down-pointing arrow to mark the presence of node(s) details (known as a toggle).
+Hiding node(s) details folds the detail out of view, leaving only a sliver visible and a small down-pointing arrow (on the bottom left corner of the node core) to mark the presence of node(s) details (known as a toggle).
 Hovering over such a node with display the details in a tooltip popup.
 Clicking the toggle displays or hides the details of that node. 
 
@@ -89,7 +89,8 @@ Hide node details is a toggle, hiding details then showing them.
 **To access**: Select the node(s) then either 
 - press Alt+F2 
 - use the View menu > Hide details 
-- use Command search (Ctrl+F1), type "details", and choose the matching menu item. 
+- use Command search (Ctrl+F1), type "details", and choose the matching menu item
+- click the toggle (lower left corner of node core)
 
 #### Remove node details
 Remove node details will delete the node details content from one or more nodes. 
