@@ -107,7 +107,7 @@ You can change its appearance in the Style editing dialog:
 - Format menu > Manage Styles > Edit styles
 - Command search (Ctrl+F1) > type "edit style" > choose the option matching the menu item
 
-You can make changes by selecting "Details" (under "Default") then make changes using the menu, toolbar, tools panel, and hotkeys.
+You can make changes by selecting "Details" (under "Default") then make changes using the menu, toolbar, properties panel, and hotkeys.
 <see Styles> 
 
 #### **Miscellaneous** 
