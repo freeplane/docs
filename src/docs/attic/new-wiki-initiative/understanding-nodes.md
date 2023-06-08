@@ -69,7 +69,7 @@ Select a node then either
 - right-click on the node > Edit > Edit node details in-line. 
 
 **2. Dialog** editing in a floating editor.
-The details dialog, a basic text editor, has more robust editing tools (via a menu bar and a toolbar).
+The details dialog, a basic text editor, has more robust editing tools (via a menu bar and a toolbar).  Hyperlinks can be created in node details - but only in the node details dialog.
 When done typing, either: 
 - click the "OK" button to save the detail and exit the dialog (keyboard hotkey: Alt+O).  
 - Or, to cancel, press "Esc" to exit the dialog without saving your work. 
