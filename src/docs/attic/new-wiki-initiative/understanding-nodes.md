@@ -42,9 +42,12 @@ elaboration: **our wedding** / *beautiful day - all family members there*
 And so on to meet your needs.
 
 #### Using node details
-There are three operations or actions you can perform on node details. 
+There are three operations or actions you can perform on node details
+- Creating and editing node details
+- Hiding node details
+- Removing node details 
 
-##### Create or edit node details
+#### Create or edit node details
 When a node is selected, you can create a detail for it, if none already exists, or you can edit an already-created detail.
 There are two methods to choose from. 
 
