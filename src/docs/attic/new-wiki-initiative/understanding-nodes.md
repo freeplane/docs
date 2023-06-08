@@ -92,6 +92,8 @@ Additionally, some node details may contain confidential information you do not 
 
 Hide node details is a toggle, hiding details then showing them. 
 
+Note: even when node details are hidden, you can see it by hovering over the node.
+
 **To access**: Select the node(s) then either 
 - press Alt+F2 
 - use the View menu > Hide details 
