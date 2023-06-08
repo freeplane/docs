@@ -100,7 +100,7 @@ Select one or more nodes then either use
 - the Edit menu > Node properties > Remove node details 
 - Command search (Ctrl+F1) > type "details" > choose the option matching the menu item
 
-#### Changing node details appearance
+#### Changing node details appearance (Styles)
 The appearance of node details is controlled by the Details style, one of every map's Predefined styles.
 You can change its appearance in the Style editing dialog: 
 - Ctrl+F11
