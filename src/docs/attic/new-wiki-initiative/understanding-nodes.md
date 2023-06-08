@@ -28,8 +28,10 @@ To understand the implications of this setting, see (to be added).
 #### Purpose
 Node details, seen beneath the node core, displays closely-related information about the node core text.
 It adds meaning to the node.  One way of looking at this relationship is like a book title and its sub title.
-It can elaborate, embellish, clarify, define, etc. - like a child node.
+It can elaborate, embellish, clarify, define, etc. - like a child node.  
 But sometimes a child node seems too distant.
+
+Even images can be placed in node details.
 
 Node details can represent many different relationships to the node core.
 The following examples are in this format:
