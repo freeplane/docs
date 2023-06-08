@@ -48,11 +48,12 @@ There are three operations or actions you can perform on node details
 - Removing node details 
 
 #### Create or edit node details
-When a node is selected, you can create a detail for it, if none already exists, or you can edit an already-created detail.
+When a node is selected, you can create a detail for it, if none already exists, or you can edit an already-created detail.  While typing your text, to force a line break, press Shift+Enter.
+
 There are two methods to choose from. 
 
 **1.  In-line** editing, directly beneath the node.
-In-line editing offers fairly basic editing tools (via right-click).
+In-line editing offers fairly basic editing tools (via right-click on selected text).
 When done typing, either 
 - press "Enter" to save the detail and exit the in-line editor
 - press "Insert" to save the detail and create a new child node.  
