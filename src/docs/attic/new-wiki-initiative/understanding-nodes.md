@@ -36,7 +36,7 @@ The following examples are in this format:
 **node core** / *node details*\
 parenthetical: **dialog** / *floating editor*\
 appositional: **Sam** / *my dog*\
-factual detail: **end of WW2** / *Sept 2.1945*\
+factual detail: **end of WW2** / *Sept 2, 1945*\
 elaboration: **our wedding** / *beautiful day - all family members there*
 
 And so on to meet your needs.
