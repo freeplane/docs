@@ -152,10 +152,13 @@ Alternatively, you can manage attributes in `View->Controls->Tool panel` – tab
 
 ### Connectors
 
-Unlike edges, connectors must be added manually, one by one.
-To add a connector, select two nodes, `right-click` for a context menu and select `Connect (Ctrl+L)`.
+Unlike edges, connectors must be added manually.
+To add a connector between two nodes, select them, `right-click` for a context menu and choose `Connect (Ctrl+L)` or use the hot key.
 Another way is to `Ctrl+Shift + drag` one node onto another.
 On some systems it's also possible to `right-click + drag` one node onto another.
+
+It's possible to add several connectors at one go by selecting more than two nodes.
+In this case the last selected node is the target.
 
 Connectors' properties can be edited.
 When you `right-click` a connector (it's best to select one of the connected nodes first), the **Connector** dialog appears.
