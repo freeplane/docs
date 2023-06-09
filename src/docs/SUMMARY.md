@@ -35,15 +35,15 @@
     - [Script incubator](scripting/Script_incubator.md)
     - [Scripting! Jython](scripting/Scripting!_Jython.md)
     - [Scripting environment setup](scripting/Scripting_environment_setup.md)
-  - [XSLT for export/import](scripting/Export_Using_XSLT.md)
+  - [IntelliJ IDEA setup](scripting/intellij-idea-setup.md)
   - [Add-ons (Development)](scripting/Add-ons_(Develop).md)
   - [Security considerations](scripting/Security_considerations.md)
 - [Coding](coding/Git_howto.md)
   - [Git howto](coding/Git_howto.md)
   - [How to build Freeplane](coding/How_to_build_Freeplane.md)
   - [IDE setup](coding/IDE_setup.md)
-  - [IntelliJ IDEA setup](coding/intellij-idea-setup.md)
   - [Plugin development](coding/Plugin_development.md)
+  - [XSLT for export/import](coding/Export_Using_XSLT.md)
 
 # Attic
 
