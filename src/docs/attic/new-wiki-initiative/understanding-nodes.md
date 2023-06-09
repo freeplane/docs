@@ -117,7 +117,8 @@ You can change its appearance in the Style editing dialog:
 - Command search (Ctrl+F1) > type "edit style" > choose the option matching the menu item
 
 You can make changes by selecting "Details" (under "Default") then make changes using the menu, toolbar, properties panel, and hotkeys.
-<see Styles> 
+
+see [Styles](https://docs.freeplane.org/user-documentation/styles.html#style-editing)
 
 #### **Miscellaneous** 
 The Find-Replace dialog has a sortable column labeled "Details" which lets you see which nodes in the map contain text in its node details.
