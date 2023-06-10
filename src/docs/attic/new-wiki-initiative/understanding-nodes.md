@@ -55,7 +55,7 @@ When a node is selected, you can create a detail for it, if none already exists,
 There are two methods to choose from. 
 
 **1.  In-line** editing, directly beneath the node.
-In-line editing offers fairly basic editing tools (via right-click on selected text).
+In-line editing offers fairly basic editing tools (via right-click or hotketys on selected text).
 When done typing, either 
 - press "Enter" to save the detail and exit the in-line editor
 - press "Insert" to save the detail and create a new child node.  
@@ -70,7 +70,7 @@ Select a node then either
 - double-click on node details.
 
 **2. Dialog** editing in a floating editor.
-The details dialog, a basic text editor, has more robust editing tools (via a menu bar and a toolbar).  Hyperlinks can be created in node details - but only in the node details dialog (Ctrl+H).
+The details dialog, a basic text editor, has more robust editing tools (via a menu bar, a toolbar, and hotkeys).  Hyperlinks can be created in node details - but only in the node details dialog (Ctrl+H).
 When done typing, either: 
 - click the "OK" button to save the detail and exit the dialog (keyboard hotkey: Alt+O).  
 - Or, to cancel, press "Esc" to exit the dialog without saving your work. 
