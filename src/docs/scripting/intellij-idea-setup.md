@@ -1,7 +1,7 @@
 <!-- toc -->
 
 Here's a procedure for setting up IntelliJ IDEA.\
-See [IDE setup](IDE_setup.md) for an alternative, using Gradle.
+See [IDE setup](../coding/IDE_setup.md) for an alternative, using Gradle.
 
 ### Installation and configuration
 1. Go to <https://www.jetbrains.com/idea/download/>
