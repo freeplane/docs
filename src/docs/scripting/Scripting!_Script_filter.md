@@ -1,6 +1,6 @@
 <!-- toc -->
 
-For special search and filtering tasks scripting can be employed. The rich [scripting API](http://www.freeplane.org/wiki/index.php/Scripting_API) gives access to all relevant properties of nodes and the [Groovy language](http://groovy.codehaus.org/) provides all measures to express every filtering condition you may think of.
+For special search and filtering tasks scripting can be employed. The rich [scripting API](http://www.freeplane.org/wiki/index.php/Scripting_API) gives access to all relevant properties of nodes and the [Groovy language](https://docs.groovy-lang.org/latest/html/documentation/) provides all measures to express every filtering condition you may think of.
 
 Script filters are selected either via *Filter->Compose filter* or via the filtering toolbar in the following way:
 
@@ -18,7 +18,7 @@ Some of us are using Freeplane to follow project's tasks. To easily follow evolu
 
     node.lastModifiedAt <= new Date() - 7
 
-Now, to filter for all nodes that have changed within the last 2 hours (see [Groovy dates and times](http://groovycookbook.org/basic_types/dates_times/#dates_times-UsingGroovy%27sTimeCategory) )
+Now, to filter for all nodes that have changed within the last 2 hours (see [Groovy dates and times](https://docs.groovy-lang.org/latest/html/documentation/#_working_with_datetime_types) )
 
     use (groovy.time.TimeCategory) {
     node.lastModifiedAt <= 2.hours.ago
