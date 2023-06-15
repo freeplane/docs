@@ -67,7 +67,7 @@ Select a node then either
 - use the Edit menu > Node properties > Edit node details in-line
 - Command search (Ctrl+F1), type "details", choose the matching menu item
 - right-click on the node > Edit > Edit node details in-line. 
-- double-click on node details.
+- double-click on node details (if details already exist for the node).
 
 **2. Dialog** editing in a floating editor.
 The details dialog, a basic text editor, has more robust editing tools (via a menu bar, a toolbar, and hotkeys).  Hyperlinks can be created in node details - but only in the node details dialog (Ctrl+H).
