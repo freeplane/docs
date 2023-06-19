@@ -11,6 +11,7 @@
 - [User documentation](user-documentation/user-documentation.md)
   - [First steps](user-documentation/first-steps.md)
   - [Working with mindmap files](user-documentation/working-w-mindmap-files.md)
+  - [Hot keys and beyond](user-documentation/hot-keys-and-beyond.md)
   - [Formatting maps and nodes](user-documentation/formatting-maps-and-nodes.md)
   - [Styles](user-documentation/styles.md)
   - [Templates](user-documentation/templates.md)
