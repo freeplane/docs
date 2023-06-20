@@ -7,7 +7,7 @@ It is most apparent in `View->Controls->F-Bar`.
 
 ![](../images/f-bar-toolbar.png)
 
-By default `Preferences…->Keystrokes->Commands for the program->Ignore unassigned F-Keys` is off, therefore a click on (usage of) an unassigned F-Bar key displays a prompt to "click on the desired command in the menu".
+By default `Preferences…->Keystrokes->Commands for the program->Ignore unassigned F-Keys` is off, therefore a click on (usage of) an unassigned F-Bar key displays a prompt to "click on the desired command in the menu" to "create a new keyboard shortcut".
 
 ### Hot Keys for Actions
 
