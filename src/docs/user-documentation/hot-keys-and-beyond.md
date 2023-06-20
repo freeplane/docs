@@ -47,7 +47,7 @@ i.e. (for the "Home" icon):
 
 Additionally, in `Insert->Icons->Icon from table… (Ctrl+F2)` you can `Ctrl+click` on an icon to assign it a **_ctrl key_**,
 i.e. a hot key which works only in this window and uses `Ctrl` as its (first) modifier.
-`Shift` can be used as the second.
+`Shift` can be used as the second one.
 
 ## Keyboard Shortcuts
 
