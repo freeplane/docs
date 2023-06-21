@@ -36,6 +36,15 @@ It can be pasted e.g. in a Discussions post.
 
 ![](../images/set-hot-key-in-command-search.png)
 
+#### Hot Key Reassignment
+
+It's possible to reassign an already used hot key to a different action or icon.
+The procedure is as described above, with the addition of a confirmation window.
+
+Let's say you want to change the hot key for `Command Search` from the default `Ctrl+F1` to `Ctrl+Shift+A`. Once you follow one of the three methods, you'll be presented with the confirmation pop-up
+
+![](../images/hot-key-reassignment-confirmation.png)
+
 ### Hot Keys for Icons
 
 Similarly, a hot key can be assigned to an icon.
