@@ -7,26 +7,28 @@ It is most apparent in `View->Controls->F-Bar`.
 
 ![](../images/f-bar-toolbar.png)
 
-By default `Preferences…->Keystrokes->Commands for the program->Ignore unassigned F-Keys` is off, therefore a click on (usage of) an unassigned F-Bar key displays a prompt to "click on the desired command in the menu" to "create a new keyboard shortcut".
+By default `Preferences…->Keystrokes->Commands for the program->Ignore unassigned F-Keys` is off, therefore a click on (usage of) an unassigned F-Bar key will display a prompt to "click on the desired command in the menu" to "create a new keyboard shortcut".
 
 ### Hot Keys for Actions
 
 Let's say that you want to use `INSERT` to add new child nodes, instead of the default `TAB`.
 
 **Method 1**\
-You can go to `Tools->Assign hot key`, a pop-up window appears with the message "To create a new keyboard shortcut, click on the desired command in the menu".
-Once you click on `Insert->New node->New child node`, a pop-up prompts you to use your new hot key and click `OK`.
+You can go to `Tools->Assign hot key`, a pop-up window will appear with the message "To create a new keyboard shortcut, click on the desired command in the menu".
+Once you click on `Insert->New node->New child node`, a pop-up will prompt you to use your new hot key and click `OK`.
 
 **Method 2**\
-Go to `Insert->New node->New child node`, hold `Ctrl` and click.
-A pop-up prompts you to use your new hot key and click `OK`.
+Go to `Insert->New node->New child node`, hold `Ctrl` and click.\
+Alternatively, hover your mouse cursor over the menu item `New child node` and press `Ctrl+Return`.\
+A pop-up will prompt you to use your new hot key and click `OK`.
 
 **Method 3**\
 You can launch the **Command Search** via `Help->Command Search` or its hot key `Ctrl+F1`.
 
 1. Make sure `Menu items` is checked.
 2. Type `new child` in the search bar.
-3. Hold `Ctrl` and double-click `Insert->New node->New child node (Tab)`.
+3. Select (using the arrow keys) `Insert->New node->New child node (Tab)` and press `Ctlr+Enter`.\
+   Alternatively, hold down `Ctrl` and double-click `Insert->New node->New child node (Tab)`.\
    A pop-up will appear, where the new hot key can be assigned.
 
 **_Bonus_**\
@@ -44,6 +46,10 @@ The procedure is as described above, with the addition of a confirmation window.
 Let's say you want to change the hot key for `Command Search` from the default `Ctrl+F1` to `Ctrl+Shift+A`. Once you follow one of the three methods, you'll be presented with the confirmation pop-up
 
 ![](../images/hot-key-reassignment-confirmation.png)
+
+### Hot Key Unassignment
+
+You can clear a hot key, unassigning it from an action/icon. Just follow any of the methods in [Hot Keys for Actions](#hot-keys-for-actions), and in the "Enter new key" pop-up window choose the button `Clear` and confirm `OK`.
 
 ### Hot Keys for Icons
 
