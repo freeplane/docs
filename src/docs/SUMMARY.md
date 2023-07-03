@@ -44,7 +44,7 @@
   - [How to build Freeplane](coding/How_to_build_Freeplane.md)
   - [IDE setup](coding/IDE_setup.md)
   - [Plugin development](coding/Plugin_development.md)
-  - [XSLT for export/import](coding/Export_Using_XSLT.md)
+  - [Export using XSLT](coding/Export_Using_XSLT.md)
 
 # Attic
 
