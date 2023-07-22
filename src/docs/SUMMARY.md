@@ -25,6 +25,7 @@
 - [Contribute](contribute/contribute.md)
   - [Translation How-To](contribute/Translation_How-To.md)
 - [Scripting](scripting/Scripting.md)
+  - [API/Groovy tutorial](scripting/api-groovy-tutorial.md)
   - [Formulas](scripting/Formulas.md)
     - [Formulas](scripting/Formulas.md)
     - [Formula filter](scripting/Scripting!_Script_filter.md)
@@ -122,7 +123,6 @@
     - [Your own utility script library](attic/old-mediawiki-content/Your_own_utility_script_library.md)./src/docs/attic/_sidebar.md
   - [New wiki initiative](attic/new-wiki-initiative/customizing-freeplane.md)
     - [customizing-freeplane](attic/new-wiki-initiative/customizing-freeplane.md)
-    - [freeplane-api-groovy](attic/new-wiki-initiative/freeplane-api-groovy.md)
     - [glossary](attic/new-wiki-initiative/glossary.md)
     - [introduction-aka-many-unsorted-ideas-related-to-freeplane](attic/new-wiki-initiative/introduction-aka-many-unsorted-ideas-related-to-freeplane.md)
     - [understanding-interface](attic/new-wiki-initiative/understanding-interface.md)
