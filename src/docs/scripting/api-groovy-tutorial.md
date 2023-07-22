@@ -484,7 +484,7 @@ You can add the same check as in the filter, i.e. `it.details && it.details.isNu
 
 > **Note:** `.isNum()` works also when `details` is `null`, because `.isNum()` checks for `null` and returns `false` in such case.
 
-All find and dandy, but why the result of the formula says "6", when there is only one sibling with "2" in its details?
+All fine and dandy, but why the result of the formula says "6", when there is only one sibling with "2" in its details?
 
 ![](../images/api-groovy-tutoria-formula-shows-unexpected-6.png)
 
