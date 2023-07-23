@@ -1,12 +1,10 @@
 <!-- toc -->
 
-# Freeplane API/Groovy tutorial
-
 This page is best viewed in the Ayu theme
  
 ![](../images/theme-choose-ayu.png)
 
-## Start your adventure with Groovy scripting
+# Part 1
 
 If you are new to scripting and/or Groovy,
 it might be easier to start with something you already know.
@@ -232,7 +230,7 @@ Let's try it: `Actions` > `Run`.
 
 ![](../images/edit-script-node-details-result-I-am-Groot.png)
 
-> **Note:** Freeplane allows even shorter expressions for **get** operations, where `node.` is omitted.
+> **Note:** Freeplane allows even shorter expressions for **get** operations, where `node.` is implied if omitted.
 
 ![](../images/edit-script-details-result-I-am-Groot.png)
 
@@ -312,7 +310,7 @@ Earlier, we looked at **Convertible** → [Formula - convertible](#formula---con
 
 New Groovy concepts:
 * `0..3` means a range from 0 to 3 (inclusive), i.e. 0, 1, 2, 3 → <https://groovy-lang.org/operators.html#_range_operator>
-* `children[0..3]` means a list of child nodes in the range [0..3], i.e. [child 0, child 1, child 2, child 3]
+* `children[0..3]` means a list of child nodes in the range 0..3, i.e. [child 0, child 1, child 2, child 3]
 
 In a script, to sum up the numbers in details and place the total into the node's text, you would write
 ```groovy
@@ -371,10 +369,10 @@ node.mindMap.filter(showAncestors, showDescendants, condition)
 ```
 
 New Groovy concepts:
-* true, false → <https://groovy-lang.org/syntax.html#_booleans>
-* if-else – allows to check a (compound) condition and do something in case it evaluates to true, and something else otherwise → <https://groovy-lang.org/semantics.html#_if_else>
-* numberA % numberN – computes modulo → <https://en.wikipedia.org/wiki/Modulo>
-  * % is the remainder operator -> <https://groovy-lang.org/operators.html#_normal_arithmetic_operators>
+* `true`, `false` → <https://groovy-lang.org/syntax.html#_booleans>
+* `if-else` – allows to check a (compound) condition and do something in case it evaluates to true, and something else otherwise → <https://groovy-lang.org/semantics.html#_if_else>
+* `numberA % numberN` – computes modulo → <https://en.wikipedia.org/wiki/Modulo>
+  * `%` is the remainder operator -> <https://groovy-lang.org/operators.html#_normal_arithmetic_operators>
 
 You might notice that a Closure `{...}` is used in another context than `.each {...}`.
 But the structure is already familiar, with a variable at the begining, followed by an arrow, etc.
@@ -499,3 +497,207 @@ Let's fix that too.
 ```
 
 ![](../images/api-groovy-tutoria-formula-shows-expected-2.png)
+
+## Conditional Styles with Script Filters
+
+Let's change the way formula nodes look like by adding a Map Conditional Style.
+
+How to tell if a node has a formula?\
+By checking if it starts with `=`.
+
+First, let's remove any filters `Filter->No filtering`,
+make sure to disable `Preferences…->Plugins->Formulas->Highlight formulas` and add a custom style to be used:
+* `Format->Manage Styles->Edit styles`
+* `Manage styles->New user style`
+* Name: "Formula"
+* `Insert->Icons->Nature->Nice` (or any icon that you like)
+* Confirm with `OK`
+
+You can search for "conditional" in the Scripting API.
+
+![](../images/api-search-conditional.png)
+
+Great.
+There is a method to get ConditionalStyles for a mind map.
+
+As you can see in the page for `MindMap#getConditionalStyles`, **ConditionalStyles** is another object, which has its own methods.
+You can read its API docs now → <https://docs.freeplane.org/api/org/freeplane/api/ConditionalStyles.html>
+
+You already know how to get from the current node to the mind map object → <https://docs.freeplane.org/api/org/freeplane/api/NodeRO.html#getMindMap()>\
+so the code to get map conditional styles should come as no surprise.
+
+```groovy
+def mcs = node.mindMap.conditionalStyles
+// or node.getMindMap().getConditionalStyles()
+```
+
+New Groovy concepts:
+* `//` starts a comment (a fragment that is ignored for execution) → <https://groovy-lang.org/syntax.html#_comments>
+
+`ConditionalStyles#add(...)` method is of interest for our task.
+As you can see in the API docs, it resembles the GUI layout at `Format->Manage Styles->Manage conditional styles for map`.
+
+![](../images/manage-conditional-styles-for-map-conditionalStyles-add.png)
+
+Let's create our script and run it.
+
+```groovy
+def mcs = node.mindMap.conditionalStyles
+def isActive = true
+def script = '''
+node.text.startsWith('=')
+'''
+def styleName = 'Formula'
+def isLast = false
+mcs.add(isActive, script, styleName, isLast)
+```
+
+New Groovy concepts:
+* `''' '''` – triple-single-quoted string, which allows quotes and new lines inside it → <https://groovy-lang.org/syntax.html#_triple_single_quoted_string>
+
+> **Note:** the following comes from the Java API:
+> * `String#startsWith` → <https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#startsWith-java.lang.String->
+>
+> Groovy itself is built on top of Java.
+> Many of the methods available in Groovy are therefore documented in the Java API docs.
+
+Once the script is run, this is what you'll see.
+
+![](../images/state-after-mcs-add-node-text-formula.png)
+
+You can also see a new entry in `Format->Manage Styles->Manage conditional styles for map`.
+
+Let's add a formula to the 1st node.
+Earlier you used its node ID to refer to the node.
+How about displaying its ID in details?
+
+How to get a node's ID using scripting API?\
+Let's search <https://docs.freeplane.org/api/> for "ID".
+
+Great.
+There is `NodeRO#getNodeID()` → <https://docs.freeplane.org/api/org/freeplane/api/NodeRO.html#getNodeID()>
+
+Uh-oh, its page says it's deprecated and to "_use `Node.getId()` instead_".
+That's fine.
+It happens from time to time that the design of API changes and new ideas are introduced.
+
+Let's type the formula in the 1st node's details.
+
+```groovy
+=node.id
+```
+
+Cool.
+But wait.
+Wasn't a formula node supposed to be conditionally assigned the "Formula" style?
+The 1st node isn't. WTF?
+
+Let's have a look at the `script` variable, which has the logic to find formula nodes.
+
+```groovy
+def script = '''
+node.text.startsWith('=')
+'''
+```
+
+Ah, yes.
+It only checks node core (`node.text`).
+Let's add a check for node details, too.
+And keep in mind to use the [Safe Navigation operator](https://groovy-lang.org/operators.html#_safe_navigation_operator) with `details`.
+
+```groovy
+def script = '''
+node.text.startsWith('=') || node.details?.startsWith('=')
+'''
+```
+
+
+New Groovy concepts:
+* `||` means "or" → <https://groovy-lang.org/operators.html#_logical_operators>
+
+How to change the script in an existing Conditional Style?\
+So far you've been dealing with **ConditionalStyles** (plural).
+It's time to look at **ConditionalStyle** (singular) → <https://docs.freeplane.org/api/org/freeplane/api/ConditionalStyle.html>.
+
+To get a list of **ConditionalStyle** items from a mind-map **ConditionalStyles**,
+execute the following script in `Tools->Edit script…`.
+
+![](../images/edit-script-node-mindmap-conditionalstyles-collect-result.png)
+
+New Groovy concepts:
+* `.collect()` – creates a list of items from an iterable → <https://docs.groovy-lang.org/latest/html/groovy-jdk/java/lang/Iterable.html#collect()>
+
+Now, using square brackets, you can get the 1st element (keep in mind to count from 0),
+which is a **ConditionalStyle** object.
+As you can see in [its API page](https://docs.freeplane.org/api/org/freeplane/api/ConditionalStyle.html),
+there is a `setScript` method available.\
+Let's use it.
+
+```groovy
+def script = '''
+node.text.startsWith('=') || node.details?.startsWith('=')
+'''
+def mcs = node.mindMap.conditionalStyles
+def cs = mcs.collect()[0]
+cs.script = script
+```
+
+Hmm, this is unexpected.
+The code was executed without errors, but the 1st node still has Default style.
+
+Let's see what `node.details` gets you.
+
+![](../images/edit-script-node-details-result.png)
+
+Well, it's the effect of the formula evaluation, not the formula itself.
+So there is no '=' at the beginning.
+
+How to get "raw" details?\
+Let's search the API docs.
+Actually, the search bar isn't that much helpful.
+Let's go to [NodeRO](https://docs.freeplane.org/api/org/freeplane/api/NodeRO.html) and use `Ctrl+F` to search the page itself for "raw".
+
+Found it: [getDetailsText()](https://docs.freeplane.org/api/org/freeplane/api/NodeRO.html#getDetailsText()) "_returns the raw HTML text of the details if there is any or null otherwise_".
+
+Let's see it in action.
+
+![](../images/edit-script-node-detailsText-result.png)
+
+> **Note:** Node Details is (usually) represented in Freeplane as HTML.\
+> Since `NodeRO#getDetails()` returns **Convertible**, details' content is auto-converted from HTML.
+> `node.details.text` returns plain text (HTML converted to plain text).
+
+How to convert HTML to plain text?\
+Let's search the [API docs](https://docs.freeplane.org/api/) for "html".
+
+Great.
+There is **HtmlUtils** and `HtmlUtils#htmlToPlain`.
+And at the top of its page, there's a tip:
+"_Utilities for conversion from/to HTML and XML used in Freeplane: In scripts available as "global variable" htmlUtils_".
+
+This is useful!
+`htmlUtils` is made available to scripts as a "global variable";
+you can use `htmlUtils.htmlToPlain(...)` in your script.
+
+> **Note:** Prior to v1.11.5, `HtmlUtils#htmlToPlain(String text)` expects non-null `text`.
+> You can use the Elvis operator `?:` to comply with this requirement.
+
+```groovy
+def script = '''
+node.text.startsWith('=') || htmlUtils.htmlToPlain(node.detailsText ?: '').startsWith('=')
+'''
+def mcs = node.mindMap.conditionalStyles
+def cs = mcs.collect()[0]
+cs.script = script
+```
+
+New Groovy concepts:
+* `a ?: b` means use `a` if Groovy-true, otherwise use `b` → <https://groovy-lang.org/operators.html#_elvis_operator>
+
+Success!
+
+![](../images/state-after-mcs-collect-0-set-script-detailstext.png)
+
+# Part 2
+
+_Coming soon_
