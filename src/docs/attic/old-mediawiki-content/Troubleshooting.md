@@ -35,8 +35,6 @@ Edit file Freeplane.cfg ane replace line `java-options=-Xmx512m` by line `java-o
 
 Save the changes.
 
-(thanks to http://jlog.org/property.htm for the description) 
-
 ### Linux
 
 Edit freeplane.sh and replace -Xmx512m by whatever value you need.
