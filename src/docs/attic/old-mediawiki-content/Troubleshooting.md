@@ -29,18 +29,9 @@ to files freeplane.l4j.ini and freeplaneConsole.l4j.ini which are used when you 
 If you use freeplane.bat you need to configure this option there. 
 
 ### Mac OS
-Go to Application==> Left click on specific application (like Weka)==> Show Package Content==> Contents==>
+Go to Application==> Left click on specific application (like Weka)==> Show Package Content==> Contents==>app
 
-1) If you have the Property List Editor available, you can double-click the 'Info.plist' file. Open 'Root' and then 'Java'. Double-click on the value for the 'VMOptions' entry to open an array of values. Set the maximum (-Xmx) to e.g. 4 Gb as
-
-    -Xmx4G
-
-2) If you do not have the Property List Editor installed, you can edit the file in a text editor (be careful). Locate <key>VMOptions</key> and change the values as follows:
-
-    <key>VMOptions</key>
-    <array>
-    <string>Xmx4G</string>
-    </array>
+Edit file Freeplane.cfg ane replace line `java-options=-Xmx512m` by line `java-options=-Xmx4G`
 
 Save the changes.
 
