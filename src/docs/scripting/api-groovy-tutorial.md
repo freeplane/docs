@@ -43,7 +43,7 @@ It has many attributes, e.g. `details`, `note` or `text`, to name a few.
 Where are these attributes described?\
 They are described in the [Scripting API](https://docs.freeplane.org/api/).
 
-By now you might already have guessed how to correct the formula in the 5th node to display the value of the 1st node,
+By now you might have already guessed how to correct the formula in the 5th node to display the value of the 1st node,
 i.e. by accessing the `text` attribute.
 It's done by using a dot notation, i.e. `=ID_1736361150.text`.
 
@@ -58,7 +58,7 @@ Unlike in a spreadsheet, where formulas can use only predefined "functions", for
 
 You know that Freeplane requires JRE (Java Runtime Environment) to run.
 This is because Freeplane is written in the Java programming language, which itself requires JRE to be executed.
-Java and JRE is mentioned here because Groovy can be perceived as simplified Java.
+Java and JRE are mentioned here because Groovy can be perceived as simplified Java.
 Groovy also runs on JRE and is quite similar to Java.
 So much that code written in Java can be executed as Groovy (with some minor exceptions).
 
@@ -700,4 +700,32 @@ Success!
 
 # Part 2
 
-_Coming soon_
+## Global variables
+
+These are "entry points" in any script or formula:
+- `node` – the currently selected node → [NodeRO](https://docs.freeplane.org/api/org/freeplane/api/NodeRO.html), [Node](https://docs.freeplane.org/api/org/freeplane/api/Node.html)
+- `c` – the controller → [ControllerRO](https://docs.freeplane.org/api/org/freeplane/api/ControllerRO.html), [Controller](https://docs.freeplane.org/api/org/freeplane/api/Controller.html)
+
+Additionally, you can use the following "global variables":
+- `ui` → [UITools](https://docs.freeplane.org/api/org/freeplane/core/ui/components/UITools.html)
+- `logger` → [LogUtils](https://docs.freeplane.org/api/org/freeplane/core/util/LogUtils.html)
+- `htmlUtils` → [HtmlUtils](https://docs.freeplane.org/api/org/freeplane/core/util/HtmlUtils.html)
+- `textUtils` → [TextUtils](https://docs.freeplane.org/api/org/freeplane/core/util/TextUtils.html)
+- `menuUtils` → [MenuUtils](https://docs.freeplane.org/api/org/freeplane/core/util/MenuUtils.html)
+- `config` → [FreeplaneScriptBaseClass.ConfigProperties](https://docs.freeplane.org/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.ConfigProperties.html)
+
+**Example**\
+Let's show a message, with the mind map's file path.
+```groovy
+def filePath = node.mindMap.file?.path
+ui.showMessage("This mind map's file path is `${filePath}`", 1)
+```
+In this example, `node` and `ui` are "global variables", made available by Freeplane script base class.
+
+New Groovy concepts:
+* `"Text ${code}"` is a [GString](https://docs.groovy-lang.org/latest/html/api/groovy/lang/GString.html), 
+  i.e. text where an expression (inside `${}`) is executed to get its value → <https://docs.groovy-lang.org/next/html/documentation/#_string_interpolation>
+
+**Exercise:**\
+Can you modify the above script to copy file path to the clipboard, instead of showing it in a message?\
+Tip: [TextUtils](https://docs.freeplane.org/api/org/freeplane/core/util/TextUtils.html)
