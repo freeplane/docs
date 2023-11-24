@@ -2,6 +2,11 @@
 
 name: mdbook-github-pages
 
+env:
+  mdbook_version: v0.4.21
+  mdbook_toc_version: 0.9.0
+  mdbook_open_on_gh_version: 2.2.0
+
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -36,12 +41,12 @@ jobs:
           }
           mkdir -p build/tools
           cd build/tools
-          curl -O -L https://github.com/rust-lang/mdBook/releases/download/v0.4.21/mdbook-v0.4.21-x86_64-unknown-linux-gnu.tar.gz
-          tar xf mdbook-v0.4.21-x86_64-unknown-linux-gnu.tar.gz
-          curl -O -L https://github.com/badboy/mdbook-toc/releases/download/0.9.0/mdbook-toc-0.9.0-x86_64-unknown-linux-gnu.tar.gz
-          tar xf mdbook-toc-0.9.0-x86_64-unknown-linux-gnu.tar.gz
-          curl -O -L https://github.com/badboy/mdbook-open-on-gh/releases/download/2.2.0/mdbook-open-on-gh-2.2.0-x86_64-unknown-linux-gnu.tar.gz
-          tar xf mdbook-open-on-gh-2.2.0-x86_64-unknown-linux-gnu.tar.gz
+          curl -O -L https://github.com/rust-lang/mdBook/releases/download/$mdbook_version/mdbook-$mdbook_version-x86_64-unknown-linux-gnu.tar.gz
+          tar xf mdbook-$mdbook_version-x86_64-unknown-linux-gnu.tar.gz
+          curl -O -L https://github.com/badboy/mdbook-toc/releases/download/$mdbook_toc_version/mdbook-toc-$mdbook_toc_version-x86_64-unknown-linux-gnu.tar.gz
+          tar xf mdbook-toc-$mdbook_toc_version-x86_64-unknown-linux-gnu.tar.gz
+          curl -O -L https://github.com/badboy/mdbook-open-on-gh/releases/download/$mdbook_open_on_gh_version/mdbook-open-on-gh-$mdbook_open_on_gh_version-x86_64-unknown-linux-gnu.tar.gz
+          tar xf mdbook-open-on-gh-$mdbook_open_on_gh_version-x86_64-unknown-linux-gnu.tar.gz
           cd ../..
           export PATH="./build/tools/:$PATH"
           mdbook build src --dest-dir ../build/gh-pages
