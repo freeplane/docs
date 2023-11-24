@@ -25,19 +25,146 @@ The text in the node core can be interpreted or parsed by Freeplane in different
 To understand the implications of this setting, see (to be added).
 
 ### Node Details
+#### Purpose
+Node details, seen beneath the node core, displays closely-related information about the node core text.
+It adds meaning to the node.  One way of looking at this relationship is like a book title and its sub title.
+It can elaborate, embellish, clarify, define, etc. - like a child node.  
+But sometimes a child node seems too distant.
+
+Even images can be placed in node details.
+
+Node details can represent many different relationships to the node core.
+The following examples are in this format:
+**node core** / *node details*\
+parenthetical: **dialog** / *floating editor*\
+appositional: **Sam** / *my dog*\
+factual detail: **end of WW2** / *Sept 2, 1945*\
+elaboration: **our wedding** / *beautiful day - all family members there*
+
+And so on to meet your needs.
+
+#### Using node details
+There are three operations or actions you can perform on node details
+- Creating and editing node details
+- Hiding node details
+- Removing node details 
+
+#### Create or edit node details
+When a node is selected, you can create a detail for it, if none already exists, or you can edit an already-created detail.  While typing your text, to force a line break, press Shift+Enter.
+
+There are two methods to choose from. 
+
+**1.  In-line** editing, directly beneath the node.
+In-line editing offers fairly basic editing tools (via right-click or hotketys on selected text).
+When done typing, either 
+- press "Enter" to save the detail and exit the in-line editor
+- press "Insert" to save the detail and create a new child node.  
+- Or, press "Esc" to cancel and exit the in-line editor without saving your work. 
+
+**To access in-line editing**:
+Select a node then either 
+- press F3
+- use the Edit menu > Node properties > Edit node details in-line
+- Command search (Ctrl+F1), type "details", choose the matching menu item
+- right-click on the node > Edit > Edit node details in-line. 
+- double-click on node details (if details already exist for the node).
+
+**2. Dialog** editing in a floating editor.
+The details dialog, a basic text editor, has more robust editing tools (via a menu bar, a toolbar, and hotkeys).  Hyperlinks can be created in node details - but only in the node details dialog (Ctrl+H).
+When done typing, either: 
+- click the "OK" button to save the detail and exit the dialog (keyboard hotkey: Alt+O).  
+- Or, to cancel, press "Esc" to exit the dialog without saving your work. 
+
+**To access dialog editing**:
+Select a node then either 
+- press Ctrl+F3 
+- use the Edit menu > Node properties > Edit node details in dialog 
+- use Command search (Ctrl+F1), type "details", choose the matching menu item 
+- right-click on the node > Edit > Edit node details in dialog. 
+
+#### Hide node details
+Hiding node(s) details folds the detail out of view, leaving only a sliver visible and a small down-pointing arrow (on the bottom left corner of the node core) to mark the presence of node(s) details (known as a toggle).
+Hovering over such a node with display the details in a tooltip popup.
+Clicking the toggle displays or hides the details of that node. 
+
+Hiding node details is useful to free a bit of map real estate, viewing the details when you need remember its contents.
+It also can help when presenting your map to others - you can reveal the node details at an appropriate time as you step through your map.
+Additionally, some node details may contain confidential information you do not want others to see but which you need to have access to. 
+
+Hide node details is a toggle, hiding details then showing them. 
+
+Note: even when node details are hidden, you can see it by hovering over the node.
+
+**To access**: Select the node(s) then either 
+- press Alt+F2 
+- use the View menu > Hide details 
+- use Command search (Ctrl+F1), type "details", and choose the matching menu item
+- click the toggle arrow (lower left corner of node core)
+
+#### Remove node details
+Remove node details will delete the node details content from one or more nodes. 
+
+**To access**:
+Select one or more nodes then either use 
+- the Edit menu > Node properties > Remove node details 
+- Command search (Ctrl+F1) > type "details" > choose the option matching the menu item
+
+#### Changing node details appearance (Styles)
+The appearance of node details is controlled by the Details style, one of every map's Predefined styles.
+You can change its appearance in the Style editing dialog: 
+- Ctrl+F11
+- Format menu > Manage Styles > Edit styles
+- Command search (Ctrl+F1) > type "edit style" > choose the option matching the menu item
+
+You can make changes by selecting "Details" (under "Default") then make changes using the menu, toolbar, properties panel, and hotkeys.
+
+see [Styles](https://docs.freeplane.org/user-documentation/styles.html#style-editing)
+
+#### **Miscellaneous** 
+The Find-Replace dialog has a sortable column labeled "Details" which lets you see which nodes in the map contain text in its node details.
+<see Find-Replace> 
+
+The Filter toolbar defaults to searching node core, details, and notes.
+But you can restrict Find's scope by looking only in Details.
+<see Filtering>
+  
+A node's children can be converted to attributes.
+The child(ren) node core(s) contents convert to attribute name(s);
+node details convert to attribute value(s).
+(Similarly, attributes can be converted to child nodes.)
+<see Attributes> 
+  
+  
+  
 
 ### Node Notes
 
 ### Node Attributes
 
+Attributes can be defined for each node.
+They are displayed in a 2-column table
+
+| Key | Value |
+|--|--|
+|Name|Mac|
+|Username|macmarrum|
+
+The actions related to Attributes can be listed in `Help->Command Search (Ctrl+F1)` – search for `attribute`
+
+Once you have at least one attribute, you can right-click on the table to perform actions (New, Delete, Move up, Move down).\
+Alternatively, you can manage attributes in `View->Controls->Tool panel` – tab `Attributes`
+
 ### Edges
 
 ### Connectors
 
-Unlike edges, connectors must be added manually, one by one.
-To add a connector, select two nodes, `right-click` for a context menu and select `Connect (Ctrl+L)`.
+Unlike edges, connectors must be added manually.
+To add a connector between two nodes, select them, `right-click` for a context menu and choose `Connect (Ctrl+L)` or use the hot key.
 Another way is to `Ctrl+Shift + drag` one node onto another.
 On some systems it's also possible to `right-click + drag` one node onto another.
+
+It's possible to add several connectors at one go by selecting more than two nodes.
+In this case the last selected node is the target.
 
 Connectors' properties can be edited.
 When you `right-click` a connector (it's best to select one of the connected nodes first), the **Connector** dialog appears.
@@ -61,7 +188,8 @@ You'll often need to repeat your click-drag-release several times before you get
 
 #### Hidden connectors
 
-Connector lines can be hidden: `Preferences…->Defaults->Connectors->Paint connectors behind nodes`
+Connector lines can be hidden: `Preferences…->Defaults->Connectors->Show connector lines`
+Alternatively, they can be displayed as the lowest level: `Preferences…->Defaults->Connectors->Paint connectors behind nodes`
 
 #### Go to a connected node
 
@@ -78,7 +206,7 @@ When using `Line` as the type, the connector appears one-ended.
 #### Connector styles
 
 Connectors use styles.
-The concept is the same as for nodes *(see [Styles](styles.md))*, i.e. the bundle of connector formatting properties is saved as a connector style.
+The concept is the same as for nodes *(see [Styles](../../user-documentation/styles.md))*, i.e. a bundle of connector formatting properties is saved as a connector style.
 Technically, a connector style is part of a node style.
 When a node style has a connector defined, like **Default** has, the style becomes also a connector style.
 

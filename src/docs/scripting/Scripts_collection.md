@@ -8,22 +8,13 @@ Unfortunately scripts might get old over time, i.e. when scripting idioms evolve
 * **Scripts that use external libraries** have their [separate page](Scripting!_Example_scripts_using_external_libraries.md), too.
 * **Scripts that might need a review before they are added here** can be found in the [Script incubator](Script_incubator.md).
 
-<!--
-Feel free to add your own scripts to these and this page. If you give script a name using wiki text like
-
-`<syntaxhighlight lang="Groovy" name="yourScriptName">
- your script
-</syntaxhighlight>`
-
-an extra download button is created for it, and it can be downloaded directly from this page.
--->
 
 For larger scripts there is a special [git](../coding/Git_howto.md) repository [https://github.com/freeplane/addons].
 
 
 ## A node with the last modification date of the map
 
-This script sets the text of the status bar to the last modification timestamp of the whole map. [format()](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html#format(java.lang.Object,%20java.lang.String) ) is a free method of the Groovy script base class [FreeplaneScriptBaseClass](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html).
+This script sets the text of the status bar to the last modification timestamp of the whole map. [format()](http://docs.freeplane.org/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html#format(java.lang.Object,%20java.lang.String) ) is a free method of the Groovy script base class [FreeplaneScriptBaseClass](http://docs.freeplane.org/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html).
 
 <!-- name=lastModificationDate -->
 ```groovy
@@ -37,7 +28,7 @@ Author: `Boercher`
 
 ## Add up attribute values of subnodes.
 
-This script adds up the "AMOUNT" attributes of all child nodes of a node and sets the "SUM" attribute of the selected node to the sum. The start value ensures that the argument is created always, even if the node has no children. Note that `node[]` returns a [Convertible](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/Convertible.html).
+This script adds up the "AMOUNT" attributes of all child nodes of a node and sets the "SUM" attribute of the selected node to the sum. The start value ensures that the argument is created always, even if the node has no children. Note that `node[]` returns a [Convertible](http://docs.freeplane.org/api/org/freeplane/plugin/script/Convertible.html).
 
 <!-- name=sumAttributeValues -->
 ```groovy
@@ -56,7 +47,7 @@ node['SUM'] = format(sum, '0.0')
 
 The following script does the same for the whole map.
 
-[c.findAllDepthFirst()](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/proxy/Proxy.ControllerRO.html#findAllDepthFirst()) iterates the map in the right order, starting from the leaf nodes. Uncomment the lines containing "index".
+[c.findAllDepthFirst()](http://docs.freeplane.org/api/org/freeplane/plugin/script/proxy/Proxy.ControllerRO.html#findAllDepthFirst()) iterates the map in the right order, starting from the leaf nodes. Uncomment the lines containing "index".
 
 You should study how to use [Groovy Collections](http://groovy.codehaus.org/Collections) methods like collect(), each(), sum() since this is one of most important topics for scripting beginners.
 
@@ -2211,7 +2202,7 @@ This example illustrates:
 3. instantiating the class and passing "ui" as a class parameter:   w=new FreeplaneWindow(ui)
 4. setting & getting the position and size of the Freeplane main window without having to know the underlying specifics. 
  
-<syntaxhighlight lang="Groovy" name="FreeplaneWindow" >
+```groovy
 // class FreeplaneWindow
 import java.awt.Frame;
 import java.awt.Point; 
@@ -2250,7 +2241,7 @@ class FreeplaneWindow {
     println w.getLeft()
     println w.getWidth()
     println w.getHeight()
-</syntaxhighlight>.
+```
 
 Author: `jokro`
 
@@ -2258,9 +2249,9 @@ Author: `jokro`
 
 THIS SCRIPT DOES
 
-# extract text contents from a node as part of a HTTP request
-# construct a valid URI to be understood from a browser
-# display the corresponding web page in an external browser
+- extract text contents from a node as part of a HTTP request
+- construct a valid URI to be understood from a browser
+- display the corresponding web page in an external browser
 
 
 EXAMPLE APPLICATION

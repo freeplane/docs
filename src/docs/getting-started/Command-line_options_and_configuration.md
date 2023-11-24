@@ -5,11 +5,13 @@ Call freeplane like this:
 
     freeplane [options] [file1 [file2 ...]]
 
-* -h|--help: list available options
-* -X<menukey>: execute menu item with key <menukey>. Use devtools add-on to find the menu keys
-* -S: stop after executing menu items
-* -N: set the 'nonInteractive' system property to 'true'
-* -U<userdir>: set the freeplane user config directory (**only since version 1.3.3!!!**)
+| Option | Description |
+| - | - |
+| `-h` or `--help` | list available options |
+| `-X<menukey>` | execute menu item with key <menukey>. Use devtools add-on to find the menu keys |
+| `-S` | stop after executing menu items |
+| `-N` | set the 'nonInteractive' system property to 'true' |
+| `-U<userdir>` | set the freeplane user config directory (**only since version 1.3.3!!!**) |
 
 Batch execution of menu items (e.g. scripts) is described in a [special wiki article](Batch_Jobs.md).
 

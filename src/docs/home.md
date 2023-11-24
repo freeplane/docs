@@ -20,18 +20,47 @@ Contributors are very much welcome, of course!
 
 ![student](images/a-students-second-brain.png ':size=600')
 
+-------------
+
 ![slides](images/no-more-slides.png ':size=600')
+
+-------------
 
 ![formatting](images/extensive-formatting-options.png ':size=600')
 
+-------------
+
 ![UI](images/ui.png ':size=600')
+
+-------------
 
 ![addons](images/add-ons-and-scripting-aka-macros.png ':size=600')
 
+-------------
+
 ![command search](images/command-search.png ':size=600')
+
+-------------
 
 ![styling](images/conditional-styling.png ':size=600')
 
+-------------
+
 ![formulas](images/formulas.png ':size=600')
 
+-------------
+
 ![discussions](images/discussions.png ':size=600')
+
+
+-------------
+
+# Thanks
+
+Freeplane team uses:
+
+* [YourKit Java Profiler](https://www.yourkit.com/overview/index.jsp) developed and donated by [YourKit](https://www.yourkit.com/company/index.jsp) <img src="https://www.yourkit.com/images/yklogo.png" alt="YourKit logo" height="14pt">, for analysis of memory consumption and performance issues. YourKit supports open source projects with innovative and intelligent tools for monitoring and profiling Java and .NET applications.
+YourKit is the creator of <a href="https://www.yourkit.com/java/profiler/">YourKit Java Profiler</a>,
+<a href="https://www.yourkit.com/.net/profiler/">YourKit .NET Profiler</a>,
+and <a href="https://www.yourkit.com/youmonitor/">YourKit YouMonitor</a>.
+* Free and open source web based translation management system [Weblate](https://weblate.org) developed and [hosted](https://hosted.weblate.org) by [Michal Čihař](https://cihar.com/).

@@ -95,6 +95,8 @@ https://www.youtube.com/watch?v=cSyhkcsB2-M (made before the script was converte
 
 Add-on is located at https://github.com/adxsoft/MapInsight-Addon
 
+Note that the latest version is this one: https://github.com/adxsoft/MapInsight-Addon/issues/4#issuecomment-715262901
+
 ## Navigation
 '''by [Jodi D. Krol](http://sourceforge.net/users/jokro/)
 
@@ -372,6 +374,20 @@ All files have to be loaded into the RAM so be prepared to [increase Java heap s
 
 [Download v0.5](https://sourceforge.net/projects/freeplane/files/addons/packAndGo/packAndGo-v0.5.addon.mm)
 
+
+## ![](../images/PackAndGo-icon.png) Pack and Go-Go
+**by [macmarrum](https://github.com/macmarrum)**
+
+_Originally **Pack And Go** by Volker Börchers - no longer maintained_
+
+**Pack and Go-Go** adds a menu item to create a ZIP file with the mindmap, packing also its images and linked mindmaps (without dependencies).
+
+> Note: All files are loaded into RAM. If you get an Out Of Memory Error, see https://docs.freeplane.org/attic/old-mediawiki-content/Troubleshooting.html#freeplane-throws-out-of-memory-exception
+
+Works with Freeplane version 1.9.1 and above.
+
+[**PackAndGoGo.addon.mm** releases](https://github.com/macmarrum/freeplane-PackAndGoGo/releases)
+
 ## Import OPML to selected node
 **by ADXSoft (Allan)**
 
@@ -396,6 +412,15 @@ https://youtu.be/hUagckdoeNATo
 (made before the script was converted to an add-on but demonstrates the functionality of the import)
 
 Add-on is located at https://github.com/adxsoft/ImportOPMLtoselectednode.addon
+
+## Map Obfuscator
+**by [macmarrum](https://github.com/macmarrum)**
+
+Duplicates the current mindmap and obfuscates its content so that it can be shared without exposing private information.
+
+Works with Freeplane version 1.8.0 and above.
+
+[Download Map Obfuscator](https://github.com/macmarrum/freeplane-MapObfuscator/releases)
 
 <br/>
 
@@ -473,6 +498,21 @@ This way, you can define for each map if it will use the central Freeplane prefe
 
 [Download the latest release here](https://github.com/EdoFro/Freeplane_Map-Saving-Options/releases/latest)
 
+## Script Execution On Mindmap Open
+**by [macmarrum](https://github.com/macmarrum)**
+
+Freeplane has the functionality to execute Groovy scripts when the application starts. It's known as "init scripts" → https://docs.freeplane.org/?search=init
+
+This add-on extends the functionality with the ability to execute scripts when a mindmap is opened, i.e. individually for each mindmap.
+
+To execute a script for a mindmap, in your root node add an attribute named "scriptOnMapOpen", then use `Tools->Edit script...` to enter the Groovy code.
+
+_Note: The attribute name must start with "scriptOnMapOpen" but can have any suffix_
+
+Works with Freeplane version 1.7.10 and above.
+
+[Download Script Execution On Mindmap Open](https://github.com/macmarrum/freeplane-ScriptExecutionOnMindmapOpen/releases)
+
 <br/>
 
 # For developers
@@ -506,7 +546,7 @@ For Freeplane 1.2.x: [Download v0.9.14](http://sourceforge.net/projects/freeplan
 
 Groovy console for interacting with a running Freeplane instance.
 
-Scripts inside the console have the same variables that every script has assigned to, like [node](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/proxy/Proxy.Node.html) (the selected node when launching the shell) and [c](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/proxy/Proxy.Controller.html) (the Controller). See the [groovyconsole description](http://groovy-lang.org/groovyconsole.html) for usage instructions.
+Scripts inside the console have the same variables that every script has assigned to, like [node](http://docs.freeplane.org/api/org/freeplane/plugin/script/proxy/Proxy.Node.html) (the selected node when launching the shell) and [c](http://docs.freeplane.org/api/org/freeplane/plugin/script/proxy/Proxy.Controller.html) (the Controller). See the [groovyconsole description](http://groovy-lang.org/groovyconsole.html) for usage instructions.
 
 Source: [Github](https://github.com/vboerchers/wikdshell)
 

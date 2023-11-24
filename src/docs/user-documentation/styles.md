@@ -5,7 +5,7 @@
 A style is a bundle of [formatting](formatting-maps-and-nodes.md) properties and icons, saved under a style name. 
 Styles are saved in the map itself.
 
-?> Styles' properties can be viewed and changed in `Format->Manage Styles->Edit stles (Ctrl+F11)` → [style editing](#style-editing)
+> Note: Styles' properties can be viewed and changed in `Format->Manage Styles->Edit stles (Ctrl+F11)` → [style editing](#style-editing)
 
 Freeplane has several predefined styles, like `Default`, `Floating node` or `Important`, as well as `Automatic level styles` like `Level 1`, `Level 2`.
 A template might have additional styles, and any mind map created from such a template will inherit the template styles. 
@@ -38,7 +38,7 @@ Here's the order of precedence in applying the different layers.
 8. Automatic level style
 9. Default style
 
-?> Note: `Selected style` is only in effect if `Preferences->Defaits->Selection colors->Display selected nodes in bubbles` is off.
+> Note: `Selected style` is only in effect if `Preferences->Defaits->Selection colors->Display selected nodes in bubbles` is off.
 
 `Default` is the base layer. 
 Whatever property is set on that layer will either shine through or be overwritten by the next layer put on top of `Default`.
