@@ -34,6 +34,8 @@
     - [Script incubator](scripting/Script_incubator.md)
     - [Scripting! Jython](scripting/Scripting!_Jython.md)
     - [Scripting environment setup](scripting/Scripting_environment_setup.md)
+    - [Scripting basics (wip)](scripting/Basics.md)
+    - [Scripting reference (wip)](scripting/Reference.md)
   - [XSLT for export/import](scripting/Export_Using_XSLT.md)
   - [Add-ons (Development)](scripting/Add-ons_(Develop).md)
   - [Security considerations](scripting/Security_considerations.md)

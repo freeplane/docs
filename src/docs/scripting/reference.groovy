@@ -1,0 +1,1 @@
+// This file contains Freeplane API reference for Groovy scripting.
