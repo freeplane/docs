@@ -1,10 +1,6 @@
 // This file contains Freeplane API reference for Groovy scripting.
 
 /*
-  AttributeCondition #todo: [euu2021: I don't understand what it does.]
-*/
-
-/*
   AttributesRO
 */
 
@@ -15,8 +11,6 @@ node.attributes.containsKey("aaa")
 // Returns the index of the first attribute with the name "aaa" if one exists or -1 otherwise.
 
 node.attributes.findFirst("aaa")
-
-// findValues(AttributeCondition condition) #todo
 
 // Returns the attribute value at the index 1.
 
@@ -42,14 +36,6 @@ node.attributes.map
 
 node.attributes.names
 
-// #todo: [euu2021: I don't understand what this method bellow does.]
-
-node.attributes.transformed
-
-// Returns all values as a list of Convertible. #todo: [euu2021: I don't understand what it does.]
-
-node.attributes.values
-
 // Returns "true", if the selected node has no attributes. Returns "false", otherwise.
 
 node.attributes.empty
@@ -58,6 +44,3 @@ node.attributes.empty
 
 node.attributes.size()
 
-/*
-  Attributes [euu: I already have the methods, so please skip this one]
-*/
