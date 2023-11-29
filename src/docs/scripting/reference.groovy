@@ -91,3 +91,39 @@ node.attributes.set("aaa", "xxx")
 // Sets "0.0" as the format pattern to the attribute at index 1.
 
 node.attributes.setFormat(1, "0.0")
+
+/*
+  Cloud
+*/
+
+// Returns the color of the cloud set to the selected node.
+
+node.cloud.color
+
+// Returns the color code of the cloud set to the selected node.
+
+node.cloud.colorCode
+
+// Returns "true" if the selected node has a cloud enabled.
+
+node.cloud.enabled
+
+// Returns the shape of the cloud set to the selected node.
+
+node.cloud.shape
+
+// Sets "YELLOW" as the color of the selected node cloud.
+
+node.cloud.color = java.awt.Color.YELLOW
+
+// Sets "#ffff00ff" as the color code of the selected node cloud.
+
+node.cloud.colorCode = "#ffff00ff"
+
+// Enables a cloud in the selected node.
+
+node.cloud.enabled = true
+
+// Sets "STAR" as the shape of the selected node cloud.
+
+node.cloud.shape = "STAR"
