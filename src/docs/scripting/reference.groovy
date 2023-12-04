@@ -219,3 +219,65 @@ node.cloud.enabled = true
 // Sets "STAR" as the shape of the selected node cloud.
 
 node.cloud.shape = "STAR"
+
+/*
+  ConnectorRO
+  
+  The examples refer to the connectors that leave the currently selected node, so they use connectorsOut. In order to reference the connectors that are reaching the node, use connectorsIn instead of connectorsOut. 
+*/
+
+// Returns the color of the connectors.
+
+node.connectorsOut.color
+
+// Returns the color code of the connectors.
+
+node.connectorsOut.colorCode
+
+// Returns the end inclination of the connectors.
+
+node.connectorsOut.endInclination
+
+// Returns the font family of the label of the connectors.
+
+node.connectorsOut.labelFontFamily
+
+// Returns the font size of the label of the connectors.
+
+node.connectorsOut.labelFontSize
+
+// Returns the middle label of the connectors.
+
+node.connectorsOut.middleLabel
+
+// Returns the opacity of the connectors.
+
+node.connectorsOut.opacity
+
+// Returns the shape of the connectors.
+
+node.connectorsOut.shape
+
+// Returns the source node of the connectors.
+
+node.connectorsOut.source
+
+// Returns the label of the source node of the connectors.
+
+node.connectorsOut.sourceLabel
+
+// Returns the start inclination of the connectors.
+
+node.connectorsOut.startInclination
+
+// Returns the target node of the connectors.
+
+node.connectorsOut.target
+
+// Returns the label of the target node of the connectors.
+
+node.connectorsOut.targetLabel
+
+// Returns the width of the connectors.
+
+node.connectorsOut.width
