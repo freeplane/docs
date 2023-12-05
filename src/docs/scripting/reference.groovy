@@ -281,3 +281,43 @@ node.connectorsOut.targetLabel
 // Returns the width of the connectors.
 
 node.connectorsOut.width
+
+/*
+  EdgeRO
+*/
+
+// Returns the color of the edge.
+
+node.style.edge.color
+
+// Returns the color code of the edge.
+
+node.style.edge.colorCode
+
+// Returns the line type of the edge.
+
+node.style.edge.dash
+
+// Returns the style (type) of the edge.
+
+node.style.edge.type
+
+// Returns the width of the edge.
+
+node.style.edge.width
+
+// Returns "true" if the edge color is set.
+
+node.style.edge.colorSet
+
+// Returns "true" if the edge line type is set.
+
+node.style.edge.dashSet
+
+// Returns "true" if the edge style (type) is set.
+
+node.style.edge.typeSet
+
+// Returns "true" if the edge width is set.
+
+node.style.edge.widthSet
