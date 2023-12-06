@@ -321,3 +321,27 @@ node.style.edge.typeSet
 // Returns "true" if the edge width is set.
 
 node.style.edge.widthSet
+
+/*
+  Edge
+*/
+
+// Sets "java.awt.Color.YELLOW" as the edge color.
+
+node.style.edge.color = java.awt.Color.YELLOW
+
+// Sets "#ffff00ff" as the edge color code.
+
+node.style.edge.colorCode = "#ffff00ff"
+
+// Sets "CLOSE_DOTS" as the edge line type.
+
+node.style.edge.dash = "CLOSE_DOTS"
+
+// Sets "linear" as the edge style.
+
+node.style.edge.type = "linear"
+
+// Sets 2 as the edge width.
+
+node.style.edge.width = 2
