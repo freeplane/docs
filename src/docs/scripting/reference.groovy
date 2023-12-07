@@ -345,3 +345,47 @@ node.style.edge.type = "linear"
 // Sets 2 as the edge width.
 
 node.style.edge.width = 2
+
+/*
+  FontRO
+*/
+
+// Returns the name of the font of the currently selected node.
+
+node.style.font.name
+
+// Returns the size of the font of the currently selected node.
+
+node.style.font.size
+
+// Returns "true" if the font of the currently selected node is bold.
+
+node.style.font.isBold()
+
+// Returns "true" if the font of the currently selected node is set to bold.
+
+node.style.font.isBoldSet()
+
+// Returns "true" if the font of the currently selected node is italic.
+
+node.style.font.isItalic()
+
+// Returns "true" if the font of the currently selected node is set to italic.
+
+node.style.font.isItalicSet()
+
+// Returns "true" if the name of the font of the currently selected node is set.
+
+node.style.font.isNameSet()
+
+// Returns "true" if the size of the font of the currently selected node is set.
+
+node.style.font.isSizeSet()
+
+// Returns "true" if the font of the currently selected node is striked through.
+
+node.style.font.isStrikedThrough()
+
+// Returns "true" if the font of the currently selected node is set to strike through.
+
+node.style.font.isStrikedThroughSet()
