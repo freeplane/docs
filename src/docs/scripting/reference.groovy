@@ -389,3 +389,49 @@ node.style.font.isStrikedThrough()
 // Returns "true" if the font of the currently selected node is set to strike through.
 
 node.style.font.isStrikedThroughSet()
+
+/*
+  Font
+*/
+
+// Resets the "bold" property of font the selected node.
+
+node.style.font.resetBold()
+
+// Resets the "italic" property of font the selected node.
+
+node.style.font.resetItalic()
+
+// Resets the "name" property (i.e., the name of the font) of the font of the selected node.
+
+node.style.font.resetName()
+
+// Resets the "size" property of the font ogf the selected node.
+
+node.style.font.resetSize()
+
+// Resets the "Strike Through" property of the of the selected node.
+
+node.style.font.resetStrikedThrough()
+
+// Sets the font of the selected node to bold.
+
+node.style.font.bold = true
+
+// Sets the font of the selected node to italic.
+
+node.style.font.italic = true
+
+// Sets the name of the font of the selected node to "Arial".
+
+node.style.font.name = "Arial"
+
+// Sets the font of the selected node to size 20.
+
+node.style.font.size = 20
+
+// Sets the font of the selected node to strike through.
+
+node.style.font.strikedThrough = true
+
+
