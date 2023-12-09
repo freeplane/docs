@@ -434,4 +434,30 @@ node.style.font.size = 20
 
 node.style.font.strikedThrough = true
 
+/*
+  IconsRO
+*/
 
+// Returns "true" if the selected node contains the icon "button_ok".
+
+node.icons.contains("button_ok")
+
+// Returns the icon located at the index 1 in the selected node.
+
+node.icons.getAt(1)
+
+// Returns the first icon that exists in the selected node.
+
+node.icons.first
+
+// Returns all the icons that exist in the selected node.
+
+node.icons.icons
+
+// Returns the urls of all the icons that exist in the selected node.
+
+node.icons.urls
+
+// Returns the number of icons that exist in the selected node.
+
+node.icons.size()
