@@ -461,3 +461,23 @@ node.icons.urls
 // Returns the number of icons that exist in the selected node.
 
 node.icons.size()
+
+/*
+  Icons
+*/
+
+// Adds the icon "button_ok" to the node.
+
+node.icons.add("button_ok")
+
+// Removes all the icon that currently exist in the node.
+
+node.icons.clear()
+
+// Removes the icon at index 1.
+
+node.icons.remove(1)
+
+// Removes the first "button_ok" icon at that exists in the node.
+
+node.icons.remove("button_ok")
