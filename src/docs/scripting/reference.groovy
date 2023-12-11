@@ -481,3 +481,35 @@ node.icons.remove(1)
 // Removes the first "button_ok" icon at that exists in the node.
 
 node.icons.remove("button_ok")
+
+/*
+  MindMapRO
+*/
+
+// Returns the background color of the map.
+
+node.map.getBackgroundColor()
+
+// Returns HTML color spec like #ff0000 (red) or #222222 (darkgray).
+
+node.map.getBackgroundColorCode()
+
+// Returns the filenname of the map as a java.io.File object if available or null otherwise.
+
+node.map.getFile()
+
+// Returns the title of the map.
+
+node.map.getName()
+
+// Returns the node that is the root of the map.
+
+node.map.getRoot()
+
+// Returns a list with the user defined styles names of the map.
+
+node.map.getUserDefinedStylesNames()
+
+// Returns "true" if the map is saved.
+
+node.map.isSaved()
