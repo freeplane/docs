@@ -11,7 +11,7 @@ c.statusInfo=result
 
 ### Simple Msgbox
 ```groovy
-script1	import org.freeplane.core.ui.components.UITools;
+import org.freeplane.core.ui.components.UITools;
 UITools.informationMessage('Simple Messagebox')
 
 ```
