@@ -513,3 +513,23 @@ node.map.getUserDefinedStylesNames()
 // Returns "true" if the map is saved.
 
 node.map.isSaved()
+
+/*
+  NodeGeometryRO
+*/
+
+// Returns the horizontal margin of the selected node.
+
+node.geometry.getHorizontalMargin()
+
+// Returns "true" if the selected node has the property "uniform" activated.
+
+node.geometry.getIsUniform()
+
+// Returns the shape of the selected node.
+
+node.geometry.getShape()
+
+// Returns the vertical margin of the selected node.
+
+node.geometry.getVerticalMargin()
