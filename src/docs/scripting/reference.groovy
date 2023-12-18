@@ -533,3 +533,83 @@ node.geometry.getShape()
 // Returns the vertical margin of the selected node.
 
 node.geometry.getVerticalMargin()
+
+/*
+  NodeStyleRO
+*/
+
+// Returns all style names/translation keys active for the node.
+
+node.style.allActiveStyles
+
+// Returns the name of the background color of the selected node.
+
+node.style.backgroundColor
+
+// Returns HTML color spec like #ff0000 (red) or #222222 (darkgray).
+
+node.style.backgroundColorCode
+
+// Returns the CSS code set to the selected node.
+
+node.style.css
+
+// Returns the horizontal text alignment of the selected node.
+
+node.style.horizontalTextAlignment
+
+// Returns max node width set to the selected node.
+
+node.style.maxNodeWidth
+
+// Returns min node width set to the selected node.
+
+node.style.minNodeWidth
+
+// Returns the name of the node's style if set or null otherwise.
+
+node.style.name
+
+// Returns the style node of the style set to the selected node.
+
+node.style.styleNode
+
+// Returns the text color of the selected node.
+
+node.style.textColor
+
+// Returns code of the text color of the selected node.
+
+node.style.textColorCode
+
+// Returns "true" if the background color of the selected node is set.
+
+node.style.backgroundColorSet
+
+// Returns "true" if CSS of the selected node is set.
+
+node.style.cssSet
+
+// Returns "true" if the "floating" property of the selected node is set.
+
+node.style.floating
+
+// Returns "true" if the "Horizontal Text Alignment" property of the selected node is set.
+
+node.style.horizontalTextAlignmentSet
+
+// Returns "true" if the "Max Node Width" property of the selected node is set.
+
+node.style.maxNodeWidthSet
+
+// Returns "true" if the "Min Node Width" property of the selected node is set.
+
+node.style.minNodeWidthSet
+
+// Returns "true" if the "Numbering" property of the selected node is enabled.
+
+node.style.numberingEnabled
+
+// Returns "true" if the "Text Color" property of the selected node is set.
+
+node.style.textColorSet
