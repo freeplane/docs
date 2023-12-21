@@ -613,3 +613,59 @@ node.style.numberingEnabled
 // Returns "true" if the "Text Color" property of the selected node is set.
 
 node.style.textColorSet
+
+/*
+  NodeStyle
+*/
+
+// Sets "YELLOW" as the background color of the selected node.
+
+node.style.backgroundColor = java.awt.Color.YELLOW
+
+// Sets "#ffff00ff" as the background color of the selected node.
+
+node.style.backgroundColorCode = "#ffff00ff"
+
+// Sets "aaa" as the CSS of the selected node.
+
+node.style.css = "aaa"
+
+// Sets the "floating" property of the selected node as true.
+
+node.style.floating = "true"
+
+// Sets the "Horizontal Text Alignment" property of the selected node as "LEFT".
+
+node.style.horizontalTextAlignment = "LEFT"
+
+// Sets the "Max Node Width" property of the selected node as 3 px.
+
+node.style.maxNodeWidth = 3
+
+// Sets the "Max Node Width" property of the selected node as 2 cm.
+
+node.style.maxNodeWidth = "2 cm"
+
+// Sets the "Min Node Width" property of the selected node as 3 px.
+
+node.style.minNodeWidth = 3
+
+// Sets the "Min Node Width" property of the selected node as 2 cm.
+
+node.style.minNodeWidth = "2 cm"
+
+// Sets the style "aaa" as the style of the selected node.
+
+node.style.name = "aaa"
+
+// Sets the "numbering" property of the selected node as true.
+
+node.style.numberingEnabled = true
+
+// Sets "YELLOW" as the text color of the selected node.
+
+node.style.textColor = java.awt.Color.YELLOW
+
+// Sets "#ffff00ff" as the text color of the selected node.
+
+node.style.textColorCode = "#ffff00ff"
