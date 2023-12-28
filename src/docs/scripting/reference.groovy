@@ -221,6 +221,38 @@ node.cloud.enabled = true
 node.cloud.shape = "STAR"
 
 /*
+  FreeplaneVersion
+*/
+
+// Returns the Maj number of the Freeplane version.
+
+c.freeplaneVersion.maj
+
+// Returns the Mid number of the Freeplane version.
+
+c.freeplaneVersion.mid
+
+// Returns the Min number of the Freeplane version.
+
+c.freeplaneVersion.min
+
+// Returns the Freeplane version.
+
+c.freeplaneVersion.num
+
+// Returns the Freeplane revision number.
+
+c.freeplaneVersion.revision
+
+// Returns "true" if the Freeplane version is final.
+
+c.freeplaneVersion.final
+
+// Returns the Freeplane version number as a string.
+
+c.freeplaneVersion.numberToString()
+
+/*
   ConnectorRO
   
   The examples refer to the connectors that leave the currently selected node, so they use connectorsOut. In order to reference the connectors that are reaching the node, use connectorsIn instead of connectorsOut. 
