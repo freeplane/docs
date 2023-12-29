@@ -30,13 +30,15 @@ The following variables are tried in order:
 
 For windows, set one of these variables and run freeplane.exe or freeplaneConsole.exe:
 
-    FREEPLANE_JAVA_HOME=C:\Program Files\Java\jre1.8.0_131
+    FREEPLANE_JAVA_HOME=C:\Program Files\Zulu\zulu-11-jre
 
 or, under Linux/UNIX:
 
     FREEPLANE_JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/ ./freeplane.sh
 
 ### Java version
+
+Freeeplane 1.11.x requires Java between Java 11 and Java 21 on Windows and Mac, Java 8 and Java 21 on Linux
 
 Freeeplane 1.10.x requires Java between Java 8 and Java 17.
 
