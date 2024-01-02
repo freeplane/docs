@@ -567,6 +567,38 @@ node.geometry.getShape()
 node.geometry.getVerticalMargin()
 
 /*
+  NodeRO
+*/
+
+// Returns the date that the node was created.
+
+node.getCreatedAt()
+
+// Returns the text of the details as a Convertible.
+
+node.getDetails()
+
+// Returns details content type.
+
+node.getDetailsContentType()
+
+// Returns the raw HTML text of the details if there is any or null otherwise.
+
+node.getDetailsText()
+
+// Plain or HTML text of this node after possible transformation (formula evaluation, formatting, ...)
+
+node.getDisplayedText()
+
+// Returns the format string of the formatter if available and null otherwise.
+
+node.getFormat()
+
+// Returns true if node details are hidden.
+
+node.getHideDetails()
+
+/*
   NodeStyleRO
 */
 
