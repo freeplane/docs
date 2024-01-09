@@ -392,35 +392,35 @@ node.style.font.size
 
 // Returns "true" if the font of the currently selected node is bold.
 
-node.style.font.isBold()
+node.style.font.bold
 
 // Returns "true" if the font of the currently selected node is set to bold.
 
-node.style.font.isBoldSet()
+node.style.font.boldSet
 
 // Returns "true" if the font of the currently selected node is italic.
 
-node.style.font.isItalic()
+node.style.font.italic
 
 // Returns "true" if the font of the currently selected node is set to italic.
 
-node.style.font.isItalicSet()
+node.style.font.italicSet
 
 // Returns "true" if the name of the font of the currently selected node is set.
 
-node.style.font.isNameSet()
+node.style.font.nameSet
 
 // Returns "true" if the size of the font of the currently selected node is set.
 
-node.style.font.isSizeSet()
+node.style.font.sizeSet
 
 // Returns "true" if the font of the currently selected node is striked through.
 
-node.style.font.isStrikedThrough()
+node.style.font.strikedThrough
 
 // Returns "true" if the font of the currently selected node is set to strike through.
 
-node.style.font.isStrikedThroughSet()
+node.style.font.strikedThroughSet
 
 /*
   Font
@@ -476,7 +476,7 @@ node.icons.contains("button_ok")
 
 // Returns the icon located at the index 1 in the selected node.
 
-node.icons.getAt(1)
+node.icons[1]
 
 // Returns the first icon that exists in the selected node.
 
@@ -520,31 +520,31 @@ node.icons.remove("button_ok")
 
 // Returns the background color of the map.
 
-node.map.getBackgroundColor()
+node.map.backgroundColor
 
 // Returns HTML color spec like #ff0000 (red) or #222222 (darkgray).
 
-node.map.getBackgroundColorCode()
+node.map.backgroundColorCode
 
-// Returns the filenname of the map as a java.io.File object if available or null otherwise.
+// Returns the filename of the map as a java.io.File object if available or null otherwise.
 
-node.map.getFile()
+node.map.file
 
 // Returns the title of the map.
 
-node.map.getName()
+node.map.name
 
 // Returns the node that is the root of the map.
 
-node.map.getRoot()
+node.map.root
 
 // Returns a list with the user defined styles names of the map.
 
-node.map.getUserDefinedStylesNames()
+node.map.userDefinedStylesNames
 
 // Returns "true" if the map is saved.
 
-node.map.isSaved()
+node.map.saved
 
 /*
   NodeGeometryRO
@@ -552,19 +552,19 @@ node.map.isSaved()
 
 // Returns the horizontal margin of the selected node.
 
-node.geometry.getHorizontalMargin()
+node.geometry.horizontalMargin
 
 // Returns "true" if the selected node has the property "uniform" activated.
 
-node.geometry.getIsUniform()
+node.geometry.isUniform
 
 // Returns the shape of the selected node.
 
-node.geometry.getShape()
+node.geometry.shape
 
 // Returns the vertical margin of the selected node.
 
-node.geometry.getVerticalMargin()
+node.geometry.verticalMargin
 
 /*
   NodeRO
@@ -572,31 +572,31 @@ node.geometry.getVerticalMargin()
 
 // Returns the date that the node was created.
 
-node.getCreatedAt()
+node.createdAt
 
 // Returns the text of the details as a Convertible.
 
-node.getDetails()
+node.details
 
 // Returns details content type.
 
-node.getDetailsContentType()
+node.detailsContentType
 
 // Returns the raw HTML text of the details if there is any or null otherwise.
 
-node.getDetailsText()
+node.detailsText
 
 // Plain or HTML text of this node after possible transformation (formula evaluation, formatting, ...)
 
-node.getDisplayedText()
+node.displayedText
 
 // Returns the format string of the formatter if available and null otherwise.
 
-node.getFormat()
+node.format
 
 // Returns true if node details are hidden.
 
-node.getHideDetails()
+node.hideDetails
 
 /*
   NodeStyleRO
