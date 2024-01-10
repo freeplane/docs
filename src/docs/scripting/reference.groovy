@@ -598,6 +598,46 @@ node.format
 
 node.hideDetails
 
+// Returns the horizontal shift of the node.
+
+node.horizontalShift
+
+// Returns the horizontal shift of the node, as length.
+
+node.horizontalShiftAsLength
+
+// Returns the horizontal shift of the node, in screen pixels.
+
+node.horizontalShiftInScreenPixels
+
+// Returns the node text as HTML markup.
+
+node.htmlText
+
+// Returns a reference to an accessor object for icons of this node.
+
+node.icons
+
+// Returns the node id.
+
+node.id
+
+// Returns true if the node can be accessed using global accessor
+
+node.isGlobal
+
+// Returns time that the node was last modified.
+
+node.lastModifiedAt
+
+// Returns the layout orientation of the node.
+
+node.layoutOrientation
+
+// Returns a reference to an accessor object for link properties of this node.
+
+node.link
+
 /*
   NodeStyleRO
 */
