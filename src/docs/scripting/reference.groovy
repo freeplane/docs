@@ -638,6 +638,38 @@ node.layoutOrientation
 
 node.link
 
+// Returns the mind map this node belongs to.
+
+node.mindMap
+
+// Returns the minimal distance between children.
+
+node.minimalDistanceBetweenChildren
+
+// Returns the minimal distance between children, as length.
+
+node.minimalDistanceBetweenChildrenAsLength
+
+// Returns the minimal distance between children, in screen pixels.
+
+node.minimalDistanceBetweenChildrenInScreenPixels
+
+// Returns the next node with respect to this node in depth-first order. Returns null if this node is the only one in the map.
+
+node.next
+
+// Returns the node level. As it's set to false, then only nodes that are matched by the current filter are counted.
+
+node.getNodeLevel(false)
+
+// Returns the count of nodes sharing their content (i.e., clones) with this node.
+
+node.nodesSharingContent
+
+// Returns the nodes sharing their content and subtree (i.e., clones) with this node.
+
+node.nodesSharingContentAndSubtree
+
 /*
   NodeStyleRO
 */
