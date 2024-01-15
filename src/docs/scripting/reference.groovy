@@ -670,6 +670,30 @@ node.nodesSharingContent
 
 node.nodesSharingContentAndSubtree
 
+// Returns the text of the note as a Convertible.
+
+node.note
+
+// Returns note content type.
+
+node.noteContentType
+
+// Returns the HTML text of the node.
+
+node.noteText
+
+// Returns the object that's displayed as the node text - normally the raw text of this node (then this method is equivalent to getText())
+
+node.object
+
+// Returns the parent node.
+
+node.parent
+
+// Returns a list of all nodes starting from this node upto (and including) the root node.
+
+node.pathToRoot
+
 /*
   NodeStyleRO
 */
