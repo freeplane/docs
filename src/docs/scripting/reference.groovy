@@ -694,6 +694,22 @@ node.parent
 
 node.pathToRoot
 
+// Returns the plain text content of the node. Plain text after removal of possible HTML markup.
+
+node.plainText
+
+// Gets the previous sibling of the current node in the tree structure. I.e., returns the previous node with respect to this node in depth-first order.
+
+node.previous
+
+// Retrieves the reminder associated with the node, if any.
+
+node.reminder
+
+// Returns plain text of this node after possible transformation and forced text shortening (e.g., a minimized node).
+
+node.shortText
+
 /*
   NodeStyleRO
 */
