@@ -710,6 +710,46 @@ node.reminder
 
 node.shortText
 
+// Returns the side of the root node where the node is located.
+
+node.sideAtRoot
+
+// Retrieves the style of the node.
+
+node.style
+
+// Returns the text of the node core. Raw text of this node which might be plain or HTML text. Possible transformations (formula evaluation, formatting, ...) are not applied.
+
+node.text
+
+// Returns a conversion of the node to a num, if possible.
+
+node.to.num
+
+// Returns a conversion of the node to a date, if possible.
+
+node.to.date
+
+// Returns a conversion of the node to a string.
+
+node.to.string
+
+// Returns a conversion of the node to a text.
+
+node.to.text
+
+// Returns a conversion of the node to the kind of object that fits best. Uses the following priority ranking to determine the type of the text: null; Long; Double; Date; String
+
+node.to.object
+
+// Returns the text of the node after applying any transformations like scripts or formulas. Plain or HTML text of this node after possible transformation (formula evaluation, formatting, ...).
+
+node.transformedText
+
+// Retrieves the value of the node.
+
+node.value
+
 /*
   NodeStyleRO
 */
