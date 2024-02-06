@@ -185,6 +185,102 @@ node.attributes.set("aaa", "xxx")
 node.attributes.setFormat(1, "0.0")
 
 /*
+  BorderRO
+*/
+
+// Retrieves the color of the border.
+
+node.style.border.color
+
+// Retrieves the color code of the border.
+
+node.style.border.colorCode
+
+// Retrieves the dash pattern of the border.
+
+node.style.border.dash
+
+// Checks if the border uses the edge color. Returns true if it does, false otherwise.
+
+node.style.border.usesEdgeColor
+
+// Checks if the border uses the edge dash pattern. Returns true if it does, false otherwise.
+
+node.style.border.usesEdgeDash
+
+// Checks if the border uses the edge width. Returns true if it does, false otherwise.
+
+node.style.border.usesEdgeWidth
+
+// Retrieves the width of the border.
+
+node.style.border.width
+
+// Checks if the border color is set. Returns true if it is, false otherwise.
+
+node.style.border.colorSet
+
+// Checks if the dash pattern of the border is set. Returns true if it is, false otherwise.
+
+node.style.border.dashSet
+
+// Checks if the use of edge color for the border is set. Returns true if it is, false otherwise.
+
+node.style.border.usesEdgeColorSet
+
+// Checks if the use of edge dash for the border is set. Returns true if it is, false otherwise.
+
+node.style.border.usesEdgeDashSet
+
+// Checks if the use of edge width for the border is set. Returns true if it is, false otherwise.
+
+node.style.border.usesEdgeWidthSet
+
+// Checks if the width of the border is set. Returns true if it is, false otherwise.
+
+node.style.border.widthSet
+
+/*
+  Border
+*/
+
+// Sets the color of the border to java.awt.Color.YELLOW.
+
+node.style.border.color = java.awt.Color.YELLOW
+
+// Sets the color of the border using an RGB string.
+
+node.style.border.colorCode = "#ffff00ff"
+
+// Sets the dash pattern of the border to "CLOSE_DOTS".
+
+node.style.border.dash = "CLOSE_DOTS"
+
+// Sets whether the border color matches the edge color.
+
+node.style.border.usesEdgeColor = true
+
+// Sets whether the border dash pattern matches the edge dash pattern.
+
+node.style.border.usesEdgeDash = true
+
+// Sets whether the border width matches the edge width.
+
+node.style.border.usesEdgeWidth = true
+
+// Sets the width of the border in integer format.
+
+node.style.border.width = 8
+
+// Sets the width of the border as a string.
+
+node.style.border.width = "8"
+
+// Sets the width of the border as a Quantity object with LengthUnit.
+
+node.style.border.width = "8pt"
+
+/*
   Cloud
 */
 
@@ -253,6 +349,66 @@ c.freeplaneVersion.final
 c.freeplaneVersion.numberToString()
 
 /*
+  ConditionalStyleRO
+*/
+
+// Retrieves the simple name of the condition class of the conditional style applied to the map and located at index 0.
+
+map.conditionalStyles.findAll().conditionClassSimpleName[0]
+
+// Retrieves the script associated with  the conditional style applied to the map and located at index 0.
+
+map.conditionalStyles.findAll().script[0]
+
+// Retrieves the name of the conditional style applied to the map and located at index 0.
+
+map.conditionalStyles.findAll().styleName[0]
+
+// Checks if there is a script condition associated with the conditional style applied to the map and located at index 0.
+
+map.conditionalStyles.findAll().get(0).hasScriptCondition()
+
+// Checks if the conditional style applied to the map and located at index 0 is active. Returns true if it is, false otherwise.
+
+map.conditionalStyles.findAll().active[0]
+
+// Checks if the conditional style applied to the map and located at index 0 is always applied. Returns true if it is, false otherwise.
+
+map.conditionalStyles.findAll().always[0]
+
+// Checks if the conditional style applied to the map and located at index 0 is the last one in the sequence. Returns true if it is, false otherwise.
+
+map.conditionalStyles.findAll().last[0]
+
+/*
+  ConditionalStyle
+*/
+
+// Moves the conditional style of position 0 to position 1.
+
+map.conditionalStyles.findAll().get(0).moveTo(1)
+
+// Removes the conditional style of position 0.
+
+map.conditionalStyles.findAll().get(0).remove()
+
+// Sets the active state of the conditional style of position 0.
+
+map.conditionalStyles.findAll().active[0] = true
+
+// Sets whether the conditional style currently in position 0 gets as the last one in the sequence.
+
+map.conditionalStyles.findAll().last[0] = true
+
+// Sets the script for the conditional style of position 0.
+
+map.conditionalStyles.findAll().script[0] = "script example"
+
+// Sets "aaa" as the name of the style for the conditional style of position 0.
+
+map.conditionalStyles.findAll().styleName[0] = "aaa"
+
+/*
   ConnectorRO
   
   The examples refer to the connectors that leave the currently selected node, so they use connectorsOut. In order to reference the connectors that are reaching the node, use connectorsIn instead of connectorsOut. 
@@ -313,6 +469,209 @@ node.connectorsOut.targetLabel
 // Returns the width of the connectors.
 
 node.connectorsOut.width
+
+/*
+  Connector
+*/
+
+// Sets to java.awt.Color.YELLOW the color of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].color = java.awt.Color.YELLOW
+
+// Sets "#ffff00ff" as the color of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].colorCode = "#ffff00ff"
+
+// Sets the dash array pattern of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].dashArray = "CLOSE_DOTS"
+
+// Sets whether to show an arrow at the end of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].endArrow = true
+
+// Sets the inclination points of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].setInclination([5,6], [7,8])
+
+// Sets the font family for the label of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].labelFontFamily = "Arial"
+
+// Sets the font size for the label of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].labelFontSize = 8
+
+// Sets the middle label of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].middleLabel = "aaa"
+
+// Sets to 8 the opacity of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].opacity = 8
+
+// Sets to "LINEAR_PATH" the shape of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].shape = "LINEAR_PATH"
+
+// Sets whether the outside connector located at index 0 of the selected node simulates an edge.
+
+node.connectorsOut[0].simulatesEdge = true
+
+// Sets the label at the source of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].sourceLabel = "aaa"
+
+// Sets whether to show an arrow at the start of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].startArrow = true
+
+// Sets the label at the target of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].targetLabel = "aaa"
+
+// Sets the width of the outside connector located at index 0 of the selected node.
+
+node.connectorsOut[0].width = 8
+
+/*
+  ControllerRO
+*/
+
+// Exports the specified mind map to a file 'C:/t.png' in the PNG format, with an option to overwrite existing files.
+
+boolean overwriteExistingFile = true
+c.export(node.map, new File('C:/t.png'), 'Portable Network Graphic (PNG) (.png)', overwriteExistingFile)
+
+// Finds nodes matching the condition node core is equal to "aaa", with options to include ancestors and descendants in the search set to true.
+
+c.find(true, true, { it.text == "aaa" })
+
+// Finds nodes matching the condition node core is equal to "aaa".
+
+c.find{ it.text == "aaa" }
+
+// Finds all nodes.
+
+c.findAll()
+
+// Finds all nodes in a depth-first manner.
+
+c.findAllDepthFirst()
+
+// Retrieves descriptions of all available export types.
+
+c.exportTypeDescriptions
+
+// Retrieves the version of Freeplane being used.
+
+c.freeplaneVersion
+
+// Retrieves the currently selected node.
+
+c.selected
+
+// Retrieves all selected nodes, as a List.
+
+c.selecteds
+
+// Retrieves the sorted selection of nodes, excluding the nodes that are descendants of other selected nodes.
+
+c.getSortedSelection(true)
+
+// Retrieves the user directory path.
+
+c.userDirectory
+
+// Retrieves the root node of the current view.
+
+c.viewRoot
+
+// Retrieves the current zoom level.
+
+c.zoom
+
+// Checks if the current mode is interactive. Returns true if it is, false otherwise.
+
+c.interactive
+
+/*
+  Controller
+*/
+
+// Centers the view on the specified node. In the example, the node of ID ID_313704791.
+
+c.centerOnNode(ID_313704791)
+
+// Deactivates the undo functionality.
+
+c.deactivateUndo()
+
+// Opens the specified node for editing. In the example, the node of ID ID_313704791.
+
+c.edit(ID_313704791)
+
+// Opens the specified node for editing in a popup window. In the example, the node of ID ID_313704791.
+
+c.editInPopup(ID_313704791)
+
+// Retrieves the main thread executor service.
+
+c.mainThreadExecutorService
+
+// Retrieves a list of currently open mind maps.
+
+c.openMindMaps
+
+// Creates a new mind map from the template file "Example Template.mm", located at "C:/Example Template.mm".
+
+c.newMapFromTemplate(new File("C:/Example Template.mm"))
+
+// Creates a new mind map.
+
+c.newMindMap()
+
+// Performs a redo action.
+
+c.redo()
+
+// Selects the collection of nodes "someNodes".
+
+someNodes = [] + ID_313704791 + ID_1260664080
+c.select(someNodes)
+
+// Selects the node with ID ID_313704791.
+
+c.select(ID_313704791)
+
+// Selects all nodes in the branch of the node with ID ID_313704791.
+
+c.selectBranch(ID_313704791)
+
+// Selects multiple nodes from the collection someNodes.
+
+someNodes = [] + ID_313704791 + ID_1260664080
+c.select(someNodes)
+
+// Sets status information to be displayed.
+
+c.setStatusInfo("hi there!")
+
+// Sets status information to the standard info panel.
+
+c.setStatusInfo("standard", "hi there!")
+
+// Sets status information to the standard info panel and an icon "button_ok".
+
+c.setStatusInfo("standard", "hi there!", "button_ok")
+
+// Sets the zoom level to the specified ratio.
+
+c.setZoom(8)
+
+// Performs an undo action.
+
+c.undo()
 
 /*
   EdgeRO
@@ -515,6 +874,82 @@ node.icons.remove(1)
 node.icons.remove("button_ok")
 
 /*
+  ConditionalStyles
+*/
+
+// add a node conditional style to the end of the table
+node.conditionalStyles.add(
+        true, // isActive
+        "node.text == 'Sunday'", // script
+        'important', // styleName
+        false) // isLast (aka stop)
+
+// Adds an existing ConditionalStyleRO object. In the example, the ConditionalStyleRO object from the parent node.
+
+node.conditionalStyles.add(node.parent.conditionalStyles.findAll())
+
+// insert a node conditional style at the beginning of the table, with the condition "always"
+
+node.conditionalStyles.insert(0, true, null, 'defaultstyle.floating', false)
+
+// Inserts a copy of conditionalStyle at the specified position. It can be used to copy a conditional style between nodes or between maps. In the example, the conditional style located at index 0 of the parent of the selected node is inserted.
+
+parentConditionalStyle = node.parent.conditionalStyles[0]
+conditionalStyles.insert(0, parentConditionalStyle)
+
+// move the third map conditional style to the top of the table
+
+map.conditionalStyles.move(2, 0)
+
+// remove the first map conditional style from the table
+
+map.conditionalStyles.remove(0)
+
+/*
+  LinkRO
+*/
+
+// Retrieves the file associated with the link.
+
+node.link.file
+
+// Retrieves the node associated with the link.
+
+link.node
+
+// Retrieves the text of the link.
+
+link.text
+
+// Retrieves the URI of the link.
+
+link.uri
+
+/*
+  Link
+*/
+
+// Removes the link.
+
+link.remove()
+
+// Sets the file associated with the link.
+
+link.file = new File("C:/aaa.png")
+
+// Sets the node associated with the link.
+
+link.node = ID_1943538647
+
+// Sets the text (stringified URI) for the link.
+
+link.text = "http://www.google.com"
+
+// Sets the URI for the link.
+
+node.link.uri = new URI('http://www.google.com')
+
+/*
   MindMapRO
 */
 
@@ -547,6 +982,70 @@ node.map.userDefinedStylesNames
 node.map.saved
 
 /*
+  MindMap
+*/
+
+// Closes the mind map, with options to force close and allow interaction.
+
+mindMap.close(true, false)
+
+// Evaluates all formulas in the mind map.
+
+mindMap.evaluateAllFormulas()
+
+// Evaluates only the outdated formulas in the mind map.
+
+mindMap.evaluateOutdatedFormulas()
+
+// Filters nodes in the mind map with text core "aaa", don't show ancestors and show descendants.
+
+node.map.filter(true, false){ it.text.contains("aaa") }
+
+// Retrieves the list of listeners attached to the mind map.
+
+mindMap.listeners
+
+// Retrieves the storage mechanism of the mind map.
+
+mindMap.storage
+
+// Hides nodes in the mind map with text core "aaa", don't hide ancestors and hide descendants.
+
+mindMap.hide(false, true){ it.text.contains("aaa") }
+
+// Redoes the last filter applied to the mind map.
+
+mindMap.redoFilter()
+
+// Saves the mind map, and allow interaction during saving.
+
+mindMap.save(allowInteraction)
+
+// Saves the mind map as a new file.
+
+mindMap.saveAs(new File('C:/new mindmap.mm'))
+
+// Sets the background color of the mind map.
+
+mindMap.backgroundColor = java.awt.Color.YELLOW
+
+// Sets the background color of the mind map using an RGB string.
+
+mindMap.backgroundColorCode = "#ffff00ff"
+
+// Sets "aaa" as the name (title) of the mind map.
+
+mindMap.name = "aaa"
+
+// Sets the saved state of the mind map.
+
+mindMap.saved = true
+
+// Undoes the last filter applied to the mind map.
+
+mindMap.undoFilter()
+
+/*
   NodeGeometryRO
 */
 
@@ -569,6 +1068,90 @@ node.geometry.verticalMargin
 /*
   NodeRO
 */
+
+// Retrieves all descendants of the selected node.
+
+node.allAt("**")
+
+// Retrieves the parent node.
+
+node.at("..")
+
+// Finds nodes matching the condition node core is equal to "aaa", with options to include ancestors and descendants in the search set to true.
+
+node.find(true, true, { it.text == "aaa" })
+
+// Finds nodes matching the condition node core is equal to "aaa".
+
+node.find{ it.text == "aaa" }
+
+// Finds all descendant nodes.
+
+node.findAll()
+
+// Finds all descendant nodes in a depth-first manner.
+
+node.findAllDepthFirst()
+
+// Retrieves the alias of the node.
+
+node.alias
+
+// Retrieves the value of the attribute with the specified name.
+
+node.getAt("aaa")
+
+// Retrieves a map of all attributes of the node.
+
+node.attributes
+
+// Retrieves the base distance to children as a Length object.
+
+node.baseDistanceToChildrenAsLength
+
+// Returns a BASE64 encoded node text as a binary object
+
+node.binary
+
+// Retrieves the branch as a text outline.
+
+node.branchAsTextOutline
+
+// Retrieves the layout of the child nodes.
+
+node.childNodesLayout
+
+// Retrieves the position of the child node ID_1725317136.
+
+node.getChildPosition(ID_1725317136)
+
+// Retrieves a list of child nodes.
+
+node.children
+
+// Retrieves the cloud of the node.
+
+node.cloud
+
+// Retrieves a list of conditional styles applied to the node.
+
+node.conditionalStyles
+
+// Retrieves a list of connectors incoming to this node.
+
+node.connectorsIn
+
+// Retrieves a list of connectors outgoing from this node.
+
+node.connectorsOut
+
+// Retrieves the count of nodes sharing the same content (i.e., clones).
+
+node.countNodesSharingContent
+
+// Retrieves the count of nodes sharing the same content and subtree (i.e., clones).
+
+node.countNodesSharingContentAndSubtree
 
 // Returns the date that the node was created.
 
@@ -749,6 +1332,299 @@ node.transformedText
 // Retrieves the value of the node.
 
 node.value
+
+// Returns the vertical shift of the node.
+
+node.verticalShift
+
+// Returns the vertical shift of the node as Length.
+
+node.verticalShiftAsLength
+
+// Returns the vertical shift of the node in screen pixels.
+
+node.verticalShiftInScreenPixels
+
+// Returns if the node has style "ex1".
+
+node.hasStyle("ex1")
+
+// Returns true if p is a parent, or grandparent, ... of this node, or if it is equal to this node; returns false otherwise.
+
+node.isDescendantOf(p)
+
+// Checks if the node is folded. Returns true if it is, false otherwise.
+
+node.folded
+
+// Checks if the node is a free node. Returns true if it is, false otherwise.
+
+node.free
+
+// Checks if the node is a leaf node (has no children). Returns true if it is, false otherwise.
+
+node.leaf
+
+// Checks if the node is minimized. Returns true if it is, false otherwise.
+
+node.minimized
+
+// Checks if the node is the root of the map. Returns true if it is, false otherwise.
+
+node.root
+
+// Checks if the node is at the top or position. Returns true if it is, false otherwise.
+
+node.topOrLeft
+
+// Checks if the node is at the top or left position when the parent is the Root in a map view. Returns true if it is, false otherwise.
+
+node.isTopOrLeftOnViewsWithRoot(node.parent)
+
+// Checks if the node is visible. Returns true if it is, false otherwise.
+
+node.visible
+
+// Checks if the node is visible in views that have the specified root node. In the example, returns true, because the specified node is the parent.
+
+node.isVisibleOnViewsWithRoot(node.parent)
+
+/*
+  Node
+*/
+
+node.addConnectorTo(ID_1429940931)
+
+// Adds a connector to another node specified as a Node object. In the example, the parent of the selected node.
+
+node.addConnectorTo(node.parent)
+
+// Appends a clone of the specified node (without its subtree) to this node. In the example, the cloned node is ID_1429940931.
+
+node.appendAsCloneWithoutSubtree(ID_1429940931)
+
+// Appends a clone of the specified node (including its subtree) to this node. In the example, the cloned node is ID_1429940931.
+
+node.appendAsCloneWithSubtree(ID_1429940931)
+
+// Appends the branch of the specified node (in the example, node ID_1429940931) as a copy to this node.
+
+node.appendBranch(ID_1429940931)
+
+// Appends a copy of the specified node (in the example, node ID_1429940931) as a child to this node.
+
+node.appendChild(ID_1429940931)
+
+// Appends an outline text as a branch to this node. The example has a first node "aaa" and a child node "bbb".
+
+node.appendTextOutlineAsBranch(
+        """
+        aaa
+            bbb
+        """
+)
+
+// Creates a new child node under the current node.
+
+node.createChild()
+
+// Creates a new child node at the index position 1 under the current node.
+
+node.createChild(1)
+
+// Creates a new child node with the given value under the current node. In the example, the string "aaa".
+
+node.createChild("aaa")
+
+// Decrypts the content of the node using the password "acb123".
+
+node.decrypt("acb123")
+
+// Deletes the current node.
+
+node.delete()
+
+// Encrypts the content of the node using the password "acb123".
+
+node.encrypt("acb123")
+
+// Retrieves the geometry information of the node.
+
+node.geometry
+
+// Checks if the node has encryption enabled. Returns true if it does, false otherwise.
+
+node.hasEncryption()
+
+// Checks if the node is currently encrypted. Returns true if it is, false otherwise.
+
+node.encrypted
+
+// Moves the node to become a child of the specified node (in the example, node ID_1429940931).
+
+node.moveTo(ID_1429940931)
+
+// Moves the node to a specific position (in the example, position index 1) under the specified parent node (in the example, node ID_1429940931).
+
+node.moveTo(ID_1429940931, 1)
+
+// Inserts the node(s) copied from clipboard as clone(s).
+
+node.pasteAsClone()
+
+// Sets or updates the value (in the example, value "xxx") of an attribute with the specified name (in the example, attribute "aaa") for this node.
+
+node.putAt("aaa", "xxx")
+
+// Removes the specified connector from the node. In the example, first is created a list of the ConnectorsOut, then the connector at index 1 of this list is removed.
+
+listOfConnectorsOut = []
+listOfConnectorsOut += node.connectorsOut
+node.removeConnector(a[1])
+
+// Removes encryption from the node using the specified password.
+
+node.removeEncryption("abc123")
+
+// Sets an alias for the node.
+
+node.alias = "aaa"
+
+// Clear all attributes and sets attributes for the node using a map of key-value pairs. In the example, sets attribute "aaa", with value "xxx", and attribute "bbb", with value "yyy".
+
+node.attributes = ["aaa" : "xxx", "bbb" : "yyy"]
+
+// Sets the base distance to children nodes in integer format. In the example, 8.
+
+node.baseDistanceToChildren = 8
+
+// Sets the base distance to children nodes as a string. In the example, 8.
+
+node.baseDistanceToChildren = "8"
+
+// Sets the base distance to children nodes as a Quantity object with LengthUnit. In the example, 8pt.
+
+node.baseDistanceToChildren = "8pt"
+
+// Sets binary data for the node. Converts data to a BASE64 encoded string and sets it as this node's text. In the example, "aaa".
+
+node.binary = "aaa"
+
+// Sets the layout for the child nodes as "TOPTOBOTTOM_LEFT_BOTTOM".
+
+node.childNodesLayout = "TOPTOBOTTOM_LEFT_BOTTOM"
+
+// Sets the creation date of the node to "2010-12-20".
+
+node.createdAt = Date.parse("yyyy-MM-dd","2010-12-20")
+
+// Sets the node text to a default formatted datetime object. In the example, the current date and time.
+
+node.dateTime = new Date()
+
+// Sets the details of the node to "aaa".
+
+node.details = "aaa"
+
+// Sets the content type of the node's details to "latex".
+
+node.detailsContentType = "latex"
+
+// Sets the details text of the node, in HTML format, to "aaa".
+
+node.detailsText = "aaa"
+
+// Sets the folded state of the node as true.
+
+node.folded = true
+
+// Sets the format of the node as 'STANDARD_FORMAT'.
+
+node.format = 'STANDARD_FORMAT'
+
+// Sets whether the node is free (not attached to the main map).
+
+node.free = true
+
+// Sets whether to hide the details of the node.
+
+node.hideDetails = true
+
+// Sets the horizontal shift of the node in integer format.
+
+node.horizontalShift = 8
+
+// Sets the horizontal shift of the node as a string.
+
+node.horizontalShift = "8"
+
+// Sets the horizontal shift of the node as a Quantity object with LengthUnit.
+
+node.horizontalShift = "8pt"
+
+// Sets the global status of the node to true.
+
+node.isGlobal = true
+
+// Sets the last modified date of the node to "2010-12-20".
+
+node.lastModifiedAt = Date.parse("yyyy-MM-dd","2010-12-20")
+
+// Sets the minimal distance between children nodes in integer format.
+
+node.minimalDistanceBetweenChildren = 8
+
+// Sets the minimal distance between children nodes as a string.
+
+node.minimalDistanceBetweenChildren = "8"
+
+// Sets the minimal distance between children nodes as a Quantity object with LengthUnit.
+
+node.minimalDistanceBetweenChildren = "8pt"
+
+// Sets whether the node is minimized.
+
+node.minimized = true
+
+// Sets the note of the node as "aaa".
+
+node.note = "aaa"
+
+// Sets the content type of the node's note as "latex".
+
+node.noteContentType = "latex"
+
+// Sets the note text of the node, in HTML format, to "aaa".
+
+node.noteText = "aaa"
+
+// Sets an object associated with the node. In the example, the integer 8.
+
+node.object = 8
+
+// Sets the side of the node at the root as "TOP_OR_LEFT".
+
+node.sideAtRoot = "TOP_OR_LEFT"
+
+// Sets the text of the node to "aaa".
+
+node.text = "aaa"
+
+// Sets the vertical shift of the node in integer format.
+
+node.verticalShift = 8
+
+// Sets the vertical shift of the node as a string.
+
+node.verticalShift = "8"
+
+// Sets the vertical shift of the node as a Quantity object with LengthUnit.
+
+node.verticalShift = "8pt"
+
+// Sorts the children of the node according to the specified comparator. In the example, creation date.
+
+node.sortChildrenBy{ it.getCreatedAt() }
 
 /*
   NodeStyleRO
