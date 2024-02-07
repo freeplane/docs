@@ -1066,6 +1066,18 @@ node.geometry.shape
 node.geometry.verticalMargin
 
 /*
+  NodeGeometry
+*/
+
+// Sets the node geometry as uniform.
+
+node.geometry.isUniform = true
+
+// Sets the shape of the node as "OVAL".
+
+node.geometry.shape = "OVAL"
+
+/*
   NodeRO
 */
 
@@ -1761,3 +1773,67 @@ node.style.textColor = java.awt.Color.YELLOW
 // Sets "#ffff00ff" as the text color of the selected node.
 
 node.style.textColorCode = "#ffff00ff"
+
+/*
+  ReminderRO
+*/
+
+// Retrieves the period of the reminder.
+
+node.reminder.period
+
+// Retrieves the unit of the period of the reminder.
+
+node.reminder.periodUnit
+
+// Retrieves the datetime at which the reminder is set to alert.
+
+node.reminder.remindAt
+
+// Retrieves the script associated with the reminder.
+
+node.reminder.script
+
+/*
+  Reminder
+*/
+
+// Creates a periodic reminder. To make the reminder fire every second week:
+
+node.reminder.createOrReplace(new Date() + 1, "WEEK", 2)
+
+// Removes the reminder.
+
+node.reminder.remove()
+
+// Sets a script to execute when the reminder fires.
+
+node.reminder.setScript("aaa")
+
+/*
+  Script
+*/
+
+// Grants the script permission to access the network.
+
+c.script(new File("C:/example script.groovy")).accessingNetwork().executeOn(node.map.root)
+
+// Executes the script on the specified node.
+
+c.script(new File("C:/example script.groovy")).executeOn(node.map.root)
+
+// Grants the script permission to read files.
+
+c.script(new File("C:/example script.groovy")).readingFiles().executeOn(node.map.root)
+
+// Grants the script permission to start applications.
+
+c.script(new File("C:/example script.groovy")).startingApplications().executeOn(node.map.root)
+
+// Grants the script all permissions.
+
+c.script(new File("C:/example script.groovy")).withAllPermissions().executeOn(node.map.root)
+
+// Grants the script permission to write files.
+
+c.script(new File("C:/example script.groovy")).writingFiles().executeOn(node.map.root)
