@@ -2245,7 +2245,7 @@ class FreeplaneWindow {
 
 Author: `jokro`
 
-== open web page in external browser ==
+## open web page in external browser
 
 THIS SCRIPT DOES
 
