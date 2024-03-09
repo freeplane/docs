@@ -21,7 +21,7 @@ It can be opened by right-clicking on the mind map background and selecting `Too
 ![](../images/right-click_for_Tool_panel-1'10'2.png ':size=200')
 
 In addition to formatting an entire node, it is possible to format each character/word in the node.
-It can be done by using the editor dialog `Edit->Node code->Edit node core in dialog (Alt+Enter)`.
+It can be done by using the editor dialog `Edit->Node core->Edit node core in dialog (Alt+Enter)`.
 
 ![](../images/word-level_dialog_formatting-1'10'2.png ':size=200')
 
