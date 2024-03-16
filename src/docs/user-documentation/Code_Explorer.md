@@ -41,6 +41,18 @@ The Configurations tab allows users to manage their configurations and consists 
 - **Remove Selected Locations**: This button will remove the currently selected locations from your configuration.
 - **Ordering Buttons**: Adjust the priority order of locations, affecting which classes are imported when duplicates exist.
 
+##### Location Details in Code Explorer
+
+When adding locations for analysis in the Code Explorer mode, Freeplane processes directories differently based on their contents:
+
+- **Maven Projects**: If the location is a directory containing a `pom.xml` file, Freeplane recognizes it as a Maven project. It will then look for class files specifically in the `target/classes/**` directory structure.
+
+- **Gradle Projects**: If the location is a directory containing a `build.gradle` file, Freeplane identifies it as a Gradle project. It will search for class files within the `build/classes/**` directory structure.
+
+- **Other Cases**: If the directory does not contain `pom.xml` or `build.gradle`, Freeplane will search for any `.class` files contained within any subdirectories.
+
+This behavior allows Freeplane to adapt to different project structures and build systems, ensuring that only the relevant class files are included in the analysis.
+
 #### Rules
 
 Rules in the Code Explorer mode are used to specify allowed and forbidden dependencies, among other settings. Rules are defined in the following formats:
@@ -79,12 +91,63 @@ The Dependencies tab dynamically updates with information as the selection withi
 
 - The filter input field allows users to filter the list of dependencies by entering keywords or by specifying a column for searching using the format `column:keyword`.
 
-## Special Filters and Exploration Tools
+## Class Filters and Dependency Exploration Options
 
-### Toolbar Filters
+Available in both the toolbar and the "Explore" menu, Freeplane's Code Explorer mode offers a comprehensive set of actions for quickly applying special filters related to dependency analysis. These actions can be used in combination with the general filter tools on the toolbar and within the filter menu for an in-depth analysis. The "Explore" menu extends these capabilities, providing additional actions for more advanced analysis and allowing for a more detailed exploration of the code's structure and dependencies.
 
-The toolbar provides a set of actions for quick application of special filters related to dependency analysis. They can be used in combinations with the general filter toolbar and filter menu.
+### "Show Dependencies Going Outside" Toggle
 
-### Explore Menu Options
+The "Show dependencies going outside" function in the Code Explorer mode is a toggle button that changes the scope of the dependency analysis:
 
-The "Explore" menu encompasses all the actions available on the toolbar for filtering dependencies, as well as additional actions for more advanced analysis. 
+- **When selected**: Freeplane will analyze dependencies that extend beyond the currently selected nodes. This includes any external dependencies that classes, packages, or package trees have with nodes outside of the selected scope.
+
+- **When not selected**: The analysis will focus on the dependencies between the selected nodes only, ignoring any external connections.
+
+Users can activate or deactivate this toggle at any time to adjust the analysis to either include or exclude external dependencies based on their current requirements.
+
+
+### Filtering by External Dependencies
+
+The "Filter by external dependencies" action, available in both the toolbar and the Explore menu, is influenced by the "Show dependencies going outside" toggle:
+
+- **With the toggle selected**: Applying the filter will cause Freeplane to display only the classes that have dependencies going outside the selected nodes. All other classes and their corresponding packages that do not have external dependencies will be hidden from view.
+
+- **With the toggle not selected**: When this filter is applied, it will only keep visible the classes that have dependencies between them within the selected scope. Classes that do not have internal dependencies within the selected nodes will be hidden.
+
+This feature allows users to concentrate on the classes that interact with external components or those that interact within a defined scope, depending on the analysis requirement.
+
+
+### Actions for Revealing Classes
+
+In the Code Explorer mode, a suite of actions is available to reveal dependencies of nodes. These actions become helpful after applying a filter, enabling a focused analysis on specific classes.
+
+#### Toolbar Actions
+
+On the toolbar, there are actions to reveal dependencies for the selected nodes:
+
+- **Show Incoming Dependencies of the Selected Nodes**: Reveals nodes that are direct or recursive dependencies entering the selected nodes.
+- **Show Outgoing Dependencies of the Selected Nodes**: Reveals nodes that are direct or recursive dependencies exiting the selected nodes.
+- **Show Connected Dependencies of the Selected Nodes**: Reveals nodes that have direct or recursive dependencies connected to the selected nodes.
+
+These actions on the toolbar allow users to visualize the dependencies in a more targeted manner.
+
+#### Explore Menu Actions
+
+The Explore menu offers additional actions that include the capabilities of the toolbar and further:
+
+- Actions to reveal dependencies for all visible nodes, not just the selected ones. This provides a broader view of the codebase's architecture.
+- Options to reveal both direct and recursive dependencies, offering a detailed exploration of the code structure.
+
+These menu actions are helpful for expanding the analysis to understand the broader context of the dependencies within the entire visible code structure. By leveraging these tools, users can deepen their understanding of the interdependencies within their codebase.
+
+### Cyclic Dependencies Analysis
+
+In the Code Explorer mode, Freeplane includes actions to analyze and visualize cyclic dependencies involving the selected classes or packages.
+
+#### Toolbar and Explore Menu Actions
+
+- **Filter selected nodes by selected element cycles**: When this action is triggered, Freeplane checks for cyclic dependencies that include the selected class or package. If a cycle is found, the view is updated to hide all classes and packages that are not part of the cycle, making the cycle's structure clear and focused.
+- **Select nodes by selected element cycles**: This action also checks for cyclic dependencies. If it identifies a cycle, it selects all classes and packages that are part of the cycle within the mind map. If no cycles are found, there will be no change to the selection or visibility of the nodes.
+
+These actions are useful for pinpointing and resolving cyclic dependencies, which are often indicators of potential design issues that can complicate the maintainability of a codebase. By utilizing these features, developers can ensure their code's architecture adheres to best practices and remains clean and manageable.
+
