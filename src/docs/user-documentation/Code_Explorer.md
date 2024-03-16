@@ -71,6 +71,68 @@ ignore group [classPattern]
 - **Revert**: Undoes the last change made to the rule configuration.
 - **Help**: Provides documentation related to creating and managing rules.
 
+## Rules Configuration in Code Explorer
+
+Rules within the Code Explorer mode are essential for defining how the application analyzes and interprets the dependencies of the codebase. They are expressed in a specific format and cater to various aspects of the analysis.
+
+### Rule Definition Format
+
+Rules are declared one per line, and each rule comprises distinct parts, including commands, patterns, and optionally, directions and targets:
+
+- Dependency management: `[command] [originPattern] [direction] [targetPattern]`
+- Classpath definition: `classpath [path]`
+- Class and group management: `[command] [classPattern]`
+
+### Commands for Dependency Management
+
+The following commands are related specifically to dependency analysis:
+
+- `allow`: Allows dependencies from the origin to the target as defined by the patterns.
+- `forbid`: Blocks dependencies from the origin to the target as defined by the patterns.
+- `ignore`: Omits specified dependencies from the analysis.
+- `group`: Organizes classes into logical groups for more structured analysis.
+
+### Direction Indicators
+
+For dependency commands, a direction indicator shows the dependency flow:
+
+- `->`: A standard dependency from the origin to the target.
+- `->v`: A dependency moving downwards in the package hierarchy.
+- `->^`: A dependency moving upwards in the package hierarchy.
+
+### Additional Commands
+
+Beyond dependency management, there are commands for broader configuration:
+
+- `classpath [path]`: This command allows specifying multiple relative directories to be searched for classes, replacing the default search locations (`target/classes`, `build/classes`, `.`). Users can define several `classpath` rules to include different directories according to their project's structure and build outputs.
+- `ignore class`: Excludes specific classes from analysis.
+- `import interface [classPattern]`: Imports interfaces that match the specified pattern as node attributes in the mind map, making them available for filtering and analysis.
+- `import annotation [classPattern]` and `import annotation [classPattern].[methodName]()`: Imports annotations that match the specified pattern as node attributes in the mind map, allowing them to be used for filtering and detailed analysis.
+
+### Pattern Syntax
+
+Patterns follow an AspectJ-like syntax, enabling matching of complex package and class structures.
+
+### Rule Examples
+
+Examples of rules include:
+
+- Allowing services to depend on repositories:
+allow .service. -> .repository.
+
+- Forbidding controllers from depending on models:
+forbid ..controller*.. ->^ ..model..
+
+- Ignoring dependencies from utility classes to helpers:
+ignore ..util.. ->v ..*Helper..
+
+### Usage Notes
+
+- Comments can be added to rules using `#` or `//`, and such lines are ignored during analysis.
+- The grouping command helps to visualize code architecture by aggregating related classes.
+
+The above structure ensures that each aspect of rule configuration is documented with precision, adhering to the confirmed functionalities of the Code Explorer mode.
+
 ## Analysis Results
 
 After running an analysis with the "Run Analysis" button, the result is represented as an interactive mind map that visualizes all packages and classes.
