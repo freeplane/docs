@@ -22,6 +22,8 @@
   - [Relationship to FreeMind](user-documentation/Relationship_to_FreeMind.md)
   - [References to other known documentation/tutorial sites](user-documentation/other-docs-tutorials.md)
   - [Mind map examples](user-documentation/mind-map-examples.md)
+  - [Code explorer](user-documentation/Code_Explorer.md)
+  - [ArchUnit Test Result Viewer](user-documentation/ArchUnit_Extension.md)
 - [Contribute](contribute/contribute.md)
   - [Translation How-To](contribute/Translation_How-To.md)
 - [Scripting](scripting/Scripting.md)

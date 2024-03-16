@@ -259,7 +259,7 @@ Other nodes can also be given the style `Floating node` and can be set to be pos
 ### Node groups
 #### Summary nodes
 
-![](images/nodes_summary_nodes.png ':size=200')
+![Summary nodes](images/nodes_summary_nodes.png ':size=200')
 
 Summary nodes have brackets that suggest that their content summarizes a group of sibling nodes.
 Technically, summary nodes are specially marked sibling nodes of the summarized nodes.

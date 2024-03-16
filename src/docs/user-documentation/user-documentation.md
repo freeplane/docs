@@ -15,3 +15,5 @@
 - [Relationship to FreeMind](Relationship_to_FreeMind.md)
 - [References to other known documentation/tutorial sites](other-docs-tutorials.md)
 - [Mind map examples](https://github.com/freeplane/freeplane/discussions/categories/shared-mind-maps)
+- [Code explorer](Code_Explorer.md)
+- [ArchUnit Test Result Viewer](ArchUnit_Extension.md)
