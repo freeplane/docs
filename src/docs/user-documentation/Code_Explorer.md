@@ -71,68 +71,6 @@ ignore group [classPattern]
 - **Revert**: Undoes the last change made to the rule configuration.
 - **Help**: Provides documentation related to creating and managing rules.
 
-## Rules Configuration in Code Explorer
-
-Rules within the Code Explorer mode are essential for defining how the application analyzes and interprets the dependencies of the codebase. They are expressed in a specific format and cater to various aspects of the analysis.
-
-### Rule Definition Format
-
-Rules are declared one per line, and each rule comprises distinct parts, including commands, patterns, and optionally, directions and targets:
-
-- Dependency management: `[command] [originPattern] [direction] [targetPattern]`
-- Classpath definition: `classpath [path]`
-- Class and group management: `[command] [classPattern]`
-
-### Commands for Dependency Management
-
-The following commands are related specifically to dependency analysis:
-
-- `allow`: Allows dependencies from the origin to the target as defined by the patterns.
-- `forbid`: Blocks dependencies from the origin to the target as defined by the patterns.
-- `ignore`: Omits specified dependencies from the analysis.
-- `group`: Organizes classes into logical groups for more structured analysis.
-
-### Direction Indicators
-
-For dependency commands, a direction indicator shows the dependency flow:
-
-- `->`: A standard dependency from the origin to the target.
-- `->v`: A dependency moving downwards in the package hierarchy.
-- `->^`: A dependency moving upwards in the package hierarchy.
-
-### Additional Commands
-
-Beyond dependency management, there are commands for broader configuration:
-
-- `classpath [path]`: This command allows specifying multiple relative directories to be searched for classes, replacing the default search locations (`target/classes`, `build/classes`, `.`). Users can define several `classpath` rules to include different directories according to their project's structure and build outputs.
-- `ignore class`: Excludes specific classes from analysis.
-- `import interface [classPattern]`: Imports interfaces that match the specified pattern as node attributes in the mind map, making them available for filtering and analysis.
-- `import annotation [classPattern]` and `import annotation [classPattern].[methodName]()`: Imports annotations that match the specified pattern as node attributes in the mind map, allowing them to be used for filtering and detailed analysis.
-
-### Pattern Syntax
-
-Patterns follow an AspectJ-like syntax, enabling matching of complex package and class structures.
-
-### Rule Examples
-
-Examples of rules include:
-
-- Allowing services to depend on repositories:
-allow .service. -> .repository.
-
-- Forbidding controllers from depending on models:
-forbid ..controller*.. ->^ ..model..
-
-- Ignoring dependencies from utility classes to helpers:
-ignore ..util.. ->v ..*Helper..
-
-### Usage Notes
-
-- Comments can be added to rules using `#` or `//`, and such lines are ignored during analysis.
-- The grouping command helps to visualize code architecture by aggregating related classes.
-
-The above structure ensures that each aspect of rule configuration is documented with precision, adhering to the confirmed functionalities of the Code Explorer mode.
-
 ## Analysis Results
 
 After running an analysis with the "Run Analysis" button, the result is represented as an interactive mind map that visualizes all packages and classes.
@@ -140,7 +78,7 @@ After running an analysis with the "Run Analysis" button, the result is represen
 ### Mind Map Structure
 
 - **Packages and Classes**: Displayed in a hierarchical format, with packages expanding to reveal classes contained within them.
-- **Dependencies**: Represented as connectors between nodes on the mind map.
+- **Dependencies**: Represented as connectors between nodes on the mind map. All mind map nodes are automatically sorted to ensure that as many dependencies as possible are visualized as going down in the mind map. This sorting strategy aims to minimize the visual complexity and enhance the readability of the dependency graph. Dependencies that are depicted as going up in the mind map are significant as they always indicate the presence of dependency cycles. This visual cue helps in quickly identifying areas in the codebase that might require refactoring to eliminate circular dependencies.
 - **Forbidden Dependencies**: Illustrated with red lines, these dependencies are configured in the rules to be disallowed.
 
 ### Dependencies Tab
@@ -152,6 +90,65 @@ The Dependencies tab dynamically updates with information as the selection withi
 #### Filtering Dependencies
 
 - The filter input field allows users to filter the list of dependencies by entering keywords or by specifying a column for searching using the format `column:keyword`.
+
+## Rules Configuration in Code Explorer
+
+Rules in the Code Explorer mode are pivotal for controlling how the application interprets the dependencies and structure within a JVM-compiled codebase. These rules are versatile, catering to a broad spectrum of analysis needs, from dependency management to enhancing the visibility of specific code elements within the mind map.
+
+### Rule Definition Format
+
+Rules are articulated on a per-line basis, conforming to formats that accommodate various directives, such as managing dependencies, augmenting the classpath, and more nuanced configurations like ignoring or grouping classes:
+
+- Dependency directives: `[command] [originPattern] [direction] [targetPattern]`
+- Augmenting classpath: `classpath [path]`
+- Class-specific directives: `ignore class [classPattern]`, `import interface [classPattern]`, `import annotation [classPattern]`, `import annotation [classPattern].[methodName]()`
+- Grouping directives: `group [classPattern]`, `group [classPattern] as [group name]`
+- Ignoring groups: `ignore group [classPattern]`
+
+### Commands for Dependency Management
+
+Specific commands within the rules are designed to directly influence how dependencies are managed:
+
+- `allow`, `forbid`, `ignore`, `group`: These commands serve as the foundation for defining allowed and forbidden dependencies, excluding specific dependencies from analysis, and organizing Java classes into logical groupings, respectively.
+
+### Direction Indicators
+
+Dependency directions are denoted by symbols that indicate the nature of the dependency flow:
+
+- `->`: Represents a dependency that can go up or down in the mind map, aligning with the automatic sorting of nodes to optimize the visualization of dependencies.
+- `->^`: Indicates a dependency going up in the mind map, highlighting dependency cycles.
+- `->v`: Signifies a dependency going down in the mind map, following the natural flow of most dependencies after nodes are automatically sorted.
+
+### Pattern Syntax
+
+The syntax for patterns in rules utilizes an AspectJ-like formulation, enabling precise matching against package and class names for a targeted analysis.
+
+### Group Commands
+
+- `ignore group [classPattern]`: Excludes all classes matching the class pattern from dependency analysis. This command is useful for omitting specific groups of classes, such as test classes, from cluttering the analysis results.
+- `group [classPattern] as [group name]`: Groups all classes matching the class pattern under a custom name. This name appears in the mind map, enhancing the organization of the analysis results. When parts of the class pattern are enclosed in round brackets, they are captured and appended to the group name, separated by a colon if there is more than one part. This feature allows for a dynamic and descriptive naming of groups based on the matched class structure.
+
+For example, with the rules:
+
+````
+group (hudson|jenkins).(triggers|views)..
+group .. as rest
+````
+
+Classes within the `hudson` or `jenkins` package trees and belonging to either the `triggers` or `views` subtrees will be grouped accordingly. Unmatched classes will be grouped under the name `rest`. In the mind map, this results in groups named `hudson:triggers`, `hudson:views`, `jenkins:triggers`, and `jenkins:views`, clarifying the organization of the codebase at a glance.
+
+![Jenkins Example](../images/jenkinsExample.png)
+
+### Utilizing Classpath
+
+Multiple `classpath` directives can be declared to specify the directories to be scanned for classes, superseding the default directories (`target/classes`, `build/classes`, `.`), thus offering flexibility in accommodating various project structures.
+
+### Usage Notes
+
+- Comments: Lines prefixed with `#` or `//` are treated as comments and ignored, allowing for annotations within the rules file.
+- The AspectJ-like pattern matching system underpins the flexibility in specifying classes, interfaces, annotations, and groups, ensuring that the rules can be finely tuned to the project’s specific requirements.
+
+By addressing these aspects, the documentation now comprehensively covers the functionalities related to rules within the Code Explorer mode, including the previously omitted details about group management and pattern usage.
 
 ## Class Filters and Dependency Exploration Options
 
