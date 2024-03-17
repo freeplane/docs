@@ -19,7 +19,7 @@ The Code Explorer mode in Freeplane is designed for analyzing the structure and 
 
 ## Video Tutorials
 
-Video tutorials are available to help users familiarize themselves with the Code Explorer mode. To access the tutorial, navigate to the Help menu within Freeplane and select Help -> Code Explorer Introduction Video.
+Video tutorials are available to help users familiarize themselves with the Code Explorer mode. To access the tutorial, click [here](https://www.youtube.com/playlist?list=PLO1cupJqvEkJ1EkfOQucpnbNnlUcnDg8H) or navigate to the Help menu within Freeplane and select Help -> Code Explorer Introduction Video.
 
 ## Configurations Panel
 
