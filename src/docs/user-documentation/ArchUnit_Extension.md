@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Architecture Violations feature in Freeplane's Code Explorer mode is used to capture and display rule violations that are identified during the code analysis process. This is specifically related to the integration with the Freeplane ArchUnit extension.
+The Architecture Violations feature in Freeplane's [Code Explorer](Code_Explorer.md) mode is used to capture and display rule violations that are identified during the code analysis process. This is specifically related to the integration with the Freeplane ArchUnit extension.
 
 ## Architecture Violations Tab
 
