@@ -39,7 +39,7 @@
     - [Script incubator](scripting/Script_incubator.md)
     - [Scripting! Jython](scripting/Scripting!_Jython.md)
     - [Scripting environment setup](scripting/Scripting_environment_setup.md)
-    - [Scripting basics (wip)](scripting/Basics.md)
+    - [Scripting basics (wip)](scripting/Learning/Basics.md)
     - [Scripting reference (wip)](scripting/Reference.md)
    - [IntelliJ IDEA setup](scripting/intellij-idea-setup.md)
   - [Add-ons (Development)](scripting/Add-ons_(Develop).md)
