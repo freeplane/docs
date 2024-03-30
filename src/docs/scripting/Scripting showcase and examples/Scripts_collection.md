@@ -9,7 +9,7 @@ Unfortunately scripts might get old over time, i.e. when scripting idioms evolve
 * **Scripts that might need a review before they are added here** can be found in the [Script incubator](Script_incubator.md).
 
 
-For larger scripts there is a special [git](../coding/Git_howto.md) repository [https://github.com/freeplane/addons].
+For larger scripts there is a special [git](../../coding/Git_howto.md) repository [https://github.com/freeplane/addons].
 
 
 ## A node with the last modification date of the map
@@ -2259,7 +2259,7 @@ EXAMPLE APPLICATION
 I use this script to easily jump into a help web page from within a programming language mindmap. When I describe function definitions like FileOpen() within a node, the script extracts the function name and combines it with a base URI which leads to a description WEB page. Combining the script execution with a keyboard shortcut e.g. <F3> , I can quickly lookup the detailed function documentation. In this example, it applies to the AutoIt scripting language.
 
 
-![example AutoIt](../images/PIC_NodesForAutoWebDocu_2.gif ':size=200')
+![example AutoIt](../../images/PIC_NodesForAutoWebDocu_2.gif ':size=200')
 
 INSTRUCTIONS
 
@@ -2480,7 +2480,7 @@ THIS SCRIPT DOES
 a script to set (toggle) the MIN NODE WIDTH setting of all siblings of a node to a unified value. This value is based on the maximum node width of all the sibling nodes and can be adjusted using some script parameters (see options). Only those sibling nodes will be regarded which have the same style setting as the node selected when starting the script. When selecting multiple nodes the node styles are disregarded for this functionality but the identifier setting (if present still counts).
 
 
-![example toggle view](../images/PIC_ToggleSiblingBlockView.png)
+![example toggle view](../../images/PIC_ToggleSiblingBlockView.png)
 
 
 INSTRUCTIONS

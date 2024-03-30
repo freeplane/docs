@@ -166,7 +166,7 @@ Note that the special editor will only be used if the node text *already starts*
 
 ## Formatting
 
-Formatting of numbers and dates in node core is available as an element of [styles](../user-documentation/styles.md), that means that they are not formula specific. Formatting of attribute values, details and notes must be handled by setting the value to a formatted object via [format(Object, formatString)](http://docs.freeplane.org/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html#format(java.lang.Object,%20java.lang.String) ). For more on data and formatting see [this page](Data_recognition_and_data_formats.md).
+Formatting of numbers and dates in node core is available as an element of [styles](../../user-documentation/styles.md), that means that they are not formula specific. Formatting of attribute values, details and notes must be handled by setting the value to a formatted object via [format(Object, formatString)](http://docs.freeplane.org/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html#format(java.lang.Object,%20java.lang.String) ). For more on data and formatting see [this page](Data_recognition_and_data_formats.md).
 
 
 ## Security
@@ -213,8 +213,8 @@ What do you think, do we need implementations for functions like NOW(), SECOND()
 ## Further reads
 
 * most important: [Scripting API](Scripting_API.md)
-* [Scripting](Scripting.md)
-* [Scripting_environment_setup](Scripting_environment_setup.md)
+* [Scripting](../Learning%20Guides/Scripting.md)
+* [Scripting_environment_setup](../Scripting%20Setup/Scripting_environment_setup.md)
 
 ## Example Maps
 

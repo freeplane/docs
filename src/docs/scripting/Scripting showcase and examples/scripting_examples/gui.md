@@ -58,4 +58,4 @@ show_output_window("This is an example of an output text that will be displayed 
 
 result:
 
-![output window](../images/examples_gui_output.png "output window")
+![output window](../../../images/examples_gui_output.png "output window")

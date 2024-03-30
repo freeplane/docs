@@ -1,6 +1,6 @@
 <!-- toc -->
 
-The [Scripting API](Scripting_API.md), which is defined by the [org.freeplane.plugin.script.proxy.Proxy](http://docs.freeplane.org/api/org/freeplane/plugin/script/proxy/Proxy.html) interface and is [documented as JavaDoc](http://docs.freeplane.org/api/), will evolve over time but Freeplane's developers will do whatever possible to keep new API versions downward compatible. On the other hand there might be changes in parts of the Freeplane code that are not part of the official API but on which some scripts might depend nevertheless. This mostly applies to the [utility classes](Scripting!_Freeplane_Utility_Classes.md).
+The [Scripting API](../References%20and%20Cheatsheet/Scripting_API.md), which is defined by the [org.freeplane.plugin.script.proxy.Proxy](http://docs.freeplane.org/api/org/freeplane/plugin/script/proxy/Proxy.html) interface and is [documented as JavaDoc](http://docs.freeplane.org/api/), will evolve over time but Freeplane's developers will do whatever possible to keep new API versions downward compatible. On the other hand there might be changes in parts of the Freeplane code that are not part of the official API but on which some scripts might depend nevertheless. This mostly applies to the [utility classes](Scripting!_Freeplane_Utility_Classes.md).
 
 Changes to the API are indicated per method by version numbers in the [JavaDoc of the Proxy class](http://docs.freeplane.org/api/org/freeplane/plugin/script/proxy/Proxy.html).
 

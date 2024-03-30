@@ -2,7 +2,7 @@
 
 This page is best viewed in the Ayu theme
  
-![](../images/theme-choose-ayu.png)
+![](../../images/theme-choose-ayu.png)
 
 # Part 1
 
@@ -16,11 +16,11 @@ In e.g. LibreOffice Calc or in MS Office Excel,
 to have in cell **A5** the value of cell **A1**,
 you can write the formula `=A1`.
 
-![](../images/calc-write-formula-reference-to-a-cell.png)
+![](../../images/calc-write-formula-reference-to-a-cell.png)
 
 Once confirmed with `Enter`, in **A5** you can see the value of **A1**.
 
-![](../images/calc-formula-reference-to-a-cell.png)
+![](../../images/calc-formula-reference-to-a-cell.png)
 
 ## Formula - node
 
@@ -28,13 +28,13 @@ Similarly, in Freplane you can reference another node by using a formula.
 When you write `=` in the 5th node, **Edit Formula** window appears.\
 Here `ID_1736361150` is the equivalent of `A1` in a spreadsheet, in the sense that it uniquely identifies a node, just like `A1` uniquely identifies a cell.
 
-![](../images/formula-write-reference-to-a-node.png)
+![](../../images/formula-write-reference-to-a-node.png)
 
 > **Note:** In Freeplane, node ID is generated automatically for each new node. In your mind map you'll find a different ID than `ID_1736361150`.
 
 Once confirmed with `OK`, you can see `(Node) Freeplane`.
 
-![](../images/formula-reference-to-a-node.png)
+![](../../images/formula-reference-to-a-node.png)
 
 Why not just `Freeplane`?\
 It's because, from the scripting perspective, a node is an object.
@@ -133,11 +133,11 @@ The first one is Groovy-style, the second is Java-style, but equally valid in Gr
 Let's go back to our formula example and add **details** to the 1st node, e.g. `API/Groovy tutorial`, then display it in the 5th node using a formula.
 You can search the [Scripting API](https://docs.freeplane.org/api/) to find a suitable method – use the search box in the top right.
 
-![](../images/api-search-details.png)
+![](../../images/api-search-details.png)
 
 The revised formula is `=ID_1736361150.details` (or `=ID_1736361150.getDetails()`).
 
-![](../images/formula-write-reference-to-node-details.png)
+![](../../images/formula-write-reference-to-node-details.png)
 
 ## Formula - Convertible
 
@@ -174,14 +174,14 @@ The trick is to start counting from **0**, i.e. `=node.parent.children[0]`.
 
 Having the first sibling, you can get its details.
 
-![](../images/formula-write-reference-to-sibling-details.png)
+![](../../images/formula-write-reference-to-sibling-details.png)
 
 ## Script - set details
 
 Let's write and execute a script on the root node.
 The easiest way is via `Tools->Edit script…` > `Action` > `New Script`.
 
-![](../images/edit-script-actions-new-script.png)
+![](../../images/edit-script-actions-new-script.png)
 
 Let's change the root node's details.
 
@@ -195,11 +195,11 @@ A script does not.
 
 Let's try it then.
 
-![](../images/edit-script-node-set-details-details.png)
+![](../../images/edit-script-node-set-details-details.png)
 
 And run it via the menu `Actions` > `Run`.
 
-![](../images/edit-script-node-set-details-details-result-null.png)
+![](../../images/edit-script-node-set-details-details-result-null.png)
 
 Why nothing changed, except for the output `Result:null`?\
 Because `details` is `null`, therefore the script is equivalent to `node.setDetails(null)`.
@@ -209,7 +209,7 @@ In Groovy, `null` has the meaning of "nothing".
 
 Let's set "something", then: `node.setDetails('I am Groot')`.
 
-![](../images/edit-script-node-set-details-I-am-Groot.png)
+![](../../images/edit-script-node-set-details-I-am-Groot.png)
 
 And just like with **getDetails()**, also with **setDetails(details)** there is a Java-style and a Groovy-style way.
 ```groovy
@@ -228,22 +228,22 @@ In this case it returned nothing, because it was a **set** operation. This is in
 In other words, `node.getDetails()` or `node.details` would have returned the value of details.\
 Let's try it: `Actions` > `Run`.
 
-![](../images/edit-script-node-details-result-I-am-Groot.png)
+![](../../images/edit-script-node-details-result-I-am-Groot.png)
 
 > **Note:** Freeplane allows even shorter expressions for **get** operations, where `node.` is implied if omitted.
 
-![](../images/edit-script-details-result-I-am-Groot.png)
+![](../../images/edit-script-details-result-I-am-Groot.png)
 
 How to remove details from the root node?\
 Based on the API docs, "Use `null` to unset the details."
 
-![](../images/edit-script-node-set-details-null.png)
+![](../../images/edit-script-node-set-details-null.png)
 
 Let's try to read details now.
 
 > **Note:** `node.getDetails()` or `node.details` or `getDetails()` or `details`, all of them will work the same.
 
-![](../images/edit-script-details-result-null.png)
+![](../../images/edit-script-details-result-null.png)
 
 Yes, there's nothing, thus `Result:null`.
 
@@ -251,15 +251,15 @@ Yes, there's nothing, thus `Result:null`.
 
 How to set details for each child of the node?
 
-![](../images/edit-script-for-child-in-node-children-set-details.png)
+![](../../images/edit-script-for-child-in-node-children-set-details.png)
 
 In Groovy, there is a more-often-used way of iterating over a collection of elements.
 
-![](../images/edit-script-node-children-each-child-set-details.png)
+![](../../images/edit-script-node-children-each-child-set-details.png)
 
 It's possible, in Groovy, to omit `def child ->` and instead use the default variable name inside `.each { ... }`, i.e. `it`.
 
-![](../images/edit-script-node-children-each-it-set-details.png)
+![](../../images/edit-script-node-children-each-it-set-details.png)
 
 Let's use this knowledge to set each child's details to contain its position among siblings (counted from 0), i.e. 0, 1, 2, 3, 4.\
 → <https://docs.freeplane.org/api/org/freeplane/api/NodeRO.html#getChildPosition(org.freeplane.api.Node)>
@@ -293,7 +293,7 @@ node.children.each { def child ->
 
 After the script is run, you should see numbers in details.
 
-![](../images/state-after-script-node-children-each-set-details-get-position.png)
+![](../../images/state-after-script-node-children-each-set-details-get-position.png)
 
 
 ## Formula - working with numbers
@@ -344,14 +344,14 @@ Let's add a filter to show nodes whose details is an even number.
 Using the GUI, you can do that via `Filter->Compose filter`.
 In a script, you can... search for `filter` at <https://docs.freeplane.org/api/> or when you open the same page locally via `Help->Freeplane API…`.
 
-![](../images/api-search-filter.png)
+![](../../images/api-search-filter.png)
 
 Once you read about [MindMap.filter(...)](https://docs.freeplane.org/api/org/freeplane/api/MindMap.html#filter(boolean,boolean,org.freeplane.api.NodeCondition)), you'll learn that it's a method of **MindMap**.
 
 So how to get **MindMap** in a script if all you have is `node`?\
 The answer is one search away...
 
-![](../images/api-search-mindmap.png)
+![](../../images/api-search-mindmap.png)
 
 Let's create a script `Tools->Edit script…` and run it `Actions` > `Run`.
 
@@ -379,7 +379,7 @@ But the structure is already familiar, with a variable at the begining, followed
 
 What happens when the script is run?
 
-![](../images/edit-script-filter-result-cannot-num-on-null.png)
+![](../../images/edit-script-filter-result-cannot-num-on-null.png)
 
 Here's why. The script instructs Freeplane to add a filter which is executed on each node in the mind map.
 The script (captured in the variable `condition`) receives the node as its first (and only) argument (variable `n`) and accesses the node's details as number.
@@ -484,19 +484,19 @@ You can add the same check as in the filter, i.e. `it.details && it.details.isNu
 
 All fine and dandy, but why the result of the formula says "6", when there is only one sibling with "2" in its details?
 
-![](../images/api-groovy-tutoria-formula-shows-unexpected-6.png)
+![](../../images/api-groovy-tutoria-formula-shows-unexpected-6.png)
 
 It's because the formula considers all siblings, rather than only the visible ones.
 
 Let's fix that too.
 
-![](../images/api-search-visible.png)
+![](../../images/api-search-visible.png)
 
 ```groovy
 =node.parent.children[0..3].findAll{ it.isVisible() && it.details?.isNum() }*.details*.num.sum()
 ```
 
-![](../images/api-groovy-tutoria-formula-shows-expected-2.png)
+![](../../images/api-groovy-tutoria-formula-shows-expected-2.png)
 
 ## Conditional Styles with Script Filters
 
@@ -515,7 +515,7 @@ make sure to disable `Preferences…->Plugins->Formulas->Highlight formulas` and
 
 You can search for "conditional" in the Scripting API.
 
-![](../images/api-search-conditional.png)
+![](../../images/api-search-conditional.png)
 
 Great.
 There is a method to get ConditionalStyles for a mind map.
@@ -537,7 +537,7 @@ New Groovy concepts:
 `ConditionalStyles#add(...)` method is of interest for our task.
 As you can see in the API docs, it resembles the GUI layout at `Format->Manage Styles->Manage conditional styles for map`.
 
-![](../images/manage-conditional-styles-for-map-conditionalStyles-add.png)
+![](../../images/manage-conditional-styles-for-map-conditionalStyles-add.png)
 
 Let's create our script and run it.
 
@@ -563,7 +563,7 @@ New Groovy concepts:
 
 Once the script is run, this is what you'll see.
 
-![](../images/state-after-mcs-add-node-text-formula.png)
+![](../../images/state-after-mcs-add-node-text-formula.png)
 
 You can also see a new entry in `Format->Manage Styles->Manage conditional styles for map`.
 
@@ -622,7 +622,7 @@ It's time to look at **ConditionalStyle** (singular) → <https://docs.freeplane
 To get a list of **ConditionalStyle** items from a mind-map **ConditionalStyles**,
 execute the following script in `Tools->Edit script…`.
 
-![](../images/edit-script-node-mindmap-conditionalstyles-collect-result.png)
+![](../../images/edit-script-node-mindmap-conditionalstyles-collect-result.png)
 
 New Groovy concepts:
 * `.collect()` – creates a list of items from an iterable → <https://docs.groovy-lang.org/latest/html/groovy-jdk/java/lang/Iterable.html#collect()>
@@ -647,7 +647,7 @@ The code was executed without errors, but the 1st node still has Default style.
 
 Let's see what `node.details` gets you.
 
-![](../images/edit-script-node-details-result.png)
+![](../../images/edit-script-node-details-result.png)
 
 Well, it's the effect of the formula evaluation, not the formula itself.
 So there is no '=' at the beginning.
@@ -661,7 +661,7 @@ Found it: [getDetailsText()](https://docs.freeplane.org/api/org/freeplane/api/No
 
 Let's see it in action.
 
-![](../images/edit-script-node-detailsText-result.png)
+![](../../images/edit-script-node-detailsText-result.png)
 
 > **Note:** Node Details is (usually) represented in Freeplane as HTML.\
 > Since `NodeRO#getDetails()` returns **Convertible**, details' content is auto-converted from HTML.
@@ -696,7 +696,7 @@ New Groovy concepts:
 
 Success!
 
-![](../images/state-after-mcs-collect-0-set-script-detailstext.png)
+![](../../images/state-after-mcs-collect-0-set-script-detailstext.png)
 
 # Part 2
 
