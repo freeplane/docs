@@ -1,6 +1,6 @@
 This page can be used as an overview guide about the Scripting section of this Documentation.
 
-- If you got a script in the forum, and **just want to know how to use it**, you can read the first sections of [this Tutorial](Scripting.md), until the section _The first script: HelloWorld.groovy_.
+- If you got a script in the forum, and **just want to know how to use it**, you can read the first sections of [this Tutorial](Scripting_guide.md), until the section _The first script: HelloWorld.groovy_.
 
 - If you are interested in just **finding useful scripts**, go to the [Finding Scripts](Finding_useful_scripts.md) page.
 
