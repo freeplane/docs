@@ -213,7 +213,7 @@ What do you think, do we need implementations for functions like NOW(), SECOND()
 ## Further reads
 
 * most important: [Scripting API](Scripting_API.md)
-* [Scripting](Scripting.md)
+* [Scripting](../Learning%20Guides/Scripting.md)
 * [Scripting_environment_setup](Scripting_environment_setup.md)
 
 ## Example Maps
@@ -225,5 +225,5 @@ What do you think, do we need implementations for functions like NOW(), SECOND()
 ## Videos
 
 * [Expense Reporting in Freeplane](http://www.youtube.com/watch?v=qym9pG3AP4E)
-<!-- ({Category:Documentation})({Category:Script}) -->
+<!-- ({Category:Documentation})({Category:Advanced Topics}) -->
 

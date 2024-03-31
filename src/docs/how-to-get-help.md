@@ -10,7 +10,7 @@ in our **[DISCUSSIONS FORUM](https://github.com/freeplane/freeplane/discussions)
 
 * discuss the usage of existing features
 * discuss the suitability of new features
-* discuss the development of [existing scripts](scripting/Scripts_collection.md) and new ones
+* discuss the development of [existing scripts](scripting/Scripting showcase and examples/Scripts_collection.md) and new ones
 
 New bug reports go into the [bug reports](https://github.com/freeplane/freeplane/issues/new?template=bug_report.md)
 

@@ -10,7 +10,7 @@ node.style.edge.setColorCode("#00ff00")
 
 Result:
 
-![node style](../images/examples_node_style.png "node style")
+![node style](../../images/examples_node_style.png "node style")
 
 ## Details & Notes Style
 Can't be done with attributes? only html?

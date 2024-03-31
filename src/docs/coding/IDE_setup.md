@@ -31,6 +31,10 @@ As soon as you have once launched Freeplane as described, you will find appropri
 
 ## IDE: IntelliJ
 
+This page has the instructions that may be the easiest, currently: [Setting_IDE_for_debugging](../scripting/Setting_IDE_for_debugging.md)
+
+Otherwise, you can try those steps:
+
 The short story:<br/>
 IntelliJ can directly import gradle files. After the import the directory
 <code>freeplane_debughelper/idea/runConfigurations</code> containing run
