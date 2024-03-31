@@ -26,7 +26,18 @@
   - [ArchUnit Test Result Viewer](user-documentation/ArchUnit_Extension.md)
 - [Contribute](contribute/contribute.md)
   - [Translation How-To](contribute/Translation_How-To.md)
-- [Scripting](scripting/Scripting.md)
+
+
+
+- [Scripts and Scripting](scripting/Scripting!_Script_filter.md)
+  - [Learning Guides](scripting/Scripting!_Script_filter.md)
+  - [Scripting Setup](scripting/Scripting!_Script_filter.md)
+  - [References and Cheatsheet](scripting/Scripting!_Script_filter.md)
+  - [Advanced Topics](scripting/Scripting!_Script_filter.md)
+  - [Scripting showcase and example](scripting/Scripting!_Script_filter.md)
+  - [Less relevant topics](scripting/Scripting!_Script_filter.md)
+  
+- [Scripting2](scripting/Scripting.md)
   - [API/Groovy tutorial](scripting/Learning Guides/api-groovy-tutorial.md)
   - [Formulas](scripting/Advanced Topics/Formulas.md)
     - [Formulas](scripting/Advanced Topics/Formulas.md)
@@ -43,7 +54,7 @@
     - [Scripting reference (wip)](scripting/Reference.md)
    - [IntelliJ IDEA setup](scripting/Scripting Setup/intellij-idea-setup.md)
   - [Add-ons (Development)](scripting/Add-ons_(Develop).md)
-  - [Security considerations](scripting/Security_considerations.md)
+  - [Security considerations](scripting/Security_considerations.md)    
 - [Scripting (Examples By Category)](scripting/Scripting showcase and examples/scripting_examples/_scripting_examples.md)
   - [Node Attributes](scripting/Scripting showcase and examples/scripting_examples/_category_node.md)
     - [Text, Details, Note](scripting/Scripting showcase and examples/scripting_examples/text_details_note.md)
@@ -63,6 +74,9 @@
   - [Others](scripting/Scripting showcase and examples/scripting_examples/_category_others.md)
     - [Clipboard](scripting/Scripting showcase and examples/scripting_examples/clipboard.md)
     - [GUI](scripting/Scripting showcase and examples/scripting_examples/gui.md)
+
+
+      
 - [Coding](coding/Git_howto.md)
   - [Git howto](coding/Git_howto.md)
   - [How to build Freeplane](coding/How_to_build_Freeplane.md)
