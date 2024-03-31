@@ -26,7 +26,7 @@
   - [ArchUnit Test Result Viewer](user-documentation/ArchUnit_Extension.md)
 - [Contribute](contribute/contribute.md)
   - [Translation How-To](contribute/Translation_How-To.md)
-- [Scripts and Scripting 🤖](scripting/Start_Here.md)
+- [🤖 Scripts and Scripting. Start Here](scripting/Start_Here.md)
   - [Learning Guide](scripting/Learning_guide.md)
       - [What are scripts and what they do](scripting/What_are_scripts_and_what_they_do.md)
       - [API/Groovy tutorial](scripting/api-groovy-tutorial.md)
