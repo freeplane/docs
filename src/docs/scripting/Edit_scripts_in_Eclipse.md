@@ -4,7 +4,7 @@ After the installation of the [Scripting environment](../scripting/Scripting_env
 
 This is what it looks like after opening a script via *Ctrl+Shift+R*:
 
-![border](Eclipse-edit-script.png)
+![border](../images/Eclipse-edit-script.png)
 
 ## Code completion and quickfixes
 
@@ -23,15 +23,15 @@ class Hello {
 
 When we want to use class Hello we have to consider that it is defined in the package "hellopackage". Let's use Eclipse' editing aids to use it: After entering *def hello = new hell* hit Ctrl+Space
 
-![border](Eclipse-code-completion1.png)
+![border](../images/Eclipse-code-completion1.png)
 
 You will see that there is an error since the required *"import hellopackage"* is unfortunately not added automatically (as it is for imported Java classes). But the small red "x" indicates that a "Quick fix" is available which you can select either by clicking on the "x" or by hitting Ctrl+1
 
-![border](Eclipse-quickfix.png)
+![border](../images/Eclipse-quickfix.png)
 
 After selecting the first suggestion by hitting *Enter* you will be done:
 
-![border](Eclipse-quickfix-result.png)
+![border](../images/Eclipse-quickfix-result.png)
 
 My tip: Test what happens if you type *Ctrl+Space* whenever you think that Eclipse might have an idea what you are about to type. The idea is: You do the creative work and and Eclipse cares for the tedious details of exact naming and locating objects.
 

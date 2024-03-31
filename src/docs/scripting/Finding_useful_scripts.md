@@ -6,8 +6,8 @@ Inside this documentation:
 - [Scripts for text editing](Scripting_text_editing.md)
 - [Script incubator](Script_incubator.md)
 - [Scripts using external libraries](Example_scripts_using_external_libraries.md)
-- The [API reference](reference.groovy) gives very simple example of most of the methods in the API
-- The [scripting examples section](scripting_examples) has a couple of scripts
+- The [API reference](Reference.md) gives very simple example of most of the methods in the API
+- The [scripting examples section](examples/scripting_examples) has a couple of scripts. But, this section is still in initial stages
 
 Repositories
 - By Macmarrum: [the script repository](https://github.com/macmarrum/freeplane-scripting/tree/main/src/scripts) and other [repositories](https://github.com/macmarrum?tab=repositories)

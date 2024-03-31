@@ -1,6 +1,6 @@
 This page will present a couple of different setups that can be used for creating scripts. 
 
-A good setup can make the craft more comfortable and efficient. On the other hand, if you are still creating just simple scripts, an advanced setup will be overkill, and a basic setup will offer all you need.
+A good setup can make the activity more comfortable and efficient. On the other hand, if you are still creating just simple scripts, an advanced setup will be overkill, and a basic setup will offer all you need.
 
 The setups will be divided in 3 levels, for mere didactic reasons: Basic; Intermediate; and Advanced.
 
@@ -24,17 +24,18 @@ Creating the script inside an integrated development environment (IDE) is helpfu
 
 Complementary resources, if you get stuck in the guide:
 
-https://github.com/freeplane/freeplane/discussions/589
-https://docs.freeplane.org/scripting/Scripting_environment_setup.html
+[This forum discussion may help](https://github.com/freeplane/freeplane/discussions/589)
+
+[This is another approach](Edit_scripts_in_Eclipse.md)
 
 
 # Advanced (debugging)
 With debugging tools, you can very clearly see how your script interacts with Freeplane, which allows spotting the exact lines of code that are not working correctly.
 
-[This discussion](https://github.com/freeplane/freeplane/discussions/1321) has the most recent and easiest steps to set the IDE. Read all the comments, in order to understand the pitfalls that can happen along the way.
+[This page](Setting_IDE_for_debugging.md) has the most recent and easiest steps to set the IDE. 
 
-In the comments of that thread, you will be recommended to read [this guide](Debugging_scripts.md), too.
+Complementary resources:
 
-Complementary resources
+This [forum discussion](https://github.com/freeplane/freeplane/discussions/1321) may help clarify the guide and bring different ways to achieve the same things.
 
 If you want to read more about using Gradle in Freeplane and in Add-ons, take a look at [this](https://github.com/freeplane/gradle-plugin/discussions/6), [this](https://github.com/freeplane/freeplane/discussions/405) and [this](https://github.com/freeplane/freeplane/discussions/258).

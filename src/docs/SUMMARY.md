@@ -26,57 +26,63 @@
   - [ArchUnit Test Result Viewer](user-documentation/ArchUnit_Extension.md)
 - [Contribute](contribute/contribute.md)
   - [Translation How-To](contribute/Translation_How-To.md)
-
-
-
-- [Scripts and Scripting](scripting/Scripting!_Script_filter.md)
-  - [Learning Guides](scripting/Scripting!_Script_filter.md)
-  - [Scripting Setup](scripting/Scripting!_Script_filter.md)
-  - [References and Cheatsheet](scripting/Scripting!_Script_filter.md)
-  - [Advanced Topics](scripting/Scripting!_Script_filter.md)
-  - [Scripting showcase and example](scripting/Scripting!_Script_filter.md)
-  - [Less relevant topics](scripting/Scripting!_Script_filter.md)
-  
-- [Scripting2](scripting/Scripting.md)
-  - [API/Groovy tutorial](scripting/Learning Guides/api-groovy-tutorial.md)
-  - [Formulas](scripting/Advanced Topics/Formulas.md)
-    - [Formulas](scripting/Advanced Topics/Formulas.md)
-    - [Formula filter](scripting/Scripting!_Script_filter.md)
-  - [Scripting Cheatsheet](scripting/References and Cheatsheet/Scripting_Cheatsheet.md)
-  - [Scripts](scripting/Scripting showcase and examples/Scripts_collection.md)
-    - [Scripts collection](scripting/Scripting showcase and examples/Scripts_collection.md)
-    - [Scripts for text editing](scripting/Scripting showcase and examples/Scripting_text_editing.md)
-    - [Scripts using external libraries](scripting/Scripting showcase and examples/Example_scripts_using_external_libraries.md), too.
-    - [Script incubator](scripting/Scripting showcase and examples/Script_incubator.md)
+- [Scripts and Scripting 🤖](scripting/Start_Here.md)
+  - [Learning Guide](scripting/Learning_guide.md)
+      - [What are scripts and what they do](scripting/What_are_scripts_and_what_they_do.md)
+      - [API/Groovy tutorial](scripting/api-groovy-tutorial.md)
+      - [Scripting guide](scripting/Scripting.md)
+  - [Scripting Setup](scripting/Scripting_environment_setup.md)
+    - [Scripting environment setup](scripting/Scripting_environment_setup.md)
+    - [Edit scripts in Eclipse](scripting/Edit_scripts_in_Eclipse.md)
+    - [intellij-idea-setup](scripting/intellij-idea-setup.md)
+  - [References and Cheatsheet](scripting/References_and_Cheatsheet.md)
+    - [Reference](scripting/Reference.md)    
+    - [Scripting Cheatsheet](scripting/Scripting_Cheatsheet.md)
+    - [Basics](scripting/Basics.md)
+  - [Advanced Topics](scripting/advanced_topics.md)
+    - [Add-ons (Develop)](scripting/Add-ons_(Develop).md)
+    - [Batch Jobs](scripting/Batch_Jobs.md)
+    - [Debugging scripts](scripting/Debugging_scripts.md)
+    - [External script file execution](scripting/External_script_file_execution.md)
+    - [Formulas](scripting/Formulas.md)
+    - [Groovy scripts and formulas can escape sandbox](scripting/Groovy_scripts_and_formulas_can_escape_sandbox.md)
+    - [How to publish add-ons](scripting/How_to_publish_add-ons.md)
+    - [Init scripts](scripting/Init_scripts.md)
+    - [Map local scripts](scripting/Map_local_scripts.md)
+    - [Scripting! API Changes](scripting/Scripting!_API_Changes.md)
+    - [Scripting! Freeplane Utility Classes](scripting/Scripting!_Freeplane_Utility_Classes.md)
+    - [Scripting! Included libraries](scripting/Scripting!_Included_libraries.md)
     - [Scripting! Jython](scripting/Scripting!_Jython.md)
-    - [Scripting environment setup](scripting/Scripting Setup/Scripting_environment_setup.md)
-    - [Scripting basics (wip)](scripting/References and Cheatsheet/Basics.md)
-    - [Scripting reference (wip)](scripting/Reference.md)
-   - [IntelliJ IDEA setup](scripting/Scripting Setup/intellij-idea-setup.md)
-  - [Add-ons (Development)](scripting/Add-ons_(Develop).md)
-  - [Security considerations](scripting/Security_considerations.md)    
-- [Scripting (Examples By Category)](scripting/Scripting showcase and examples/scripting_examples/_scripting_examples.md)
-  - [Node Attributes](scripting/Scripting showcase and examples/scripting_examples/_category_node.md)
-    - [Text, Details, Note](scripting/Scripting showcase and examples/scripting_examples/text_details_note.md)
-    - [Node Style](scripting/Scripting showcase and examples/scripting_examples/style.md)
-    - [Links](scripting/Scripting showcase and examples/scripting_examples/links.md)
-    - [Icons](scripting/Scripting showcase and examples/scripting_examples/icons.md)
-    - [Attributes](scripting/Scripting showcase and examples/scripting_examples/attributes.md)
-    - [Cloud (TBD)]()
-    - [Shape, Border (TBD)]()
-    - [Edges (TBD)]()
-    - [Layout (TBD)]()
-  - [Mind Map](scripting/Scripting showcase and examples/scripting_examples/_category_map.md)
-    - [Mindmap Traversal](scripting/Scripting showcase and examples/scripting_examples/traverse.md)
-    - [Selection](scripting/Scripting showcase and examples/scripting_examples/selection.md)
-    - [Alias](scripting/Scripting showcase and examples/scripting_examples/alias.md)
-    - [Filters (TBD)]()
-  - [Others](scripting/Scripting showcase and examples/scripting_examples/_category_others.md)
-    - [Clipboard](scripting/Scripting showcase and examples/scripting_examples/clipboard.md)
-    - [GUI](scripting/Scripting showcase and examples/scripting_examples/gui.md)
-
-
-      
+    - [Scripting! Other languages](scripting/Scripting!_Other_languages.md)
+    - [Scripting! Script filter](scripting/Scripting!_Script_filter.md)
+    - [Scripting! Update Freeplane's Groovy version](scripting/Scripting!_Update_Freeplane's_Groovy_version.md)- [Scripting API](scripting/Scripting_API.md)
+    - [Security considerations](scripting/Security_considerations.md)
+    - [Your own utility script library](scripting/Your_own_utility_script_library.md)
+  - [Scripting showcase and examples](scripting/Finding_useful_scripts.md)
+    - [Scripting text editing](scripting/Scripting_text_editing.md)
+    - [Example scripts using external libraries](scripting/Example_scripts_using_external_libraries.md)
+    - [Scripts collection](scripting/Scripts_collection.md)
+    - [Script incubator](scripting/Script_incubator.md)
+    - [Scripting! Example scripts](scripting/Scripting!_Example_scripts.md)
+    - [Scripting (Examples By Category)](scripting/scripting_examples/_scripting_examples.md)
+      - [Node Attributes](scripting/scripting_examples/_category_node.md)
+        - [Text, Details, Note](scripting/scripting_examples/text_details_note.md)
+        - [Node Style](scripting/scripting_examples/style.md)
+        - [Links](scripting/scripting_examples/links.md)
+        - [Icons](scripting/scripting_examples/icons.md)
+        - [Attributes](scripting/scripting_examples/attributes.md)
+        - [Cloud (TBD)]()
+        - [Shape, Border (TBD)]()
+        - [Edges (TBD)]()
+        - [Layout (TBD)]()
+      - [Mind Map](scripting/scripting_examples/_category_map.md)
+        - [Mindmap Traversal](scripting/scripting_examples/traverse.md)
+        - [Selection](scripting/scripting_examples/selection.md)
+        - [Alias](scripting/scripting_examples/alias.md)
+        - [Filters (TBD)]()
+      - [Others](scripting/scripting_examples/_category_others.md)
+        - [Clipboard](scripting/scripting_examples/clipboard.md)
+        - [GUI](scripting/scripting_examples/gui.md)
 - [Coding](coding/Git_howto.md)
   - [Git howto](coding/Git_howto.md)
   - [How to build Freeplane](coding/How_to_build_Freeplane.md)
@@ -91,15 +97,11 @@
     - [Old Home](attic/old-mediawiki-content/Home.md)
     - [Approximate search](attic/old-mediawiki-content/Approximate_search.md)
     - [Architecture](attic/old-mediawiki-content/Architecture.md)
-    - [Batch Jobs](scripting/Advanced Topics/Batch_Jobs.md)
     - [Contributors](attic/old-mediawiki-content/Contributors.md)
     - [Current Freeplane File Format](attic/old-mediawiki-content/Current_Freeplane_File_Format.md)
     - [Data recognition and data formats](attic/old-mediawiki-content/Data_recognition_and_data_formats.md)
-    - [Debugging scripts](attic/old-mediawiki-content/Debugging_scripts.md)
     - [Document Format](attic/old-mediawiki-content/Document_Format.md)
-    - [Edit scripts in Eclipse](attic/old-mediawiki-content/Edit_scripts_in_Eclipse.md)
     - [External objects](attic/old-mediawiki-content/External_objects.md)
-    - [External script file execution](attic/old-mediawiki-content/External_script_file_execution.md)
     - [FAQ](attic/old-mediawiki-content/FAQ.md)
     - [Fixed security vulnerabilities](attic/old-mediawiki-content/Fixed_security_vulnerabilities.md)
     - [FreeMind 0.9.0 - Freeplane 1.1.x](attic/old-mediawiki-content/FreeMind_0.9.0_-_Freeplane_1.1.x.md)
@@ -114,20 +116,16 @@
     - [Freeplane installation for Ubuntu OS](attic/old-mediawiki-content/Freeplane_installation_for_Ubuntu_OS.md)
     - [Get the code](attic/old-mediawiki-content/Get_the_code.md)
     - [Goals](attic/old-mediawiki-content/Goals.md)
-    - [Groovy scripts and formulas can escape sandbox](attic/old-mediawiki-content/Groovy_scripts_and_formulas_can_escape_sandbox.md)
     - [Harmonizing FP-menu](attic/old-mediawiki-content/Harmonizing_FP-menu.md)
     - [Help!Contents](attic/old-mediawiki-content/Help!Contents.md)
     - [Help!Editing](attic/old-mediawiki-content/Help!Editing.md)
     - [Help Previous Freeplane Versions](attic/old-mediawiki-content/Help_Previous_Freeplane_Versions.md)
-    - [How to publish add-ons](scripting/Advanced Topics/How_to_publish_add-ons.md)
     - [How to test](attic/old-mediawiki-content/How_to_test.md)
     - [Information management with Freeplane add-on dView(indexfile)](attic/old-mediawiki-content/Information_management_with_Freeplane_add-on_dView(indexfile).md)
-    - [Init scripts](attic/old-mediawiki-content/Init_scripts.md)
     - [Japanese](attic/old-mediawiki-content/Japanese.md)
     - [Linux](attic/old-mediawiki-content/Linux.md)
     - [Logo and splashscreen](attic/old-mediawiki-content/Logo_and_splashscreen.md)
     - [Macintosh](attic/old-mediawiki-content/Macintosh.md)
-    - [Map local scripts](attic/old-mediawiki-content/Map_local_scripts.md)
     - [Map templates](attic/old-mediawiki-content/Map_templates.md)
     - [Menus and commands](attic/old-mediawiki-content/Menus_and_commands.md)
     - [Mind map gallery](attic/old-mediawiki-content/Mind_map_gallery.md)
@@ -140,12 +138,6 @@
     - [Release cycle](attic/old-mediawiki-content/Release_cycle.md)
     - [Release smoke test](attic/old-mediawiki-content/Release_smoke_test.md)
     - [Rules to build user friendly menus](attic/old-mediawiki-content/Rules_to_build_user_friendly_menus.md)
-    - [Scripting! API Changes](attic/old-mediawiki-content/Scripting!_API_Changes.md)
-    - [Scripting! Freeplane Utility Classes](attic/old-mediawiki-content/Scripting!_Freeplane_Utility_Classes.md)
-    - [Scripting! Included libraries](attic/old-mediawiki-content/Scripting!_Included_libraries.md)
-    - [Scripting! Other languages](attic/old-mediawiki-content/Scripting!_Other_languages.md)
-    - [Scripting! Update Freeplane's Groovy version](attic/old-mediawiki-content/Scripting!_Update_Freeplane's_Groovy_version.md)
-    - [Scripting API](attic/old-mediawiki-content/Scripting_API.md)
     - [Support](attic/old-mediawiki-content/Support.md)
     - [Think Tank](attic/old-mediawiki-content/Think_Tank.md)
     - [Translation nl](attic/old-mediawiki-content/Translation_nl.md)
@@ -157,7 +149,6 @@
     - [Visions](attic/old-mediawiki-content/Visions.md)
     - [Wish List](attic/old-mediawiki-content/Wish_List.md)
     - [XML External Entity vulnerability in map parser](attic/old-mediawiki-content/XML_External_Entity_vulnerability_in_map_parser.md)
-    - [Your own utility script library](scripting/Advanced Topics/Your_own_utility_script_library.md)./src/docs/attic/_sidebar.md
   - [New wiki initiative](attic/new-wiki-initiative/customizing-freeplane.md)
     - [customizing-freeplane](attic/new-wiki-initiative/customizing-freeplane.md)
     - [glossary](attic/new-wiki-initiative/glossary.md)
@@ -168,3 +159,31 @@
 # Special pages
 
 - [After redirect from the old media wiki](after-redirect.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

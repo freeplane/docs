@@ -9,7 +9,7 @@ Unfortunately scripts might get old over time, i.e. when scripting idioms evolve
 * **Scripts that might need a review before they are added here** can be found in the [Script incubator](Script_incubator.md).
 
 
-For larger scripts there is a special [git](../../coding/Git_howto.md) repository [https://github.com/freeplane/addons].
+For larger scripts there is a special [git](../coding/Git_howto.md) repository [https://github.com/freeplane/addons].
 
 
 ## A node with the last modification date of the map
