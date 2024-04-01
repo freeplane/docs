@@ -4,7 +4,7 @@ Starting with 1.5.8 Freeplane supports init scripts, i. e. scripts that are exec
 
 So here are the rules (may change until 1.5 is declared stable):
 
-* Init scripts are all scripts in the directory <tt><freeplaneuserdir>/scripts/init/</tt>.
+* Init scripts are all scripts in the directory `/scripts/init/`, inside the user directory (`Tools->Open user directory`)
 * After startup (Freeplane window is up) all init scripts are run in lexicographical order of script names.
 * In an init script you can't rely on the variable <code>node</code> since it is not bound. You also should not assume that any script map is opened.
 
