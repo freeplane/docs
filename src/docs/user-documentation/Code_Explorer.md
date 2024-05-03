@@ -184,6 +184,10 @@ In the Code Explorer mode, a suite of actions is available to reveal dependencie
 
 On the toolbar, there are actions to reveal dependencies for the selected nodes:
 
+- **Show Direct Subclasses and Subinterfaces of the Selected Nodes**: Reveals nodes that are subclasses or subinterfaces directly extending or implementing the selected nodes, providing a focused, immediate view of the inheritance structure.
+- **Show Subclasse and Subinterface Hierarchy of the Selected Nodes**: Reveals nodes that represent the full subclass and subinterface hierarchy of the selected nodes, displaying both direct and indirect descendants in the inheritance chain.
+- **Show Direct Superclasses and Superinterfaces of the Selected Nodes**: Reveals nodes that are superclasses or superinterfaces from which the selected nodes directly inherit or extend, offering a direct view of parent classes or interfaces.
+- **Show Superclass and Superinterface Hierarchy of the Selected Nodes**: Reveals nodes that encompass the complete superclass and superinterface hierarchy above the selected nodes, tracing all hierarchical layers back to the top-level ancestors.
 - **Show Incoming Dependencies of the Selected Nodes**: Reveals nodes that are direct or recursive dependencies entering the selected nodes.
 - **Show Outgoing Dependencies of the Selected Nodes**: Reveals nodes that are direct or recursive dependencies exiting the selected nodes.
 - **Show Connected Dependencies of the Selected Nodes**: Reveals nodes that have direct or recursive dependencies connected to the selected nodes.
