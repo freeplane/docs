@@ -531,9 +531,9 @@ This add-on collects some utilities that script and/or add-on developers will fi
 * *Menu item info*: Shows technical details about a selected menu item.
 * *freeplane.dsld*: Adds Eclipse editor support for predefined script bindings such as node, c, ui, textUtils, ...
 
-The functions are available under Tools -> Development Tools
+The functions are available under Tools -> Developer Tools
 
-For Freeplane 1.7.4 and higher: [Download v0.9.26](http://sourceforge.net/projects/freeplane/files/addons/devtools/devtools-v0.9.26.addon.mm/download)
+For Freeplane 1.7.4 and higher: [Download v0.9.28](http://sourceforge.net/projects/freeplane/files/addons/devtools/devtools-v0.9.28.addon.mm/download)
 
 For Freeplane 1.6.15 and higher: [Download v0.9.23](http://sourceforge.net/projects/freeplane/files/addons/devtools/devtools-v0.9.23.addon.mm/download)
 
