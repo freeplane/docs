@@ -20,9 +20,9 @@ Examples:
 Depending on your OS the configuration can be changed at different places.
 ### Windows
 Add line
-`
+````
 -Xmx4G
-`
+````
 
 to files freeplane.l4j.ini and freeplaneConsole.l4j.ini which are used when you start freeplane.exe or freeplaneConsole.exe.
 
@@ -31,13 +31,33 @@ If you use freeplane.bat you need to configure this option there.
 ### Mac OS
 Go to Application==> Left click on specific application (like Weka)==> Show Package Content==> Contents==>app
 
-Edit file Freeplane.cfg ane replace line `java-options=-Xmx512m` by line `java-options=-Xmx4G`
+Edit file Freeplane.cfg ane replace any of lines 
+
+````
+java-options=-XX:MaxRAM=...
+java-options=-XX:MaxRAMPercentage=...
+java-options=-Xmx...
+````
+
+by line 
+
+````
+java-options=-Xmx4G
+````
 
 Save the changes.
 
 ### Linux
 
-Edit freeplane.sh and replace -Xmx512m by whatever value you need.
+Edit freeplane.sh and replace -Xmx... by whatever value you need.
+
+## Performance issues when scrolling/selecting nodes
+
+Try to use OpenGL rendering instead of Direct3D by adding the following flag into your Freeplane options (freeplane.l4j.ini and freeplaneConsole.l4j.ini on Windows, freeplane.sh on Linux)
+
+````
+-Dsun.java2d.d3d=false
+````
 
 ## Html text and images can not be pasted from Web pages in nodes and notes on Linux
 It is a java issue on linux. Use Firefox for Windows with Wine.
