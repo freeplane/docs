@@ -35,7 +35,7 @@ Sometimes you need to know where the log file is located, e.g. if you write [scr
 Find directory resources in the freeplane installation directory,
 create directory images in it and put your file named Freeplane_splash.png there.
 ## Weird problems
-See if you find help on the [Troubleshooting](Troubleshooting.md) page. Otherwise ask in the [Open discussion forum](http://sourceforge.net/apps/phpbb/freeplane/viewforum.php?f=1).
+See if you find help on the [Troubleshooting](../../user-documentation/Troubleshooting.md) page. Otherwise ask in the [Open discussion forum](http://sourceforge.net/apps/phpbb/freeplane/viewforum.php?f=1).
 
 ## How to disable node selection changing when hovering over it
 It's in the preferences: *Tools->Preferences->Behaviour->Selection method->By click*

@@ -10,7 +10,7 @@ If you are having questions, or are experiencing problems there is information i
 *[Menu reference](http://www.freeplane.org/doc/FP_MenuReference_all_languages.html) in many languages
 
 ### Documentation in this **Wiki**
-*the [Troubleshooting](Troubleshooting.md) page
+*the [Troubleshooting](../../user-documentation/Troubleshooting.md) page
 *the [FAQ](FAQ.md) (Frequently Asked Questions)
 
 <!-- ({Category:Documentation}) -->

@@ -77,7 +77,7 @@ Open forums give fast and easy access to the active user community of Freeplane.
 * [Discussions](https://github.com/freeplane/freeplane/discussions) is the main forum. You must register before posting.
 
 # FAQ's
-*the [Troubleshooting](Troubleshooting.md) page
+*the [Troubleshooting](../../user-documentation/Troubleshooting.md) page
 *the [FAQ](FAQ.md) (Frequently Asked Questions)
 *Report bugs [here](https://sourceforge.net/p/freeplane/bugs) or request new features [here](https://sourceforge.net/p/freeplane/featurerequests) <br> &nbsp; Please check first for existing issues using the **Search** box <br> &nbsp; Use the **Apply Filter** button to begin the search.
 
