@@ -1,7 +1,8 @@
 <!-- toc -->
 
 Clicking on the images will increase their size. Clicking the hyperlink under the images will open the interactive mindmap.
-Because of limitations of the mind map viewer, the interactive maps may  behave slightly different from the maps you download on your computer and view with Freeplane. Read  [[#How to download maps to your computer|here]] how to download maps.
+Because of limitations of the mind map viewer, the interactive maps may  behave slightly different from the maps you download on your computer and view with Freeplane. 
+
 # General Freeplane mind maps
 
 ![](WhatIsMindMapping.jpg) [What is mind mapping](https://www.freeplane.org/mapsOnline/?map=WhatIsMindMapping.mm)

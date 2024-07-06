@@ -25,7 +25,7 @@ The advantage of electronic mind maps over paper mind maps is that you can have 
 The advantages of Freeplane are presented in the mind map, as hidden information. Click the link below the picture to open the map. Then click the topic help *Navigation* for learning how to unhide hidden information. <br><br>
 
 ## Brainstorming with digital post-its
-Generally brainstorming starts with writing ideas on post-its and sticking them to the wall. Freeplane has a "free node" for this: if you Ctrl + double click on a free place of the mind map, a node opens. When  you start typing you will see your text in this free node. Note: This feature doesn't work on Mac yet. If you're done, you can do the same with a different idea in a different place. Once you're ready, you can move similar ideas closer together and connect them in a hierarchy by dragging and dropping. See [[#Floating_nodes|Floating nodes]] for more examples.
+Generally brainstorming starts with writing ideas on post-its and sticking them to the wall. Freeplane has a "free node" for this: if you Ctrl + double click on a free place of the mind map, a node opens. When  you start typing you will see your text in this free node. Note: This feature doesn't work on Mac yet. If you're done, you can do the same with a different idea in a different place. Once you're ready, you can move similar ideas closer together and connect them in a hierarchy by dragging and dropping. See [Floating nodes](#floating-nodes) for more examples.
 
 ## Map as index
 [![Index wiki - Beginner](FreeplaneWiki.jpg)](http://www.freeplane.org/mapsOnline/?map=IndexWiki.mm)
