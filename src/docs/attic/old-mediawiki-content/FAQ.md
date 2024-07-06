@@ -23,7 +23,7 @@ And of course there are a lot of books on Mindmapping in general.
 See the article on the [Freeplane/FreeMind relationship](../user-documentation/Relationship_to_FreeMind.md).
 
 ## What's the "Freeplane user directory"?
-The Freeplane user directory can be found by invoking the menu item Tools->Open user directory. It's location is the directory <tt>1.2.x</tt> respectively <tt>1.3.x</tt> in <tt>%APPDATA%\Freeplane</tt> (Windows) respectively <tt>~/.freeplane/</tt> (Linux, Mac). It contains all user settings: options in <tt>auto.properties</tt>, scripts, [configuration of data recognition](Data_recognition_and_data_formats.md), ...
+The Freeplane user directory can be found by invoking the menu item Tools->Open user directory. It's location is the directory <tt>1.2.x</tt> respectively <tt>1.3.x</tt> in <tt>%APPDATA%\Freeplane</tt> (Windows) respectively <tt>~/.freeplane/</tt> (Linux, Mac). It contains all user settings: options in <tt>auto.properties</tt>, scripts, [configuration of data recognition](../../user-documentation/Data_recognition_and_data_formats.md), ...
 
 ## Where are the preferences stored?
 Almost all preferences are stored in [<userdirectory>](FAQ.md)/auto.properties. It contains all settings, keyboard bindings and more. If you want to install a second copy of Freeplane, e. g. to another computer you can copy auto.properties to copy all settings.

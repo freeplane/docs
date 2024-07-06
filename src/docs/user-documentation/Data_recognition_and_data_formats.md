@@ -1,6 +1,6 @@
 <!-- toc -->
 
-If you set the text of a node to a number or date in Freeplane it will likely be recognized specially. If you don't like that advance to [[#How to switch data recognition off]].
+If you set the text of a node to a number or date in Freeplane it will likely be recognized specially. If you don't like that advance to [How to switch data recognition off](#how-to-switch-data-recognition-off).
 
 # Numbers
 If a number is recognized
