@@ -51,6 +51,15 @@ Save the changes.
 
 Edit freeplane.sh and replace -Xmx... by whatever value you need.
 
+## Graphics Issues with the UI
+
+Try disabling the DirectDraw pipeline by adding the following flag to your Freeplane options (freeplane.l4j.ini and freeplaneConsole.l4j.ini on Windows, freeplane.sh on Linux):
+
+````
+-Dsun.java2d.noddraw=true
+````
+For explanations and other configuration options you can try, see [this documentation](https://docs.oracle.com/en/java/javase/22/troubleshoot/java-2d-pipeline-rendering-and-properties.html#GUID-AAB8CC86-652B-4A78-83EB-CDC3F5677A48).
+
 ## Performance issues when scrolling/selecting nodes
 
 Try to use OpenGL rendering instead of Direct3D by adding the following flag into your Freeplane options (freeplane.l4j.ini and freeplaneConsole.l4j.ini on Windows, freeplane.sh on Linux)
