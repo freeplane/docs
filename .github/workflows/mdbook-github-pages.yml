@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install and Build 🔧
         run: |
@@ -57,7 +57,7 @@ jobs:
           cd build
           export FP_GH=https://github.com/freeplane/freeplane
           # Change TAG_PATTERN when a new major version is released
-          export TAG_PATTERN=release-1.11.*
+          export TAG_PATTERN=release-1.12.*
           while read -r hash ref; do if [[ $ref != *-pre* ]]; then latest_stable_release_tag=${ref##*/}; fi; done < <(git ls-remote --tags $FP_GH $TAG_PATTERN)
           _tag=$(curl https://docs.freeplane.org/api/_tag.txt)
           if [[ $_tag && $_tag = $latest_stable_release_tag ]]; then
@@ -77,9 +77,9 @@ jobs:
           fi
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: 'build/gh-pages'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
