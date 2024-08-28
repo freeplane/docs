@@ -4,6 +4,7 @@
 
 * To create a new node, press `enter`.
 * To add text to the new node, start typing and press `enter` when you are done.
+* To create a new child note, press `tab`.
 * To navigate between nodes, use the `arrow keys`.
 * To fold/unfold a selected node, press `space`.
 * To move nodes, drag and drop them with the mouse.
