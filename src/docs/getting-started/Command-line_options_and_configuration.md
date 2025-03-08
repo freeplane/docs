@@ -13,7 +13,7 @@ Call freeplane like this:
 | `-N` | set the 'nonInteractive' system property to 'true' |
 | `-U<userdir>` | set the freeplane user config directory (**only since version 1.3.3!!!**) |
 
-Batch execution of menu items (e.g. scripts) is described in a [special wiki article](Batch_Jobs.md).
+Batch execution of menu items (e.g. scripts) is described in a [special wiki article](../scripting/Batch_Jobs.md).
 
 ## Debug start script under Linux
 
