@@ -26,6 +26,7 @@
   - [Code explorer](user-documentation/Code_Explorer.md)
   - [ArchUnit Test Result Viewer](user-documentation/ArchUnit_Extension.md)
   - [Troubleshooting](user-documentation/Troubleshooting.md)
+  - [Known issues](user-documentation/known-issues.md)
 - [Contribute](contribute/contribute.md)
   - [Translation How-To](contribute/Translation_How-To.md)
 - [🤖 Scripts and Scripting. Start Here](scripting/Start_Here.md)
