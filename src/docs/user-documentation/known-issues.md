@@ -1,5 +1,3 @@
-<!-- toc -->
-
 Freeplane is an actively maintained open-source project. Some limitations are known but cannot be resolved easily due to technical or external constraints.
 
 You can find such issues collected under the following labels on GitHub:
