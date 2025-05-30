@@ -8,4 +8,12 @@ You can find such issues collected under the following labels on GitHub:
 
 We maintain these labels to be transparent about problems that are currently out of scope for fixing.
 
+## What the labels mean
+
+- **`can't do`** – The issue is technically impossible to fix within current architecture or Java/Swing limitations.
+- **`not our bug`** – The issue is caused by external libraries, the operating system, or Java itself.
+- **`wontfix`** – We acknowledge the issue, but intentionally won't fix it — due to design choices, complexity, or impact.
+
+These labels are used to keep the issue tracker clean and transparent.
+
 (To be continued)
