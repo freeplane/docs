@@ -55,24 +55,26 @@ jobs:
           rm -rf 'src/docs/https:'
           # API docs
           cd build
-          export FP_GH=https://github.com/freeplane/freeplane
-          # Change TAG_PATTERN when a new major version is released
-          export TAG_PATTERN=release-1.12.*
-          while read -r hash ref; do if [[ $ref != *-pre* ]]; then latest_stable_release_tag=${ref##*/}; fi; done < <(git ls-remote --tags $FP_GH $TAG_PATTERN)
+          FP_GH=https://github.com/freeplane/freeplane
+          TAG_PATTERN=release-1.*
+          latest_stable_release_ref=$(git ls-remote --tags $FP_GH $TAG_PATTERN | awk '!/-pre[0-9]+$/ {print $2}' | sort -V | tail -1)
+          latest_stable_release_tag=${latest_stable_release_ref#refs/tags/}
           _tag=$(curl https://docs.freeplane.org/api/_tag.txt)
+          echo "Start building API docs - online-api/_tag: $_tag, Freeplane-repo/latest_stable_release_tag: $latest_stable_release_tag"
           if [[ $_tag && $_tag = $latest_stable_release_tag ]]; then
-            # It's the same release tag as the API docs saved in GitHub Pages - use this one instead of going to SourceForge
+            echo "It's the same release tag as the API docs saved in GitHub Pages - use this one instead of going to SourceForge"
             download_and_unpack_api_zip
           else
             version=${latest_stable_release_tag#release-}
-            # Try to download freeplane-bin-$version.zip from SF and to extract doc/api/ pages
+            echo "Try to download freeplane-bin-$version.zip from SF and to extract doc/api/ pages"
             [[ $version ]] &&
             curl -L https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-${version}.zip/download -o freeplane-bin.zip &&
             unzip freeplane-bin.zip "freeplane-${version}/doc/api/*" &&
             mv -v "freeplane-${version}/doc/api" gh-pages/ &&
             echo "$latest_stable_release_tag" > gh-pages/api/_tag.txt &&
             cd gh-pages &&
-            zip -r api.zip api/ || # Something went wrong - fall back to the last-successfully-downloaded-from-SF api docs
+            zip -r api.zip api/ || 
+            echo "Something went wrong - fall back to the last-successfully-downloaded-from-SF api docs" &&
             download_and_unpack_api_zip
           fi
 
