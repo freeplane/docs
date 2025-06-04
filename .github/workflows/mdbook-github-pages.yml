@@ -73,9 +73,10 @@ jobs:
             mv -v "freeplane-${version}/doc/api" gh-pages/ &&
             echo "$latest_stable_release_tag" > gh-pages/api/_tag.txt &&
             cd gh-pages &&
-            zip -r api.zip api/ || 
-            echo "Something went wrong - fall back to the last-successfully-downloaded-from-SF api docs" &&
-            download_and_unpack_api_zip
+            zip -r api.zip api/ || {
+              echo "Something went wrong - fall back to the last-successfully-downloaded-from-SF api docs" &&
+              download_and_unpack_api_zip
+          }
           fi
 
       - name: Upload artifact
