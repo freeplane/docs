@@ -5,6 +5,7 @@
 - [First steps](first-steps.md)
 - [Working with mindmap files](working-w-mindmap-files.md)
 - [Hot keys and beyond](hot-keys-and-beyond.md)
+- [Bookmarks](bookmarks.md)
 - [Formatting maps and nodes](formatting-maps-and-nodes.md)
 - [Styles](styles.md)
 - [Templates](templates.md)
