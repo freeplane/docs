@@ -280,7 +280,7 @@ You can resize the display (with a preview pane) and put it in :
 
 You can even decorate the image inserted with a link which point wherever you would want.
 
-[Download v1.1 for Freeplane v1.8.0 and higher](https://sourceforge.net/projects/freeplane/files/addons/insertInlineImage/InsertInlineImage-v1.1.addon.mm/download)
+[Download v1.4 for Freeplane v1.8.0 and higher](https://sourceforge.net/projects/freeplane/files/addons/insertInlineImage/InsertInlineImage-v1.4.addon.mm/download)
 
 [Download v1.0 for Freeplane v1.2.10 to v1.7.x](https://sourceforge.net/projects/freeplane/files/addons/insertInlineImage/InsertInlineImage-v1.0.addon.mm/download)
 
