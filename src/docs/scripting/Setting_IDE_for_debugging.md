@@ -30,7 +30,10 @@ Change `C:\Users\<user-name>\.jdks\temurin-<version>` for the path of your Java 
 * copy `freeplane_debughelper/idea/runConfigurations` (the whole `runConfigurations` directory!) containing run configuration files into `.idea` created by IntelliJ in project root
 * Restart IntelliJ afterwards.
 
-Now, in the top right corner you will see the "Run/Debug configuration" options, including two called "freeplane" and "freeplane dist". You will be able to run Freeplane by choosing any of them.
+Now, in the top right corner you will see the "Run/Debug configuration" options, including two called "freeplane" and "freeplane dist". You will be able to run Freeplane by choosing any of them. But, trying to run Freeplane, you need to set, again, the correct Java:
+
+* at the top right, click the 3 dots and open `Edit...` (or search for `Edit Configurations...`);
+* inside the `Build and run`section, the first combobox allows choosing the java. Choose a compatible version.
 
 # Configuring the launcher for your needs
 
