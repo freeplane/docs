@@ -38,7 +38,7 @@ or, under Linux/UNIX:
 
 ### Java version
 
-Freeeplane 1.11.x requires Java between Java 11 and Java 21 on Windows and Mac, Java 8 and Java 21 on Linux
+Latest Freeplane versions (1.11.x and following) require Java between Java 11 and Java 21 on Windows and Mac, Java 8 and Java 21 on Linux.
 
 Freeeplane 1.10.x requires Java between Java 8 and Java 17.
 
