@@ -1,6 +1,7 @@
 ## Freeplane
 
-[Freeplane](http://freeplane.sourceforge.net) is a free and open source software application that supports thinking, sharing information, getting things done at work, in school and at home.
+[Freeplane](http://freeplane.sourceforge.net)
+is a free and open source software application that supports thinking, sharing information, getting things done at work, in school and at home.
 It provides you a set of tools for mind mapping (also known as concept mapping or information mapping) and navigating the mapped information.
 Freeplane's capabilities will appeal to power users, but for the typical user is also a more robust alternative to Xmind, Mindmeister, and similar mind mapping software.
 
