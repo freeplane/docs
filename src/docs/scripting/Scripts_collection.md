@@ -719,19 +719,24 @@ Author: `boercher`
 
 To encourage focusing on doing concrete tasks, and accumulate [Pomodoro](http://www.pomodorotechnique.com/) credits, this script provides a Pomodoro timer against a node in mind-map. When the time reaches the break time, plays sound of applause for encouragement, and when the time is up, add the time Pomodoro time credit to the current node's attribute with the name of 'Pomodoro', and add to the root node's attribute with name of today's date.
 
-Need to customize the path to the audio file "APPLAUSE.WAV" in function playSound.
+Place the an audio file called "APPLAUSE.WAV" at the same folder of the script. If not file is gound, computer beep is used.
 
 <!-- name=pomodoro-timer -->
 ```groovy
 import groovy.swing.SwingBuilder
+import groovy.transform.SourceURI
+
 import java.awt.FlowLayout as FL
 import javax.swing.BoxLayout as BXL
 import javax.swing.JFrame
-import groovy.beans.Bindable
-import java.util.timer.*  
-import java.applet.Applet;
-import java.applet.AudioClip;
-//import org.freeplane.plugin.script.proxy.Node
+import javax.swing.JLabel
+import javax.swing.JButton
+import java.applet.Applet
+import java.applet.AudioClip
+import java.util.concurrent.ScheduledExecutorService
+import java.util.concurrent.Executors
+import java.util.concurrent.TimeUnit
+import javax.swing.SwingUtilities
 
 /*
  To encourage focusing on doing concrete tasks, and accumulate Pomodoro credits, this script provides a Pomodoro timer against a node in mind-map. 
@@ -739,153 +744,196 @@ import java.applet.AudioClip;
  and when the time is up, add the time Pomodoro time credit to the current node's attribute with the name of 'Pomodoro', 
  and add to the root node's attribute with name of today's date. 
 
- Need to customize the path to the audio file "APPLAUSE.WAV" in function playSound
-
  Developed by Yu Shen based on examples of SwingBuilder in Freeplane Forum, and other examples of timer tasks, and @Bindable found in Internet
  2012-01-01
+ 
+ Updated by euu2021 in 2025 to work with newer Freeplane versions.
 */
 
 class CountDown { // resolution: second
-  int delay = 1 // seconds
-  int period = 1 // seconds
-  int countDownValue = 25*60 // seconds, the total value of the countDown, per Pomodoro Techniques: http://www.pomodorotechnique.com/
-  int remainingTime = countDownValue // seconds, multiple of 60 (for minute)
-  int breakTime = (int) (countDownValue/5) // seconds, time for break
-  int countDownTime = remainingTime
-  boolean running = true
-  //Node node
-  def node
-  TimerTaskCountDown task
-  Timer timer
+    @SourceURI
+    URI scriptUri
 
-  CountDown (// Node
-    nodeIn) { 
-    node = nodeIn
-    task = new TimerTaskCountDown(this)
-    timer =  new Timer()
-    timer.scheduleAtFixedRate(task, delay*1000, period*1000)
-  }
-  
-  // adaptive display for count down time, and available operation
-  @Bindable String timeStr = "25:00"
-  @Bindable String buttonName = 'Pause'
+    int period = 1 // seconds
+    int countDownValue = 25*60 // seconds, the total value of the countDown, per Pomodoro Techniques: http://www.pomodorotechnique.com/
+    int remainingTime = countDownValue // seconds, multiple of 60 (for minute)
+    int breakTime = (int) (countDownValue/5) // seconds, time for break
+    int countDownTime = remainingTime
+    boolean running = true
+    def node
+    ScheduledExecutorService scheduler
+    
+    // Direct references to UI components
+    JLabel timeLabel
+    JButton controlButton
 
-  public int getElapsedTime () {
-    (int) ((countDownTime - remainingTime)/60) // convert to minutes
-  }
-
-  def getValue(node, attrib) {// get valid attribute value
-    def value = node.getAttributes().get(attrib)
-    (value != null) ? value : 0
-  }
-
-  void accumulateTime () { // add Pomodoro credit against current node and the root node for today's attribute
-    int elapseTime =  getElapsedTime()
-    if (elapseTime > 0) {
-      node['Pomodoro'] = getValue(node, 'Pomodoro') + elapseTime ;
-      def rootNode = node.getMap().getRootNode()
-      def today = new Date()
-      def formattedDate = today.format('yyyy-MM-dd')
-      rootNode[formattedDate] = getValue(rootNode, formattedDate) + elapseTime
+    CountDown(nodeIn, JLabel timeLabel, JButton controlButton) {
+        node = nodeIn
+        this.timeLabel = timeLabel
+        this.controlButton = controlButton
+        
+        // Initialize UI
+        updateTimeDisplay()
+        updateButtonText()
+        
+        // Create scheduler
+        scheduler = Executors.newSingleThreadScheduledExecutor()
+        scheduler.scheduleAtFixedRate({
+            update()
+        }, 0, period, TimeUnit.SECONDS)
     }
-  } 
 
-  public String secondToString(x) {
-    int seconds = x % 60 ;
-    int minutes =(int) (x / 60);
-    return String.format("%02d:%02d", minutes, seconds)
-  }
-
-  public start() {
-    // println "Start"
-    remainingTime = countDownValue
-    countDownTime = remainingTime
-    running = true
-    // no cancel, thus no restart
-    // timer =  new Timer()
-    // task = new TimerTaskCountDown(this)
-    // timer.scheduleAtFixedRate(task, delay*1000, period*1000)
-    setButtonName('Pause')
-  }
-
-  void end () {
-    accumulateTime ()
-    // it would be more saving of CPU, slightly, to cancel the timer, and tasks. 
-    // But my experiment didn't work. It caused the Swing Widget disappear. I'm not sure why. 
-    //task.cancel()
-    //timer.cancel()
-    setButtonName('Start');
-    running = false
-  }
-
-  private static void playSound () {
-    // the clip is a bit too long, annoying.
-    // TODO: wish to find a way to set the current directory to the script directory, so that the script can be applicable without modification 
-    System.setProperty("user.dir", "d:\\yushen\\scripts");
-    java.io.File file = new java.io.File("APPLAUSE.wav");
-    AudioClip sound = Applet.newAudioClip(file.toURL());
-    sound.play();
-    println "Played sound."
-  }
-  
-  public void update() {// for timer task
-    if (running) {
-      if (remainingTime >= period) {
-        remainingTime -= period
-      } else { 
-        end()
-      }
-      setTimeStr(secondToString(remainingTime))
-      // println "remainingTime: $remainingTime and breakTime: $breakTime"
-      if (remainingTime == breakTime) {// play sound to congratulate
-        playSound ()
-      }
+    public int getElapsedTime() {
+        (int) ((countDownTime - remainingTime)/60) // convert to minutes
     }
-  }
 
-  public void react () {
-    if (running) {// pause
-      end ();
-    } else {// start
-      start()}}
+    def getValue(node, attrib) {// get valid attribute value
+        def value = node.getAttributes().get(attrib)
+        (value != null) ? value : 0
+    }
+
+    void accumulateTime() { // add Pomodoro credit against current node and the root node for today's attribute
+        int elapseTime = getElapsedTime()
+        if (elapseTime > 0) {
+            node['Pomodoro'] = getValue(node, 'Pomodoro') + elapseTime
+            def rootNode = node.getMap().getRootNode()
+            def today = new Date()
+            def formattedDate = today.format('yyyy-MM-dd')
+            rootNode[formattedDate] = getValue(rootNode, formattedDate) + elapseTime
+        }
+    }
+
+    public String secondToString(x) {
+        int seconds = x % 60
+        int minutes = (int) (x / 60)
+        return String.format("%02d:%02d", minutes, seconds)
+    }
+
+    public start() {
+        remainingTime = countDownValue
+        countDownTime = remainingTime
+        running = true
+        updateTimeDisplay()
+        updateButtonText()
+    }
+
+    void end() {
+        accumulateTime()
+        running = false
+        updateButtonText()
+    }
+
+    private void playSound() {
+        try {
+            File scriptDir = new File(scriptUri).parentFile
+            File soundFile = new File(scriptDir, "APPLAUSE.wav")
+
+            if (soundFile.exists()) {
+                AudioClip sound = Applet.newAudioClip(soundFile.toURL())
+                sound.play()
+                println "Played sound from: ${soundFile.absolutePath}"
+            } else {
+                println "Sound file not found at: ${soundFile.absolutePath}, playing system beep instead."
+                java.awt.Toolkit.getDefaultToolkit().beep()
+            }
+        } catch (Exception e) {
+            println "Error playing sound: ${e.message}, playing system beep instead."
+            java.awt.Toolkit.getDefaultToolkit().beep()
+        }
+    }
+
+    public void update() {
+        if (running) {
+            if (remainingTime >= period) {
+                remainingTime -= period
+            } else {
+                SwingUtilities.invokeLater {
+                    end()
+                }
+            }
+            
+            SwingUtilities.invokeLater {
+                updateTimeDisplay()
+            }
+            
+            if (remainingTime == breakTime) {
+                playSound()
+            }
+        }
+    }
+    
+    private void updateTimeDisplay() {
+        timeLabel.setText(secondToString(remainingTime))
+    }
+    
+    private void updateButtonText() {
+        controlButton.setText(running ? 'Pause' : 'Start')
+    }
+
+    public void react() {
+        if (running) {// pause
+            end()
+        } else {// start
+            start()
+        }
+    }
+    
+    public void shutdown() {
+        if (scheduler != null && !scheduler.isShutdown()) {
+            scheduler.shutdown()
+            try {
+                if (!scheduler.awaitTermination(5, TimeUnit.SECONDS)) {
+                    scheduler.shutdownNow()
+                }
+            } catch (InterruptedException e) {
+                scheduler.shutdownNow()
+            }
+        }
+    }
 }
-
-class TimerTaskCountDown extends TimerTask {
-  CountDown model
-
-  public TimerTaskCountDown (CountDown model) {
-    // super() // not neccessary
-    this.model = model
-  }
-
-  public void run() {
-    model.update()
-  }  
-}  
-
-CountDown model = new CountDown(node)
 
 def s = new SwingBuilder()
-// s.setVariable('myDialog-properties',[:]) // seems not neccessary
-def dial = s.dialog(title:'Pomodoro', id:'pormodoro', modal:false,  defaultCloseOperation:JFrame.DISPOSE_ON_CLOSE, pack:true, show:true) {
-  panel() {
-    boxLayout(axis:BXL.Y_AXIS)
-    panel(alignmentX:0f) {
-      flowLayout(alignment:FL.LEFT)
-      label text: node.text + ': '
-      label text: bind {model.timeStr }
-    }
 
-    panel(alignmentX:0f) {
-      flowLayout(alignment:FL.RIGHT)
-      button (text: bind {model.buttonName}, actionPerformed: {model.react(); }) 
+// Create UI components first
+JLabel timeLabel = s.label(text: "25:00")
+JButton controlButton = s.button(text: "Pause", actionPerformed: { /* Will be set later */ })
+
+// Create countdown model with direct references to UI components
+CountDown model = new CountDown(node, timeLabel, controlButton)
+
+// Set button action after model is created
+controlButton.actionPerformed = { model.react() }
+
+// Create dialog with pre-created components
+def dial = s.dialog(title:'Pomodoro', id:'pormodoro', modal:false, 
+                   defaultCloseOperation:JFrame.DISPOSE_ON_CLOSE, 
+                   pack:true, show:true) {
+    panel() {
+        boxLayout(axis:BXL.Y_AXIS)
+        panel(alignmentX:0f) {
+            flowLayout(alignment:FL.LEFT)
+            label(text: node.text + ': ')
+            widget(timeLabel)
+        }
+
+        panel(alignmentX:0f) {
+            flowLayout(alignment:FL.RIGHT)
+            widget(controlButton)
+        }
     }
-  }
 }
+
+// Ensure resources are cleaned up when dialog is closed
+dial.addWindowListener(new java.awt.event.WindowAdapter() {
+    @Override
+    void windowClosing(java.awt.event.WindowEvent e) {
+        model.shutdown()
+    }
+})
 
 ```
 
-Author: `yubrshen`
+Author: `yubrshen`. Updated by `euu2021` at [this thread](https://github.com/freeplane/freeplane/discussions/2656#discussioncomment-14340396).
 
 ## Kill Empty Nodes
 
