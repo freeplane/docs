@@ -19,14 +19,27 @@ Examples:
 
 Depending on your OS the configuration can be changed at different places.
 ### Windows
-Add line
-````
+
+To change the maximum Java heap size, add the following line:
+
+```
 -Xmx4G
-````
+```
 
-to files freeplane.l4j.ini and freeplaneConsole.l4j.ini which are used when you start freeplane.exe or freeplaneConsole.exe.
+to the configuration files used by the Windows launcher:
 
-If you use freeplane.bat you need to configure this option there. 
+* `freeplane.cfg` — for the graphical version
+* `freeplaneConsole.cfg` — for the console version
+
+They have no syntax like INI or XML — just raw command-line arguments passed directly to the JVM.
+
+These files are located in the same directory as `freeplane.exe` and `freeplaneConsole.exe`, typically:
+
+```
+C:\Program Files\Freeplane\
+```
+
+If you start Freeplane using `freeplane.bat`, you need to configure this option directly in that script.
 
 ### Mac OS
 Go to Application==> Left click on specific application (like Weka)==> Show Package Content==> Contents==>app
