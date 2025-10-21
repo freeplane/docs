@@ -20,10 +20,10 @@ Examples:
 Depending on your OS the configuration can be changed at different places.
 ### Windows
 
-To change the maximum Java heap size, add the following line:
+To adjust how much memory Java may use, edit the configuration file used by the launcher and add or modify the following line under the `[JavaOptions]` section:
 
 ```
--Xmx4G
+java-options=-Xmx4G
 ```
 
 to the configuration files used by the Windows launcher:
@@ -31,13 +31,17 @@ to the configuration files used by the Windows launcher:
 * `freeplane.cfg` — for the graphical version
 * `freeplaneConsole.cfg` — for the console version
 
-They have no syntax like INI or XML — just raw command-line arguments passed directly to the JVM.
-
 These files are located in the same directory as `freeplane.exe` and `freeplaneConsole.exe`, typically:
 
 ```
 C:\Program Files\Freeplane\
 ```
+
+Explanation:
+
+* `-Xmx` is the **JVM option** that sets the **maximum heap size** — the upper limit of memory available to Java objects.
+* `4G` is the **value** assigned to that option, meaning *4 gigabytes*.
+* You can replace `4G` with another value (for example `2G`, `8G`, or `1024M`) depending on your system’s available RAM and your needs.
 
 If you start Freeplane using `freeplane.bat`, you need to configure this option directly in that script.
 
