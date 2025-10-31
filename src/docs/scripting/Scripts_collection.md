@@ -1645,9 +1645,14 @@ IContentTransformers are used for several tasks in Freeplane, e. g. for
 * [Node formatting](https://github.com/freeplane/freeplane/tree/1.4.x/freeplane/src/main/java/org/freeplane/features/text/FormatContentTransformer.java)
 
 Here we use a content transformer to render [Markdown](http://en.wikipedia.org/wiki/Markdown) formatted links as HTML inline links like in this text:
-    <nowiki>see the [Scripts collection](http://www.freeplane.org/wiki/index.php?title=Scripts_collection) in the [Freeplane wiki](http://www.freeplane.org/wiki/index.php/Main_Page)!</nowiki>
-to be rendered as
-    see the [http://www.freeplane.org/wiki/index.php?title=Scripts_collection Scripts collection] in the [http://www.freeplane.org/wiki/index.php/Main_Page Freeplane wiki]!
+
+```
+See the [Scripts collection](https://docs.freeplane.org/scripting/Scripts_collection.html) in the [Freeplane documentation](https://docs.freeplane.org/)!
+```
+
+to be rendered as:
+
+See the [Scripts collection](https://docs.freeplane.org/scripting/Scripts_collection.html) in the [Freeplane documentation](https://docs.freeplane.org/)!
 
 This renderer implements full Markdown syntax. This script has to be executed once on startup so it's best to install it as a [init script](Init_scripts.md).
 <!-- name=registerMarkdownRenderer -->
@@ -1690,7 +1695,7 @@ TextController.controller.textTransformers
 TextController.controller.addTextTransformer(new MarkdownTransformer()) 
 ```
 
-How to use script? In node content write "<markdown> here is markdown markup</markdown>" and next your markdown markup.
+How to use script? In node content write `<markdown>here is markdown markup</markdown>` and next your markdown markup.
 
 Author: `Bvfalcon`
 
