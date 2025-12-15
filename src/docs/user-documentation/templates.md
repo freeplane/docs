@@ -37,8 +37,7 @@ This means, the file path for templates might be different in your Freeplane (se
 
 ### MacOS
 
-<!-- FIXME: where are the locations on MacOS? -->
-*TODO*
+`~/.freeplane/VERSION/templates`
 
 ## Set a default template file
 
