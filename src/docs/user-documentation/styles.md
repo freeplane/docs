@@ -38,7 +38,7 @@ Here's the order of precedence in applying the different layers.
 8. Automatic level style
 9. Default style
 
-> Note: `Selected style` is only in effect if `Preferences->Defaits->Selection colors->Display selected nodes in bubbles` is off.
+> Note: `Selected style` is only in effect if `Preferences->Defaults->Selection colors->Display selected nodes in bubbles` is off.
 
 `Default` is the base layer. 
 Whatever property is set on that layer will either shine through or be overwritten by the next layer put on top of `Default`.
