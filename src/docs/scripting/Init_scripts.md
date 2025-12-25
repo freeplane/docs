@@ -12,7 +12,7 @@ If you need map specific behavior encode this in your scripts by checking the na
 
 ## Examples
 
-* [Register a Markdown IContentTransformer](../scripting/Scripts_collection .md)
+* [Register a Markdown IContentTransformer](Scripts_collection.md)
 * An extended script can be found in this [forum article](http://sourceforge.net/p/freeplane/discussion/758437/thread/748f90ad/?limit=25.md).
 
 <!-- ({Category:Script}) -->
