@@ -76,7 +76,7 @@ Beyond the usual functionality of copying selected text or copying a node (branc
 * Attributes table - `Edit->Node properties->Edit attribute in-line (Alt+F9)`
 * Find and replace - `Edit->Find->Find and replace… (Ctrl+Shift+F)`
 * FInd and replace in all maps - `Edit->Find->Find and replace in all maps`
-* Mange reminders - `Tools->Manage tasks and reminders…`
+* Manage reminders - `Tools->Manage tasks and reminders…`
 * Past reminders - `Tools->Show past reminders…`
 
 ## Mouse Actions with Keyboard Modifiers
