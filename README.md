@@ -35,4 +35,12 @@ Relative links should be used.
 
 You can edit and preview the documentation in an online IDE Gitpod. It contains an embedded python HTTP server which starts automatically and shows all changes as you introduce them. To run it with your forked repository, you can navigate to README.md in your fork on GitHub and click the `Open in Gitpod` button below.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/) 
+
+Alternatively, can get this repo running instantly with Codeanywhere by clicking the button below.
+
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/daytonaio/devcontainer-generator)
+
+
+
+
