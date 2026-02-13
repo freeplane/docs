@@ -8,6 +8,10 @@
   - [Distributions](getting-started/Distributions.md)
   - [Command-line options and configuration](getting-started/Command-line_options_and_configuration.md)
   - [Extend with add-ons](getting-started/Add-ons_(install).md)
+- [AI integration: getting started](ai/ai-integration-getting-started.md)
+  - [AI chat workflows](ai/ai-chat-workflows.md)
+  - [Model Context Protocol server](ai/model-context-protocol-server.md)
+  - [AI integration troubleshooting](ai/ai-integration-troubleshooting.md)
 - [User documentation](user-documentation/user-documentation.md)
   - [First steps](user-documentation/first-steps.md)
   - [Working with mindmap files](user-documentation/working-w-mindmap-files.md)
@@ -163,7 +167,6 @@
 # Special pages
 
 - [After redirect from the old media wiki](after-redirect.md)
-
 
 
 
