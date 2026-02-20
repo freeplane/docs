@@ -14,7 +14,17 @@ Required user input:
 - For Gemini:
   - `AI Gemini key`
 - For Ollama:
-  - enable `AI use Ollama` when you want Ollama as provider.
+  - set `AI Ollama service address` (for example
+    `http://localhost:11434` or your remote endpoint URL).
+  - optional: set `AI Ollama API key` when your Ollama endpoint
+    requires token authentication.
+
+Notes for Ollama:
+
+- Ollama is available only when `AI Ollama service address` is set.
+- When `AI Ollama API key` is non-empty, Freeplane sends
+  `Authorization: Bearer <key>` for Ollama chat and model discovery
+  requests.
 
 If configuration is missing, chat shows:
 `No AI provider is configured.`

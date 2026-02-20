@@ -6,7 +6,9 @@ If AI does not respond as expected, open AI Preferences (from the AI
 panel burger menu) and check:
 
 - the key for your provider (`AI OpenRouter key` or `AI Gemini key`),
-- provider-specific options you use (`AI use Ollama`, service address),
+- provider-specific options you use (for Ollama:
+  `AI Ollama service address`, and if required
+  `AI Ollama API key`),
 - model selection.
 
 ### Messages you may see
@@ -17,8 +19,13 @@ panel burger menu) and check:
   - No model is selected yet.
 - `Missing OpenRouter key setting.`
   - OpenRouter is selected but the key is empty.
-- `Ollama usage is disabled.`
-  - Turn on `AI use Ollama` if you want to use Ollama.
+- `No AI provider is configured.`
+  - For Ollama, ensure `AI Ollama service address` is set.
+- Ollama model list/chat request fails with unauthorized or forbidden.
+  - Check `AI Ollama API key` and verify it is valid for your endpoint.
+- Ollama model list/chat request fails with connection errors.
+  - Verify `AI Ollama service address` is reachable and correctly
+    formatted, including protocol and port.
 - `Unknown AI provider selection.`
   - Re-check provider settings in Preferences.
 
