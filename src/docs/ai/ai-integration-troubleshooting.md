@@ -36,8 +36,11 @@ If another local AI app cannot use Freeplane through MCP:
 - enable `AI MCP server enabled`,
 - check `AI MCP server port`,
 - check `MCP token`,
-- ensure your client sends the token in header
-  `X-Freeplane-MCP-Token`.
+- ensure your client sends the token using one supported header:
+  `Authorization: Bearer <MCP token>` (preferred) or
+  `X-Freeplane-MCP-Token: <MCP token>` (legacy).
+- if your client sends both headers, ensure both token values are
+  identical.
 
 If port is in use, choose another port and restart the server.
 

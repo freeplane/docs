@@ -30,6 +30,12 @@ Open AI Preferences (from the AI panel burger menu), then use:
 3. Set or regenerate `MCP token`.
 4. In your local AI app (for example Claude Desktop or Codex App),
    connect to the Freeplane MCP server using that port and token.
+   Supported authentication headers are:
+   - `Authorization: Bearer <MCP token>` (preferred)
+   - `X-Freeplane-MCP-Token: <MCP token>` (legacy, still supported)
+
+If your client sends both headers, they must contain the same token
+value.
 
 If `MCP token` is empty, Freeplane generates a new token on the first
 incoming client request. That first request is rejected by design. Copy
