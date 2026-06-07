@@ -1,6 +1,6 @@
-# Scripts? Start here 🤖
+# Formulas and Scripts
 
-This page can be used as an overview guide for the Scripting section of this Documentation.
+This page is an overview of Freeplane's formulas and scripting documentation.
 
 > 💡Tip:
 > If you got a script in the forum, and **just want to know how to use it**, you can read the first sections of [this Tutorial](Scripting.md), until the section _The first script: HelloWorld.groovy_.
@@ -9,6 +9,9 @@ This page can be used as an overview guide for the Scripting section of this Doc
 > If you are interested in just **finding useful scripts**, go to the [Finding Scripts](Finding_useful_scripts.md) page.
 
 For a quick introduction to **what Scripts are, and what they can do**, go to [this page](What_are_scripts_and_what_they_do.md)
+
+> 💡Tip:
+> If you mainly want to work with formulas, start with the dedicated [Formulas](Formulas.md) page.
 
 If you are interested in building your own scripts, then you may want to consider the following suggestions.
 

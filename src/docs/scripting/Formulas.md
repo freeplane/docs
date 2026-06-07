@@ -1,229 +1,208 @@
 <!-- toc -->
 
-Formulas are very similar to formulas in spreadsheet processors like Excel or OpenOffice Calc:
+# Formulas
+
+Formulas let Freeplane compute values directly in your map, similar to
+spreadsheet formulas.
+
+A formula starts with `=` and displays its evaluated result instead of
+the source text.
 
 ```groovy
- =2 + 3
+=2 + 3
 ```
 
-Formulas, which are identified by the leading '=', are expressions that
-are evaluated for display. That is their result is displayed instead of
-the formula text. In case of <tt>=2 + 3</tt> this would be <tt>5</tt>. The formula
-itself (<tt>=2 + 3</tt>) is only visible in the editor.
+This displays `5`, while the formula text itself stays visible in the
+formula editor.
 
-## Overview
+## Where formulas can be used
 
-Formulas can be defined in
+Formulas can be defined in:
 
-* node texts
-* attribute values
-* notes
+- node text,
+- attribute values,
+- notes.
 
-Formulas are evaluated as Groovy scripts. This fact defines the basic
-syntax of formulas. But although Groovy is a full-blown programming
-language simple things are very simple in Groovy like this:
+In node text, the `=` must be the very first character.
+
+## Formula editor support
+
+When text already starts with `=`, Freeplane uses a dedicated formula
+editor.
+
+It supports:
+
+- syntax highlighting,
+- inserting references to other nodes,
+- selecting and previewing referenced nodes while editing.
+
+AI can also assist in writing formulas and scripts. See
+[AI formulas and script editing](../ai/ai-formulas-and-script-editing.md).
+
+## Formula execution failure and optional AI repair
+
+In Freeplane `1.13.3` and later, if you submit a formula and execution
+fails, Freeplane keeps the editor open, shows the diagnostics, and can
+offer AI repair.
+
+To use AI repair, first set up AI integration as described in
+[AI integration: getting started](../ai/ai-integration-getting-started.md).
+
+![Formula execution failed dialog](../images/ai-formula-execution-failed.png)
+
+*A failed formula can offer an immediate AI repair path.*
+
+This is useful when the formula is close to correct but still needs a
+repair pass.
+
+## Simple examples
 
 ```groovy
-  = 3 * 2
+=3 * 2
 ```
 
-gives <tt>6</tt>,
+This gives `6`.
 
 ```groovy
-  = (3 * 2) + " times"
+=(3 * 2) + " times"
 ```
 
-gives <tt>6 times</tt>. Note that the space after the '=' is
-optional.
-
-Now something more complex:
+This gives `6 times`.
 
 ```groovy
-  = children.sum(""){ it.text }
+=children.sum(0){ it.to.num }
 ```
 
-gives the concatenation of all child node texts. By using <tt>sum("")</tt> instead of <tt>sum</tt> we set the start value to "" and ensure that the formula also works if the node has no children at all.
+This sums the numerical values of all child nodes.
 
 ```groovy
-  = children.sum(0){ it.to.num }
+=children.sum(0){ it['item'].num0 }
 ```
 
-sums over the numerical values of the child nodes.
+This sums the numeric `item` attribute across the children and treats
+missing or non-numeric values as `0`.
 
-The following statement sums over the numerical values of the attribute <tt>item</tt> of all childrens. If one child does not have that attribute or if it isn't convertible to a number <tt>num0</tt> (or <tt>getNum0()</tt>) uses 0 instead (since 1.2.1_17).
+## Formula model
 
-```groovy
-  = children.sum(0){ it['item'].num0 }
-```
+Formulas are evaluated as Groovy expressions.
+They use a read-only variant of the [Scripting API](Scripting_API.md).
 
-Formulas have access to a read-only variant of the [Scripting API](Scripting_API.md),
-i.e. formulas may not change anything in a map. There are some
-minor extensions to the Groovy language for formulas to improve the ease of
-use, e.g. for simpler data type conversion.
-Note that properties and methods of a formula node (like <tt>children</tt> or
-<tt>text</tt>) are directly available to the formula, i.e. the leading
-"node." can be left out.
+In practice, that means formulas are meant to be **value-computing**.
+They should read map content and compute a result, not drive the UI or
+mutate the map.
+
+Properties and methods of the current formula node are directly
+available, so many formulas can omit the leading `node.`.
 
 ## References
 
-Formulas have access to all nodes in the map by
+Formulas can reference other nodes by:
 
-* navigating the hierarchy for instance via <tt>=node.children</tt>, <tt>=node.parent</tt> or <tt>=node.map.root</tt>
-* searching the map via <tt>find</tt>, e.g. <tt>=node.find{ it.text == 'sum'}</tt>.
-* direct references to a specific node by id like <tt>ID_172581364.to.num</tt>. To enter the id of a node double-click on the node while the formula editor is opened or use the function *Copy Node ID* in the context menu of a node.
+- navigating the hierarchy, for example
+  `=node.children`, `=node.parent`, or `=node.map.root`
+- searching the map, for example
+  `=node.find{ it.text == 'sum' }`
+- referencing a specific node ID, for example
+  `=ID_172581364.to.num`
 
-Note that like in Excel you can easily create circular references if a node references itself (either directly or indirectly). 
+To insert a node ID while the formula editor is open, double-click the
+referenced node or use `Copy Node ID` from the node context menu.
 
-```groovy
-  = parent.children.sum{ it.to.text }
-```
+## Circular references
 
-The circular reference is obviously due to navigating back and forth
-in the hierarchy. Now an Example that more likely may occur to you
-(paste the next lines into a map):
+As in spreadsheets, formulas can reference themselves indirectly and
+create cycles.
 
-```groovy
-  = "count nodes above 10: " + node.find { it.to.num > 10 }.size()
-    = 10
-    = 11
-```
-
-The result should be <tt>count nodes above 10: 1</tt> but the
-<tt>find</tt> tries to evaluate itself since <tt>it.to</tt> involves a formula evaluation. This leads
-to this error:
-
-    Circular reference: The formula in node '= count nodes....' references itself.
-
-To prevent that you should avoid formula evaluation in the argument to <tt>find</tt> like this:
+Example:
 
 ```groovy
-  = "count nodes matching '11': " + node.find { it.text == '11' }.size()
+=parent.children.sum{ it.to.text }
 ```
 
-For analysis of complicated cases you will have to look up the logfile. Search for messages like this:
-
-    WARNING: Circular reference detected! Traceback (innermost last):
-    * ID_1323597872 = "count nodes above 10: " ... ->  "count nodes above 10: " + node.find { it.to.num > 10 }....
-    -> * ID_1323597872 = "count nodes above 10: " ... ->  "count nodes above 10: " + node.find { it.to.num > 10 }....
-
-The node that is causing the circular reference is highlighted by an asterisk. We see that the cycle is a direct one, i.e. the node is directly referencing itself. But it doesn't need to be so simple and there might be more nodes involved when you happen to see this kind of error.
-
-Note that many problems with circular references arise from using
-<tt>find</tt>. So here's one advice: Avoid <tt>find</tt> if you don't need it.
-
-Also note that references between texts, notes and attributes of the same node do not result in a "circular reference" warning. On the other hand it doesn't matter which attribute, text or note is referenced by another node: cycles are detected only on the (coarse) node level.
-
-## When formulas get too big: Build your own utility classes
-
-Starting with Freeplane 1.3.2 all .groovy files in the script classpath directories are automatically compiled when Freeplane starts. See [Scripting! Your own utility library](Your_own_utility_script_library.md).
-
-## Plus operator for nodes
-
-Given the following map:
+A more realistic example:
 
 ```groovy
- = children.sum()
-   1
-   2
+="count nodes above 10: " + node.find { it.to.num > 10 }.size()
 ```
 
-This will result in "3" since the plus operator for nodes is defined as Node.to.num0 + Node.to.num0. While this is simple and nice in most cases you have to keep in mind that "+" is numeric only and will never concatenate strings.
+The `find` call can trigger formula evaluation while evaluating the same
+node again, which leads to a circular-reference error.
 
-## When the map is changed...
+A safer version is:
 
-Formulas are immediately updated when necessary. (Otherwise it's a bug that you should report.)
+```groovy
+="count nodes matching '11': " + node.find { it.text == '11' }.size()
+```
 
-Formula evaluation is significantly more costly than many other
-things that will happen during normal operation. To reduce the
-overhead of formula evaluation Freeplane implements a dependency
-tracking mechanism that takes care to only update those formulas that
-reference a changed node.
+A practical rule: avoid `find` inside formulas unless you really need
+it.
 
-But this mechanism could theoretically get fooled by complex Groovy expressions.
-I can't give you an example currently but it's definitely possible.
+## What happens when the map changes
 
-So just in case the formula processor got confused somehow there's a
-function <tt>Tools > Formulas > Evaluate all</tt> that re-evaluate the
-whole map.
+Formulas are updated automatically when necessary.
 
+To keep formula updates efficient, Freeplane tracks dependencies and
+reevaluates only formulas that depend on changed content.
 
-### Caching formula evaluation results
+If you suspect stale formula results, use:
 
-For continuous node visualization the properties of a node are queried much more often than they are changed. To avoid recalculation in this cases all evaluation results are stored/cached internally. This cache is initially filled on opening a map and emptied on unload of it.
+- `Tools > Formulas > Evaluate all`
 
-For debugging purposes it is possible to switch off caching completely via the preferences page of the formula plugin. But keep in mind that this might severely impair application's performance, so don't switch caching off unless you really, really need that.
+## Caching
 
+Formula results are cached internally because the same values are often
+read much more often than the map changes.
 
-## Editor support for formulas
-
-For editing of nodes containing a formula a special editor is used that provides the following features:
-
-* Syntax highlighting: Support for standard Groovy expressions and node references.
-* GUI-Support for referencing other nodes: Double click a node to insert a reference to it into the formula.
-* GUI-Support for visualization of node references: If the cursor is in a node id the referenced node will be selected in the map. The tooltip of the editor will show the (transformed) text of the node in this case.
-
-Note that the special editor will only be used if the node text *already starts* with an equal sign. The editor support will be further extended in the future, especially with code completion.
+For debugging, the formula-plugin preferences let you disable formula
+caching, but this can slow Freeplane down significantly.
 
 ## Formatting
 
-Formatting of numbers and dates in node core is available as an element of [styles](../user-documentation/styles.md), that means that they are not formula specific. Formatting of attribute values, details and notes must be handled by setting the value to a formatted object via [format(Object, formatString)](http://docs.freeplane.org/api/org/freeplane/plugin/script/FreeplaneScriptBaseClass.html#format(java.lang.Object,%20java.lang.String) ). For more on data and formatting see [this page](../user-documentation/Data_recognition_and_data_formats.md).
+Formatting of numbers and dates in node text is handled through normal
+styles.
+For attribute values, details, and notes you can format values with the
+scripting helper:
 
+- `format(Object, formatString)`
 
-## Security
+For related background, see
+[Data recognition and data formats](../user-documentation/Data_recognition_and_data_formats.md).
 
-Formulas will have strict security limitations that can not be disabled via configuration. From formulas it's impossible to write to the file system or the network and you can not execute external programs. Read access is granted to Formulas only if you have enabled that for all scripts.
+## Security and map-edit blocking
 
+Formulas have strict security limits.
+They cannot write files, use the network, or execute external programs.
 
-## Miscelleneous
+Freeplane `1.13.3` and later also adds a default-enabled safeguard:
 
-*Richtext nodes* (in node texts and notes) are supported by stripping
-all HTML clutter from the text before evaluation but using plaintext
-is definitely preferable for formulas.
+- `Block formula map edits`
 
-*Borders:* Formula nodes are marked with a green border. This can be changed at
-*View->View settings->Highlight formulas*.
+When this setting is enabled, formulas that try to apply map edits
+while being evaluated or validated can fail instead of changing the map.
+This is especially relevant for formulas that try to create nodes or
+make other map changes.
 
-*Attribute Access:* Formulas provide simplified attribute access via the <tt>['name']</tt> operator:
-```groovy
-  = children.sum(0){ it['attrib_name'].num0 }
-```
+This guard improves safety, but it is not a complete block on every
+possible UI side effect. Formulas should still be written as
+value-computing expressions.
 
-## Open issues
+For AI-assisted formula editing and repair, see
+[AI formulas and script editing](../ai/ai-formulas-and-script-editing.md).
 
-Please help to fix some open issues. Please leave your opinion on the discussion page or in the discussion forum.
+## When formulas get too big
 
-### Named nodes
+If your formulas become large or repetitive, move shared logic into your
+own Groovy utility classes or helper scripts.
 
-Node references by node id are effective and the referenced node can be easily inspected if viewed in the formula editor. But without the editor support the node ids don't make any sense for themselves.
+See:
 
-Named nodes would allow to make references more readable. If for instance one "parameter node" with ID <tt>ID_241399282</tt> is used in many formulas in a map, then it would be good to give it a name, e.g. <tt>scale</tt> and to use <tt>N("scale").to.num</tt> instead of using <tt>ID_241399282.to.num</tt>.
+- [Your own utility script library](Your_own_utility_script_library.md)
 
-Do you have an idea how such names should be defined? Is it enough to have named nodes or do we need named collections of nodes, too?
+## Where to go next
 
-### Implementation of functions available in spreadsheet processors?
-
-Spreadsheet processors have a large number of functions that are not directly supported by Freeplane (see [ODF specification](http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office#odf12)). Of course many of these functions are not easily translatable from tabulars to mindmaps but one might strive to provide as many as possible to increase portability of existing formulas to Freeplane.
-
-What do you think, do we need implementations for functions like NOW(), SECOND(), PPMT(), RRI(), COLUMNS(), etc., even if Groovy equivalents exist? If you do you are encouraged to provide a Groovy class with appropriate static methods and we'll see how to integrate them into Freeplane.
-
-## Limitations
-
-* References to nodes in other maps.
-
-## Further reads
-
-* most important: [Scripting API](Scripting_API.md)
-* [Scripting](../Learning%20Guides/Scripting.md)
-* [Scripting_environment_setup](Scripting_environment_setup.md)
-
-## Example Maps
-
-* [Scripting API improvements](Scripting-convertible-and-more.mm)
-* [General Balance form.mm](http://www.freeplane.org/wiki/images/6/69/Example_-_General_Balance_form.mm) - requires at least 1.2.1_20.
-* [Bayes Theorem in Control of Quality.mm](http://www.freeplane.org/wiki/index.php/File:Bayes_Theorem_in_Control_of_Quality_%28v.2_of_2_-_calculations_in_attributes%29.mm) - requires at least 1.2.4_03
-
-## Videos
-
-* [Expense Reporting in Freeplane](http://www.youtube.com/watch?v=qym9pG3AP4E)
-<!-- ({Category:Documentation})({Category:Advanced Topics}) -->
-
+- [AI formulas and script editing](../ai/ai-formulas-and-script-editing.md) — use AI in the formula editor or repair a failed formula.
+- [Scripting API](Scripting_API.md) — see which objects and methods formulas can read.
+- [References and Cheatsheet](References_and_Cheatsheet.md) — quick lookup while writing formulas.
+- [API/Groovy tutorial](api-groovy-tutorial.md) — learn the Groovy syntax used in formulas.
+- [Your own utility script library](Your_own_utility_script_library.md) — move repeated logic out of large formulas.
+- [Security considerations](Security_considerations.md) — understand the scripting and formula sandbox.

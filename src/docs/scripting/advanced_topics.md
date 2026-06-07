@@ -6,11 +6,11 @@ Add-ons:
 
 [Batch Jobs](Batch_Jobs.md)
 
+[Asking AI from scripts](Asking_AI_from_scripts.md)
+
 [Debugging scripts](Debugging_scripts.md)
 
 [External script file execution](External_script_file_execution.md)
-
-[Formulas](Formulas.md)
 
 [Init scripts](Init_scripts.md)
 

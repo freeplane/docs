@@ -2,13 +2,17 @@
 
 AI integration is available starting with Freeplane version `1.13.1`.
 
+The newer features linked from this page — prompts, editor attachment,
+AI-owned script review, formula-editing controls, and script-facing AI
+requests — require Freeplane `1.13.3` or later.
+
 ### Configure AI in Preferences
 
 Open AI Preferences from the AI panel toolbar burger menu, then
 configure the AI options.
 
 Required user input:
-  
+
 - For OpenRouter:
   - `AI OpenRouter key`
 - For Gemini:
@@ -29,6 +33,27 @@ Notes for Ollama:
 If configuration is missing, chat shows:
 `No AI provider is configured.`
 
+### Important AI controls
+
+The following settings matter for most current AI workflows:
+
+- `AI tool availability`
+  - `Disabled`: no general AI tools
+  - `Reading`: AI can inspect map content without changing it
+  - `Editing`: AI can also make normal map edits
+  - `Script execution`: AI can also work with AI-owned scripts and code
+    editing features
+- `AI may edit formulas`
+  - separately allows AI to help author formulas when general tool
+    availability is high enough
+- `AI-owned script execution policy`
+  - controls whether AI-owned scripts are shown for review or may run
+    directly
+- `AI chat shows tool calls`
+  - shows AI and MCP tool activity in chat
+
+![AI preferences](../images/ai-preferences.png)
+
 ### Send your first AI chat message
 
 1. Open the `AI` panel.
@@ -47,6 +72,10 @@ Helpful chat controls:
 
 - Continue with workflow patterns in
   [AI chat workflows](ai-chat-workflows.md).
+- Learn how prompts and profiles differ in
+  [AI prompts and profiles](ai-prompts-and-profiles.md).
+- Learn about editor attachment, formulas, and script review in
+  [AI formulas and script editing](ai-formulas-and-script-editing.md).
 - For remote tool access, see
   [Model Context Protocol server](model-context-protocol-server.md).
   MCP is disabled by default and should be enabled only when needed,
@@ -54,3 +83,5 @@ Helpful chat controls:
   Claude Desktop or Codex App.
 - For diagnosis, see
   [AI integration troubleshooting](ai-integration-troubleshooting.md).
+- If you write Groovy scripts and want them to call AI, see
+  [Asking AI from scripts](../scripting/Asking_AI_from_scripts.md).

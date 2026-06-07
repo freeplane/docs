@@ -1,11 +1,14 @@
 ## Model Context Protocol server
 
+This page describes the current MCP behavior in Freeplane `1.13.3` and
+later.
+
 Use this feature when you want another local AI app to work with your
 Freeplane maps.
 
 Typical example:
 - You use Claude Desktop or Codex App and want it to read or modify
-  map content through Freeplane tools.
+  map content through Freeplane.
 
 By default, this feature is disabled. Enable it only when you need it.
 
@@ -40,6 +43,26 @@ value.
 If `MCP token` is empty, Freeplane generates a new token on the first
 incoming client request. That first request is rejected by design. Copy
 the generated token and retry from your client.
+
+### MCP behavior and AI settings
+
+Some MCP-assisted editing features depend on the current AI settings.
+This is especially important for features that go beyond simple reading,
+for example formula-related editing.
+
+If you expect an MCP client to perform AI-assisted editing, check the
+same relevant settings you would check for internal AI use, including:
+
+- `AI tool availability`
+- `AI may edit formulas`
+
+### MCP activity in AI chat
+
+If `AI chat shows tool calls` is enabled, MCP activity can also be
+surfaced in the AI chat UI.
+
+This makes it easier to review what happened, even when the action was
+started from another local AI app.
 
 ### Safety notes
 

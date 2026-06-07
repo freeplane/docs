@@ -5,7 +5,7 @@ Freeplane's builtin functionality can be extended by [Groovy](http://groovy-lang
 With Freeplane scripting you can
 
 * write your own functions and use them from the menu or via keyboard shortcuts,
-* use [formulas](../Other%20Topics/Formulas.md) in your map to compute stuff like in Excel, and
+* use [formulas](Formulas.md) in your map to compute stuff like in Excel, and
 * create [add-ons](../getting-started/Add-ons_(install).md) to share it with other users,
 * have [init scripts](Init_scripts.md) executed on startup that changes Freeplane's behavior (since Freeplane 1.5).
 
@@ -205,19 +205,8 @@ Note: For built-in icons, the icon name is the same as the corresponding graphic
 
 ## Formulas
 
-Starting with Freeplane 1.2 one use scripts as [Formulas](../Other%20Topics/Formulas.md) directly in the node core like in Excel. Type this formula in the node core:
-
-```groovy
-= "Icons: " + node.icons.icons
-``` 
-
-This will display the result of the formula instead of the formula itself.
-
-Notes: 
-
-* The equal sign has to be the very first character in the script.
-* On typing the equal sign as the first character a special script editor pops up which supports syntax highlighting.
-
+For formula-specific usage, examples, editor behavior, and current
+safety notes, see the dedicated [Formulas](Formulas.md) page.
 
 ## Data parsing and formatting
 

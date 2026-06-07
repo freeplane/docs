@@ -1,0 +1,114 @@
+# Task: Document AI prompts, profiles, editor attachment, formulas, scripts, and MCP behavior
+- **Task Identifier:** 2026-06-06-ai-user-doc-updates
+- **Scope:** Update the docs site to cover the user-facing AI changes on the current Freeplane feature branch only. This includes prompts, changed AI preferences, AI-owned script review behavior, AI attachment for formula and script editors, formula authoring availability and limits, MCP user-facing behavior, chat tool-call visibility, script-facing AI request features for script authors, formula map-edit blocking, and a scripting-navigation restructure that promotes formulas to the top entry of the scripting section and removes the overlapping formula section from the scripting guide. Do not document LLM-facing tool names, internal refactors, internal class moves, or provider-request plumbing changes that are not part of the user-visible contract.
+- **Motivation:** The current docs site has basic AI pages, but it does not describe several branch changes that materially affect what users can enable, how prompts work, how AI-owned script review behaves, how open formula/script editors connect to AI, when formulas may or may not be editable by AI, how MCP behavior depends on current settings, how scripts can ask AI, or why formula evaluation may now fail when it tries to edit a map. Formula documentation is also currently split between a hard-to-find dedicated page and an overlapping scripting-guide subsection.
+- **Briefing:** This is documentation work in `/Users/dimitry/git-repo/freeplane/docs`. The implementation source of truth for the documented behavior is the current feature branch in `/Users/dimitry/git-repo/freeplane/freeplane`. Keep terminology aligned with current user-visible labels in `Resources_en.properties`. Prefer options, UI elements, feature behavior, and script-author-facing API semantics over implementation-facing tool vocabulary.
+- **Research:**
+  - The docs repo already has an AI section under `src/docs/ai/` with these pages: `ai-integration-getting-started.md`, `ai-chat-workflows.md`, `model-context-protocol-server.md`, and `ai-integration-troubleshooting.md`.
+  - Those pages already cover provider setup, first chat, profile usage, recent-entry deletion, MCP bearer-token authentication, the legacy MCP header, and the empty-token first-request behavior.
+  - The current docs do not mention prompts, where prompts and profiles are stored, the separate preference `AI may edit formulas`, the simplified `AI-owned script execution policy`, the user-visible `Block formula map edits` preference, the attach-AI flow for open formula/script editors, or the current user-facing distinction between ordinary AI editing, formula editing, and AI-owned script review.
+  - The current AI preferences expose user-visible controls for `AI tool availability`, `AI may edit formulas`, `AI-owned script execution policy`, `AI-owned dialog Run permissions`, `AI chat shows tool calls`, `AI MCP server enabled`, `AI MCP server port`, and `MCP token`.
+  - The current formula-plugin preferences expose `Block formula map edits` as a default-enabled formula setting.
+  - The newer AI functionality covered by this documentation effort is available in Freeplane `1.13.3` and later.
+  - Formula documentation currently exists in two places: a dedicated page at `src/docs/scripting/Formulas.md` and an overlapping `## Formulas` section inside `src/docs/scripting/Scripting.md`.
+  - In the current navigation, `Formulas.md` is buried under `Scripts and Scripting -> Advanced Topics`, which makes it easy to miss even though formulas are a core scripting entry point.
+  - Current branch behavior makes formula authoring a separate capability: AI formula editing requires general AI tool availability that includes Editing or Script execution, plus `AI may edit formulas`.
+  - Current branch behavior keeps formula authoring separate from ordinary AI editing flows.
+  - Current branch behavior for AI-owned scripts has only two user-facing policy modes: `Shown, user must press Run` and `Hidden, AI may run directly`.
+  - In shown mode, the AI-owned script dialog is a review gate only: the user reviews script text and presses `Run` or cancels. The earlier extra result-pane behavior is no longer part of that flow.
+  - Current branch behavior includes AI-owned script and attached-editor/code editing features, but this task should describe them only through user-facing behavior and options rather than through tool names.
+  - Current branch behavior includes reusable prompts with their own manager, shown-vs-hidden execution behavior, and prompt-specific model/tool settings.
+  - Current branch behavior includes explicit AI attach buttons in `FormulaEditor` and `ScriptEditorPanel` so users can connect open editors to AI chat.
+  - Current branch behavior can validate a submitted formula, keep the editor open on failure, and offer an AI repair loop from the validation diagnostics.
+  - Current branch behavior makes MCP formula capability depend on runtime AI settings rather than exposing formula authoring unconditionally.
+  - Current branch behavior can show MCP tool-call summaries in AI chat and can open a chat when needed so those summaries are not silently dropped.
+  - Current branch behavior also includes script-author-facing AI request support from Groovy scripts; if documented, it belongs in scripting docs rather than general end-user AI pages.
+  - Among the current `review` tasks in the code repository, `allow-ai-chat-attachment-for-formula-and-script-editors`, `allow-formula-authoring-behind-ai-formula-edit-option`, `allow-scripts-to-ask-ai-with-callback-results`, `groovy-script-execution-tool`, and `prevent-formula-triggered-mode-controller-execute-calls` all have user-facing documentation impact. `split-ai-chat-package-into-internal-packages` and `doclet` do not.
+  - Done tasks `031-add-ai-prompts.md` and `032-align-prompt-chat-model-and-tool-session-overrides.md` also introduced user-facing behavior that is not yet documented adequately in the docs site.
+  - Live verification in the current session confirmed that with `Block formula map edits` enabled, a formula preview that tries to create a child node fails with the diagnostic `Mode-controller execute calls are blocked during formula evaluation.` With that setting disabled, the same preview succeeds and creates the child node.
+- **Analysis:**
+  - Cover only user-facing behavior because the user explicitly excluded internal implementation changes from this documentation task.
+  - The docs need to cover user-facing branch work from both the AI pages and the scripting pages because the branch changed both end-user AI workflows and script-author AI features.
+  - Prompt behavior deserves its own page because it is a distinct user entry path from ordinary AI chat and has its own manager, visibility modes, prompt-specific options, and user questions about persistence and storage location.
+  - Editor attachment plus formula/script review deserves its own advanced page because it crosses Formula Editor, Script Editor, AI-owned script review, formula repair, and formula safety behavior.
+  - Script-author AI request features belong in the scripting section rather than the general AI section.
+  - Formula documentation should have one primary entry page. The dedicated `Formulas.md` page should become that primary page, while `Scripting.md` should keep only a very brief pointer instead of a full overlapping formula section.
+  - Use exact UI labels for preferences, but avoid LLM-facing tool names because the user explicitly does not want implementation-detail tool vocabulary in the docs.
+  - Describe formula and script safety narrowly because the branch improves enforcement for formula-triggered map edits but does not comprehensively block every possible UI side effect.
+  - Internal-only review tasks should not drive user-facing docs just because they are on the same branch.
+- **Design:**
+  - Update `src/docs/ai/ai-integration-getting-started.md` to:
+    - keep the existing provider setup content that is still correct,
+    - add a short explanation of `AI tool availability`,
+    - mention prompts as a separate entry path from ordinary chat,
+    - mention that advanced formula editing is separately controlled by `AI may edit formulas`,
+    - mention that AI-owned script execution behavior is controlled by `AI-owned script execution policy`, and
+    - link to new advanced pages for prompts/profiles and for formulas/script editing.
+  - Add `src/docs/ai/ai-prompts-and-profiles.md` to cover:
+    - what assistant profiles are,
+    - what prompts are and how they differ from assistant profiles,
+    - where prompts and profiles are stored from a user point of view,
+    - where each is managed in the UI,
+    - where prompts appear in menus and popup menus,
+    - shown versus hidden prompt behavior,
+    - prompt-specific model and tool settings,
+    - prompt-created chat behavior versus ordinary chat behavior,
+    - and prompt-related UI such as the manager dialog and progress/cancel behavior for hidden runs.
+  - Add `src/docs/ai/ai-formulas-and-script-editing.md` to cover:
+    - what `AI may edit formulas` enables,
+    - that formula editing is separate from generic AI editing,
+    - the attach-AI button behavior in Formula Editor and Script Editor,
+    - the formula validation failure -> diagnostics -> optional AI repair loop,
+    - the practical meaning of `Shown, user must press Run` versus `Hidden, AI may run directly`,
+    - that shown mode is a review dialog without a separate result pane,
+    - that formulas and AI-owned scripts should avoid side effects,
+    - that `Block formula map edits` is enabled by default and blocks formula-applied map edits during evaluation or validation,
+    - and that this guard is not a complete UI-side-effect firewall.
+  - Update `src/docs/ai/model-context-protocol-server.md` to:
+    - keep the existing enablement and authentication content that is still correct,
+    - state that some AI-assisted editing features, including formula authoring, depend on the current AI settings rather than being available unconditionally,
+    - and mention that MCP activity can be surfaced in AI chat when tool-call visibility is enabled.
+  - Update `src/docs/ai/ai-chat-workflows.md` to:
+    - preserve the existing workflow examples that are still correct,
+    - add concise guidance about visible tool-call summaries when `AI chat shows tool calls` is enabled,
+    - add prompt-oriented workflow guidance,
+    - add a concise note about profiles versus prompts and link to the new prompts/profiles page for storage details,
+    - and link advanced prompt/profile and formula/script-editing behavior to the new pages instead of duplicating it.
+  - Update `src/docs/ai/ai-integration-troubleshooting.md` to add troubleshooting for:
+    - users not finding prompt/profile persistence because storage location is undocumented,
+    - prompt runs not behaving as expected because of shown/hidden mode or tool/model settings,
+    - AI formula editing not being available because `AI may edit formulas` is disabled or general AI tool availability is too low,
+    - AI-owned script actions waiting for user review because `AI-owned script execution policy` is set to shown mode,
+    - result popups caused by script-authored UI calls rather than by the AI-owned review dialog itself,
+    - formula evaluation failures caused by `Block formula map edits`,
+    - editor attachment and AI repair expectations,
+    - and MCP behavior that depends on current runtime AI settings.
+  - Add `src/docs/scripting/Asking_AI_from_scripts.md` to cover script-author-facing AI request behavior, including:
+    - how scripts can ask AI,
+    - the shown/add-to-chat/hidden request modes in user-facing scripting terms,
+    - timeout and cancellation behavior,
+    - callback result handling,
+    - prompt-like model/tool options available to scripts,
+    - and the relevant permission/feature expectations from a script author's point of view.
+  - Update `src/docs/scripting/Formulas.md` to:
+    - move essential introductory formula content to the top as the primary formula entry,
+    - keep formulas easy to understand without requiring the scripting guide first,
+    - add links out to deeper scripting and API pages where appropriate,
+    - and add the current branch note that formula-applied map edits may be blocked during evaluation or validation when `Block formula map edits` is enabled.
+  - Update `src/docs/scripting/Scripting.md` to replace the current `## Formulas` section with only a very brief reference that points readers to `Formulas.md`.
+  - Update `src/docs/SUMMARY.md` to:
+    - add the new AI pages,
+    - add `scripting/Asking_AI_from_scripts.md`,
+    - move `scripting/Formulas.md` to become the first child under `Scripts and Scripting. Start Here`,
+    - keep `Learning Guide` after `Formulas`,
+    - and remove the old `Advanced Topics -> Formulas` entry.
+- **Test specification:**
+  - Automated tests:
+    - Run any existing markdown or link validation available in this repository if such validation is configured for the touched files.
+  - Manual tests:
+    - Run `mdbook serve src --dest-dir ../build/gh-pages -p 3000` from the docs repo root and verify that all updated AI pages render.
+    - Verify that the new AI pages, `scripting/Asking_AI_from_scripts.md`, and the promoted `scripting/Formulas.md` page are reachable from `src/docs/SUMMARY.md`.
+    - Re-check all documented preference labels against the current Freeplane UI strings on the feature branch.
+    - Re-check all documented behavior descriptions against the current feature branch behavior without exposing implementation-detail tool vocabulary.
+    - Re-check prompt behavior, profile/prompt storage notes, editor attachment behavior, and script-review behavior against the current feature branch behavior.
+    - Re-check the formula map-edit guard description against the current live behavior: enabled blocks formula-triggered map edits during evaluation/validation; disabled allows the previously blocked map-editing formula behavior.

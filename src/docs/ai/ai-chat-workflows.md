@@ -3,32 +3,21 @@
 This page focuses on practical ways to get useful results from AI in
 everyday map work.
 
-### Build repeatable behavior with profiles
+## Use profiles and prompts for repeatable work
 
-Use `Manage profiles` to save reusable instructions.
-A profile helps you get consistent results without rewriting the same
-guidance each time.
+- Use `Manage profiles` when you want reusable chat behavior across many
+  requests. Select the profile in the `AI profile` control before
+  sending your request.
+- Use prompts when you want saved actions you can launch directly from
+  menus, for example to rewrite the selected node, summarize a branch,
+  draft a decision, or run a hidden background request.
+- Unlike normal chat, prompts do not use the current assistant profile,
+  and hidden prompts can run without replacing the currently visible
+  chat.
 
-A profile can define:
+For details, see [AI prompts and profiles](ai-prompts-and-profiles.md).
 
-- role and point of view (for example reviewer, analyst, coach),
-- output language and tone,
-- formatting and structure expectations,
-- task-specific rules and decision criteria,
-- map interaction preferences (for example how to propose edits,
-  where to place results, how to summarize branches).
-
-Profiles guide behavior through instructions.
-They do not change tool availability per profile.
-
-Typical setup:
-
-1. Open `Manage profiles`.
-2. Create or edit a profile prompt.
-3. Select that profile in the `AI profile` control.
-4. Send your task request.
-
-### Workflow example: branch spelling correction
+## Workflow example: branch spelling correction
 
 Goal: improve text quality while keeping original content visible.
 
@@ -42,7 +31,7 @@ One practical workflow:
 This makes review easy because suggestions are separated from source
 text.
 
-### Workflow example: summarize extracted notes
+## Workflow example: summarize extracted notes
 
 Goal: turn long notes into short, useful summaries.
 
@@ -53,7 +42,7 @@ documents by the user.
 2. Ask AI to summarize by section or action items.
 3. Store concise summaries in nearby nodes.
 
-### Workflow example: draft decisions
+## Workflow example: draft decisions
 
 Goal: produce decision drafts from map context.
 
@@ -61,7 +50,18 @@ Goal: produce decision drafts from map context.
 2. Request a structured decision draft.
 3. Iterate with follow-up prompts to refine wording and scope.
 
-### Manage recent chat entries
+## Visible tool-call summaries
+
+If `AI chat shows tool calls` is enabled, Freeplane can show tool
+activity in chat.
+
+This can help when you want to understand:
+
+- what the AI just inspected,
+- which edit step happened,
+- whether MCP-driven activity was surfaced into chat.
+
+## Manage recent chat entries
 
 Use `Chats` to manage recent conversations. From there you can:
 
@@ -69,7 +69,7 @@ Use `Chats` to manage recent conversations. From there you can:
 - `Delete` selected chat or transcript entries.
 - keep only active, relevant recent conversations.
 
-### Turn navigation
+## Turn navigation
 
 Undo and redo are available in chat turn flow:
 
