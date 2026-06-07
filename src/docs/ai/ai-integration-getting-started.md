@@ -6,6 +6,28 @@ The newer features linked from this page — prompts, editor attachment,
 AI-owned script review, formula-editing controls, and script-facing AI
 requests — require Freeplane `1.13.3` or later.
 
+## Benefits and risks
+
+Benefits:
+
+- AI can summarize, rewrite, inspect, and help edit map content faster.
+- Prompts, profiles, formulas, and scripts can make repeated tasks
+  easier.
+
+Risks:
+
+- Depending on your provider and setup, map content sent to AI may
+  leave your machine.
+- Model output can be wrong, misleading, or influenced by map content.
+- Higher-permission features such as editing, formula authoring,
+  script execution, and MCP increase risk and should be enabled
+  deliberately.
+
+For the higher-risk features, read
+[AI formulas and script editing](ai-formulas-and-script-editing.md)
+and [Model Context Protocol server](model-context-protocol-server.md)
+before enabling them.
+
 ### Configure AI in Preferences
 
 Open AI Preferences from the AI panel toolbar burger menu, then
@@ -48,7 +70,7 @@ The following settings matter for most current AI workflows:
     availability is high enough
 - `AI-owned script execution policy`
   - controls whether AI-owned scripts are shown for review or may run
-    directly
+    directly without user review
 - `AI chat shows tool calls`
   - shows AI and MCP tool activity in chat
 
@@ -74,8 +96,10 @@ Helpful chat controls:
   [AI chat workflows](ai-chat-workflows.md).
 - Learn how prompts and profiles differ in
   [AI prompts and profiles](ai-prompts-and-profiles.md).
-- Learn about editor attachment, formulas, and script review in
+- Learn about editor attachment, formulas, and script editing in
   [AI formulas and script editing](ai-formulas-and-script-editing.md).
+- Learn about direct AI-owned script execution in
+  [AI-owned script execution](ai-owned-script-execution.md).
 - For remote tool access, see
   [Model Context Protocol server](model-context-protocol-server.md).
   MCP is disabled by default and should be enabled only when needed,

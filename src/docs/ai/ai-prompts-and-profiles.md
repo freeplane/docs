@@ -4,6 +4,23 @@ The prompt features described on this page require Freeplane `1.13.3`
 or later. Assistant profiles are documented here together because they
 are closely related in everyday AI use.
 
+## Benefits and risks
+
+Benefits:
+
+- profiles make normal chat behavior more repeatable,
+- prompts make repeated AI actions launchable from menus,
+- prompt-specific model and tool settings can be saved only when
+  needed.
+
+Risks:
+
+- prompts can run hidden,
+- prompts can use saved model or tool settings that are different from
+  the current chat settings,
+- prompt output is still untrusted and should be reviewed before you
+  rely on it.
+
 ## Profiles and prompts are not the same thing
 
 **Assistant profiles** are reusable instructions for normal AI chat.

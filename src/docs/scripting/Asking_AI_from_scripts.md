@@ -8,6 +8,20 @@ The AI scripting API described on this page is available in Freeplane
 This page is for script authors who want Groovy scripts to send AI
 requests asynchronously and handle the result in a callback.
 
+## Benefits and risks
+
+Benefits:
+
+- scripts can reuse AI and saved prompts without blocking the UI,
+- callbacks, cancellation, and explicit model/tool settings give script
+  authors control over the request flow.
+
+Risks:
+
+- AI output must be treated as untrusted input,
+- hidden request modes reduce visibility,
+- scripts that act on AI output or generated code can become dangerous.
+
 ## What scripts can do
 
 From Groovy scripts you can:

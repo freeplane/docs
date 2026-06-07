@@ -12,6 +12,22 @@ Typical example:
 
 By default, this feature is disabled. Enable it only when you need it.
 
+## Benefits and risks
+
+Benefits:
+
+- another local AI app can work with your Freeplane maps,
+- Freeplane still remains the place where map actions actually happen.
+
+Risks:
+
+- any local software that can reach the local port and has the token can
+  try to call the server,
+- an MCP client may itself send map content or results to external AI
+  services,
+- model mistakes and prompt injection through map content or scripts
+  still cannot be fully excluded.
+
 ### Why you would enable it
 
 - To use Freeplane from another local AI tool.
@@ -66,6 +82,10 @@ started from another local AI app.
 
 ### Safety notes
 
+- Freeplane listens on `127.0.0.1` only. It is not remotely reachable
+  by default.
+- It becomes externally reachable only if separate forwarding or proxy
+  software exposes that local port.
 - Keep the token secret.
 - If it does not start, check the port value in Preferences.
 - Disable the MCP server when not needed.

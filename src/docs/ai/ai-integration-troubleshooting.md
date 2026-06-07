@@ -1,6 +1,6 @@
 ## AI integration troubleshooting
 
-### Start here
+## Start here
 
 If AI does not respond as expected, open AI Preferences (from the AI
 panel burger menu) and check:
@@ -15,7 +15,20 @@ panel burger menu) and check:
 For prompts, editor attachment, AI-owned script review, and formula
 editing features, use Freeplane `1.13.3` or later.
 
-### Messages you may see
+## Benefits and risks
+
+Benefits:
+
+- this page helps you diagnose configuration and permission problems,
+- it can help you avoid enabling stronger AI features by guesswork.
+
+Risks:
+
+- some fixes involve enabling stronger permissions,
+- when a fix requires editing, formula authoring, script execution, or
+  MCP, re-read the corresponding feature page before enabling it.
+
+## Messages you may see
 
 - `No AI provider is configured.`
   - Required provider settings are missing.
@@ -33,7 +46,7 @@ editing features, use Freeplane `1.13.3` or later.
 - `Unknown AI provider selection.`
   - Re-check provider settings in Preferences.
 
-### Prompts and profiles
+## Prompts and profiles
 
 If you cannot find saved prompts or assistant profiles:
 
@@ -48,7 +61,7 @@ If prompts do not behave like normal chat, that may be expected:
 - shown prompts open their own chat,
 - hidden prompts do not stay as visible saved chats.
 
-### Formula editing is missing or not offered
+## Formula editing is missing or not offered
 
 If AI does not offer formula editing:
 
@@ -57,10 +70,12 @@ If AI does not offer formula editing:
 
 Formula editing is gated separately from ordinary AI editing.
 
-### AI-owned script review behaves differently than expected
+## AI-owned script review behaves differently than expected
 
 If an AI-owned script waits for you instead of running immediately,
 check `AI-owned script execution policy`.
+For the full behavior and risk model, see
+[AI-owned script execution](ai-owned-script-execution.md).
 
 - `Shown, user must press Run`
   - opens the review dialog and waits for your decision.
@@ -71,7 +86,7 @@ If you see a popup with a script result, that popup may have been
 created by the script itself rather than by the AI-owned review dialog.
 Prefer `return` or `println` in scripts when you do not want UI popups.
 
-### Formula execution fails while editing
+## Formula execution fails while editing
 
 If formula execution fails with a message about blocked execute calls,
 check the formula-plugin setting `Block formula map edits`.
@@ -82,7 +97,7 @@ validation can fail by design.
 This is especially relevant if a formula tries to create nodes or make
 other map changes.
 
-### Editor attachment and AI repair
+## Editor attachment and AI repair
 
 If the `AI` button in `Formula Editor` or `Edit script` does not behave
 as expected:
@@ -92,7 +107,7 @@ as expected:
 - if formula repair is offered after an execution failure, remember that
   the repair request is optional and starts only if you choose it.
 
-### MCP not working
+## MCP not working
 
 If another local AI app cannot use Freeplane through MCP:
 
@@ -115,12 +130,12 @@ Also remember that some MCP-assisted editing features depend on the
 current AI settings. If formula-related editing is missing, re-check
 `AI tool availability` and `AI may edit formulas`.
 
-### Scripts asking AI
+## Scripts asking AI
 
 If you are troubleshooting Groovy scripts that call AI, see
 [Asking AI from scripts](../scripting/Asking_AI_from_scripts.md).
 
-### Quick success checklist
+## Quick success checklist
 
 Use this after changes or upgrades:
 

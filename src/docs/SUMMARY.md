@@ -12,6 +12,7 @@
   - [AI chat workflows](ai/ai-chat-workflows.md)
   - [AI prompts and profiles](ai/ai-prompts-and-profiles.md)
   - [AI formulas and script editing](ai/ai-formulas-and-script-editing.md)
+  - [AI-owned script execution](ai/ai-owned-script-execution.md)
   - [Model Context Protocol server](ai/model-context-protocol-server.md)
   - [AI integration troubleshooting](ai/ai-integration-troubleshooting.md)
 - [User documentation](user-documentation/user-documentation.md)

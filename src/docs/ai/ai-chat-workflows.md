@@ -3,6 +3,21 @@
 This page focuses on practical ways to get useful results from AI in
 everyday map work.
 
+## Benefits and risks
+
+Benefits:
+
+- workflow patterns can make repeated map tasks faster and more
+  consistent,
+- profiles and prompts reduce repeated setup work.
+
+Risks:
+
+- AI suggestions can still be wrong,
+- hidden prompt runs reduce visibility,
+- tool-call summaries help review what happened, but they do not prove
+  that the result is correct or safe.
+
 ## Use profiles and prompts for repeatable work
 
 - Use `Manage profiles` when you want reusable chat behavior across many

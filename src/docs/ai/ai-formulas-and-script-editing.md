@@ -1,7 +1,21 @@
 ## AI formulas and script editing
 
 The features on this page require Freeplane `1.13.3` or later.
-Each section below repeats the settings it needs.
+The feature sections below repeat the settings they need.
+
+## Benefits and risks
+
+Benefits:
+
+- AI can draft, explain, and repair formulas and scripts faster,
+- editor attachment lets AI work with the live text you are currently
+  editing.
+
+Risks:
+
+- formulas and scripts can be wrong or unsafe,
+- models make mistakes, and prompt injection through map content or
+  scripts cannot be fully excluded.
 
 ## Formula editing and execution with AI
 
@@ -9,6 +23,11 @@ To use this:
 
 - `AI tool availability` must include `Editing` or `Script execution`.
 - `AI may edit formulas` must be enabled.
+
+Benefit: AI can help draft and repair formulas faster.
+
+Risk: review any generated formula before submitting it, especially if
+it refers to other nodes or searches the map.
 
 `Formula Editor` can be attached to AI through its local `AI` button.
 
@@ -49,6 +68,11 @@ repair, see [Formulas](../scripting/Formulas.md).
 No AI permission is needed for this safeguard itself. It is a
 formula-plugin preference and applies to all formulas.
 
+Benefit: this blocks one important class of formula side effects.
+
+Risk: if you disable it, formula evaluation can perform map edits when
+the formula text does that.
+
 The formula-plugin preference `Block formula map edits` is enabled by
 default.
 
@@ -66,6 +90,16 @@ To use this:
 
 - `AI tool availability` must include `Script execution`.
 
+Benefit: AI can help draft, explain, and refactor Groovy scripts
+faster.
+
+Risk: AI-generated code is untrusted code and should be reviewed before
+running it.
+
+This attached editor flow helps AI edit the current script draft. For
+execution of AI-owned scripts, see
+[AI-owned script execution](ai-owned-script-execution.md).
+
 `Edit script` can be attached to AI through its local `AI` button.
 
 When you attach the editor, AI works with the **live text currently
@@ -74,33 +108,6 @@ open in that editor**, not only with already-saved map content.
 ![Script Editor with AI button](../images/ai-script-editor-dialog.png)
 
 *Script Editor with the local AI attach button.*
-
-## AI-owned script execution policy
-
-This section matters only when `AI tool availability` includes `Script
-execution`.
-
-`AI-owned script execution policy` controls how AI-created scripts are
-run:
-
-- `Shown, user must press Run`
-- `Hidden, AI may run directly`
-
-In shown mode, Freeplane opens a review dialog so you can inspect the
-script before running it.
-
-If you want AI to run the script directly, this policy must be `Hidden,
-AI may run directly`.
-The separate `AI-owned dialog Run permissions` setting controls which
-external permissions a user-started `Run` from that dialog uses.
-
-![AI-owned script review dialog](../images/ai-owned-script-review-dialog.png)
-
-*Shown mode is a review gate. The dialog is for script inspection and
-Run/Cancel only.*
-
-The shown dialog is not a results window. If you later see a popup with
-script output, that popup usually comes from the script itself.
 
 ## Prefer value-computing formulas and scripts
 
@@ -123,9 +130,11 @@ If you want most features on this page, a good default configuration is:
 
 - `AI tool availability`: `Editing` or `Script execution`
 - `AI may edit formulas`: enabled if you want AI to help with formulas
-- `AI-owned script execution policy`: `Shown, user must press Run`
 - `AI chat shows tool calls`: enabled if you want visible AI/MCP tool
   activity in chat
+
+For AI-owned script execution settings, see
+[AI-owned script execution](ai-owned-script-execution.md).
 
 The preferences page below shows the main settings involved in these
 workflows.
