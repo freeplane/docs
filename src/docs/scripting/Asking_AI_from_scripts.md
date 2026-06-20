@@ -28,8 +28,10 @@ From Groovy scripts you can:
 
 - send raw prompt text to AI,
 - run a saved AI prompt by name,
-- choose whether the request is shown in chat or runs hidden,
+- choose whether the request starts a new visible chat, appends to the
+  current visible chat, or runs hidden,
 - choose current or explicit model/tool settings,
+- provide request-scoped system and profile messages,
 - cancel a running request,
 - receive the terminal result in a callback.
 
@@ -91,7 +93,7 @@ You can also override those defaults with `AiRequestOptions`.
 
 The available request modes are:
 
-- `SHOW_IN_CHAT`
+- `SHOW_IN_NEW_CHAT`
   - always opens a new visible AI chat for the request.
 - `ADD_TO_CHAT`
   - sends into the current visible chat when one exists,
@@ -114,7 +116,7 @@ c.askAi(
     "Rewrite the selected node for clarity.",
     AiRequestOptions.builder()
         .timeout(Duration.ofSeconds(30))
-        .mode(AiRequestMode.SHOW_IN_CHAT)
+        .mode(AiRequestMode.SHOW_IN_NEW_CHAT)
         .toolAvailability(AiToolAvailability.EDITING)
         .build()
 ) { result ->
@@ -149,13 +151,60 @@ c.askAi(
     "Draft a short decision note from the selected branch.",
     AiRequestOptions.builder()
         .timeout(Duration.ofSeconds(45))
-        .mode(AiRequestMode.SHOW_IN_CHAT)
+        .mode(AiRequestMode.SHOW_IN_NEW_CHAT)
         .modelSelection(AiModelSelection.explicit("gemini", "gemini-2.5-flash"))
         .build()
 ) { result ->
     println result.status
 }
 ```
+
+## Request-scoped system and profile messages
+
+`AiRequestOptions` can provide instruction text for a single request:
+
+- `systemMessage(text)` sets the request's base system instruction text.
+- `profile(name)` resolves a saved assistant profile by name.
+- `profile(name, message)` uses the given profile message text directly.
+
+Example:
+
+```groovy
+import java.time.Duration
+import org.freeplane.api.ai.AiRequestMode
+import org.freeplane.api.ai.AiRequestOptions
+import org.freeplane.api.ai.AiToolAvailability
+
+c.askAi(
+    "Review the selected branch and list risks.",
+    AiRequestOptions.builder()
+        .timeout(Duration.ofSeconds(60))
+        .mode(AiRequestMode.ADD_TO_CHAT)
+        .toolAvailability(AiToolAvailability.READING)
+        .systemMessage("Use risk-review terminology. Be concise.")
+        .profile("Careful reviewer", """Now you have the profile Careful reviewer.
+Profile definition: Check claims conservatively and say when evidence is missing.""")
+        .build()
+) { result ->
+    println result.status
+}
+```
+
+The system message supplied by a script is base instruction text. It
+does not disable Freeplane's own request guidance. Freeplane still adds
+applicable guidance for tool use, visible versus hidden execution, code
+or formula editing state, and profile-control behavior.
+
+For visible chats, Freeplane stores the base system message with the
+chat and stores profile message snapshots as profile events. If
+`ADD_TO_CHAT` is used with a request system message that differs from
+the current visible chat's captured base system message, Freeplane starts
+a new visible chat instead of mixing incompatible system instructions.
+
+Hidden requests also use the request system text as base text and still
+receive applicable Freeplane guidance. They do not add a visible chat
+history entry, and hidden requests omit visible-chat Markdown response
+guidance.
 
 ## Selection override
 

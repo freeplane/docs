@@ -56,6 +56,15 @@ Typical profile uses:
 A profile affects normal AI chat. It does not create a separate saved
 menu action.
 
+When a profile is applied to a chat, Freeplane stores the profile message
+snapshot in that chat. Later changes to the profile definition do not
+rewrite earlier chat history. Use `Show instruction history` in the AI
+chat options menu to inspect committed profile instruction blocks.
+
+`Preview next request instructions` shows the effective profile message
+for the next visible request. If you select a different profile, the
+preview shows that pending profile message before you send the request.
+
 ## Manage prompts
 
 Open `Edit prompts...` from the AI menus to create or edit saved
@@ -96,7 +105,8 @@ that user directory.
 
 Each prompt stores whether it should:
 
-- **Show in chat** — open a fresh visible AI chat for the prompt, or
+- **Show in a new chat** — open a fresh visible AI chat for the prompt,
+  or
 - run hidden — execute without replacing the currently visible chat.
 
 Shown prompts open their own chat instead of appending to the previous

@@ -32,6 +32,32 @@ Risks:
 
 For details, see [AI prompts and profiles](ai-prompts-and-profiles.md).
 
+## Review chat instructions
+
+The AI chat options menu has two independent instruction controls:
+
+- `Show instruction history` shows the committed system and profile
+  instruction blocks stored with the chat. This is useful when you want
+  to inspect which instructions were active for earlier visible chat
+  requests.
+- `Preview next request instructions` shows a non-persistent preview of
+  the system and profile instructions that would be used by the next
+  visible request.
+
+The preview appears below the `AI profile` selector and above the input
+area. It updates when relevant request inputs change, for example the
+selected profile, tool availability, or system instruction state.
+
+The preview is not part of the chat transcript. It is not copied with
+chat history, saved as a committed chat message, counted as a chat turn,
+or sent as a separate user message. It is a display of the next request's
+instruction state.
+
+If the selected profile differs from the profile currently active in the
+chat, the preview applies that pending profile change first. The preview
+then shows the composed system instruction followed by the effective
+profile instruction.
+
 ## Workflow example: branch spelling correction
 
 Goal: improve text quality while keeping original content visible.
