@@ -80,6 +80,22 @@ Run/Cancel only.*
 The shown dialog is not a results window. If you later see a popup with
 script output, that popup usually comes from the script itself.
 
+## Arguments and run feedback
+
+AI-owned scripts can have Groovy source code and separate
+`Arguments JSON`. The script receives the parsed JSON value as `args`;
+a blank field means `args == null`.
+
+In shown mode, review both the source code and the arguments before you
+press `Run`. Invalid JSON prevents the script from running until it is
+fixed.
+
+When a user-reviewed AI-owned script finishes, fails, or is cancelled,
+Freeplane reports the result back into the chat so the assistant can
+continue from what actually happened. If the script uses `println`, the
+output is available to AI and is also written to the normal script
+output panel or log.
+
 ## AI-owned dialog Run permissions
 
 This section matters only in shown mode, when the user presses `Run` in

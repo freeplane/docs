@@ -33,7 +33,37 @@ In the script editor's menus select *Actions/Run*. The following output will be 
     1st script: test 1
     Result:null
 
-That way you can test your scripts very easily. 
+That way you can test your scripts very easily.
+
+## Pass data through Arguments JSON
+
+The script editor has a separate `Arguments JSON` field. Use it for data
+you do not want to quote inside the Groovy source, such as longer text,
+lists, or structured values.
+
+The script receives the parsed JSON value as `args`.
+
+Example arguments:
+
+```json
+{"message": "Hello from JSON"}
+```
+
+Example script:
+
+```groovy
+def message = args?.message ?: 'Hello'
+println message
+return message
+```
+
+A blank `Arguments JSON` field means `args == null`. Nonblank input must
+be valid JSON. The JSON root can be an object, array, string, number,
+boolean, or `null`.
+
+When you save a map local script, Freeplane also saves its arguments.
+Running the same saved script later from the script editor or from the
+Scripts menu uses the same saved arguments.
 
 ## Execute the script via the menu
 

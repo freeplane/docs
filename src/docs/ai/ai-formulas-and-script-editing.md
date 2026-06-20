@@ -107,7 +107,19 @@ open in that editor**, not only with already-saved map content.
 
 ![Script Editor with AI button](../images/ai-script-editor-dialog.png)
 
-*Script Editor with the local AI attach button.*
+*Script Editor with the local AI attach button and Arguments JSON field.*
+
+The script editor also has an `Arguments JSON` field. When the editor
+is attached to AI, AI can edit both the Groovy source and this JSON.
+Use the field for data you do not want to quote inside the script, such
+as longer text, lists, or structured values.
+
+In the script, the parsed JSON value is available as `args`; a blank
+field means `args == null`. Invalid JSON prevents compile/run until it
+is fixed.
+
+For map local script usage of `Arguments JSON`, see
+[Map local scripts](../scripting/Map_local_scripts.md).
 
 ## Prefer value-computing formulas and scripts
 
