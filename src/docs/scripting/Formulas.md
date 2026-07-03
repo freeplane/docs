@@ -53,7 +53,7 @@ To use AI repair, first set up AI integration as described in
 *A failed formula can offer an immediate AI repair path.*
 
 This is useful when the formula is close to correct but still needs a
-repair pass.
+repair pass. The AI repair request starts only if you confirm it.
 
 ## Simple examples
 

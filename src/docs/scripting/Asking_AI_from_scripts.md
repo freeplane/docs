@@ -13,8 +13,8 @@ requests asynchronously and handle the result in a callback.
 Benefits:
 
 - scripts can reuse AI and saved prompts without blocking the UI,
-- callbacks, cancellation, and explicit model/tool settings give script
-  authors control over the request flow.
+- callbacks, cancellation, and explicit model configuration/tool
+  settings give script authors control over the request flow.
 
 Risks:
 
@@ -30,7 +30,7 @@ From Groovy scripts you can:
 - run a saved AI prompt by name,
 - choose whether the request starts a new visible chat, appends to the
   current visible chat, or runs hidden,
-- choose current or explicit model/tool settings,
+- choose current or explicit model configuration and tool settings,
 - provide request-scoped system and profile messages,
 - cancel a running request,
 - receive the terminal result in a callback.
@@ -85,7 +85,7 @@ c.runAiPrompt("Summarize branch", Duration.ofSeconds(30)) { result ->
 ```
 
 The `Duration` overload uses the saved prompt's default visibility,
-model, and tool settings.
+model configuration, and tool settings.
 
 You can also override those defaults with `AiRequestOptions`.
 
@@ -124,11 +124,15 @@ c.askAi(
 }
 ```
 
-## Model and tool selection
+## Model configuration and tool selection
 
 `AiRequestOptions` can request:
 
-- current model or an explicit model,
+- inherited/current model configuration,
+- an explicit provider/model,
+- an explicit default model for a saved-prompt request,
+- provider-independent thinking effort,
+- temperature,
 - current tools or an explicit tool level.
 
 Tool levels are:
@@ -139,20 +143,49 @@ Tool levels are:
 - `EDITING`
 - `SCRIPT_EXECUTION`
 
-Explicit model example:
+Thinking-effort values are:
+
+- `MAX`
+- `XHIGH`
+- `HIGH`
+- `MEDIUM`
+- `LOW`
+- `MINIMAL`
+- `NONE`
+
+For temperature:
+
+- leaving the field unset inherits the surrounding configuration,
+- `AiTemperature.modelDefault()` explicitly asks the selected model to
+  use its own default temperature,
+- `AiTemperature.of(value)` sends a numeric temperature value.
+
+For `askAi(...)`, unset model-configuration fields inherit the current
+model defaults. For `runAiPrompt(...)`, unset fields inherit the saved
+prompt configuration where that prompt has a value.
+
+Explicit model-configuration example:
 
 ```groovy
 import java.time.Duration
+import org.freeplane.api.ai.AiModelConfiguration
 import org.freeplane.api.ai.AiModelSelection
 import org.freeplane.api.ai.AiRequestMode
 import org.freeplane.api.ai.AiRequestOptions
+import org.freeplane.api.ai.AiTemperature
+import org.freeplane.api.ai.AiThinkingEffort
 
 c.askAi(
     "Draft a short decision note from the selected branch.",
     AiRequestOptions.builder()
         .timeout(Duration.ofSeconds(45))
         .mode(AiRequestMode.SHOW_IN_NEW_CHAT)
-        .modelSelection(AiModelSelection.explicit("gemini", "gemini-2.5-flash"))
+        .modelConfiguration(
+            AiModelConfiguration.builder()
+                .modelSelection(AiModelSelection.explicit("gemini", "gemini-2.5-flash"))
+                .thinkingEffort(AiThinkingEffort.LOW)
+                .temperature(AiTemperature.modelDefault())
+                .build())
         .build()
 ) { result ->
     println result.status
@@ -164,6 +197,8 @@ c.askAi(
 `AiRequestOptions` can provide instruction text for a single request:
 
 - `systemMessage(text)` sets the request's base system instruction text.
+- `exactSystemMessage(text)` sets the complete system instruction text
+  for the request and suppresses Freeplane-composed system additions.
 - `profile(name)` resolves a saved assistant profile by name.
 - `profile(name, message)` uses the given profile message text directly.
 
@@ -206,6 +241,12 @@ receive applicable Freeplane guidance. They do not add a visible chat
 history entry, and hidden requests omit visible-chat Markdown response
 guidance.
 
+Use `exactSystemMessage(text)` only when the script supplies the whole
+system instruction itself. Exact system text is trimmed and sent without
+Freeplane-composed additions such as tool-use guidance, map-selection
+guidance, profile-control guidance, Markdown guidance, or code-host
+guidance. Tool exposure is still controlled by `AiToolAvailability`.
+
 ## Selection override
 
 Advanced scripts can override the selection structure injected into the
@@ -219,6 +260,13 @@ Those still reflect the real current state.
 
 Accepted requests finish through the callback with an `AiRequestResult`.
 The callback runs asynchronously on Freeplane's main/UI thread.
+
+If a callback uses `println`, Freeplane routes that output back to the
+originating script output target when such a target exists. For an
+attached script-editor run, that target is the script editor output
+window. For other script runs, it is the run's output stream when one is
+available. Freeplane does not create a script editor window only to show
+callback output.
 
 Useful fields:
 

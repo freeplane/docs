@@ -10,14 +10,16 @@ Benefits:
 
 - profiles make normal chat behavior more repeatable,
 - prompts make repeated AI actions launchable from menus,
-- prompt-specific model and tool settings can be saved only when
-  needed.
+- prompt/profile model parameters and prompt-specific tool settings can
+  be saved only when needed.
 
 Risks:
 
 - prompts can run hidden,
-- prompts can use saved model or tool settings that are different from
-  the current chat settings,
+- prompts and profiles can use saved model parameters that are different
+  from the current chat settings,
+- prompts can also use saved tool settings that are different from the
+  current chat settings,
 - prompt output is still untrusted and should be reviewed before you
   rely on it.
 
@@ -34,12 +36,12 @@ A prompt can open its own chat or run in the background.
 | --- | --- | --- |
 | Main purpose | Reusable chat behavior | Reusable saved action |
 | Where you use it | `AI profile` in the AI chat panel | AI menus in the main menu and node popup |
-| Stored settings | Name and instruction text | Name, prompt text, visibility, optional model, optional tools |
+| Stored settings | Name, instruction text, optional model, optional thinking effort, optional temperature | Name, prompt text, visibility, optional model, optional thinking effort, optional temperature, optional tools |
 | Uses the current profile? | Yes | No. Prompt runs stay separate from assistant profiles. |
 
 ## Manage assistant profiles
 
-Open `Manage profiles` from the AI panel to create or edit reusable
+Open `Edit profiles...` from the AI panel to create or edit reusable
 profiles.
 
 ![Assistant Profiles dialog](../images/ai-assistant-profiles-dialog.png)
@@ -55,6 +57,10 @@ Typical profile uses:
 
 A profile affects normal AI chat. It does not create a separate saved
 menu action.
+
+A profile can also store optional model-configuration values: model,
+thinking effort, and temperature. Leave these fields as `Current` when
+the profile should inherit the current chat/default values.
 
 When a profile is applied to a chat, Freeplane stores the profile message
 snapshot in that chat. Later changes to the profile definition do not
@@ -72,8 +78,8 @@ prompts.
 
 ![Prompts dialog](../images/ai-prompts-dialog.png)
 
-*Prompts are saved actions with their own visibility, model, and tool
-settings.*
+*Prompts are saved actions with their own visibility, model
+configuration, and tool settings.*
 
 Prompts can be run from:
 
@@ -81,9 +87,9 @@ Prompts can be run from:
 - the node popup AI section,
 - the prompts dialog itself.
 
-In the prompt editor, the `Model` and `Tools` selectors are optional.
-You can set them explicitly for that prompt, or leave them on the
-current chat settings so the prompt uses the model and tool selection
+In the prompt editor, the `Model`, `Thinking effort`, `Temperature`,
+and `Tools` selectors are optional. You can set them explicitly for that
+prompt, or leave them on `Current` so the prompt inherits the values
 already in effect.
 
 Unlike assistant profiles, a prompt is meant to be executed directly.
@@ -115,17 +121,39 @@ conversation.
 Hidden prompts do not stay as saved visible chats. Freeplane can still
 show progress while they run, and you can cancel them.
 
-## Prompt-specific model and tool settings
+## Slash prompt references in chat
+
+In a normal AI chat draft, you can start the input with `/` and a saved
+prompt name. When the leading slash text resolves to a saved prompt,
+Freeplane substitutes that prompt's saved text into the model-facing
+message while keeping the `/prompt name` reference visible in chat.
+
+This is not the same as running the prompt from a menu. Slash prompt
+references ignore the prompt's visibility, model, thinking-effort,
+temperature, and tool settings.
+
+## Prompt/profile model parameters and tools
 
 A prompt can use:
 
-- the current chat model and tool settings, or
-- its own saved model and tool settings.
+- the current chat model, thinking effort, temperature, and tool
+  settings, or
+- its own saved model, thinking effort, temperature, and tool settings.
 
-If a shown prompt opens a chat with its own model or tool setting, that
-chat starts with the prompt's effective values. Later, if you change the
-model or tools in that chat yourself, the chat returns to the normal
-current-setting path.
+A profile can use:
+
+- the current chat model, thinking effort, and temperature, or
+- its own saved model, thinking effort, and temperature.
+
+For prompt and profile controls, `Current` means the field is inherited.
+For temperature, `Model default` is different from `Current`: it
+explicitly sends no temperature value to the provider and can override a
+numeric value inherited from a lower-priority setting.
+
+If a shown prompt opens a chat with its own model-configuration or tool
+setting, that chat starts with the prompt's effective values. Later, if
+you change the model, thinking effort, temperature, or tools in that
+chat yourself, the chat returns to the normal current-setting path.
 
 ## Profiles versus prompts in practice
 

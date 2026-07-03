@@ -20,8 +20,8 @@ Risks:
 
 ## Use profiles and prompts for repeatable work
 
-- Use `Manage profiles` when you want reusable chat behavior across many
-  requests. Select the profile in the `AI profile` control before
+- Use `Edit profiles...` when you want reusable chat behavior across
+  many requests. Select the profile in the `AI profile` control before
   sending your request.
 - Use prompts when you want saved actions you can launch directly from
   menus, for example to rewrite the selected node, summarize a branch,
@@ -31,6 +31,41 @@ Risks:
   chat.
 
 For details, see [AI prompts and profiles](ai-prompts-and-profiles.md).
+
+## Reuse prompts inside normal chat
+
+To reuse a saved prompt without launching it from a menu, start the chat
+input with `/` and the prompt name.
+
+Example:
+
+```text
+/Summarize branch for release notes
+```
+
+If the leading `/Summarize branch` text matches a saved prompt,
+Freeplane keeps that prompt reference visible in the chat but sends the
+saved prompt text to the model, followed by the remaining text. If no
+saved prompt matches, the message is sent as ordinary chat text.
+
+Prompt references use only the saved prompt text. They do not apply the
+prompt's saved visibility, model, temperature, thinking-effort, or tool
+settings.
+
+## Choose model parameters for interactive chat
+
+The AI panel top bar contains the model selector and the thinking-effort
+selector. The panel menu contains the `Temperature` submenu.
+
+- Model selection chooses the provider/model used for ordinary chat.
+- Thinking effort uses Freeplane's provider-independent levels: `Max`,
+  `Extra high`, `High`, `Medium`, `Low`, `Minimal`, and `None`.
+- Temperature can be `Model default`, one of the numeric presets, or a
+  custom numeric value.
+
+Providers and models do not all support the same thinking controls. When
+needed, Freeplane maps the selected thinking effort to the closest
+available provider behavior, or the provider may ignore it.
 
 ## Review chat instructions
 
@@ -46,7 +81,8 @@ The AI chat options menu has two independent instruction controls:
 
 The preview appears below the `AI profile` selector and above the input
 area. It updates when relevant request inputs change, for example the
-selected profile, tool availability, or system instruction state.
+selected profile, tool availability, system instruction state, or a
+leading slash prompt reference in the input.
 
 The preview is not part of the chat transcript. It is not copied with
 chat history, saved as a committed chat message, counted as a chat turn,
@@ -56,7 +92,9 @@ instruction state.
 If the selected profile differs from the profile currently active in the
 chat, the preview applies that pending profile change first. The preview
 then shows the composed system instruction followed by the effective
-profile instruction.
+profile instruction. If the draft starts with a resolved slash prompt
+reference, the preview also includes the saved prompt text that would be
+substituted into the request.
 
 ## Workflow example: branch spelling correction
 

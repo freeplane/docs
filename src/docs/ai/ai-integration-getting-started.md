@@ -2,9 +2,10 @@
 
 AI integration is available starting with Freeplane version `1.13.1`.
 
-The newer features linked from this page — prompts, editor attachment,
-AI-owned script review, formula-editing controls, and script-facing AI
-requests — require Freeplane `1.13.3` or later.
+The newer features linked from this page — prompts, model-parameter
+controls, editor attachment, AI-owned script review, formula-editing
+controls, and script-facing AI requests — require Freeplane `1.13.3` or
+later.
 
 ## Benefits and risks
 
@@ -73,6 +74,12 @@ The following settings matter for most current AI workflows:
     directly without user review
 - `AI chat shows tool calls`
   - shows AI and MCP tool activity in chat
+- `AI thinking effort`
+  - sets the default provider-independent thinking level where the
+    selected provider/model supports it
+- `AI temperature`
+  - sets the default temperature; `Model default` sends no temperature
+    value to the provider
 
 ![AI preferences](../images/ai-preferences.png)
 
@@ -87,8 +94,14 @@ Helpful chat controls:
 
 - `New chat`: start a clean live chat.
 - `Chats`: open the chat list dialog.
-- `Manage profiles`: open profile management.
+- `Edit profiles...`: open profile management.
 - `AI profile`: shows or selects the active profile.
+- model selector: selects the provider/model used by ordinary chat
+  requests.
+- thinking-effort selector: sets the default thinking effort used by
+  ordinary chat requests.
+- `Temperature` in the AI panel menu: sets the default temperature used
+  by ordinary chat requests.
 
 ### Next steps
 

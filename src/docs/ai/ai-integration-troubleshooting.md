@@ -10,6 +10,8 @@ panel burger menu) and check:
   `AI Ollama service address`, and if required
   `AI Ollama API key`),
 - model selection,
+- model parameters if you use them (`AI thinking effort`,
+  `AI temperature`),
 - `AI tool availability`.
 
 For prompts, editor attachment, AI-owned script review, and formula
@@ -59,7 +61,10 @@ If prompts do not behave like normal chat, that may be expected:
 
 - prompts are separate from assistant profiles,
 - shown prompts open their own chat,
-- hidden prompts do not stay as visible saved chats.
+- hidden prompts do not stay as visible saved chats,
+- leading slash prompt references in normal chat substitute only the
+  saved prompt text and ignore the prompt's saved visibility, model,
+  thinking-effort, temperature, and tool settings.
 
 ## Formula editing is missing or not offered
 
@@ -104,8 +109,9 @@ as expected:
 
 - check that you are using Freeplane `1.13.3` or later,
 - check `Attached editor chat mode`,
-- if formula repair is offered after an execution failure, remember that
-  the repair request is optional and starts only if you choose it.
+- if formula or attached-script repair is offered after a failure,
+  remember that the repair request is optional and starts only if you
+  choose it.
 
 ## MCP not working
 
@@ -134,6 +140,11 @@ current AI settings. If formula-related editing is missing, re-check
 
 If you are troubleshooting Groovy scripts that call AI, see
 [Asking AI from scripts](../scripting/Asking_AI_from_scripts.md).
+
+For asynchronous callbacks, `println` output is routed back to the
+originating script output target when one exists. Non-editor script runs
+without a durable output target do not create a new script editor window
+only to display callback output.
 
 ## Quick success checklist
 

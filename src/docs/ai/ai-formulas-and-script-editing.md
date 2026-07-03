@@ -121,6 +121,18 @@ is fixed.
 For map local script usage of `Arguments JSON`, see
 [Map local scripts](../scripting/Map_local_scripts.md).
 
+## Repair requests are consent-gated
+
+When a submitted formula fails, Freeplane can show diagnostics and ask
+whether AI should try to repair it. The repair request starts only if
+you confirm.
+
+When an attached script editor run fails, Freeplane records the failure
+as attached editor state so AI can inspect it, but it does not
+automatically submit a repair request. If repair is available, Freeplane
+asks first; declining or closing the prompt leaves the failure state
+recorded but does not contact the AI provider for repair.
+
 ## Prefer value-computing formulas and scripts
 
 This guidance still applies when the relevant permissions are enabled.
