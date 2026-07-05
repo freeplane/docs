@@ -23,6 +23,8 @@ Requires [Open JDK JRE64 portable java version 15](https://sourceforge.net/proje
 
 # Distributions for Apple macOS
 
+The bundled macOS distributions use Java 21. Their minimum supported macOS version is macOS 14.
+
 * **Freeplane-xxx-intel.dmg**: distribution with embedded Java for macOS with an Intel or Apple M1/M2/... processor
 * **Freeplane-xxx-apple.dmg**: distribution with embedded Java for macOS with an Apple M1/M2/... processor.
 
