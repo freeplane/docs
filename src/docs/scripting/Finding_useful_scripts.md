@@ -12,6 +12,7 @@ Inside this documentation:
 Repositories
 - By Macmarrum: [the script repository](https://github.com/macmarrum/freeplane-scripting/tree/main/src/scripts) and other [repositories](https://github.com/macmarrum?tab=repositories)
 - The EdoFro [repositories](https://github.com/EdoFro)
+- By euu2021: [freeplane_scripts](https://github.com/euu2021/freeplane_scripts)
 
 The forums. There are many scripts spread over the two forums. Searching for the word "script" will return many of them.
 - Github forum (current forum)
