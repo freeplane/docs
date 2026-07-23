@@ -60,9 +60,9 @@ jobs:
           latest_stable_release_ref=$(git ls-remote --tags $FP_GH $TAG_PATTERN | awk '!/-pre[0-9]+$/ {print $2}' | sort -V | tail -1)
           latest_stable_release_tag=${latest_stable_release_ref#refs/tags/}
           _tag=$(curl https://docs.freeplane.org/api/_tag.txt)
-          echo "Start building API docs - online-api/_tag: $_tag, Freeplane-repo/latest_stable_release_tag: $latest_stable_release_tag"
+          echo "ℹ️ Start building API docs — online-api/_tag: $_tag, Freeplane-repo/latest_stable_release_tag: $latest_stable_release_tag"
           if [[ $_tag && $_tag = $latest_stable_release_tag ]]; then
-            echo "It's the same release tag as the API docs saved in GitHub Pages - use this one instead of going to SourceForge"
+            echo "ℹ️ It's the same release tag as the API docs saved in GitHub Pages — use this one instead of going to GitHub Releases"
             download_and_unpack_api_zip
           else
             version=${latest_stable_release_tag#release-}
