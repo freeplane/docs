@@ -169,7 +169,7 @@ Therefore `=node` points to itself, `=node.details` points to node's details, an
 And since the parent is also a **NodeRO**, you can call **getChildren()** on it, or simply `=node.parent.children`.
 
 It's time to select the first child.
-In Groovy it's done by using square brackets → <https://groovy-lang.org/operators.html#subscript-operator>\
+In Groovy it's done by using square brackets → <https://docs.groovy-lang.org/docs/latest/html/documentation/#subscript-operator>\
 The trick is to start counting from **0**, i.e. `=node.parent.children[0]`.
 
 Having the first sibling, you can get its details.
@@ -257,7 +257,7 @@ In Groovy, there is a more-often-used way of iterating over a collection of elem
 
 ![](../images/edit-script-node-children-each-child-set-details.png)
 
-It's possible, in Groovy, to omit `def child ->` and instead use the default variable name inside `.each { ... }`, i.e. `it`.
+Inside `.each { ... }` it's possible to omit `child ->` and instead use the default variable name `it`.
 
 ![](../images/edit-script-node-children-each-it-set-details.png)
 
@@ -273,19 +273,18 @@ node.children.each {
 This version might be easier to understand.
 
 ```groovy
-node.children.each { def child ->
+node.children.each { child ->
     child.details = node.getChildPosition(child)
 }
 ```
 
 > **Note:** `child` is a variable.
-> It points to a different node with every iteration of `each`.\
-> To define a variable, the keyword `def` is used.
+> It points to a different node with every iteration of `each`.
 
 Let's make it even more readable.
 
 ```groovy
-node.children.each { def child ->
+node.children.each { child ->
     def position = node.getChildPosition(child)
     child.details = position
 }
@@ -295,6 +294,10 @@ After the script is run, you should see numbers in details.
 
 ![](../images/state-after-script-node-children-each-set-details-get-position.png)
 
+> **Note:** When a variable is defined (for the first time), `def` creates a local variable: `def x = 'I am local'`\
+> Without `def`, a global variable is created: `y = 'I am global'`\
+> → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_variables>\
+> → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_statements>
 
 ## Formula - working with numbers
 
@@ -309,7 +312,7 @@ You also know by now that `node.parent.children[0].details` gets the text of det
 Earlier, we looked at **Convertible** → [Formula - convertible](#formula---convertible), therefore you can guess what `details.num` will get you.
 
 New Groovy concepts:
-* `0..3` means a range from 0 to 3 (inclusive), i.e. 0, 1, 2, 3 → <https://groovy-lang.org/operators.html#_range_operator>
+* `0..3` means a range from 0 to 3 (inclusive), i.e. 0, 1, 2, 3 → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_range_operator>
 * `children[0..3]` means a list of child nodes in the range 0..3, i.e. [child 0, child 1, child 2, child 3]
 
 In a script, to sum up the numbers in details and place the total into the node's text, you would write
@@ -321,9 +324,9 @@ node.parent.children[0..3].each { child ->
 node.text = total
 ```
 
-> **Note:** It's customary to omit `def` before a variable and `->` inside `{ ... }`, i.e. in a [Closure](https://groovy-lang.org/closures.html)
+> **Note:** `{ ... }` is a Closure → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_closures>
 
-In a formula, to make it more concise, you can use a Groovy shorthand `*.`, which does much of what `.each {}` does → <https://groovy-lang.org/operators.html#_spread_operator> \
+In a formula, to make it more concise, you can use a Groovy shorthand `*.`, which does much of what `.each {}` does → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_spread_operator> \
 In other words `children[0..3]*.details*.num` iterates over each of the child nodes in the range 0..3 and gets `details` from each child, then iterates over the resulting list of details and gets `num` from each one:
 * Step 1 results in [details of child 0, details of child 1, details of child 2, details of child 3]
 * Step 2 results in [num of details of child 0, num of details of child 1, num of details of child 2, num of details of child 3]
@@ -369,10 +372,10 @@ node.mindMap.filter(showAncestors, showDescendants, condition)
 ```
 
 New Groovy concepts:
-* `true`, `false` → <https://groovy-lang.org/syntax.html#_booleans>
-* `if-else` – allows to check a (compound) condition and do something in case it evaluates to true, and something else otherwise → <https://groovy-lang.org/semantics.html#_if_else>
+* `true`, `false` → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_booleans>
+* `if-else` – allows to check a (compound) condition and do something in case it evaluates to true, and something else otherwise → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_if_else>
 * `numberA % numberN` – computes modulo → <https://en.wikipedia.org/wiki/Modulo>
-  * `%` is the remainder operator -> <https://groovy-lang.org/operators.html#_normal_arithmetic_operators>
+  * `%` is the remainder operator -> <https://docs.groovy-lang.org/docs/latest/html/documentation/#_normal_arithmetic_operators>
 
 You might notice that a Closure `{...}` is used in another context than `.each {...}`.
 But the structure is already familiar, with a variable at the begining, followed by an arrow, etc.
@@ -390,7 +393,7 @@ And `null.num` makes no sense.
 Hence, "Cannot get property 'num' on null object".
 
 So how to fix it?\
-By checking first if details exist, i.e. `n.details != null` or even simpler `n.details` → <https://groovy-lang.org/semantics.html#the-groovy-truth>
+By checking first if details exist, i.e. `n.details != null` or even simpler `n.details` → <https://docs.groovy-lang.org/docs/latest/html/documentation/#the-groovy-truth>
 
 ```groovy
 def showAncestors = true
@@ -406,7 +409,7 @@ node.mindMap.filter(showAncestors, showDescendants, condition)
 ```
 
 New Groovy concepts:
-* `&&` means "and" → <https://groovy-lang.org/operators.html#_logical_operators>
+* `&&` means "and" → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_logical_operators>
 
 Can the script be made shorter?
 
@@ -474,7 +477,7 @@ Let's remove "API/Groovy totorial" from the 1st node's details – `Edit->Node p
 This causes an error in our formula: "Cannot invoke method isNum() on null object".
 
 But of course; `it.details` is null for the 1st node.
-You can add the same check as in the filter, i.e. `it.details && it.details.isNum()`, but you can also use a Groovy shorthand: `it.details?.isNum()` → <https://groovy-lang.org/operators.html#_safe_navigation_operator>
+You can add the same check as in the filter, i.e. `it.details && it.details.isNum()`, but you can also use a Groovy shorthand: `it.details?.isNum()` → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_safe_navigation_operator>
 
 ```groovy
 =node.parent.children[0..3].findAll{ it.details?.isNum() }*.details*.num.sum()
@@ -532,7 +535,7 @@ def mcs = node.mindMap.conditionalStyles
 ```
 
 New Groovy concepts:
-* `//` starts a comment (a fragment that is ignored for execution) → <https://groovy-lang.org/syntax.html#_comments>
+* `//` starts a comment (a fragment that is ignored for execution) → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_comments>
 
 `ConditionalStyles#add(...)` method is of interest for our task.
 As you can see in the API docs, it resembles the GUI layout at `Format->Manage Styles->Manage conditional styles for map`.
@@ -553,7 +556,7 @@ mcs.add(isActive, script, styleName, isLast)
 ```
 
 New Groovy concepts:
-* `''' '''` – triple-single-quoted string, which allows quotes and new lines inside it → <https://groovy-lang.org/syntax.html#_triple_single_quoted_string>
+* `''' '''` – triple-single-quoted string, which allows quotes and new lines inside it → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_triple_single_quoted_string>
 
 > **Note:** the following comes from the Java API:
 > * `String#startsWith` → <https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#startsWith-java.lang.String->
@@ -603,7 +606,7 @@ node.text.startsWith('=')
 Ah, yes.
 It only checks node core (`node.text`).
 Let's add a check for node details, too.
-And keep in mind to use the [Safe Navigation operator](https://groovy-lang.org/operators.html#_safe_navigation_operator) with `details`.
+And keep in mind to use the [Safe Navigation operator](https://docs.groovy-lang.org/docs/latest/html/documentation/#_safe_navigation_operator) with `details`.
 
 ```groovy
 def script = '''
@@ -613,7 +616,7 @@ node.text.startsWith('=') || node.details?.startsWith('=')
 
 
 New Groovy concepts:
-* `||` means "or" → <https://groovy-lang.org/operators.html#_logical_operators>
+* `||` means "or" → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_logical_operators>
 
 How to change the script in an existing Conditional Style?\
 So far you've been dealing with **ConditionalStyles** (plural).
@@ -692,7 +695,7 @@ cs.script = script
 ```
 
 New Groovy concepts:
-* `a ?: b` means use `a` if Groovy-true, otherwise use `b` → <https://groovy-lang.org/operators.html#_elvis_operator>
+* `a ?: b` means use `a` if Groovy-true, otherwise use `b` → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_elvis_operator>
 
 Success!
 
@@ -724,7 +727,7 @@ In this example, `node` and `ui` are "global variables", made available by Freep
 
 New Groovy concepts:
 * `"Text ${code}"` is a [GString](https://docs.groovy-lang.org/latest/html/api/groovy/lang/GString.html), 
-  i.e. text where an expression (inside `${}`) is executed to get its value → <https://docs.groovy-lang.org/next/html/documentation/#_string_interpolation>
+  i.e. text where an expression (inside `${}`) is executed to get its value → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_string_interpolation>
 
 **Exercise:**\
 Can you modify the above script to copy file path to the clipboard, instead of showing it in a message?\
