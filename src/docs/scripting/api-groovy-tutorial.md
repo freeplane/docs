@@ -294,8 +294,10 @@ After the script is run, you should see numbers in details.
 
 ![](../images/state-after-script-node-children-each-set-details-get-position.png)
 
-> **Note:** When a variable is defined (for the first time), `def` creates a local variable: `def x = 'I am local'`\
-> Without `def`, a global variable is created: `y = 'I am global'`\
+> **Note:** When a variable is defined (for the first time), `def` creates a local variable:\
+> `def x = 'I am local'`\
+> Without `def`, a global variable is created:\
+> `y = 'I am global'`\
 > → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_variables>\
 > → <https://docs.groovy-lang.org/docs/latest/html/documentation/#_statements>
 
