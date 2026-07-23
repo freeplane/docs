@@ -66,15 +66,15 @@ jobs:
             download_and_unpack_api_zip
           else
             version=${latest_stable_release_tag#release-}
-            echo "Try to download freeplane-bin-$version.zip from SF and to extract doc/api/ pages"
+            echo "Try to download freeplane-bin-$version.zip from GitHub and to extract doc/api/ pages"
             [[ $version ]] &&
-            curl -L https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-${version}.zip/download -o freeplane-bin.zip &&
+            curl -L ${FP_GH}/releases/download/${latest_stable_release_tag}/freeplane_bin-${version}.zip -o freeplane-bin.zip &&
             unzip freeplane-bin.zip "freeplane-${version}/doc/api/*" &&
             mv -v "freeplane-${version}/doc/api" gh-pages/ &&
             echo "$latest_stable_release_tag" > gh-pages/api/_tag.txt &&
             cd gh-pages &&
             zip -r api.zip api/ || {
-              echo "Something went wrong - fall back to the last-successfully-downloaded-from-SF api docs" &&
+              echo "Something went wrong — fall back to the last-successfully-downloaded-from-GitHub api docs" &&
               download_and_unpack_api_zip
           }
           fi
