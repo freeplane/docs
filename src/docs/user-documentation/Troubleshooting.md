@@ -91,6 +91,21 @@ It is a java issue on linux. Use Firefox for Windows with Wine.
 ## Nodes are not displayed properly on linux if the map is zoomed
 Install the latest sun java from http://www.java.com/de/download/. The open jdk behaves buggy and is also significantly slower.
 
+## Dead keys may not work with `XMODIFIERS=@im=ibus`
+Reported on Ubuntu 24.04 with Wayland, IBus (`XMODIFIERS=@im=ibus`), OpenJDK 17, and both the Snap package and the ZIP distribution.
+
+Examples:
+* `~` + `a` produces `~` instead of `ã`
+* `'` + `a` produces `'a` instead of `á`
+
+Workaround: start Freeplane with `XMODIFIERS` cleared for the Freeplane process:
+
+```bash
+XMODIFIERS= ./freeplane.sh
+```
+
+If this fixes the problem, make the same change in the command, script, or desktop launcher used to start Freeplane, so it applies only to Freeplane.
+
 ## I cannot find the spell check function
 The spell checker has to be enabled, see the [Spell checker how-to](../user-documentation/Spell_checker.md).
 
