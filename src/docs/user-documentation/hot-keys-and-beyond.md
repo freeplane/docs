@@ -89,7 +89,7 @@ by `Alt+scroll`
 ### Ctrl
 
 - You can create a copy of a node (branch) by `Ctrl+drag` of a node onto another node
-- You can change `Distance between children` (in `View->Controls->Tool panel` > Node layout) by `Ctrl+drag` of a node handle away or towards the center of node's stack of siblings
+- You can change `Distance between children` (in `View->Controls->Tool panel` > Node layout) by `Ctrl+drag` of a node handle away or towards the center of node's stack of siblings (see [Positioning nodes by hand](positioning-nodes.md) for where the handle is)
 - You can follow a link by `Ctrl+click`, if `Preferences…->Behaviour->Open node link on simple mouse click` is off
 
 ### Shift
