@@ -90,11 +90,11 @@ by `Alt+scroll`
 
 - You can create a copy of a node (branch) by `Ctrl+drag` of a node onto another node
 - You can change `Distance between children` (in `View->Controls->Tool panel` > Node layout) by `Ctrl+drag` of a node handle away or towards the center of node's stack of siblings (see [Positioning nodes by hand](positioning-nodes.md) for where the handle is)
-- You can follow a link by `Ctrl+click`, if `Preferences…->Behaviour->Open node link on simple mouse click` is off
+- You can follow a link by `Ctrl+click`, if `Preferences…->Behaviour->Open node link on simple mouse click` is off (see [Links to nodes](links-to-nodes.md) for links that point at a node)
 
 ### Shift
 
-- Since v1.11.5, you can open a **link to a node** in another map view by `Shift+click` (in node core or in attributes).
+- Since v1.11.5, you can open a **[link to a node](links-to-nodes.md)** in another map view by `Shift+click` (in node core or in attributes).
 If the mind map has no other view, it will be opened in a new tab.\
 Here's the original Feature Request:
 [option to open internal links in another map view of same map](https://github.com/freeplane/freeplane/issues/316)

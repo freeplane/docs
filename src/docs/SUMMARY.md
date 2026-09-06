@@ -20,6 +20,7 @@
   - [Working with mindmap files](user-documentation/working-w-mindmap-files.md)
   - [Hot keys and beyond](user-documentation/hot-keys-and-beyond.md)
   - [Bookmarks](user-documentation/bookmarks.md)
+  - [Links to nodes](user-documentation/links-to-nodes.md)
   - [Formatting maps and nodes](user-documentation/formatting-maps-and-nodes.md)
   - [Positioning nodes by hand](user-documentation/positioning-nodes.md)
   - [Data recognition and data formats](user-documentation/Data_recognition_and_data_formats.md)
