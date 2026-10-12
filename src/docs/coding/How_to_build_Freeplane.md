@@ -4,7 +4,7 @@
 
 ## Requirements
 
-* You need java 11 or later and gradle >= 6.0
+* You need java 21 or later and gradle >= 9.0
 
 ## Download gradle
 
@@ -18,7 +18,8 @@
 ## Run gradle
 
 * Gradle wrapper files are intentionally not committed to the sources but git ignored so that you can add them yourself if you need them.
-$ ~/Downloads/gradle-6.0.1/bin/gradle build
+
+$ ~/Downloads/gradle-9.2.1/bin/gradle build
 
 ## Run freeplane
     cd BIN
@@ -26,7 +27,7 @@ $ ~/Downloads/gradle-6.0.1/bin/gradle build
     freeplane.bat
  
 ## Create package
-    ~/git2/freeplane(1.7.x u=)$ ~/Downloads/gradle-6.0.1/bin/gradle clean build dist
+    ~/Downloads/gradle-9.2.1/bin/gradle clean build dist
     ls DIST
 
 ## Configuring an IDE
